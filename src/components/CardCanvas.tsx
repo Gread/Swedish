@@ -12,7 +12,13 @@ export function CardCanvas({ scene, children }: { scene: CardScene; children?: R
   const camPos = scene.cameraHint?.position ?? [4, 3.2, 5.5]
   const camTarget = scene.cameraHint?.target ?? [0, 1, 0]
   return (
-    <Canvas camera={{ position: camPos, fov: 38 }} shadows dpr={[1, 2]}>
+    <Canvas
+      camera={{ position: camPos, fov: 38 }}
+      shadows
+      dpr={[1, 2]}
+      // absoluto dentro do .canvas-wrap: altura 100% falha em janelas altas
+      style={{ position: 'absolute', inset: 0 }}
+    >
       <color attach="background" args={['#151b26']} />
       <fog attach="fog" args={['#151b26', 12, 26]} />
 
