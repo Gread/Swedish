@@ -26,7 +26,8 @@ export function BuildPlayer({ scene, target, speed = 1, onCaption, onTime }: Bui
 
   useFrame((_, dt) => {
     if (time.current < target) {
-      time.current = Math.min(target, duration, time.current + dt * speed)
+      // clamp: um dt gigante (aba em background, rAF pausado) pularia a montagem inteira
+      time.current = Math.min(target, duration, time.current + Math.min(dt, 0.05) * speed)
       poseAt(scene, time.current)
       onTime?.(time.current, duration)
       const caption = captionAt(scene, time.current)

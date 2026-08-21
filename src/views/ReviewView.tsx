@@ -22,7 +22,7 @@ function ReviewCard({ card, onNext }: { card: Card; onNext: () => void }) {
   return (
     <div className="view review-view">
       <header>
-        <span className="chip">{card.meta.contexto}</span>
+        <span className="chip">{card.meta.contexto.split(':')[0]}</span>
         <h1>{card.meta.fraseFonte}</h1>
         <p className="hint">
           {level === 0

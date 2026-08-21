@@ -29,7 +29,7 @@ export function BuildView({ card, onDone }: { card: Card; onDone: () => void }) 
   return (
     <div className="view build-view">
       <header>
-        <span className="chip">{card.meta.contexto}</span>
+        <span className="chip">{card.meta.contexto.split(':')[0]}</span>
         <h1>{card.meta.fraseFonte}</h1>
         <p className="hint">Assista a cena se montar — ela é a ponte para o sueco.</p>
       </header>
