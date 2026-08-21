@@ -1,127 +1,383 @@
 import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
-import { box, cone, cylinder, seq, sphere, riseFrom, ch } from '../rig/helpers'
+import {
+  person, rbox, capsule, cylinder, sphere, torus, lathe, rock, puff,
+  rng, seq, ch, riseFrom,
+} from '../rig/helpers'
 
 /**
- * "Nej tack, det är bra." — Não, obrigado, está bom assim.
- * Cena: o caixa empurra um TACO gigante por cima do balcão; o cliente de
- * barriga verde estufada levanta a mão espalmada ("NÊI, TACO!") e dá um
- * tapinha na barriga ("DÊ… É BRÁ!").
+ * nej-tack-det-ar-bra — "Nej tack, det är bra."
+ * O caixa empurra um TACO gigante fumegante por cima do balcão; o cliente de
+ * barriga verde estufada ergue a palma espalmada ("NÊI, TACO!") e dá
+ * tapinhas na barriga ("DÊ… É BRÁ!").
+ *
+ * Paleta: creme/madeira clara (piso+balcão) · azul (uniforme/mössa/cestas)
+ * · verde (barriga/planta). Acento saturado RESERVADO: dourado #f2b632 do TACO.
  */
+const PELE = '#e8c39e'
+
 function createScene(): CardScene {
   const root = new THREE.Group()
+  const rand = rng(17)
 
-  // ---- cenário -------------------------------------------------------
-  const chao = box(4.2, 0.12, 3.4, '#d9d9d9')
-  chao.position.set(0, 0.06, 0.15)
-  root.add(chao)
+  // ---------- BASE do diorama: piso de tábuas claras de loja sueca ----------
+  const base = new THREE.Group()
+  const disco = cylinder(2.55, 2.65, 0.16, '#cfc3ab', { roughness: 0.9 })
+  disco.position.y = 0.08
+  base.add(disco)
 
-  const balcao = box(2.4, 0.9, 0.7, '#9b6a3f')
-  balcao.position.set(0, 0.57, -0.2)
+  const tonsTabua = ['#e0d3b8', '#d4c5a5', '#c8b795']
+  for (let fila = 0; fila < 10; fila++) {
+    const z = -1.62 + fila * 0.36
+    let x = -2.1 + rand() * 0.6
+    while (x < 2.1) {
+      const len = 0.7 + rand() * 0.5
+      const cx = x + len / 2
+      if (Math.hypot(cx, z) < 2.0) {
+        const tabua = rbox(len, 0.035, 0.32, 0.012, tonsTabua[Math.floor(rand() * 3)], { roughness: 0.85 })
+        tabua.position.set(cx, 0.175, z)
+        base.add(tabua)
+      }
+      x += len + 0.05
+    }
+  }
+
+  // adereço 1: vaso de planta (lathe terracota + copa puff)
+  const planta = new THREE.Group()
+  const vaso = lathe(
+    [[0, 0], [0.15, 0], [0.17, 0.04], [0.19, 0.26], [0.15, 0.28], [0, 0.28]],
+    '#a2593b', { roughness: 0.75 },
+  )
+  vaso.position.y = 0.19
+  planta.add(vaso)
+  const copa = puff(0.26, '#4a8f3c', 6, 23, { roughness: 0.85 })
+  copa.position.y = 0.66
+  copa.scale.y = 0.85
+  planta.add(copa)
+  planta.position.set(-1.7, 0, -0.75)
+  base.add(planta)
+
+  // adereço 2: pilha de cestas de compras azuis
+  const cestas = new THREE.Group()
+  const cesta1 = rbox(0.5, 0.15, 0.36, 0.04, '#3f6d8e', { roughness: 0.6 })
+  cesta1.position.y = 0.27
+  cestas.add(cesta1)
+  const cesta2 = rbox(0.5, 0.15, 0.36, 0.04, '#365f7d', { roughness: 0.6 })
+  cesta2.position.y = 0.43
+  cesta2.rotation.y = 0.18
+  cestas.add(cesta2)
+  const alca = torus(0.13, 0.018, '#2d4f68', { roughness: 0.55 })
+  alca.position.y = 0.53
+  cestas.add(alca)
+  cestas.position.set(1.7, 0, -0.5)
+  cestas.rotation.y = -0.3
+  base.add(cestas)
+
+  // adereço 3: placa de campanha da loja
+  const placa = new THREE.Group()
+  const pe = cylinder(0.1, 0.13, 0.04, '#7a8590', { roughness: 0.4, metalness: 0.6 })
+  pe.position.y = 0.21
+  placa.add(pe)
+  const haste = cylinder(0.02, 0.02, 0.72, '#7a8590', { roughness: 0.35, metalness: 0.6 })
+  haste.position.y = 0.57
+  placa.add(haste)
+  const quadro = rbox(0.42, 0.3, 0.03, 0.015, '#f5f2ea', { roughness: 0.4 })
+  quadro.position.y = 0.97
+  placa.add(quadro)
+  const selo = cylinder(0.08, 0.08, 0.02, '#4f7d74', { roughness: 0.45 })
+  selo.rotation.x = Math.PI / 2
+  selo.position.set(-0.09, 0.99, 0.02)
+  placa.add(selo)
+  placa.position.set(-1.55, 0, 1.0)
+  placa.rotation.y = 0.7
+  base.add(placa)
+
+  // adereço 4: pirâmide de limas verdes que sobraram de uma promoção
+  const limas = new THREE.Group()
+  const posLimas: [number, number][] = [[-0.08, 0], [0.08, 0.02], [0, -0.11]]
+  for (const [lx, lz] of posLimas) {
+    const lima = sphere(0.075, '#6fae53', { roughness: 0.5 })
+    lima.position.set(lx + (rand() - 0.5) * 0.02, 0.265, lz)
+    limas.add(lima)
+  }
+  const limaTopo = sphere(0.075, '#7cba5f', { roughness: 0.5 })
+  limaTopo.position.set(0, 0.39, -0.03)
+  limas.add(limaTopo)
+  limas.position.set(1.35, 0, 1.15)
+  base.add(limas)
+
+  base.position.y = 0
+  root.add(base)
+
+  // ---------- BALCÃO do caixa (corpo + tampo + terminal de cartão) ----------
+  const balcao = new THREE.Group()
+  const corpo = rbox(2.3, 0.72, 0.9, 0.05, '#e8dcc8', { roughness: 0.7 })
+  corpo.position.y = 0.36
+  balcao.add(corpo)
+  const tampo = rbox(2.5, 0.08, 1.05, 0.03, '#c79c66', { roughness: 0.5 })
+  tampo.position.y = 0.76
+  balcao.add(tampo)
+  const faixa = rbox(2.32, 0.13, 0.04, 0.015, '#4f7d74', { roughness: 0.6 })
+  faixa.position.set(0, 0.18, 0.44)
+  balcao.add(faixa)
+
+  const terminal = new THREE.Group()
+  const poste = cylinder(0.035, 0.05, 0.1, '#5b6770', { roughness: 0.35, metalness: 0.7 })
+  poste.position.y = 0.05
+  terminal.add(poste)
+  const aparelho = rbox(0.28, 0.2, 0.06, 0.02, '#3d4852', { roughness: 0.45 })
+  aparelho.position.y = 0.16
+  aparelho.rotation.x = -0.55
+  const tela = rbox(0.22, 0.1, 0.02, 0.008, '#9fe8df', {
+    roughness: 0.25, emissive: '#7fd8cf', emissiveIntensity: 1.1,
+  })
+  tela.position.set(0, 0.03, 0.035)
+  aparelho.add(tela)
+  for (let i = 0; i < 3; i++) {
+    const tecla = rbox(0.05, 0.03, 0.015, 0.006, '#8b97a1', { roughness: 0.4 })
+    tecla.position.set(-0.07 + i * 0.07, -0.065, 0.033)
+    aparelho.add(tecla)
+  }
+  const recibo = rbox(0.1, 0.14, 0.012, 0.005, '#faf7ef', { roughness: 0.6 })
+  recibo.position.set(0, 0.14, -0.03)
+  recibo.rotation.x = 0.5
+  aparelho.add(recibo)
+  terminal.add(aparelho)
+  terminal.position.set(-0.75, 0.8, -0.2)
+  balcao.add(terminal)
+
+  // a compra do cliente: caixinha de leite já paga
+  const leite = rbox(0.16, 0.26, 0.16, 0.02, '#f5f2ea', { roughness: 0.4 })
+  leite.position.set(0.95, 0.93, 0.05)
+  balcao.add(leite)
+  const tampaLeite = rbox(0.17, 0.06, 0.17, 0.02, '#6d93b8', { roughness: 0.4 })
+  tampaLeite.position.set(0.95, 1.05, 0.05)
+  balcao.add(tampaLeite)
+
+  balcao.position.set(0, 0.18, -0.35)
   root.add(balcao)
 
-  // ---- atendente (atrás do balcão) -----------------------------------
-  const corpoAtendente = cylinder(0.34, 0.4, 0.9, '#3b82f6')
-  corpoAtendente.position.set(0, 0.57, -1.0)
-  root.add(corpoAtendente)
+  // ---------- ATENDENTE atrás do balcão, avental, braço de "toma aqui" ----------
+  const atendente = person({ body: '#3f6d8e', skin: PELE, height: 1.42, armAngle: 0.35 })
+  const cabecaAt = atendente.getObjectByName('head')!
+  const cabelo = puff(0.12, '#5a4632', 5, 12, { roughness: 0.9 })
+  cabelo.position.set(0, 0.17, -0.04)
+  cabelo.scale.set(1, 0.7, 1)
+  cabecaAt.add(cabelo)
+  cabecaAt.rotation.x = 0.12 // olhando para o taco no balcão
+  const avental = rbox(0.4, 0.48, 0.05, 0.025, '#d9c9a8', { roughness: 0.85 })
+  avental.position.set(0, 0.4, 0.235)
+  atendente.add(avental)
+  const cracha = rbox(0.08, 0.045, 0.012, 0.005, '#f5f2ea', { roughness: 0.35 })
+  cracha.position.set(0.11, 0.56, 0.225)
+  atendente.add(cracha)
+  const bracoOferta = atendente.getObjectByName('armL')!
+  bracoOferta.rotation.z = 0.75 // gesto aberto de quem vai oferecer algo
+  const bracoCaixa = atendente.getObjectByName('armR')!
+  bracoCaixa.rotation.x = -1.5 // pose final: empurrando o taco
+  bracoCaixa.rotation.z = -0.35
+  atendente.position.set(0.5, 0.18, -0.95)
+  atendente.rotation.y = 0.15 // encarando o cliente
+  atendente.rotation.x = 0.12 // pose final: inclinado no empurrão
+  root.add(atendente)
 
-  const cabecaAtendente = sphere(0.28, '#f6c9a0')
-  cabecaAtendente.position.set(0, 1.26, -1.0)
-  root.add(cabecaAtendente)
+  // ---------- CLIENTE de barriga verde estufada, mössa azul ----------
+  const cliente = person({ body: '#5f9e4a', skin: PELE, height: 1.58, armAngle: 0.5 })
+  const barriga = sphere(0.44, '#6fb757', { roughness: 0.65 })
+  barriga.position.set(0, 0.6, 0.3)
+  cliente.add(barriga)
+  // botões da camisa quase estourando
+  const posBotoes: [number, number][] = [[0.46, 0.71], [0.6, 0.75], [0.74, 0.69]]
+  for (const [by, bz] of posBotoes) {
+    const botao = sphere(0.032, '#f5f2ea', { roughness: 0.35 })
+    botao.position.set(0, by, bz)
+    cliente.add(botao)
+  }
+  const cabecaCli = cliente.getObjectByName('head')!
+  cabecaCli.rotation.x = 0.25 // olhando para baixo, para o taco
+  const mossa = sphere(0.305, '#46628a', { roughness: 0.9 })
+  mossa.scale.y = 0.72
+  mossa.position.y = 0.12
+  cabecaCli.add(mossa)
+  const bainha = torus(0.27, 0.045, '#3a5271', { roughness: 0.9 })
+  bainha.rotation.x = Math.PI / 2
+  bainha.position.y = 0.04
+  cabecaCli.add(bainha)
+  const pompom = sphere(0.07, '#d9c9a8', { roughness: 0.95 })
+  pompom.position.y = 0.36
+  cabecaCli.add(pompom)
 
-  // ---- cliente (na frente do balcão) ---------------------------------
-  const barrigaCliente = sphere(0.55, '#43c34f')
-  barrigaCliente.position.set(0, 0.67, 1.2)
-  root.add(barrigaCliente)
+  // braço da recusa (mão espalmada gigante) — dobradiça animada
+  const bracoPare = cliente.getObjectByName('armL')!
+  bracoPare.rotation.x = -2.5 // pose final: erguido bloqueando o taco
+  bracoPare.rotation.z = 0.15
+  const palma = new THREE.Group()
+  const palmaDisco = sphere(0.145, PELE, { roughness: 0.6 })
+  palmaDisco.scale.set(1, 1.05, 0.45)
+  palma.add(palmaDisco)
+  const fanX = [-0.085, -0.03, 0.03, 0.085]
+  const fanRot = [0.24, 0.08, -0.08, -0.24]
+  for (let i = 0; i < 4; i++) {
+    const dedo = capsule(0.033, 0.09, PELE, { roughness: 0.6 })
+    dedo.position.set(fanX[i], -0.17, 0)
+    dedo.rotation.z = fanRot[i]
+    palma.add(dedo)
+  }
+  const polegar = capsule(0.036, 0.07, PELE, { roughness: 0.6 })
+  polegar.position.set(0.14, -0.03, 0)
+  polegar.rotation.z = -1.15
+  palma.add(polegar)
+  palma.position.set(0, -0.3, 0)
+  palma.rotation.x = -0.5
+  bracoPare.add(palma)
 
-  const cabecaCliente = sphere(0.26, '#f6c9a0')
-  cabecaCliente.position.set(0, 1.48, 1.2)
-  root.add(cabecaCliente)
+  // braço do tapinha na barriga — dobradiça animada
+  const bracoTapinha = cliente.getObjectByName('armR')!
+  bracoTapinha.rotation.x = -1.0 // pose final: mão pousada na barriga
 
-  // ---- o TACO de brinde (deitado, ponta para o cliente) --------------
-  const taco = cone(0.28, 0.9, '#ffd24a')
-  taco.rotation.x = Math.PI / 2 // ponta (+y) vira +z, apontando para o cliente
-  taco.position.set(0, 1.32, 0.35)
+  cliente.position.set(0.05, 0.18, 1.2)
+  cliente.rotation.y = 2.6 // de frente para o balcão, 3/4 para a câmera
+  root.add(cliente)
+
+  // ---------- o TACO gigante de brinde (acento dourado da cena) ----------
+  const taco = new THREE.Group()
+  const bandeja = cylinder(0.45, 0.5, 0.06, '#f3efe4', { roughness: 0.35 })
+  bandeja.position.y = 0.03
+  taco.add(bandeja)
+  for (const lado of [-1, 1]) {
+    const casca = sphere(0.36, '#f2b632', { roughness: 0.5 })
+    casca.scale.set(1, 1, 0.16)
+    casca.position.set(0, 0.4, lado * 0.115)
+    casca.rotation.x = lado * 0.5
+    taco.add(casca)
+  }
+  const carne1 = rock(0.1, '#8a5a3a', 61, { roughness: 0.8 })
+  carne1.position.set(-0.14, 0.56, 0.02)
+  taco.add(carne1)
+  const carne2 = rock(0.09, '#7c4f33', 62, { roughness: 0.8 })
+  carne2.position.set(0.1, 0.55, -0.04)
+  taco.add(carne2)
+  const alface1 = puff(0.09, '#7cba5f', 5, 63, { roughness: 0.85 })
+  alface1.position.set(-0.02, 0.6, 0.05)
+  taco.add(alface1)
+  const alface2 = puff(0.07, '#6fae53', 4, 64, { roughness: 0.85 })
+  alface2.position.set(0.18, 0.58, 0.03)
+  taco.add(alface2)
+  const posTomates: [number, number, number][] = [[0.05, 0.67, -0.02], [-0.13, 0.65, -0.03]]
+  for (const [tx, ty, tz] of posTomates) {
+    const tomate = sphere(0.055, '#c94f3d', { roughness: 0.45 })
+    tomate.position.set(tx, ty, tz)
+    taco.add(tomate)
+  }
+  for (let i = 0; i < 3; i++) {
+    const queijo = capsule(0.02, 0.09, '#f6d365', { roughness: 0.5 })
+    queijo.position.set(-0.2 + i * 0.17, 0.63, (rand() - 0.5) * 0.08)
+    queijo.rotation.z = 1.2 + (rand() - 0.5) * 0.6
+    taco.add(queijo)
+  }
+  taco.position.set(0.28, 0.985, 0.45) // pose final: empurrado sobre a borda
+  taco.rotation.y = 0.3
   root.add(taco)
 
-  const recheioTaco = sphere(0.22, '#e63946')
-  recheioTaco.position.set(0, 1.32, -0.12) // transbordando na boca do cone
-  root.add(recheioTaco)
-
-  // ---- a recusa educada ----------------------------------------------
-  const maoPare = box(0.36, 0.44, 0.09, '#f6c9a0')
-  maoPare.position.set(0, 1.32, 0.92) // espalmada, bloqueando a ponta do taco
-  root.add(maoPare)
-
-  const maoTapinha = box(0.28, 0.3, 0.09, '#f6c9a0')
-  maoTapinha.position.set(0.3, 0.95, 0.8) // apoiada na frente da barriga
-  maoTapinha.rotation.x = -0.35
-  root.add(maoTapinha)
+  // vapor quentinho subindo do taco (expande ao servir)
+  const vapor = new THREE.Group()
+  const nuvem1 = puff(0.1, '#e9eef3', 5, 71, { roughness: 0.95 })
+  nuvem1.scale.set(1.2, 0.8, 1.2)
+  vapor.add(nuvem1)
+  const nuvem2 = puff(0.07, '#eef2f6', 4, 72, { roughness: 0.95 })
+  nuvem2.position.set(0.08, 0.22, -0.02)
+  vapor.add(nuvem2)
+  vapor.position.set(0, 0.86, 0)
+  taco.add(vapor)
 
   const parts = [
-    { name: 'chao', group: 'cenario', object: chao },
+    { name: 'base', group: 'cenario', object: base },
     { name: 'balcao', group: 'cenario', object: balcao },
-    { name: 'corpo-atendente', group: 'atendente', object: corpoAtendente },
-    { name: 'cabeca-atendente', group: 'atendente', object: cabecaAtendente },
-    { name: 'barriga-cliente', group: 'cliente', object: barrigaCliente },
-    { name: 'cabeca-cliente', group: 'cliente', object: cabecaCliente },
+    { name: 'atendente', group: 'atendente', object: atendente },
+    { name: 'braco-caixa', group: 'atendente', object: bracoCaixa },
+    { name: 'cliente', group: 'cliente', object: cliente },
+    { name: 'braco-pare', group: 'cliente', object: bracoPare },
+    { name: 'braco-tapinha', group: 'cliente', object: bracoTapinha },
     { name: 'taco', group: 'taco', object: taco },
-    { name: 'recheio-taco', group: 'taco', object: recheioTaco },
-    { name: 'mao-pare', group: 'recusa', object: maoPare },
-    { name: 'mao-tapinha', group: 'recusa', object: maoTapinha },
+    { name: 'vapor', group: 'taco', object: vapor },
   ]
 
   const build = [
-    // cenário
-    seq('chao-rise', 'chao', 0.0, 0.6, [riseFrom(0.06, 0.5)], {
+    // ---- cenário ----
+    seq('base-rise', 'base', 0.0, 0.7, [riseFrom(0, 1.2)], {
       caption: 'No caixa da loja sueca, hora de pagar e ir embora…',
     }),
-    seq('balcao-rise', 'balcao', 0.15, 0.7, [riseFrom(0.57, 1.3)]),
+    seq('balcao-rise', 'balcao', 0.18, 0.75, [riseFrom(0.18, 1.6)]),
 
-    // atendente
-    seq('corpo-atendente-rise', 'corpo-atendente', 1.6, 0.7, [riseFrom(0.57, 1.3)], {
+    // ---- atendente ----
+    seq('atendente-rise', 'atendente', 1.6, 0.8, [riseFrom(0.18, 1.9)], {
       caption: '…mas o atendente aparece com aquele sorriso de quem vai oferecer algo.',
     }),
-    seq('cabeca-atendente-rise', 'cabeca-atendente', 1.75, 0.7, [riseFrom(1.26, 1.8)]),
+    seq('braco-caixa-assenta', 'braco-caixa', 1.62, 0.5, [ch('rotation.z', -1.2, -0.35)], {
+      ease: 'easeOut',
+    }),
 
-    // cliente de barriga cheia (sobe inflando)
-    seq(
-      'barriga-rise',
-      'barriga-cliente',
-      3.4,
-      0.8,
-      [riseFrom(0.67, 1.5), ch('scale.x', 0.7, 1), ch('scale.y', 0.7, 1), ch('scale.z', 0.7, 1)],
-      { caption: 'Você chega com a barriga verde estufada — não cabe mais NADA.' },
-    ),
-    seq('cabeca-cliente-rise', 'cabeca-cliente', 3.55, 0.7, [riseFrom(1.48, 1.9)]),
+    // ---- cliente infla do chão, barriga estufada ----
+    seq('cliente-rise', 'cliente', 3.3, 0.85, [
+      riseFrom(0.18, 2.0),
+      ch('scale.x', 0.72, 1),
+      ch('scale.y', 0.72, 1),
+      ch('scale.z', 0.72, 1),
+    ], { caption: 'Você chega com a barriga verde estufada — não cabe mais NADA.' }),
+    seq('braco-pare-assenta', 'braco-pare', 3.3, 0.5, [ch('rotation.z', 1.3, 0.5)], {
+      ease: 'easeOut',
+    }),
+    seq('braco-tapinha-assenta', 'braco-tapinha', 3.42, 0.5, [ch('rotation.z', -1.3, -0.5)], {
+      ease: 'easeOut',
+    }),
 
-    // o taco brota do balcão e é empurrado para o cliente
-    seq('taco-rise', 'taco', 5.2, 0.7, [ch('position.y', -0.48, 1.32)], {
+    // ---- o taco telescopa de dentro do balcão e é empurrado ----
+    seq('taco-saca', 'taco', 5.0, 0.8, [ch('position.y', -0.12, 0.985)], {
+      ease: 'easeOut',
       caption: 'O caixa saca um TACO mexicano gigante de brinde…',
     }),
-    seq('recheio-rise', 'recheio-taco', 5.35, 0.7, [ch('position.y', -0.48, 1.32)]),
-    seq('taco-push', 'taco', 6.15, 0.6, [ch('position.z', -0.2, 0.35)]),
-    seq('recheio-push', 'recheio-taco', 6.15, 0.6, [ch('position.z', -0.67, -0.12)]),
+    seq('vapor-sobe', 'vapor', 5.2, 0.6, [
+      ch('scale.x', 0.01, 1),
+      ch('scale.y', 0.01, 1),
+      ch('scale.z', 0.01, 1),
+    ], { ease: 'easeOut' }),
+    seq('taco-empurra', 'taco', 5.95, 0.7, [ch('position.z', -0.35, 0.45)]),
+    seq('atendente-inclina', 'atendente', 5.95, 0.6, [ch('rotation.x', 0, 0.12)]),
+    seq('braco-caixa-empurra', 'braco-caixa', 6.0, 0.6, [ch('rotation.x', 0, -1.5)], {
+      ease: 'easeOut',
+    }),
 
-    // mão espalmada: NÊI, TACO!
-    seq('mao-pare-rise', 'mao-pare', 7.5, 0.7, [riseFrom(1.32, 1.7)], {
+    // ---- mão espalmada: NÊI, TACO! ----
+    seq('braco-pare-ergue', 'braco-pare', 7.4, 0.6, [
+      ch('rotation.x', 0, -2.75),
+      ch('rotation.z', 0.5, 0.15),
+    ], {
+      ease: 'easeOut',
       caption: 'Mão espalmada na frente do taco: "NÊI, TACO!" — nej tack, nem taco!',
     }),
-    seq('mao-pare-thrust', 'mao-pare', 8.3, 0.5, [ch('position.z', 1.04, 0.92)]),
+    seq('braco-pare-firma', 'braco-pare', 8.15, 0.5, [ch('rotation.x', -2.75, -2.5)]),
 
-    // tapinha na barriga: DÊ… É BRÁ!
-    seq('mao-tapinha-rise', 'mao-tapinha', 9.0, 0.6, [riseFrom(0.95, 1.3)], {
+    // ---- tapinha na barriga: DÊ… É BRÁ! ----
+    seq('braco-tapinha-pousa', 'braco-tapinha', 9.3, 0.6, [ch('rotation.x', 0, -1.0)], {
       caption: 'Tapinha na barriga: "DÊ… É BRÁ!" — tá ótimo assim: Nej tack, det är bra.',
     }),
-    seq('mao-tapinha-in', 'mao-tapinha', 9.7, 0.5, [ch('position.z', 0.8, 0.9)]),
-    seq('mao-tapinha-out', 'mao-tapinha', 10.2, 0.5, [ch('position.z', 0.9, 0.8)]),
+    seq('tapinha-sobe', 'braco-tapinha', 10.1, 0.35, [ch('rotation.x', -1.0, -0.62)]),
+    seq('tapinha-desce', 'braco-tapinha', 10.5, 0.4, [ch('rotation.x', -0.62, -1.0)]),
+
+    // ---- pulinho satisfeito do cliente ----
+    seq('cliente-pula', 'cliente', 11.0, 0.35, [ch('position.y', 0.18, 0.32)], {
+      ease: 'easeOut',
+    }),
+    seq('cliente-aterrissa', 'cliente', 11.38, 0.4, [ch('position.y', 0.32, 0.18)], {
+      ease: 'easeIn',
+    }),
   ]
 
   return {
     root,
     parts,
     build,
-    cameraHint: { position: [4.0, 3.0, 4.4], target: [0, 0.9, 0.2] },
+    cameraHint: { position: [4.8, 3.0, 3.3], target: [0.1, 1.0, 0.1] },
   }
 }
 

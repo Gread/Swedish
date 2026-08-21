@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { ContactShadows, Environment, Lightformer, OrbitControls } from '@react-three/drei'
-import { Bloom, EffectComposer, N8AO, Vignette } from '@react-three/postprocessing'
+import { Effects } from './Effects'
 import type { CardScene } from '../rig/types'
 
 /**
@@ -49,11 +49,7 @@ export function CardCanvas({ scene, children }: { scene: CardScene; children?: R
 
       {children}
 
-      <EffectComposer multisampling={4}>
-        <N8AO intensity={2.5} aoRadius={0.6} distanceFalloff={0.8} quality="medium" />
-        <Bloom intensity={0.35} luminanceThreshold={0.85} mipmapBlur />
-        <Vignette eskil={false} offset={0.18} darkness={0.72} />
-      </EffectComposer>
+      <Effects />
 
       {/* maxPolarAngle acima do horizonte: peças "subterrâneas" nunca aparecem antes da hora */}
       <OrbitControls

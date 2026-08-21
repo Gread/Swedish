@@ -1,223 +1,285 @@
 import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
-import { box, cone, cylinder, seq, sphere, torus, riseFrom, ch } from '../rig/helpers'
+import {
+  ch,
+  cone,
+  cylinder,
+  lathe,
+  person,
+  puff,
+  rbox,
+  riseFrom,
+  rng,
+  rock,
+  seq,
+  sphere,
+  torus,
+} from '../rig/helpers'
 
 /**
  * jag-skulle-vilja-boka-en-tid
- * Cena: o barbeiro viking da VÍLIA carimba, com a BÚca de uma garrafa de
- * SKOL LEve, a hora da sua parTÍD no mostrador do relógio da torre,
- * enquanto você observa ao telefone.
+ * Cena: na pracinha da VÍLIA, o barbeiro viking carimba, com a BÚca de uma
+ * garrafa de SKOL LEve, a hora da sua parTÍD no mostrador do relógio da
+ * torre, enquanto você observa ao telefone.
+ *
+ * Montagem: base do diorama → torre + relógio → barbeiro viking (vira-se
+ * para a torre) → garrafa sobe e carimba → marca da búca → você ao telefone.
  */
+
+// Altura do topo da base do diorama — todo mundo pisa aqui.
+const CHAO = 0.14
+
 function createScene(): CardScene {
   const root = new THREE.Group()
 
-  // ── Grupo 1: a pracinha da VÍLIA ─────────────────────────────────────
-  const chao = box(5.2, 0.12, 3.6, '#7ec850')
-  chao.position.set(0, -0.06, 0)
-  root.add(chao)
+  // ── Grupo 1: a base da pracinha da VÍLIA ─────────────────────────────
+  const base = new THREE.Group()
+
+  const grama = cylinder(2.55, 2.7, CHAO, '#4a8f3c', { roughness: 0.9 })
+  grama.position.y = CHAO / 2
+  base.add(grama)
+
+  const praca = cylinder(0.82, 0.9, 0.06, '#95897a', { roughness: 0.85 })
+  praca.position.set(-1.25, CHAO + 0.02, -0.35)
+  base.add(praca)
+
+  const pedra1 = rock(0.17, '#8b8f98', 3, { roughness: 0.9 })
+  pedra1.position.set(1.95, CHAO + 0.07, -0.75)
+  base.add(pedra1)
+
+  const pedra2 = rock(0.11, '#7d838e', 8, { roughness: 0.9 })
+  pedra2.position.set(-0.5, CHAO + 0.045, 1.8)
+  base.add(pedra2)
+
+  const arbusto1 = puff(0.2, '#3c7a33', 6, 5, { roughness: 0.9 })
+  arbusto1.position.set(2.1, CHAO + 0.15, 0.35)
+  arbusto1.scale.set(1, 0.8, 1)
+  base.add(arbusto1)
+
+  const arbusto2 = puff(0.16, '#57853d', 5, 9, { roughness: 0.9 })
+  arbusto2.position.set(-1.95, CHAO + 0.12, 0.75)
+  base.add(arbusto2)
+
+  const rand = rng(17)
+  const coresFlor = ['#d9789a', '#e8b04b', '#b07bd9']
+  for (let i = 0; i < 3; i++) {
+    const angulo = -0.5 + i * 1.15 + rand() * 0.35
+    const raio = 1.65 + rand() * 0.5
+    const flor = new THREE.Group()
+    const talo = cylinder(0.014, 0.02, 0.16, '#3c7a33', { roughness: 0.85 })
+    talo.position.y = 0.08
+    const petalas = sphere(0.05, coresFlor[i], { roughness: 0.6 })
+    petalas.scale.y = 0.8
+    petalas.position.y = 0.18
+    flor.add(talo, petalas)
+    flor.position.set(Math.cos(angulo) * raio, CHAO, Math.sin(angulo) * raio)
+    base.add(flor)
+  }
+
+  root.add(base)
 
   // ── Grupo 2: torre do relógio ────────────────────────────────────────
-  const torre = cylinder(0.32, 0.44, 1.9, '#a8b2bd')
-  torre.position.set(-1.35, 0.95, -0.55)
+  const torre = new THREE.Group()
+  torre.position.set(-1.4, 0.17, -0.55)
+
+  const plinto = cylinder(0.52, 0.58, 0.2, '#7c8794', { roughness: 0.75 })
+  plinto.position.y = 0.1
+  const fuste = cylinder(0.3, 0.42, 1.85, '#9aa7b4', { roughness: 0.8 })
+  fuste.position.y = 1.1
+  const cornija = cylinder(0.44, 0.34, 0.16, '#7c8794', { roughness: 0.75 })
+  cornija.position.y = 2.06
+  const telhado = cone(0.48, 0.55, '#5b6b7d', { roughness: 0.55 })
+  telhado.position.y = 2.42
+  const agulha = sphere(0.055, '#c9a24b', { metalness: 0.8, roughness: 0.25 })
+  agulha.position.y = 2.72
+  torre.add(plinto, fuste, cornija, telhado, agulha)
   root.add(torre)
 
   const relogio = new THREE.Group()
-  relogio.position.set(-1.35, 2.0, -0.2)
+  relogio.position.set(-1.4, 2.12, -0.22)
 
-  const mostrador = cylinder(0.5, 0.5, 0.08, '#ffffff')
+  const mostrador = cylinder(0.48, 0.48, 0.07, '#f6f1e4', { roughness: 0.3 })
   mostrador.rotation.x = Math.PI / 2
   relogio.add(mostrador)
 
-  const aro = torus(0.5, 0.07, '#2f2f2f')
-  aro.position.set(0, 0, 0.02)
+  const aro = torus(0.48, 0.055, '#39404a', { metalness: 0.7, roughness: 0.3 })
   relogio.add(aro)
 
-  const ponteiroMinuto = box(0.05, 0.36, 0.03, '#222222')
-  ponteiroMinuto.position.set(0, 0.13, 0.055)
+  for (let i = 0; i < 12; i++) {
+    const angulo = (i / 12) * Math.PI * 2
+    const maior = i % 3 === 0
+    const marca = rbox(maior ? 0.05 : 0.03, maior ? 0.09 : 0.055, 0.02, 0.008, '#2e3340', {
+      roughness: 0.45,
+    })
+    marca.position.set(Math.sin(angulo) * 0.38, Math.cos(angulo) * 0.38, 0.045)
+    marca.rotation.z = -angulo
+    relogio.add(marca)
+  }
+
+  const ponteiroMinuto = rbox(0.045, 0.32, 0.022, 0.01, '#232833', { roughness: 0.4 })
+  ponteiroMinuto.position.set(0, 0.12, 0.058)
   relogio.add(ponteiroMinuto)
 
-  const ponteiroHora = box(0.05, 0.26, 0.03, '#222222')
-  ponteiroHora.position.set(0.084, 0.054, 0.055)
+  const ponteiroHora = rbox(0.045, 0.24, 0.022, 0.01, '#232833', { roughness: 0.4 })
+  ponteiroHora.position.set(0.084, 0.054, 0.052)
   ponteiroHora.rotation.z = -1.0
   relogio.add(ponteiroHora)
+
+  const pino = cylinder(0.035, 0.035, 0.05, '#c9a24b', { metalness: 0.8, roughness: 0.25 })
+  pino.rotation.x = Math.PI / 2
+  pino.position.z = 0.06
+  relogio.add(pino)
 
   root.add(relogio)
 
   // ── Grupo 3: o barbeiro viking ───────────────────────────────────────
-  const barbeiroCorpo = new THREE.Group()
-  barbeiroCorpo.position.set(-0.35, 0, -0.05)
+  const barbeiro = person({ body: '#c94f3d', skin: '#e8c39e', height: 1.55, armAngle: 0.45 })
+  barbeiro.position.set(-0.3, CHAO, 0.2)
+  barbeiro.rotation.y = -1.9 // olha para o relógio da torre
 
-  const avental = cylinder(0.26, 0.33, 0.85, '#e63946')
-  avental.position.set(0, 0.43, 0)
-  barbeiroCorpo.add(avental)
+  // listras de avental de barbeiro
+  for (const alturaListra of [0.32, 0.5]) {
+    const listra = torus(0.27, 0.032, '#f2e8d5', { roughness: 0.85 })
+    listra.rotation.x = Math.PI / 2
+    listra.position.y = alturaListra
+    barbeiro.add(listra)
+  }
 
-  const listra1 = torus(0.3, 0.035, '#ffffff')
-  listra1.rotation.x = Math.PI / 2
-  listra1.position.set(0, 0.28, 0)
-  barbeiroCorpo.add(listra1)
-
-  const listra2 = torus(0.285, 0.035, '#ffffff')
-  listra2.rotation.x = Math.PI / 2
-  listra2.position.set(0, 0.52, 0)
-  barbeiroCorpo.add(listra2)
-
-  const braco = box(0.09, 0.55, 0.09, '#e63946')
-  braco.position.set(-0.22, 1.0, 0.06)
-  braco.rotation.z = 0.12
-  barbeiroCorpo.add(braco)
-
-  const mao = sphere(0.07, '#f6cfa0')
-  mao.position.set(-0.26, 1.28, 0.06)
-  barbeiroCorpo.add(mao)
-
-  root.add(barbeiroCorpo)
-
-  const barbeiroCabeca = new THREE.Group()
-  barbeiroCabeca.position.set(-0.35, 1.05, -0.05)
-
-  const rosto = sphere(0.21, '#f6cfa0')
-  barbeiroCabeca.add(rosto)
-
-  const barba = cone(0.15, 0.28, '#d9822b')
-  barba.position.set(0, -0.16, 0.1)
-  barba.rotation.x = Math.PI
-  barbeiroCabeca.add(barba)
-
-  const olhoBarbeiro1 = sphere(0.03, '#222222')
-  olhoBarbeiro1.position.set(-0.09, 0.04, 0.17)
-  barbeiroCabeca.add(olhoBarbeiro1)
-
-  const olhoBarbeiro2 = sphere(0.03, '#222222')
-  olhoBarbeiro2.position.set(-0.17, 0.04, 0.09)
-  barbeiroCabeca.add(olhoBarbeiro2)
-
-  root.add(barbeiroCabeca)
+  const cabecaBarbeiro = barbeiro.getObjectByName('head')!
 
   const capacete = new THREE.Group()
-  capacete.position.set(-0.35, 1.22, -0.05)
+  const domo = sphere(0.31, '#98a3ad', { metalness: 0.65, roughness: 0.3 })
+  domo.scale.set(1, 0.62, 1)
+  domo.position.y = 0.13
+  const aroCapacete = torus(0.295, 0.032, '#6e7a87', { metalness: 0.6, roughness: 0.35 })
+  aroCapacete.rotation.x = Math.PI / 2
+  aroCapacete.position.y = 0.1
+  capacete.add(domo, aroCapacete)
+  for (const lado of [-1, 1]) {
+    const chifre = cone(0.06, 0.22, '#f2ead8', { roughness: 0.5 })
+    chifre.position.set(lado * 0.32, 0.21, 0)
+    chifre.rotation.z = -lado * 1.2
+    capacete.add(chifre)
+  }
+  cabecaBarbeiro.add(capacete)
 
-  const domo = sphere(0.22, '#8d99ae')
-  domo.scale.set(1, 0.7, 1)
-  capacete.add(domo)
+  const barba = puff(0.14, '#c4762b', 5, 7, { roughness: 0.9 })
+  barba.position.set(0, -0.19, 0.16)
+  barba.scale.set(1, 0.8, 0.7)
+  cabecaBarbeiro.add(barba)
 
-  const chifreDireito = cone(0.06, 0.22, '#f5f0e6')
-  chifreDireito.position.set(0.26, 0.08, 0)
-  chifreDireito.rotation.z = -1.2
-  capacete.add(chifreDireito)
+  // braço esquerdo erguido em direção à garrafa
+  barbeiro.getObjectByName('armL')!.rotation.z = 2.5
 
-  const chifreEsquerdo = cone(0.06, 0.22, '#f5f0e6')
-  chifreEsquerdo.position.set(-0.26, 0.08, 0)
-  chifreEsquerdo.rotation.z = 1.2
-  capacete.add(chifreEsquerdo)
+  root.add(barbeiro)
 
-  root.add(capacete)
-
-  // ── Grupo 4: a garrafa de SKOL LEve e o carimbo da BÚca ─────────────
-  // Aponta +y no espaço local; inclinada (rotation.z = 0.9) a búca toca
-  // o mostrador do relógio em (-1.15, 1.84).
+  // ── Grupo 4: a garrafa de SKOL LEve (acento da cena) e o carimbo ─────
+  // Aponta +y no espaço local; ao inclinar (rotation.z: 0.35 → 0.95) a
+  // búca (y local 0.78) desce até tocar o mostrador em (-1.18, 1.97).
   const garrafa = new THREE.Group()
-  garrafa.position.set(-0.72, 1.5, -0.1)
-  garrafa.rotation.z = 0.9
+  garrafa.position.set(-0.55, 1.52, -0.165)
+  garrafa.rotation.z = 0.95
 
-  const corpoGarrafa = cylinder(0.11, 0.11, 0.5, '#d98e2b')
-  garrafa.add(corpoGarrafa)
+  const vidro = lathe(
+    [
+      [0, 0],
+      [0.09, 0.008],
+      [0.115, 0.06],
+      [0.115, 0.4],
+      [0.095, 0.47],
+      [0.052, 0.58],
+      [0.046, 0.7],
+      [0.058, 0.72],
+      [0.058, 0.78],
+      [0, 0.78],
+    ],
+    '#e8971f',
+    { roughness: 0.25 },
+  )
+  garrafa.add(vidro)
 
-  const rotulo = cylinder(0.115, 0.115, 0.16, '#f4d35e')
-  rotulo.position.set(0, -0.02, 0)
+  const rotulo = cylinder(0.121, 0.121, 0.15, '#f7ecc8', { roughness: 0.65 })
+  rotulo.position.y = 0.26
   garrafa.add(rotulo)
 
-  const gargalo = cylinder(0.05, 0.1, 0.2, '#d98e2b')
-  gargalo.position.set(0, 0.34, 0)
-  garrafa.add(gargalo)
-
-  const buca = cone(0.06, 0.12, '#8a5a13')
-  buca.position.set(0, 0.5, 0)
+  const buca = torus(0.052, 0.017, '#8a5a13', { roughness: 0.35 })
+  buca.rotation.x = Math.PI / 2
+  buca.position.y = 0.775
   garrafa.add(buca)
 
   root.add(garrafa)
 
   // Marca carimbada no mostrador, exatamente onde a búca encosta.
-  const carimbo = torus(0.09, 0.03, '#e8a020')
-  carimbo.position.set(-1.15, 1.84, -0.13)
+  const carimbo = torus(0.07, 0.024, '#f0a127', { roughness: 0.4 })
+  carimbo.position.set(-1.18, 1.97, -0.165)
   root.add(carimbo)
 
   // ── Grupo 5: você ao telefone ────────────────────────────────────────
-  const voce = new THREE.Group()
-  voce.position.set(1.35, 0, 0.75)
+  const voce = person({ body: '#3f6fa8', skin: '#e8c39e', height: 1.45, armAngle: 0.35 })
+  voce.position.set(1.5, CHAO, 0.75)
+  voce.rotation.y = -1.85 // olha para o barbeiro e a torre
 
-  const corpoVoce = cylinder(0.22, 0.28, 0.8, '#2a6fdb')
-  corpoVoce.position.set(0, 0.4, 0)
-  voce.add(corpoVoce)
+  const cabecaVoce = voce.getObjectByName('head')!
 
-  const cabecaVoce = sphere(0.2, '#f6cfa0')
-  cabecaVoce.position.set(0, 0.98, 0)
-  voce.add(cabecaVoce)
+  const cabelo = puff(0.16, '#4a3728', 6, 11, { roughness: 0.9 })
+  cabelo.position.set(0, 0.14, -0.06)
+  cabelo.scale.set(1.2, 0.75, 1.15)
+  cabecaVoce.add(cabelo)
 
-  const cabelo = sphere(0.21, '#4a3728')
-  cabelo.position.set(0, 1.04, -0.02)
-  cabelo.scale.set(1, 0.75, 1)
-  voce.add(cabelo)
+  const telefone = rbox(0.085, 0.16, 0.03, 0.012, '#2b2f36', { roughness: 0.3 })
+  telefone.position.set(0.24, -0.03, 0.09)
+  telefone.rotation.set(0, 0.35, -0.15)
+  cabecaVoce.add(telefone)
 
-  const olhoVoce1 = sphere(0.03, '#222222')
-  olhoVoce1.position.set(-0.18, 1.03, 0.06)
-  voce.add(olhoVoce1)
-
-  const olhoVoce2 = sphere(0.03, '#222222')
-  olhoVoce2.position.set(-0.18, 1.03, -0.06)
-  voce.add(olhoVoce2)
-
-  const bracoVoce = box(0.08, 0.3, 0.08, '#2a6fdb')
-  bracoVoce.position.set(0, 0.85, 0.12)
-  bracoVoce.rotation.x = -0.4
-  voce.add(bracoVoce)
-
-  const telefone = box(0.08, 0.22, 0.14, '#222222')
-  telefone.position.set(0, 1.0, 0.17)
-  voce.add(telefone)
+  // braço direito erguido segurando o telefone
+  voce.getObjectByName('armR')!.rotation.z = -2.6
 
   root.add(voce)
 
   const parts = [
-    { name: 'chao', group: 'vilia', object: chao },
+    { name: 'base', group: 'vilia', object: base },
     { name: 'torre', group: 'torre', object: torre },
     { name: 'relogio', group: 'torre', object: relogio },
-    { name: 'barbeiro-corpo', group: 'barbeiro', object: barbeiroCorpo },
-    { name: 'barbeiro-cabeca', group: 'barbeiro', object: barbeiroCabeca },
-    { name: 'capacete', group: 'barbeiro', object: capacete },
+    { name: 'barbeiro', group: 'barbeiro', object: barbeiro },
     { name: 'garrafa', group: 'skol', object: garrafa },
     { name: 'carimbo', group: 'skol', object: carimbo },
     { name: 'voce', group: 'voce', object: voce },
   ]
 
   const build = [
-    seq('chao-rise', 'chao', 0.0, 0.7, [riseFrom(-0.06, 0.5)], {
+    seq('base-rise', 'base', 0.0, 0.8, [riseFrom(0, 0.9)], {
+      ease: 'easeOut',
       caption: 'IÁ! Bem-vindo à pracinha da VÍLIA, onde nada acontece sem hora marcada…',
     }),
-    seq('torre-rise', 'torre', 1.5, 0.8, [riseFrom(0.95, 2.1)], {
+    seq('torre-rise', 'torre', 1.7, 0.85, [riseFrom(0.17, 3.1)], {
+      ease: 'easeOut',
       caption: '…a torre do relógio da VÍLIA guarda o horário de cada parTÍD.',
     }),
-    seq('relogio-grow', 'relogio', 2.35, 0.6, [
+    seq('relogio-grow', 'relogio', 2.6, 0.6, [
       ch('scale.x', 0.01, 1),
       ch('scale.y', 0.01, 1),
       ch('scale.z', 0.01, 1),
-    ]),
-    seq('barbeiro-corpo-rise', 'barbeiro-corpo', 3.6, 0.8, [riseFrom(0, 1.6)], {
+    ], { ease: 'easeOut' }),
+    seq('barbeiro-rise', 'barbeiro', 3.9, 0.8, [riseFrom(CHAO, 1.9)], {
+      ease: 'easeOut',
       caption: "O barbeiro viking só marca horário mediante pedágio: 'uma SKOL LEve!'",
     }),
-    seq('barbeiro-cabeca-rise', 'barbeiro-cabeca', 3.8, 0.7, [riseFrom(1.05, 1.4)]),
-    seq('capacete-rise', 'capacete', 4.0, 0.7, [riseFrom(1.22, 1.6)]),
-    seq('garrafa-rise', 'garrafa', 5.6, 0.8, [riseFrom(1.5, 2.3)], {
+    seq('barbeiro-turn', 'barbeiro', 4.8, 0.5, [ch('rotation.y', -1.25, -1.9)]),
+    seq('garrafa-rise', 'garrafa', 5.7, 0.8, [riseFrom(1.52, 2.5)], {
+      ease: 'easeOut',
       caption: "Você paga a SKOL LEve ('skulle')…",
     }),
-    seq('garrafa-stamp', 'garrafa', 6.5, 0.6, [ch('rotation.z', 0.35, 0.9)]),
-    seq('carimbo-pop', 'carimbo', 7.05, 0.45, [
+    seq('garrafa-stamp', 'garrafa', 6.7, 0.55, [ch('rotation.z', 0.35, 0.95)]),
+    seq('carimbo-pop', 'carimbo', 7.2, 0.45, [
       ch('scale.x', 0.01, 1),
       ch('scale.y', 0.01, 1),
       ch('scale.z', 0.01, 1),
     ], {
+      ease: 'easeOut',
       caption: '…e a BÚca da garrafa carimba no mostrador a hora EN ponto da sua parTÍD!',
     }),
-    seq('voce-rise', 'voce', 8.4, 0.8, [riseFrom(0, 1.4)], {
+    seq('voce-rise', 'voce', 8.7, 0.8, [riseFrom(CHAO, 1.7)], {
+      ease: 'easeOut',
       caption: "Ao telefone, você pede: 'Jag skulle vilja boka en tid.' — Eu queria marcar um horário.",
     }),
   ]
@@ -226,7 +288,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [2.4, 3.0, 5.0], target: [-0.1, 1.1, -0.1] },
+    cameraHint: { position: [2.6, 3.0, 5.5], target: [-0.1, 1.05, 0] },
   }
 }
 

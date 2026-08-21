@@ -1,145 +1,325 @@
 import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
-import { box, cone, cylinder, seq, sphere, riseFrom, ch } from '../rig/helpers'
+import {
+  person, rbox, capsule, cylinder, sphere, cone, torus, lathe, puff,
+  rng, seq, ch, riseFrom,
+} from '../rig/helpers'
 
 /**
- * Var hittar jag mjölken? — "VARRE, RITA! IÁ... MIÉL QUEN(te)?!"
+ * var-hittar-jag-mjolken — "Var hittar jag mjölken?"
  * Rita varre um mar de leite derramado no corredor do ICA; na prateleira,
  * um pote mexicano de MIEL de sombrero, fumegando, tomou o lugar do leite.
+ *
+ * Paleta: piso creme-acinzentado · azul-gôndola frio (#79a8c4) · rosa-uniforme
+ * de Rita (#c2597a), com o vermelho ICA temperado (#c94f3d) de coadjuvante.
+ * Acento saturado RESERVADO: âmbar #f09f2c do pote de MIEL (a ponte sonora).
  */
 function createScene(): CardScene {
   const root = new THREE.Group()
+  const rand = rng(12)
 
-  // ── Cenário: corredor do mercado ─────────────────────────────────────
-  const chao = box(4.8, 0.1, 3.2, '#eef3f7')
-  chao.position.set(0, 0.05, 0)
-  root.add(chao)
+  // ---------- BASE do diorama: piso do mercado + adereços ----------
+  const base = new THREE.Group()
+  const disco = cylinder(2.55, 2.65, 0.16, '#d8d5c9', { roughness: 0.9 })
+  disco.position.y = 0.08
+  base.add(disco)
 
+  // ladrilhos frios alternados, com falhas semeadas
+  for (let ix = -3; ix <= 3; ix++) {
+    for (let iz = -3; iz <= 3; iz++) {
+      const x = ix * 0.6
+      const z = iz * 0.6
+      if (Math.hypot(x, z) > 2.05) continue
+      if (rand() < 0.08) continue
+      const cor = (ix + iz) % 2 === 0 ? '#eceae2' : '#cdd3d6'
+      const tile = rbox(0.52, 0.03, 0.52, 0.012, cor, { roughness: 0.85 })
+      tile.position.set(x, 0.175, z)
+      base.add(tile)
+    }
+  }
+
+  // adereço 1: cone de "piso molhado" ao lado da poça
+  const conePiso = new THREE.Group()
+  const coneCorpo = cone(0.17, 0.46, '#cbb35a', { roughness: 0.7 })
+  coneCorpo.position.y = 0.42
+  conePiso.add(coneCorpo)
+  const coneFaixa = cylinder(0.115, 0.135, 0.07, '#f2efe6', { roughness: 0.5 })
+  coneFaixa.position.y = 0.42
+  conePiso.add(coneFaixa)
+  const coneBase = rbox(0.3, 0.035, 0.3, 0.012, '#b09c4b', { roughness: 0.75 })
+  coneBase.position.y = 0.2
+  conePiso.add(coneBase)
+  conePiso.position.set(1.5, 0, 1.35)
+  conePiso.rotation.y = 0.4
+  base.add(conePiso)
+
+  // adereço 2: cesta de compras esquecida
+  const cesta = new THREE.Group()
+  const cestaCorpo = rbox(0.44, 0.24, 0.32, 0.05, '#5d7f96', { roughness: 0.75 })
+  cestaCorpo.position.y = 0.31
+  cesta.add(cestaCorpo)
+  const cestaAlca = torus(0.14, 0.02, '#48657a', { roughness: 0.7 })
+  cestaAlca.position.y = 0.42
+  cesta.add(cestaAlca)
+  for (let i = 0; i < 2; i++) {
+    const pao = capsule(0.06, 0.12, '#d9a25f', { roughness: 0.8 })
+    pao.rotation.z = Math.PI / 2 + (rand() - 0.5) * 0.5
+    pao.position.set(-0.07 + i * 0.14, 0.44, (rand() - 0.5) * 0.1)
+    cesta.add(pao)
+  }
+  cesta.position.set(-1.9, 0, 0.55)
+  cesta.rotation.y = 0.5
+  base.add(cesta)
+
+  // adereço 3: balde da faxina, já cheio de leite
+  const balde = new THREE.Group()
+  const baldeCorpo = cylinder(0.17, 0.13, 0.26, '#6b7f94', { roughness: 0.6 })
+  baldeCorpo.position.y = 0.32
+  balde.add(baldeCorpo)
+  const baldeAro = torus(0.17, 0.018, '#54677a', { roughness: 0.45 })
+  baldeAro.rotation.x = Math.PI / 2
+  baldeAro.position.y = 0.45
+  balde.add(baldeAro)
+  const baldeLeite = cylinder(0.145, 0.145, 0.02, '#f7f5ef', { roughness: 0.2 })
+  baldeLeite.position.y = 0.42
+  balde.add(baldeLeite)
+  balde.position.set(2.0, 0, -0.7)
+  base.add(balde)
+
+  root.add(base)
+
+  // ---------- GÔNDOLA do ICA: laticínios sem uma gota de leite ----------
   const prateleira = new THREE.Group()
-  const painelFundo = box(1.7, 2.1, 0.25, '#8ecae6')
-  painelFundo.position.set(0, 1.15, -0.28)
+  const painelFundo = rbox(1.9, 2.1, 0.14, 0.04, '#79a8c4', { roughness: 0.6 })
+  painelFundo.position.set(0, 1.15, -0.3)
   prateleira.add(painelFundo)
-  const ladoEsq = box(0.12, 2.1, 0.75, '#79b8d6')
-  ladoEsq.position.set(-0.79, 1.15, 0)
-  prateleira.add(ladoEsq)
-  const ladoDir = box(0.12, 2.1, 0.75, '#79b8d6')
-  ladoDir.position.set(0.79, 1.15, 0)
-  prateleira.add(ladoDir)
-  const plancaBaixa = box(1.46, 0.07, 0.68, '#ffffff')
-  plancaBaixa.position.set(0, 0.75, 0)
-  prateleira.add(plancaBaixa)
-  const plancaAlta = box(1.46, 0.07, 0.68, '#ffffff')
-  plancaAlta.position.set(0, 1.45, 0)
-  prateleira.add(plancaAlta)
-  const placaIca = box(0.9, 0.34, 0.12, '#e63946')
-  placaIca.position.set(0, 2.37, -0.15)
-  prateleira.add(placaIca)
-  prateleira.position.set(-1.5, 0, -1.0)
+  for (const lado of [-1, 1]) {
+    const lateral = rbox(0.14, 2.1, 0.7, 0.04, '#6493ad', { roughness: 0.6 })
+    lateral.position.set(lado * 0.95, 1.15, 0)
+    prateleira.add(lateral)
+  }
+  const rodape = rbox(1.86, 0.18, 0.66, 0.03, '#54748c', { roughness: 0.7 })
+  rodape.position.set(0, 0.09, 0)
+  prateleira.add(rodape)
+  for (const py of [0.72, 1.42]) {
+    const planca = rbox(1.76, 0.07, 0.62, 0.02, '#eef1f2', { roughness: 0.45 })
+    planca.position.set(0, py, 0)
+    prateleira.add(planca)
+    const etiquetas = rbox(1.76, 0.05, 0.025, 0.01, '#dce4e8', { roughness: 0.5 })
+    etiquetas.position.set(0, py - 0.05, 0.3)
+    prateleira.add(etiquetas)
+  }
+
+  // placa ICA (vermelho temperado) com selo redondo
+  const placa = new THREE.Group()
+  const placaCorpo = rbox(0.95, 0.36, 0.1, 0.035, '#c94f3d', { roughness: 0.5 })
+  placa.add(placaCorpo)
+  const placaSelo = torus(0.075, 0.02, '#f2efe6', { roughness: 0.4 })
+  placaSelo.position.set(-0.28, 0, 0.055)
+  placa.add(placaSelo)
+  const placaTraco = rbox(0.34, 0.05, 0.02, 0.01, '#f2efe6', { roughness: 0.4 })
+  placaTraco.position.set(0.14, 0, 0.055)
+  placa.add(placaTraco)
+  placa.position.set(0, 2.42, -0.24)
+  prateleira.add(placa)
+
+  // sobras na planca baixa (queijos e iogurtes) — o lado do leite, vazio
+  for (let i = 0; i < 2; i++) {
+    const queijo = rbox(0.24, 0.16, 0.2, 0.03, '#e8c76a', { roughness: 0.55 })
+    queijo.position.set(-0.62 + i * 0.3, 0.72 + 0.115, 0.02 + (rand() - 0.5) * 0.08)
+    queijo.rotation.y = (rand() - 0.5) * 0.4
+    prateleira.add(queijo)
+  }
+  for (let i = 0; i < 2; i++) {
+    const iogurte = lathe(
+      [[0, 0], [0.075, 0], [0.09, 0.13], [0.095, 0.15], [0, 0.15]],
+      '#f2f0e8', { roughness: 0.5 },
+    )
+    iogurte.position.set(0.02 + i * 0.2, 0.755, -0.1 + (rand() - 0.5) * 0.1)
+    prateleira.add(iogurte)
+    const tampa = cylinder(0.08, 0.08, 0.02, '#7fa06b', { roughness: 0.5 })
+    tampa.position.set(0.02 + i * 0.2, 0.915, -0.1 + (rand() - 0.5) * 0.1)
+    prateleira.add(tampa)
+  }
+  // etiqueta caída no vão vazio do leite
+  const etiquetaCaida = rbox(0.14, 0.02, 0.09, 0.008, '#f2efe6', { roughness: 0.5 })
+  etiquetaCaida.position.set(0.55, 0.77, 0.12)
+  etiquetaCaida.rotation.set(0.1, 0.6, 0)
+  prateleira.add(etiquetaCaida)
+
+  prateleira.position.set(-1.35, 0.19, -1.1)
   root.add(prateleira)
 
-  // ── O leite derramado ────────────────────────────────────────────────
-  const poca = cylinder(0.7, 0.78, 0.06, '#ffffff', 32)
-  poca.position.set(0.55, 0.13, 0.45)
+  // ---------- o MAR de leite derramado ----------
+  const poca = new THREE.Group()
+  const blobs: [number, number, number, number][] = [
+    // [raio, x, z, girar]
+    [0.62, 0, 0, 0],
+    [0.3, 0.5, 0.32, 0],
+    [0.26, -0.48, -0.3, 0],
+  ]
+  for (const [r, bx, bz] of blobs) {
+    const blob = cylinder(r, r + 0.07, 0.05, '#f7f5ef', { roughness: 0.2 })
+    blob.position.set(bx, 0.215, bz)
+    poca.add(blob)
+  }
+  for (let i = 0; i < 4; i++) {
+    const ang = rand() * Math.PI * 2
+    const dist = 0.78 + rand() * 0.25
+    const gota = sphere(0.035 + rand() * 0.02, '#f7f5ef', { roughness: 0.2 })
+    gota.position.set(Math.cos(ang) * dist, 0.21, Math.sin(ang) * dist)
+    gota.scale.y = 0.45
+    poca.add(gota)
+  }
+  const tampinha = cylinder(0.045, 0.045, 0.03, '#4a7fb5', { roughness: 0.35 })
+  tampinha.position.set(0.32, 0.215, 0.55)
+  poca.add(tampinha)
+  poca.position.set(0.55, 0, 0.55)
   root.add(poca)
 
+  // ---------- a caixinha de leite derretida, tombada na poça ----------
   const caixinha = new THREE.Group()
-  const cartucho = box(0.3, 0.42, 0.3, '#fafafa')
+  const cartucho = rbox(0.3, 0.44, 0.3, 0.03, '#fafafa', { roughness: 0.5 })
   caixinha.add(cartucho)
-  const faixaAzul = box(0.31, 0.12, 0.31, '#219ebc')
-  faixaAzul.position.set(0, -0.02, 0)
+  const topoGable = cone(0.21, 0.16, '#fafafa', { roughness: 0.5 }, 4)
+  topoGable.rotation.y = Math.PI / 4
+  topoGable.position.y = 0.3
+  caixinha.add(topoGable)
+  const faixaAzul = rbox(0.315, 0.12, 0.315, 0.02, '#4a7fb5', { roughness: 0.5 })
+  faixaAzul.position.y = -0.04
   caixinha.add(faixaAzul)
-  caixinha.position.set(0.15, 0.29, 0.85)
-  caixinha.rotation.z = 1.35 // derretida, caída de lado na poça
+  const bocal = cylinder(0.045, 0.045, 0.04, '#4a7fb5', { roughness: 0.35 })
+  bocal.position.set(0.07, 0.36, 0.07)
+  caixinha.add(bocal)
+  caixinha.position.set(0.35, 0.36, 1.05)
+  caixinha.rotation.y = 0.4
+  caixinha.rotation.z = 1.3 // derretida, escorrida de lado na poça
   root.add(caixinha)
 
-  // ── Rita, a faxineira ────────────────────────────────────────────────
-  const corpoRita = new THREE.Group()
-  const tronco = cylinder(0.28, 0.35, 0.9, '#f06292')
-  tronco.position.set(0, 0.55, 0)
-  corpoRita.add(tronco)
-  const bracoVassoura = cylinder(0.055, 0.055, 0.55, '#f06292')
-  bracoVassoura.position.set(-0.28, 1.1, 0.1)
-  bracoVassoura.rotation.z = 0.6
-  corpoRita.add(bracoVassoura)
-  const bracoErguido = cylinder(0.055, 0.055, 0.5, '#f06292')
-  bracoErguido.position.set(0.26, 1.05, -0.05)
-  bracoErguido.rotation.z = -0.55
-  corpoRita.add(bracoErguido)
-  const punho = sphere(0.09, '#ffd8b5')
-  punho.position.set(0.39, 1.27, -0.05)
-  corpoRita.add(punho)
-  corpoRita.position.set(1.4, 0, 0.3)
-  root.add(corpoRita)
-
-  const cabecaRita = new THREE.Group()
-  const rosto = sphere(0.27, '#ffd8b5')
-  cabecaRita.add(rosto)
-  const coque = sphere(0.15, '#6d4c41')
-  coque.position.set(0.14, 0.2, 0)
+  // ---------- RITA, a faxineira furiosa ----------
+  const rita = person({ body: '#c2597a', skin: '#e8c39e', height: 1.5, armAngle: 0.4 })
+  const cabecaRita = rita.getObjectByName('head')!
+  const coque = sphere(0.14, '#5d4037', { roughness: 0.85 })
+  coque.position.set(0, 0.22, -0.12)
   cabecaRita.add(coque)
-  const bocaGrito = sphere(0.07, '#4e342e')
-  bocaGrito.position.set(-0.24, -0.05, 0)
+  const bandana = torus(0.27, 0.04, '#8f3e5f', { roughness: 0.85 })
+  bandana.rotation.x = Math.PI / 2
+  bandana.position.y = 0.1
+  cabecaRita.add(bandana)
+  const no = sphere(0.05, '#8f3e5f', { roughness: 0.85 })
+  no.position.set(0, 0.06, -0.28)
+  cabecaRita.add(no)
+  for (const lado of [-1, 1]) {
+    const sobrancelha = rbox(0.1, 0.022, 0.02, 0.008, '#5d4037', { roughness: 0.8 })
+    sobrancelha.position.set(lado * 0.11, 0.12, 0.25)
+    sobrancelha.rotation.z = lado * -0.4 // franzidas: fúria
+    cabecaRita.add(sobrancelha)
+  }
+  const bocaGrito = sphere(0.05, '#6e332a', { roughness: 0.6 })
+  bocaGrito.position.set(0, -0.11, 0.26)
+  bocaGrito.scale.z = 0.5
   cabecaRita.add(bocaGrito)
-  const olhoFrente = sphere(0.035, '#263238')
-  olhoFrente.position.set(-0.22, 0.09, 0.11)
-  cabecaRita.add(olhoFrente)
-  const olhoTras = sphere(0.035, '#263238')
-  olhoTras.position.set(-0.22, 0.09, -0.11)
-  cabecaRita.add(olhoTras)
-  cabecaRita.position.set(1.4, 1.26, 0.3)
-  root.add(cabecaRita)
+  cabecaRita.rotation.x = 0.28 // olhando para baixo, para o mar de leite
 
+  const avental = rbox(0.36, 0.46, 0.05, 0.02, '#ecebe4', { roughness: 0.9 })
+  avental.position.set(0, 0.36, 0.22)
+  rita.add(avental)
+
+  const bracoVassoura = rita.getObjectByName('armR')!
+  bracoVassoura.rotation.set(0.85, 0, -0.25) // empurrando a vassoura
+  const bracoFuria = rita.getObjectByName('armL')!
+  bracoFuria.rotation.set(-0.2, 0, 2.3) // punho erguido de fúria
+
+  rita.position.set(1.3, 0.19, 0.45)
+  rita.rotation.y = -1.95 // pose final: apontando para o pote na prateleira
+  root.add(rita)
+
+  // ---------- a vassoura (pivô no alto do cabo, para varrer) ----------
   const vassoura = new THREE.Group()
-  const cabo = cylinder(0.04, 0.04, 1.3, '#8d5a2b')
-  cabo.position.set(0, -0.57, 0)
+  const cabo = cylinder(0.035, 0.035, 1.3, '#8d5a2b', { roughness: 0.7 })
+  cabo.position.y = -0.62
   vassoura.add(cabo)
-  const cerdas = box(0.34, 0.16, 0.18, '#fdd835')
-  cerdas.position.set(0, -1.27, 0)
-  vassoura.add(cerdas)
-  vassoura.position.set(1.0, 1.32, 0.4)
-  vassoura.rotation.z = -0.45 // inclinada, cerdas na borda da poça
+  const pomo = sphere(0.048, '#7a4b22', { roughness: 0.7 })
+  pomo.position.y = 0.02
+  vassoura.add(pomo)
+  const virola = cylinder(0.05, 0.058, 0.09, '#b8bcc0', { roughness: 0.3, metalness: 0.8 })
+  virola.position.y = -1.3
+  vassoura.add(virola)
+  const cabeca = rbox(0.34, 0.15, 0.11, 0.035, '#d9b44a', { roughness: 0.85 })
+  cabeca.position.y = -1.4
+  vassoura.add(cabeca)
+  for (let i = 0; i < 5; i++) {
+    const cerda = capsule(0.024, 0.1, '#c9a43e', { roughness: 0.9 })
+    cerda.position.set(-0.12 + i * 0.06, -1.5, 0)
+    vassoura.add(cerda)
+  }
+  vassoura.position.set(1.0, 1.56, 0.62)
+  vassoura.rotation.z = -0.5 // repouso: cerdas na borda da poça
   root.add(vassoura)
 
-  // ── O pote de MIEL de sombrero ───────────────────────────────────────
+  // ---------- o pote de MIEL — acento âmbar da cena ----------
   const pote = new THREE.Group()
-  const corpoPote = cylinder(0.26, 0.3, 0.42, '#f9a825')
-  corpoPote.position.set(0, 0.21, 0)
-  pote.add(corpoPote)
-  const rotulo = cylinder(0.305, 0.305, 0.14, '#ffe0b2')
-  rotulo.position.set(0, 0.19, 0)
+  const jarro = lathe(
+    [
+      [0, 0], [0.2, 0], [0.27, 0.05], [0.29, 0.2], [0.25, 0.32],
+      [0.17, 0.36], [0.18, 0.41], [0.22, 0.45], [0.2, 0.48], [0, 0.48],
+    ],
+    '#f09f2c', { roughness: 0.25 },
+  )
+  pote.add(jarro)
+  const rotulo = cylinder(0.3, 0.3, 0.12, '#f7ead0', { roughness: 0.5 })
+  rotulo.position.y = 0.19
   pote.add(rotulo)
-  pote.position.set(-1.5, 1.49, -1.0) // sobre a planca alta
+  const letreiro = rbox(0.18, 0.05, 0.02, 0.008, '#b35a24', { roughness: 0.5 })
+  letreiro.position.set(0, 0.19, 0.3)
+  pote.add(letreiro)
+  const escorrido = sphere(0.045, '#cf7d1c', { roughness: 0.3 })
+  escorrido.position.set(0.2, 0.38, 0.12)
+  escorrido.scale.y = 1.8
+  pote.add(escorrido)
+  pote.position.set(-1.0, 1.645, -0.95) // sobre a planca alta da gôndola
   root.add(pote)
 
+  // ---------- o sombrero (lathe: aba virada + copa) ----------
   const sombrero = new THREE.Group()
-  const aba = cylinder(0.45, 0.5, 0.06, '#ff7043')
-  aba.position.set(0, 0.03, 0)
-  sombrero.add(aba)
-  const copa = cone(0.24, 0.34, '#f4511e')
-  copa.position.set(0, 0.23, 0)
-  sombrero.add(copa)
-  sombrero.position.set(-1.5, 1.88, -1.0)
+  const chapeu = lathe(
+    [
+      [0, 0], [0.24, 0], [0.44, 0.06], [0.5, 0.13], [0.45, 0.14],
+      [0.26, 0.1], [0.21, 0.12], [0.19, 0.3], [0.1, 0.4], [0, 0.43],
+    ],
+    '#d1603f', { roughness: 0.6 },
+  )
+  sombrero.add(chapeu)
+  const fita = torus(0.21, 0.025, '#f2d16b', { roughness: 0.5 })
+  fita.rotation.x = Math.PI / 2
+  fita.position.y = 0.13
+  sombrero.add(fita)
+  sombrero.rotation.z = 0.1
+  sombrero.position.set(-1.0, 2.08, -0.95)
   root.add(sombrero)
 
+  // ---------- vapor de MIEL bem QUENte escapando sob a aba ----------
   const vapor = new THREE.Group()
-  const fumaca1 = sphere(0.06, '#eceff1')
-  vapor.add(fumaca1)
-  const fumaca2 = sphere(0.08, '#eceff1')
-  fumaca2.position.set(0.09, 0.19, 0)
-  vapor.add(fumaca2)
-  const fumaca3 = sphere(0.05, '#eceff1')
-  fumaca3.position.set(0.04, 0.38, 0)
-  vapor.add(fumaca3)
-  vapor.position.set(-1.16, 1.95, -0.85)
+  const nuvens: [number, number, number, number, number][] = [
+    // [raio, x, y, z, semente]
+    [0.09, 0, 0, 0, 41],
+    [0.12, 0.1, 0.22, 0.04, 42],
+    [0.08, 0.18, 0.44, 0, 43],
+  ]
+  for (const [r, vx, vy, vz, semente] of nuvens) {
+    const nuvem = puff(r, '#eef1f2', 4, semente, { roughness: 0.95 })
+    nuvem.position.set(vx, vy, vz)
+    vapor.add(nuvem)
+  }
+  vapor.position.set(-0.78, 2.3, -0.82)
   root.add(vapor)
 
   const parts = [
-    { name: 'chao', group: 'mercado', object: chao },
+    { name: 'base', group: 'mercado', object: base },
     { name: 'prateleira', group: 'mercado', object: prateleira },
     { name: 'poca', group: 'leite', object: poca },
     { name: 'caixinha', group: 'leite', object: caixinha },
-    { name: 'corpo-rita', group: 'rita', object: corpoRita },
-    { name: 'cabeca-rita', group: 'rita', object: cabecaRita },
+    { name: 'rita', group: 'rita', object: rita },
     { name: 'vassoura', group: 'rita', object: vassoura },
     { name: 'pote-miel', group: 'miel', object: pote },
     { name: 'sombrero', group: 'miel', object: sombrero },
@@ -147,56 +327,70 @@ function createScene(): CardScene {
   ]
 
   const build = [
-    // Grupo 1 — o corredor do ICA
-    seq('chao-rise', 'chao', 0, 0.7, [riseFrom(0.05, 0.3)], {
+    // ---- o corredor do ICA ----
+    seq('base-rise', 'base', 0, 0.8, [riseFrom(0, 1.2)], {
+      ease: 'easeOut',
       caption: 'No corredor do ICA, a prateleira de laticínios está sem uma gota de leite…',
     }),
-    seq('prateleira-rise', 'prateleira', 0.2, 0.8, [riseFrom(0, 2.8)]),
+    seq('prateleira-rise', 'prateleira', 0.25, 0.85, [riseFrom(0.19, 3.0)], { ease: 'easeOut' }),
 
-    // Grupo 2 — o leite derramado
-    seq('poca-espalha', 'poca', 1.8, 0.8, [
-      riseFrom(0.13, 0.3),
+    // ---- o leite derramado ----
+    seq('poca-espalha', 'poca', 1.9, 0.85, [
+      riseFrom(0, 0.4),
       ch('scale.x', 0.15, 1),
       ch('scale.z', 0.15, 1),
     ], {
+      ease: 'easeOut',
       caption: '…todo o leite derramou: virou um mar branco no chão — as caixinhas derreteram!',
     }),
-    seq('caixinha-rise', 'caixinha', 2.1, 0.6, [riseFrom(0.29, 0.8)]),
-    seq('caixinha-tomba', 'caixinha', 2.7, 0.5, [ch('rotation.z', 0.55, 1.35)]),
+    seq('caixinha-rise', 'caixinha', 2.15, 0.6, [riseFrom(0.36, 0.95)], { ease: 'easeOut' }),
+    seq('caixinha-tomba', 'caixinha', 2.85, 0.55, [ch('rotation.z', 0.5, 1.3)], { ease: 'easeIn' }),
 
-    // Grupo 3 — Rita e a vassoura
-    seq('corpo-rita-rise', 'corpo-rita', 3.6, 0.7, [riseFrom(0, 1.7)], {
+    // ---- Rita e a vassoura ----
+    seq('rita-rise', 'rita', 3.9, 0.8, [riseFrom(0.19, 1.75)], {
+      ease: 'easeOut',
       caption: "Chega a faxineira RITA, furiosa — VARRE, RITA! (o rr de 'vaRRE-RIta' é o h aspirado de 'hittar')",
     }),
-    seq('cabeca-rita-rise', 'cabeca-rita', 3.8, 0.6, [riseFrom(1.26, 1.8)]),
-    seq('vassoura-rise', 'vassoura', 4.0, 0.7, [riseFrom(1.32, 1.6)]),
-    seq('vassoura-varre', 'vassoura', 4.9, 0.7, [ch('rotation.z', -0.1, -0.75)], {
+    seq('vassoura-rise', 'vassoura', 4.15, 0.7, [riseFrom(1.56, 1.8)], { ease: 'easeOut' }),
+    seq('vassoura-varre', 'vassoura', 5.0, 0.75, [
+      ch('rotation.z', -0.5, -0.9),
+      ch('position.x', 1.0, 0.55),
+      ch('position.y', 1.56, 1.36),
+    ], {
       caption: "RITA VARRE o mar de leite e grita 'IÁ!' a cada vassourada — VARRE, RITA! IÁ…",
     }),
-    seq('cabeca-grita-ia', 'cabeca-rita', 4.9, 0.35, [ch('rotation.z', 0, 0.3)]),
-    seq('cabeca-volta', 'cabeca-rita', 5.25, 0.35, [ch('rotation.z', 0.3, 0)]),
-    seq('vassoura-recolhe', 'vassoura', 5.7, 0.6, [ch('rotation.z', -0.75, -0.45)]),
+    seq('rita-grita-ia', 'rita', 5.0, 0.4, [ch('rotation.z', 0, 0.12)]),
+    seq('rita-recompoe', 'rita', 5.4, 0.4, [ch('rotation.z', 0.12, 0)]),
+    seq('vassoura-recolhe', 'vassoura', 5.85, 0.65, [
+      ch('rotation.z', -0.9, -0.5),
+      ch('position.x', 0.55, 1.0),
+      ch('position.y', 1.36, 1.56),
+    ]),
 
-    // Grupo 4 — o pote de MIEL quente
-    seq('pote-cresce', 'pote-miel', 7.0, 0.8, [
-      ch('scale.x', 0.05, 1),
-      ch('scale.y', 0.05, 1),
-      ch('scale.z', 0.05, 1),
+    // ---- o pote de MIEL quente ----
+    seq('pote-cresce', 'pote-miel', 6.9, 0.85, [
+      ch('scale.x', 0.01, 1),
+      ch('scale.y', 0.01, 1),
+      ch('scale.z', 0.01, 1),
     ], {
+      ease: 'easeOut',
       caption: 'Na prateleira, no lugar do leite, só um pote mexicano de MIÉL bem QUENte — foi ele que derreteu tudo!',
     }),
-    seq('sombrero-brota', 'sombrero', 7.9, 0.6, [
-      ch('position.y', 1.58, 1.88),
+    seq('sombrero-pousa', 'sombrero', 7.85, 0.6, [
+      ch('position.y', 1.9, 2.08),
       ch('scale.x', 0.2, 1),
       ch('scale.y', 0.2, 1),
       ch('scale.z', 0.2, 1),
-    ]),
-    seq('vapor-sobe', 'vapor', 8.6, 0.7, [
-      ch('position.y', 1.6, 1.95),
+    ], { ease: 'easeOut' }),
+    seq('vapor-sobe', 'vapor', 8.55, 0.75, [
+      ch('position.y', 2.0, 2.3),
       ch('scale.x', 0.15, 1),
       ch('scale.y', 0.15, 1),
       ch('scale.z', 0.15, 1),
-    ], {
+    ], { ease: 'easeOut' }),
+
+    // ---- Rita se vira e aponta o caos ----
+    seq('rita-aponta', 'rita', 9.5, 0.8, [ch('rotation.y', -1.5, -1.95)], {
       caption: "Você aponta o caos: 'VARRE, RITA! IÁ… MIÉL QUEN(te)?!' — Var hittar jag mjölken?",
     }),
   ]
@@ -205,7 +399,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [3.8, 3.0, 5.0], target: [-0.1, 1.0, 0] },
+    cameraHint: { position: [3.4, 3.0, 5.2], target: [-0.2, 1.0, -0.1] },
   }
 }
 

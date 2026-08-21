@@ -1,177 +1,394 @@
 import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
-import { box, cone, cylinder, sphere, torus, seq, ch, riseFrom } from '../rig/helpers'
+import {
+  person, rbox, capsule, cylinder, sphere, cone, torus, lathe, puff,
+  rng, seq, ch, riseFrom,
+} from '../rig/helpers'
 
 /**
  * jag-ska-hamta-ut-ett-paket — "Jag ska hämta ut ett paket."
  * IÁ, ESCARRA EM TATU — ETE PACOTE! O tatu atendente do postombud recebe
  * o escarro na carapaça e libera o pacote com um ET dentro.
+ *
+ * Paleta: creme quente (piso/tampo) · vermelho ICA temperado #c23b30 (balcão)
+ * · cinza-azulado (tatu/estante). Acento saturado RESERVADO: teal #35e0b0
+ * do escarro (a "senha" nojenta do balcão).
  */
 function createScene(): CardScene {
   const root = new THREE.Group()
+  const rand = rng(11)
 
-  // ---------- cenário: piso do mercado ----------
-  const chao = box(5, 0.12, 4.2, '#dcdcd2')
-  chao.position.set(0, -0.06, 0.2)
-  root.add(chao)
+  // ---------- BASE do diorama: piso ladrilhado do ICA + adereços ----------
+  const base = new THREE.Group()
+  const disco = cylinder(2.5, 2.6, 0.16, '#d6d0c0', { roughness: 0.9 })
+  disco.position.y = 0.08
+  base.add(disco)
 
-  // ---------- cenário: balcão vermelho ICA do postombud ----------
-  const balcao = box(2.3, 0.85, 0.75, '#e3000a')
-  balcao.position.set(0, 0.425, -0.4)
+  for (let ix = -3; ix <= 3; ix++) {
+    for (let iz = -3; iz <= 3; iz++) {
+      const x = ix * 0.62
+      const z = iz * 0.62
+      if (Math.hypot(x, z) > 2.0) continue
+      if (rand() < 0.08) continue
+      const cor = (ix + iz) % 2 === 0 ? '#eae5d8' : '#d3cdbd'
+      const tile = rbox(0.54, 0.03, 0.54, 0.012, cor, { roughness: 0.85 })
+      tile.position.set(x, 0.175, z)
+      base.add(tile)
+    }
+  }
+
+  // adereço 1: pilha de encomendas esperando retirada
+  const pilha = new THREE.Group()
+  const pacoteBaixo = rbox(0.42, 0.3, 0.34, 0.03, '#a97f52', { roughness: 0.8 })
+  pacoteBaixo.position.y = 0.34
+  pilha.add(pacoteBaixo)
+  const fitaBaixo = rbox(0.09, 0.31, 0.35, 0.01, '#e6d3a3', { roughness: 0.6 })
+  fitaBaixo.position.set(0.04, 0.34, 0)
+  pilha.add(fitaBaixo)
+  const pacoteCima = rbox(0.32, 0.24, 0.27, 0.03, '#c19467', { roughness: 0.8 })
+  pacoteCima.position.y = 0.61
+  pacoteCima.rotation.y = 0.45
+  pilha.add(pacoteCima)
+  pilha.position.set(-1.75, 0, 0.55)
+  pilha.rotation.y = -0.25
+  base.add(pilha)
+
+  // adereço 2: vaso de planta da lojinha (lathe + puff)
+  const planta = new THREE.Group()
+  const vaso = lathe(
+    [[0, 0], [0.14, 0], [0.17, 0.05], [0.19, 0.24], [0.145, 0.26], [0, 0.26]],
+    '#a5654a', { roughness: 0.85 },
+  )
+  vaso.position.y = 0.17
+  planta.add(vaso)
+  const folhagem = puff(0.24, '#4a8f3c', 6, 31, { roughness: 0.9 })
+  folhagem.position.y = 0.6
+  planta.add(folhagem)
+  planta.position.set(1.85, 0, -0.75)
+  base.add(planta)
+
+  // adereço 3: cone de sinalização da fila
+  const coneFila = new THREE.Group()
+  const coneCorpo = cone(0.15, 0.34, '#d8a13f', { roughness: 0.75 })
+  coneCorpo.position.y = 0.35
+  coneFila.add(coneCorpo)
+  const coneFaixa = torus(0.105, 0.022, '#f2efe7', { roughness: 0.6 })
+  coneFaixa.rotation.x = Math.PI / 2
+  coneFaixa.position.y = 0.33
+  coneFila.add(coneFaixa)
+  coneFila.position.set(-1.45, 0, 1.25)
+  base.add(coneFila)
+
+  // adereço 4: florzinha perdida do buquê de alguém
+  const flor = new THREE.Group()
+  const caule = cylinder(0.018, 0.022, 0.22, '#5f9e4a', { roughness: 0.8 })
+  caule.position.y = 0.29
+  flor.add(caule)
+  const petala = sphere(0.055, '#c95f8a', { roughness: 0.6 })
+  petala.position.y = 0.42
+  flor.add(petala)
+  flor.position.set(1.55, 0, 1.35)
+  flor.rotation.z = 0.15
+  base.add(flor)
+
+  root.add(base)
+
+  // ---------- BALCÃO vermelho do postombud + estante de pacotes ----------
+  const balcao = new THREE.Group()
+  const balcaoCorpo = rbox(2.3, 0.8, 0.8, 0.06, '#c23b30', { roughness: 0.6 })
+  balcaoCorpo.position.set(0, 0.4, 0.02)
+  balcao.add(balcaoCorpo)
+  const friso = rbox(2.34, 0.1, 0.05, 0.015, '#f2efe7', { roughness: 0.45 })
+  friso.position.set(0, 0.62, 0.42)
+  balcao.add(friso)
+  const tampo = rbox(2.5, 0.1, 1.0, 0.04, '#f4f0e6', { roughness: 0.35 })
+  tampo.position.set(0, 0.85, 0)
+  balcao.add(tampo)
+
+  // placa redonda da loja na frente do balcão
+  const placa = cylinder(0.17, 0.17, 0.035, '#f2efe7', { roughness: 0.3 })
+  placa.rotation.x = Math.PI / 2
+  placa.position.set(-0.72, 0.32, 0.43)
+  balcao.add(placa)
+  const placaFaixa = rbox(0.2, 0.07, 0.02, 0.01, '#c23b30', { roughness: 0.5 })
+  placaFaixa.position.set(-0.72, 0.32, 0.45)
+  balcao.add(placaFaixa)
+
+  // leitor de QR sobre o tampo
+  const leitor = new THREE.Group()
+  const leitorCorpo = rbox(0.3, 0.18, 0.24, 0.03, '#3d4852', { roughness: 0.4 })
+  leitorCorpo.position.y = 0.09
+  leitor.add(leitorCorpo)
+  const leitorTela = rbox(0.24, 0.16, 0.04, 0.012, '#ffe3ae', {
+    roughness: 0.25, emissive: '#ffd9a0', emissiveIntensity: 0.9,
+  })
+  leitorTela.position.set(0, 0.22, 0.03)
+  leitorTela.rotation.x = -0.35
+  leitor.add(leitorTela)
+  leitor.position.set(-1.0, 0.9, -0.18)
+  leitor.rotation.y = 0.25
+  balcao.add(leitor)
+
+  // estante de encomendas atrás do balcão
+  for (const lado of [-1, 1]) {
+    const poste = rbox(0.08, 1.55, 0.08, 0.02, '#6f7a88', { roughness: 0.55 })
+    poste.position.set(lado * 0.95, 0.775, -0.95)
+    balcao.add(poste)
+  }
+  for (const py of [0.7, 1.25]) {
+    const prateleira = rbox(2.0, 0.06, 0.5, 0.02, '#8b95a3', { roughness: 0.5 })
+    prateleira.position.set(0, py, -0.95)
+    balcao.add(prateleira)
+    const cores = ['#b08050', '#a06f45', '#c19467', '#8f6a48']
+    for (let i = 0; i < 3; i++) {
+      const w = 0.24 + rand() * 0.14
+      const h = 0.18 + rand() * 0.12
+      const enc = rbox(w, h, 0.3, 0.025, cores[Math.floor(rand() * cores.length)], { roughness: 0.8 })
+      enc.position.set(-0.6 + i * 0.6 + (rand() - 0.5) * 0.12, py + 0.03 + h / 2, -0.95)
+      enc.rotation.y = (rand() - 0.5) * 0.5
+      balcao.add(enc)
+    }
+  }
+
+  balcao.position.set(0, 0.19, -0.55)
   root.add(balcao)
 
-  // ---------- cenário: tampo branco do balcão (topo em y = 0.97) ----------
-  const tampo = box(2.5, 0.12, 0.95, '#f5f5f5')
-  tampo.position.set(0, 0.91, -0.4)
-  root.add(tampo)
+  // ---------- VOCÊ: cliente de gorro, apontando para o tatu ----------
+  const cliente = person({ body: '#4a7d9e', skin: '#e8c39e', height: 1.5, armAngle: 0.4 })
+  const cabecaCliente = cliente.getObjectByName('head')!
+  const gorro = lathe(
+    [[0, 0], [0.3, 0], [0.31, 0.1], [0.25, 0.2], [0.12, 0.26], [0, 0.28]],
+    '#d8a13f', { roughness: 0.85 },
+  )
+  gorro.position.y = 0.08
+  cabecaCliente.add(gorro)
+  const pompom = sphere(0.06, '#f2efe7', { roughness: 0.9 })
+  pompom.position.y = 0.38
+  cabecaCliente.add(pompom)
+  const bracoDir = cliente.getObjectByName('armR')!
+  bracoDir.rotation.x = -1.15 // apontando para o tatu, indignado
+  bracoDir.rotation.z = -0.15
+  cliente.position.set(1.0, 0.19, 0.75)
+  cliente.rotation.y = -2.3 // encarando o atendente
+  root.add(cliente)
 
-  // ---------- o TATU atendente: carapaça + bandas + crachá ----------
+  // ---------- o TATU atendente: carapaça, bandas, rabo e crachá ----------
   const tatuCorpo = new THREE.Group()
-  const carapaca = sphere(0.5, '#9b9ba6')
-  carapaca.scale.set(1.0, 0.78, 1.25) // meia-extensão: 0.5 / 0.39 / 0.625
+  const carapaca = sphere(0.55, '#99a1b0', { roughness: 0.6 })
+  carapaca.scale.set(1.0, 0.8, 1.25)
   tatuCorpo.add(carapaca)
-  for (const nz of [0.15, -0.12]) {
-    const banda = torus(0.5, 0.03, '#7d7d8a')
-    banda.scale.set(1.0, 0.78, 1.0)
-    banda.position.set(0, 0, nz)
+  for (const [bz, br] of [[0.18, 0.53], [0, 0.555], [-0.18, 0.53]] as const) {
+    const banda = torus(br, 0.035, '#848c9c', { roughness: 0.65 })
+    banda.scale.set(1.0, 0.8, 1.0)
+    banda.position.z = bz
     tatuCorpo.add(banda)
   }
-  const cracha = box(0.16, 0.2, 0.03, '#ffffff')
-  cracha.position.set(0.25, 0.05, 0.55)
+  const rabo = capsule(0.06, 0.3, '#ada096', { roughness: 0.7 })
+  rabo.rotation.x = 1.15
+  rabo.position.set(0.1, -0.22, -0.72)
+  tatuCorpo.add(rabo)
+  const cracha = rbox(0.17, 0.21, 0.03, 0.01, '#f5f2ea', { roughness: 0.35 })
+  cracha.position.set(0.26, 0.14, 0.58)
+  cracha.rotation.x = -0.45
   tatuCorpo.add(cracha)
-  const crachaFaixa = box(0.16, 0.05, 0.012, '#005aa0')
-  crachaFaixa.position.set(0.25, 0.12, 0.565)
+  const crachaFaixa = rbox(0.17, 0.05, 0.014, 0.006, '#4a6fa5', { roughness: 0.4 })
+  crachaFaixa.position.set(0.26, 0.215, 0.615)
+  crachaFaixa.rotation.x = -0.45
   tatuCorpo.add(crachaFaixa)
-  tatuCorpo.position.set(-0.35, 1.05, -1.0) // atrás do balcão, casco acima do tampo
+  tatuCorpo.position.set(-0.45, 0.85, -1.15) // atrás do balcão, casco acima do tampo
   root.add(tatuCorpo)
 
-  // ---------- a cabeça do tatu: focinho-cone esperando a senha ----------
+  // ---------- a cabeça do tatu espiando por cima do tampo ----------
   const tatuCabeca = new THREE.Group()
-  const focinho = cone(0.18, 0.5, '#7a7a85')
-  focinho.rotation.x = Math.PI / 2 // aponta para a frente (+z), por cima do balcão
+  const cranioTatu = sphere(0.17, '#ada096', { roughness: 0.7 })
+  cranioTatu.position.set(0, 0.04, -0.08)
+  tatuCabeca.add(cranioTatu)
+  const elmo = sphere(0.16, '#99a1b0', { roughness: 0.6 }) // placa de armadura na testa
+  elmo.scale.set(1.0, 0.55, 1.15)
+  elmo.position.set(0, 0.16, -0.07)
+  tatuCabeca.add(elmo)
+  const focinho = capsule(0.11, 0.22, '#ada096', { roughness: 0.7 })
+  focinho.rotation.x = Math.PI / 2
+  focinho.position.set(0, -0.01, 0.14)
   tatuCabeca.add(focinho)
-  const nariz = sphere(0.05, '#4a4a52')
-  nariz.position.set(0, 0, 0.26)
+  const nariz = sphere(0.05, '#57493f', { roughness: 0.45 })
+  nariz.position.set(0, 0, 0.32)
   tatuCabeca.add(nariz)
-  const olhoTatuE = sphere(0.05, '#222222')
-  olhoTatuE.position.set(-0.11, 0.13, -0.05)
-  tatuCabeca.add(olhoTatuE)
-  const olhoTatuD = sphere(0.05, '#222222')
-  olhoTatuD.position.set(0.11, 0.13, -0.05)
-  tatuCabeca.add(olhoTatuD)
-  const orelhaE = cone(0.06, 0.16, '#6e6e78')
-  orelhaE.position.set(-0.11, 0.24, -0.2)
-  tatuCabeca.add(orelhaE)
-  const orelhaD = cone(0.06, 0.16, '#6e6e78')
-  orelhaD.position.set(0.11, 0.24, -0.2)
-  tatuCabeca.add(orelhaD)
-  tatuCabeca.position.set(-0.35, 1.32, -0.42)
+  for (const lado of [-1, 1]) {
+    const olho = sphere(0.047, '#ffffff', { roughness: 0.25 })
+    olho.position.set(lado * 0.1, 0.1, 0.06)
+    olho.scale.z = 0.55
+    const pupila = sphere(0.021, '#1a1a1a', { roughness: 0.2 })
+    pupila.position.set(lado * 0.1, 0.1, 0.098)
+    tatuCabeca.add(olho, pupila)
+    const orelha = cone(0.055, 0.17, '#8f8478', { roughness: 0.7 })
+    orelha.position.set(lado * 0.11, 0.24, -0.13)
+    orelha.rotation.z = -lado * 0.25
+    tatuCabeca.add(orelha)
+  }
+  tatuCabeca.position.set(-0.45, 1.24, -0.55)
   root.add(tatuCabeca)
 
-  // ---------- o ESCARRO voador (pose final: espatifado na carapaça) ----------
-  const escarro = sphere(0.15, '#6fe3c1')
-  escarro.position.set(-0.08, 1.3, -0.58)
-  escarro.rotation.x = -0.45
-  escarro.scale.set(1.35, 1.35, 0.45) // achatado contra o casco
+  // ---------- o ESCARRO teal — acento da cena (pose final: na carapaça) ----------
+  const escarro = new THREE.Group()
+  const gosma = sphere(0.16, '#35e0b0', { roughness: 0.18 })
+  escarro.add(gosma)
+  for (const [gx, gy, gz, gr] of [
+    [0.14, 0.08, 0.1, 0.05], [-0.11, 0.13, 0.06, 0.04], [0.05, -0.13, 0.12, 0.045],
+  ] as const) {
+    const gota = sphere(gr, '#35e0b0', { roughness: 0.18 })
+    gota.position.set(gx, gy, gz)
+    escarro.add(gota)
+  }
+  escarro.position.set(-0.3, 1.14, -0.66)
+  escarro.rotation.x = -0.55
+  escarro.scale.set(1.4, 1.4, 0.35) // espatifado contra o casco
   root.add(escarro)
 
-  // ---------- o PACOTE de papelão sobre o tampo ----------
+  // ---------- o PACOTE liberado sobre o tampo ----------
   const pacote = new THREE.Group()
-  const caixa = box(0.7, 0.56, 0.55, '#b5875a')
+  const caixa = rbox(0.72, 0.55, 0.55, 0.04, '#b08050', { roughness: 0.75 })
   pacote.add(caixa)
-  const fita = box(0.14, 0.6, 0.57, '#e6d3a3')
+  const fita = rbox(0.15, 0.56, 0.56, 0.012, '#e6d3a3', { roughness: 0.55 })
+  fita.position.x = -0.06
   pacote.add(fita)
-  const etiquetaQr = box(0.18, 0.18, 0.02, '#ffffff')
-  etiquetaQr.position.set(0.14, 0.02, 0.28)
-  pacote.add(etiquetaQr)
-  const qrPreto = box(0.1, 0.1, 0.012, '#111111')
-  qrPreto.position.set(0.14, 0.02, 0.295)
-  pacote.add(qrPreto)
-  pacote.position.set(0.75, 1.25, -0.35) // apoiado no tampo (base em y = 0.97)
+  const etiqueta = rbox(0.2, 0.2, 0.02, 0.008, '#f5f2ea', { roughness: 0.35 })
+  etiqueta.position.set(0.17, -0.02, 0.27)
+  pacote.add(etiqueta)
+  const qr = rbox(0.13, 0.13, 0.014, 0.005, '#22262c', { roughness: 0.4 })
+  qr.position.set(0.17, -0.02, 0.283)
+  pacote.add(qr)
+  for (const [qx, qy] of [[0.135, 0.015], [0.205, -0.05]] as const) {
+    const pixel = rbox(0.032, 0.032, 0.016, 0.004, '#f5f2ea', { roughness: 0.35 })
+    pixel.position.set(qx, qy, 0.284)
+    pacote.add(pixel)
+  }
+  pacote.position.set(0.55, 1.37, -0.5) // apoiado no tampo (topo do balcão y=1.09)
   root.add(pacote)
+
+  // ---------- a TAMPA do pacote (dobradiça na aresta de trás) ----------
+  const tampa = new THREE.Group()
+  const tampaAba = rbox(0.74, 0.05, 0.58, 0.02, '#a97f52', { roughness: 0.75 })
+  tampaAba.position.set(0, 0.025, 0.29)
+  tampa.add(tampaAba)
+  const tampaFita = rbox(0.15, 0.06, 0.58, 0.01, '#e6d3a3', { roughness: 0.55 })
+  tampaFita.position.set(-0.06, 0.03, 0.29)
+  tampa.add(tampaFita)
+  tampa.position.set(0.55, 1.645, -0.775) // pivô na aresta traseira da caixa
+  tampa.rotation.x = -2.2 // pose final: escancarada para trás
+  root.add(tampa)
 
   // ---------- a cabeça do ET espiando de dentro do pacote ----------
   const etCabeca = new THREE.Group()
-  const cabecaEt = sphere(0.24, '#77c74f')
-  cabecaEt.scale.set(1.0, 1.15, 1.0)
-  etCabeca.add(cabecaEt)
-  const olhoEtE = sphere(0.065, '#111111')
-  olhoEtE.position.set(-0.1, 0.03, 0.19)
-  etCabeca.add(olhoEtE)
-  const olhoEtD = sphere(0.065, '#111111')
-  olhoEtD.position.set(0.1, 0.03, 0.19)
-  etCabeca.add(olhoEtD)
-  etCabeca.position.set(0.75, 1.72, -0.35) // saindo pelo topo da caixa
+  const cranioEt = sphere(0.21, '#7cc45e', { roughness: 0.55 })
+  cranioEt.scale.set(1.0, 1.18, 0.95)
+  etCabeca.add(cranioEt)
+  const pescoco = capsule(0.055, 0.16, '#6fb050', { roughness: 0.55 })
+  pescoco.position.y = -0.26
+  etCabeca.add(pescoco)
+  for (const lado of [-1, 1]) {
+    const olho = sphere(0.062, '#ffffff', { roughness: 0.25 })
+    olho.position.set(lado * 0.09, 0.05, 0.17)
+    olho.scale.z = 0.5
+    const pupila = sphere(0.052, '#1a1a1a', { roughness: 0.15 })
+    pupila.position.set(lado * 0.09, 0.05, 0.19)
+    const brilho = sphere(0.016, '#ffffff', { roughness: 0.1 })
+    brilho.position.set(lado * 0.11, 0.09, 0.235)
+    etCabeca.add(olho, pupila, brilho)
+  }
+  etCabeca.position.set(0.55, 1.78, -0.5) // espiando por cima da borda da caixa
+  etCabeca.rotation.y = 0.15
   root.add(etCabeca)
 
-  // ---------- a mãozinha do ET acenando na borda do pacote ----------
+  // ---------- a mãozinha do ET acenando, dedo aceso ----------
   const etMaozinha = new THREE.Group()
-  const braco = cylinder(0.045, 0.045, 0.3, '#77c74f')
-  braco.position.set(0, 0.15, 0)
-  etMaozinha.add(braco)
-  const mao = sphere(0.075, '#8fd76a')
-  mao.position.set(0, 0.32, 0)
-  etMaozinha.add(mao)
-  etMaozinha.position.set(1.0, 1.5, -0.35) // pivô na borda direita da caixa
-  etMaozinha.rotation.z = -0.35 // inclinada para fora, em pleno aceno
+  const bracoEt = capsule(0.045, 0.26, '#7cc45e', { roughness: 0.55 })
+  bracoEt.position.y = 0.16
+  etMaozinha.add(bracoEt)
+  const maoEt = sphere(0.07, '#8fd76a', { roughness: 0.55 })
+  maoEt.position.y = 0.33
+  etMaozinha.add(maoEt)
+  const dedo = capsule(0.022, 0.1, '#8fd76a', { roughness: 0.55 })
+  dedo.position.set(0.035, 0.43, 0.02)
+  dedo.rotation.z = -0.3
+  etMaozinha.add(dedo)
+  const pontaDedo = sphere(0.032, '#ffc37a', {
+    roughness: 0.3, emissive: '#ffb26b', emissiveIntensity: 1.3,
+  })
+  pontaDedo.position.set(0.055, 0.49, 0.025)
+  etMaozinha.add(pontaDedo)
+  etMaozinha.position.set(0.88, 1.62, -0.45) // pivô na borda direita da caixa
+  etMaozinha.rotation.z = -0.3 // pose final: inclinada para fora, em pleno aceno
   root.add(etMaozinha)
 
   const parts = [
-    { name: 'chao', group: 'cenario', object: chao },
+    { name: 'base', group: 'cenario', object: base },
     { name: 'balcao', group: 'cenario', object: balcao },
-    { name: 'tampo', group: 'cenario', object: tampo },
+    { name: 'cliente', group: 'cenario', object: cliente },
     { name: 'tatu-corpo', group: 'tatu', object: tatuCorpo },
     { name: 'tatu-cabeca', group: 'tatu', object: tatuCabeca },
     { name: 'escarro', group: 'escarro', object: escarro },
     { name: 'pacote', group: 'pacote', object: pacote },
+    { name: 'tampa', group: 'pacote', object: tampa },
     { name: 'et-cabeca', group: 'et', object: etCabeca },
     { name: 'et-maozinha', group: 'et', object: etMaozinha },
   ]
 
   const build = [
-    // ---- cenário ----
-    seq('chao-rise', 'chao', 0, 0.6, [riseFrom(-0.06, 0.5)], {
+    // ---- cenário: piso, balcão vermelho, você na fila ----
+    seq('base-rise', 'base', 0, 0.7, [riseFrom(0, 1.2)], {
       caption: 'Você chega ao postombud do ICA: o balcão vermelho de retirar pacotes…',
     }),
-    seq('balcao-rise', 'balcao', 0.15, 0.7, [riseFrom(0.425, 1.1)]),
-    seq('tampo-rise', 'tampo', 0.35, 0.6, [riseFrom(0.91, 1.15)]),
+    seq('balcao-rise', 'balcao', 0.2, 0.8, [riseFrom(0.19, 2.1)]),
+    seq('cliente-rise', 'cliente', 0.4, 0.75, [riseFrom(0.19, 2.0)]),
 
     // ---- o tatu atendente ----
-    seq('tatu-corpo-rise', 'tatu-corpo', 1.7, 0.8, [riseFrom(1.05, 1.7)], {
+    seq('tatu-corpo-rise', 'tatu-corpo', 1.7, 0.8, [riseFrom(0.85, 1.5)], {
+      ease: 'easeOut',
       caption: '…mas o atendente é um TATU gigante de crachá!',
     }),
-    seq('tatu-cabeca-rise', 'tatu-cabeca', 1.9, 0.7, [riseFrom(1.32, 1.9)]),
+    seq('tatu-cabeca-rise', 'tatu-cabeca', 1.9, 0.7, [riseFrom(1.24, 1.8)], { ease: 'easeOut' }),
 
-    // ---- o escarro (a "senha" do balcão) ----
-    seq('escarro-rise', 'escarro', 3.5, 0.5, [ch('position.y', -0.3, 1.5)], {
+    // ---- o escarro: sobe até a boca, voa, espatifa ----
+    seq('escarro-cospe', 'escarro', 3.4, 0.55, [ch('position.y', -0.45, 1.18)], {
+      ease: 'easeOut',
       caption: "A senha do balcão é nojenta: você grita 'IÁ!' e ESCARRA…",
     }),
-    seq('escarro-voa', 'escarro', 4.1, 0.55, [
-      ch('position.z', 1.5, -0.58),
-      ch('position.y', 1.5, 1.3),
+    seq('cliente-inspira', 'cliente', 3.4, 0.3, [ch('rotation.x', 0, -0.14)]),
+    seq('cliente-cospe', 'cliente', 3.95, 0.25, [ch('rotation.x', -0.14, 0.16)], { ease: 'easeIn' }),
+    seq('escarro-voa', 'escarro', 4.0, 0.55, [
+      ch('position.x', 0.78, -0.3),
+      ch('position.y', 1.18, 1.14),
+      ch('position.z', 0.55, -0.66),
     ], {
+      ease: 'easeIn',
       caption: '…IÁ, ESCARRA EM TATU: o escarro gruda na carapaça! (jag ska hämta ut)',
     }),
-    seq('escarro-splat', 'escarro', 4.65, 0.25, [
-      ch('scale.x', 1, 1.35),
-      ch('scale.y', 1, 1.35),
-      ch('scale.z', 1, 0.45),
-    ]),
-    seq('tatu-susto', 'tatu-cabeca', 4.65, 0.3, [ch('rotation.x', 0, -0.3)]),
-    seq('tatu-volta', 'tatu-cabeca', 4.95, 0.4, [ch('rotation.x', -0.3, 0)]),
+    seq('escarro-splat', 'escarro', 4.55, 0.25, [
+      ch('scale.x', 1, 1.4),
+      ch('scale.y', 1, 1.4),
+      ch('scale.z', 1, 0.35),
+    ], { ease: 'easeOut' }),
+    seq('tatu-susto', 'tatu-cabeca', 4.55, 0.3, [ch('rotation.x', 0, -0.35)]),
+    seq('cliente-endireita', 'cliente', 4.5, 0.4, [ch('rotation.x', 0.16, 0)]),
+    seq('tatu-volta', 'tatu-cabeca', 4.85, 0.4, [ch('rotation.x', -0.35, 0)]),
 
-    // ---- o pacote destravado ----
-    seq('pacote-rise', 'pacote', 5.9, 0.8, [riseFrom(1.25, 1.8)], {
+    // ---- o pacote destravado sobe pelo balcão ----
+    seq('pacote-rise', 'pacote', 5.4, 0.8, [riseFrom(1.37, 2.0)], {
+      ease: 'easeOut',
       caption: 'O TATU confere o QR code, destrava como um cofre e solta o PACOTE…',
     }),
+    seq('tampa-rise', 'tampa', 5.4, 0.8, [riseFrom(1.645, 2.0)], { ease: 'easeOut' }),
+    seq('tampa-abre', 'tampa', 6.5, 0.6, [ch('rotation.x', 0, -2.2)], { ease: 'easeOut' }),
 
     // ---- o ET lá de dentro ----
-    seq('et-rise', 'et-cabeca', 7.5, 0.7, [ch('position.y', 1.22, 1.72)], {
+    seq('et-espia', 'et-cabeca', 7.3, 0.7, [ch('position.y', 1.35, 1.78)], {
+      ease: 'easeOut',
       caption: "…e de dentro espia um ET acenando: 'ETE PACOTE!' (ett paket)",
     }),
-    seq('maozinha-rise', 'et-maozinha', 7.8, 0.5, [ch('position.y', 1.05, 1.5)]),
-    seq('acena-1', 'et-maozinha', 8.4, 0.35, [ch('rotation.z', 0, 0.45)]),
-    seq('acena-2', 'et-maozinha', 8.75, 0.45, [ch('rotation.z', 0.45, -0.35)], {
+    seq('et-maozinha-sobe', 'et-maozinha', 7.6, 0.5, [ch('position.y', 1.12, 1.62)], { ease: 'easeOut' }),
+    seq('acena-1', 'et-maozinha', 8.3, 0.35, [ch('rotation.z', 0, 0.5)]),
+    seq('acena-2', 'et-maozinha', 8.65, 0.45, [ch('rotation.z', 0.5, -0.3)], {
       caption: 'IÁ, ESCARRA EM TATU — ETE PACOTE! "Jag ska hämta ut ett paket." (Vim retirar um pacote.)',
     }),
   ]
@@ -180,7 +397,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [3.2, 3.0, 4.8], target: [0, 1.0, -0.2] },
+    cameraHint: { position: [3.4, 3.0, 4.8], target: [0, 1.0, -0.1] },
   }
 }
 
