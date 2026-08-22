@@ -108,6 +108,8 @@ button:hover:not(:disabled) { background: #26313f; }
 button:disabled { opacity: 0.45; cursor: default; }
 
 button.primary { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+button.ghost { background: transparent; border-color: #2b3a4f; color: #8fa1b3; }
+button.ghost:hover:not(:disabled) { background: #1a222c; color: #dce7f2; }
 button.primary:hover:not(:disabled) { background: #2f7ef5; }
 button.right { background: #1a5b34; border-color: #2c7a4b; }
 button.wrong { background: #6e2430; border-color: #93313f; }

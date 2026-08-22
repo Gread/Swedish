@@ -2,16 +2,22 @@ import { useMemo, useState } from 'react'
 import type { Card } from '../rig/types'
 import { CardCanvas } from '../components/CardCanvas'
 import { ReviewScene } from '../components/ReviewScene'
+import { BuildView } from './BuildView'
 import { LEVEL_OPACITY, useProgress } from '../store/progress'
 
 function ReviewCard({ card, onNext }: { card: Card; onNext: () => void }) {
   const scene = useMemo(() => card.createScene(), [card])
   const [revealed, setRevealed] = useState(false)
+  const [rebuilding, setRebuilding] = useState(false)
   const [feedback, setFeedback] = useState<'certo' | 'errado' | null>(null)
   const answer = useProgress((s) => s.answer)
   const level = useProgress((s) => s.get(card.meta.id).nivelOpacidade)
 
   const opacity = LEVEL_OPACITY[level]
+
+  if (rebuilding) {
+    return <BuildView card={card} onDone={() => setRebuilding(false)} />
+  }
 
   const respond = (correct: boolean) => {
     answer(card.meta.id, correct)
@@ -47,6 +53,9 @@ function ReviewCard({ card, onNext }: { card: Card; onNext: () => void }) {
           <button className="primary" onClick={() => setRevealed(true)}>
             Mostrar resposta
           </button>
+          <button className="ghost" onClick={() => setRebuilding(true)}>
+            🔨 Reconstruir cena
+          </button>
         </div>
       ) : (
         <div className="reveal">
@@ -61,6 +70,9 @@ function ReviewCard({ card, onNext }: { card: Card; onNext: () => void }) {
               </button>
               <button className="right" onClick={() => respond(true)}>
                 Acertei
+              </button>
+              <button className="ghost" onClick={() => setRebuilding(true)}>
+                🔨 Reconstruir cena
               </button>
             </div>
           )}
