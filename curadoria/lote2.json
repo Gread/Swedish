@@ -1,0 +1,422 @@
+{
+  "phrases": [
+    {
+      "id": "jag-tar-en-kaffe-tack",
+      "sv": "Jag tar en kaffe, tack.",
+      "pt": "Vou querer um café, por favor.",
+      "pronuncia": "iá tar en KÁ-fe, tak (o 'g' de 'jag' some na fala normal; 'a' de 'tar' é longo e escuro, quase 'tór')",
+      "contexto": "Balcão de café, padaria, foodtruck, bar. Também serve apontando para algo na loja: 'Jag tar den här'.",
+      "porque": "A frase-molde número um do consumo sueco: 'Jag tar ...' resolve pedir e comprar qualquer coisa trocando só o substantivo. Mais natural na boca de sueco que o 'Jag skulle vilja ha' de livro."
+    },
+    {
+      "id": "ta-med-tack",
+      "sv": "Ta med, tack.",
+      "pt": "Para viagem, por favor.",
+      "pronuncia": "ta mé, tak (o 'd' de 'med' praticamente não soa)",
+      "contexto": "Resposta à pergunta padrão do balcão: 'Här eller ta med?'. Para comer no local: 'Här, tack.'",
+      "porque": "É a pergunta mais previsível de todo balcão de comida na Suécia; quem não reconhece 'ta med' trava no primeiro segundo do atendimento. Duas palavras resolvem a interação inteira."
+    },
+    {
+      "id": "vad-kostar-den-har",
+      "sv": "Vad kostar den här?",
+      "pt": "Quanto custa esse aqui?",
+      "pronuncia": "va KÓS-tar den hér (o 'd' de 'vad' some; 'är' é 'é' bem aberto)",
+      "contexto": "Loja, feira, second hand, qualquer prateleira sem etiqueta — apontando para o objeto.",
+      "porque": "Preço é a informação que mais falta. O molde aceita qualquer produto, e 'den här' dispensa saber o nome da coisa em sueco — exatamente a situação dele."
+    },
+    {
+      "id": "kan-vi-fa-notan-tack",
+      "sv": "Kan vi få notan, tack?",
+      "pt": "Pode trazer a conta, por favor?",
+      "pronuncia": "kan vi fó NÚ-tan, tak ('få' com ô fechado; 'notan' soa 'NÚ-tan')",
+      "contexto": "Restaurante e bar com serviço à mesa. Sozinho: 'Kan jag få notan, tack?'.",
+      "porque": "Garçom sueco não traz a conta sem ser chamado nem ronda a mesa — quem não pede fica sentado indefinidamente. É a frase que encerra qualquer refeição fora de casa."
+    },
+    {
+      "id": "jag-heter-trevligt-att-traffas",
+      "sv": "Jag heter ... Trevligt att träffas!",
+      "pt": "Meu nome é ... Prazer em te conhecer!",
+      "pronuncia": "iá RRÊ-ter ... TRÊV-lit at TRÉ-fass (o 'h' de heter é aspirado tipo 'rr' carioca; o 'g' de trevligt é mudo)",
+      "contexto": "Primeiro contato: vizinho novo, colega apresentado no trabalho, festa de aniversário de criança.",
+      "porque": "É o par de abertura padrão: o sueco estende a mão, diz o próprio nome e espera o seu — não perguntam 'qual é o seu nome?'. Quem não devolve o nome trava a interação no primeiro segundo."
+    },
+    {
+      "id": "vi-ses",
+      "sv": "Vi ses!",
+      "pt": "A gente se vê!",
+      "pronuncia": "vi SÊSS (s final bem sibilante, nunca 'z')",
+      "contexto": "Saindo do elevador, encerrando papo no corredor, despedindo de colega que reencontra em breve.",
+      "porque": "A despedida informal mais usada entre quem vai se reencontrar — mais calorosa que 'hej då' e mais leve que 'ha det bra'. Sinaliza que a relação continua."
+    },
+    {
+      "id": "trevlig-helg",
+      "sv": "Trevlig helg!",
+      "pt": "Bom fim de semana!",
+      "pronuncia": "TRÊV-li RRÉLI ('h' aspirado tipo 'rr'; o 'g' final soa como 'i' curto)",
+      "contexto": "Sexta-feira ao sair do trabalho, no caixa do supermercado, na última mensagem da semana.",
+      "porque": "Toda sexta, do meio-dia em diante, isso é dito dezenas de vezes por dia na Suécia. Não responder soa frio — é o ritual de fechamento da semana."
+    },
+    {
+      "id": "forlat-det-var-mitt-fel",
+      "sv": "Förlåt, det var mitt fel.",
+      "pt": "Desculpa, foi culpa minha.",
+      "pronuncia": "för-LÔT, de var mit FÊL (o 't' de 'det' é mudo: soa 'de')",
+      "contexto": "Esbarrou em alguém, atrasou uma entrega, esqueceu o lixo da vez, errou no trabalho.",
+      "porque": "'Ursäkta' é só licença; 'förlåt' é o pedido de desculpa de verdade. Assumir a culpa em uma frase curta e seguir em frente é o padrão sueco — explicação longa soa como desculpa esfarrapada."
+    },
+    {
+      "id": "ingen-fara",
+      "sv": "Ingen fara!",
+      "pt": "Não tem problema!",
+      "pronuncia": "ING-en FÁ-ra ('ng' como em 'tango', não nasalize)",
+      "contexto": "Alguém pisa no seu pé, chega atrasado, derruba algo ou pede desculpa por qualquer coisa.",
+      "porque": "É a resposta automática a um 'förlåt'. Deixar um pedido de desculpa sem resposta cria silêncio constrangedor; essas duas palavras desarmam a situação na hora."
+    },
+    {
+      "id": "vilket-vader-va",
+      "sv": "Vilket väder, va?",
+      "pt": "Que tempo, hein?",
+      "pronuncia": "VÍL-ket VÉ-der, va? ('d' bem leve, quase 'dh')",
+      "contexto": "Elevador, ponto de ônibus, lavanderia do prédio, fila do café — qualquer silêncio de 10 segundos ao lado de um conhecido.",
+      "porque": "O tempo é a única small talk socialmente segura na Suécia, e o 'va?' no final convida a pessoa a responder. Serve para a chuva horizontal de novembro e para o primeiro sol de abril."
+    },
+    {
+      "id": "vad-heter-det-pa-svenska",
+      "sv": "Vad heter det på svenska?",
+      "pt": "Como se diz isso em sueco?",
+      "pronuncia": "va HÊ-ter dê pô SVÊN-ska ('det' vira só 'dê'; 'å' = ô fechado de 'avô')",
+      "contexto": "Apontando para um objeto no trabalho, no supermercado ou na casa de alguém.",
+      "porque": "A forma idiomática sueca de perguntar o nome de algo. Transforma qualquer sueco ao lado num professor gratuito e ancora palavras novas em objetos reais."
+    },
+    {
+      "id": "vad-betyder-det",
+      "sv": "Vad betyder det?",
+      "pt": "O que isso significa?",
+      "pronuncia": "va be-TÜ-der dê ('y' sueco = ü: lábios arredondados de 'u' com língua de 'i')",
+      "contexto": "Diante de uma placa, um e-mail do trabalho, uma carta da Skatteverket, ou quando alguém usa uma palavra que ele não pegou.",
+      "porque": "Ele já tem 'jag förstår inte', que só para a conversa; esta pede o significado e devolve informação — converte confusão em vocabulário novo."
+    },
+    {
+      "id": "kan-du-prata-lite-langsammare",
+      "sv": "Kan du prata lite långsammare?",
+      "pt": "Você pode falar um pouco mais devagar?",
+      "pronuncia": "kan du PRÂ-ta LÍ-te LÔNG-sam-ma-re ('lite' com i longo; 'ng' nasal como em 'tango')",
+      "contexto": "No telefone, no balcão da vårdcentral, com colega que dispara sueco em velocidade normal.",
+      "porque": "O 'lite' é o que faz soar educado e não crítico. Diferente de pedir para repetir: muda o ritmo da conversa inteira em vez de recomeçar do zero."
+    },
+    {
+      "id": "kan-du-hjalpa-mig",
+      "sv": "Kan du hjälpa mig?",
+      "pt": "Você pode me ajudar?",
+      "pronuncia": "kan du YÉL-pa MÊI ('hj' se lê como 'i' de 'ioga'; 'mig' se lê 'mêi')",
+      "contexto": "Loja, estação de trem, prédio público, ou pedindo socorro a um vizinho ou colega.",
+      "porque": "Suecos raramente se oferecem primeiro — não por frieza, mas para não invadir. Quem não pede, não recebe. E o 'hj' lido como 'i' é uma das armadilhas fonéticas mais comuns para brasileiros."
+    },
+    {
+      "id": "var-ligger-toaletten",
+      "sv": "Var ligger toaletten?",
+      "pt": "Onde fica o banheiro?",
+      "pronuncia": "var LÍG-ger to-a-LÊT-ten (g duro de 'gato'; acento em 'LET')",
+      "contexto": "Café, restaurante, shopping, consultório, casa de amigos.",
+      "porque": "Necessidade que não espera tradução no celular. 'Ligger' é o verbo que suecos usam para localizar coisas — o molde serve para perguntar onde fica qualquer coisa."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-tar-en-kaffe-tack",
+      "ponte_sonora": "IÁ! TÁ, REN — CÁ-FE, TAC! (CÁ-FE com força na 1ª sílaba, nunca 'café' oxítono)",
+      "historia": "Na areia da bandeja-arena, a xícara-gladiadora se chama REN. Você grita \"IÁ!\" e joga a moeda pra ela — \"TÁ, REN!\". Ela crava o tridente no bule adversário, o CÁ-FE jorra na areia, e o martelinho do juiz sela a vitória: TAC!",
+      "cena": {
+        "descricao": "Sobre o balcão do café, uma bandeja de metal virou arena romana em miniatura: a xícara-gladiadora REN cravou o tridente no bule, que derrama café na areia.",
+        "partes": [
+          "piso do café (disco creme)",
+          "balcão de madeira mel",
+          "bandeja-arena prateada",
+          "muro da arena (toro bege)",
+          "areia ocre",
+          "bule tombado derramando café",
+          "xícara-gladiadora de porcelana com escudo escrito REN",
+          "colher-tridente prateada cravada",
+          "elmo dourado com crista vermelha",
+          "martelinho do juiz batendo na borda"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "ta-med-tack",
+      "ponte_sonora": "TÁ, MÉÉ! TAC!",
+      "historia": "Você pede pra viagem e quem atende é uma cabra de avental que não sabe falar, só berrar: \"TÁ! MÉÉÉ!\". Ela engole seu sanduíche inteiro, cospe ele já embrulhadinho dentro da sacola de papel e crava o casco no balcão: TAC!",
+      "cena": {
+        "descricao": "Balcão de lanchonete: a cabra atendente berra com a cabeça pro alto, o casco batendo no balcão ao lado da sacola de viagem com o sanduíche embrulhado.",
+        "partes": [
+          "piso quadriculado creme",
+          "balcão de madeira clara",
+          "sacola kraft aberta",
+          "sanduíche embrulhado com fita vermelha",
+          "casco preto batendo no tampo",
+          "corpo da cabra (cápsula branca)",
+          "cabeça berrando pro alto",
+          "chifres em rosca cinza",
+          "barbicha branca"
+        ]
+      }
+    },
+    {
+      "id": "vad-kostar-den-har",
+      "ponte_sonora": "VÁ! CÓS-TAR... DEN RRÉR? (CÓS-TAR com R final audível; DEN curto como o começo de DENTE; RRÉR raspado, É bem aberto)",
+      "historia": "Na loja de souvenirs nada tem etiqueta. Você aponta o vaso azul e o vendedor-robô te dá as CÓSTAS — que são um caixa eletrônico. Da fenda sai um DENte de ouro gigante rosnando raspado \"RRÉÉR\", com o preço gravado no esmalte.",
+      "cena": {
+        "descricao": "Loja de souvenirs: o robô de costas ao lado do pedestal do vaso azul, com um dente de ouro gigante saindo da fenda nas costas, o preço gravado no esmalte.",
+        "partes": [
+          "piso de madeira escura",
+          "pedestal expositor creme",
+          "vaso azul-cobalto",
+          "pernas do robô",
+          "tronco de costas cinza",
+          "fenda de caixa eletrônico preta",
+          "dente de ouro gigante saindo da fenda",
+          "cabeça virada por cima do ombro",
+          "antena com bolinha âmbar"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "kan-vi-fa-notan-tack",
+      "ponte_sonora": "CA-VI! FÔ! NÚ-TAN, TAC! ('cave' lido à brasileira, KÁ-vi, com o A levemente nasal; FÔ de boca redonda, nunca 'fó')",
+      "historia": "Você terminou de comer e a conta não vem. Bate no piso e manda: \"CAVE!\". Uma toupeira de capacete de minerador fura o chão, enche as bochechas e sopra a terra em círculo (FÔÔ), e ergue a NÚ-TAN — a nota, nua, sem envelope. O casco bate na mesa: TAC!",
+      "cena": {
+        "descricao": "No piso de um restaurante, uma toupeira-garçom de capacete de minerador sai de um buraco erguendo a conta, com uma nuvem redonda de poeira saindo da boca.",
+        "partes": [
+          "piso de restaurante",
+          "borda do buraco (toro marrom)",
+          "corpo da toupeira cinza-escuro",
+          "capacete de minerador amarelo com lanterna",
+          "cabeça da toupeira",
+          "focinho rosa soprando",
+          "patinha erguida",
+          "a nota branca equilibrada",
+          "nuvem redonda de poeira"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "jag-heter-trevligt-att-traffas",
+      "ponte_sonora": "IÁ! RRÊ-ter... TRÊV-LIT' A TRÉ-fas! (TRÊV colado como o final de KIEV, sem vogal depois do V; TRÉ-fas com final ORAL, sem nasal)",
+      "historia": "Tapete vermelho e cordão de veludo. Um apresentador de neon agarra sua mão, raspa a garganta (\"RRÊÊ\") e anuncia seu nome ao mundo. Atrás dele pisca um letreiro aceso escrito TRÊV·LIT, e TRÊS FÃS miúdos batem palmas com caderninhos de autógrafo na mão.",
+      "cena": {
+        "descricao": "Tapete vermelho com cordão de veludo: um apresentador aperta a mão de alguém sob um letreiro de neon escrito TRÊV·LIT, com três fãs miúdos aplaudindo.",
+        "partes": [
+          "tapete vermelho comprido",
+          "dois postes com cordão de veludo",
+          "letreiro de neon retangular escrito TRÊV·LIT",
+          "corpo do apresentador (terno brilhante)",
+          "cabeça do apresentador raspando a garganta",
+          "mão humana no aperto",
+          "três fãs miúdos com caderninhos"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "vi-ses",
+      "ponte_sonora": "VI SÊSS! (= 'VI SEIS' sem o i de seis, S bem chiado de cobra, nunca Z)",
+      "historia": "Você acena tchau no corredor e da porta do vizinho sai uma mão gigante verde com SEIS dedos — cada dedo é uma cobrinha. Você conta alto: \"VI SEIS!\" e os seis dedos respondem juntos com um SSSSS comprido.",
+      "cena": {
+        "descricao": "Num capacho de porta, uma mão gigante de seis dedos-cobrinha acena da fresta da porta, ao lado de um número 6 amarelo gigante.",
+        "partes": [
+          "capacho marrom listrado",
+          "porta entreaberta creme",
+          "braço verde-menta saindo da fresta",
+          "palma da mão",
+          "seis dedos-cobrinha em leque",
+          "línguas rosa sibilando",
+          "barriga do 6 (toro amarelo)",
+          "haste do 6 (cápsula curvada)"
+        ]
+      }
+    },
+    {
+      "id": "trevlig-helg",
+      "ponte_sonora": "TRÊV-LI RRÉLI! (TRÊV colado como o final de KIEV; RRÉLI = 'hélice' cortada antes do -CE, com R raspado carioca)",
+      "historia": "Toda sexta a dona da laje sobe com uma HÉLICE de drone que ergue o trevo-guarda-sol gigante. A hélice trava no meio do giro — por isso o nome dela fica pela metade, RRÉLI — e ela se joga na espreguiçadeira debaixo do trevo.",
+      "cena": {
+        "descricao": "Laje de prédio ao entardecer: uma senhora de óculos escuros na espreguiçadeira sob um trevo de quatro folhas gigante erguido por uma hélice de drone travada.",
+        "partes": [
+          "laje cinza-clara com mureta",
+          "vaso de barro terracota",
+          "espreguiçadeira listrada",
+          "corpo da dona da laje rosa-choque",
+          "cabeça com coque",
+          "óculos escuros",
+          "haste do trevo verde-grama",
+          "hélice de duas pás travada no topo do cabo",
+          "quatro folhas verde-limão",
+          "copo de suco com canudo"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "forlat-det-var-mitt-fel",
+      "ponte_sonora": "FUR-LÔT! DÊ VAR... MIT' FÊL! (LÔT sem vogal depois do T; VAR com R audível; MIT' é MITO com o O arrancado — trave a língua no T)",
+      "historia": "O pedreiro FURA-LOTE enfia a broca no lote do vizinho e estoura o vidro de FEL, o líquido verde amargo guardado há trinta anos. Ele veste uma camiseta escrita MITO com o O rasgado fora, e estende o vidro rachado, cabisbaixo, assumindo a culpa.",
+      "cena": {
+        "descricao": "Canteiro de obra: broca laranja gigante fincada na cratera, pedreiro de camiseta escrita MIT(O) rasgado segurando um vidro verde que entorna.",
+        "partes": [
+          "lote de terra marrom",
+          "placa do lote",
+          "cratera do furo (toro escuro)",
+          "broca laranja gigante com ponta prateada",
+          "corpo do pedreiro com camiseta escrita MIT rasgada",
+          "cabeça com capacete amarelo",
+          "vidro de fel rachado esverdeado",
+          "poça de fel verde-limão com respingos"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "ingen-fara",
+      "ponte_sonora": "ÍNG-EN? FÁ-RA! (ÍNG como o fim de 'ping', com o G quase sumindo, depois -EN; FÁ-RA com R de 'cara', um toque só, jamais RR)",
+      "historia": "O sapo entra na balada com uma íngua roxa gigante inflando o papo e todo mundo se assusta. A placa amarela de PERIGO despenca da parede e, ao bater no chão, vira uma inofensiva nota musical FÁ dourada. O DJ solta o beat e o sapo relaxa.",
+      "cena": {
+        "descricao": "Pista de dança neon: sapo verde de papo roxo inflado enquanto a placa triangular de perigo cai e vira uma nota musical FÁ dourada no chão.",
+        "partes": [
+          "pista xadrez rosa-neon e roxo",
+          "caixa de som preta",
+          "corpo do sapo verde-limão",
+          "papo roxo inflado",
+          "olhos esbugalhados",
+          "placa triangular amarela caindo",
+          "nota musical FÁ dourada no chão",
+          "bola de espelhos"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "vilket-vader-va",
+      "ponte_sonora": "VÍL-ket VÉ-der, VÁ? (força em VÍL e em VÉ; VÉ aberto como em 'pé'; K DURO — nunca 'vilchet')",
+      "historia": "Um VILão de capa espreme um sachê de KETchup na sua janela e manda você olhar o céu. Lá fora, a nuvem cospe granizo e sol no mesmo metro quadrado, e seu guarda-chuva vira do avesso na hora.",
+      "cena": {
+        "descricao": "Calçada encharcada: nuvem cinza de sobrancelhas raivosas espremendo um sachê vermelho de ketchup, com granizo caindo e um guarda-chuva virado do avesso.",
+        "partes": [
+          "poça d'água azul-translúcida",
+          "laje da calçada cinza",
+          "cabo do guarda-chuva",
+          "guarda-chuva do avesso (cone vermelho invertido)",
+          "corpo da nuvem vilã (três esferas cinza-chumbo)",
+          "sobrancelhas raivosas pretas",
+          "sachê vermelho de ketchup espirrando",
+          "granizo caindo",
+          "seta VÁ verde"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "vad-heter-det-pa-svenska",
+      "ponte_sonora": "VÁ, RRÊ-ter! DÊ PÔ SVÊNS-ka! (RRÊ raspado, o MESMO 'heter' do card de apresentação; PÔ de boca redonda, nunca 'pó')",
+      "historia": "Você aponta pro objeto e o alce Sven raspa a garganta (\"RRÊÊ\") antes de soprar um PÔ azul-e-amarelo por cima dele. Do pó se ergue um balão de fala de papelão gigante com a palavra sueca escrita dentro.",
+      "cena": {
+        "descricao": "Uma cadeira tombada some sob um pó azul-e-amarelo soprado por um alce, e do pó sobe um balão de fala de papelão com a palavra sueca.",
+        "partes": [
+          "piso claro",
+          "cadeira tombada",
+          "pernas do alce",
+          "corpo do alce marrom",
+          "chifres em leque",
+          "jato de pó azul e amarelo saindo do focinho",
+          "balão de fala de papelão gigante",
+          "palavra escrita dentro do balão"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "vad-betyder-det",
+      "ponte_sonora": "VÁ, be-TÜ-der, DÊ! ('TÜ' = 'TU' com bico de pato: lábios de U, língua de I)",
+      "historia": "Você mostra um papelzinho com uma palavra incompreensível e grita: \"VÁ, BETÜ-DER, DÊ!\". Betü é um ornitorrinco bibliotecário de bico chato. Ele mastiga o papel, engole, e a lanterna de minerador na testa dele acende sozinha, projetando o significado na parede.",
+      "cena": {
+        "descricao": "Biblioteca minúscula: um ornitorrinco de bico chato sobre a pilha de dicionários, mastigando um papelzinho, com a lanterna da testa projetando um cone de luz na parede.",
+        "partes": [
+          "tapete redondo vermelho-escuro",
+          "pilha de dicionários",
+          "dicionário aberto em V",
+          "corpo do ornitorrinco marrom (cápsula)",
+          "bico chato laranja",
+          "cauda-remo achatada",
+          "papelzinho mastigado",
+          "lanterna acesa na testa",
+          "cone de luz projetado com um desenho dentro"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "kan-du-prata-lite-langsammare",
+      "ponte_sonora": "CAN-DU PRÁ-TA LÍ-TE... LÔNG SÂ-ma-ra! (CAN-DU é C+A+N, sem o glide de 'quando'; SÂ-ma-ra proparoxítona)",
+      "historia": "A garçonete do restaurante mais chique de Estocolmo é SÂMARA, uma tartaruga de pescoço LONGUÍSSIMO. No peito dela um broche diz \"PRA TÁ LITE\" — pra ficar leve. Ela serve UMA sílaba por vez num pratinho dourado: quanto mais longo o pescoço, mais devagar sai a sílaba.",
+      "cena": {
+        "descricao": "Restaurante fino: tartaruga de pescoço longuíssimo curvado sobre a mesa posta, servindo uma única sílaba num pratinho dourado sob o lustre.",
+        "partes": [
+          "mesa com toalha branca",
+          "lustre pendurado",
+          "pratinho dourado",
+          "sílaba solitária azul no centro do prato",
+          "cúpula de prata erguida",
+          "casco da Sâmara verde-escuro",
+          "pescoço longuíssimo verde-claro",
+          "cabeça da tartaruga curvada",
+          "broche redondo escrito LITE"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "kan-du-hjalpa-mig",
+      "ponte_sonora": "CAN-DU IÉL-pa... M'ÊI! (CAN-DU sem glide; força em IÉL e o -pa engolido; M'ÊI é monossílabo, nunca 'meia'. E é IÉL de IOGA — nunca RR carioca)",
+      "historia": "Você afunda na neve e só sobram a cabeça e um braço. Grita \"ÊI!\" e a montanha devolve o eco \"M-ÊI!\". O iodelador lá em cima só atende quem faz iodel de verdade — quem rosna \"RRÁL-pa\" com erre carioca fica no buraco. Ele ergue a PÁ vermelha e vem cavando.",
+      "cena": {
+        "descricao": "Campo de neve: uma cabeça e um braço saindo do buraco ao lado de um M gigante esculpido na neve, enquanto o iodelador ergue a pá vermelha sobre a pedra.",
+        "partes": [
+          "campo de neve branco",
+          "buraco na neve cinza-escuro",
+          "cabeça do soterrado",
+          "braço erguido",
+          "M gigante esculpido na neve",
+          "pedra do iodelador cinza",
+          "corpo do iodelador vermelho com suspensórios",
+          "cabeça do iodelador",
+          "boca em O (toro preto)",
+          "pá vermelha erguida"
+        ]
+      },
+      "revisado": true
+    },
+    {
+      "id": "var-ligger-toaletten",
+      "ponte_sonora": "VAR! LÍGUE-R TOALÉT-EN! (sem o 'O' no meio: o R de LÍGUER emenda direto no T de TOALETE, sem respiro)",
+      "historia": "Jogo parado, estádio em silêncio: o jogador cruza as pernas desesperado e o árbitro desenha o quadrado do VAR no ar. O telão LIGA — e em vez do replay do gol aparece, em 4K e giro lento, um vaso sanitário reluzente. O VAR na Suécia revisa é onde fica o banheiro.",
+      "cena": {
+        "descricao": "Árbitro fazendo o quadrado do VAR enquanto o telão exibe um vaso sanitário em replay, com o R do telão colado no T da placa do banheiro.",
+        "partes": [
+          "gramado verde",
+          "poste do telão cinza",
+          "telão do VAR preto com um R grande",
+          "vaso sanitário branco saltando da tela",
+          "tampa azul do vaso",
+          "placa do banheiro com T colado no R",
+          "corpo do árbitro preto com faixa amarela",
+          "cabeça do árbitro",
+          "quadrado do VAR (toro branco)",
+          "jogador de pernas cruzadas"
+        ]
+      },
+      "revisado": true
+    }
+  ]
+}
