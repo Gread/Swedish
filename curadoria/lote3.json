@@ -1,39 +1,869 @@
 {
   "phrases": [
-    { "id": "jag-ar-sjuk-idag", "sv": "Jag är sjuk idag, så jag stannar hemma.", "pt": "Estou doente hoje, então vou ficar em casa.", "pronuncia": "iá é RHÚUK i-DÁG, só iá STÁN-nar HÉM-ma ('sj' de sjuk = sopro forte tipo RR carioca; 'jag' = iá, o -g não soa)", "contexto": "SMS ou ligação para o chefe de manhã cedo — a sjukanmälan padrão.", "porque": "'Sjuk' é a palavra de toda temporada de resfriado. Na Suécia se avisa cedo, curto e sem detalhar sintoma — a frase inteira já cumpre a regra." },
-    { "id": "jag-maste-vabba-idag", "sv": "Jag måste vabba idag, mitt barn är sjukt.", "pt": "Preciso ficar em casa com meu filho hoje, ele está doente.", "pronuncia": "iá MÓS-te VÁB-ba i-DÁG, mit BÁRN é RHÚUKT ('måste' com ó fechado; 'vabba' com A aberto)", "contexto": "Aviso ao chefe ou ao chat da equipe quando o filho está doente (VAB = vård av barn).", "porque": "'Vabba' não existe em português e virou verbo no dia a dia sueco ('ska du vabba?'). Sem essa palavra ele não entende metade das conversas de escritório com colegas que têm filhos." },
-    { "id": "jag-jobbar-hemifran", "sv": "Jag jobbar hemifrån idag.", "pt": "Hoje eu trabalho de casa.", "pronuncia": "iá IÓB-bar HÉM-i-frôn i-DÁG ('j' inicial sueco = I; 'å' = ô fechado, sem nasalizar)", "contexto": "Mensagem curta no chat de manhã, ou resposta quando perguntam se ele vai ao escritório.", "porque": "'Hemifrån' é vocabulário fixo do trabalho híbrido sueco e aparece todo dia no chat. Cabe inteira numa mensagem e serve também falada." },
-    { "id": "ta-ut-semester-vecka-30", "sv": "Kan jag ta ut semester vecka 30?", "pt": "Posso tirar férias na semana 30?", "pronuncia": "kan iá ta ut se-MÉS-ter VÉK-ka TRÉT-ti ('semester' com E aberto no meio; 'trettio' na fala vira 'TRÉT-ti')", "contexto": "Conversa ou e-mail com o chefe no planejamento das férias de verão.", "porque": "Duas armadilhas de uma vez: 'semester' é férias, não semestre; e o sueco marca férias por NÚMERO DE SEMANA, coisa que ele vai ouvir o ano todo." },
-    { "id": "jag-hinner-inte-skjuta-pa-det", "sv": "Jag hinner inte till fredag. Kan vi skjuta på det?", "pt": "Não vou dar conta até sexta. Podemos adiar?", "pronuncia": "iá HÍN-ner ín-te till FRÉ-da. kan vi RHÚU-ta pô dê ('fredag' vira 'FRÉ-da'; 'skjuta' com o mesmo sopro de 'sjuk')", "contexto": "Na reunião ou por escrito, quando o prazo não vai fechar.", "porque": "'Hinna' (dar conta no tempo) não tem tradução direta e é o verbo mais usado no escritório sueco; 'skjuta på' é o jeito coloquial de adiar. Avisar antes do prazo é etiqueta obrigatória." },
-    { "id": "jag-haller-inte-riktigt-med", "sv": "Jag håller inte riktigt med.", "pt": "Não concordo muito, não.", "pronuncia": "iá RÔL-ler ín-te RÍK-tit me ('hålla' com H soprado e ó fechado; 'riktigt' perde o -g: RÍK-tit; 'med' = me)", "contexto": "Reunião, quando ele discorda mas quer soar colaborativo.", "porque": "É o modo padrão sueco de discordar: o 'inte riktigt' amortece tudo. Um 'nej, det är fel' soa rude no consenso sueco — essa frase abre o debate sem queimar ninguém." },
-
-    { "id": "vilket-spar-gar-taget-fran", "sv": "Vilket spår går tåget från?", "pt": "De qual plataforma sai o trem?", "pronuncia": "VÍL-ket spôr gôr TÔ-guet fron? (K de 'vilket' é DURO; 'å' = ô fechado)", "contexto": "Na estação, quando o painel não mostra a plataforma ou mudou em cima da hora.", "porque": "'Spår' é a palavra de todo anúncio de estação. Sem ela ele fica parado no saguão sem saber para onde ir." },
-    { "id": "ar-taget-forsenat-eller-installt", "sv": "Är tåget försenat eller inställt?", "pt": "O trem está atrasado ou foi cancelado?", "pronuncia": "É TÔ-guet för-SÊ-nat É-ler ÍN-stelt?", "contexto": "Perguntando na estação quando o trem não aparece. Serve trocando 'tåget' por 'bussen'.", "porque": "São exatamente as duas palavras dos anúncios e letreiros. Reconhecer 'inställt' evita esperar meia hora um trem que nunca vem." },
-    { "id": "var-kan-jag-kopa-biljett", "sv": "Var kan jag köpa biljett?", "pt": "Onde eu compro bilhete?", "pronuncia": "VAR kan iá CHÊ-pa bil-YÉT? ('kö' = 'chê' com ch tcheco; 'lj' = 'i')", "contexto": "Em estação, terminal ou dentro do ônibus. A resposta vem como 'i appen', 'i automaten' ou 'på Pressbyrån'.", "porque": "Quase nada se paga em dinheiro no transporte sueco, então essa pergunta é o que destrava o acesso — e ele já treina as respostas que vai ouvir." },
-    { "id": "hur-kommer-jag-till", "sv": "Hur kommer jag till Storgatan?", "pt": "Como eu chego na rua Storgatan?", "pronuncia": "RRUR KÔ-mer iá til STÚR-ga-tan? ('hur' com H soprado e u arredondado)", "contexto": "Parando alguém na rua com o endereço na mão. Troque pelo nome da rua ou do lugar.", "porque": "É a estrutura universal de pedir caminho (não 'onde fica', mas 'como eu chego'), e dispara as respostas 'rakt fram', 'till höger', 'till vänster'." },
-    { "id": "hoger-eller-vanster", "sv": "Är det till höger eller till vänster?", "pt": "É à direita ou à esquerda?", "pronuncia": "É de til RRÊ-guer É-ler til VÉNS-ter? ('höger' com H soprado e ö arredondado)", "contexto": "Logo depois de pedir a direção, quando a explicação foi rápida demais.", "porque": "Oferecer as duas opções força uma resposta curta em vez de uma explicação longa que ele não vai acompanhar. Höger e vänster são o vocabulário mínimo de qualquer direção." },
-
-    { "id": "jag-har-ont-i-magen", "sv": "Jag har ont i magen.", "pt": "Estou com dor na barriga.", "pronuncia": "iá har ONT i MÂ-guen ('g' de 'magen' é duro; 'ont' com o mesmo o de 'onda')", "contexto": "Na recepção da vårdcentral ou no 1177. Troque a última palavra: i halsen, i huvudet, i ryggen, i örat.", "porque": "É o molde que todo sueco usa para relatar dor. Uma carta só, e ele descreve dor em qualquer parte do corpo." },
-    { "id": "det-gor-ont-har", "sv": "Det gör ont här.", "pt": "Dói aqui.", "pronuncia": "de iör ONT HÉR ('gör' começa com som de I: IÖR; 'här' com ä aberto)", "contexto": "Dentro da sala, apontando com o dedo enquanto o médico apalpa. Também no dentista.", "porque": "Salva a consulta quando ele não sabe o nome da parte do corpo em sueco: aponta e fala. Complementa o molde de dor com zero vocabulário novo." },
-    { "id": "jag-ar-allergisk-mot-penicillin", "sv": "Jag är allergisk mot penicillin.", "pt": "Sou alérgico a penicilina.", "pronuncia": "iá é a-ler-GUÍSK mut pe-ni-si-LÍN ('g' duro em 'allergisk'; 'mot' com o = u; tônica no fim de 'penicillin')", "contexto": "Perguntam isso em toda consulta e no balcão do apotek antes de entregar remédio.", "porque": "É a frase de segurança: entender errado aqui tem consequência médica real. O molde 'allergisk mot ...' também serve para nötter, laktos, gluten." },
-    { "id": "nagot-receptfritt", "sv": "Har ni något receptfritt mot det här?", "pt": "Vocês têm algo sem receita para isso?", "pronuncia": "har ni NÔT re-SEPT-frit mut de HÉR ('något' na fala vira 'nåt' = NÔT; o 'c' de receptfritt = S)", "contexto": "No balcão do apotek, mostrando onde dói ou descrevendo o sintoma.", "porque": "Na Suécia quase nada fica na prateleira — você pede ao farmacêutico. 'Receptfritt' é a palavra-chave do sistema e evita ida desnecessária ao médico." },
-    { "id": "det-ar-akut", "sv": "Det är akut, jag behöver komma in idag.", "pt": "É urgente, preciso ser atendido hoje.", "pronuncia": "de é a-KÚT, iá be-HÖ-ver KÓM-ma in i-DÁG ('akut' com tônica no U)", "contexto": "No telefone com o 1177 ou na recepção da vårdcentral quando a fila é de semanas.", "porque": "'Akut' é a palavra que muda o fluxo do atendimento na Suécia. Sem ela ele entra na fila normal; com ela, a triagem reavalia na hora." },
-
-    { "id": "hur-bokar-man-tvattstugan", "sv": "Hur bokar man tvättstugan?", "pt": "Como se reserva a lavanderia?", "pronuncia": "RRUR BÚ-kar man TVÉT-stü-gan? ('hur' com H soprado; 'o' de bokar = ú fechado)", "contexto": "Primeira semana no prédio, perguntando ao vizinho ou ao hyresvärd como funciona o quadro ou o app.", "porque": "É a pergunta de entrada em todo prédio sueco: a lavanderia é compartilhada e sempre reservada por horário. O 'man' é o jeito neutro de perguntar como algo funciona." },
-    { "id": "kan-ni-dampa-er-lite", "sv": "Kan ni dämpa er lite?", "pt": "Vocês podem baixar um pouco?", "pronuncia": "kan ni DÉM-pa er LÍ-te ('ä' = É aberto)", "contexto": "Batendo na porta do vizinho tarde da noite, ou numa festa barulhenta no prédio.", "porque": "É a forma padrão e educada de pedir silêncio sem criar briga — 'dämpa sig' soa muito menos duro que 'var tysta', e o 'lite' suaviza ainda mais." },
-    { "id": "var-slanger-man-kartong", "sv": "Var slänger man kartong?", "pt": "Onde se joga papelão?", "pronuncia": "var SLÉNG-er man kar-TÓNG? ('kartong' com NG nasal, sem G duro)", "contexto": "No återvinningsrum do prédio, com a caixa na mão, sem saber em qual container vai.", "porque": "A reciclagem sueca tem muitos fluxos e errar é um clássico do estrangeiro. Com o molde 'Var slänger man ___?' ele troca a última palavra: glas, metall, batterier." },
-    { "id": "jag-maste-gora-en-felanmalan", "sv": "Jag måste göra en felanmälan.", "pt": "Preciso abrir um chamado de manutenção.", "pronuncia": "iá MÓS-te IÖ-ra en FÉL-an-mé-lan ('göra' começa com som de I; 'å' de måste = ó fechado)", "contexto": "Falando com o hyresvärd quando a torneira vaza, o aquecedor não esquenta ou a fechadura emperra.", "porque": "'Felanmälan' é A palavra do sistema sueco de moradia — sem ela você não é entendido; com ela o processo inteiro se abre." },
-    { "id": "jag-har-last-mig-ute", "sv": "Jag har låst mig ute.", "pt": "Me tranquei do lado de fora.", "pronuncia": "iá har LÓST mêi Ü-te ('låst' com ó bem fechado; 'mig' se fala 'mêi')", "contexto": "Falando com vizinho, hyresvärd ou o plantão (jour) depois de fechar a porta sem a chave.", "porque": "Porta sueca tranca sozinha ao fechar, então acontece com todo mundo. É expressão fixa que não se traduz literalmente do português." },
-
-    { "id": "vad-ar-klockan", "sv": "Vad är klockan?", "pt": "Que horas são?", "pronuncia": "va é KLÓ-kan? ('vad' perde o d)", "contexto": "Na rua, no trabalho, na fila — pergunta neutra a qualquer pessoa.", "porque": "É a forma real e única que os suecos usam. E treina a resposta: 'halv fyra' significa 3h30, meia hora ANTES das quatro — armadilha clássica." },
-    { "id": "ska-vi-saga-imorgon-klockan-tre", "sv": "Ska vi säga imorgon klockan tre?", "pt": "Vamos dizer amanhã às três?", "pronuncia": "ska vi SÉ-ia i-MÓR-ron KLÓ-kan TRÊ? ('säga' na fala vira 'säja'; 'imorgon' com o g quase sumindo)", "contexto": "Fechando horário no fim de uma conversa, por telefone ou pessoalmente.", "porque": "'Ska vi säga...?' é o jeito sueco de propor e fechar um combinado sem soar mandão. Troque o dia e a hora à vontade." },
-    { "id": "jag-hamtar-pa-forskolan", "sv": "Det är jag som hämtar på förskolan idag.", "pt": "Sou eu que busco na creche hoje.", "pronuncia": "de é iá som HÉM-tar pô FÖSH-ku-lan i-DÁG ('rs' de förskolan vira som de 'sh')", "contexto": "Avisando a professora da förskola quem vai pegar a criança.", "porque": "A förskola precisa saber quem busca — é a frase que todo pai fala ali. Par obrigatório: 'hämta' = buscar, 'lämna' = deixar. Nunca troque os dois." },
-    { "id": "jag-har-tva-barn", "sv": "Jag har två barn, fem och åtta år.", "pt": "Tenho dois filhos, de cinco e oito anos.", "pronuncia": "iá har tvô BÁRN, fem ó Ó-ta ÔR ('och' na fala vira só 'ó'; 'år' = ôr)", "contexto": "Small talk com colegas, vizinhos, outros pais no parquinho.", "porque": "Vem sempre logo depois do nome, e a idade vem junto — sueco quase nunca diz só 'tenho dois filhos'." },
-
-    { "id": "jag-tycker-att-det-later-bra", "sv": "Jag tycker att det låter bra.", "pt": "Por mim tudo bem. / Acho que soa bem.", "pronuncia": "iá TÜ-ker at de LÔ-ter bra ('tycker' com ü de lábios arredondados; 'låter' com å = ô)", "contexto": "Alguém propõe um plano, um horário, um restaurante — e ele opina em vez de só assentir com a cabeça.", "porque": "'Jag tycker att...' é o bloco número um para ter voz em sueco: opinião pessoal (tycker) é diferente de 'tror' (supor um fato). Ele troca o final à vontade." },
-    { "id": "ja-precis-det-tycker-jag-ocksa", "sv": "Ja, precis! Det tycker jag också.", "pt": "Isso, exatamente! Eu também acho.", "pronuncia": "iá, pre-SÍS! de TÜ-ker iá ÔK-so ('precis' com tônica na 2ª sílaba; 'också' = ÔK-so)", "contexto": "No meio de uma conversa em grupo, no fika do trabalho, quando ele concorda com o que alguém disse.", "porque": "É a reação de concordância mais frequente do sueco falado. 'Precis!' sozinho já é 'exato!'. E a ordem invertida ('Det tycker jag också') soa nativa." },
-    { "id": "vad-kul-att-hora", "sv": "Vad kul att höra!", "pt": "Que bom saber! / Que legal!", "pronuncia": "va KÜL at HÖ-ra ('vad' perde o d; 'kul' com ü longo; 'höra' com ö arredondado)", "contexto": "O colega conta que passou numa entrevista, a vizinha diz que a filha nasceu, um amigo avisa que vem visitar.", "porque": "Suecos reagem quase sempre com 'Vad + adjetivo!'. Aprendendo o molde ele gera dezenas: 'Vad gott!', 'Vad snällt!', 'Vad fint!'." },
-    { "id": "ah-vad-trakigt", "sv": "Åh, vad tråkigt!", "pt": "Ah, que pena!", "pronuncia": "ô, va TRÔ-kit ('åh' é um ô longo; o -gt final de 'tråkigt' vira só 't')", "contexto": "Alguém conta que ficou doente, perdeu o emprego, o plano foi cancelado.", "porque": "É o 'que pena' padrão da Suécia — o par negativo exato de 'Vad kul!', o que fixa os dois de uma vez. Cuidado: 'tråkigt' é tanto 'triste' quanto 'chato'." },
-    { "id": "det-var-jattegott", "sv": "Det var jättegott, tack!", "pt": "Estava delicioso, obrigado!", "pronuncia": "de var IÉT-te-got, tak ('jätte' com j = i: IÉT-te; 'gott' com g duro)", "contexto": "No fim da refeição, ao garçom, ou — mais importante — na casa de quem cozinhou para ele.", "porque": "Elogio de comida é moeda social sueca; 'jättegott' é a palavra real (jätte- = super-). No passado ('det var') porque já comeu." }
+    {
+      "id": "jag-ar-sjuk-idag",
+      "sv": "Jag är sjuk idag, så jag stannar hemma.",
+      "pt": "Estou doente hoje, então vou ficar em casa.",
+      "pronuncia": "iá é RHÚUK i-DÁG, só iá STÁN-nar HÉM-ma ('sj' de sjuk = sopro forte tipo RR carioca; 'jag' = iá, o -g não soa)",
+      "contexto": "SMS ou ligação para o chefe de manhã cedo — a sjukanmälan padrão.",
+      "porque": "'Sjuk' é a palavra de toda temporada de resfriado. Na Suécia se avisa cedo, curto e sem detalhar sintoma — a frase inteira já cumpre a regra."
+    },
+    {
+      "id": "jag-maste-vabba-idag",
+      "sv": "Jag måste vabba idag, mitt barn är sjukt.",
+      "pt": "Preciso ficar em casa com meu filho hoje, ele está doente.",
+      "pronuncia": "iá MÓS-te VÁB-ba i-DÁG, mit BÁRN é RHÚUKT ('måste' com ó fechado; 'vabba' com A aberto)",
+      "contexto": "Aviso ao chefe ou ao chat da equipe quando o filho está doente (VAB = vård av barn).",
+      "porque": "'Vabba' não existe em português e virou verbo no dia a dia sueco ('ska du vabba?'). Sem essa palavra ele não entende metade das conversas de escritório com colegas que têm filhos."
+    },
+    {
+      "id": "jag-jobbar-hemifran",
+      "sv": "Jag jobbar hemifrån idag.",
+      "pt": "Hoje eu trabalho de casa.",
+      "pronuncia": "iá IÓB-bar HÉM-i-frôn i-DÁG ('j' inicial sueco = I; 'å' = ô fechado, sem nasalizar)",
+      "contexto": "Mensagem curta no chat de manhã, ou resposta quando perguntam se ele vai ao escritório.",
+      "porque": "'Hemifrån' é vocabulário fixo do trabalho híbrido sueco e aparece todo dia no chat. Cabe inteira numa mensagem e serve também falada."
+    },
+    {
+      "id": "ta-ut-semester-vecka-30",
+      "sv": "Kan jag ta ut semester vecka 30?",
+      "pt": "Posso tirar férias na semana 30?",
+      "pronuncia": "kan iá ta ut se-MÉS-ter VÉK-ka TRÉT-ti ('semester' com E aberto no meio; 'trettio' na fala vira 'TRÉT-ti')",
+      "contexto": "Conversa ou e-mail com o chefe no planejamento das férias de verão.",
+      "porque": "Duas armadilhas de uma vez: 'semester' é férias, não semestre; e o sueco marca férias por NÚMERO DE SEMANA, coisa que ele vai ouvir o ano todo."
+    },
+    {
+      "id": "jag-hinner-inte-skjuta-pa-det",
+      "sv": "Jag hinner inte till fredag. Kan vi skjuta på det?",
+      "pt": "Não vou dar conta até sexta. Podemos adiar?",
+      "pronuncia": "iá HÍN-ner ín-te till FRÉ-da. kan vi RHÚU-ta pô dê ('fredag' vira 'FRÉ-da'; 'skjuta' com o mesmo sopro de 'sjuk')",
+      "contexto": "Na reunião ou por escrito, quando o prazo não vai fechar.",
+      "porque": "'Hinna' (dar conta no tempo) não tem tradução direta e é o verbo mais usado no escritório sueco; 'skjuta på' é o jeito coloquial de adiar. Avisar antes do prazo é etiqueta obrigatória."
+    },
+    {
+      "id": "jag-haller-inte-riktigt-med",
+      "sv": "Jag håller inte riktigt med.",
+      "pt": "Não concordo muito, não.",
+      "pronuncia": "iá RÔL-ler ín-te RÍK-tit me ('hålla' com H soprado e ó fechado; 'riktigt' perde o -g: RÍK-tit; 'med' = me)",
+      "contexto": "Reunião, quando ele discorda mas quer soar colaborativo.",
+      "porque": "É o modo padrão sueco de discordar: o 'inte riktigt' amortece tudo. Um 'nej, det är fel' soa rude no consenso sueco — essa frase abre o debate sem queimar ninguém."
+    },
+    {
+      "id": "vilket-spar-gar-taget-fran",
+      "sv": "Vilket spår går tåget från?",
+      "pt": "De qual plataforma sai o trem?",
+      "pronuncia": "VÍL-ket spôr gôr TÔ-guet fron? (K de 'vilket' é DURO; 'å' = ô fechado)",
+      "contexto": "Na estação, quando o painel não mostra a plataforma ou mudou em cima da hora.",
+      "porque": "'Spår' é a palavra de todo anúncio de estação. Sem ela ele fica parado no saguão sem saber para onde ir."
+    },
+    {
+      "id": "ar-taget-forsenat-eller-installt",
+      "sv": "Är tåget försenat eller inställt?",
+      "pt": "O trem está atrasado ou foi cancelado?",
+      "pronuncia": "É TÔ-guet för-SÊ-nat É-ler ÍN-stelt?",
+      "contexto": "Perguntando na estação quando o trem não aparece. Serve trocando 'tåget' por 'bussen'.",
+      "porque": "São exatamente as duas palavras dos anúncios e letreiros. Reconhecer 'inställt' evita esperar meia hora um trem que nunca vem."
+    },
+    {
+      "id": "var-kan-jag-kopa-biljett",
+      "sv": "Var kan jag köpa biljett?",
+      "pt": "Onde eu compro bilhete?",
+      "pronuncia": "VAR kan iá CHÊ-pa bil-YÉT? ('kö' = 'chê' com ch tcheco; 'lj' = 'i')",
+      "contexto": "Em estação, terminal ou dentro do ônibus. A resposta vem como 'i appen', 'i automaten' ou 'på Pressbyrån'.",
+      "porque": "Quase nada se paga em dinheiro no transporte sueco, então essa pergunta é o que destrava o acesso — e ele já treina as respostas que vai ouvir."
+    },
+    {
+      "id": "hur-kommer-jag-till",
+      "sv": "Hur kommer jag till Storgatan?",
+      "pt": "Como eu chego na rua Storgatan?",
+      "pronuncia": "RRUR KÔ-mer iá til STÚR-ga-tan? ('hur' com H soprado e u arredondado)",
+      "contexto": "Parando alguém na rua com o endereço na mão. Troque pelo nome da rua ou do lugar.",
+      "porque": "É a estrutura universal de pedir caminho (não 'onde fica', mas 'como eu chego'), e dispara as respostas 'rakt fram', 'till höger', 'till vänster'."
+    },
+    {
+      "id": "hoger-eller-vanster",
+      "sv": "Är det till höger eller till vänster?",
+      "pt": "É à direita ou à esquerda?",
+      "pronuncia": "É de til RRÊ-guer É-ler til VÉNS-ter? ('höger' com H soprado e ö arredondado)",
+      "contexto": "Logo depois de pedir a direção, quando a explicação foi rápida demais.",
+      "porque": "Oferecer as duas opções força uma resposta curta em vez de uma explicação longa que ele não vai acompanhar. Höger e vänster são o vocabulário mínimo de qualquer direção."
+    },
+    {
+      "id": "jag-har-ont-i-magen",
+      "sv": "Jag har ont i magen.",
+      "pt": "Estou com dor na barriga.",
+      "pronuncia": "iá har ONT i MÂ-guen ('g' de 'magen' é duro; 'ont' com o mesmo o de 'onda')",
+      "contexto": "Na recepção da vårdcentral ou no 1177. Troque a última palavra: i halsen, i huvudet, i ryggen, i örat.",
+      "porque": "É o molde que todo sueco usa para relatar dor. Uma carta só, e ele descreve dor em qualquer parte do corpo."
+    },
+    {
+      "id": "det-gor-ont-har",
+      "sv": "Det gör ont här.",
+      "pt": "Dói aqui.",
+      "pronuncia": "de iör ONT HÉR ('gör' começa com som de I: IÖR; 'här' com ä aberto)",
+      "contexto": "Dentro da sala, apontando com o dedo enquanto o médico apalpa. Também no dentista.",
+      "porque": "Salva a consulta quando ele não sabe o nome da parte do corpo em sueco: aponta e fala. Complementa o molde de dor com zero vocabulário novo."
+    },
+    {
+      "id": "jag-ar-allergisk-mot-penicillin",
+      "sv": "Jag är allergisk mot penicillin.",
+      "pt": "Sou alérgico a penicilina.",
+      "pronuncia": "iá é a-ler-GUÍSK mut pe-ni-si-LÍN ('g' duro em 'allergisk'; 'mot' com o = u; tônica no fim de 'penicillin')",
+      "contexto": "Perguntam isso em toda consulta e no balcão do apotek antes de entregar remédio.",
+      "porque": "É a frase de segurança: entender errado aqui tem consequência médica real. O molde 'allergisk mot ...' também serve para nötter, laktos, gluten."
+    },
+    {
+      "id": "nagot-receptfritt",
+      "sv": "Har ni något receptfritt mot det här?",
+      "pt": "Vocês têm algo sem receita para isso?",
+      "pronuncia": "har ni NÔT re-SEPT-frit mut de HÉR ('något' na fala vira 'nåt' = NÔT; o 'c' de receptfritt = S)",
+      "contexto": "No balcão do apotek, mostrando onde dói ou descrevendo o sintoma.",
+      "porque": "Na Suécia quase nada fica na prateleira — você pede ao farmacêutico. 'Receptfritt' é a palavra-chave do sistema e evita ida desnecessária ao médico."
+    },
+    {
+      "id": "det-ar-akut",
+      "sv": "Det är akut, jag behöver komma in idag.",
+      "pt": "É urgente, preciso ser atendido hoje.",
+      "pronuncia": "de é a-KÚT, iá be-HÖ-ver KÓM-ma in i-DÁG ('akut' com tônica no U)",
+      "contexto": "No telefone com o 1177 ou na recepção da vårdcentral quando a fila é de semanas.",
+      "porque": "'Akut' é a palavra que muda o fluxo do atendimento na Suécia. Sem ela ele entra na fila normal; com ela, a triagem reavalia na hora."
+    },
+    {
+      "id": "hur-bokar-man-tvattstugan",
+      "sv": "Hur bokar man tvättstugan?",
+      "pt": "Como se reserva a lavanderia?",
+      "pronuncia": "RRUR BÚ-kar man TVÉT-stü-gan? ('hur' com H soprado; 'o' de bokar = ú fechado)",
+      "contexto": "Primeira semana no prédio, perguntando ao vizinho ou ao hyresvärd como funciona o quadro ou o app.",
+      "porque": "É a pergunta de entrada em todo prédio sueco: a lavanderia é compartilhada e sempre reservada por horário. O 'man' é o jeito neutro de perguntar como algo funciona."
+    },
+    {
+      "id": "kan-ni-dampa-er-lite",
+      "sv": "Kan ni dämpa er lite?",
+      "pt": "Vocês podem baixar um pouco?",
+      "pronuncia": "kan ni DÉM-pa er LÍ-te ('ä' = É aberto)",
+      "contexto": "Batendo na porta do vizinho tarde da noite, ou numa festa barulhenta no prédio.",
+      "porque": "É a forma padrão e educada de pedir silêncio sem criar briga — 'dämpa sig' soa muito menos duro que 'var tysta', e o 'lite' suaviza ainda mais."
+    },
+    {
+      "id": "var-slanger-man-kartong",
+      "sv": "Var slänger man kartong?",
+      "pt": "Onde se joga papelão?",
+      "pronuncia": "var SLÉNG-er man kar-TÓNG? ('kartong' com NG nasal, sem G duro)",
+      "contexto": "No återvinningsrum do prédio, com a caixa na mão, sem saber em qual container vai.",
+      "porque": "A reciclagem sueca tem muitos fluxos e errar é um clássico do estrangeiro. Com o molde 'Var slänger man ___?' ele troca a última palavra: glas, metall, batterier."
+    },
+    {
+      "id": "jag-maste-gora-en-felanmalan",
+      "sv": "Jag måste göra en felanmälan.",
+      "pt": "Preciso abrir um chamado de manutenção.",
+      "pronuncia": "iá MÓS-te IÖ-ra en FÉL-an-mé-lan ('göra' começa com som de I; 'å' de måste = ó fechado)",
+      "contexto": "Falando com o hyresvärd quando a torneira vaza, o aquecedor não esquenta ou a fechadura emperra.",
+      "porque": "'Felanmälan' é A palavra do sistema sueco de moradia — sem ela você não é entendido; com ela o processo inteiro se abre."
+    },
+    {
+      "id": "jag-har-last-mig-ute",
+      "sv": "Jag har låst mig ute.",
+      "pt": "Me tranquei do lado de fora.",
+      "pronuncia": "iá har LÓST mêi Ü-te ('låst' com ó bem fechado; 'mig' se fala 'mêi')",
+      "contexto": "Falando com vizinho, hyresvärd ou o plantão (jour) depois de fechar a porta sem a chave.",
+      "porque": "Porta sueca tranca sozinha ao fechar, então acontece com todo mundo. É expressão fixa que não se traduz literalmente do português."
+    },
+    {
+      "id": "vad-ar-klockan",
+      "sv": "Vad är klockan?",
+      "pt": "Que horas são?",
+      "pronuncia": "va é KLÓ-kan? ('vad' perde o d)",
+      "contexto": "Na rua, no trabalho, na fila — pergunta neutra a qualquer pessoa.",
+      "porque": "É a forma real e única que os suecos usam. E treina a resposta: 'halv fyra' significa 3h30, meia hora ANTES das quatro — armadilha clássica."
+    },
+    {
+      "id": "ska-vi-saga-imorgon-klockan-tre",
+      "sv": "Ska vi säga imorgon klockan tre?",
+      "pt": "Vamos dizer amanhã às três?",
+      "pronuncia": "ska vi SÉ-ia i-MÓR-ron KLÓ-kan TRÊ? ('säga' na fala vira 'säja'; 'imorgon' com o g quase sumindo)",
+      "contexto": "Fechando horário no fim de uma conversa, por telefone ou pessoalmente.",
+      "porque": "'Ska vi säga...?' é o jeito sueco de propor e fechar um combinado sem soar mandão. Troque o dia e a hora à vontade."
+    },
+    {
+      "id": "jag-hamtar-pa-forskolan",
+      "sv": "Det är jag som hämtar på förskolan idag.",
+      "pt": "Sou eu que busco na creche hoje.",
+      "pronuncia": "de é iá som HÉM-tar pô FÖSH-ku-lan i-DÁG ('rs' de förskolan vira som de 'sh')",
+      "contexto": "Avisando a professora da förskola quem vai pegar a criança.",
+      "porque": "A förskola precisa saber quem busca — é a frase que todo pai fala ali. Par obrigatório: 'hämta' = buscar, 'lämna' = deixar. Nunca troque os dois."
+    },
+    {
+      "id": "jag-har-tva-barn",
+      "sv": "Jag har två barn, fem och åtta år.",
+      "pt": "Tenho dois filhos, de cinco e oito anos.",
+      "pronuncia": "iá har tvô BÁRN, fem ó Ó-ta ÔR ('och' na fala vira só 'ó'; 'år' = ôr)",
+      "contexto": "Small talk com colegas, vizinhos, outros pais no parquinho.",
+      "porque": "Vem sempre logo depois do nome, e a idade vem junto — sueco quase nunca diz só 'tenho dois filhos'."
+    },
+    {
+      "id": "jag-tycker-att-det-later-bra",
+      "sv": "Jag tycker att det låter bra.",
+      "pt": "Por mim tudo bem. / Acho que soa bem.",
+      "pronuncia": "iá TÜ-ker at de LÔ-ter bra ('tycker' com ü de lábios arredondados; 'låter' com å = ô)",
+      "contexto": "Alguém propõe um plano, um horário, um restaurante — e ele opina em vez de só assentir com a cabeça.",
+      "porque": "'Jag tycker att...' é o bloco número um para ter voz em sueco: opinião pessoal (tycker) é diferente de 'tror' (supor um fato). Ele troca o final à vontade."
+    },
+    {
+      "id": "ja-precis-det-tycker-jag-ocksa",
+      "sv": "Ja, precis! Det tycker jag också.",
+      "pt": "Isso, exatamente! Eu também acho.",
+      "pronuncia": "iá, pre-SÍS! de TÜ-ker iá ÔK-so ('precis' com tônica na 2ª sílaba; 'också' = ÔK-so)",
+      "contexto": "No meio de uma conversa em grupo, no fika do trabalho, quando ele concorda com o que alguém disse.",
+      "porque": "É a reação de concordância mais frequente do sueco falado. 'Precis!' sozinho já é 'exato!'. E a ordem invertida ('Det tycker jag också') soa nativa."
+    },
+    {
+      "id": "vad-kul-att-hora",
+      "sv": "Vad kul att höra!",
+      "pt": "Que bom saber! / Que legal!",
+      "pronuncia": "va KÜL at HÖ-ra ('vad' perde o d; 'kul' com ü longo; 'höra' com ö arredondado)",
+      "contexto": "O colega conta que passou numa entrevista, a vizinha diz que a filha nasceu, um amigo avisa que vem visitar.",
+      "porque": "Suecos reagem quase sempre com 'Vad + adjetivo!'. Aprendendo o molde ele gera dezenas: 'Vad gott!', 'Vad snällt!', 'Vad fint!'."
+    },
+    {
+      "id": "ah-vad-trakigt",
+      "sv": "Åh, vad tråkigt!",
+      "pt": "Ah, que pena!",
+      "pronuncia": "ô, va TRÔ-kit ('åh' é um ô longo; o -gt final de 'tråkigt' vira só 't')",
+      "contexto": "Alguém conta que ficou doente, perdeu o emprego, o plano foi cancelado.",
+      "porque": "É o 'que pena' padrão da Suécia — o par negativo exato de 'Vad kul!', o que fixa os dois de uma vez. Cuidado: 'tråkigt' é tanto 'triste' quanto 'chato'."
+    },
+    {
+      "id": "det-var-jattegott",
+      "sv": "Det var jättegott, tack!",
+      "pt": "Estava delicioso, obrigado!",
+      "pronuncia": "de var IÉT-te-got, tak ('jätte' com j = i: IÉT-te; 'gott' com g duro)",
+      "contexto": "No fim da refeição, ao garçom, ou — mais importante — na casa de quem cozinhou para ele.",
+      "porque": "Elogio de comida é moeda social sueca; 'jättegott' é a palavra real (jätte- = super-). No passado ('det var') porque já comeu."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-ar-sjuk-idag",
+      "elenco": "pirata resfriado + suricato-timoneiro",
+      "ponte_sonora": "IÁ É RRÜÜK IDÁG — SÔ! IÁ STÁNAR RRÉMA (11 sílabas; RRÜÜK = o 'sj' soprado com lábios de U e língua de I, nunca 'chuque'; SÔ com Ô FECHADO; 'stannar' guarda o -R BRANDO, que emenda direto no h soprado de 'hemma' — STÁNAR-RRÉMA, quase 'está na rema'; sem esse R sobra 'stanna', outro verbo)",
+      "historia": "O pirata acorda com o nariz entupido e assoa num lenço do tamanho da vela do navio: RRÜÜK! Viagem cancelada — mas pirata parado enferruja, então ele senta na máquina de remo da sala e rema pra lugar nenhum. O suricato-timoneiro sobe no caixote, fica ereto feito poste de vigia e berra no megafone: SÔ! IÁ STÁNAR RRÉMA! — ele fica em casa, só que remando.",
+      "cena": {
+        "descricao": "Sala de casa virada galé de um homem só: o pirata resfriado rema na máquina de remo, lenço gigante inflado no nariz, e um suricato ereto de megafone marca o ritmo em cima de um caixote.",
+        "partes": [
+          "tapete redondo azul-marinho (chão de casa)",
+          "trilho da máquina de remo, cinza-metal",
+          "roda-volante (toro escuro em pé)",
+          "banco deslizante de madeira mel",
+          "pilha de lenços usados (3 esferas brancas amassadas)",
+          "caixote de madeira mel ao lado (posto do vigia)",
+          "corpo do pirata listrado vermelho/creme, inclinado pra trás",
+          "cabeça com bandana vermelha e nariz-batata (esfera vermelha)",
+          "lenço gigante inflado (cone branco saindo do nariz)",
+          "suricato ereto castanho-areia com megafone laranja"
+        ]
+      }
+    },
+    {
+      "id": "jag-maste-vabba-idag",
+      "elenco": "papai lontra + filhote de lontra",
+      "ponte_sonora": "IÁ MÔSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT! (11 sílabas; MÔSTE = 'mostre' sem R, Ô FECHADO; VÁBA = 'baba' com V, força na 1ª; o N de 'barn' emenda: BÁR, NÉ?; RRÜÜKT fecha em KT seco)",
+      "historia": "Papai lontra precisa MOSTRAR pro chefe por que não vai aparecer: vira o celular pro filhote, que virou fábrica de VÁBA — o fio de baba já chega ao chão. O filhotinho febril, deitado de barriga pra cima como toda lontra, montou um BAR de xaropes num caixote virado e, bem na hora da câmera, arranca o dardo de ventosa da própria testa: RRÜÜKT!",
+      "cena": {
+        "descricao": "Chão do quarto: fortaleza de almofadões, filhote de lontra caído de barriga pra cima babando ao lado do seu bar de xaropes, e o pai de gravata erguendo o celular pra filmar a prova.",
+        "partes": [
+          "tapete quadrado creme",
+          "dois almofadões azul e mostarda em V",
+          "caixote de madeira virado (o BÁR)",
+          "três garrafinhas de xarope roxo/laranja/verde",
+          "filhote de lontra marrom-claro de barriga pra cima",
+          "fio de baba (cilindro translúcido até o tapete)",
+          "dardo de ventosa vermelho na testa dele",
+          "papai lontra de pé, pelo marrom-escuro e peito claro",
+          "focinho chato com bigodes e gravata vinho torta",
+          "celular gigante erguido, tela clara"
+        ]
+      }
+    },
+    {
+      "id": "jag-jobbar-hemifran",
+      "elenco": "castor engravatado + girassol",
+      "ponte_sonora": "IÁ IÓBAR! RRÊ-MI-FRÔ NI-DÁG! (8 sílabas; J sueco = I de ioga — 'IÓBAR', nunca 'jóba'; o -R final é BRANDO e rola direto pro sopro seguinte — sem ele sobra 'jobba', o infinitivo; o h de 'hemifrån' sopra como rr e traz Ê fechado; FRÔ com Ô FECHADO e SEM nasalizar — o N cola no i seguinte)",
+      "historia": "Avisam o castor engravatado que hoje ninguém precisa ir ao escritório e ele joga os braços pro alto: IÁ, IÓBAR! — e o R brando rola direto pro sopro seguinte. Abre o laptop em cima da própria represa (o escritório dele é literalmente a casa dele) e a única colega de reunião é RÊMI, a FRÔ: um girassol de vaso que se vira pra servir de luz de webcam. Pra bater o ponto, estala a cauda na água: NI-DÁG!",
+      "cena": {
+        "descricao": "Em cima da própria represa de troncos, um castor de gravata trabalha no laptop com os braços erguidos, tendo um girassol de vaso como colega de reunião.",
+        "partes": [
+          "lâmina d'água azul translúcida",
+          "represa de cinco troncos cruzados",
+          "tampo de tronco fatiado (mesa)",
+          "laptop aberto cinza em L",
+          "vaso de barro terracota",
+          "caule e miolo do girassol",
+          "coroa de pétalas amarelas",
+          "corpo do castor com gravata vinho",
+          "cabeça com dentões brancos",
+          "braços erguidos e cauda chapada batendo na água"
+        ]
+      }
+    },
+    {
+      "id": "ta-ut-semester-vecka-30",
+      "elenco": "cem Esters de boia (humanas)",
+      "ponte_sonora": "CAN-IÁ TÁ ÜT? CEM ÉSTER, VÉCA TRÉTI! (11 sílabas, uma por sílaba sueca; 'kan jag' = CAN-IÁ, o J sueco é I de ioga — nunca o J chiado de 'canja'; 'ta ut' = TÁ ÜT com Ü de bico; 'semester' = CEM ÉSTER com a tônica no ÉS e É bem aberto, e o CEM quase sem nasal; 'vecka' com K DURO; 'trettio' na fala vira TRÉTI, R brando)",
+      "historia": "Você pergunta se pode tirar férias e o chefe nem responde direito: carimba duas vezes — CAN! IÁ! — e já grita 'TÁ, ÜT!'. Nisso a gaveta do arquivo dispara CEM ÉSTER idênticas, todas de óculos escuros e boia na cintura, que ocupam a praia que brotou no meio do escritório. A Ester da frente rasga o calendário escolar ao meio: aqui ninguém ESTUDA, aqui a gente BOIA — VÉCA TRÉTI!",
+      "cena": {
+        "descricao": "Um pedaço de praia dentro do escritório: arquivo tombado cuspindo uma fila de Esters de boia, calendário escolar rasgado no chão e o painel de semanas com a casa 30 acesa.",
+        "partes": [
+          "tapete de areia bege",
+          "arquivo de aço tombado com gaveta aberta",
+          "calendário escolar rasgado (2 placas caídas)",
+          "carimbo de madeira caído com poça de tinta azul",
+          "fila de cinco Esters coral enfileiradas",
+          "Ester da frente, maior",
+          "boia laranja-e-branca na cintura dela",
+          "óculos escuros",
+          "coqueiro (cilindro marrom + 3 cones verdes)",
+          "painel de semanas com a casa 30 acesa em amarelo"
+        ]
+      }
+    },
+    {
+      "id": "jag-hinner-inte-skjuta-pa-det",
+      "elenco": "pinguim goleiro",
+      "ponte_sonora": "IÁ RRÍNER ÍNTE TIL FRÉDA — CAN VI RRÜTA PÔ DÊ? (14 sílabas; 'hinner' = RRÍNER com RR SOPRADO, não vibrado — se vibrar vira 'rinner', escorrer; FRÉDA com R BRANDO e sem o -g; 'skjuta' = RRÜTA, o mesmo sopro de 'sjuk' mas com Ü de bico, nunca 'chuta' com U nem 'ch' de chuva; 'på' = PÔ FECHADO)",
+      "historia": "O prazo de sexta vem quicando na sua direção e você RI NERVOSO — RRÍNER, sopro sem vibrar — porque não vai dar conta. Aí o pinguim de gravata torta, goleiro oficial do escritório, solta um CHUTA soprado do fundo da garganta, mas com o bico arredondado no Ü: RRÜTA!, mandando o bloco da sexta-feira por cima da trave, direto pra semana que vem, e implora: PÔ, DÊ!",
+      "cena": {
+        "descricao": "Sala de reunião virada campo: um pinguim goleiro de gravata acabou de chutar o bloco-calendário da sexta por cima de uma trave de escritório.",
+        "partes": [
+          "carpete cinza-azulado",
+          "trave baixa de três cilindros brancos",
+          "pés laranja do pinguim, um erguido no ar",
+          "corpo preto com barriga branca",
+          "cabeça com bico laranja",
+          "gravata vermelha torta",
+          "luvas de goleiro amarelas",
+          "rastro do sopro (cone azul-claro saindo do bico)",
+          "bloco da sexta voando acima da trave"
+        ]
+      }
+    },
+    {
+      "id": "jag-haller-inte-riktigt-med",
+      "elenco": "texugo de patins",
+      "ponte_sonora": "IÁ RRÔLER ÍNTE-RÍKTIT MÊ (8 sílabas; 'håller' = RRÔLER, o patins roller: RR soprado + Ô FECHADO; emende 'inte riktigt' num fôlego só — ÍNTE-RÍKTIT — pro R sair BRANDO, de 'caro', e não estourar em RR carioca; o -gt vira só T; 'med' = MÊ, sem D)",
+      "historia": "Na reunião, o texugo de gravata-borboleta nunca briga: quando discorda, calça os RRÔLER e desliza um palmo pra trás em cima da mesa, as unhas de cavar raspando o tampo e as rodinhas fazendo ÍNTE-RÍKTIT, ÍNTE-RÍKTIT num fôlego só. Aí ergue uma plaquinha minúscula com um MÊ engolido, do tamanho de um grão de arroz. Discordar em sueco é isso.",
+      "cena": {
+        "descricao": "Em cima da mesa oval de reunião, um texugo de patins desliza pra trás numa faixa de tapete azul, erguendo uma plaquinha minúscula.",
+        "partes": [
+          "mesa oval de madeira clara (o chão da cena)",
+          "faixa de tapete azul-petróleo",
+          "patins (2 caixinhas brancas com toros pretos)",
+          "corpo do texugo cinza-prata, inclinado pra trás",
+          "garras dianteiras longas e claras",
+          "cabeça branca com duas faixas pretas dos olhos ao focinho",
+          "orelhinhas redondas baixas",
+          "gravata-borboleta vermelha",
+          "plaquinha do MÊ minúscula erguida",
+          "fumacinha das rodinhas"
+        ]
+      }
+    },
+    {
+      "id": "vilket-spar-gar-taget-fran",
+      "elenco": "urso hibernando + doninha vilã",
+      "ponte_sonora": "VIL QUE 'SPÔR-GÔR', TÔ-GUET FRÔN! (7 sílabas; K de 'vilket' é DURO e o -t some no S seguinte; SPÔR-GÔR com Ô FECHADO nos dois e R BRANDO; TÔ-GUET guarda o T final — 'tåget', não 'tåge'; FRÔN com Ô FECHADO e N batido na língua, SEM a nasal de 'fronha')",
+      "historia": "Uma doninha VIL, comprida feito um cachecol, apagou o número de todos os trilhos com um rolinho de tinta. Do trilho do meio vem um ronco em dois tempos — SPÔR... GÔR... — de um urso hibernando em cima de uma FRÔnha gigante, com um trenzinho TÔ-GUET apitando na barriga dele sem sair do lugar. Regra do pátio: o trem parte do trilho onde o urso ronca mais alto.",
+      "cena": {
+        "descricao": "Pátio de manobras: três trilhos em leque num leito de brita, urso hibernando sobre uma fronha gigante no trilho do meio, trenzinho vermelho apitando na barriga dele, doninha comprida de antifaz em pé num cone de sinalização.",
+        "partes": [
+          "leito de brita cinza-chumbo",
+          "trio de trilhos prata em leque",
+          "cone de sinalização laranja",
+          "fronha gigante branco-creme deitada",
+          "corpo do urso caramelo deitado",
+          "cabeça do urso com boca aberta pra cima",
+          "dois puffs de ronco (SPÔR e GÔR)",
+          "trenzinho vermelho na barriga do urso",
+          "doninha marrom comprida em pé no cone, antifaz escuro",
+          "rolinho de tinta preta na pata dela"
+        ]
+      }
+    },
+    {
+      "id": "ar-taget-forsenat-eller-installt",
+      "elenco": "lhama de óculos + vagão-teatro",
+      "ponte_sonora": "É TÔ-GUET, FÖ-XÊ-NAT... É-LER, ÍNS-TELT! (10 sílabas; TÔ-GUET com o T final de pé; FÖ é boca de Ô soltando Ê, e o 'rs' de 'försenat' escorrega pra X de xarope — FÖ-XÊ-NAT, com Ê FECHADO e o T final; 'eller' = É-LER com a tônica no É; 'inställt' tem tônica no ÍN — ÍNS-telt: o É de -telt é ABERTO mas ÁTONO, nunca 'ins-TÉLT')",
+      "historia": "O trem TÔ-GUET não vem, e num vagão azul parado alguém pregou um palquinho de teatro. Um sopro FÖ abre a cortina e entra a LHAMA de óculos fantasiada de XENA, com um T de tábua pregado no escudo: FÖ-XÊ-NAT. Se o trem está só atrasado, ela não explica nada, só empurra um livro na sua cara dizendo É-LER até a ampulheta virar. Se foi cancelado, ela puxa com os dentes a alavanca do disjuntor e o palco apaga: ÍNS-TELT!",
+      "cena": {
+        "descricao": "Vagão-teatro: vagão azul-petróleo parado num tablado, palquinho dourado de cortinas vermelhas nas costas. A lhama de óculos e escudo lê em cena ao lado de uma ampulheta; na lateral espera a alavanca vermelha do disjuntor.",
+        "partes": [
+          "tablado cinza-azulado",
+          "vagão azul-petróleo com rodas",
+          "palquinho dourado no topo do vagão",
+          "duas cortinas vermelho-carmim",
+          "sopro FÖ (esfera translúcida empurrando a cortina)",
+          "lhama creme de pescoço comprido, de pé no palco",
+          "óculos redondos escuros na cara dela",
+          "escudo dourado com um T de tábua pregado",
+          "livro aberto verde-musgo nas patas",
+          "ampulheta de areia âmbar e alavanca vermelha na lateral"
+        ]
+      }
+    },
+    {
+      "id": "var-kan-jag-kopa-biljett",
+      "elenco": "pelicano pescador no cais",
+      "ponte_sonora": "VAR CA-NIÁ, XÊPA BIL-IÉT? (7 sílabas; VAR = a VARA sem o -a, R brando; CA-NIÁ emenda 'kan jag' sem nasalizar; XÊPA = a xepa da feira com bico — o 'kö' é ch tcheco; BIL-IÉT com lj = i de ioga e peso na última)",
+      "historia": "Você quer comprar bilhete e o cais só tem caixote de peixe. Um pelicano de bico-bolsa te empresta a VARA fincada no cano, você fisga gritando CA-NIÁ!, e do caixote da XEPA sobe no anzol um BIL-IÉT amarelo do tamanho de um tapete, pingando salmoura — o pelicano abre a bolsa do bico e engole o bilhete inteiro pra guardar. Aqui bilhete não se compra, se pesca.",
+      "cena": {
+        "descricao": "Cais de tábuas com caixote de feira: uma vara fincada num cano ergue, em vez de peixe, um bilhete amarelo gigante pingando; o pelicano puxa a linha com a bolsa do bico aberta.",
+        "partes": [
+          "tábuas do cais, madeira clara",
+          "caixote de ripas verde desbotado",
+          "três peixes prateados no gelo",
+          "cano galvanizado fincado em pé",
+          "vara de pescar bege-mel inclinada",
+          "linha e anzol",
+          "bilhete gigante amarelo-mostarda pingando",
+          "corpo do pelicano branco-acinzentado em pé",
+          "bico laranja comprido com a bolsa inflada",
+          "pé palmado segurando a linha"
+        ]
+      }
+    },
+    {
+      "id": "hur-kommer-jag-till",
+      "elenco": "gata laranja gigante (a própria rua)",
+      "ponte_sonora": "RÜR CÓ-MER IÁ TIL STÚR-GA-TAN (8 sílabas; RÜR = 'rural' com bico de pato e R soprado — esse sopro é o h de 'hur'; 'kommer' tem O ABERTO, tônica no CÓ e guarda o -R BRANDO: CÓ-mer, nunca 'CÔ' nem 'co-MER'; STÚR = 'tour' com S chiado, U FECHADO; em sueco 'gata' é RUA)",
+      "historia": "Você para na calçada com o endereço na mão e o quarteirão inteiro ronrona: RÜÜR... Deitada de ponta a ponta, uma gata laranja do tamanho do quarteirão é a Storgatan em pessoa: a STÚR GATA, a rua-gata gigante. Você ergue a latinha e chama pra CÓ-MER — a força cai no CÓ, bem aberto —, ela responde IÁ! e levanta o rabo, que se enrola num til dourado apontando o caminho.",
+      "cena": {
+        "descricao": "Quarteirão sueco de paralelepípedo onde a rua É uma gata laranja gigante deitada; o rabo sobe atrás enrolado em til apontando a direção.",
+        "partes": [
+          "quarteirão cinza-azulado com meio-fio bege",
+          "duas fachadas (ocre e vermelho-falun) com telhados",
+          "corpo da gata laranja listrado atravessando a cena",
+          "quatro patas dobradas com almofadinhas",
+          "cabeça com orelhas e olhos verdes",
+          "ondas de ronronar (3 toros translúcidos)",
+          "rabo-til dourado erguido atrás",
+          "você com mochila e papelzinho na mão",
+          "latinha prateada erguida"
+        ]
+      }
+    },
+    {
+      "id": "hoger-eller-vanster",
+      "elenco": "régua gigante + livro + macaco de braço comprido",
+      "ponte_sonora": "É DÊ TIL RRÊ-GUER, É-LER, TIL VÉNS-TER (10 sílabas; RRÊ-GUER = a RÉGUA à carioca — esse RR JÁ é o h de 'höger' — mas com BICO: o É FECHA e arredonda em ö; sem o bico vira 'häger', que é GARÇA; o -guer termina em R BRANDO; É-LER com tônica no É; VÉNS-TER = 'vens ter', ä bem aberto, tônica no VÉNS)",
+      "historia": "Na bifurcação, uma RÉGUA amarela do tamanho de um poste está fincada apontando para a DIREITA — mas faça bico ao dizer RRÊ-GUER, senão vira 'häger', que é garça. No meio da forquilha, um livro aberto do tamanho de uma porta cobra: É-LER! E na ESQUERDA um macaco de braço comprido estica o braço de galho em galho e chama com a mão em concha, em português de novela antiga: VENS TER comigo!",
+      "cena": {
+        "descricao": "Bifurcação em Y de uma trilha: régua amarela gigante fincada no ramo da direita, livro aberto gigante no vértice, macaco de braços compridos pendurado no ramo da esquerda chamando com a mão.",
+        "partes": [
+          "clareira em Y de terra batida",
+          "três arbustos verde-musgo nas bordas",
+          "pedra cinza no vértice",
+          "você com mochila, braços abertos em dúvida",
+          "livro gigante aberto em V, lombada azul",
+          "régua amarela gigante fincada e inclinada",
+          "galho torto atravessando o ramo esquerdo",
+          "macaco marrom pendurado pelo rabo",
+          "braço comprido esticado até seu ombro, mão em concha"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-ont-i-magen",
+      "elenco": "javali + barriga-balão",
+      "ponte_sonora": "IÁ RRÁR ÓN-TI MÁ-GUEN (6 sílabas; RRÁR = o 'há' do português soprado, com R BRANDO no fim — sem esse R sobra 'ha', outro verbo; ÓN-TI com Ó ABERTO e o N batido na língua, não a nasal engolida de 'ontem'; MÁ-GUEN com GU de GUERRA — o g de 'magen' é DURO, jamais 'ma-jem' — e N final articulado, não 'guem')",
+      "historia": "Ontem um javali te ofereceu jantar: as sobras que ele garimpou na lixeira, focinho enfiado até o fundo, revirando tudo como quem fuça raiz. Ele solta a risada soprada RRÁR! Hoje a sua barriga é um balão rosa do tamanho de um sofá, entupido do que você comeu ÓNTI, e ela geme: não me MÁ-GUEN!",
+      "cena": {
+        "descricao": "Cozinha à noite: lixeira tombada, folha do calendário de ontem no chão, javali culpado rindo de lado com o focinho sujo, e você com uma barriga-balão rosa gigante cercada de anéis de dor.",
+        "partes": [
+          "piso xadrez branco-e-verde-menta",
+          "lixeira metálica tombada com restos escapando",
+          "folha de ontem no chão com X vermelho",
+          "javali marrom-escuro de cerdas eriçadas",
+          "focinho achatado sujo e duas presas brancas curvas",
+          "suas pernas azul-escuras com sapatos",
+          "barriga-balão rosa gigante",
+          "mãos apertando as laterais da barriga",
+          "três anéis de dor vermelhos concêntricos",
+          "cabeça esverdeada com sobrancelhas caídas"
+        ]
+      }
+    },
+    {
+      "id": "det-gor-ont-har",
+      "elenco": "marmota de jaleco + dedo de espuma",
+      "ponte_sonora": "DÊ! IÖR! ÓNT! RRÉR! (4 sílabas, tônicas em ÓNT e RRÉR; IÖR = 'gör' com G virando I de ioga, boca de Ô + língua de Ê e R BRANDO — se o I virar RR vira 'hör' (ouve), se virar K vira 'kör' (dirige); ÓNT com Ó ABERTO e N na língua, sem nasal; RRÉR = HERA sem o -a, mas o H NÃO é mudo: sopra como RR carioca, e o É é bem aberto; se fechar o É em Ô vira 'hår' (cabelo))",
+      "historia": "No consultório, a marmota de jaleco manda DÊ! e gira com as duas patas a manivela enferrujada — iiiÖR, iiiÖR — que baixa um DEDO de espuma vermelha do tamanho de um braço. O dedo cutuca o alvo-tambor e ele responde ÓNT!, tão fundo que descola a folhinha de ONTEM e ela sai voando. No ponto exato do cutucão brota na hora uma HERA verdinha — e o H dela sopra: RRÉR.",
+      "cena": {
+        "descricao": "Consultório de brinquedo: uma marmota gorducha de jaleco gira uma manivela rangente que desce um dedão de espuma sobre um alvo-tambor; o dedo cutuca, a folhinha de ONTEM voa e uma hera brota no ponto apontado.",
+        "partes": [
+          "piso verde-menta com aro branco",
+          "pedestal creme tipo banquinho de exame",
+          "alvo-tambor de anéis vermelho e branco",
+          "manivela enferrujada (toro laranja + cabo)",
+          "braço articulado cinza com esfera-cotovelo",
+          "dedo de espuma vermelho gigante na diagonal",
+          "marmota gorducha marrom-dourada de jaleco branco",
+          "dois dentinhos da frente e orelhas pequenas e baixas",
+          "folhinha de ONTEM voando",
+          "hera verdinha brotando no ponto cutucado"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-allergisk-mot-penicillin",
+      "elenco": "vaca-enfermeira + seringa gigante",
+      "ponte_sonora": "IÁ É A-LÉR-GUISK, MUT PENICILÍN! (10 sílabas; a tônica de 'allergisk' cai no LÉR, como em 'energisk' — nunca 'aler-GUÍSK'; GUISK com G DURO de 'guitarra', jamais 'jisk', tudo numa sílaba só — é o esguicho da seringa; MUT = 'mot' com O soando U FECHADO e T seco; PENICILÍN com tônica no FIM, sem o -a)",
+      "historia": "Você levanta o braço e mal começa o A-LÉR… — a força cai bem no LÉR — quando a seringa gigante já te esguicha na cara: GUISK! Aí a vaca-enfermeira baixa os chifres e mete uma cabeçada MUT, contra!, no vidro de PENICILÍN, que estoura numa nuvem de bolhas rosa. Uma pulseira vermelha de alerta desce do teto e trava sozinha no seu pulso erguido.",
+      "cena": {
+        "descricao": "Sala de curativos: uma seringa gigante esguicha GUISK, uma vaca-enfermeira cabeceia o vidro âmbar de penicilina até estourar em bolhas rosa, e uma pulseira de alerta desce no pulso do rapaz.",
+        "partes": [
+          "piso branco-gelo com faixa azul em arco",
+          "carrinho de enfermagem branco com rodízios",
+          "vidro âmbar de penicilina com tampa metálica",
+          "rapaz de braço erguido, tronco verde-água",
+          "seringa gigante na diagonal com agulha",
+          "jato GUISK (5 esferas azuis em arco)",
+          "vaca-enfermeira branca com manchas, chifres e touca",
+          "seis bolhas rosa translúcidas",
+          "pulseira de alerta vermelha descendo"
+        ]
+      }
+    },
+    {
+      "id": "nagot-receptfritt",
+      "elenco": "flamingo farmacêutico + frigideira",
+      "ponte_sonora": "RRÁR-NI NÔ-TRE-SÉPT-FRIT, MUT DÊ RRÉR? (9 sílabas, tônicas em NÔT, SÉPT e RRÉR; RRÁR-NI = a ÁRNIca sem o -ca, com h SOPRADO na frente e R brando; NÔT com Ô BEM FECHADO — se arredondar em ö vira 'nöt', que é NOZ; emende NÔT + RE num fôlego, 'NÔ-TRE', pro r de 'recept' sair BRANDO e não estourar em RR carioca; FRIT = FRITA sem o -a; MUT com O soando U; RRÉR = 'här' com o h soprado)",
+      "historia": "No apotek, o flamingo farmacêutico enfia o pescoço rosa por cima do balcão inteiro, ergue um tubo de ÁRNIca — RRÁR-NI, com o h soprado na frente — e pergunta NÔT?. Sem esperar resposta, ele joga a sua RECEITA na frigideira do fogareiro — NÔ-TRE-SÉPT-FRIT!, chiando e enrolando — porque para isso aqui não precisa de receita nenhuma. Da fritura salta uma drágea gorducha, que ele encosta com a ponta do bico no seu nariz inchado: MUT DÊ RRÉR.",
+      "cena": {
+        "descricao": "Balcão-cozinha da farmácia: um flamingo de gorro branco curva o pescoço comprido por cima do balcão e frita a receita numa frigideira sobre o fogareiro; da fritura salta uma drágea que ele encosta no nariz inchado do freguês.",
+        "partes": [
+          "piso branco com losangos verde-menta",
+          "balcão de madeira clara atravessando a cena",
+          "fogareiro cinza com chama azul emissiva",
+          "frigideira preta rasa com cabo",
+          "receita branca enrolando na frigideira",
+          "chiado da fritura (4 esferas brancas subindo)",
+          "corpo rosa do flamingo em pernas finas atrás do balcão",
+          "pescoço comprido curvado em S por cima do balcão",
+          "cabeça com gorro branco de farmacêutico e bico preto-e-rosa",
+          "drágea branca-e-vermelha encostando no nariz-esfera vermelho do freguês"
+        ]
+      }
+    },
+    {
+      "id": "det-ar-akut",
+      "elenco": "jacaré-enfermeiro + telefonão 1177",
+      "ponte_sonora": "DÊ É A CÜT! IÁ BE-RRÖ-VER, CÓ-MA IN, I-DÁG! (13 sílabas, tônicas em CÜT, RRÖ, CÓ e DÁG; 'det' = DÊ fechado e curto; 'akut' com U de BICO quase Ü e T seco no fim; 'behöver' = be-RRÖ-ver, o RR inicial é só o h soprado e o Ö é lábios de Ô com língua de Ê, nunca um Ô puro; o R de -ver é BRANDO; 'komma' com Ó ABERTO como em 'cópia')",
+      "historia": "Você liga pro 1177 e quem atende, de dentro do telefonão vermelho, é um jacaré de touca de enfermeiro. Ele cospe pela fenda uma fita de senha com três semanas de fila; você aponta e berra DÊ É A CÜT! — e as mandíbulas dele fecham num estalo seco, CÜT!, cortando a fita da fila no meio. Aí você BE-RRÖ-VER que precisa ver o doutor, e ele te empurra pra dentro: CÓ-MA IN, I-DÁG.",
+      "cena": {
+        "descricao": "A recepção da vårdcentral é um telefonão vermelho do 1177 deitado no chão; do monofone emerge um jacaré-enfermeiro que abocanha a fita de senha quilométrica e a corta em duas, sob a cruz AKUT acesa.",
+        "partes": [
+          "piso verde-menta com anel branco (a fila)",
+          "telefonão vermelho gigante deitado",
+          "monofone creme no berço",
+          "fita de senha em zigue-zague pelo chão",
+          "corpo verde-oliva do jacaré saindo do monofone",
+          "dorso de escamas em cones baixos",
+          "touca branca com cruz vermelha e olhos saltados",
+          "mandíbulas escancaradas com dentes brancos mordendo a fita (o acento da cena)",
+          "fita cortada em duas metades",
+          "cruz AKUT emissiva flutuando"
+        ]
+      }
+    },
+    {
+      "id": "hur-bokar-man-tvattstugan",
+      "elenco": "dona Carman + lençol-fantasma",
+      "ponte_sonora": "RRÜR! BÚ, CARMAN! TVÉT-STÜ-GAN? (7 sílabas, tônicas em BÚ e TVÉT; 'hur' = RRÜR: o RR inicial é só o h soprado, a vogal é Ü DE BICO (jamais o U chapado de 'urso') e o R final é BRANDO; 'bokar' = BÚ com U bem fechado e longo, o 'car' fraquinho com R BRANDO; 'man' seco e não-nasal; 'tvätt' é um golpe só, T e V colados, É ABERTO; STÜ com bico)",
+      "historia": "Primeira semana no prédio: você abre a porta da lavanderia e a máquina ruge RRÜR feito bicho preso. Um lençol ainda quente salta da escotilha gritando BÚ! e você berra por socorro: CARMAN! — a zeladora surge, estala a toalha molhada no ar, TVÉT!, e aponta com ela para o quadro de reservas.",
+      "cena": {
+        "descricao": "Dentro de uma stuga vermelha em miniatura: a máquina de lavar ruge com o tambor girando, um lençol-fantasma salta da escotilha e dona Carman estala a toalha diante do quadro de reservas com pinos.",
+        "partes": [
+          "piso de ladrilho cinza-azulado com ralo",
+          "paredes vermelho-falun em U",
+          "telhado branco em duas águas com chaminé",
+          "máquina de lavar branca com escotilha cromada",
+          "tambor girando emissivo atrás do vidro",
+          "cesto de roupa com espuma transbordando",
+          "lençol-fantasma saltando da escotilha",
+          "dona Carman de avental amarelo e coque",
+          "toalha azul-listrada estalando em diagonal",
+          "quadro de reservas com pinos, um dourado"
+        ]
+      }
+    },
+    {
+      "id": "kan-ni-dampa-er-lite",
+      "elenco": "polvo baterista + travesseiro",
+      "ponte_sonora": "CAN-NI: DÉM-PA... ÊR-LÍTE! (7 sílabas, tônicas em DÉM e LÍ; 'kan' é C+A+N como em 'cana', jamais o glide de 'quando'; DÉM-PA é o batidão do bumbo sendo abafado, com É ABERTO e começando em D — nunca 'TAM-pa'; 'er lite' cola num sopro, R brando derretendo no L; 'lite' se lê LÍ-te, nunca 'láite')",
+      "historia": "O vizinho de cima é um polvo baterista de oito braços que solta DÉM-PÁ, DÉM-PÁ até as três da manhã. Você sobe de pijama com um travesseiro debaixo do braço e pede: CAN-NI... DÉM-PA! — e enfia o travesseiro dentro do bumbo, que engole o DÉM-PÁ num puf abafado. O medidor de volume despenca até o tracinho verde: ÊR-LÍTE, o som na versão light.",
+      "cena": {
+        "descricao": "Na sala do vizinho de cima, um polvo roxo de oito braços toca uma bateria gigante até um travesseiro ser enfiado na boca do bumbo e o medidor de volume desabar do vermelho para o traço LITE.",
+        "partes": [
+          "laje de tacos de madeira mel",
+          "tapete azul-petróleo da bateria",
+          "bumbo creme deitado com aros cromados",
+          "caixa no tripé",
+          "banquinho vermelho",
+          "polvo roxo (sólido de revolução) com olhos grandes",
+          "oito tentáculos em leque com ventosas",
+          "oito baquetas congeladas no ar",
+          "travesseiro branco entrando na boca do bumbo",
+          "medidor de volume em cubinhos do vermelho ao verde"
+        ]
+      }
+    },
+    {
+      "id": "var-slanger-man-kartong",
+      "elenco": "guaxinim manco + estilingue",
+      "ponte_sonora": "VÁR! SLÉNGUER MANCA-TÓNG! (6 sílabas, picos em SLÉN e TÓNG; VÁR é 'var' = onde, com R BRANDO de 'vara' — nunca o R raspado de fim de sílaba, e nunca VÁ pelado, que já vira 'vad' = o quê; SLÉNGUER com É bem aberto e NG só nasal, sem estalar o G; MANCA cobre 'man kar' numa tacada, porque o R de 'kar' derrete dentro do T seguinte; TÓNG com Ó aberto nasalado, sem G no fim)",
+      "historia": "Você está no återvinningsrum com a caixa na mão, sem ideia de qual container é o certo, e só consegue apontar e perguntar: VÁR?. Do meio das caixas sai SLÉNGUER, o guaxinim que MANCA de uma perna e mora ali há anos. Ele arranca o papelão da sua mão, monta num estilingue gigante e dispara: TÓNG! — a caixa bate no fundo do container azul.",
+      "cena": {
+        "descricao": "Sala de reciclagem: piso de concreto com faixa amarela, container azul do papelão ao fundo e, na frente, o guaxinim manco apoiado na muleta disparando uma caixa com um estilingue gigante.",
+        "partes": [
+          "piso de concreto com faixa amarela",
+          "container azul-sueco com rodízios e fenda",
+          "pilha de caixas achatadas encostadas",
+          "estilingue gigante em Y com elástico vermelho",
+          "guaxinim com máscara e cauda listrada",
+          "muleta de madeira e pata direita mais curta",
+          "caixa de papelão em voo",
+          "anel de impacto TÓNG na boca do container",
+          "placa branca na parede com seta azul"
+        ]
+      }
+    },
+    {
+      "id": "jag-maste-gora-en-felanmalan",
+      "elenco": "coruja-zeladora IÔRA + cano",
+      "ponte_sonora": "IÁ MÔS-TE IÔRA EN FÊ-LAN-MÉ-LAN (10 sílabas, picos em MÔS, IÔ e FÊ; 'måste' = MÔS-TE, com Ô FECHADO de 'avô' e um -TE fraquinho no fim: é 'mostre' SEM O R — se sair MOS-TRA você inventa uma palavra que não existe em sueco; IÔRA começa com I de IOGA, jamais G duro, e o Ô é dito com BICO, que é o ö; FÊ-LAN-MÉ-LAN nas quatro batidas, FÊ fechado, MÉ bem aberto e nenhum dos dois LAN nasalado)",
+      "historia": "Sua torneira virou chafariz e melou o corredor, mas na Suécia nada se conserta sozinho: você precisa MOSTRAR a poça pra IÔRA, a coruja-zeladora empoleirada no cano — só que o grito é MÔS-TE!, sem o R (e se você disser GÔ-ra em vez de IÔRA ela finge que não é com ela). Ela examina a poça, ergue a chave inglesa e bate duas vezes no cano: FÊ-LAN! MÉ-LAN! Na segunda batida o papel do chamado sai da parede já carimbado.",
+      "cena": {
+        "descricao": "Corredor com uma poça brilhando: a pia despeja um jato em arco e, no cano que atravessa o teto, a coruja-zeladora de molho de chaves bate duas vezes com a chave inglesa; da parede sai o papel do chamado carimbado.",
+        "partes": [
+          "piso do corredor com poça azul-translúcida",
+          "pia branca com torneira curvada e jato em arco",
+          "cano cinza atravessando a cena com braçadeiras",
+          "coruja marrom-tabaco com olhos brancos e sobrancelhas bravas",
+          "molho de chaves dourado no peito",
+          "chave inglesa azul-aço erguida",
+          "FÊ-LAN (par de toros brancos no cano, à esquerda)",
+          "MÉ-LAN (par de toros menores, à direita)",
+          "papel do chamado saindo da parede com carimbo vermelho"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-last-mig-ute",
+      "elenco": "náufrago de meias + gaivota",
+      "ponte_sonora": "IÁ RRÁR: LÔST, MÊI ÜTE! (6 sílabas, picos em LÔST e Ü; RRÁR = 'har' com h soprado tipo RR carioca e R final brando; LÔST NUMA SÍLABA SÓ, como o seriado LOST, com Ô BEM FECHADO e sem 'i' no fim; MÊI = 'mig'; Ü-te com lábios de u e língua de i)",
+      "historia": "Você sai de meias pra pegar a correspondência, a porta sueca fecha sozinha — RRÁR! — e pronto: virou o LOST da série, náufrago numa ilha do tamanho do capacho, com um cadeado gigante brilhando na porta. A gaivota rouba a MEIA que você tirou pra fazer bandeira e voa com a chave no bico, fora de alcance.",
+      "cena": {
+        "descricao": "O corredor virou oceano: no meio boia uma ilha do tamanho de um capacho, com a porta do apartamento plantada sozinha na areia, trancada por um cadeado gigante.",
+        "partes": [
+          "mar de linóleo azul-petróleo com espuma",
+          "ilha-capacho cor de areia",
+          "porta bege plantada na areia com maçaneta dourada",
+          "cadeado cromado gigante fechado na maçaneta",
+          "náufrago laranja de meias brancas, braços erguidos",
+          "meia-bandeira listrada num mastro fincado",
+          "coqueiro com cocos",
+          "gaivota branca voando com a chave no bico",
+          "boia laranja-e-branca com lábios em bico"
+        ]
+      }
+    },
+    {
+      "id": "vad-ar-klockan",
+      "elenco": "caranguejo-relojoeiro + mergulhador",
+      "ponte_sonora": "VÁ! É CLÓ-CAN! (4 sílabas, tônica única em CLÓ com Ó BEM ABERTO. Nenhum R na frase inteira, nem brando nem carioca. 'vad' = VÁ com o d mudo; 'är' = É aberto e curto; 'klockan' = CLÓ-CAN, o estalo seco de uma garra fechando)",
+      "historia": "Você sai do mar e não faz ideia da hora: na praia só há um caranguejo empoleirado numa pedra, e ele responde perguntas batendo a garra desproporcional — CLÓ-CAN! CLÓ-CAN! — uma batida por hora. Enquanto você conta os estalos, ele agita a bandeirinha verde e grita VÁ! É…?, porque o seu barco já está saindo.",
+      "cena": {
+        "descricao": "Praia ao entardecer: o caranguejo-relojoeiro na pedra com a garra erguida em pleno estalo e a bandeirinha verde na garrinha; o mergulhador encharcado à frente, ainda soltando bolhas. Nenhum mostrador ou ponteiro na cena — a hora é contada em estalos.",
+        "partes": [
+          "praia de areia molhada bege-acinzentada",
+          "lâmina de mar turquesa com espuma na borda",
+          "pedra chata cinza-chumbo",
+          "corpo do caranguejo laranja-terra com olhinhos em talo",
+          "seis perninhas anguladas",
+          "garra gigante desproporcional coral em pinça semiaberta",
+          "bandeirinha verde de largada na garrinha",
+          "mergulhador azul-marinho com capacete de vidro e nadadeiras",
+          "trio de bolhas subindo",
+          "ponto de interrogação dourado flutuando"
+        ]
+      }
+    },
+    {
+      "id": "ska-vi-saga-imorgon-klockan-tre",
+      "elenco": "ouriço sonolento + tucano trombonista",
+      "ponte_sonora": "SKA-VI SÉIA, IMÓRON CLÓ-CAN TRÊ? (10 sílabas, tônicas em SÉ, MÓ, CLÓ e TRÊ; 'SKA' colado, sem 'e' na frente, é o ritmo jamaicano; 'säga' vira SÉIA como 'ceia' mas com É bem aberto e I de ioga; 'imorgon' = i-MÓ-ron com R BRANDO, jamais RR; 'tre' = TRÊ, sem o S)",
+      "historia": "Na Suécia ninguém marca hora falando alto: chega uma bandinha de SKA e o tucano trombonista solta as duas notas do convite pelo bico — SKA-VI! O bico dele É a corneta, um funil laranja que ele aponta pra cima. Serve-se então uma CEIA fumegante na mesa, e o convidado brota do banco: o IMÓRON, um ouriço de touca de dormir que só acorda amanhã. Ele fareja a tigela, aceita o combinado e finca três cenouras em fila na toalha — CLÓ-CAN TRÊ.",
+      "cena": {
+        "descricao": "Mesa de piquenique ao ar livre: tigela de ceia fumegante no centro, o ouriço sonolento de touca listrada erguendo o focinho para o vapor, o tucano trombonista em cima da mesa com o bico-corneta apontado pra cima e três cenouras fincadas em fila. Nada de relógio: o horário é uma fila de cenouras.",
+        "partes": [
+          "tampo de mesa de piquenique, madeira clara",
+          "toalha xadrez azul-claro e branco",
+          "tigela da ceia, cerâmica creme com friso azul",
+          "vapor da ceia (3 esferas subindo em espiral)",
+          "corpo do ouriço marrom-café com focinho e olhos semicerrados",
+          "espinhos (coroa de cones cinza)",
+          "touca de dormir listrada com pompom",
+          "tucano preto de peito amarelo em pé na mesa",
+          "bico-corneta laranja em funil, boca virada pra cima",
+          "três cenouras laranja fincadas em fila"
+        ]
+      }
+    },
+    {
+      "id": "jag-hamtar-pa-forskolan",
+      "elenco": "elefanta-monitora XU + tromba",
+      "ponte_sonora": "DÊ — É IÁ SOM! RRÉM-TAR PÔ FÖ-XKU-LAN, i-DÁG! (12 sílabas, tônicas em RRÉM, FÖ e DÁG; 'som' com Ó aberto e M de lábios FECHADOS, nunca o 'sõ' nasal do português; o RR de 'hämtar' é só o h soprado e o R do fim é BRANDO; 'på' = PÔ com Ô FECHADO, nunca 'pó'; FÖ é o Ô com bico de beijo; o 'rs' de förskolan vira X chiado MAS O K CONTINUA LÁ: FÖ-XKU-LAN, nunca 'FÖ-XU-LAN')",
+      "historia": "No portão da creche o interfone funciona assim: você DÊ (aperta) o botão e É IÁ SOM — a onda sai antes do dedo sair. Do outro lado atende XU, a elefanta-monitora da FÖ-XKU-LAN (o X vem com um K grudado, é o estalo da tromba engatilhando). Ela dá um PÔ! de pata no chão e estica a tromba por cima do portão: RRÉM-TAR! A tromba enrola a mochila da criança e traz ela inteira pelo ar até você — e a folha do calendário de hoje despenca no chão: i-DÁG!",
+      "cena": {
+        "descricao": "Portão da förskola visto de fora: poste de interfone com o botão vermelho afundado e três anéis de som saindo dele, a elefanta-monitora de boné atrás do muro amarelo, a tromba esticada em arco por cima do portão já enrolada na mochila laranja que voa.",
+        "partes": [
+          "piso de borracha verde-menta",
+          "muro amarelo-mostarda com grade de cilindros",
+          "poste de interfone cinza-aço",
+          "caixa do interfone com botão vermelho afundado",
+          "três anéis de som branco-azulados",
+          "corpo cinza-rosado da elefanta atrás do muro",
+          "orelhas grandes em leque e olhinhos miúdos",
+          "boné azul-petróleo de monitora",
+          "tromba esticada em arco por cima do portão",
+          "mochila laranja enrolada na ponta da tromba, voando"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-tva-barn",
+      "elenco": "pirata no bar do porto + dois morceguinhos",
+      "ponte_sonora": "IÁ! RRÁR! T'VÔO BÁR'N... FÉM, Ó! ÓTA-ÔR! (9 batidas; RRÁR é o 'arrr!' de pirata com o sopro NA FRENTE — o RR inicial é o h de 'har', o A é longo e o R final é BRANDO, nunca raspado; T'VÔO é a palavra VÔO com T colado, UMA sílaba só, Ô FECHADO; BÁR'N com R puxado à caipira e N obrigatório — 'bar' sozinho é outra palavra; FÉM com É bem aberto e M de lábios fechados, sem nasalar; ÓTA com å CURTO e ABERTO; ÔR com ô FECHADO e longo, R brando)",
+      "historia": "No bar mais fedido do porto você pergunta ao pirata quantos filhos ele tem. Ele rosna IÁ! RRÁR!, tira o chapéu e dois morceguinhos saem em T'VÔO lá de dentro — são os filhos. Ele bate um FÊMUR com cinco riscos no balcão do BAR'N e grita Ó! apontando pra carta cravada na madeira: o OITO DE OURO. Cinco riscos no osso, oito ouros na carta: as idades da molecada.",
+      "cena": {
+        "descricao": "Balcão de bar do porto: o pirata de boca escancarada num Ó, com um fêmur riscado batido no tampo e uma carta de oito-de-ouro cravada na madeira, enquanto dois morceguinhos roxos saem voando do chapéu dele.",
+        "partes": [
+          "assoalho de tábuas marrom-escuras",
+          "balcão de madeira mel comprido",
+          "placa BAR'N pendurada na frente do balcão",
+          "fêmur branco com cinco riscos sobre o tampo",
+          "carta oito-de-ouro cravada e inclinada",
+          "tronco do pirata listrado vermelho",
+          "cabeça bege com boca escancarada no Ó (toro preto)",
+          "chapéu de pirata preto largo com a aba levantada",
+          "dois morceguinhos roxos subindo do chapéu",
+          "quatro asas de morcego abertas em leque"
+        ]
+      }
+    },
+    {
+      "id": "jag-tycker-att-det-later-bra",
+      "elenco": "louco de terno + diapasão em brasa",
+      "ponte_sonora": "IÁ! TÜ-quer AT-DÊ... LÔ-TER BRÁ! (8 batidas, força no TÜ e no LÔ; o gancho é o dedo apontado ('TU quer?!'), mas a vogal é o y sueco: TÜ com BICO DE PATO, nunca o U chapado de 'tu', e o 'quer' apagadinho — se sair 'TÉN-ker' você troca de palavra, pois 'tänker' é planejar; LÔ-TER são as primeiras sílabas de LOUCO + TERNO, LÔ com ô FECHADO; BRÁ como o BRÁ de BRASA, com R brando)",
+      "historia": "Você propõe o restaurante das sete e quem julga é o LOUCO DE TERNO da sala de reunião. Ele aponta o dedo na sua cara — IÁ! TÜ QUER?! — e, em vez de responder, bate um DIAPASÃO com AT-DÊ gravado no cabo na própria testa. O garfo solta uma nota tão perfeita que as duas pontas pegam BRÁSA. Se vibra bonito desse jeito, soa bem.",
+      "cena": {
+        "descricao": "Sala de reunião: um sujeito de terno cinza e cabelo espetado aponta o dedo para você com uma mão e, com a outra, ergue um diapasão vibrando com as pontas em brasa; a proposta em papel largada na mesa.",
+        "partes": [
+          "piso de tacos bege",
+          "mesa baixa de madeira mel",
+          "papel da proposta sobre a mesa",
+          "corpo de terno cinza-chumbo",
+          "gravata vermelha",
+          "cabeça bege",
+          "cabelo espetado (3 cones brancos)",
+          "braço apontando para o espectador",
+          "diapasão prateado erguido com AT-DÊ gravado no cabo",
+          "duas brasas laranja nas pontas do diapasão"
+        ]
+      }
+    },
+    {
+      "id": "ja-precis-det-tycker-jag-ocksa",
+      "elenco": "capivara ourives mineira + balança de precisão",
+      "ponte_sonora": "IÁ! PRECIS'! DÊ TÜ-ker IÁ... ÓK, SÔ! (9 batidas; PRECIS' é PRECISO com o O arrancado — a tônica cai na 2ª sílaba, igual ao sueco, e 'preciso' já significa exato; o miolo DÊ TÜ-ker IÁ é a ordem invertida, com o TÜ de bico, fraco e rápido; ÓK-SÔ é 'ÓK, SÔ!' mineiro num fôlego — o primeiro é Ó ABERTO e curto, o mesmo o de 'klockan', e o segundo é o Ô FECHADO do 'sô'; OK monossílabo, nunca 'ôkêi')",
+      "historia": "Alguém no fika solta uma opinião e você concorda na hora. A CAPIVARA OURIVES mineira não discute: arranca a opinião do colega e a sua, duas bolinhas douradas idênticas, e joga uma em cada prato da BALANÇA DE PRECIS(O). O travessão para no nível EXATO, sem um fio de diferença. Aí ela ergue o polegar, morde um pão de queijo e sentencia: ÓK, SÔ!",
+      "cena": {
+        "descricao": "Bancada de ourives: uma balança de precisão com os dois pratos exatamente no mesmo nível, uma bolinha dourada idêntica em cada um, e uma capivara de avental erguendo o polegar com um pão de queijo na outra pata.",
+        "partes": [
+          "piso de ladrilho creme",
+          "bancada de madeira escura",
+          "coluna prateada da balança sobre disco",
+          "travessão perfeitamente horizontal",
+          "dois pratinhos prateados pendurados",
+          "duas opiniões (esferas douradas idênticas)",
+          "corpo marrom-avermelhado da capivara com avental cinza",
+          "cabeça retangular com focinho chato e orelhinhas",
+          "pata com polegar para cima",
+          "pão de queijo dourado na outra pata"
+        ]
+      }
+    },
+    {
+      "id": "vad-kul-att-hora",
+      "elenco": "arara turquesa + corneta dourada",
+      "ponte_sonora": "VÁ, CÜL! AT-RRÖ-RA! (5 sílabas, tônicas em CÜL e RRÖ; CÜL = o 'cool' do inglês com LÁBIOS EM BICO DE BEIJO — é o Ü; de boca aberta vira 'kål', que é repolho; AT-RRÖ-RA = 'arara' com o A virado em bico, e o RR soprado é o h de höra — sem ele sobra 'öra' (orelha) ou 'röra' (mexer))",
+      "historia": "Você solta a boa notícia e a arara turquesa fecha o bico num bico de beijo e guincha VÁ, CÜL! tão forte que decola do poleiro. A notícia cai dentro da corneta dourada gigante — a orelha dela — e a arara devolve tudo repetindo AT-RRÖ-RA! AT-RRÖ-RA!, porque arara só sabe repetir o que OUVE. Os balões sobem junto e o confete se recusa a cair.",
+      "cena": {
+        "descricao": "Tapete cor de sol: uma arara turquesa de bico apertadinho canta dentro de uma corneta dourada virada pra cima, com asas abertas e balões e confete subindo à volta. TUDO nesta cena sobe.",
+        "partes": [
+          "tapete-sol amarelo (cilindro achatado)",
+          "toco-poleiro marrom-claro",
+          "corneta dourada em funil, boca virada pra cima",
+          "corpo da arara turquesa",
+          "asas abertas pra cima (amarela e azul)",
+          "cabeça turquesa",
+          "bico em bico de beijo (2 cones laranja ponta com ponta)",
+          "crista de penas rosa e laranja",
+          "três balões subindo (rosa, laranja, verde-limão)",
+          "confete colorido subindo"
+        ]
+      }
+    },
+    {
+      "id": "ah-vad-trakigt",
+      "elenco": "morsa de macacão + kit de ferramentas",
+      "ponte_sonora": "Ô, VÁ TRÔ-KIT! (4 sílabas, tônica em TRÔ; os dois Ô são fechados e de boca BEM aberta e redonda — o oposto exato do bico apertado de CÜL; TRÔ-KIT = 'troque' com um T seco colado no fim, porque o -gt de tråkigt vira só T, sem 'tchi')",
+      "historia": "Você conta a má notícia e a morsa mecânica de macacão abre a boca num Ô enorme, redondo feito pneu. Ela enfia a nadadeira no kit de ferramentas e faz a única coisa que sabe fazer: Ô, VÁ TRÔ-KIT! — e troca a sua estrelinha dourada por uma pedra cinza montada numa mola. A tampa do kit fecha com um T seco e a estrela afunda na poça.",
+      "cena": {
+        "descricao": "Calçada cinza encharcada: uma morsa de macacão senta afundada, boca escancarada num Ô redondo, ao lado de um kit de ferramentas aberto que acabou de trocar uma estrela dourada por uma pedra. TUDO nesta cena afunda e é cinza — o negativo exato da cena da arara.",
+        "partes": [
+          "poça d'água cinza-azulada espelhada",
+          "laje da calçada cinza-chumbo",
+          "kit de ferramentas cinza com a tampa levantada",
+          "chave de boca enferrujada meio pra fora",
+          "pedra cinza montada numa mola",
+          "estrela dourada meio submersa na poça",
+          "corpo da morsa cinza-pardo escorregando pro chão",
+          "cabeça da morsa com olhos pesados",
+          "boca em Ô (toro escuro grande e redondo)",
+          "presas e bigode pingando"
+        ]
+      }
+    },
+    {
+      "id": "det-var-jattegott",
+      "elenco": "yeti à mesa",
+      "ponte_sonora": "DÊ, VÁR! IÉ-TE-GÓT — TAC! (6 sílabas, tônica forte em IÉ; VÁR com R BRANDO à caipira, nunca o R raspado de fim de sílaba; IÉ-TE = YETI dito 'iéte' — e 'jätte' quer dizer GIGANTE mesmo; GÓT = o começo de GÓSTOSO, com g duro de 'gato', ó aberto e T seco)",
+      "historia": "O yeti do andar de cima desceu pro jantar, sentou numa mesinha que bate no joelho dele e raspou a tigela até ela brilhar. Ele aponta pro vazio e grunhe DÊ, VÁR!, revira os olhos, estufa a barriga e ruge IÉ-TE-GÓT! — porque jätte é GIGANTE e gott é GÓSTOSO. Aí bate a pata na tábua: TAC! e o lustre do vizinho cai.",
+      "cena": {
+        "descricao": "Sala com tapete vermelho-tijolo: um yeti branco-azulado gigante acabou de jantar numa mesinha minúscula — tigela raspada, panela tombada, barriga estufada — e levanta a pata pra bater na tábua de madeira.",
+        "partes": [
+          "tapete vermelho-tijolo",
+          "mesinha baixa de madeira mel sobre quatro pés finos",
+          "tigela raspada de madeira clara, brilhando",
+          "panela de ferro tombada com cabo",
+          "tábua de madeira escura",
+          "corpo do yeti branco-azulado gigante",
+          "barriga estufada (esfera grande)",
+          "pata levantada sobre a tábua",
+          "cabeça com olhos revirados de prazer",
+          "língua rosa lambendo o beiço"
+        ]
+      }
+    }
   ]
 }
