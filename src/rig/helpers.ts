@@ -1,6 +1,10 @@
 import * as THREE from 'three'
 import { RoundedBoxGeometry } from 'three-stdlib'
 import type { Channel, ChannelTarget, Ease, Sequence } from './types'
+import { surfaceDetail } from './textures'
+import { rng } from './rand'
+
+export { rng }
 
 export function ch(target: ChannelTarget, from: number, to: number): Channel {
   return { target, from, to }
@@ -22,35 +26,68 @@ export function riseFrom(finalY: number, depth = 1.2): Channel {
   return ch('position.y', finalY - depth, finalY)
 }
 
-/** PRNG determinístico — cenas idênticas em toda montagem/revisão. */
-export function rng(seed: number) {
-  let a = seed >>> 0
-  return () => {
-    a |= 0
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
-
 export interface MatOpts {
   roughness?: number
   metalness?: number
   emissive?: string | number
   emissiveIntensity?: number
   flat?: boolean
+  /** multiplicador do relevo fino de superfície; 0 desliga */
+  detail?: number
+  /** dimensão característica da peça, em unidades de cena (calibra o grão) */
+  size?: number
 }
 
+/**
+ * Material padrão do app. Além da cor, dá a toda superfície a variação de
+ * microrrelevo e de brilho que separa "plástico de brinquedo" de objeto real,
+ * e infere a resposta física a partir dos números que a carta já declara:
+ * metal ganha verniz, superfície muito fosca ganha sheen (tecido/terra).
+ */
 export function mat(color: string | number, opts: MatOpts = {}) {
-  return new THREE.MeshStandardMaterial({
+  const roughness = opts.roughness ?? 0.55
+  const metalness = opts.metalness ?? 0.05
+  const isMetal = metalness >= 0.5
+  const isSoft = !isMetal && roughness >= 0.85
+
+  const params = {
     color,
-    roughness: opts.roughness ?? 0.55,
-    metalness: opts.metalness ?? 0.05,
+    roughness,
+    metalness,
     flatShading: opts.flat ?? false,
     emissive: opts.emissive ?? 0x000000,
     emissiveIntensity: opts.emissiveIntensity ?? (opts.emissive ? 0.6 : 0),
-  })
+  }
+
+  const material = isMetal
+    ? Object.assign(new THREE.MeshPhysicalMaterial(params), {
+        clearcoat: 0.18,
+        clearcoatRoughness: 0.25,
+      })
+    : isSoft
+      ? Object.assign(new THREE.MeshPhysicalMaterial(params), {
+          sheen: 0.3,
+          sheenRoughness: 0.8,
+          sheenColor: new THREE.Color(color),
+        })
+      : new THREE.MeshStandardMaterial(params)
+
+  // Emissores são luz, não superfície: grão neles lê como sujeira.
+  const strength = opts.detail ?? 1
+  if (!opts.emissive && strength > 0) {
+    const { normalMap, roughnessMap } = surfaceDetail(opts.size)
+    material.roughnessMap = roughnessMap
+    // flatShading é escolha de estilo (rochas): relevo fino brigaria com ela
+    if (!opts.flat) {
+      // relevo proporcional à rugosidade: o que é polido é liso, o que é
+      // fosco tem grão — sem isso o plástico brilhante vira arenito
+      const scale = (isMetal ? 0.25 : 0.32) * roughness * strength
+      material.normalMap = normalMap
+      material.normalScale = new THREE.Vector2(scale, scale)
+    }
+  }
+
+  return material
 }
 
 function shaded<T extends THREE.Mesh>(mesh: T): T {
@@ -59,40 +96,46 @@ function shaded<T extends THREE.Mesh>(mesh: T): T {
   return mesh
 }
 
+/**
+ * Cada primitiva informa sua dimensão característica ao material, para o grão
+ * de superfície ter a mesma escala física num botão e num piso.
+ * Também aceita número no lugar de opts (assinatura antiga: segments posicional).
+ */
+function sized(opts: MatOpts | number | undefined, size: number): MatOpts {
+  const o = typeof opts === 'number' || !opts ? {} : opts
+  return { ...o, size: o.size ?? size }
+}
+
 export function box(w: number, h: number, d: number, color: string | number, opts?: MatOpts) {
-  return shaded(new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat(color, opts)))
+  return shaded(new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat(color, sized(opts, Math.max(w, h, d)))))
 }
 
 /** Caixa de cantos arredondados — use no lugar de box para quase tudo. */
 export function rbox(w: number, h: number, d: number, radius: number, color: string | number, opts?: MatOpts) {
   const r = Math.min(radius, w / 2, h / 2, d / 2)
-  return shaded(new THREE.Mesh(new RoundedBoxGeometry(w, h, d, 4, r), mat(color, opts)))
-}
-
-/** aceita número no lugar de opts (assinatura antiga: segments posicional) */
-function normOpts(opts?: MatOpts | number): MatOpts | undefined {
-  return typeof opts === 'number' ? undefined : opts
+  return shaded(new THREE.Mesh(new RoundedBoxGeometry(w, h, d, 4, r), mat(color, sized(opts, Math.max(w, h, d)))))
 }
 
 export function cylinder(rTop: number, rBottom: number, h: number, color: string | number, opts?: MatOpts | number, segments = 32) {
-  return shaded(new THREE.Mesh(new THREE.CylinderGeometry(rTop, rBottom, h, segments), mat(color, normOpts(opts))))
+  const size = Math.max(rTop * 2, rBottom * 2, h)
+  return shaded(new THREE.Mesh(new THREE.CylinderGeometry(rTop, rBottom, h, segments), mat(color, sized(opts, size))))
 }
 
 export function sphere(r: number, color: string | number, opts?: MatOpts | number, segments = 32) {
-  return shaded(new THREE.Mesh(new THREE.SphereGeometry(r, segments, segments), mat(color, normOpts(opts))))
+  return shaded(new THREE.Mesh(new THREE.SphereGeometry(r, segments, segments), mat(color, sized(opts, r * 2))))
 }
 
 /** Cápsula — corpos, braços, pernas, dedos: quase tudo orgânico é cápsula. */
 export function capsule(r: number, length: number, color: string | number, opts?: MatOpts) {
-  return shaded(new THREE.Mesh(new THREE.CapsuleGeometry(r, length, 8, 24), mat(color, opts)))
+  return shaded(new THREE.Mesh(new THREE.CapsuleGeometry(r, length, 8, 24), mat(color, sized(opts, length + r * 2))))
 }
 
 export function cone(r: number, h: number, color: string | number, opts?: MatOpts | number, segments = 32) {
-  return shaded(new THREE.Mesh(new THREE.ConeGeometry(r, h, segments), mat(color, normOpts(opts))))
+  return shaded(new THREE.Mesh(new THREE.ConeGeometry(r, h, segments), mat(color, sized(opts, Math.max(r * 2, h)))))
 }
 
 export function torus(r: number, tube: number, color: string | number, opts?: MatOpts) {
-  return shaded(new THREE.Mesh(new THREE.TorusGeometry(r, tube, 20, 48), mat(color, opts)))
+  return shaded(new THREE.Mesh(new THREE.TorusGeometry(r, tube, 20, 48), mat(color, sized(opts, r * 2))))
 }
 
 /**
@@ -101,7 +144,12 @@ export function torus(r: number, tube: number, color: string | number, opts?: Ma
  */
 export function lathe(profile: [number, number][], color: string | number, opts?: MatOpts, segments = 40) {
   const pts = profile.map(([r, y]) => new THREE.Vector2(r, y))
-  return shaded(new THREE.Mesh(new THREE.LatheGeometry(pts, segments), mat(color, opts)))
+  const ys = profile.map(([, y]) => y)
+  const size = Math.max(
+    ...profile.map(([r]) => r * 2),
+    Math.max(...ys) - Math.min(...ys),
+  )
+  return shaded(new THREE.Mesh(new THREE.LatheGeometry(pts, segments), mat(color, sized(opts, size))))
 }
 
 /** Rocha low-poly: icosaedro com vértices deslocados por ruído semeado. */

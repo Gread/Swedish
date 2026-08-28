@@ -15,7 +15,8 @@ export function CardCanvas({ scene, children }: { scene: CardScene; children?: R
   return (
     <Canvas
       camera={{ position: camPos, fov: 38 }}
-      shadows
+      // VSM: penumbra real — sombra dura é o que mais denuncia render de brinquedo
+      shadows="variance"
       dpr={[1, 2]}
       // absoluto dentro do .canvas-wrap: altura 100% falha em janelas altas
       style={{ position: 'absolute', inset: 0 }}
@@ -35,7 +36,11 @@ export function CardCanvas({ scene, children }: { scene: CardScene; children?: R
         color="#fff4e0"
         castShadow
         shadow-mapSize={[2048, 2048]}
-        shadow-bias={-0.0002}
+        // VSM: bias 0 + normalBias; o desfoque vem de radius/blurSamples
+        shadow-bias={0}
+        shadow-normalBias={0.02}
+        shadow-radius={4}
+        shadow-blurSamples={16}
         shadow-camera-left={-6}
         shadow-camera-right={6}
         shadow-camera-top={6}

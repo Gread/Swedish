@@ -12,6 +12,9 @@ declare module 'n8ao' {
       aoSamples: number
       denoiseSamples: number
       denoiseRadius: number
+      denoiseIterations: number
+      gammaCorrection: boolean
+      screenSpaceRadius: boolean
       halfRes: boolean
     }
     setSize(width: number, height: number): void
