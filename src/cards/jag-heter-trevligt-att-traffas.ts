@@ -30,6 +30,7 @@ const BULB = '#ffd489'
 const FAN_A = '#3f4c63'
 const FAN_B = '#4a5570'
 const FAN_C = '#37455c'
+const GUEST = '#3c6662' // você, o convidado
 const GY = 0.18 // topo da base do diorama
 
 // ---- alfabeto de neon: segmentos numa célula 0..1 x 0..1 ---------------------
@@ -119,7 +120,7 @@ function createScene(): CardScene {
 
   // adereço 1: refletor de chão apontado para o tapete
   const spot = new THREE.Group()
-  spot.position.set(-1.25, GY, 1.95)
+  spot.position.set(-1.1, GY, 1.55)
   spot.rotation.y = -0.9
   const spotFoot = cylinder(0.17, 0.2, 0.06, DARK, { roughness: 0.5 })
   spotFoot.position.y = 0.03
@@ -223,8 +224,9 @@ function createScene(): CardScene {
 
   const head = apresentador.getObjectByName('head')!
   const hair = puff(0.26, '#241f28', 5, 3, { roughness: 0.65 })
-  hair.position.y = 0.11
-  hair.scale.set(0.95, 0.6, 0.95)
+  // cabelo no alto da cabeça e para trás: não tapa os olhos
+  hair.position.set(0, 0.2, -0.05)
+  hair.scale.set(1.0, 0.5, 0.98)
   head.add(hair)
 
   // gravata-borboleta e lapelas escuras: o terno lê como smoking de palco
@@ -252,34 +254,61 @@ function createScene(): CardScene {
   bracoAperto.rotation.set(-1.35, 0, -0.3)
   root.add(apresentador)
 
-  // ---- a sua mão, entrando no aperto ---------------------------------------
-  const maoConvidado = new THREE.Group()
-  maoConvidado.position.set(0.68, 0.62, 0.11)
-  maoConvidado.rotation.set(0, -0.65, -0.25)
+  // ---- você: o convidado, de 3/4, apertando a mão do apresentador -----------
+  const MAO: [number, number, number] = [0.68, 0.62, 0.11]
+  const convidado = person({ body: GUEST, skin: SKIN, height: 1.5, armAngle: 0.3 })
+  convidado.position.set(1.08, GY, -0.05)
+  convidado.rotation.y = -1.19 // de frente para o apresentador, meio virado à câmera
+  // o braço do lado da câmera é a peça maoConvidado (sacode no aperto)
+  const bracoFora = convidado.getObjectByName('armR')
+  if (bracoFora) convidado.remove(bracoFora)
+  const cabecaConv = convidado.getObjectByName('head')!
+  const cabelo = puff(0.24, '#5a3a24', 5, 9, { roughness: 0.8 })
+  cabelo.position.set(0, 0.17, -0.05)
+  cabelo.scale.set(1.05, 0.55, 1.05)
+  cabecaConv.add(cabelo)
+  // crachá de convidado no peito
+  const cracha = rbox(0.11, 0.08, 0.015, 0.01, '#efe9dc', { roughness: 0.7 })
+  cracha.position.set(-0.09, 0.55, 0.245)
+  cracha.rotation.y = -0.2
+  convidado.add(cracha)
+  root.add(convidado)
 
-  const palm = sphere(0.105, SKIN, { roughness: 0.6 })
+  // ombro do convidado (lado +x local, girado com o corpo) relativo à mão
+  const ombro = new THREE.Vector3(1.5 * 0.17 * 1.15, 1.5 * 0.52 * 0.62, 0)
+    .applyAxisAngle(new THREE.Vector3(0, 1, 0), convidado.rotation.y)
+    .add(convidado.position)
+    .sub(new THREE.Vector3(...MAO))
+  const dirBraco = ombro.clone().normalize()
+  const lenBraco = ombro.length()
+
+  const maoConvidado = new THREE.Group()
+  maoConvidado.position.set(...MAO)
+
+  const palm = sphere(0.1, SKIN, { roughness: 0.6 })
   palm.scale.set(1, 0.85, 1.05)
   maoConvidado.add(palm)
+  // dedos fechando por cima da mão do apresentador
   for (let i = 0; i < 4; i++) {
     const finger = capsule(0.024, 0.075, SKIN, { roughness: 0.6 })
-    finger.position.set(-0.03, 0.035 - i * 0.042, 0.075)
-    finger.rotation.set(0.3, 0, 1.35)
+    finger.position.set(-0.07, 0.04 - i * 0.04, 0.03)
+    finger.rotation.set(0.2, 0, 1.2)
     maoConvidado.add(finger)
   }
-  const wrist = capsule(0.078, 0.34, SKIN, { roughness: 0.6 })
-  wrist.position.set(0.29, -0.03, 0)
-  wrist.rotation.z = Math.PI / 2
-  maoConvidado.add(wrist)
+  const thumb = capsule(0.026, 0.06, SKIN, { roughness: 0.6 })
+  thumb.position.set(-0.04, 0.09, -0.03)
+  thumb.rotation.z = 0.9
+  maoConvidado.add(thumb)
 
-  const cuff = cylinder(0.095, 0.1, 0.09, '#efe9dc', { roughness: 0.85 })
-  cuff.position.set(0.52, -0.05, 0)
-  cuff.rotation.z = Math.PI / 2
-  maoConvidado.add(cuff)
-
-  const sleeve = capsule(0.1, 0.42, FAN_B, { roughness: 0.9 })
-  sleeve.position.set(0.83, -0.08, 0)
-  sleeve.rotation.z = Math.PI / 2
-  maoConvidado.add(sleeve)
+  const yAxis = new THREE.Vector3(0, 1, 0)
+  const alongArm = (t: number, obj: THREE.Object3D) => {
+    obj.position.copy(dirBraco).multiplyScalar(t)
+    obj.quaternion.setFromUnitVectors(yAxis, dirBraco)
+    maoConvidado.add(obj)
+  }
+  alongArm(0.13, cylinder(0.088, 0.094, 0.08, '#efe9dc', { roughness: 0.85 })) // punho da camisa
+  const mangaLen = lenBraco - 0.17
+  alongArm(0.17 + mangaLen / 2, capsule(0.09, Math.max(mangaLen - 0.12, 0.05), GUEST, { roughness: 0.9 }))
   root.add(maoConvidado)
 
   // ---- três fãs miúdos com caderninhos --------------------------------------
@@ -310,6 +339,7 @@ function createScene(): CardScene {
     { name: 'postes', group: 'cenario', object: postes },
     { name: 'apresentador', group: 'apresentador', object: apresentador },
     { name: 'bracoAperto', group: 'apresentador', object: bracoAperto },
+    { name: 'convidado', group: 'apresentador', object: convidado },
     { name: 'maoConvidado', group: 'apresentador', object: maoConvidado },
     { name: 'painel', group: 'letreiro', object: painel },
     { name: 'neon', group: 'letreiro', object: neon },
@@ -333,6 +363,7 @@ function createScene(): CardScene {
     seq('braco-estende', 'bracoAperto', 2.0, 0.9, [ch('rotation.x', -0.15, -1.35)], {
       ease: 'easeOut',
     }),
+    seq('convidado-rise', 'convidado', 2.4, 0.7, [riseFrom(GY, 1.9)], { ease: 'easeOut' }),
     seq('mao-rise', 'maoConvidado', 2.6, 0.7, [riseFrom(0.62, 1.0)], { ease: 'easeOut' }),
 
     seq('garganta-raspa', 'apresentador', 3.5, 0.55, [ch('rotation.x', 0, -0.16)], {
@@ -386,7 +417,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.9, 3.0, 6.0], target: [0.15, 1.05, -0.2] },
+    cameraHint: { position: [0.75, 2.55, 5.0], target: [0.1, 1.15, -0.35] },
   }
 }
 

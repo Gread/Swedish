@@ -12,6 +12,67 @@ import {
  * Paleta: vinho (#7e2130/#a32633), verde-dragão (#4f9a52), cinza-azulado
  * (#b9c2cc) — acento dourado (#e8a33d) reservado à placa BRAVO da ponte sonora.
  */
+// ── Letreiro BRAVO! em traço de pincel (segmentos numa célula 0..1) ──────
+type Seg = [number, number, number, number]
+const GLYPHS: Record<string, { segs: Seg[]; adv: number }> = {
+  B: {
+    segs: [
+      [0, 0, 0, 1], [0, 1, 0.5, 1], [0.5, 1, 0.66, 0.88], [0.66, 0.88, 0.66, 0.66],
+      [0.66, 0.66, 0.5, 0.54], [0, 0.54, 0.54, 0.54], [0.54, 0.54, 0.72, 0.4],
+      [0.72, 0.4, 0.72, 0.15], [0.72, 0.15, 0.56, 0], [0, 0, 0.56, 0],
+    ],
+    adv: 0.72,
+  },
+  R: {
+    segs: [
+      [0, 0, 0, 1], [0, 1, 0.52, 1], [0.52, 1, 0.68, 0.86], [0.68, 0.86, 0.68, 0.68],
+      [0.68, 0.68, 0.52, 0.54], [0, 0.54, 0.52, 0.54], [0.34, 0.54, 0.72, 0],
+    ],
+    adv: 0.72,
+  },
+  A: { segs: [[0, 0, 0.38, 1], [0.38, 1, 0.76, 0], [0.15, 0.38, 0.61, 0.38]], adv: 0.76 },
+  V: { segs: [[0, 1, 0.38, 0], [0.38, 0, 0.76, 1]], adv: 0.76 },
+  O: {
+    segs: [
+      [0.2, 0, 0.56, 0], [0.56, 0, 0.74, 0.2], [0.74, 0.2, 0.74, 0.8], [0.74, 0.8, 0.56, 1],
+      [0.56, 1, 0.2, 1], [0.2, 1, 0.02, 0.8], [0.02, 0.8, 0.02, 0.2], [0.02, 0.2, 0.2, 0],
+    ],
+    adv: 0.76,
+  },
+  '!': { segs: [[0.12, 1, 0.12, 0.32]], adv: 0.24 },
+}
+
+/** Palavra em traços arredondados (cápsulas), centrada na origem do Group. */
+function inkWord(word: string, h: number, gap: number, color: string) {
+  const total = [...word].reduce((w, c) => w + GLYPHS[c].adv * h + gap, 0) - gap
+  const g = new THREE.Group()
+  let cursor = -total / 2
+  const r = h * 0.06
+  for (const c of word) {
+    const cell = new THREE.Group()
+    cell.position.set(cursor, -h / 2, 0)
+    for (const [x1, y1, x2, y2] of GLYPHS[c].segs) {
+      const dx = (x2 - x1) * h
+      const dy = (y2 - y1) * h
+      const len = Math.hypot(dx, dy)
+      const stroke = capsule(r, Math.max(len, 0.002), color, { roughness: 0.55 })
+      stroke.position.set(((x1 + x2) / 2) * h, ((y1 + y2) / 2) * h, 0)
+      stroke.rotation.z = Math.atan2(dy, dx) - Math.PI / 2
+      stroke.scale.z = 0.45 // tinta achatada sobre o quadro
+      cell.add(stroke)
+    }
+    if (c === '!') {
+      const ponto = sphere(r * 1.25, color, { roughness: 0.55 })
+      ponto.position.set(0.12 * h, 0.06 * h, 0)
+      ponto.scale.z = 0.45
+      cell.add(ponto)
+    }
+    g.add(cell)
+    cursor += GLYPHS[c].adv * h + gap
+  }
+  return g
+}
+
 function createScene(): CardScene {
   const root = new THREE.Group()
   const rand = rng(11)
@@ -124,7 +185,8 @@ function createScene(): CardScene {
 
     const braco = capsule(0.08, 0.2, VERDE, { roughness: 0.55 })
     braco.position.set(side * 0.4, 0.72, 0.1)
-    braco.rotation.z = -side * 0.85
+    // braço +x erguido, segurando o cabo da placa BRAVO no alto
+    braco.rotation.z = side > 0 ? 2.45 : 0.85
     const mao = sphere(0.09, BARRIGA)
     mao.position.y = -0.2
     braco.add(mao)
@@ -191,6 +253,22 @@ function createScene(): CardScene {
     dragaoCabeca.add(chifre)
   }
 
+  // boca escancarada no RRRÁ: mandíbula baixa + goela escura
+  const goela = sphere(0.1, '#5a1f24', { roughness: 0.7 })
+  goela.position.set(0, -0.13, 0.4)
+  goela.scale.set(1.15, 0.65, 0.55)
+  dragaoCabeca.add(goela)
+  const mandibula = capsule(0.1, 0.12, BARRIGA, { roughness: 0.6 })
+  mandibula.rotation.x = Math.PI / 2 + 0.35
+  mandibula.position.set(0, -0.2, 0.27)
+  dragaoCabeca.add(mandibula)
+  for (const side of [-1, 1]) {
+    const dente = cone(0.022, 0.06, '#fbf6ea', { roughness: 0.4 })
+    dente.position.set(side * 0.07, -0.1, 0.43)
+    dente.rotation.x = Math.PI
+    dragaoCabeca.add(dente)
+  }
+
   const crista = cone(0.07, 0.2, CREME, { roughness: 0.6 })
   crista.position.set(0, 0.22, -0.2)
   crista.rotation.x = -0.6
@@ -200,63 +278,92 @@ function createScene(): CardScene {
   dragaoCabeca.rotation.y = -0.8 // encara quem está saindo
   root.add(dragaoCabeca)
 
-  // ── Chama do RRRÁ (expande a partir da boca) ───────────────────────────
+  // ── Chama do RRRÁ (sai estreita da boca e abre em línguas de fogo) ─────
+  // eixo +z local = direção do jato
   const chama = new THREE.Group()
-  const fogoExterno = cone(0.17, 0.55, '#e0662f', {
-    roughness: 0.4, emissive: '#ff8a3d', emissiveIntensity: 1.2,
-  })
-  fogoExterno.rotation.x = Math.PI / 2
-  fogoExterno.position.z = 0.3
-  const fogoMeio = cone(0.11, 0.4, '#f7a53c', {
-    roughness: 0.4, emissive: '#ffc266', emissiveIntensity: 1.3,
-  })
-  fogoMeio.rotation.x = Math.PI / 2
-  fogoMeio.position.z = 0.26
-  const fogoInterno = cone(0.06, 0.28, '#ffe08a', {
-    roughness: 0.35, emissive: '#fff1bd', emissiveIntensity: 1.5,
-  })
-  fogoInterno.rotation.x = Math.PI / 2
-  fogoInterno.position.z = 0.2
-  chama.add(fogoExterno, fogoMeio, fogoInterno)
+  const jato = lathe(
+    [[0.001, 0], [0.04, 0.02], [0.08, 0.2], [0.14, 0.45], [0.19, 0.66], [0.17, 0.78], [0.08, 0.86], [0.001, 0.88]],
+    '#ec7a2c',
+    { roughness: 0.45, emissive: '#ff6a1f', emissiveIntensity: 0.9 },
+  )
+  jato.rotation.x = Math.PI / 2 // eixo do torno (+y) vira +z
+  chama.add(jato)
+  const nucleo = lathe(
+    [[0.001, 0], [0.03, 0.04], [0.06, 0.25], [0.09, 0.5], [0.06, 0.68], [0.001, 0.74]],
+    '#ffd04a',
+    { roughness: 0.4, emissive: '#ffd04a', emissiveIntensity: 1.1 },
+  )
+  nucleo.rotation.x = Math.PI / 2
+  nucleo.position.set(0, 0.03, 0.1)
+  nucleo.scale.set(1.15, 1, 1.15)
+  chama.add(nucleo)
 
+  /** Língua de fogo: gota pontuda, base redonda, ponta na direção `dir`. */
+  const PERFIL_LINGUA: [number, number][] = [
+    [0.001, 0], [0.5, 0.06], [0.85, 0.17], [1, 0.32], [0.88, 0.48], [0.6, 0.66], [0.28, 0.85], [0.001, 1],
+  ]
+  const Y = new THREE.Vector3(0, 1, 0)
+  const linguas: [number, number, number, number, number, [number, number, number], string, string][] = [
+    // x, y, z, raio, comprimento, direção, cor, emissivo
+    [0, 0.04, 0.62, 0.13, 0.5, [0, 0.45, 1], '#e2481f', '#ff4a14'],
+    [0.1, 0.02, 0.6, 0.09, 0.42, [0.5, 0.5, 1], '#f08a2e', '#ff7a1f'],
+    [-0.1, 0.03, 0.6, 0.09, 0.44, [-0.5, 0.55, 1], '#f08a2e', '#ff7a1f'],
+    [0.04, 0.1, 0.56, 0.08, 0.46, [0.15, 1, 0.6], '#e2481f', '#ff4a14'],
+    [-0.05, 0.1, 0.55, 0.07, 0.38, [-0.35, 1, 0.5], '#ffc23d', '#ffc23d'],
+    [0, 0.02, 0.66, 0.06, 0.36, [0.05, 0.3, 1], '#ffd04a', '#ffd04a'],
+  ]
+  for (const [x, y, z, r, len, d, c, e] of linguas) {
+    const l = lathe(
+      PERFIL_LINGUA.map(([pr, py]) => [pr * r, py * len] as [number, number]),
+      c,
+      { roughness: 0.45, emissive: e, emissiveIntensity: 1.0 },
+    )
+    l.position.set(x, y, z)
+    l.quaternion.setFromUnitVectors(Y, new THREE.Vector3(...d).normalize())
+    chama.add(l)
+  }
   const faisca1 = sphere(0.035, '#ffd166', { emissive: '#ffe08a', emissiveIntensity: 1.4 })
-  faisca1.position.set(0.06, 0.08, 0.62)
-  const faisca2 = sphere(0.025, '#ffd166', { emissive: '#ffe08a', emissiveIntensity: 1.4 })
-  faisca2.position.set(-0.05, -0.04, 0.56)
+  faisca1.position.set(0.2, 0.26, 1.12)
+  const faisca2 = sphere(0.028, '#ffd166', { emissive: '#ffe08a', emissiveIntensity: 1.4 })
+  faisca2.position.set(-0.18, 0.22, 1.08)
   chama.add(faisca1, faisca2)
 
-  const fumaca = puff(0.07, '#aab3bf', 4, 21, { roughness: 0.95 })
-  fumaca.position.set(0.03, 0.16, 0.6)
+  const fumaca = puff(0.08, '#aab3bf', 4, 21, { roughness: 0.95 })
+  fumaca.position.set(0.02, 0.36, 1.2)
   chama.add(fumaca)
 
-  chama.position.set(0.96, 1.29, 0.21)
-  chama.rotation.set(0.12, -0.8, 0)
+  chama.position.set(1.0, 1.24, 0.17) // = boca do dragão em coordenadas de mundo
+  chama.rotation.order = 'YXZ'
+  chama.rotation.set(-0.6, -0.8, 0) // jato inclinado para o alto, por cima de quem sai
   root.add(chama)
 
-  // ── Placa BRAVO! (acento dourado da ponte sonora) ──────────────────────
+  // ── Placa BRAVO! (acento dourado da ponte sonora) erguida pelo dragão ──
+  // origem do grupo = punho do dragão no cabo; a placa gira ao redor dele
   const placa = new THREE.Group()
-  const cabo = cylinder(0.04, 0.05, 1.0, '#8d5a2b', { roughness: 0.7 })
-  cabo.position.y = 0.5
+  const cabo = cylinder(0.04, 0.05, 1.3, '#8d5a2b', { roughness: 0.7 })
+  cabo.position.y = 0.35
   placa.add(cabo)
+  const ponteira = sphere(0.055, '#6b4220', { roughness: 0.7 })
+  ponteira.position.y = -0.3
+  placa.add(ponteira)
 
-  const moldura = rbox(0.95, 0.65, 0.07, 0.03, '#e8a33d', { roughness: 0.3, metalness: 0.35 })
+  const moldura = rbox(1.4, 0.62, 0.07, 0.03, '#e8a33d', { roughness: 0.3, metalness: 0.35 })
   moldura.position.y = 1.28
-  const quadro = rbox(0.84, 0.54, 0.08, 0.02, '#f7f2e7', { roughness: 0.4 })
+  const quadro = rbox(1.29, 0.51, 0.08, 0.02, '#f7f2e7', { roughness: 0.4 })
   quadro.position.y = 1.28
   placa.add(moldura, quadro)
+  for (const side of [-1, 1]) {
+    const prego = sphere(0.028, '#b9822c', { roughness: 0.35, metalness: 0.5 })
+    prego.position.set(side * 0.63, 1.51, 0.045)
+    placa.add(prego)
+  }
 
-  const texto1 = rbox(0.5, 0.09, 0.02, 0.01, '#3b4252', { roughness: 0.6 })
-  texto1.position.set(-0.06, 1.38, 0.05)
-  const texto2 = rbox(0.4, 0.09, 0.02, 0.01, '#3b4252', { roughness: 0.6 })
-  texto2.position.set(-0.1, 1.22, 0.05)
-  const exclamacaoBarra = rbox(0.08, 0.17, 0.02, 0.01, '#c94f3d', { roughness: 0.6 })
-  exclamacaoBarra.position.set(0.27, 1.36, 0.05)
-  const exclamacaoPonto = rbox(0.08, 0.07, 0.02, 0.01, '#c94f3d', { roughness: 0.6 })
-  exclamacaoPonto.position.set(0.27, 1.16, 0.05)
-  placa.add(texto1, texto2, exclamacaoBarra, exclamacaoPonto)
+  const bravo = inkWord('BRAVO!', 0.27, 0.03, '#a32633')
+  bravo.position.set(0, 1.28, 0.05)
+  placa.add(bravo)
 
-  placa.position.set(1.8, 0.16, 0.35)
-  placa.rotation.y = -0.45
+  placa.position.set(1.75, 0.92, 0.17)
+  placa.rotation.y = 0.15 // de frente para quem olha a cena
   placa.rotation.z = -0.08 // pose final: erguida
   root.add(placa)
 
@@ -331,7 +438,7 @@ function createScene(): CardScene {
     }),
 
     // Placa BRAVO
-    seq('placa-rise', 'placa', 6.9, 0.8, [riseFrom(0.16, 2.0)], {
+    seq('placa-rise', 'placa', 6.9, 0.8, [riseFrom(0.92, 2.6)], {
       caption: 'E ergue a placa branca: DÊ BRÁvo! Aplausos pra quem vai embora.',
     }),
     seq('placa-erguer', 'placa', 7.8, 0.6, [ch('rotation.z', 0.85, -0.08)], { ease: 'easeOut' }),
@@ -347,7 +454,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [3.7, 3.0, 5.5], target: [0.55, 1.0, 0.1] },
+    cameraHint: { position: [3.3, 2.7, 5.0], target: [0.55, 1.2, 0.0] },
   }
 }
 
@@ -365,6 +472,7 @@ export const card: Card = {
       "Na porta de saída de qualquer lugar na Suécia trabalha um dragão carioca de porteiro. Quando você vai embora, ele solta um 'RRRÁ!' de fogo quentinho (é o h aspirado de 'Ha') e ergue uma placa branca de 'BRAVO!', te aplaudindo como se sair pela porta fosse um espetáculo. Despedida sueca é isso: ninguém 'fica bem' sem ovação — RRÁ! DÊ BRÁvo!",
   },
   createScene,
+  refine: { organic: ['dragao-corpo', 'dragao-cabeca'] },
 }
 
 export default card

@@ -100,7 +100,7 @@ function createScene(): CardScene {
   // ---- filhote de lontra, de barriga pra cima ------------------------------
   const filhote = new THREE.Group()
   filhote.position.set(-0.55, GY, 0.35)
-  filhote.rotation.y = 0.25
+  filhote.rotation.y = -0.45 // cabeça pra frente: o rosto virado pro teto aparece pra câmera
 
   const pupBody = capsule(0.24, 0.5, PUP, { roughness: 0.8 })
   pupBody.rotation.z = Math.PI / 2
@@ -309,8 +309,8 @@ function createScene(): CardScene {
 
   // ---- papai lontra de gravata --------------------------------------------
   const papai = person({ body: DAD, skin: DAD_LIGHT, height: 1.5, armAngle: 0.4 })
-  papai.position.set(1.35, GY, -0.05)
-  papai.rotation.y = -1.3
+  papai.position.set(1.3, GY, -0.05)
+  papai.rotation.y = -0.8 // três-quartos: celular apontado pro filhote, rosto e gravata pra câmera
 
   const peito = capsule(0.16, 0.24, DAD_LIGHT, { roughness: 0.8 })
   peito.position.set(0, 0.5, 0.16)
@@ -366,13 +366,15 @@ function createScene(): CardScene {
 
   // ---- celular gigante erguido (a prova pro chefe) -------------------------
   const celular = new THREE.Group()
-  celular.position.set(0, 1.12, 0.42)
-  celular.rotation.set(-0.08, 0.18, 0.05)
+  // erguido AO LADO da cabeça, do lado do filhote: o rosto e a gravata do
+  // papai ficam livres pra câmera (na frente do rosto ele tapava tudo)
+  celular.position.set(-0.52, 1.18, 0.3)
+  celular.rotation.set(-0.08, 0.35, 0.05)
 
-  const carcaca = rbox(0.52, 0.92, 0.07, 0.05, '#39434f', { roughness: 0.35 })
+  const carcaca = rbox(0.44, 0.76, 0.07, 0.05, '#39434f', { roughness: 0.35 })
   celular.add(carcaca)
 
-  const tela = rbox(0.44, 0.8, 0.02, 0.02, '#dfeaf5', {
+  const tela = rbox(0.37, 0.65, 0.02, 0.02, '#dfeaf5', {
     emissive: '#bcd8f0',
     emissiveIntensity: 1.0,
   })
@@ -380,22 +382,22 @@ function createScene(): CardScene {
   celular.add(tela)
 
   // moldura da chamada na tela + "cabeça" do chefe
-  const janela = rbox(0.34, 0.36, 0.012, 0.015, '#8fb0cc', { roughness: 0.4 })
-  janela.position.set(0, 0.16, 0.055)
+  const janela = rbox(0.29, 0.3, 0.012, 0.015, '#8fb0cc', { roughness: 0.4 })
+  janela.position.set(0, 0.12, 0.055)
   celular.add(janela)
   const chefe = sphere(0.09, DAD_LIGHT, { roughness: 0.6 })
-  chefe.position.set(0, 0.16, 0.07)
+  chefe.position.set(0, 0.12, 0.07)
   chefe.scale.z = 0.5
   celular.add(chefe)
 
   // costas: lente + ponto de gravação vermelho (é o que a câmera vê)
   const lente = cylinder(0.07, 0.07, 0.03, '#222a33', { roughness: 0.2, metalness: 0.7 })
-  lente.position.set(-0.14, 0.3, -0.05)
+  lente.position.set(-0.12, 0.25, -0.05)
   lente.rotation.x = Math.PI / 2
   celular.add(lente)
 
   const rec = sphere(0.032, RED, { emissive: RED, emissiveIntensity: 1.2 })
-  rec.position.set(0.14, 0.3, -0.05)
+  rec.position.set(0.12, 0.25, -0.05)
   celular.add(rec)
 
   papai.add(celular)
@@ -492,11 +494,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.05, 3.0, 6.05], target: [-0.05, 0.85, 0.05] },
+    cameraHint: { position: [0.7, 2.55, 4.5], target: [0.1, 0.9, -0.05] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['filhote'] },
   meta: {
     id: 'jag-maste-vabba-idag',
     contexto: 'Aviso ao chefe ou ao chat da equipe quando o filho está doente (VAB = vård av barn).',

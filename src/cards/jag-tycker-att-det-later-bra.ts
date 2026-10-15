@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng,
-  rbox, capsule, cylinder, sphere, cone, lathe, puff, person,
+  rbox, capsule, cylinder, sphere, cone, lathe, puff, person, mat,
 } from '../rig/helpers'
 
 /**
@@ -30,8 +30,52 @@ const SILVER = '#ccd2da'
 const EMBER = '#ff8b3a' // acento reservado: a BRÁSA nas pontas do diapasão
 
 const GY = 0.18 // topo do piso do diorama
-const HAND = new THREE.Vector3(-1.19, 0.86, 0.12) // mão esquerda erguida, em mundo
+const HAND = new THREE.Vector3(-1.02, 0.86, 0.17) // mão esquerda erguida, em mundo
 const FORK_REST = 0.28 // inclinação de repouso do diapasão
+
+const GRAVADO = '#efe4c9'
+const LH = 0.05 // altura de letra da gravação
+const LW = 0.04 // largura de letra
+const LT = 0.011 // espessura do traço
+
+/** Letra da gravação AT-DÊ, feita de traços em relevo (lê de verdade, não como teclado). */
+function letra(qual: 'A' | 'T' | 'D' | 'Ê') {
+  const g = new THREE.Group()
+  const traco = (w: number, h: number, x: number, y: number, rz = 0) => {
+    const b = rbox(w, h, 0.008, 0.003, GRAVADO, { roughness: 0.4 })
+    b.position.set(x, y, 0)
+    b.rotation.z = rz
+    g.add(b)
+  }
+  if (qual === 'A') {
+    const perna = Math.hypot(LW / 2, LH)
+    const ang = Math.atan2(LW / 2, LH)
+    traco(LT, perna, -LW / 4, 0, -ang)
+    traco(LT, perna, LW / 4, 0, ang)
+    traco(LW * 0.5, LT * 0.85, 0, -LH * 0.15)
+  } else if (qual === 'T') {
+    traco(LW, LT, 0, LH / 2 - LT / 2)
+    traco(LT, LH, 0, 0)
+  } else if (qual === 'D') {
+    traco(LT, LH, -LW / 2 + LT / 2, 0)
+    const arco = new THREE.Mesh(
+      new THREE.TorusGeometry(LH / 2 - LT / 2, LT / 2, 8, 20, Math.PI),
+      mat(GRAVADO, { roughness: 0.4 }),
+    )
+    arco.rotation.z = -Math.PI / 2
+    arco.scale.set(0.8, 1, 0.8)
+    arco.position.x = -LW / 2 + LT / 2
+    g.add(arco)
+  } else {
+    traco(LT, LH, -LW / 2 + LT / 2, 0)
+    traco(LW * 0.85, LT, 0, LH / 2 - LT / 2)
+    traco(LW * 0.7, LT, -LW * 0.05, 0)
+    traco(LW * 0.85, LT, 0, -LH / 2 + LT / 2)
+    traco(LT * 0.8, 0.018, -0.007, LH / 2 + 0.012, -0.75) // circunflexo
+    traco(LT * 0.8, 0.018, 0.007, LH / 2 + 0.012, 0.75)
+  }
+  return g
+}
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -50,11 +94,11 @@ function createScene(): CardScene {
 
   // tapete sob a mesa
   const rug = cylinder(1.24, 1.28, 0.03, RUG, { roughness: 0.95 })
-  rug.position.set(1.1, GY + 0.015, 0.4)
+  rug.position.set(0.63, GY + 0.015, 0.28)
   base.add(rug)
 
   const rugRing = cylinder(1.28, 1.3, 0.02, '#84704f', { roughness: 0.95 })
-  rugRing.position.set(1.1, GY + 0.01, 0.4)
+  rugRing.position.set(0.63, GY + 0.01, 0.28)
   base.add(rugRing)
 
   // planta de canto
@@ -100,7 +144,7 @@ function createScene(): CardScene {
 
   // ---- mesa baixa de madeira mel -------------------------------------------
   const mesa = new THREE.Group()
-  mesa.position.set(1.22, GY, 0.42)
+  mesa.position.set(0.75, GY, 0.3)
   mesa.rotation.y = -0.25
 
   for (const lx of [-1, 1]) {
@@ -133,7 +177,7 @@ function createScene(): CardScene {
 
   // ---- proposta largada na mesa --------------------------------------------
   const papel = new THREE.Group()
-  papel.position.set(1.32, 0.738, 0.51)
+  papel.position.set(0.85, 0.738, 0.39)
   papel.rotation.y = 0.17
 
   const folha = rbox(0.4, 0.014, 0.3, 0.006, '#efe9dc', { roughness: 0.85 })
@@ -147,7 +191,7 @@ function createScene(): CardScene {
 
   // ---- o LOUCO DE TERNO ----------------------------------------------------
   const homem = person({ body: SUIT, skin: SKIN, height: 1.55, armAngle: 0.4 })
-  homem.position.set(-0.72, GY, -0.05)
+  homem.position.set(-0.55, GY, 0.0)
   homem.rotation.y = 0.22 // encara o espectador
 
   const bodyH = 1.55 * 0.52
@@ -187,11 +231,12 @@ function createScene(): CardScene {
 
   // braço direito: dedo apontado na cara do espectador (dobradiça em rotation.x)
   const bracoAponta = homem.getObjectByName('armR')!
-  bracoAponta.rotation.set(-1.45, 0, -0.12)
-  const dedo = capsule(0.034, 0.14, SKIN, { roughness: 0.6 })
+  bracoAponta.rotation.order = 'YXZ' // y = desvio lateral do braço já erguido
+  bracoAponta.rotation.set(-1.8, 0.55, -0.12) // dedo erguido rumo à cara de quem olha, em 3/4
+  const dedo = capsule(0.04, 0.15, SKIN, { roughness: 0.6 })
   dedo.position.y = -bodyH * 0.32 - 0.14
   bracoAponta.add(dedo)
-  const unha = sphere(0.032, SKIN, { roughness: 0.5 })
+  const unha = sphere(0.038, SKIN, { roughness: 0.5 })
   unha.position.y = -bodyH * 0.32 - 0.22
   bracoAponta.add(unha)
 
@@ -224,6 +269,7 @@ function createScene(): CardScene {
   const diapasao = new THREE.Group()
   diapasao.position.copy(HAND)
   diapasao.rotation.z = FORK_REST
+  diapasao.scale.setScalar(1.25) // maior: o garfo e a gravação são o gancho
 
   const pomo = sphere(0.055, SILVER, { roughness: 0.22, metalness: 0.9 })
   pomo.position.y = -0.02
@@ -233,19 +279,18 @@ function createScene(): CardScene {
   cabo.position.y = 0.19
   diapasao.add(cabo)
 
-  // plaqueta gravada "AT-DÊ" (att det) no cabo
-  const gravacao = rbox(0.078, 0.16, 0.016, 0.006, '#2b2f36', { roughness: 0.35 })
-  gravacao.position.set(0, 0.2, 0.046)
+  // plaqueta gravada "AT-DÊ" (att det) no cabo, letras empilhadas
+  const gravacao = rbox(0.078, 0.31, 0.016, 0.008, '#2b2f36', { roughness: 0.35 })
+  gravacao.position.set(0, 0.2, 0.048)
   diapasao.add(gravacao)
-  const marcas: [number, number][] = [
-    [-0.017, 0.048], [0.017, 0.048], [-0.017, 0.005], [0.017, 0.005],
-    [-0.017, -0.042], [0.017, -0.042],
-  ]
-  for (const [mx, my] of marcas) {
-    const letra = rbox(0.024, 0.026, 0.008, 0.003, '#efe4c9', { roughness: 0.4 })
-    letra.position.set(mx, 0.2 + my, 0.056)
-    diapasao.add(letra)
+  for (const [qual, ly] of [['A', 0.315], ['T', 0.252], ['D', 0.163], ['Ê', 0.088]] as const) {
+    const l = letra(qual)
+    l.position.set(0, ly, 0.058)
+    diapasao.add(l)
   }
+  const hifen = rbox(0.02, 0.008, 0.008, 0.003, GRAVADO, { roughness: 0.4 })
+  hifen.position.set(0, 0.209, 0.058)
+  diapasao.add(hifen)
 
   const jugo = rbox(0.25, 0.07, 0.07, 0.028, SILVER, { roughness: 0.22, metalness: 0.9 })
   jugo.position.y = 0.42
@@ -308,7 +353,7 @@ function createScene(): CardScene {
     seq('braco-solto', 'bracoAponta', 4.6, 0.6, [ch('rotation.x', 0.45, 0)], { ease: 'easeOut' }),
     seq('cabelo-pop', 'cabelo', 4.65, 0.6, [ch('position.y', -0.15, 0.22)], { ease: 'easeOut' }),
 
-    seq('braco-aponta', 'bracoAponta', 6.1, 0.7, [ch('rotation.x', 0, -1.45)], {
+    seq('braco-aponta', 'bracoAponta', 6.1, 0.7, [ch('rotation.x', 0, -1.8)], {
       caption: 'Ele aponta o dedo na sua cara: IÁ! TÜ-QUER?! (TÜ com BICO DE PATO)…',
     }),
 
@@ -322,7 +367,7 @@ function createScene(): CardScene {
       'diapasao',
       9.2,
       0.45,
-      [ch('rotation.z', FORK_REST, -0.62), ch('position.x', HAND.x, -1.02)],
+      [ch('rotation.z', FORK_REST, -0.62), ch('position.x', HAND.x, -0.85)],
       {
         ease: 'easeIn',
         caption: '…e bate o garfo na PRÓPRIA TESTA — LÔ-TER BRÁ, a nota sai perfeita…',
@@ -335,7 +380,7 @@ function createScene(): CardScene {
       'diapasao',
       9.65,
       0.5,
-      [ch('rotation.z', -0.62, 0.36), ch('position.x', -1.02, HAND.x)],
+      [ch('rotation.z', -0.62, 0.36), ch('position.x', -0.85, HAND.x)],
       { ease: 'easeOut' },
     ),
 
@@ -360,7 +405,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.35, 3.0, 6.3], target: [0.05, 1.05, 0.0] },
+    cameraHint: { position: [0.75, 2.05, 3.95], target: [-0.25, 1.08, 0.05] },
   }
 }
 

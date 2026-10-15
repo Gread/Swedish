@@ -31,6 +31,9 @@ const DOURADO = '#f0b429' // acento reservado: a nota FÁ
 const PELE = '#e8c39e'
 
 const FY = 0.2 // topo da pista (superfície onde tudo se apoia)
+const POSTE: [number, number] = [1.95, 0.3] // poste da placa (x, z)
+const NOTA: [number, number] = [1.05, 0.7] // onde a placa cai e vira a nota (x, z)
+const MESA_Z = 1.2 // mesa de picapes, à frente das caixas (local do som)
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -113,29 +116,42 @@ function createScene(): CardScene {
 
   // mesa de picapes na frente das caixas
   const mesa = rbox(1.4, 0.1, 0.56, 0.04, '#2b2f3a', { roughness: 0.5 })
-  mesa.position.set(-0.15, 0.9, 0.92)
+  mesa.position.set(-0.15, 0.9, MESA_Z)
   som.add(mesa)
   for (const side of [-1, 1]) {
     const perna = cylinder(0.05, 0.05, 0.85, '#3a3f4c', { roughness: 0.45 })
-    perna.position.set(-0.15 + side * 0.58, 0.43, 0.92)
+    perna.position.set(-0.15 + side * 0.58, 0.43, MESA_Z)
     som.add(perna)
 
     const prato = cylinder(0.22, 0.22, 0.035, PRETO, { roughness: 0.45 })
-    prato.position.set(-0.15 + side * 0.42, 0.97, 0.92)
+    prato.position.set(-0.15 + side * 0.42, 0.97, MESA_Z)
     som.add(prato)
 
     const label = cylinder(0.08, 0.08, 0.045, ROSA, { roughness: 0.5 })
-    label.position.set(-0.15 + side * 0.42, 0.975, 0.92)
+    label.position.set(-0.15 + side * 0.42, 0.975, MESA_Z)
     som.add(label)
+
+    // braço da agulha do toca-discos
+    const tonearm = rbox(0.03, 0.03, 0.2, 0.01, CROMO, { roughness: 0.25, metalness: 0.8 })
+    tonearm.position.set(-0.15 + side * 0.42 + 0.17, 1.0, MESA_Z - 0.04)
+    tonearm.rotation.y = 0.35
+    som.add(tonearm)
   }
+  // painel frontal da mesa (o "booth"), com faixa neon
+  const painel = rbox(1.4, 0.5, 0.06, 0.03, '#23262f', { roughness: 0.55 })
+  painel.position.set(-0.15, 0.62, MESA_Z + 0.26)
+  som.add(painel)
+  const faixaNeon = rbox(1.3, 0.04, 0.02, 0.01, ROSA_NEON, { emissive: ROSA_NEON, emissiveIntensity: 1.0 })
+  faixaNeon.position.set(-0.15, 0.72, MESA_Z + 0.3)
+  som.add(faixaNeon)
   root.add(som)
 
   // ---- mastro + bola de espelhos -------------------------------------------
   const mastro = new THREE.Group()
   mastro.position.set(-1.95, FY, -1.5)
 
-  const posteBola = cylinder(0.06, 0.08, 2.7, '#3a3f4c', { roughness: 0.35, metalness: 0.6 })
-  posteBola.position.y = 1.35
+  const posteBola = cylinder(0.06, 0.08, 2.25, '#3a3f4c', { roughness: 0.35, metalness: 0.6 })
+  posteBola.position.y = 1.125
   mastro.add(posteBola)
 
   const peBola = cylinder(0.34, 0.4, 0.09, '#2b2f3a', { roughness: 0.5 })
@@ -144,17 +160,17 @@ function createScene(): CardScene {
 
   const braco = cylinder(0.05, 0.05, 1.25, '#3a3f4c', { roughness: 0.35, metalness: 0.6 })
   braco.rotation.z = -Math.PI / 2
-  braco.position.set(0.62, 2.66, 0)
+  braco.position.set(0.62, 2.21, 0)
   mastro.add(braco)
 
   const cabo = cylinder(0.014, 0.014, 0.24, '#20242c', { roughness: 0.8 })
-  cabo.position.set(1.22, 2.54, 0)
+  cabo.position.set(1.22, 2.09, 0)
   mastro.add(cabo)
   root.add(mastro)
 
   // a bola é peça própria (gira sozinha no fim)
   const bola = new THREE.Group()
-  bola.position.set(1.22, 2.13, 0)
+  bola.position.set(1.22, 1.68, 0)
   bola.rotation.y = 2.4
   const esfera = sphere(0.29, CROMO, { roughness: 0.15, metalness: 0.9 })
   bola.add(esfera)
@@ -174,8 +190,9 @@ function createScene(): CardScene {
 
   // ---- DJ nas picapes ------------------------------------------------------
   const dj = person({ body: '#2b2f3a', skin: PELE, height: 1.5, armAngle: 1.05 })
-  dj.position.set(2.05, FY, -1.9)
-  dj.rotation.y = -0.75
+  // atrás da mesa, entre ela e as caixas (local do som: x -0.15, z 0.68)
+  dj.position.set(1.15, FY, -1.18)
+  dj.rotation.y = -0.8
 
   const cabecaDj = dj.getObjectByName('head')!
   const arco = torus(0.3, 0.038, PRETO, { roughness: 0.5 })
@@ -197,8 +214,9 @@ function createScene(): CardScene {
 
   // ---- sapo ----------------------------------------------------------------
   const sapo = new THREE.Group()
-  sapo.position.set(-0.75, FY, 0.5)
-  sapo.rotation.set(0, 1.6, 0.1) // olha para a placa; leve inclinação relaxada final
+  sapo.position.set(-0.7, FY, 0.55)
+  sapo.rotation.set(0, 0.85, 0.1) // 3/4 para a câmera, olhando a nota; leve inclinação relaxada final
+  sapo.scale.setScalar(1.15)
 
   const corpo = capsule(0.36, 0.22, LIMA, { roughness: 0.6 })
   corpo.position.y = 0.46
@@ -255,7 +273,7 @@ function createScene(): CardScene {
   // ---- papo: a ÍNGUA roxa (peça própria, filha do sapo) ---------------------
   const papo = new THREE.Group()
   papo.position.set(0, 0.66, 0.24)
-  papo.scale.setScalar(0.34) // pose final: murcho, o sapo já relaxou
+  papo.scale.setScalar(0.62) // pose final: desinchando, mas a íngua roxa ainda à vista
   const bolsa = sphere(0.3, PAPO, { roughness: 0.55 })
   bolsa.scale.set(1, 0.88, 0.95)
   papo.add(bolsa)
@@ -269,7 +287,7 @@ function createScene(): CardScene {
 
   // ---- poste da placa ------------------------------------------------------
   const poste = new THREE.Group()
-  poste.position.set(1.25, FY, 0.3)
+  poste.position.set(POSTE[0], FY, POSTE[1])
   const haste = cylinder(0.045, 0.055, 1.35, '#8d949c', { roughness: 0.3, metalness: 0.7 })
   haste.position.y = 0.675
   poste.add(haste)
@@ -281,7 +299,7 @@ function createScene(): CardScene {
   // ---- placa triangular de PERIGO -----------------------------------------
   // pose final: caída de cara para cima no chão (rotation.x = -PI/2)
   const placa = new THREE.Group()
-  placa.position.set(1.25, FY + 0.05, 0.3)
+  placa.position.set(NOTA[0], FY + 0.05, NOTA[1])
   placa.rotation.set(-Math.PI / 2, 0, 0.3)
 
   const borda = cylinder(0.48, 0.48, 0.05, PRETO, { roughness: 0.5 }, 3)
@@ -302,40 +320,45 @@ function createScene(): CardScene {
   root.add(placa)
 
   // ---- nota musical FÁ dourada (acento) ------------------------------------
+  // colcheia em pé, de frente para a câmera: cabeça oval, haste e bandeirola
   const nota = new THREE.Group()
-  nota.position.set(1.25, FY, 0.3)
-  nota.rotation.y = 0.25
+  nota.position.set(NOTA[0], FY, NOTA[1])
+  nota.rotation.y = -0.15
+  const ouro = { roughness: 0.28, metalness: 0.55, emissive: '#7a4a00', emissiveIntensity: 0.35 }
 
-  const cabecaNota = cylinder(0.25, 0.25, 0.1, DOURADO, { roughness: 0.2, metalness: 0.9 })
-  cabecaNota.position.set(-0.16, 0.05, 0.3)
-  cabecaNota.scale.x = 1.25
-  cabecaNota.rotation.y = 0.5
+  const cabecaNota = sphere(0.22, DOURADO, ouro)
+  cabecaNota.scale.set(1.35, 0.92, 0.7)
+  cabecaNota.rotation.z = 0.42
+  cabecaNota.position.set(-0.08, 0.22, 0)
   nota.add(cabecaNota)
 
-  const haste2 = rbox(0.08, 0.09, 0.95, 0.03, DOURADO, { roughness: 0.2, metalness: 0.9 })
-  haste2.position.set(0.02, 0.05, -0.14)
+  const haste2 = rbox(0.075, 1.02, 0.075, 0.03, DOURADO, ouro)
+  haste2.position.set(0.17, 0.78, 0)
   nota.add(haste2)
 
   const bandeira = new THREE.Mesh(
     new THREE.TubeGeometry(
       new THREE.CatmullRomCurve3([
-        new THREE.Vector3(0.02, 0.05, -0.6),
-        new THREE.Vector3(0.24, 0.05, -0.48),
-        new THREE.Vector3(0.3, 0.05, -0.24),
-        new THREE.Vector3(0.2, 0.05, -0.08),
+        new THREE.Vector3(0.17, 1.27, 0),
+        new THREE.Vector3(0.36, 1.12, 0),
+        new THREE.Vector3(0.48, 0.92, 0),
+        new THREE.Vector3(0.42, 0.7, 0),
       ]),
       28,
-      0.055,
+      0.05,
       10,
       false,
     ),
-    mat(DOURADO, { roughness: 0.2, metalness: 0.9, size: 0.7 }),
+    mat(DOURADO, { ...ouro, size: 0.7 }),
   )
   bandeira.castShadow = true
   bandeira.receiveShadow = true
   nota.add(bandeira)
+  const pontaBandeira = sphere(0.05, DOURADO, ouro)
+  pontaBandeira.position.set(0.42, 0.7, 0)
+  nota.add(pontaBandeira)
 
-  const halo = torus(0.66, 0.035, '#ffd76a', { emissive: '#ffb02e', emissiveIntensity: 1.2 })
+  const halo = torus(0.5, 0.035, '#ffd76a', { emissive: '#ffb02e', emissiveIntensity: 1.2 })
   halo.rotation.x = Math.PI / 2
   halo.position.y = 0.02
   nota.add(halo)
@@ -410,6 +433,8 @@ function createScene(): CardScene {
       0.7,
       [
         ch('position.y', 1.78, FY + 0.05),
+        ch('position.x', POSTE[0], NOTA[0]),
+        ch('position.z', POSTE[1] + 0.06, NOTA[1]),
         ch('rotation.x', 0, -Math.PI / 2),
         ch('rotation.z', 0, 0.3),
       ],
@@ -436,7 +461,7 @@ function createScene(): CardScene {
         caption: '…e ao bater no chão vira uma inofensiva nota FÁ dourada: FÁ-RA!',
       },
     ),
-    seq('nota-spin', 'nota', 9.75, 0.8, [ch('rotation.y', -0.9, 0.25)], { ease: 'easeOut' }),
+    seq('nota-spin', 'nota', 9.75, 0.8, [ch('rotation.y', -1.3, -0.15)], { ease: 'easeOut' }),
 
     seq('bola-spin', 'bola', 10.4, 1.4, [ch('rotation.y', 0, 2.4)]),
     seq('dj-beat-up', 'dj', 10.55, 0.4, [ch('position.y', FY, FY + 0.14)], { ease: 'easeOut' }),
@@ -447,7 +472,7 @@ function createScene(): CardScene {
       'papo',
       11.05,
       0.7,
-      [ch('scale.x', 1, 0.34), ch('scale.y', 1, 0.34), ch('scale.z', 1, 0.34)],
+      [ch('scale.x', 1, 0.62), ch('scale.y', 1, 0.62), ch('scale.z', 1, 0.62)],
       { caption: 'Ingen fara! — "Não tem problema!" (ÍNG-EN? FÁ-RA!)' },
     ),
     seq('sapo-relax', 'sapo', 11.3, 0.7, [ch('rotation.z', 0, 0.1)], { ease: 'easeOut' }),
@@ -457,11 +482,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 3.1, 6.4], target: [0.2, 1.0, -0.1] },
+    cameraHint: { position: [0.35, 2.6, 5.2], target: [0.2, 1.02, -0.2] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['sapo', 'papo'] },
   meta: {
     id: 'ingen-fara',
     contexto: 'Alguém pisa no seu pé, chega atrasado, derruba algo ou pede desculpa por qualquer coisa.',

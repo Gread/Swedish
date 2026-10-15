@@ -250,28 +250,48 @@ function createScene(): CardScene {
 
   // ---- tubo de ÁRNIca (acento) ---------------------------------------------
   const arnica = new THREE.Group()
-  arnica.position.set(-0.4, 2.1, -1.15)
-  arnica.rotation.z = 0.16
+  // de cabeça para baixo, tampa na ponta da asa: a ponta prensada e serrilhada
+  // fica no alto, à vista — lê-se bisnaga de pomada, não frasco
+  arnica.position.set(-0.42, 2.12, -1.15)
+  arnica.rotation.z = Math.PI + 0.2
 
+  // bisnaga de pomada: corpo achatado, ombro curto, tampa de rosca em cima
+  // e a ponta de baixo prensada e serrilhada (nada de frasco de ketchup)
   const tubo = lathe(
-    [[0, -0.22], [0.08, -0.205], [0.086, 0.06], [0.05, 0.15], [0.048, 0.19]],
+    [[0, -0.2], [0.085, -0.2], [0.09, 0.0], [0.088, 0.14], [0.07, 0.18], [0.034, 0.2], [0.032, 0.22], [0, 0.22]],
     ACCENT,
     { roughness: 0.35 },
   )
+  tubo.scale.z = 0.72
   arnica.add(tubo)
 
-  const tampa = cylinder(0.05, 0.052, 0.09, WHITE, { roughness: 0.3 })
-  tampa.position.y = 0.235
-  arnica.add(tampa)
+  const prensa = rbox(0.2, 0.07, 0.03, 0.01, ACCENT, { roughness: 0.4 })
+  prensa.position.y = -0.225
+  arnica.add(prensa)
+  for (const sy of [-0.24, -0.215]) {
+    const serrilha = rbox(0.205, 0.008, 0.034, 0.003, '#a8321b', { roughness: 0.5 })
+    serrilha.position.y = sy
+    arnica.add(serrilha)
+  }
 
-  const rotulo = cylinder(0.089, 0.089, 0.11, WHITE, { roughness: 0.5 })
-  rotulo.position.y = -0.06
+  const tampa = cylinder(0.05, 0.05, 0.08, WHITE, { roughness: 0.3 })
+  tampa.position.y = 0.26
+  arnica.add(tampa)
+  for (let i = 0; i < 10; i++) {
+    const a = (i / 10) * Math.PI * 2
+    const friso = rbox(0.008, 0.07, 0.008, 0.002, '#d8d4ca', { roughness: 0.4 })
+    friso.position.set(Math.cos(a) * 0.05, 0.26, Math.sin(a) * 0.05)
+    arnica.add(friso)
+  }
+
+  const rotulo = rbox(0.13, 0.14, 0.01, 0.004, WHITE, { roughness: 0.5 })
+  rotulo.position.set(0, 0.0, 0.066)
   arnica.add(rotulo)
 
-  const rotuloCruzV = rbox(0.022, 0.062, 0.02, 0.007, ACCENT, { roughness: 0.4 })
-  rotuloCruzV.position.set(0, -0.06, 0.088)
-  const rotuloCruzH = rbox(0.062, 0.022, 0.02, 0.007, ACCENT, { roughness: 0.4 })
-  rotuloCruzH.position.set(0, -0.06, 0.088)
+  const rotuloCruzV = rbox(0.022, 0.07, 0.008, 0.003, ACCENT, { roughness: 0.4 })
+  rotuloCruzV.position.set(0, 0.0, 0.073)
+  const rotuloCruzH = rbox(0.07, 0.022, 0.008, 0.003, ACCENT, { roughness: 0.4 })
+  rotuloCruzH.position.set(0, 0.0, 0.073)
   arnica.add(rotuloCruzV, rotuloCruzH)
 
   root.add(arnica)
@@ -326,16 +346,16 @@ function createScene(): CardScene {
 
   // ---- a receita enrolando na frigideira -----------------------------------
   const receita = new THREE.Group()
-  receita.position.set(-0.93, 1.6, -0.1)
+  receita.position.set(-0.93, 1.66, -0.1)
   receita.rotation.z = 0.35
   receita.rotation.y = 0.42
 
-  const folha = rbox(0.3, 0.014, 0.24, 0.006, WHITE, { roughness: 0.9 })
+  const folha = rbox(0.36, 0.014, 0.28, 0.006, WHITE, { roughness: 0.9 })
   receita.add(folha)
 
   for (const side of [-1, 1]) {
-    const curl = rbox(0.09, 0.014, 0.24, 0.006, WHITE, { roughness: 0.9 })
-    curl.position.set(side * 0.18, 0.035, 0)
+    const curl = rbox(0.09, 0.014, 0.28, 0.006, WHITE, { roughness: 0.9 })
+    curl.position.set(side * 0.21, 0.035, 0)
     curl.rotation.z = side * 0.75
     receita.add(curl)
   }
@@ -423,7 +443,7 @@ function createScene(): CardScene {
       { ease: 'easeOut' },
     ),
 
-    seq('arnica-rise', 'arnica', 5.7, 0.8, [riseFrom(2.1, 2.7)], {
+    seq('arnica-rise', 'arnica', 5.7, 0.8, [riseFrom(2.12, 2.7)], {
       ease: 'easeOut',
       caption: 'Ele enfia o pescoço por cima do balcão, ergue o tubo de ÁRNIca — RRÁR-NI, com o h soprado — e pergunta: NÔT?',
     }),
@@ -445,7 +465,7 @@ function createScene(): CardScene {
       'receita',
       8.5,
       0.5,
-      [ch('position.y', 1.98, 1.6), ch('position.x', -0.45, -0.93), ch('rotation.z', 0, 0.35)],
+      [ch('position.y', 1.98, 1.66), ch('position.x', -0.45, -0.93), ch('rotation.z', 0, 0.35)],
       { ease: 'easeIn' },
     ),
     seq(
@@ -508,11 +528,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.0, 6.0], target: [0.15, 1.05, -0.15] },
+    cameraHint: { position: [0.55, 2.65, 4.95], target: [0.25, 1.18, -0.2] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['flamingo'] },
   meta: {
     id: 'nagot-receptfritt',
     contexto: 'No balcão do apotek, mostrando onde dói ou descrevendo o sintoma.',

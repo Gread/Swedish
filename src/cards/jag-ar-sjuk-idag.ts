@@ -64,7 +64,7 @@ function createScene(): CardScene {
     '#b06a4a',
     { roughness: 0.35 },
   )
-  pot.position.set(-1.72, GY, 1.2)
+  pot.position.set(-1.62, GY, 0.85)
   pot.rotation.y = rand() * Math.PI
   const leaves = puff(0.24, '#3f7d4a', 6, 31, { roughness: 0.9 })
   leaves.position.y = 0.44
@@ -72,7 +72,7 @@ function createScene(): CardScene {
   base.add(pot)
 
   const books = new THREE.Group()
-  books.position.set(1.42, GY, 1.4)
+  books.position.set(1.3, GY, 1.12)
   books.rotation.y = -0.4 + rand() * 0.3
   for (const [i, color] of [WOOD_DARK, '#4b6b53', RED].entries()) {
     const bk = rbox(0.34, 0.07, 0.24, 0.015, color, { roughness: 0.7 })
@@ -248,25 +248,50 @@ function createScene(): CardScene {
   head.add(beard)
 
   // ---- lenço-vela inflado no nariz (RRÜÜK!) --------------------------------
+  // um lenço quadrado estufado pra frente feito vela redonda: almofada de
+  // pano com barra azul, pontas de tecido achatadas nos cantos e o pano
+  // franzido no nariz. Levemente virado para a câmera, sem tapar o rosto.
   const lenco = new THREE.Group()
-  lenco.position.set(0, -0.03, 0.3)
-  lenco.rotation.x = -0.3
+  lenco.position.set(0.02, -0.03, 0.27)
+  lenco.rotation.set(-0.1, 0.38, 0.05)
   head.add(lenco)
 
-  const sail = cone(0.36, 0.78, CANVAS, { roughness: 0.92 })
-  sail.rotation.x = -Math.PI / 2
-  sail.position.z = 0.39
+  const LW = 0.84
+  const LH = 0.72
+  const LZ = 0.44 // centro da barriga do pano, à frente do nariz
+  const sail = rbox(LW, LH, 0.4, 0.19, CANVAS, { roughness: 0.92 })
+  sail.position.z = LZ
   lenco.add(sail)
-  const hem = torus(0.355, 0.035, CANVAS, { roughness: 0.92 })
-  hem.position.z = 0.78
-  lenco.add(hem)
-  const crumple = puff(0.11, CANVAS, 5, 17, { roughness: 0.92 })
-  crumple.position.set(0.16, 0.1, 0.62)
+  // barra azul na face estufada (bainha clássica de lenço)
+  for (const [w, h, x, y] of [
+    [LW - 0.2, 0.032, 0, LH / 2 - 0.09],
+    [LW - 0.2, 0.032, 0, -LH / 2 + 0.09],
+    [0.032, LH - 0.2, LW / 2 - 0.09, 0],
+    [0.032, LH - 0.2, -LW / 2 + 0.09, 0],
+  ] as const) {
+    const barra = rbox(w, h, 0.02, 0.01, RUG_LINE, { roughness: 0.9 })
+    barra.position.set(x, y, LZ + 0.2)
+    lenco.add(barra)
+  }
+  // pontas do pano esticadas pelo sopro (achatadas: tecido, não espinho)
+  for (const sx of [-1, 1]) {
+    for (const sy of [-1, 1]) {
+      const ponta = cone(0.09, 0.17, CANVAS, { roughness: 0.92 })
+      ponta.position.set(sx * (LW / 2 - 0.02), sy * (LH / 2 - 0.02), LZ - 0.04)
+      ponta.rotation.z = Math.atan2(sy, sx) - Math.PI / 2
+      ponta.scale.z = 0.3
+      lenco.add(ponta)
+    }
+  }
+  // franzido onde o pano agarra o nariz
+  const crumple = puff(0.1, CANVAS, 5, 17, { roughness: 0.92 })
+  crumple.position.set(0, 0, 0.14)
+  crumple.scale.z = 0.9
   lenco.add(crumple)
 
   // ---- pilha de lenços usados ----------------------------------------------
   const pilha = new THREE.Group()
-  pilha.position.set(0.95, GY, 0.88)
+  pilha.position.set(0.6, GY, 0.98)
   for (const [i, [px, pz, r]] of ([[0, 0, 0.15], [0.22, 0.1, 0.12], [0.1, -0.2, 0.13]] as const).entries()) {
     const wad = puff(r, CANVAS, 5, 51 + i, { roughness: 0.92 })
     wad.position.set(px, r * 0.75, pz)
@@ -277,7 +302,7 @@ function createScene(): CardScene {
 
   // ---- caixote do vigia ----------------------------------------------------
   const caixote = new THREE.Group()
-  caixote.position.set(1.6, 0, -0.5)
+  caixote.position.set(1.45, 0, -0.4)
   caixote.rotation.y = -0.3
   root.add(caixote)
 
@@ -477,11 +502,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.15, 3.0, 5.9], target: [0.3, 1.0, 0.0] },
+    cameraHint: { position: [0.95, 2.35, 4.7], target: [0.15, 0.98, 0.05] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['suricato'] },
   meta: {
     id: 'jag-ar-sjuk-idag',
     contexto: 'SMS ou ligação para o chefe de manhã cedo — a sjukanmälan padrão.',

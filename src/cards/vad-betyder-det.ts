@@ -15,6 +15,7 @@ import {
  */
 
 const GY = 0.18 // topo da base do diorama
+const BETU_S = 1.3 // escala do ornitorrinco (feixe e papel derivam dela)
 
 // 3 matizes de base…
 const WOOD = '#6e4a28'
@@ -32,6 +33,7 @@ const BELLY = '#b98d5e'
 const BILL = '#f0801f'
 const BILL_DARK = '#c9631a'
 const GLOW = '#ffd166'
+const INK = '#5a3d1c' // traço do desenho projetado
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -50,8 +52,10 @@ function createScene(): CardScene {
 
   // tábuas do assoalho (lâminas finas, radiais)
   for (let i = 0; i < 7; i++) {
-    const plank = rbox(4.6, 0.02, 0.016, 0.006, WOOD, { roughness: 0.8 })
-    plank.position.set(0, GY + 0.001, -1.8 + i * 0.6)
+    const pz = -1.8 + i * 0.6
+    const plankLen = 2 * Math.sqrt(2.48 * 2.48 - pz * pz) - 0.06 // cabe no disco
+    const plank = rbox(plankLen, 0.02, 0.016, 0.006, WOOD, { roughness: 0.8 })
+    plank.position.set(0, GY + 0.001, pz)
     base.add(plank)
   }
 
@@ -158,21 +162,29 @@ function createScene(): CardScene {
   desenho.add(halo)
 
   // pictograma da lâmpada = "entendi o que quer dizer"
-  const bulbGlass = sphere(0.17, '#33302a', { roughness: 0.5 })
-  bulbGlass.scale.set(1, 1, 0.22)
-  bulbGlass.position.set(0, 0.07, 0.025)
+  // contorno do bulbo (anel), não disco cheio: disco escuro lia como buraco
+  const bulbGlass = torus(0.15, 0.03, INK, { roughness: 0.5 })
+  bulbGlass.scale.z = 0.4
+  bulbGlass.position.set(0, 0.08, 0.025)
   desenho.add(bulbGlass)
+  // filamento: duas hastes em V dentro do bulbo
+  for (const side of [-1, 1]) {
+    const fil = rbox(0.022, 0.13, 0.03, 0.008, INK, { roughness: 0.5 })
+    fil.position.set(side * 0.035, 0.04, 0.025)
+    fil.rotation.z = side * 0.35
+    desenho.add(fil)
+  }
 
-  const bulbNeck = rbox(0.13, 0.11, 0.05, 0.02, '#33302a', { roughness: 0.5 })
-  bulbNeck.position.set(0, -0.11, 0.025)
+  const bulbNeck = rbox(0.12, 0.08, 0.05, 0.02, INK, { roughness: 0.5 })
+  bulbNeck.position.set(0, -0.1, 0.025)
   desenho.add(bulbNeck)
 
-  const bulbBase = rbox(0.16, 0.05, 0.05, 0.018, '#33302a', { roughness: 0.5 })
-  bulbBase.position.set(0, -0.19, 0.025)
+  const bulbBase = rbox(0.1, 0.05, 0.05, 0.018, INK, { roughness: 0.5 })
+  bulbBase.position.set(0, -0.17, 0.025)
   desenho.add(bulbBase)
 
   for (const a of [-1.0, -0.35, 0.35, 1.0]) {
-    const spark = rbox(0.12, 0.032, 0.04, 0.014, '#33302a', { roughness: 0.5 })
+    const spark = rbox(0.12, 0.032, 0.04, 0.014, INK, { roughness: 0.5 })
     spark.position.set(Math.sin(a) * 0.31, 0.09 + Math.cos(a) * 0.28, 0.025)
     spark.rotation.z = -a
     desenho.add(spark)
@@ -210,7 +222,7 @@ function createScene(): CardScene {
   for (const side of [-1, 1]) {
     const hinge = new THREE.Group()
     hinge.position.y = 0.06
-    hinge.rotation.z = side * 0.32
+    hinge.rotation.z = -side * 0.32 // bordas externas sobem: livro aberto em V
     const page = rbox(0.46, 0.05, 0.7, 0.02, PAPER_LIGHT, { roughness: 0.85 })
     page.position.x = side * -0.25
     hinge.add(page)
@@ -228,6 +240,7 @@ function createScene(): CardScene {
   const betu = new THREE.Group()
   betu.position.set(-0.72, 0.78, 0.18)
   betu.rotation.y = 1.15 // olha para a parede (olhos em +z local)
+  betu.scale.setScalar(BETU_S) // protagonista maior: lê de longe
 
   const body = capsule(0.23, 0.3, FUR, { roughness: 0.85 })
   body.rotation.x = Math.PI / 2
@@ -305,21 +318,21 @@ function createScene(): CardScene {
 
   const band = torus(0.178, 0.026, '#3a3028', { roughness: 0.9 })
   band.rotation.x = Math.PI / 2 - 0.12
-  band.position.y = 0.03
+  band.position.y = 0.07
   lanterna.add(band)
 
   const housing = cylinder(0.075, 0.085, 0.09, '#aeb4b8', { roughness: 0.22, metalness: 0.85 })
   housing.rotation.x = Math.PI / 2
-  housing.position.set(0, 0.1, 0.16)
+  housing.position.set(0, 0.15, 0.14) // no alto da testa: não tampa os olhos
   lanterna.add(housing)
 
   const rim = torus(0.078, 0.016, '#8d949a', { roughness: 0.3, metalness: 0.7 })
-  rim.position.set(0, 0.1, 0.2)
+  rim.position.set(0, 0.15, 0.185)
   lanterna.add(rim)
 
   const lens = cylinder(0.068, 0.068, 0.02, '#fff3c4', { emissive: GLOW, emissiveIntensity: 1.3 })
   lens.rotation.x = Math.PI / 2
-  lens.position.set(0, 0.1, 0.215)
+  lens.position.set(0, 0.15, 0.2)
   lanterna.add(lens)
   betu.add(lanterna)
 
@@ -327,7 +340,7 @@ function createScene(): CardScene {
 
   // ---- o papelzinho com a palavra incompreensível --------------------------
   const papel = new THREE.Group()
-  papel.position.set(-0.21, 1.09, 0.41) // pose final: preso no bico
+  papel.position.set(-0.056, 1.183, 0.477) // pose final: preso no bico
   papel.rotation.set(0.2, 1.15, 0.15)
 
   const sheet = rbox(0.3, 0.02, 0.24, 0.008, PAPER_LIGHT, { roughness: 0.88 })
@@ -345,19 +358,28 @@ function createScene(): CardScene {
 
   // ---- o feixe da lanterna, mirado no centro da parede ---------------------
   const feixe = new THREE.Group()
-  feixe.position.set(-0.25, 1.22, 0.39) // boca da lanterna, em coordenadas de mundo
-  feixe.rotation.set(0, 0.6866, 0.1538) // aponta para o centro da parede
+  feixe.position.set(-0.127, 1.404, 0.445) // boca da lanterna, em coordenadas de mundo
+  feixe.rotation.set(0, 0.747, 0.0652) // aponta para o centro da parede
 
-  const fan: [number, number][] = [
-    [0, 0], [0.09, 0.035], [-0.09, 0.035], [0.062, -0.062],
-    [-0.062, -0.062], [0.118, -0.012], [-0.118, -0.012],
-  ]
+  // cone de luz: raios em anel que acertam a BORDA do círculo projetado,
+  // deixando o desenho do centro livre (antes os raios cobriam o desenho)
+  const fan: [number, number][] = []
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * Math.PI * 2 + 0.2
+    fan.push([Math.cos(a) * 0.235, Math.sin(a) * 0.235])
+  }
   for (const [yaw, pitch] of fan) {
     const holder = new THREE.Group()
     holder.rotation.set(0, yaw, pitch)
-    const ray = cylinder(0.055, 0.008, 1.95, '#ffefc0', { emissive: GLOW, emissiveIntensity: 1.0 })
+    const ray = cylinder(0.045, 0.008, 1.97, '#ffefc0', { emissive: GLOW, emissiveIntensity: 1.0 })
     ray.rotation.z = -Math.PI / 2
-    ray.position.x = 0.975
+    ray.position.x = 0.985
+    // luz é translúcida e não faz sombra: o desenho aparece através do feixe
+    const rayMat = ray.material as THREE.MeshStandardMaterial
+    rayMat.transparent = true
+    rayMat.opacity = 0.5
+    rayMat.depthWrite = false
+    ray.castShadow = false
     holder.add(ray)
     feixe.add(holder)
   }
@@ -407,9 +429,9 @@ function createScene(): CardScene {
       caption: 'Você mostra o papelzinho com a palavra incompreensível e grita: "VÁ, be-TÜ-der, DÊ!"',
     }),
     seq('papel-voa', 'papel', 7.0, 0.8, [
-      ch('position.x', 0.85, -0.21),
-      ch('position.y', 0.215, 1.09),
-      ch('position.z', 1.3, 0.41),
+      ch('position.x', 0.85, -0.056),
+      ch('position.y', 0.215, 1.183),
+      ch('position.z', 1.3, 0.477),
       ch('rotation.x', 0, 0.2),
       ch('rotation.z', 0.6, 0.15),
     ]),
@@ -448,7 +470,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [-1.9, 3.05, 5.9], target: [0.15, 1.05, 0.05] },
+    cameraHint: { position: [-0.15, 2.25, 4.5], target: [0.4, 1.25, -0.15] },
   }
 }
 
@@ -465,6 +487,7 @@ export const card: Card = {
       'Você mostra um papelzinho com uma palavra incompreensível e grita: "VÁ, BETÜ-DER, DÊ!". Betü é um ornitorrinco bibliotecário de bico chato. Ele mastiga o papel, engole, e a lanterna de minerador na testa dele acende sozinha, projetando o significado na parede.',
   },
   createScene,
+  refine: { organic: ['betu', 'cauda'] },
 }
 
 export default card

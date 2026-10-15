@@ -76,6 +76,24 @@ function createScene(): CardScene {
     base.add(flor)
   }
 
+  // poste listrado de barbearia: a barbearia da VÍLIA é aqui
+  const poste = new THREE.Group()
+  const posteBase = cylinder(0.11, 0.13, 0.12, '#2e3340', { metalness: 0.5, roughness: 0.4 })
+  posteBase.position.y = 0.06
+  const posteTubo = cylinder(0.075, 0.075, 0.8, '#f6f1e4', { roughness: 0.35 })
+  posteTubo.position.y = 0.52
+  const posteTopo = sphere(0.1, '#c9cfd6', { metalness: 0.7, roughness: 0.25 })
+  posteTopo.position.y = 0.95
+  poste.add(posteBase, posteTubo, posteTopo)
+  for (let i = 0; i < 7; i++) {
+    const faixa = torus(0.076, 0.018, i % 2 === 0 ? '#c9372c' : '#2f5fa8', { roughness: 0.4 })
+    faixa.rotation.set(Math.PI / 2 + 0.45, 0, 0)
+    faixa.position.y = 0.2 + i * 0.105
+    poste.add(faixa)
+  }
+  poste.position.set(0.3, CHAO, -1.05)
+  base.add(poste)
+
   root.add(base)
 
   // ── Grupo 2: torre do relógio ────────────────────────────────────────
@@ -84,19 +102,22 @@ function createScene(): CardScene {
 
   const plinto = cylinder(0.52, 0.58, 0.2, '#7c8794', { roughness: 0.75 })
   plinto.position.y = 0.1
-  const fuste = cylinder(0.3, 0.42, 1.85, '#9aa7b4', { roughness: 0.8 })
-  fuste.position.y = 1.1
+  const fuste = cylinder(0.3, 0.42, 1.45, '#9aa7b4', { roughness: 0.8 })
+  fuste.position.y = 0.925
+  const anel = torus(0.36, 0.035, '#7c8794', { roughness: 0.7 })
+  anel.rotation.x = Math.PI / 2
+  anel.position.y = 0.55
   const cornija = cylinder(0.44, 0.34, 0.16, '#7c8794', { roughness: 0.75 })
-  cornija.position.y = 2.06
+  cornija.position.y = 1.73
   const telhado = cone(0.48, 0.55, '#5b6b7d', { roughness: 0.55 })
-  telhado.position.y = 2.42
+  telhado.position.y = 2.08
   const agulha = sphere(0.055, '#c9a24b', { metalness: 0.8, roughness: 0.25 })
-  agulha.position.y = 2.72
-  torre.add(plinto, fuste, cornija, telhado, agulha)
+  agulha.position.y = 2.38
+  torre.add(plinto, fuste, anel, cornija, telhado, agulha)
   root.add(torre)
 
   const relogio = new THREE.Group()
-  relogio.position.set(-1.4, 2.12, -0.22)
+  relogio.position.set(-1.4, 1.45, -0.22)
 
   const mostrador = cylinder(0.48, 0.48, 0.07, '#f6f1e4', { roughness: 0.3 })
   mostrador.rotation.x = Math.PI / 2
@@ -134,8 +155,8 @@ function createScene(): CardScene {
 
   // ── Grupo 3: o barbeiro viking ───────────────────────────────────────
   const barbeiro = person({ body: '#c94f3d', skin: '#e8c39e', height: 1.55, armAngle: 0.45 })
-  barbeiro.position.set(-0.3, CHAO, 0.2)
-  barbeiro.rotation.y = -1.9 // olha para o relógio da torre
+  barbeiro.position.set(-0.5, CHAO, -0.49)
+  barbeiro.rotation.y = -1.25 // encara o relógio, rosto e barba em 3/4 para a câmera
 
   // listras de avental de barbeiro
   for (const alturaListra of [0.32, 0.5]) {
@@ -156,9 +177,9 @@ function createScene(): CardScene {
   aroCapacete.position.y = 0.1
   capacete.add(domo, aroCapacete)
   for (const lado of [-1, 1]) {
-    const chifre = cone(0.06, 0.22, '#f2ead8', { roughness: 0.5 })
-    chifre.position.set(lado * 0.32, 0.21, 0)
-    chifre.rotation.z = -lado * 1.2
+    const chifre = cone(0.075, 0.3, '#f2ead8', { roughness: 0.5 })
+    chifre.position.set(lado * 0.3, 0.28, 0)
+    chifre.rotation.z = -lado * 0.65 // chifres para cima: silhueta viking
     capacete.add(chifre)
   }
   cabecaBarbeiro.add(capacete)
@@ -168,17 +189,20 @@ function createScene(): CardScene {
   barba.scale.set(1, 0.8, 0.7)
   cabecaBarbeiro.add(barba)
 
-  // braço esquerdo erguido em direção à garrafa
-  barbeiro.getObjectByName('armL')!.rotation.z = 2.5
+  // braço do lado da câmera erguido para a frente, segurando a garrafa
+  const bracoGarrafa = barbeiro.getObjectByName('armR')!
+  bracoGarrafa.rotation.z = 0
+  bracoGarrafa.rotation.x = -2.0
 
   root.add(barbeiro)
 
   // ── Grupo 4: a garrafa de SKOL LEve (acento da cena) e o carimbo ─────
-  // Aponta +y no espaço local; ao inclinar (rotation.z: 0.35 → 0.95) a
-  // búca (y local 0.78) desce até tocar o mostrador em (-1.18, 1.97).
+  // Aponta +y no espaço local, base na mão do barbeiro; ao inclinar
+  // (rotation.z: 0.3 → 0.9) a búca (y local 0.78) toca o mostrador em
+  // (-1.2, 1.3) e depois ergue um pouco (0.9 → 0.65) para mostrar a marca.
   const garrafa = new THREE.Group()
-  garrafa.position.set(-0.55, 1.52, -0.165)
-  garrafa.rotation.z = 0.95
+  garrafa.position.set(-0.59, 0.82, -0.12)
+  garrafa.rotation.z = 0.65
 
   const vidro = lathe(
     [
@@ -210,14 +234,18 @@ function createScene(): CardScene {
   root.add(garrafa)
 
   // Marca carimbada no mostrador, exatamente onde a búca encosta.
-  const carimbo = torus(0.07, 0.024, '#f0a127', { roughness: 0.4 })
-  carimbo.position.set(-1.18, 1.97, -0.165)
+  const carimbo = new THREE.Group()
+  const carimboAro = torus(0.065, 0.022, '#e0841a', { roughness: 0.4 })
+  const carimboMiolo = cylinder(0.05, 0.05, 0.008, '#f3b552', { roughness: 0.5 })
+  carimboMiolo.rotation.x = Math.PI / 2
+  carimbo.add(carimboAro, carimboMiolo)
+  carimbo.position.set(-1.2, 1.3, -0.172)
   root.add(carimbo)
 
   // ── Grupo 5: você ao telefone ────────────────────────────────────────
   const voce = person({ body: '#3f6fa8', skin: '#e8c39e', height: 1.45, armAngle: 0.35 })
-  voce.position.set(1.5, CHAO, 0.75)
-  voce.rotation.y = -1.85 // olha para o barbeiro e a torre
+  voce.position.set(0.8, CHAO, 0.45)
+  voce.rotation.y = -1.15 // olha para o barbeiro, 3/4 para a câmera
 
   const cabecaVoce = voce.getObjectByName('head')!
 
@@ -264,12 +292,13 @@ function createScene(): CardScene {
       ease: 'easeOut',
       caption: "O barbeiro viking só marca horário mediante pedágio: 'uma SKOL LEve!'",
     }),
-    seq('barbeiro-turn', 'barbeiro', 4.8, 0.5, [ch('rotation.y', -1.25, -1.9)]),
-    seq('garrafa-rise', 'garrafa', 5.7, 0.8, [riseFrom(1.52, 2.5)], {
+    seq('barbeiro-turn', 'barbeiro', 4.8, 0.5, [ch('rotation.y', -0.6, -1.25)]),
+    seq('garrafa-rise', 'garrafa', 5.7, 0.8, [riseFrom(0.82, 2.5)], {
       ease: 'easeOut',
       caption: "Você paga a SKOL LEve ('skulle')…",
     }),
-    seq('garrafa-stamp', 'garrafa', 6.7, 0.55, [ch('rotation.z', 0.35, 0.95)]),
+    seq('garrafa-stamp', 'garrafa', 6.7, 0.55, [ch('rotation.z', 0.3, 0.9)]),
+    seq('garrafa-ergue', 'garrafa', 7.35, 0.4, [ch('rotation.z', 0.9, 0.65)], { ease: 'easeOut' }),
     seq('carimbo-pop', 'carimbo', 7.2, 0.45, [
       ch('scale.x', 0.01, 1),
       ch('scale.y', 0.01, 1),
@@ -288,7 +317,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [2.6, 3.0, 5.5], target: [-0.1, 1.05, 0] },
+    cameraHint: { position: [0.35, 2.4, 4.6], target: [-0.45, 1.15, -0.2] },
   }
 }
 

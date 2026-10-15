@@ -20,7 +20,7 @@ import {
  * ursäkta-jag-förstår-inte — "Desculpa, eu não entendo."
  * Diorama: saguão de guichê com tapete de fila e pilastras de corda.
  * O turista pisa no pé do THOR, se vira e estende um cheque de desculpas
- * ("o CHEQUE, TÁ?!"). Thor dispara pela boca um FEIXE dourado de runas
+ * ("ÜÜÜ... CHEQUE-ta!"). Thor dispara pela boca um FEIXE dourado de runas
  * que atravessa a cabeça oca do turista e sai ÍNTEgro do outro lado.
  *
  * Paleta: azul-ardósia (piso/Thor/metal), verde dessaturado (turista/
@@ -93,7 +93,7 @@ function createScene(): CardScene {
 
   // ─── fila: pilastras de metal + corda de veludo ────────────────────────
   const fila = new THREE.Group()
-  for (const x of [-0.95, 0.95]) {
+  for (const x of [-1.3, 1.3]) {
     const pilastra = new THREE.Group()
     const pe = cylinder(0.12, 0.15, 0.05, '#4a5262', { roughness: 0.3, metalness: 0.7 })
     pe.position.y = 0.025
@@ -104,12 +104,12 @@ function createScene(): CardScene {
     const topo = sphere(0.052, '#5d6673', { roughness: 0.25, metalness: 0.75 })
     topo.position.y = 0.69
     pilastra.add(topo)
-    pilastra.position.set(x, 0.16, -0.95)
+    pilastra.position.set(x, 0.16, -0.62)
     fila.add(pilastra)
   }
-  const corda = capsule(0.03, 1.75, '#8f4340', { roughness: 0.92 })
+  const corda = capsule(0.03, 2.55, '#8f4340', { roughness: 0.92 })
   corda.rotation.z = Math.PI / 2
-  corda.position.set(0, 0.82, -0.95)
+  corda.position.set(0, 0.82, -0.62)
   fila.add(corda)
   root.add(fila)
 
@@ -125,14 +125,21 @@ function createScene(): CardScene {
       [0.001, 0.28],
     ],
     '#aeb8c4',
-    { roughness: 0.25, metalness: 0.8 },
+    { roughness: 0.55, metalness: 0.45 },
   )
   elmo.position.y = 0.02
   cabecaThor.add(elmo)
   for (const lado of [-1, 1]) {
-    const asa = cone(0.07, 0.26, '#e6e1d6', { roughness: 0.45 })
-    asa.position.set(lado * 0.31, 0.15, 0)
-    asa.rotation.z = -lado * 0.85
+    // asa de três penas em leque, presa na lateral do elmo
+    const asa = new THREE.Group()
+    asa.position.set(lado * 0.29, 0.14, -0.02)
+    for (let i = 0; i < 3; i++) {
+      const pena = capsule(0.05, 0.3 - i * 0.07, i === 0 ? '#f2eee6' : '#ddd8cc', { roughness: 0.5 })
+      pena.scale.z = 0.32
+      pena.rotation.z = -lado * (0.35 + i * 0.32)
+      pena.position.set(lado * (0.1 + i * 0.03), 0.12 - i * 0.05, -0.03 * i)
+      asa.add(pena)
+    }
     cabecaThor.add(asa)
     const sobrancelha = rbox(0.13, 0.035, 0.03, 0.012, '#7a4a26', { roughness: 0.85 })
     sobrancelha.position.set(lado * 0.115, 0.11, 0.268)
@@ -155,25 +162,34 @@ function createScene(): CardScene {
   capa.position.set(0, 0.52, -0.28)
   capa.rotation.x = 0.1
   thor.add(capa)
-  thor.position.set(-1.15, 0.16, 0)
-  thor.rotation.y = 1.45 // encara o turista, de leve para a câmera
+  thor.position.set(-0.8, 0.16, 0)
+  thor.rotation.y = 1.15 // encara o turista, abrindo o rosto para a câmera
   root.add(thor)
 
   // ─── Mjölnir: fincado de pé ao lado do Thor ────────────────────────────
+  // cabeçote no chão, cabo para cima — como o Mjölnir que ninguém levanta
   const martelo = new THREE.Group()
-  const pomo = sphere(0.06, '#6e4522', { roughness: 0.75 })
-  pomo.position.y = 0.03
-  martelo.add(pomo)
-  const cabo = cylinder(0.045, 0.055, 0.66, '#8b5a2b', { roughness: 0.8 })
-  cabo.position.y = 0.36
-  martelo.add(cabo)
-  const cabecote = rbox(0.5, 0.3, 0.3, 0.06, '#87909f', { roughness: 0.28, metalness: 0.75 })
-  cabecote.position.y = 0.78
+  const cabecote = rbox(0.5, 0.3, 0.3, 0.06, '#87909f', { roughness: 0.4, metalness: 0.65 })
+  cabecote.position.y = 0.15
   martelo.add(cabecote)
-  const cinta = rbox(0.52, 0.07, 0.32, 0.02, '#5d6673', { roughness: 0.3, metalness: 0.7 })
-  cinta.position.y = 0.78
-  martelo.add(cinta)
-  martelo.position.set(-1.78, 0.16, 0.5)
+  for (const lado of [-1, 1]) {
+    const cinta = rbox(0.06, 0.32, 0.32, 0.02, '#5d6673', { roughness: 0.4, metalness: 0.6 })
+    cinta.position.set(lado * 0.17, 0.15, 0)
+    martelo.add(cinta)
+  }
+  const cabo = cylinder(0.045, 0.05, 0.62, '#8b5a2b', { roughness: 0.8 })
+  cabo.position.y = 0.6
+  martelo.add(cabo)
+  for (let i = 0; i < 3; i++) {
+    const tira = torus(0.05, 0.012, '#5a3a1d', { roughness: 0.85 })
+    tira.rotation.x = Math.PI / 2
+    tira.position.y = 0.72 + i * 0.06
+    martelo.add(tira)
+  }
+  const pomo = sphere(0.06, '#6e4522', { roughness: 0.75 })
+  pomo.position.y = 0.93
+  martelo.add(pomo)
+  martelo.position.set(-1.45, 0.16, 0.5)
   martelo.rotation.y = 0.4
   root.add(martelo)
 
@@ -203,8 +219,8 @@ function createScene(): CardScene {
   camera.add(lente)
   camera.position.set(0, 0.6, 0.24)
   turista.add(camera)
-  turista.position.set(1.15, 0.16, 0)
-  turista.rotation.y = -1.45 // virado para o Thor
+  turista.position.set(0.8, 0.16, 0)
+  turista.rotation.y = -1.15 // virado para o Thor, rosto aberto para a câmera
   root.add(turista)
 
   // braço que estende o cheque — dobradiça no próprio ombro do turista
@@ -230,8 +246,8 @@ function createScene(): CardScene {
   carimbo.rotation.x = Math.PI / 2
   carimbo.position.set(-0.18, -0.11, 0.016)
   cheque.add(carimbo)
-  cheque.position.set(0.72, 0.85, 0.35)
-  cheque.rotation.y = -1.2 // papel de frente para o Thor
+  cheque.position.set(0.6, 0.85, 0.42)
+  cheque.rotation.y = -0.95 // papel de frente para o Thor e para a câmera
   cheque.rotation.z = 0.26
   root.add(cheque)
 
@@ -241,19 +257,19 @@ function createScene(): CardScene {
   anel.rotation.y = Math.PI / 2
   anel.position.x = 0.06
   feixe.add(anel)
-  const jato = cylinder(0.105, 0.105, 2.5, OURO, {
+  const jato = cylinder(0.105, 0.105, 2.1, OURO, {
     roughness: 0.3,
     emissive: '#ff9e00',
     emissiveIntensity: 1.1,
   })
   jato.rotation.z = -Math.PI / 2
-  jato.position.x = 1.25
+  jato.position.x = 1.05
   feixe.add(jato)
   const ponta = cone(0.2, 0.36, '#f7c948', { emissive: '#ffb703', emissiveIntensity: 1.3 })
   ponta.rotation.z = -Math.PI / 2
-  ponta.position.x = 2.62
+  ponta.position.x = 2.22
   feixe.add(ponta)
-  for (const x of [0.55, 1.35, 2.3]) {
+  for (const x of [0.42, 0.95, 1.85]) {
     const runa = rbox(0.15, 0.15, 0.15, 0.035, '#d97b29', {
       emissive: '#b45309',
       emissiveIntensity: 0.9,
@@ -263,7 +279,8 @@ function createScene(): CardScene {
     runa.position.x = x
     feixe.add(runa)
   }
-  feixe.position.set(-0.86, 1.165, 0.03) // boca do Thor
+  feixe.position.set(-0.56, 1.165, 0.11) // boca do Thor
+  feixe.rotation.y = 0.08 // mira no centro da cabeça do turista
   root.add(feixe)
 
   const parts = [
@@ -291,19 +308,19 @@ function createScene(): CardScene {
       caption: 'É o THOR — martelo em punho, um deus nórdico que só fala sueco.',
     }),
     seq('martelo-sobe', 'martelo', 2.2, 0.8, [riseFrom(0.16, 1.4)]),
-    seq('thor-vira', 'thor', 2.9, 0.55, [ch('rotation.y', 0, 1.45)]),
+    seq('thor-vira', 'thor', 2.9, 0.55, [ch('rotation.y', 0, 1.15)]),
 
     // turista
     seq('turista-sobe', 'turista', 3.9, 0.8, [riseFrom(0.16, 1.9)], {
       caption: 'Você, o turista arrependido, se vira para pedir desculpas…',
     }),
     seq('braco-prepara', 'braco', 3.9, 0.8, [ch('rotation.x', 0, 0)]),
-    seq('turista-vira', 'turista', 4.65, 0.6, [ch('rotation.y', 0, -1.45)]),
+    seq('turista-vira', 'turista', 4.65, 0.6, [ch('rotation.y', 0, -1.15)]),
 
     // cheque
     seq('braco-estende', 'braco', 5.6, 0.6, [ch('rotation.x', 0, -1.4)]),
     seq('cheque-sobe', 'cheque', 5.75, 0.6, [riseFrom(0.85, 1.3)], {
-      caption: "…e estende um cheque: 'o CHEQUE, TÁ?!' — u-CHÉK-ta: ursäkta!",
+      caption: "…geme ÜÜÜ… e estende um cheque: 'CHEQUE-ta!' — ÜÜ-shék-ta: ursäkta!",
     }),
     seq('cheque-inclina', 'cheque', 6.3, 0.5, [ch('rotation.z', 0, 0.26)]),
 
@@ -311,7 +328,7 @@ function createScene(): CardScene {
     seq('feixe-dispara', 'feixe', 7.6, 0.7, [ch('scale.x', 0.02, 1)], {
       ease: 'easeOut',
       caption:
-        'Thor responde disparando pela boca um FEIXE dourado de runas: FEIXE-THOR — fêsh-TÓR: förstår!',
+        'Thor responde disparando pela boca um FEIXE dourado de runas: FEIXE-THÔR — fö-SHTÔR: förstår!',
     }),
     seq('thor-recua', 'thor', 7.6, 0.35, [ch('rotation.z', 0, 0.09)]),
     seq('thor-volta', 'thor', 7.95, 0.35, [ch('rotation.z', 0.09, 0)]),
@@ -319,7 +336,7 @@ function createScene(): CardScene {
     // reação: o feixe atravessa e sai íntegro
     seq('turista-treme-1', 'turista', 9.0, 0.4, [ch('rotation.z', 0, 0.15)], {
       caption:
-        "O feixe atravessa a cabeça oca e sai ÍNTEgro — nada ficou dentro! 'IÁ… FEIXE-THOR… ÍN-te!' — Ursäkta, jag förstår inte.",
+        "O feixe atravessa a cabeça oca e sai ÍNTEgro — nada ficou dentro! 'IÁ… FEIXE-THÔR… ÍN-te!' — Ursäkta, jag förstår inte.",
     }),
     seq('turista-treme-2', 'turista', 9.4, 0.4, [ch('rotation.z', 0.15, 0)]),
     seq('cheque-balanca-1', 'cheque', 9.7, 0.4, [ch('rotation.z', 0.26, 0.42)]),
@@ -330,7 +347,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.4, 3.0, 6.3], target: [0, 1.0, 0] },
+    cameraHint: { position: [0.3, 1.95, 4.4], target: [0.1, 0.8, 0.1] },
   }
 }
 
@@ -341,11 +358,11 @@ export const card: Card = {
     fraseFonte: 'Desculpa, eu não entendo.',
     fraseAlvo: 'Ursäkta, jag förstår inte.',
     pronuncia:
-      "u-CHÉK-ta, iá fêsh-TÓR ÍN-te (o 'rs' de 'ursäkta' e de 'förstår' vira som de 'ch'/'x': 'uchékta', 'fêshtór')",
+      "ÜÜ-shék-ta, iá fö-SHTÔR ÍN-te (força no ÜÜ longo de lábios em bico; o 'rs' de 'ursäkta' e de 'förstår' vira um 'ch'/'x': 'üüchékta', 'föchtôr'; o å de 'står' é Ô fechado)",
     ponteSonora:
-      "u-CHÉK-ta, iá fêsh-TÓR ÍN-te ~ \"o CHEQUE, TÁ?! ... IÁ... FEIXE-THOR... ÍN-te!\" — 'o CHEQUE, TÁ' dá 'u-CHÉK-ta'; 'FEIXE-THOR' emendado sai 'fei-sh-TÓR' ≈ 'fêsh-TÓR', com o chiado certo do 'rs'; o feixe atravessa ÍNTEgro, cravando o acento de 'ÍN-te'.",
+      "ÜÜ-shék-ta, iá fö-SHTÔR ÍN-te ~ \"ÜÜÜ... CHEQUE-ta! ... IÁ... FEIXE-THÔR... ÍN-te!\" — o ÜÜÜ é o gemido envergonhado, LONGO, lábios em bico e língua pra frente, e leva a força; CHEQUE-ta numa palavra só, CHÉK-ta, sem o 'i' de 'chéki' e com o -ta fraquinho; 'FEIXE-THÔR' emendado sai 'fei-sh-TÔR' ≈ 'fö-SHTÔR', com o chiado certo do 'rs' e o Ô fechado; o feixe atravessa ÍNTEgro, cravando o acento de 'ÍN-te'.",
     historia:
-      "Na fila, você pisa no pé do THOR e se desculpa estendendo um cheque: 'o CHEQUE, TÁ?!' (ursäkta). Thor responde disparando pela boca um FEIXE dourado de runas — sueco puro — que atravessa sua cabeça oca e sai do outro lado ÍNTEgro: nada ficou dentro. Você só consegue balbuciar: 'IÁ... FEIXE-THOR... ÍN-te!' — desculpa, eu não entendo.",
+      "Na fila, você pisa no pé do THOR, solta um gemido envergonhado — ÜÜÜ... — e se desculpa estendendo um cheque: 'CHEQUE-ta!' (ursäkta). Thor responde disparando pela boca um FEIXE dourado de runas — sueco puro — que atravessa sua cabeça oca e sai do outro lado ÍNTEgro: nada ficou dentro. Você só consegue balbuciar: 'IÁ... FEIXE-THÔR... ÍN-te!' — desculpa, eu não entendo.",
   },
   createScene,
 }

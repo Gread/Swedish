@@ -24,6 +24,18 @@ import {
  * (#3f7a63) + madeira quente da fika (#8a5f38). Acento saturado RESERVADO
  * ao TÁxi amarelo (#f0b52e) — o objeto que o skatista VIu.
  */
+/**
+ * O braço de person() gira pelo MEIO (metade sobe acima do ombro quando ele
+ * ergue). Aqui o pivô vai para o topo do braço, para o brinde sair do ombro.
+ */
+function pivoNoOmbro(arm: THREE.Object3D, height: number) {
+  const d = 0.19 * height
+  const m = arm as THREE.Mesh
+  m.geometry = m.geometry.clone().translate(0, -d, 0)
+  m.position.y += d
+  for (const c of m.children) c.position.y -= d
+}
+
 function createScene(): CardScene {
   const root = new THREE.Group()
   const scatter = rng(23)
@@ -65,7 +77,7 @@ function createScene(): CardScene {
   base.add(arbusto2)
 
   const pedra = rock(0.13, '#79818f', 3, { roughness: 0.9 })
-  pedra.position.set(-0.4, 0.22, 1.55)
+  pedra.position.set(1.95, 0.22, 1.0)
   pedra.rotation.y = scatter() * Math.PI
   base.add(pedra)
 
@@ -139,6 +151,14 @@ function createScene(): CardScene {
   const botaoCapacete = sphere(0.045, '#3e4756', { roughness: 0.45 })
   botaoCapacete.position.y = 0.3
   cabecaSkatista.add(capacete, abaCapacete, botaoCapacete)
+  // um braço solto, o outro APONTANDO para o táxi que ele VIu
+  const bracoSolto = surfista.getObjectByName('armL')!
+  pivoNoOmbro(bracoSolto, 1.4)
+  bracoSolto.rotation.z = -0.3
+  const bracoAponta = surfista.getObjectByName('armR')!
+  pivoNoOmbro(bracoAponta, 1.4)
+  bracoAponta.rotation.x = -1.45
+  bracoAponta.rotation.z = 0.1
   skatista.add(surfista)
 
   // pose FINAL: freado na calçada, meio virado para o táxi
@@ -278,7 +298,8 @@ function createScene(): CardScene {
 
   // braço direito = dobradiça do brinde (pose final: erguido)
   const braco = taxista.getObjectByName('armR')!
-  braco.rotation.z = 2.4
+  pivoNoOmbro(braco, 1.45)
+  braco.rotation.z = 2.6 // mão acima do quepe, do lado da câmera
 
   // ================= O convite: xícara + kanelbulle =================
   const xicara = new THREE.Group()
@@ -307,7 +328,7 @@ function createScene(): CardScene {
   vapor2.position.set(-0.02, 0.31, 0.01)
   xicara.add(vapor1, vapor2)
   // pose FINAL: erguida na mão do taxista (nasce na mesa e sobe até lá)
-  xicara.position.set(1.33, 0.9, 0.89)
+  xicara.position.set(1.34, 1.4, 1.0)
   root.add(xicara)
 
   const kanelbulle = new THREE.Group()
@@ -391,7 +412,7 @@ function createScene(): CardScene {
       caption: 'Ao lado do TÁxi, o taxista montou a mesinha sagrada da fika.',
     }),
     seq('taxista-rise', 'taxista', 6.7, 0.75, [riseFrom(0.16, 1.75)], { ease: 'easeOut' }),
-    seq('braco-pronto', 'braco', 6.7, 0.75, [ch('rotation.z', -0.5, -0.5)]),
+    seq('braco-pronto', 'braco', 6.7, 0.75, [ch('rotation.z', 0.15, 0.15)]),
 
     // 5) O convite nasce na mesa
     seq(
@@ -412,13 +433,13 @@ function createScene(): CardScene {
     ),
 
     // 6) O brinde: braço-dobradiça sobe e a xícara vai da mesa à mão
-    seq('braco-ergue', 'braco', 9.5, 0.7, [ch('rotation.z', -0.5, 2.4)], { ease: 'easeOut' }),
+    seq('braco-ergue', 'braco', 9.5, 0.7, [ch('rotation.z', 0.15, 2.6)], { ease: 'easeOut' }),
     seq(
       'xicara-ergue',
       'xicara',
       9.55,
       0.8,
-      [ch('position.x', 0.5, 1.33), ch('position.y', 0.76, 0.9), ch('position.z', 0.95, 0.89)],
+      [ch('position.x', 0.5, 1.34), ch('position.y', 0.76, 1.4), ch('position.z', 0.95, 1.0)],
       {
         ease: 'easeInOut',
         caption: "…ergue a xícara e grita: 'ENtão… FIKA!' — Ska vi ta en fika?",
@@ -430,7 +451,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.9, 3.0, 6.2], target: [0, 0.9, 0] },
+    cameraHint: { position: [0.55, 2.45, 4.45], target: [0.0, 0.95, -0.1] },
   }
 }
 

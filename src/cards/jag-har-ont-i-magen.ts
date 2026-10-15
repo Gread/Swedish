@@ -101,8 +101,9 @@ function createScene(): CardScene {
 
   // ---- lixeira metálica tombada, sobras escapando --------------------------
   const lixeira = new THREE.Group()
-  lixeira.position.set(-2.0, GY, -0.95)
-  lixeira.rotation.y = 0.42
+  // à esquerda do javali, boca virada para ele: lê inteira, sem ficar atrás do bicho
+  lixeira.position.set(-2.05, GY, 0.12)
+  lixeira.rotation.y = 0.25
 
   const lata = lathe(
     [
@@ -186,8 +187,8 @@ function createScene(): CardScene {
 
   // ---- javali culpado, rindo de lado ---------------------------------------
   const javali = new THREE.Group()
-  javali.position.set(-1.42, GY, -0.2)
-  javali.rotation.y = 1.33 // olha para você (+z local)
+  javali.position.set(-1.05, GY, -0.6)
+  javali.rotation.y = 1.14 // olha para você (+z local)
 
   const tronco = capsule(0.34, 0.5, BOAR, { roughness: 0.9 })
   tronco.rotation.x = Math.PI / 2
@@ -309,7 +310,7 @@ function createScene(): CardScene {
   const barriga = new THREE.Group()
   barriga.position.set(VX, GY + 0.55, VZ + 0.37)
 
-  const balao = sphere(0.58, PINK, { roughness: 0.22 })
+  const balao = sphere(0.58, PINK, { roughness: 0.34, detail: 0.35 })
   balao.scale.set(1.08, 0.94, 1.0)
   barriga.add(balao)
 
@@ -334,38 +335,65 @@ function createScene(): CardScene {
   root.add(barriga)
 
   // ---- mãos apertando as laterais da barriga -------------------------------
+  // cada braço vai do ombro (girado com o corpo) até a lateral do balão
   const bracos = new THREE.Group()
   bracos.position.set(VX, GY + 0.9, VZ + 0.08)
+  const up = new THREE.Vector3(0, 1, 0)
   for (const s of [-1, 1]) {
-    const braco = capsule(0.072, 0.3, DENIM, { roughness: 0.8 })
-    braco.position.set(s * 0.42, -0.1, 0.2)
-    braco.rotation.set(-0.4, 0, -s * 0.78)
-    const mao = sphere(0.1, SKIN_GREEN, { roughness: 0.65 })
-    mao.position.y = -0.23
-    braco.add(mao)
-    for (let i = 0; i < 3; i++) {
-      const dedo = capsule(0.026, 0.05, SKIN_GREEN, { roughness: 0.65 })
-      dedo.position.set((i - 1) * 0.055, -0.29, 0.06)
-      dedo.rotation.x = 0.6
-      braco.add(dedo)
-    }
+    const ombro = new THREE.Vector3(s * 0.25, -0.07, s * 0.1 - 0.06)
+    const pulso = new THREE.Vector3(s * 0.6, -0.3, 0.36)
+    const dir = pulso.clone().sub(ombro)
+    const len = dir.length()
+    const braco = capsule(0.075, len - 0.15, DENIM, { roughness: 0.8 })
+    braco.position.copy(ombro).add(pulso).multiplyScalar(0.5)
+    braco.quaternion.setFromUnitVectors(up, dir.clone().normalize())
     bracos.add(braco)
+
+    const punho = torus(0.072, 0.022, '#27365a', { roughness: 0.8 })
+    punho.position.copy(pulso).addScaledVector(dir.clone().normalize(), -0.06)
+    punho.quaternion.copy(braco.quaternion)
+    punho.rotateX(Math.PI / 2)
+    bracos.add(punho)
+
+    // mão espalmada colada ao balão, dedos curvando para dentro
+    const mao = sphere(0.11, SKIN_GREEN, { roughness: 0.65 })
+    mao.scale.set(0.7, 1, 1.05)
+    mao.position.set(s * 0.66, -0.33, 0.42)
+    mao.rotation.y = s * 0.5
+    bracos.add(mao)
+    for (let i = 0; i < 4; i++) {
+      const dedo = capsule(0.026, 0.07, SKIN_GREEN, { roughness: 0.65 })
+      dedo.position.set(s * 0.63, -0.25 - i * 0.05, 0.53 + (i === 0 || i === 3 ? -0.02 : 0))
+      dedo.rotation.set(0, 0, s * 1.25)
+      bracos.add(dedo)
+    }
+    const polegar = capsule(0.028, 0.06, SKIN_GREEN, { roughness: 0.65 })
+    polegar.position.set(s * 0.7, -0.23, 0.36)
+    polegar.rotation.set(0.5, 0, s * 0.4)
+    bracos.add(polegar)
   }
   root.add(bracos)
 
-  // ---- três anéis de dor irradiando ----------------------------------------
+  // ---- ondas de dor irradiando das laterais da barriga ))) -----------------
+  // arcos (não anéis inteiros): não tapam o rosto e leem como "lateja"
   const aneis = new THREE.Group()
-  aneis.position.set(VX, GY + 0.86, VZ + 0.65)
-  const raios: [number, number, number, string][] = [
-    [0.56, 0.036, 0.0, '#c9503a'],
-    [0.71, 0.03, 0.16, '#b8402f'],
-    [0.86, 0.024, 0.32, '#a63627'],
+  aneis.position.set(VX, GY + 0.55, VZ + 0.37)
+  const raios: [number, number, string][] = [
+    [0.82, 0.034, '#d0503a'],
+    [0.95, 0.029, '#bd4230'],
+    [1.08, 0.024, '#a63627'],
   ]
-  for (const [r, tube, dz, cor] of raios) {
-    const anel = torus(r, tube, cor, { roughness: 0.55 })
-    anel.position.z = dz
-    anel.scale.y = 0.88
-    aneis.add(anel)
+  for (const s of [-1, 1]) {
+    for (const [r, tube, cor] of raios) {
+      const arc = 1.05 - (r - 0.82) * 1.2
+      const anel = torus(r, tube, cor, { roughness: 0.55 })
+      anel.geometry.dispose()
+      anel.geometry = new THREE.TorusGeometry(r, tube, 12, 40, arc)
+      const centro = s > 0 ? 0 : Math.PI
+      anel.rotation.z = centro - arc / 2
+      anel.position.z = 0.1
+      aneis.add(anel)
+    }
   }
   root.add(aneis)
 
@@ -471,7 +499,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.1, 6.35], target: [0.0, 1.0, 0.25] },
+    cameraHint: { position: [0.3, 2.8, 4.85], target: [-0.15, 0.75, 0.0] },
   }
 }
 
@@ -490,6 +518,7 @@ export const card: Card = {
       'Ontem um javali te ofereceu jantar: as sobras que ele garimpou na lixeira, focinho enfiado até o fundo, revirando tudo como quem fuça raiz. Ele solta a risada soprada RRÁR! Hoje a sua barriga é um balão rosa do tamanho de um sofá, entupido do que você comeu ÓNTI, e ela geme: não me MÁ-GUEN!',
   },
   createScene,
+  refine: { organic: ['javali'] },
 }
 
 export default card

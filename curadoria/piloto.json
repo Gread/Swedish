@@ -44,7 +44,7 @@
       "id": "ursakta-jag-forstar-inte",
       "sv": "Ursäkta, jag förstår inte.",
       "pt": "Desculpa, eu não entendo.",
-      "pronuncia": "u-CHÉK-ta, iá fêsh-TÓR ÍN-te (o 'rs' de 'ursäkta' e de 'förstår' vira som de 'ch'/'x': 'uchékta', 'fêshtór')",
+      "pronuncia": "ÜÜ-shék-ta, iá fö-SHTÔR ÍN-te (força no ÜÜ longo de lábios em bico; o 'rs' de 'ursäkta' e de 'förstår' vira um 'ch'/'x': 'üüchékta', 'föchtôr'; o å de 'står' é Ô fechado)",
       "contexto": "Quando o atendente dispara uma explicação e você se perde — presencial ou por telefone.",
       "porque": "Frase de sobrevivência universal: curta e sinaliza na hora que a pessoa precisa reformular. 'Ursäkta' sozinho também serve para chamar atenção ou pedir licença — dois usos em uma palavra."
     },
@@ -409,8 +409,8 @@
     },
     {
       "id": "ursakta-jag-forstar-inte",
-      "ponte_sonora": "u-CHÉK-ta, iá fêsh-TÓR ÍN-te ~ \"o CHEQUE, TÁ?! ... IÁ... FEIXE-THOR... ÍN-te!\" — 'o CHEQUE, TÁ' dá 'u-CHÉK-ta'; 'FEIXE-THOR' emendado sai 'fei-sh-TÓR' ≈ 'fêsh-TÓR', com o chiado certo do 'rs'; o feixe atravessa ÍNTEgro, cravando o acento de 'ÍN-te'.",
-      "historia": "Na fila, você pisa no pé do THOR e se desculpa estendendo um cheque: 'o CHEQUE, TÁ?!' (ursäkta). Thor responde disparando pela boca um FEIXE dourado de runas — sueco puro — que atravessa sua cabeça oca e sai do outro lado ÍNTEgro: nada ficou dentro. Você só consegue balbuciar: 'IÁ... FEIXE-THOR... ÍN-te!' — desculpa, eu não entendo.",
+      "ponte_sonora": "ÜÜ-shék-ta, iá fö-SHTÔR ÍN-te ~ \"ÜÜÜ... CHEQUE-ta! ... IÁ... FEIXE-THÔR... ÍN-te!\" — o ÜÜÜ é o gemido envergonhado, LONGO, lábios em bico e língua pra frente, e leva a força; CHEQUE-ta numa palavra só, CHÉK-ta, sem o 'i' de 'chéki' e com o -ta fraquinho; 'FEIXE-THÔR' emendado sai 'fei-sh-TÔR' ≈ 'fö-SHTÔR', com o chiado certo do 'rs' e o Ô fechado; o feixe atravessa ÍNTEgro, cravando o acento de 'ÍN-te'.",
+      "historia": "Na fila, você pisa no pé do THOR, solta um gemido envergonhado — ÜÜÜ... — e se desculpa estendendo um cheque: 'CHEQUE-ta!' (ursäkta). Thor responde disparando pela boca um FEIXE dourado de runas — sueco puro — que atravessa sua cabeça oca e sai do outro lado ÍNTEgro: nada ficou dentro. Você só consegue balbuciar: 'IÁ... FEIXE-THÔR... ÍN-te!' — desculpa, eu não entendo.",
       "cena": {
         "descricao": "Thor de martelo em punho dispara um feixe dourado pela boca, que atravessa a cabeça de um turista de cheque estendido e sai do outro lado.",
         "partes": [

@@ -24,9 +24,22 @@ if [ -z "$ORGANIC" ]; then
   echo "$ID: nenhuma peça orgânica declarada — segue procedural"
 else
   rm -f "blockout/refined/$ID.glb" # sem resto de execução anterior mascarando falha
-  "$BLENDER" -b --python tools/blender/refine.py -- \
+  # Um Blender por vez: vários bakes simultâneos na GPU (Metal) travam todos.
+  # Trava por mkdir (atômico); trava de processo morto é descartada.
+  LOCK="$ROOT/blockout/.blender.lock"
+  until mkdir "$LOCK" 2>/dev/null; do
+    HOLDER="$(cat "$LOCK/pid" 2>/dev/null || true)"
+    if [ -n "$HOLDER" ] && ! kill -0 "$HOLDER" 2>/dev/null; then rm -rf "$LOCK"; continue; fi
+    sleep 2
+  done
+  echo $$ > "$LOCK/pid"
+  trap 'rm -rf "$LOCK"' EXIT
+  # timeout: um bake normal leva <1 min; travado, desiste e libera a fila
+  perl -e 'alarm shift; exec @ARGV' 300 "$BLENDER" -b --python tools/blender/refine.py -- \
     "blockout/$ID.glb" "blockout/refined/$ID.glb" --organic "$ORGANIC" --ao 2>&1 \
     | grep -E "^\[refine\]|Error|Traceback" || true
+  rm -rf "$LOCK"
+  trap - EXIT
   [ -f "blockout/refined/$ID.glb" ] || { echo "$ID: Blender não gerou saída" >&2; exit 1; }
   cp "blockout/refined/$ID.glb" "public/refined/$ID.glb"
   echo "$ID: refinado ($ORGANIC)"

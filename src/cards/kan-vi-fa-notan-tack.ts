@@ -30,8 +30,8 @@ const HELMET = '#f5b32a' // acento saturado reservado ao capacete de minerador
 
 const GY = 0.18 // topo do assoalho
 const TOP = 0.98 // superfície da mesa
-const HOLE: [number, number] = [-0.30, 0.60]
-const TABLE: [number, number] = [0.98, 0.10]
+const HOLE: [number, number] = [0.0, 0.7]
+const TABLE: [number, number] = [0.95, 0.2]
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -85,7 +85,7 @@ function createScene(): CardScene {
   cork.rotation.set(Math.PI / 2, 0, rand() * Math.PI)
   base.add(cork)
 
-  const coin = cylinder(0.075, 0.075, 0.018, '#c8922e', { roughness: 0.28, metalness: 0.8 })
+  const coin = cylinder(0.075, 0.075, 0.018, '#e0b04a', { roughness: 0.32, metalness: 0.35 })
   coin.position.set(-1.35, GY + 0.01, 1.28)
   coin.rotation.z = 0.02 + rand() * 0.05
   base.add(coin)
@@ -155,11 +155,11 @@ function createScene(): CardScene {
     '#f2ede2',
     { roughness: 0.16 },
   )
-  plate.position.set(-0.14, 0.005, 0.16)
+  plate.position.set(0.04, 0.005, 0.1)
   louca.add(plate)
 
   const knife = rbox(0.24, 0.012, 0.035, 0.006, '#c3c8cf', { roughness: 0.22, metalness: 0.75 })
-  knife.position.set(-0.13, 0.075, 0.13)
+  knife.position.set(0.05, 0.075, 0.07)
   knife.rotation.y = 0.55
   louca.add(knife)
 
@@ -233,15 +233,15 @@ function createScene(): CardScene {
   // ---- a toupeira-garçom (olha para a mesa e para quem paga) ----------------
   const toupeira = new THREE.Group()
   toupeira.position.set(HOLE[0], GY, HOLE[1])
-  toupeira.rotation.y = 0.75
+  toupeira.rotation.y = 0.45
 
   const torso = capsule(0.3, 0.34, MOLE, { roughness: 0.88 })
   torso.position.y = 0.42
   toupeira.add(torso)
 
   const belly = capsule(0.19, 0.2, MOLE_LIGHT, { roughness: 0.9 })
-  belly.position.set(0, 0.4, 0.2)
-  belly.scale.z = 0.52
+  belly.position.set(0, 0.4, 0.17)
+  belly.scale.z = 0.62
   toupeira.add(belly)
 
   // gravata-borboleta de garçom
@@ -317,25 +317,34 @@ function createScene(): CardScene {
   toupeira.add(capacete)
 
   // ---- anel de poeira soprado pelo focinho (FÔ) -----------------------------
+  // o anel sobe em diagonal, ao lado da cabeça, sem tapar a cara da toupeira
   const poeira = new THREE.Group()
-  poeira.position.set(0, 0.94, 0.62)
-  const ring = torus(0.34, 0.095, DUST, { roughness: 0.96 })
+  poeira.position.set(0.52, 1.4, 0.5)
+  const ring = torus(0.22, 0.062, DUST, { roughness: 0.96 })
   poeira.add(ring)
-  for (let i = 0; i < 5; i++) {
-    const a = (i / 5) * Math.PI * 2 + 0.4
-    const lump = puff(0.1 + rand() * 0.05, DUST, 4, 61 + i, { roughness: 0.96 })
-    lump.position.set(Math.cos(a) * 0.34, Math.sin(a) * 0.34, (rand() - 0.5) * 0.1)
+  for (let i = 0; i < 6; i++) {
+    const a = (i / 6) * Math.PI * 2 + 0.4
+    const lump = puff(0.055 + rand() * 0.02, DUST, 4, 61 + i, { roughness: 0.96 })
+    lump.position.set(Math.cos(a) * 0.22, Math.sin(a) * 0.22, (rand() - 0.5) * 0.06)
     poeira.add(lump)
   }
-  const core = puff(0.1, '#d6c3a6', 4, 71, { roughness: 0.96 })
-  core.position.set(-0.04, -0.05, -0.14)
-  poeira.add(core)
+  // rastro de terra do focinho até o anel
+  const rastro: [number, number, number, number][] = [
+    [-0.4, -0.46, -0.06, 0.045],
+    [-0.29, -0.33, -0.04, 0.055],
+    [-0.17, -0.2, -0.02, 0.06],
+  ]
+  for (const [tx, ty, tz, tr] of rastro) {
+    const bolota = puff(tr, '#d6c3a6', 4, 71 + Math.round(tr * 100), { roughness: 0.96 })
+    bolota.position.set(tx, ty, tz)
+    poeira.add(bolota)
+  }
   toupeira.add(poeira)
 
   // ---- patinha erguida com a NÚ-TAN (pivô no ombro) -------------------------
   const patinha = new THREE.Group()
-  patinha.position.set(0.28, 0.66, -0.04)
-  patinha.rotation.z = -0.42
+  patinha.position.set(-0.27, 0.68, 0.02)
+  patinha.rotation.z = 0.42
 
   const upperArm = capsule(0.07, 0.24, MOLE, { roughness: 0.88 })
   upperArm.position.y = 0.19
@@ -354,7 +363,7 @@ function createScene(): CardScene {
   // a nota: papel nu, sem envelope
   const nota = new THREE.Group()
   nota.position.set(0.02, 0.62, 0.06)
-  nota.rotation.set(0.06, -0.35, 0.14)
+  nota.rotation.set(0.06, -0.3, -0.32)
   const sheet = rbox(0.3, 0.46, 0.012, 0.008, PAPER, { roughness: 0.72 })
   nota.add(sheet)
   const header = rbox(0.13, 0.028, 0.006, 0.002, INK, { roughness: 0.6 })
@@ -372,8 +381,8 @@ function createScene(): CardScene {
 
   // ---- casco de baixo: o que bate na mesa (TAC) -----------------------------
   const casco = new THREE.Group()
-  casco.position.set(0.26, 0.38, 0.16)
-  casco.rotation.set(0, -0.3, -0.78)
+  casco.position.set(0.26, 0.72, 0.1)
+  casco.rotation.set(0, -0.3, -1.15)
 
   const lowerArm = capsule(0.075, 0.3, MOLE, { roughness: 0.88 })
   lowerArm.position.y = 0.21
@@ -433,7 +442,7 @@ function createScene(): CardScene {
       caption: 'Fura o chão uma TOUPEIRA de gravata: CA-VI! (kan vi)',
     }),
     seq('capacete-pop', 'capacete', 6.0, 0.6, [ch('position.y', 0.8, 1.08)], { ease: 'easeOut' }),
-    seq('casco-dig-out', 'casco', 6.15, 0.75, [ch('rotation.z', 2.9, -0.78)], { ease: 'easeOut' }),
+    seq('casco-dig-out', 'casco', 6.15, 0.75, [ch('rotation.z', 2.9, -1.15)], { ease: 'easeOut' }),
 
     seq('toupeira-inspira', 'toupeira', 7.0, 0.35, [ch('rotation.x', 0, -0.08)], { ease: 'easeOut' }),
     seq(
@@ -445,7 +454,7 @@ function createScene(): CardScene {
         ch('scale.x', 0.01, 1),
         ch('scale.y', 0.01, 1),
         ch('scale.z', 0.01, 1),
-        ch('position.z', 0.26, 0.62),
+        ch('position.z', 0.2, 0.5),
       ],
       {
         ease: 'easeOut',
@@ -476,15 +485,15 @@ function createScene(): CardScene {
       ],
       { ease: 'easeOut' },
     ),
-    seq('patinha-ergue', 'patinha', 9.95, 0.7, [ch('rotation.z', -0.02, -0.42)], { ease: 'easeOut' }),
+    seq('patinha-ergue', 'patinha', 9.95, 0.7, [ch('rotation.z', 0.02, 0.42)], { ease: 'easeOut' }),
 
-    seq('casco-arma', 'casco', 11.2, 0.35, [ch('rotation.z', -0.78, -0.5)], { ease: 'easeOut' }),
-    seq('casco-bate', 'casco', 11.55, 0.28, [ch('rotation.z', -0.5, -0.96)], {
+    seq('casco-arma', 'casco', 11.2, 0.35, [ch('rotation.z', -1.15, -0.72)], { ease: 'easeOut' }),
+    seq('casco-bate', 'casco', 11.55, 0.28, [ch('rotation.z', -0.72, -1.22)], {
       ease: 'easeIn',
       caption: 'O casco bate na mesa: TAC! — Kan vi få notan, tack?',
     }),
     seq('toupeira-impacto', 'toupeira', 11.75, 0.28, [ch('rotation.x', 0, 0.07)], { ease: 'easeOut' }),
-    seq('casco-assenta', 'casco', 11.83, 0.5, [ch('rotation.z', -0.96, -0.78)], { ease: 'easeOut' }),
+    seq('casco-assenta', 'casco', 11.83, 0.5, [ch('rotation.z', -1.22, -1.15)], { ease: 'easeOut' }),
     seq('toupeira-assenta', 'toupeira', 12.03, 0.45, [ch('rotation.x', 0.07, 0)], { ease: 'easeOut' }),
   ]
 
@@ -492,11 +501,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.55, 2.9, 5.95], target: [0.3, 0.88, 0.25] },
+    cameraHint: { position: [0.55, 2.6, 5.0], target: [0.4, 0.95, 0.3] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['toupeira', 'patinha', 'casco', 'poeira'] },
   meta: {
     id: 'kan-vi-fa-notan-tack',
     contexto: "Restaurante e bar com serviço à mesa. Sozinho: 'Kan jag få notan, tack?'.",

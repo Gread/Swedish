@@ -20,7 +20,7 @@ function createScene(): CardScene {
 
   // ---------- BASE do diorama: piso do mercado + adereços ----------
   const base = new THREE.Group()
-  const disco = cylinder(2.55, 2.65, 0.16, '#d8d5c9', { roughness: 0.9 })
+  const disco = cylinder(2.55, 2.65, 0.16, '#8e989c', { roughness: 0.9 })
   disco.position.y = 0.08
   base.add(disco)
 
@@ -31,7 +31,7 @@ function createScene(): CardScene {
       const z = iz * 0.6
       if (Math.hypot(x, z) > 2.05) continue
       if (rand() < 0.08) continue
-      const cor = (ix + iz) % 2 === 0 ? '#eceae2' : '#cdd3d6'
+      const cor = (ix + iz) % 2 === 0 ? '#a9b5ba' : '#8b9aa2'
       const tile = rbox(0.52, 0.03, 0.52, 0.012, cor, { roughness: 0.85 })
       tile.position.set(x, 0.175, z)
       base.add(tile)
@@ -49,7 +49,7 @@ function createScene(): CardScene {
   const coneBase = rbox(0.3, 0.035, 0.3, 0.012, '#b09c4b', { roughness: 0.75 })
   coneBase.position.y = 0.2
   conePiso.add(coneBase)
-  conePiso.position.set(1.5, 0, 1.35)
+  conePiso.position.set(1.95, 0, -0.15)
   conePiso.rotation.y = 0.4
   base.add(conePiso)
 
@@ -141,6 +141,12 @@ function createScene(): CardScene {
     tampa.position.set(0.02 + i * 0.2, 0.915, -0.1 + (rand() - 0.5) * 0.1)
     prateleira.add(tampa)
   }
+  // leite ainda pingando da beira da prateleira, no vão do leite
+  for (const [dx, dl] of [[0.42, 0.16], [0.6, 0.1], [0.74, 0.13]] as const) {
+    const pingo = capsule(0.026, dl, '#f7f5ef', { roughness: 0.2 })
+    pingo.position.set(dx, 0.66 - dl / 2, 0.31)
+    prateleira.add(pingo)
+  }
   // etiqueta caída no vão vazio do leite
   const etiquetaCaida = rbox(0.14, 0.02, 0.09, 0.008, '#f2efe6', { roughness: 0.5 })
   etiquetaCaida.position.set(0.55, 0.77, 0.12)
@@ -157,6 +163,9 @@ function createScene(): CardScene {
     [0.62, 0, 0, 0],
     [0.3, 0.5, 0.32, 0],
     [0.26, -0.48, -0.3, 0],
+    // língua de leite que vem da gôndola até o mar
+    [0.24, -0.86, -0.62, 0],
+    [0.2, -1.2, -0.9, 0],
   ]
   for (const [r, bx, bz] of blobs) {
     const blob = cylinder(r, r + 0.07, 0.05, '#f7f5ef', { roughness: 0.2 })
@@ -226,12 +235,12 @@ function createScene(): CardScene {
   rita.add(avental)
 
   const bracoVassoura = rita.getObjectByName('armR')!
-  bracoVassoura.rotation.set(0.85, 0, -0.25) // empurrando a vassoura
+  bracoVassoura.rotation.set(-1.45, 0, -0.2) // braço pra frente, segurando o cabo
   const bracoFuria = rita.getObjectByName('armL')!
   bracoFuria.rotation.set(-0.2, 0, 2.3) // punho erguido de fúria
 
-  rita.position.set(1.3, 0.19, 0.45)
-  rita.rotation.y = -1.95 // pose final: apontando para o pote na prateleira
+  rita.position.set(1.35, 0.19, -0.35)
+  rita.rotation.y = -0.45 // pose final: 3/4 pra câmera, de cara pro mar de leite
   root.add(rita)
 
   // ---------- a vassoura (pivô no alto do cabo, para varrer) ----------
@@ -253,8 +262,9 @@ function createScene(): CardScene {
     cerda.position.set(-0.12 + i * 0.06, -1.5, 0)
     vassoura.add(cerda)
   }
-  vassoura.position.set(1.0, 1.56, 0.62)
-  vassoura.rotation.z = -0.5 // repouso: cerdas na borda da poça
+  vassoura.position.set(1.75, 1.6, 0.05)
+  vassoura.rotation.x = -0.27 // cabo inclinado pra frente, até a poça
+  vassoura.rotation.z = -0.37 // repouso: cerdas na borda da poça
   root.add(vassoura)
 
   // ---------- o pote de MIEL — acento âmbar da cena ----------
@@ -351,20 +361,20 @@ function createScene(): CardScene {
       ease: 'easeOut',
       caption: "Chega a faxineira RITA, furiosa — VARRE, RITA! (o rr de 'vaRRE-RIta' é o h aspirado de 'hittar')",
     }),
-    seq('vassoura-rise', 'vassoura', 4.15, 0.7, [riseFrom(1.56, 1.8)], { ease: 'easeOut' }),
+    seq('vassoura-rise', 'vassoura', 4.15, 0.7, [riseFrom(1.6, 1.8)], { ease: 'easeOut' }),
     seq('vassoura-varre', 'vassoura', 5.0, 0.75, [
-      ch('rotation.z', -0.5, -0.9),
-      ch('position.x', 1.0, 0.55),
-      ch('position.y', 1.56, 1.36),
+      ch('rotation.z', -0.37, -0.68),
+      ch('position.x', 1.75, 1.4),
+      ch('position.y', 1.6, 1.45),
     ], {
       caption: "RITA VARRE o mar de leite e grita 'IÁ!' a cada vassourada — VARRE, RITA! IÁ…",
     }),
     seq('rita-grita-ia', 'rita', 5.0, 0.4, [ch('rotation.z', 0, 0.12)]),
     seq('rita-recompoe', 'rita', 5.4, 0.4, [ch('rotation.z', 0.12, 0)]),
     seq('vassoura-recolhe', 'vassoura', 5.85, 0.65, [
-      ch('rotation.z', -0.9, -0.5),
-      ch('position.x', 0.55, 1.0),
-      ch('position.y', 1.36, 1.56),
+      ch('rotation.z', -0.68, -0.37),
+      ch('position.x', 1.4, 1.75),
+      ch('position.y', 1.45, 1.6),
     ]),
 
     // ---- o pote de MIEL quente ----
@@ -390,7 +400,7 @@ function createScene(): CardScene {
     ], { ease: 'easeOut' }),
 
     // ---- Rita se vira e aponta o caos ----
-    seq('rita-aponta', 'rita', 9.5, 0.8, [ch('rotation.y', -1.5, -1.95)], {
+    seq('rita-aponta', 'rita', 9.5, 0.8, [ch('rotation.y', 0.05, -0.45)], {
       caption: "Você aponta o caos: 'VARRE, RITA! IÁ… MIÉL QUEN(te)?!' — Var hittar jag mjölken?",
     }),
   ]
@@ -399,7 +409,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [3.4, 3.0, 5.2], target: [-0.2, 1.0, -0.1] },
+    cameraHint: { position: [2.3, 3.0, 5.5], target: [-0.05, 1.05, -0.15] },
   }
 }
 

@@ -11,6 +11,7 @@ import {
   riseFrom,
   rng,
   seq,
+  mat,
   sphere,
   torus,
 } from '../rig/helpers'
@@ -47,7 +48,7 @@ function createScene(): CardScene {
   // moedas de ouro espalhadas fora do tapete (rng fixo)
   const randMoedas = rng(11)
   for (let i = 0; i < 6; i++) {
-    const moeda = cylinder(0.055, 0.055, 0.022, '#d9a441', { metalness: 0.85, roughness: 0.3 })
+    const moeda = cylinder(0.06, 0.06, 0.024, '#e6b24a', { metalness: 0.4, roughness: 0.32 })
     const sz = i % 2 === 0 ? 1 : -1
     moeda.position.set(
       (randMoedas() - 0.5) * 3.4,
@@ -95,7 +96,7 @@ function createScene(): CardScene {
   // ================= O REI =================
   const rei = person({ body: '#6b4596', skin: '#e8c39e', height: 1.5, armAngle: 0.55 })
   rei.position.set(-1.25, 0.22, 0) // em pé sobre o tapete
-  rei.rotation.y = Math.PI / 2 // olha para o LEGO (+x)
+  rei.rotation.y = 1.1 // olha para o LEGO (+x), rosto em 3/4 para a câmera
 
   // gola de arminho
   const gola = torus(0.2, 0.06, '#efe6da', { roughness: 0.95 })
@@ -110,7 +111,7 @@ function createScene(): CardScene {
     rei.add(botao)
   }
 
-  // cetro na mão direita
+  // cetro de ouro
   const cetro = new THREE.Group()
   const haste = cylinder(0.024, 0.024, 0.55, '#d9a441', { metalness: 0.8, roughness: 0.28 })
   cetro.add(haste)
@@ -119,7 +120,8 @@ function createScene(): CardScene {
   cetro.add(orbe)
   cetro.position.set(0, -0.28, 0.08)
   cetro.rotation.x = -0.35
-  rei.getObjectByName('armR')!.add(cetro)
+  // na mão do lado da câmera, para o cetro aparecer
+  rei.getObjectByName('armL')!.add(cetro)
   root.add(rei)
 
   const cabecaRei = rei.getObjectByName('head')!
@@ -155,18 +157,20 @@ function createScene(): CardScene {
   boca.position.set(0, -0.1, 0.24)
   cabecaRei.add(boca)
 
-  // ---- onda sonora do urro, cruzando o salão ----
+  // ---- onda sonora do urro: arcos ))) saindo da boca rumo ao LEGO ----
   const urro = new THREE.Group()
-  const anel = torus(0.16, 0.03, '#e8c56a', { roughness: 0.5 })
-  anel.rotation.y = Math.PI / 2
-  urro.add(anel)
-  const sopro1 = puff(0.11, '#f5ead8', 5, 21, { roughness: 0.9 })
-  sopro1.position.x = -0.28
-  urro.add(sopro1)
-  const sopro2 = puff(0.08, '#f5ead8', 4, 22, { roughness: 0.9 })
-  sopro2.position.x = -0.5
-  urro.add(sopro2)
-  urro.position.set(0.05, 1.14, 0) // pose final: pairando entre o rei e o LEGO
+  const ARCO = Math.PI * 0.62
+  for (const [ax, ar] of [[0, 0.13], [0.36, 0.21], [0.72, 0.29]] as const) {
+    const arco = new THREE.Mesh(
+      new THREE.TorusGeometry(ar, 0.028, 12, 32, ARCO),
+      mat('#f2d679', { roughness: 0.45, emissive: '#e8b84a', emissiveIntensity: 0.35 }),
+    )
+    arco.castShadow = true
+    arco.position.x = ax - ar * 0.55
+    arco.rotation.set(0, 0.35, -ARCO / 2) // arco centrado em +x, de frente p/ câmera
+    urro.add(arco)
+  }
+  urro.position.set(-0.72, 1.16, 0.12) // pose final: saindo da boca do rei
   root.add(urro)
 
   // ================= O LEGO gigante =================
@@ -184,7 +188,15 @@ function createScene(): CardScene {
     legoBloco.add(olho, pupila)
   }
   legoBloco.position.x = 1.25
-  legoBloco.rotation.y = 0.3 // rosto meio virado para a câmera
+  // sorriso curto e educado, embaixo dos olhos
+  const sorriso = new THREE.Mesh(
+    new THREE.TorusGeometry(0.13, 0.025, 10, 24, Math.PI),
+    mat('#5a1712', { roughness: 0.5 }),
+  )
+  sorriso.position.set(-0.765, 0.66, 0)
+  sorriso.rotation.set(0, Math.PI / 2, Math.PI) // meia-lua para baixo, na face -x
+  legoBloco.add(sorriso)
+  legoBloco.rotation.y = 0.75 // rosto (face -x) virado entre o rei e a câmera
   root.add(legoBloco)
 
   const legoPinos = new THREE.Group()
@@ -196,7 +208,7 @@ function createScene(): CardScene {
     }
   }
   legoPinos.position.set(1.25, 1.215, 0)
-  legoPinos.rotation.y = 0.3 // alinhado ao bloco girado
+  legoPinos.rotation.y = 0.75 // alinhado ao bloco girado
   root.add(legoPinos)
 
   const parts = [
@@ -250,7 +262,7 @@ function createScene(): CardScene {
       ch('scale.z', 1.3, 1),
     ]),
     seq('urro-cruza', 'urro', 5.55, 0.7, [
-      ch('position.x', -0.85, 0.05),
+      ch('position.x', -0.92, -0.72),
       ch('scale.x', 0.01, 1),
       ch('scale.y', 0.01, 1),
       ch('scale.z', 0.01, 1),
@@ -264,7 +276,7 @@ function createScene(): CardScene {
     seq('lego-pinos-rise', 'lego-pinos', 7.85, 0.55, [riseFrom(1.215, 0.5)], { ease: 'easeOut' }),
 
     // 6) O LEGO dá uma sacudida e ajeita os pininhos para responder
-    seq('lego-pinos-ajeita', 'lego-pinos', 9.3, 0.75, [ch('rotation.y', 0.3, 0.3 + Math.PI * 2)], {
+    seq('lego-pinos-ajeita', 'lego-pinos', 9.3, 0.75, [ch('rotation.y', 0.75, 0.75 + Math.PI * 2)], {
       caption: 'O LEGO ajeita os pininhos e responde curto que está tudo bem: "Hej! Hur är läget?"',
     }),
     seq('lego-bloco-squash', 'lego-bloco', 9.3, 0.3, [ch('scale.y', 1, 0.9)], { ease: 'easeOut' }),
@@ -275,7 +287,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.0, 6.2], target: [0, 1.0, 0] },
+    cameraHint: { position: [0.5, 2.6, 5.0], target: [0.15, 0.95, 0] },
   }
 }
 

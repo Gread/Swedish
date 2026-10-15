@@ -31,19 +31,24 @@ const ACCENT = '#f0821e' // reservado à HÉLICE — o objeto da ponte sonora
 
 const GY = 0.18 // topo da laje
 const TILT = 0.42 // inclinação do cabo do guarda-sol (para -x, sobre a cadeira)
-const POT_X = 0.95
-const POT_Z = -0.3
+const TILT_X = 0.38 // e para a câmera: o trevo mostra as quatro folhas de frente
+const POT_X = 0.42
+const POT_Z = -0.85
 const STEM_Y = GY + 0.44 // boca do vaso: onde a haste nasce
 
-/** Ponto a `d` unidades ao longo do eixo inclinado do cabo. */
+/** Ponto a `d` unidades ao longo do eixo inclinado do cabo (Euler XYZ: z, depois x). */
 function onAxis(d: number): [number, number, number] {
-  return [POT_X - Math.sin(TILT) * d, STEM_Y + Math.cos(TILT) * d, POT_Z]
+  return [
+    POT_X - Math.sin(TILT) * d,
+    STEM_Y + Math.cos(TILT) * Math.cos(TILT_X) * d,
+    POT_Z + Math.cos(TILT) * Math.sin(TILT_X) * d,
+  ]
 }
 
-const LEAF_D = 1.95
-const PROP_D = 2.18
+const LEAF_D = 1.72
+const PROP_D = 1.95
 
-const CHAIR_POS: [number, number, number] = [-1.25, GY, -0.35]
+const CHAIR_POS: [number, number, number] = [-0.95, GY, -0.2]
 const CHAIR_YAW = 1.05
 
 function createScene(): CardScene {
@@ -86,7 +91,7 @@ function createScene(): CardScene {
   base.add(vent)
 
   const hose = new THREE.Group()
-  hose.position.set(1.72, GY + 0.05, 1.05)
+  hose.position.set(1.5, GY + 0.05, 0.45)
   hose.rotation.y = rand() * Math.PI
   for (const [r, off] of [[0.25, 0], [0.17, 0.03]] as const) {
     const coil = torus(r, 0.045, '#2f6b4a', { roughness: 0.6 })
@@ -226,10 +231,10 @@ function createScene(): CardScene {
   // ---- cabo do guarda-sol (haste do trevo) ---------------------------------
   const haste = new THREE.Group()
   haste.position.set(POT_X, STEM_Y, POT_Z)
-  haste.rotation.z = TILT
+  haste.rotation.set(TILT_X, 0, TILT)
 
-  const cabo = cylinder(0.055, 0.08, 2.1, GRASS, { roughness: 0.75 })
-  cabo.position.y = 1.05
+  const cabo = cylinder(0.055, 0.08, 1.86, GRASS, { roughness: 0.75 })
+  cabo.position.y = 0.93
   haste.add(cabo)
 
   const colar = cylinder(0.1, 0.11, 0.09, GRASS, { roughness: 0.7 })
@@ -240,7 +245,7 @@ function createScene(): CardScene {
   // ---- quatro folhas verde-limão -------------------------------------------
   const folhas = new THREE.Group()
   folhas.position.set(...onAxis(LEAF_D))
-  folhas.rotation.z = TILT
+  folhas.rotation.set(TILT_X, 0, TILT)
 
   const miolo = sphere(0.17, GRASS, { roughness: 0.7 })
   miolo.scale.set(1, 0.5, 1)
@@ -275,7 +280,7 @@ function createScene(): CardScene {
   // mount inclinado: o giro acontece no eixo do cabo, não no eixo do mundo
   const heliceMount = new THREE.Group()
   heliceMount.position.set(...onAxis(PROP_D))
-  heliceMount.rotation.z = TILT
+  heliceMount.rotation.set(TILT_X, 0, TILT)
   root.add(heliceMount)
 
   const helice = new THREE.Group()
@@ -295,20 +300,21 @@ function createScene(): CardScene {
   helice.add(ogiva)
 
   for (const sx of [-1, 1]) {
-    const pa = rbox(0.86, 0.035, 0.19, 0.017, ACCENT, { roughness: 0.35 })
+    const pa = rbox(0.86, 0.045, 0.25, 0.02, ACCENT, { roughness: 0.35 })
     pa.position.set(sx * 0.47, 0.02, 0)
     pa.rotation.x = 0.32
     helice.add(pa)
 
     const ponta = sphere(0.055, ACCENT, { roughness: 0.35 })
     ponta.position.set(sx * 0.9, 0.02, 0)
-    ponta.scale.set(0.6, 0.35, 1)
+    ponta.scale.set(0.6, 0.4, 1.3)
     helice.add(ponta)
   }
 
   // ---- copo de suco --------------------------------------------------------
   const copo = new THREE.Group()
-  copo.position.set(-0.3, GY, 0.35)
+  copo.position.set(-0.22, GY, 0.42)
+  copo.scale.setScalar(1.25)
 
   const vidro = lathe(
     [
@@ -316,13 +322,24 @@ function createScene(): CardScene {
       [0.12, 0.3], [0.1, 0.04], [0.092, 0.02], [0, 0.02],
     ],
     '#dfe9ee',
-    { roughness: 0.12 },
+    { roughness: 0.08, detail: 0 },
   )
+  const vidroMat = vidro.material as THREE.MeshStandardMaterial
+  vidroMat.transparent = true
+  vidroMat.opacity = 0.38
+  vidroMat.depthWrite = false
+  vidro.castShadow = false
   copo.add(vidro)
 
   const suco = cylinder(0.108, 0.09, 0.2, '#c94f3d', { roughness: 0.3 })
   suco.position.y = 0.13
   copo.add(suco)
+
+  const limao = cylinder(0.075, 0.075, 0.022, LIME, { roughness: 0.5 })
+  limao.rotation.x = Math.PI / 2
+  limao.rotation.y = 0.5
+  limao.position.set(-0.1, 0.29, 0.05)
+  copo.add(limao)
 
   const canudo = cylinder(0.017, 0.017, 0.44, CREAM, { roughness: 0.4 })
   canudo.position.set(0.045, 0.29, 0)
@@ -410,7 +427,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 3.05, 6.2], target: [0.0, 1.15, 0.0] },
+    cameraHint: { position: [0.3, 2.55, 5.0], target: [-0.3, 1.22, -0.2] },
   }
 }
 

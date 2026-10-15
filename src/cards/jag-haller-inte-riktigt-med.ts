@@ -38,20 +38,20 @@ function createScene(): CardScene {
   const mesa = new THREE.Group()
 
   const tampo = lathe(
-    [[0, 0], [2.42, 0], [2.54, 0.05], [2.5, 0.13], [2.32, 0.17], [0, 0.17]],
+    [[0, 0], [1.78, 0], [1.9, 0.05], [1.86, 0.13], [1.68, 0.17], [0, 0.17]],
     WOOD,
     { roughness: 0.7 },
   )
   tampo.scale.z = 0.76 // oval
   mesa.add(tampo)
 
-  const aro = cylinder(2.2, 2.05, 0.06, WOOD_DARK, { roughness: 0.75 })
+  const aro = cylinder(1.6, 1.48, 0.06, WOOD_DARK, { roughness: 0.75 })
   aro.scale.z = 0.76
   aro.position.y = 0.02
   mesa.add(aro)
 
   // adereços de reunião, espalhados com rng fixo
-  for (const [cx, cz] of [[-1.55, 0.72], [1.42, -0.86]] as const) {
+  for (const [cx, cz] of [[-1.3, 0.62], [1.12, -0.62]] as const) {
     const pires = cylinder(0.17, 0.16, 0.018, PAPER, { roughness: 0.15 })
     pires.position.set(cx, TY + 0.009, cz)
     pires.rotation.y = rand() * Math.PI
@@ -71,7 +71,7 @@ function createScene(): CardScene {
     mesa.add(cafe)
   }
 
-  for (const [px, pz, tint] of [[-1.05, -1.02, PAPER], [-0.98, -0.92, '#e9e3d4']] as const) {
+  for (const [px, pz, tint] of [[-0.8, -0.82, PAPER], [-0.73, -0.72, '#e9e3d4']] as const) {
     const folhas = rbox(0.44, 0.035, 0.32, 0.01, tint, { roughness: 0.9 })
     folhas.position.set(px, TY + 0.02 + (tint === PAPER ? 0 : 0.035), pz)
     folhas.rotation.y = (rand() - 0.5) * 0.7
@@ -81,13 +81,13 @@ function createScene(): CardScene {
   const caneta = cylinder(0.014, 0.011, 0.3, '#2f4552', { roughness: 0.4 })
   caneta.rotation.z = Math.PI / 2
   caneta.rotation.y = (rand() - 0.5) * 1.2
-  caneta.position.set(0.95, TY + 0.016, 1.18)
+  caneta.position.set(0.85, TY + 0.016, 0.95)
   mesa.add(caneta)
 
   root.add(mesa)
 
   // ---- faixa de tapete azul-petróleo (a pista do deslize) ------------------
-  const tapete = rbox(3.15, 0.035, 0.82, 0.014, BLUE, { roughness: 0.92 })
+  const tapete = rbox(2.7, 0.035, 0.82, 0.014, BLUE, { roughness: 0.92 })
   tapete.position.set(-0.05, TY + 0.018, 0.2)
   tapete.rotation.y = 0.05
   root.add(tapete)
@@ -96,6 +96,7 @@ function createScene(): CardScene {
   const texugo = new THREE.Group()
   texugo.position.set(0.55, TEX_Y, 0.2)
   texugo.rotation.y = 1.22
+  texugo.scale.setScalar(1.22) // protagonista: maior que a xícara por boa margem
 
   // pernas traseiras
   for (const side of [-1, 1]) {
@@ -129,7 +130,7 @@ function createScene(): CardScene {
   // braço direito com as garras longas raspando o tampo
   const bracoR = capsule(0.075, 0.2, GRAY, { roughness: 0.9 })
   bracoR.position.set(0.3, 0.82, 0.1)
-  bracoR.rotation.set(0.55, 0, -0.5)
+  bracoR.rotation.set(-0.45, 0, 0.42) // pende ao lado, garras pro tampo
   const pataR = sphere(0.085, GRAY_DARK, { roughness: 0.9 })
   pataR.position.set(0, -0.17, 0.02)
   for (let i = -1; i <= 1; i++) {
@@ -159,16 +160,22 @@ function createScene(): CardScene {
   cabeca.add(nariz)
 
   for (const side of [-1, 1]) {
-    const faixa = rbox(0.085, 0.055, 0.46, 0.025, BLACK, { roughness: 0.85 })
-    faixa.position.set(side * 0.115, 0.03, 0.1)
-    faixa.rotation.set(-0.12, 0, -side * 0.08)
+    // faixa preta larga que abraça o crânio do focinho até a orelha
+    const faixa = sphere(0.25, BLACK, { roughness: 0.85 })
+    faixa.scale.set(0.34, 0.5, 0.95)
+    faixa.position.set(side * 0.12, 0.05, 0.05)
+    faixa.rotation.set(-0.14, 0, -side * 0.12)
     cabeca.add(faixa)
+    const faixaFocinho = capsule(0.05, 0.12, BLACK, { roughness: 0.85 })
+    faixaFocinho.rotation.x = Math.PI / 2 + 0.25
+    faixaFocinho.position.set(side * 0.06, 0.0, 0.27)
+    cabeca.add(faixaFocinho)
 
     const olho = sphere(0.05, '#ffffff', { roughness: 0.25 })
-    olho.position.set(side * 0.115, 0.075, 0.215)
+    olho.position.set(side * 0.12, 0.075, 0.275)
     olho.scale.z = 0.6
     const pupila = sphere(0.025, '#141414', { roughness: 0.2 })
-    pupila.position.set(side * 0.115, 0.075, 0.252)
+    pupila.position.set(side * 0.12, 0.075, 0.31)
     cabeca.add(olho, pupila)
 
     const orelha = sphere(0.07, GRAY_DARK, { roughness: 0.9 })
@@ -360,11 +367,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.0, 3.0, 6.0], target: [0, 0.95, 0.1] },
+    cameraHint: { position: [0.55, 2.1, 4.05], target: [0.05, 0.92, 0.15] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['texugo', 'cabeca'] },
   meta: {
     id: 'jag-haller-inte-riktigt-med',
     contexto: 'Reunião, quando ele discorda mas quer soar colaborativo.',

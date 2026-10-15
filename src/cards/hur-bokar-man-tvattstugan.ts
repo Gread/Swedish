@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng, mat,
-  rbox, capsule, cylinder, sphere, cone, torus, lathe, person, puff,
+  rbox, capsule, cylinder, sphere, torus, lathe, person, puff,
 } from '../rig/helpers'
 
 /**
@@ -74,12 +74,22 @@ function createScene(): CardScene {
     { roughness: 0.4 },
   )
   cesto.add(balde)
-  const espuma = puff(0.24, '#fbfbf7', 7, 31, { roughness: 0.85 })
-  espuma.position.y = 0.5
-  cesto.add(espuma)
-  const espumaEscorrida = puff(0.12, '#fbfbf7', 4, 32, { roughness: 0.85 })
-  espumaEscorrida.position.set(0.3, 0.3, 0.16)
-  cesto.add(espumaEscorrida)
+  // pilha de roupa dobrada (colorida: não pode competir com o lençol branco)
+  const roupas: [number, number, number, number, string][] = [
+    [0.0, 0.4, 0.02, 0.1, '#7a9cc0'],
+    [0.03, 0.49, -0.03, -0.15, '#c96f6f'],
+    [-0.02, 0.57, 0.01, 0.25, '#9cb07a'],
+  ]
+  for (const [x, y, z, ry, c] of roupas) {
+    const peca = rbox(0.5, 0.09, 0.4, 0.04, c, { roughness: 0.92 })
+    peca.position.set(x, y, z)
+    peca.rotation.y = ry
+    cesto.add(peca)
+  }
+  const meia = capsule(0.045, 0.22, '#c96f6f', { roughness: 0.92 })
+  meia.position.set(0.4, 0.38, 0.12)
+  meia.rotation.z = 0.35
+  cesto.add(meia)
   base.add(cesto)
 
   // caixa de sabão em pó encostada na parede
@@ -92,8 +102,13 @@ function createScene(): CardScene {
   base.add(sabao)
 
   // tapete de borracha na entrada
-  const tapete = rbox(0.9, 0.04, 0.5, 0.02, '#4a5560', { roughness: 0.95 })
-  tapete.position.set(0.25, GY + 0.02, 1.62)
+  const tapete = new THREE.Group()
+  const borda = rbox(0.9, 0.035, 0.5, 0.02, '#6b4f2e', { roughness: 0.95 })
+  borda.position.y = 0.018
+  const fibra = rbox(0.78, 0.02, 0.38, 0.01, '#b08a55', { roughness: 0.98 })
+  fibra.position.y = 0.04
+  tapete.add(borda, fibra)
+  tapete.position.set(0.25, GY, 1.62)
   tapete.rotation.y = -0.12
   base.add(tapete)
 
@@ -252,39 +267,59 @@ function createScene(): CardScene {
   // ---- lençol-fantasma saltando da escotilha -------------------------------
   // posição de origem: a boca da escotilha, em coordenadas de mundo
   const HATCH = new THREE.Vector3(-0.86, GY + 0.5, -0.58)
+  const LENCOL_Y = 1.42 // altura ao fim do salto (depois flutua até LENCOL_Y + 0.08)
   const lencol = new THREE.Group()
-  lencol.position.set(-0.6, 1.52, 0.16)
+  lencol.position.set(-0.12, LENCOL_Y + 0.08, -0.3)
   lencol.rotation.z = -0.12
+  const PANO = { roughness: 0.62, detail: 0.35 }
 
+  // corpo em gota: cabeça redonda afinando numa cauda de pano
   const pano = lathe(
     [
-      [0, -0.3], [0.1, -0.3], [0.18, -0.26], [0.24, -0.3], [0.3, -0.24],
-      [0.35, -0.28], [0.38, -0.18], [0.4, 0], [0.38, 0.14], [0.33, 0.28],
-      [0.24, 0.4], [0.12, 0.47], [0, 0.49],
+      [0.001, -0.44], [0.09, -0.42], [0.17, -0.34], [0.28, -0.22], [0.36, -0.05],
+      [0.39, 0.12], [0.36, 0.3], [0.27, 0.43], [0.14, 0.5], [0.001, 0.52],
     ],
     SHEET,
-    { roughness: 0.92 },
+    PANO,
   )
   lencol.add(pano)
 
+  // olhos e boca pretos, ovais: rosto clássico de fantasma ("BÚ!")
   for (const side of [-1, 1]) {
-    const olho = sphere(0.075, '#ffffff', { roughness: 0.25 })
-    olho.position.set(side * 0.13, 0.22, 0.3)
-    olho.scale.z = 0.55
-    const pupila = sphere(0.034, '#1a1a1a', { roughness: 0.2 })
-    pupila.position.set(side * 0.135, 0.215, 0.35)
-    lencol.add(olho, pupila)
+    const olho = sphere(0.06, '#16161c', { roughness: 0.3 })
+    olho.position.set(side * 0.12, 0.2, 0.33)
+    olho.scale.set(0.8, 1.3, 0.45)
+    olho.rotation.y = side * 0.35
+    lencol.add(olho)
 
-    // braços de pano erguidos: "BÚ!"
-    const braco = capsule(0.06, 0.2, SHEET, { roughness: 0.92 })
-    braco.position.set(side * 0.33, 0.28, 0.06)
-    braco.rotation.z = -side * 0.95
+    // braços de pano abertos para os lados, pontas para cima: "BÚ!"
+    const braco = capsule(0.075, 0.26, SHEET, PANO)
+    braco.position.set(side * 0.46, 0.08, 0.04)
+    braco.rotation.z = -side * 0.85
     lencol.add(braco)
   }
-  const boca = sphere(0.08, '#3a2f38', { roughness: 0.5 })
-  boca.position.set(0, 0.04, 0.35)
-  boca.scale.set(0.8, 1.15, 0.5)
+  const boca = sphere(0.085, '#16161c', { roughness: 0.4 })
+  boca.position.set(0, -0.04, 0.35)
+  boca.scale.set(0.85, 1.25, 0.45)
   lencol.add(boca)
+
+  // cauda de pano que ainda sai da escotilha (calculada na pose final)
+  lencol.updateMatrixWorld(true)
+  const dentroTunel = lencol.worldToLocal(HATCH.clone().add(new THREE.Vector3(0.01, 0, -0.12)))
+  const caudaCurva = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(0, -0.36, 0),
+    new THREE.Vector3(-0.08, -0.62, 0.06),
+    new THREE.Vector3(dentroTunel.x * 0.6, dentroTunel.y * 0.85, dentroTunel.z * 0.3 + 0.05),
+    new THREE.Vector3(dentroTunel.x * 0.92, dentroTunel.y, dentroTunel.z * 0.75),
+    dentroTunel,
+  ])
+  const cauda = new THREE.Mesh(
+    new THREE.TubeGeometry(caudaCurva, 40, 0.1, 16, false),
+    mat(SHEET, { ...PANO, size: 0.8 }),
+  )
+  cauda.castShadow = true
+  cauda.receiveShadow = true
+  lencol.add(cauda)
   root.add(lencol)
 
   // ---- dona Carman: avental amarelo e coque --------------------------------
@@ -321,24 +356,40 @@ function createScene(): CardScene {
   // ---- toalha azul-listrada estalando em diagonal --------------------------
   // cresce da mão dela: pivô exatamente no punho esquerdo
   const toalha = new THREE.Group()
-  toalha.position.set(0.47, GY + 0.26, 0.88)
-  toalha.rotation.set(0, -0.3, 0.55)
-  for (let i = 0; i < 4; i++) {
-    const faixa = rbox(0.3, 0.035, 0.24, 0.015, i % 2 === 0 ? DENIM : BONE, { roughness: 0.92 })
-    faixa.position.set(0.16 + i * 0.28, i * 0.03 - Math.sin(i * 0.9) * 0.06, 0)
-    faixa.rotation.set((i - 1.5) * 0.18, 0, -i * 0.14)
-    toalha.add(faixa)
+  carman.updateMatrixWorld(true)
+  const mao = carman.getObjectByName('armR')!.children[0].getWorldPosition(new THREE.Vector3())
+  const ALVO_QUADRO = new THREE.Vector3(1.55, GY + 1.2, -0.15) // = quadro.position
+  toalha.position.copy(mao)
+  // Euler XYZ com rotation.z = 0.55 (pose final da animação): +x local aponta
+  // para (cos z·cos y, sen z, −cos z·sen y) — basta escolher y
+  toalha.rotation.set(0, Math.atan2(-(ALVO_QUADRO.z - mao.z), ALVO_QUADRO.x - mao.x), 0.55)
+  // toalha contínua (base clara + listras azuis), com franja na ponta
+  const TOALHA_L = 1.25
+  const tecido = rbox(TOALHA_L, 0.035, 0.36, 0.015, BONE, { roughness: 0.95 })
+  tecido.position.x = 0.12 + TOALHA_L / 2
+  toalha.add(tecido)
+  for (const fx of [0.3, 0.62, 0.94, 1.22]) {
+    const listra = rbox(0.12, 0.045, 0.365, 0.015, DENIM, { roughness: 0.95 })
+    listra.position.x = fx
+    toalha.add(listra)
   }
-  const ponta = cone(0.11, 0.22, DENIM, { roughness: 0.92 })
-  ponta.position.set(1.28, -0.12, 0)
-  ponta.rotation.z = -1.9
-  toalha.add(ponta)
+  for (let i = 0; i < 6; i++) {
+    const fio = capsule(0.012, 0.07, BONE, { roughness: 0.95 })
+    fio.rotation.z = Math.PI / 2
+    fio.position.set(0.12 + TOALHA_L + 0.05, 0, -0.15 + i * 0.06)
+    toalha.add(fio)
+  }
+  // ponta dobrada pelo estalo: o TVÉT!
+  const dobra = rbox(0.18, 0.035, 0.36, 0.015, BONE, { roughness: 0.95 })
+  dobra.position.set(0.12 + TOALHA_L - 0.02, 0.05, 0)
+  dobra.rotation.z = 0.5
+  toalha.add(dobra)
   root.add(toalha)
 
   // ---- quadro de reservas com pinos ----------------------------------------
   // na parede da direita, girado meia-volta para a câmera conseguir ler
   const quadro = new THREE.Group()
-  quadro.position.set(1.55, GY + 1.2, -0.15)
+  quadro.position.copy(ALVO_QUADRO)
   quadro.rotation.y = -Math.PI / 2 + 0.5
 
   const placa = rbox(0.92, 0.68, 0.05, 0.02, WOOD, { roughness: 0.75 })
@@ -430,9 +481,9 @@ function createScene(): CardScene {
       5.5,
       0.7,
       [
-        ch('position.x', HATCH.x, -0.6),
-        ch('position.y', HATCH.y, 1.44),
-        ch('position.z', HATCH.z, 0.16),
+        ch('position.x', HATCH.x, -0.12),
+        ch('position.y', HATCH.y, LENCOL_Y),
+        ch('position.z', HATCH.z, -0.3),
         ch('scale.x', 0.3, 1),
         ch('scale.y', 0.3, 1),
         ch('scale.z', 0.3, 1),
@@ -475,14 +526,14 @@ function createScene(): CardScene {
       ease: 'easeOut',
       caption: 'Hur bokar man tvättstugan? — "Como se reserva a lavanderia?" (TVÉT-STÜ-GAN)',
     }),
-    seq('lencol-flutua', 'lencol', 10.7, 0.7, [ch('position.y', 1.44, 1.52)]),
+    seq('lencol-flutua', 'lencol', 10.7, 0.7, [ch('position.y', LENCOL_Y, LENCOL_Y + 0.08)]),
   ]
 
   return {
     root,
     parts,
     build,
-    cameraHint: { position: [0.35, 3.0, 6.3], target: [0.05, 1.05, -0.2] },
+    cameraHint: { position: [0.35, 2.8, 5.8], target: [0.05, 1.15, -0.35] },
   }
 }
 

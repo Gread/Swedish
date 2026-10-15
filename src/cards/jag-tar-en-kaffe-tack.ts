@@ -39,6 +39,7 @@ const SAND = 0.11 // topo da areia, local à bandeja
 
 // materiais por intenção física
 const M_METAL = { roughness: 0.2, metalness: 0.9 }
+const M_PRATA_CLARA = { roughness: 0.3, metalness: 0.55 } // lê como prata, não como buraco escuro
 const M_OURO = { roughness: 0.25, metalness: 0.85 }
 const M_LOUCA = { roughness: 0.15 }
 const M_MADEIRA = { roughness: 0.7 }
@@ -143,8 +144,8 @@ function createScene(): CardScene {
 
   // ---- você, no balcão (olha para a arena: olhos em +z local) --------------
   const voce = person({ body: TECIDO, skin: PELE, height: 1.55, armAngle: 0.55 })
-  voce.position.set(-1.55, GY, -0.2)
-  voce.rotation.y = 1.3
+  voce.position.set(-1.25, GY, -0.1)
+  voce.rotation.y = 0.95
 
   const cabeca = voce.getObjectByName('head') as THREE.Object3D
   const cupula = lathe(
@@ -296,10 +297,14 @@ function createScene(): CardScene {
     elmo.add(lamina)
   }
 
-  // ---- bule adversário (pose final: tombado, escorado no tridente) ----------
+  // ---- bule adversário (pose final: tombado para trás, ferido pelo tridente) --
+  // Modelado com o bico em +z local e o pivô na aresta traseira da base (z=0);
+  // o giro em y põe o bico virado para REN (-x) e o perfil para a câmera.
   const bule = new THREE.Group()
-  bule.position.set(0.3, SAND, -0.18)
-  bule.rotation.x = 0.85 // pivô na aresta da base: ele TOMBA, não flutua
+  bule.position.set(0.45, SAND, -0.05)
+  bule.rotation.order = 'YXZ' // rotation.x = tombar para trás, já no eixo do bule
+  bule.rotation.y = -Math.PI / 2
+  bule.rotation.x = -0.6 // pivô na aresta da base: ele TOMBA, não flutua
   bandeja.add(bule)
 
   const corpoBule = lathe(
@@ -308,43 +313,47 @@ function createScene(): CardScene {
       [0.215, 0.44], [0.2, 0.5], [0.205, 0.53], [0.17, 0.55], [0, 0.55],
     ],
     PRATA,
-    M_METAL,
+    M_PRATA_CLARA,
   )
-  corpoBule.position.z = -0.24
+  corpoBule.position.z = 0.24
   bule.add(corpoBule)
 
   const cinta = torus(0.237, 0.022, OURO, M_OURO)
   cinta.rotation.x = Math.PI / 2
-  cinta.position.set(0, 0.3, -0.24)
+  cinta.position.set(0, 0.3, 0.24)
   bule.add(cinta)
 
+  const tampaBule = cylinder(0.15, 0.17, 0.03, '#9aa4ac', M_PRATA_CLARA)
+  tampaBule.position.set(0, 0.555, 0.24)
+  bule.add(tampaBule)
   const puxador = sphere(0.055, MEL_ESC, M_MADEIRA)
-  puxador.position.set(0, 0.575, -0.24)
+  puxador.position.set(0, 0.59, 0.24)
   bule.add(puxador)
 
   const bico = new THREE.Group()
-  bico.position.set(0, 0.42, -0.05)
-  bico.rotation.x = 0.99
-  const canoBico = cylinder(0.045, 0.078, 0.3, PRATA, M_METAL)
+  bico.position.set(0, 0.2, 0.43)
+  bico.rotation.x = 0.7
+  const canoBico = cylinder(0.045, 0.078, 0.3, PRATA, M_PRATA_CLARA)
   canoBico.position.y = 0.15
   bico.add(canoBico)
   bule.add(bico)
 
-  const alcaBule = torus(0.13, 0.028, PRATA, M_METAL)
-  alcaBule.position.set(0, 0.36, -0.47)
+  const alcaBule = torus(0.13, 0.03, PRATA, M_PRATA_CLARA)
+  alcaBule.rotation.y = Math.PI / 2
+  alcaBule.position.set(0, 0.32, 0.01)
   bule.add(alcaBule)
 
   // ---- colher-tridente (pose final: cravada no bule) ------------------------
   const tridente = new THREE.Group()
-  tridente.position.set(0.1, 0.5, -0.05)
-  tridente.rotation.z = 1.15
+  tridente.position.set(0.08, 0.56, 0.12) // à frente do elmo: o golpe fica à vista
+  tridente.rotation.z = 0.8
   bandeja.add(tridente)
 
-  const cabo = cylinder(0.028, 0.032, 0.6, PRATA, M_METAL)
+  const cabo = cylinder(0.034, 0.038, 0.6, PRATA, M_PRATA_CLARA)
   cabo.position.y = 0.3
   tridente.add(cabo)
 
-  const concha = sphere(0.095, PRATA, M_METAL)
+  const concha = sphere(0.105, PRATA, M_PRATA_CLARA)
   concha.scale.set(1, 0.34, 0.72)
   concha.position.y = 0.63
   tridente.add(concha)
@@ -358,10 +367,10 @@ function createScene(): CardScene {
     const ponta = new THREE.Group()
     ponta.position.set(desvio * 0.05, 0, 0)
     ponta.rotation.z = -desvio * 0.22
-    const haste = capsule(0.018, 0.11, PRATA, M_METAL)
+    const haste = capsule(0.02, 0.11, PRATA, M_PRATA_CLARA)
     haste.position.y = -0.075
     ponta.add(haste)
-    const bicoPonta = cone(0.026, 0.07, PRATA, M_METAL)
+    const bicoPonta = cone(0.028, 0.07, PRATA, M_PRATA_CLARA)
     bicoPonta.rotation.z = Math.PI
     bicoPonta.position.y = -0.165
     ponta.add(bicoPonta)
@@ -370,12 +379,12 @@ function createScene(): CardScene {
 
   // ---- o jorro de CÁ-FE (nasce no bico e desce até a areia) -----------------
   const jorro = new THREE.Group()
-  jorro.position.set(0.3, 0.345, 0.392)
+  jorro.position.set(0.24, 0.42, 0.06) // nasce no furo do tridente
   bandeja.add(jorro)
 
-  const veia = cylinder(0.05, 0.078, 0.24, CAFE, { roughness: 0.2 })
-  veia.rotation.x = -0.14
-  veia.position.set(0, -0.119, 0.017)
+  const veia = cylinder(0.045, 0.08, 0.32, CAFE, { roughness: 0.2 })
+  veia.rotation.z = -0.3
+  veia.position.set(-0.047, -0.153, 0)
   jorro.add(veia)
 
   const poca = lathe(
@@ -383,13 +392,13 @@ function createScene(): CardScene {
     CAFE,
     { roughness: 0.2 },
   )
-  poca.position.set(0, -0.235, 0.031)
+  poca.position.set(-0.1, -0.307, 0.03)
   jorro.add(poca)
 
   for (let i = 0; i < 4; i++) {
     const gota = sphere(0.026 + rand() * 0.016, CAFE, { roughness: 0.2 })
     const a = rand() * Math.PI * 2
-    gota.position.set(Math.cos(a) * 0.24, -0.2 + rand() * 0.06, 0.03 + Math.sin(a) * 0.2)
+    gota.position.set(-0.1 + Math.cos(a) * 0.24, -0.29 + rand() * 0.04, 0.03 + Math.sin(a) * 0.2)
     jorro.add(gota)
   }
 
@@ -405,14 +414,19 @@ function createScene(): CardScene {
   const pomo = sphere(0.045, MEL_ESC, M_MADEIRA)
   pomo.position.y = 0.02
   martelinho.add(pomo)
-  const cabecaMart = rbox(0.22, 0.13, 0.13, 0.045, MEL_ESC, M_MADEIRA)
+  const cabecaMart = cylinder(0.07, 0.07, 0.26, MEL_ESC, M_MADEIRA)
   cabecaMart.position.y = -0.4
-  cabecaMart.rotation.z = Math.PI / 2
+  cabecaMart.rotation.z = Math.PI / 2 // cabeça atravessada no cabo: lê como martelo
   martelinho.add(cabecaMart)
   for (const lado of [-1, 1]) {
-    const anel = torus(0.068, 0.014, OURO, M_OURO)
-    anel.position.y = -0.4 + lado * 0.075
+    const anel = torus(0.071, 0.014, OURO, M_OURO)
+    anel.rotation.y = Math.PI / 2
+    anel.position.set(lado * 0.085, -0.4, 0)
     martelinho.add(anel)
+    const face = cylinder(0.078, 0.078, 0.03, MEL, M_MADEIRA)
+    face.rotation.z = Math.PI / 2
+    face.position.set(lado * 0.13, -0.4, 0)
+    martelinho.add(face)
   }
 
   // ---- peças ---------------------------------------------------------------
@@ -512,13 +526,13 @@ function createScene(): CardScene {
       'tridente',
       9.0,
       0.45,
-      [ch('position.x', -0.06, 0.1), ch('position.y', 0.86, 0.5), ch('rotation.z', 0.45, 1.15)],
+      [ch('position.x', -0.06, 0.08), ch('position.y', 0.86, 0.56), ch('rotation.z', 0.45, 0.8)],
       {
         ease: 'easeIn',
         caption: 'REN crava a colher-tridente no bule — e o CÁ-FE jorra na areia!',
       },
     ),
-    seq('bule-tomba', 'bule', 9.4, 0.6, [ch('rotation.x', 0, 0.85)], { ease: 'easeOut' }),
+    seq('bule-tomba', 'bule', 9.4, 0.6, [ch('rotation.x', 0, -0.6)], { ease: 'easeOut' }),
     seq('xicara-recua', 'xicara', 9.45, 0.5, [ch('position.x', -0.22, -0.34)]),
 
     seq(
@@ -545,7 +559,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.25, 2.95, 5.7], target: [0.3, 1.12, 0.1] },
+    cameraHint: { position: [-0.05, 3.5, 4.0], target: [0.05, 1.2, 0.05] },
   }
 }
 

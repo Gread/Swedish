@@ -140,21 +140,26 @@ function createScene(): CardScene {
   // ---- você, apontando pra cadeira ------------------------------------------
   // grupo externo só pro tombo/inclinação; o interno guarda a direção do olhar.
   const pessoa = new THREE.Group()
-  pessoa.position.set(-1.95, GY, 0.9)
+  pessoa.position.set(-1.6, GY, 0.95)
   pessoa.rotation.z = -0.14 // pose final: inclinado para a frente, perguntando
 
   const corpo = new THREE.Group()
-  corpo.rotation.y = 1.05 // olha para a cadeira (+x)
+  corpo.rotation.y = 1.4 // de perfil, olhando para a cadeira (+x)
   pessoa.add(corpo)
 
   const eu = person({ body: SHIRT, skin: SKIN, height: 1.45, armAngle: 0.3 })
   corpo.add(eu)
 
-  // braço direito estendido, apontando pra frente
-  const bracoR = eu.getObjectByName('armR')!
-  bracoR.rotation.set(-1.32, 0, -0.18)
-  const dedo = capsule(0.022, 0.09, SKIN, { roughness: 0.6 })
-  dedo.position.y = -0.33
+  // braço do lado da câmera estendido, apontando pra cadeira. O pivô da
+  // cápsula é o centro dela: desloca o braço para o ombro ficar no lugar.
+  const bracoR = eu.getObjectByName('armL')!
+  const ombro = 0.25 // meia-altura do braço até o ombro
+  const ang = -1.4
+  bracoR.rotation.set(ang, 0, 0.12)
+  bracoR.position.y += ombro - ombro * Math.cos(ang)
+  bracoR.position.z += -ombro * Math.sin(ang)
+  const dedo = capsule(0.024, 0.1, SKIN, { roughness: 0.6 })
+  dedo.position.y = -0.36
   bracoR.add(dedo)
 
   // gorro simples pra ler como "pessoa da casa"
@@ -184,10 +189,15 @@ function createScene(): CardScene {
 
   for (const sx of [-1, 1]) {
     for (const sz of [-1, 1]) {
-      const perna = capsule(0.085, 0.42, MOOSE_DARK, { roughness: 0.85 })
-      perna.position.set(sx * 0.26, 0.31, sz * 0.42)
+      // coxa encorpada enterrada no tronco: a perna nasce do corpo
+      const coxa = sphere(0.17, MOOSE, { roughness: 0.85 })
+      coxa.position.set(sx * 0.24, 0.72, sz * 0.42)
+      coxa.scale.set(0.8, 1.2, 1)
+      alce.add(coxa)
+      const perna = capsule(0.085, 0.52, MOOSE_DARK, { roughness: 0.85 })
+      perna.position.set(sx * 0.26, 0.37, sz * 0.42)
       const casco = cylinder(0.09, 0.1, 0.09, '#3a2a1e', { roughness: 0.6 })
-      casco.position.y = -0.25
+      casco.position.y = -0.3
       perna.add(casco)
       alce.add(perna)
     }
@@ -243,23 +253,26 @@ function createScene(): CardScene {
 
   // chifres em leque: brotam de dentro do crânio
   const chifres = new THREE.Group()
-  chifres.position.set(0, 0.42, -0.02)
+  chifres.position.set(0, 0.3, -0.02)
   for (const side of [-1, 1]) {
-    const haste = cylinder(0.045, 0.055, 0.18, BONE, { roughness: 0.75 })
-    haste.position.set(side * 0.14, -0.06, 0)
+    const haste = cylinder(0.05, 0.062, 0.26, BONE, { roughness: 0.75 })
+    haste.position.set(side * 0.15, -0.02, 0)
     haste.rotation.z = side * 0.55
     chifres.add(haste)
 
     const leque = new THREE.Group()
-    leque.position.set(side * 0.36, 0.08, -0.02)
-    leque.rotation.set(0, side * -0.25, side * 0.32)
+    leque.position.set(side * 0.34, 0.12, -0.02)
+    leque.rotation.set(0, side * -0.25, side * 0.6) // palma inclinada pra cima
 
-    const palma = rbox(0.36, 0.06, 0.3, 0.03, BONE, { roughness: 0.75 })
+    // palma em concha (esfera achatada), não placa: lê como chifre de alce
+    const palma = sphere(0.22, BONE, { roughness: 0.75 })
+    palma.scale.set(1, 0.24, 0.85)
     leque.add(palma)
-    for (let i = 0; i < 3; i++) {
-      const ponta = cylinder(0.026, 0.034, 0.22, BONE, { roughness: 0.75 })
-      ponta.position.set(side * (0.1 + i * 0.06), 0.12, -0.09 + i * 0.09)
-      ponta.rotation.z = side * (0.25 + i * 0.12)
+    // pontas ao longo da borda externa da palma
+    for (let i = 0; i < 4; i++) {
+      const ponta = cone(0.04, 0.2, BONE, { roughness: 0.75 }, 12)
+      ponta.position.set(side * (0.06 + i * 0.05), 0.1, -0.15 + i * 0.1)
+      ponta.rotation.z = -side * (0.1 + i * 0.08)
       leque.add(ponta)
     }
     chifres.add(leque)
@@ -274,7 +287,7 @@ function createScene(): CardScene {
   for (let i = 0; i < 9; i++) {
     const t = i / 8
     const bola = puff(
-      0.1 + 0.3 * t,
+      0.07 + 0.17 * t,
       i % 2 === 0 ? SWE_BLUE : SWE_YELLOW,
       5,
       30 + i,
@@ -287,10 +300,13 @@ function createScene(): CardScene {
     )
     po.add(bola)
   }
+  // pó assentado: polvilha a cadeira e o chão em volta, sem escondê-la
   for (const [px, py, pz, pr, cor] of [
-    [-1.28, -1.08, 0.38, 0.3, SWE_YELLOW],
-    [-0.62, -1.12, -0.24, 0.27, SWE_BLUE],
-    [-1.02, -1.04, -0.42, 0.25, SWE_YELLOW],
+    [-1.45, -1.54, 0.55, 0.13, SWE_YELLOW],
+    [-0.45, -1.56, 0.62, 0.11, SWE_BLUE],
+    [-1.25, -1.5, -0.3, 0.16, SWE_BLUE],
+    [-0.7, -1.52, -0.35, 0.14, SWE_YELLOW],
+    [-1.6, -1.56, 0.1, 0.1, SWE_BLUE],
   ] as const) {
     const bola = puff(pr, cor, 5, 50 + Math.round(pr * 100), { roughness: 0.9 })
     bola.position.set(px, py, pz)
@@ -300,7 +316,7 @@ function createScene(): CardScene {
 
   // ---- o balão de fala de papelão -------------------------------------------
   const balao = new THREE.Group()
-  balao.position.set(-0.45, 2.0, 0.3)
+  balao.position.set(-0.62, 2.15, 0.3)
   balao.rotation.y = 0.12
 
   const casca = rbox(1.8, 1.1, 0.2, 0.16, CARD, { roughness: 0.9 })
@@ -391,7 +407,7 @@ function createScene(): CardScene {
       3.9,
       0.8,
       [
-        ch('position.y', -0.06, 0.42),
+        ch('position.y', -0.06, 0.3),
         ch('scale.x', 0.25, 1), ch('scale.y', 0.25, 1), ch('scale.z', 0.25, 1),
       ],
       { ease: 'easeOut' },
@@ -420,7 +436,7 @@ function createScene(): CardScene {
       7.9,
       0.9,
       [
-        ch('position.y', 0.55, 2.0),
+        ch('position.y', 0.55, 2.15),
         ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1),
       ],
       {
@@ -446,7 +462,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 3.1, 6.5], target: [0.05, 1.15, 0.05] },
+    cameraHint: { position: [0.3, 2.55, 4.85], target: [0.2, 1.35, 0.1] },
   }
 }
 
@@ -463,6 +479,7 @@ export const card: Card = {
       'Você aponta pro objeto e o alce Sven raspa a garganta ("RRÊÊ") antes de soprar um PÔ azul-e-amarelo por cima dele. Do pó se ergue um balão de fala de papelão gigante com a palavra sueca escrita dentro.',
   },
   createScene,
+  refine: { organic: ['alce', 'cabeca', 'chifres'] },
 }
 
 export default card

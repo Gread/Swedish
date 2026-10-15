@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng, mat,
-  rbox, capsule, cylinder, sphere, cone, torus, lathe, rock, puff, person,
+  rbox, capsule, cylinder, sphere, cone, torus, lathe, puff, person,
 } from '../rig/helpers'
 
 /**
@@ -26,6 +26,7 @@ const STONE_DARK = '#494f57'
 const CRAB = '#c2652c'
 const CRAB_DARK = '#a0501f'
 const CORAL = '#f2603c' // acento saturado: A GARRA que estala as horas
+const CLAW_TIP = '#3b2219' // pontas escuras de pinça de caranguejo
 const NAVY = '#26406e'
 const NAVY_DARK = '#1b2f52'
 const SKIN = '#e8c39e'
@@ -126,10 +127,11 @@ function createScene(): CardScene {
     [-1.15, -0.35, 0.11, 61],
     [1.9, 1.0, 0.08, 62],
   ] as const) {
-    const pebble = rock(pr, STONE_DARK, pseed, { roughness: 0.9 })
-    pebble.position.set(px, GY + pr * 0.4, pz)
+    const pebble = sphere(pr, STONE_DARK, { roughness: 0.9 })
+    pebble.position.set(px, GY + pr * 0.25, pz)
     pebble.rotation.y = rand() * Math.PI
-    pebble.scale.y = 0.6
+    pebble.scale.set(1.2, 0.55, 0.9)
+    pebble.userData.seed = pseed
     base.add(pebble)
   }
   root.add(base)
@@ -138,18 +140,29 @@ function createScene(): CardScene {
   const pedra = new THREE.Group()
   pedra.position.set(CRAB_POS[0], GY, CRAB_POS[2])
 
-  const slab = rock(0.66, STONE, 21, { roughness: 0.9 })
-  slab.position.y = 0.16
-  slab.scale.set(1.15, 0.42, 0.95)
+  // laje arredondada (perfil torneado): pedra lisa de praia, não estilhaço
+  const slab = lathe(
+    [[0, 0], [0.6, 0], [0.7, 0.06], [0.74, 0.17], [0.69, 0.29], [0.55, 0.38], [0.3, 0.42], [0, 0.43]],
+    STONE,
+    { roughness: 0.88 },
+    28,
+  )
+  slab.scale.set(1.12, 1, 0.92)
   pedra.add(slab)
 
-  const slabLow = rock(0.44, STONE_DARK, 22, { roughness: 0.9 })
-  slabLow.position.set(-0.42, 0.05, 0.3)
-  slabLow.scale.set(1, 0.4, 1)
+  // faixa úmida na base da laje (contato com a areia)
+  const slabWet = lathe([[0, 0], [0.76, 0], [0.8, 0.03], [0, 0.04]], STONE_DARK, { roughness: 0.6 }, 28)
+  slabWet.scale.set(1.12, 1, 0.92)
+  slabWet.position.y = -0.01
+  pedra.add(slabWet)
+
+  const slabLow = sphere(0.3, STONE_DARK, { roughness: 0.9 })
+  slabLow.position.set(-0.74, 0.06, 0.42)
+  slabLow.scale.set(1.1, 0.42, 0.85)
   pedra.add(slabLow)
 
-  const barnacle = rock(0.12, '#7a8188', 23, { roughness: 0.95 })
-  barnacle.position.set(0.42, 0.2, -0.3)
+  const barnacle = sphere(0.1, '#7a8188', { roughness: 0.95 })
+  barnacle.position.set(0.5, 0.33, -0.28)
   barnacle.scale.y = 0.55
   pedra.add(barnacle)
   root.add(pedra)
@@ -173,18 +186,23 @@ function createScene(): CardScene {
   boca.position.set(0, 0.05, 0.36)
   caranguejo.add(boca)
 
-  // seis perninhas anguladas
+  // seis perninhas em arco (sobem da carapaça até o joelho e descem até a
+  // pedra): saem visivelmente de baixo do casco, em leque
   for (const side of [-1, 1]) {
-    for (const lz of [-0.26, 0.0, 0.26]) {
-      const leg = capsule(0.03, 0.2, CRAB_DARK, { roughness: 0.6 })
-      leg.position.set(side * 0.33, 0.09, lz)
-      leg.rotation.set(lz * 0.5, 0, -side * 1.15)
-      caranguejo.add(leg)
-
-      const foot = capsule(0.026, 0.1, CRAB_DARK, { roughness: 0.6 })
-      foot.position.set(side * 0.46, -0.03, lz * 1.15)
-      foot.rotation.set(lz * 0.5, 0, -side * 0.35)
-      caranguejo.add(foot)
+    for (const lz of [-0.24, 0.0, 0.24]) {
+      const legRig = new THREE.Group()
+      legRig.position.set(side * 0.3, 0, lz)
+      legRig.rotation.y = side * lz * 1.3
+      const thigh = capsule(0.04, 0.2, CRAB_DARK, { roughness: 0.6 })
+      thigh.position.set(side * 0.2, 0.15, 0)
+      thigh.rotation.z = -side * 1.1
+      const knee = sphere(0.045, CRAB_DARK, { roughness: 0.6 })
+      knee.position.set(side * 0.3, 0.2, 0)
+      const shin = capsule(0.034, 0.25, CRAB_DARK, { roughness: 0.6 })
+      shin.position.set(side * 0.35, 0.05, 0)
+      shin.rotation.z = side * 0.32
+      legRig.add(thigh, knee, shin)
+      caranguejo.add(legRig)
     }
   }
 
@@ -224,6 +242,9 @@ function createScene(): CardScene {
   const garra = new THREE.Group()
   garra.position.set(0.42, 0.12, 0.14)
   garra.rotation.z = -0.3 // pose final: erguida, inclinada pra fora
+  // gira o plano da pinça para a câmera: a abertura da pinça lê de frente,
+  // em vez de ficar de perfil (de perfil ela parecia um bico de pato)
+  garra.rotation.y = 0.95
 
   const upperArm = capsule(0.09, 0.24, CRAB, { roughness: 0.5 })
   upperArm.position.y = 0.2
@@ -247,10 +268,17 @@ function createScene(): CardScene {
   dedoFixo.position.set(0.26, 0.62, 0)
   dedoFixo.rotation.z = -0.14
   garra.add(dedoFixo)
-  const dedoFixoTip = cone(0.075, 0.16, CORAL, { roughness: 0.4 })
+  const dedoFixoTip = cone(0.075, 0.16, CLAW_TIP, { roughness: 0.35 })
   dedoFixoTip.position.set(0.5, 0.585, 0)
   dedoFixoTip.rotation.z = -Math.PI / 2 - 0.14
   garra.add(dedoFixoTip)
+  // dentes serrilhados na borda interna: lê como pinça, não como bico
+  for (let i = 0; i < 4; i++) {
+    const tooth = cone(0.028, 0.07, '#f7d9b8', { roughness: 0.4 }, 10)
+    tooth.position.set(0.12 + i * 0.09, 0.7 - i * 0.013, 0)
+    tooth.rotation.z = -0.14
+    garra.add(tooth)
+  }
 
   // dedo móvel: peça própria, a que ESTALA (CLÓ-CAN)
   const pinca = new THREE.Group()
@@ -259,10 +287,16 @@ function createScene(): CardScene {
   const jaw = rbox(0.44, 0.13, 0.18, 0.05, CORAL, { roughness: 0.4 })
   jaw.position.set(0.23, 0.0, 0)
   pinca.add(jaw)
-  const jawTip = cone(0.07, 0.15, CORAL, { roughness: 0.4 })
+  const jawTip = cone(0.07, 0.15, CLAW_TIP, { roughness: 0.35 })
   jawTip.position.set(0.46, -0.02, 0)
   jawTip.rotation.z = -Math.PI / 2
   pinca.add(jawTip)
+  for (let i = 0; i < 4; i++) {
+    const tooth = cone(0.026, 0.065, '#f7d9b8', { roughness: 0.4 }, 10)
+    tooth.position.set(0.1 + i * 0.09, -0.08, 0)
+    tooth.rotation.z = Math.PI
+    pinca.add(tooth)
+  }
   const knuckle = sphere(0.085, CORAL, { roughness: 0.45 })
   pinca.add(knuckle)
   garra.add(pinca)
@@ -484,7 +518,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.25, 2.95, 6.05], target: [0.05, 1.0, 0.0] },
+    cameraHint: { position: [0.4, 2.55, 5.05], target: [0.3, 1.32, 0.0] },
   }
 }
 
@@ -501,6 +535,7 @@ export const card: Card = {
       'Você sai do mar e não faz ideia da hora: na praia só há um caranguejo empoleirado numa pedra, e ele responde perguntas batendo a garra desproporcional — CLÓ-CAN! CLÓ-CAN! — uma batida por hora. Enquanto você conta os estalos, ele agita a bandeirinha verde e grita VÁ! É…?, porque o seu barco já está saindo.',
   },
   createScene,
+  refine: { organic: ['caranguejo', 'garra', 'pinca'] },
 }
 
 export default card

@@ -51,6 +51,17 @@ def bbox_diag(points):
     return (Vector((max(xs), max(ys), max(zs))) - Vector((min(xs), min(ys), min(zs)))).length
 
 
+def is_open(obj):
+    """Malha com bordas soltas (não fecha volume). Vértices coincidentes das
+    primitivas do three (costuras de UV) são soldados antes de testar."""
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
+    open_ = any(e.is_boundary for e in bm.edges)
+    bm.free()
+    return open_
+
+
 def select_only(objs, active=None):
     bpy.ops.object.select_all(action="DESELECT")
     for o in objs:
@@ -98,7 +109,12 @@ def refine_organic(part, meshes):
     part_vol = bbox_volume(pts)
     diag = bbox_diag(pts)
 
-    detail = [m for m in meshes if bbox_volume(bbox_world(m)) < part_vol * DETAIL_FRACTION]
+    # Detalhe = pequeno OU aberto. Malha aberta (tubo de cauda, cone sem
+    # tampa, plano) não tem volume: o remesh por voxel a faria sumir.
+    detail = [
+        m for m in meshes
+        if bbox_volume(bbox_world(m)) < part_vol * DETAIL_FRACTION or is_open(m)
+    ]
     body = [m for m in meshes if m not in detail]
     if not body:  # peça feita só de miudezas: nada a fundir
         return None
@@ -188,8 +204,21 @@ def bake_ao(objs):
         if not o.data.color_attributes.get("AO"):
             o.data.color_attributes.new("AO", "BYTE_COLOR", "CORNER")
         o.data.color_attributes.active_color = o.data.color_attributes["AO"]
-    select_only(objs)
-    bpy.ops.object.bake(type="AO", target="VERTEX_COLORS")
+    # Uma peça por vez, só com ela visível: a oclusão é a da própria forma
+    # (dobras, axilas, sob o queixo). Com a cena inteira, sombras de OUTRAS
+    # peças ficariam "pintadas" na pele e apareceriam como manchas escuras
+    # durante a montagem, antes de essas peças chegarem.
+    meshes = [o for o in bpy.context.scene.objects if o.type == "MESH"]
+    by_part = {}
+    for o in objs:
+        by_part.setdefault(o.parent.name if o.parent else "", []).append(o)
+    for group in by_part.values():
+        for m in meshes:
+            m.hide_render = m not in group
+        select_only(group)
+        bpy.ops.object.bake(type="AO", target="VERTEX_COLORS")
+    for m in meshes:
+        m.hide_render = False
 
 
 # ---------------------------------------------------------------------------
@@ -226,6 +255,18 @@ for part in parts:
 if AO and refined_all:
     log(f"bake de AO em {len(refined_all)} objetos…")
     bake_ao(refined_all)
+
+# O runtime só troca peças que têm filhos "__r": as demais continuam com a
+# geometria procedural do app. Elas só serviam de oclusor no bake — fora do
+# arquivo final, que cai de vários MB para o tamanho das peles orgânicas.
+dropped = 0
+for part in parts:
+    if part.name in ORGANIC:
+        continue
+    for m in [c for c in part.children_recursive if c.type == "MESH"]:
+        bpy.data.objects.remove(m, do_unlink=True)
+        dropped += 1
+log(f"{dropped} meshes não orgânicos fora do arquivo final")
 
 bpy.ops.export_scene.gltf(
     filepath=DST,

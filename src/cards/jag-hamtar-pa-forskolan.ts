@@ -16,7 +16,6 @@ import {
  */
 
 const RUBBER = '#7fbfa3'        // piso de borracha verde-menta
-const RUBBER_DARK = '#5d9880'
 const SOIL = '#57604f'
 const MUSTARD = '#d9a327'       // muro amarelo-mostarda
 const MUSTARD_DARK = '#b88620'
@@ -93,15 +92,6 @@ function createScene(): CardScene {
   floor.position.y = 0.13
   base.add(floor)
 
-  // marcação pintada no piso (amarelinha em círculo)
-  const painted = torus(0.95, 0.035, '#eef6f0', { roughness: 0.85 })
-  painted.rotation.x = -Math.PI / 2
-  painted.position.set(0.55, GY + 0.006, 1.0)
-  base.add(painted)
-
-  const patch = cylinder(0.62, 0.66, 0.02, RUBBER_DARK, { roughness: 0.9 })
-  patch.position.set(-1.75, GY - 0.005, 0.95)
-  base.add(patch)
 
   // adereços do pátio, espalhados com rng fixo
   const bushA = puff(0.22, '#4f8f5a', 6, 31, { roughness: 0.9 })
@@ -123,7 +113,7 @@ function createScene(): CardScene {
   ball.position.set(-1.7, GY + 0.17, 0.95)
   base.add(ball)
 
-  for (const [cx, cz] of [[1.75, 1.6], [-0.35, 1.85]] as const) {
+  for (const [cx, cz] of [[2.0, 1.25], [-2.05, 0.55]] as const) {
     const marker = cone(0.13, 0.3, PETROL, { roughness: 0.5 })
     marker.position.set(cx, GY + 0.15, cz)
     marker.rotation.y = rand() * Math.PI
@@ -459,11 +449,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.7, 3.1, 6.3], target: [0.0, 1.1, -0.15] },
+    cameraHint: { position: [0.45, 2.35, 5.15], target: [0.1, 1.2, -0.1] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['elefanta', 'tromba'] },
   meta: {
     id: 'jag-hamtar-pa-forskolan',
     contexto: 'Avisando a professora da förskola quem vai pegar a criança.',

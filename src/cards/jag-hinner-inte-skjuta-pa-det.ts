@@ -32,8 +32,14 @@ const GY = 0.18 // topo do carpete
 
 // pose final da perna de chute e do bloco no ar
 const KICK = -1.25
-const BLOCK_END: [number, number, number] = [2.15, 2.0, 0.3]
-const BLOCK_REST: [number, number, number] = [-0.17, 0.48, 0.55]
+// layout em diagonal: pinguim no fundo-esquerda, de 3/4 para a câmera, chutando
+// rumo à trave no primeiro plano à direita — vê-se rosto, barriga e gravata
+const PENGUIN_POS: [number, number, number] = [-1.0, GY, -0.5]
+const PENGUIN_RY = 0.8
+const GOAL_POS: [number, number, number] = [1.2, GY, 0.9]
+const BLOCK_END: [number, number, number] = [1.75, 2.05, 1.2]
+const BLOCK_MID: [number, number, number] = [0.85, 2.0, 0.6]
+const BLOCK_REST: [number, number, number] = [-0.32, 0.48, 0.02]
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -94,8 +100,8 @@ function createScene(): CardScene {
 
   // ---- trave baixa de três cilindros brancos -------------------------------
   const trave = new THREE.Group()
-  trave.position.set(1.5, GY, 0.45)
-  trave.rotation.y = 0.12
+  trave.position.set(...GOAL_POS)
+  trave.rotation.y = -0.57 // boca (-x local) virada para o pinguim
 
   for (const side of [-1, 1]) {
     const post = cylinder(0.075, 0.085, 1.36, BONE, { roughness: 0.4 })
@@ -115,12 +121,39 @@ function createScene(): CardScene {
     cap.position.set(0, 1.39, side * 0.89)
     trave.add(cap)
   }
+  // rede: barra de fundo no chão + fios caindo do travessão até ela
+  const NET = '#d6d2c6'
+  const backBar = cylinder(0.03, 0.03, 1.7, BONE, { roughness: 0.5 })
+  backBar.rotation.x = Math.PI / 2
+  backBar.position.set(0.6, 0.03, 0)
+  trave.add(backBar)
+  const strand = (a: THREE.Vector3, b: THREE.Vector3) => {
+    const d = b.clone().sub(a)
+    const c = cylinder(0.009, 0.009, d.length(), NET, { roughness: 0.8, detail: 0 }, 6)
+    c.position.copy(a).add(b).multiplyScalar(0.5)
+    c.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.normalize())
+    trave.add(c)
+  }
+  for (let i = 0; i <= 8; i++) {
+    const z = -0.85 + i * (1.7 / 8)
+    strand(new THREE.Vector3(0.02, 1.36, z), new THREE.Vector3(0.6, 0.04, z))
+  }
+  for (let k = 1; k <= 4; k++) {
+    const t = k / 5
+    const x = 0.02 + t * 0.58
+    const y = 1.36 - t * 1.32
+    strand(new THREE.Vector3(x, y, -0.85), new THREE.Vector3(x, y, 0.85))
+    // laterais: fios horizontais do poste até a diagonal
+    for (const side of [-1, 1]) {
+      strand(new THREE.Vector3(0, y, side * 0.85), new THREE.Vector3(x, y, side * 0.85))
+    }
+  }
   root.add(trave)
 
   // ---- pinguim goleiro (olha para a trave: +z local) -----------------------
   const pinguim = new THREE.Group()
-  pinguim.position.set(-1.05, GY, 0.35)
-  pinguim.rotation.y = 1.35
+  pinguim.position.set(...PENGUIN_POS)
+  pinguim.rotation.y = PENGUIN_RY
 
   const torso = capsule(0.34, 0.55, PENGUIN, { roughness: 0.72 })
   torso.position.y = 0.72
@@ -358,9 +391,9 @@ function createScene(): CardScene {
       8.75,
       0.45,
       [
-        ch('position.x', BLOCK_REST[0], 1.15),
-        ch('position.y', BLOCK_REST[1], 2.05),
-        ch('position.z', BLOCK_REST[2], 0.42),
+        ch('position.x', BLOCK_REST[0], BLOCK_MID[0]),
+        ch('position.y', BLOCK_REST[1], BLOCK_MID[1]),
+        ch('position.z', BLOCK_REST[2], BLOCK_MID[2]),
         ch('rotation.z', 0, 0.5),
       ],
       { ease: 'easeOut' },
@@ -373,9 +406,9 @@ function createScene(): CardScene {
       9.2,
       0.6,
       [
-        ch('position.x', 1.15, BLOCK_END[0]),
-        ch('position.y', 2.05, BLOCK_END[1]),
-        ch('position.z', 0.42, BLOCK_END[2]),
+        ch('position.x', BLOCK_MID[0], BLOCK_END[0]),
+        ch('position.y', BLOCK_MID[1], BLOCK_END[1]),
+        ch('position.z', BLOCK_MID[2], BLOCK_END[2]),
         ch('rotation.z', 0.5, 0.85),
         ch('rotation.x', 0, 0.3),
       ],
@@ -390,7 +423,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 3.0, 6.4], target: [0.35, 1.05, 0.2] },
+    cameraHint: { position: [0.3, 2.6, 5.2], target: [0.25, 0.92, 0.1] },
   }
 }
 
@@ -408,6 +441,7 @@ export const card: Card = {
       'O prazo de sexta vem quicando na sua direção e você RI NERVOSO — RRÍNER, sopro sem vibrar — porque não vai dar conta. Aí o pinguim de gravata torta, goleiro oficial do escritório, solta um CHUTA soprado do fundo da garganta, mas com o bico arredondado no Ü: RRÜTA!, mandando o bloco da sexta-feira por cima da trave, direto pra semana que vem, e implora: PÔ, DÊ!',
   },
   createScene,
+  refine: { organic: ['pinguim', 'cabeca'] },
 }
 
 export default card

@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng,
-  rbox, capsule, cylinder, sphere, cone, torus, lathe, rock, puff,
+  rbox, capsule, cylinder, sphere, cone, torus, lathe, puff,
 } from '../rig/helpers'
 
 /**
@@ -38,7 +38,7 @@ function createScene(): CardScene {
   under.position.y = 0.06
   base.add(under)
 
-  const floor = cylinder(2.52, 2.6, 0.07, MINT, { roughness: 0.3 })
+  const floor = cylinder(2.52, 2.6, 0.07, MINT, { roughness: 0.55 }) // 0.3 estourava num reflexo branco
   floor.position.y = 0.145
   base.add(floor)
 
@@ -50,7 +50,7 @@ function createScene(): CardScene {
 
   // vaso de espera
   const vaso = new THREE.Group()
-  vaso.position.set(-1.9, GY, -0.85)
+  vaso.position.set(-1.7, GY, -0.6)
   const pote = lathe(
     [[0, 0], [0.17, 0], [0.2, 0.08], [0.17, 0.26], [0.19, 0.31], [0.15, 0.33], [0, 0.33]],
     MINT_DARK,
@@ -67,7 +67,7 @@ function createScene(): CardScene {
 
   // cadeira da sala de espera
   const cadeira = new THREE.Group()
-  cadeira.position.set(1.78, GY, 1.02)
+  cadeira.position.set(1.55, GY, 0.85)
   cadeira.rotation.y = -0.75 + rand() * 0.1
   const assento = rbox(0.48, 0.09, 0.44, 0.04, CREAM, { roughness: 0.45 })
   assento.position.y = 0.3
@@ -84,10 +84,11 @@ function createScene(): CardScene {
   }
   base.add(cadeira)
 
-  const pedra = rock(0.15, '#8d9296', 33, { roughness: 0.9 })
-  pedra.position.set(-2.05, GY + 0.05, 0.15)
-  pedra.rotation.y = rand() * Math.PI
-  base.add(pedra)
+  // segunda cadeira de espera, vazia (a fila já foi embora)
+  const cadeira2 = cadeira.clone()
+  cadeira2.position.set(1.95, GY, 0.2)
+  cadeira2.rotation.y = -1.15
+  base.add(cadeira2)
 
   // senhas velhas largadas no chão
   for (const [sx, sz] of [[1.35, -1.6], [-1.15, -1.45]] as const) {
@@ -277,9 +278,11 @@ function createScene(): CardScene {
   queixo.position.set(0, -0.09, L - 0.32)
   jacare.add(queixo)
 
-  // interior da boca: o acento saturado da cena
+  // interior da boca: o acento saturado da cena. Peça própria (sem animação)
+  // pra ficar fora da pele refinada: o bake de AO, feito com a boca fechada,
+  // o deixava preto justo quando a boca escancara
   const goela = rbox(0.26, 0.04, 0.56, 0.015, ACCENT, { roughness: 0.55 })
-  goela.position.set(0, -0.03, L - 0.32)
+  goela.position.set(0, 0.005, L - 0.32) // acima da pele refinada do queixo
   jacare.add(goela)
 
   for (const side of [-1, 1]) {
@@ -341,7 +344,7 @@ function createScene(): CardScene {
 
   // ---- cruz AKUT acesa -----------------------------------------------------
   const cruz = new THREE.Group()
-  cruz.position.set(-1.15, GY, -1.72)
+  cruz.position.set(-1.0, GY, -1.45)
   cruz.rotation.y = 0.42
   root.add(cruz)
 
@@ -368,6 +371,7 @@ function createScene(): CardScene {
     { name: 'monofone', group: 'telefone', object: monofone },
     { name: 'jacare', group: 'jacare', object: jacare },
     { name: 'touca', group: 'jacare', object: touca },
+    { name: 'goela', group: 'jacare', object: goela },
     { name: 'fita', group: 'fila', object: fita },
     { name: 'fitaSolta', group: 'fila', object: fitaSolta },
     { name: 'mandibula', group: 'mordida', object: mandibula },
@@ -489,7 +493,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.1, 3.1, 6.0], target: [0.15, 0.95, 0.1] },
+    cameraHint: { position: [0.15, 2.65, 4.9], target: [0.15, 1.0, -0.05] },
   }
 }
 
@@ -508,6 +512,7 @@ export const card: Card = {
       'Você liga pro 1177 e quem atende, de dentro do telefonão vermelho, é um jacaré de touca de enfermeiro. Ele cospe pela fenda uma fita de senha com três semanas de fila; você aponta e berra DÊ É A CÜT! — e as mandíbulas dele fecham num estalo seco, CÜT!, cortando a fita da fila no meio. Aí você BE-RRÖ-VER que precisa ver o doutor, e ele te empurra pra dentro: CÓ-MA IN, I-DÁG.',
   },
   createScene,
+  refine: { organic: ['jacare', 'mandibula'] },
 }
 
 export default card

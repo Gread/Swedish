@@ -228,7 +228,10 @@ function createScene(): CardScene {
   // calendário escolar rasgado ao meio: duas placas caídas
   for (const [cx, cz, cry, flip] of [[-0.62, 0.62, 0.55, -1], [-0.16, 0.9, -0.38, 1]] as const) {
     const metade = new THREE.Group()
-    metade.position.set(cx, 0.135, cz)
+    // borda de trás erguida (apoiada na crista da areia): a folha mostra a
+    // face para a câmera em vez de sumir rente ao chão
+    metade.position.set(cx, 0.235, cz)
+    metade.rotation.x = 0.36
     metade.rotation.y = cry
     metade.rotation.z = (rand() - 0.5) * 0.06
 
@@ -487,7 +490,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.0, 6.0], target: [0.15, 1.0, -0.2] },
+    cameraHint: { position: [0.5, 2.45, 4.8], target: [0.05, 0.85, -0.15] },
   }
 }
 

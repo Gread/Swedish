@@ -46,11 +46,15 @@ function createScene(): CardScene {
   grama.position.y = 0.145
   base.add(grama)
 
-  // faixa de corte mais escura (marca de cortador) sob o telão
-  const faixa = cylinder(1.15, 1.15, 0.012, GRAMA_ESCURA, { roughness: 0.92 })
-  faixa.position.set(1.25, GY + 0.002, -0.4)
-  faixa.scale.z = 0.75
-  base.add(faixa)
+  // faixas de corte do cortador (listras claras/escuras), presas dentro do disco
+  for (let i = -2; i <= 2; i++) {
+    if (i % 2 === 0) continue
+    const x = i * 0.85
+    const half = Math.sqrt(Math.max(0, 2.45 * 2.45 - (Math.abs(x) + 0.42) ** 2))
+    const listra = rbox(0.85, 0.01, half * 2, 0.004, GRAMA_ESCURA, { roughness: 0.92 })
+    listra.position.set(x, GY + 0.002, 0)
+    base.add(listra)
+  }
 
   // círculo central em cal branca
   const circulo = torus(0.92, 0.022, '#eceae2', { roughness: 0.85 })
@@ -151,38 +155,48 @@ function createScene(): CardScene {
 
   // ---- o R gigante que acende na tela --------------------------------------
   const letraR = new THREE.Group()
-  letraR.position.set(-0.16, -0.02, 0.17)
+  letraR.position.set(-0.2, -0.02, 0.17)
+  const glifo = new THREE.Group() // escala do glifo fica aqui: letraR anima scale 0→1
+  glifo.scale.setScalar(1.3)
+  letraR.add(glifo)
 
   const haste = rbox(0.11, 0.68, 0.07, 0.025, LUZ_TELA, {
     emissive: LUZ_TELA,
     emissiveIntensity: 1.2,
   })
   haste.position.x = -0.17
-  letraR.add(haste)
+  glifo.add(haste)
 
   const barriga = new THREE.Mesh(
-    new THREE.TorusGeometry(0.16, 0.055, 16, 32, Math.PI),
+    new THREE.TorusGeometry(0.16, 0.058, 16, 32, Math.PI),
     mat(LUZ_TELA, { emissive: LUZ_TELA, emissiveIntensity: 1.2 }),
   )
   barriga.castShadow = true
   barriga.rotation.z = -Math.PI / 2
   barriga.position.set(-0.12, 0.17, 0)
-  letraR.add(barriga)
+  glifo.add(barriga)
 
   const travessaR = rbox(0.16, 0.09, 0.07, 0.02, LUZ_TELA, {
     emissive: LUZ_TELA,
     emissiveIntensity: 1.2,
   })
   travessaR.position.set(-0.09, 0.34, 0)
-  letraR.add(travessaR)
-
-  const perna = rbox(0.09, 0.4, 0.07, 0.025, LUZ_TELA, {
+  glifo.add(travessaR)
+  const travessaMeio = rbox(0.1, 0.11, 0.07, 0.02, LUZ_TELA, {
     emissive: LUZ_TELA,
     emissiveIntensity: 1.2,
   })
-  perna.position.set(0.03, -0.16, 0)
-  perna.rotation.z = -0.42
-  letraR.add(perna)
+  travessaMeio.position.set(-0.12, 0.0, 0)
+  glifo.add(travessaMeio)
+
+  // perna diagonal: do pé da barriga (esq.) até a base (dir.)
+  const perna = rbox(0.11, 0.42, 0.07, 0.025, LUZ_TELA, {
+    emissive: LUZ_TELA,
+    emissiveIntensity: 1.2,
+  })
+  perna.position.set(-0.01, -0.165, 0)
+  perna.rotation.z = 0.475
+  glifo.add(perna)
   telao.add(letraR)
 
   // ---- placa do banheiro: o T colado no R ----------------------------------
@@ -328,8 +342,8 @@ function createScene(): CardScene {
 
   // tampa azul: dobradiça na traseira da bacia
   const tampa = new THREE.Group()
-  tampa.position.set(0, 0.58, -0.2)
-  tampa.rotation.x = -1.05
+  tampa.position.set(0, 0.6, -0.16)
+  tampa.rotation.x = -1.5 // aberta, encostada na caixa: a bacia fica à vista
   const tabua = rbox(0.46, 0.055, 0.6, 0.025, AZUL, { roughness: 0.3 })
   tabua.position.z = 0.3
   tampa.add(tabua)
@@ -425,7 +439,7 @@ function createScene(): CardScene {
     ),
     seq('vaso-settle', 'vaso', 8.9, 0.6, [ch('position.y', 1.22, 1.05)]),
 
-    seq('tampa-open', 'tampa', 9.6, 0.7, [ch('rotation.x', 0, -1.05)], {
+    seq('tampa-open', 'tampa', 9.6, 0.7, [ch('rotation.x', 0, -1.5)], {
       ease: 'easeOut',
       caption: 'Var ligger toaletten? — "Onde fica o banheiro?"',
     }),
@@ -436,7 +450,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [-0.2, 3.05, 6.3], target: [0.1, 1.15, 0.05] },
+    cameraHint: { position: [-0.15, 2.85, 5.7], target: [0.15, 1.3, 0.0] },
   }
 }
 

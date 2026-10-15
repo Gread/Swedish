@@ -84,6 +84,13 @@ function createScene(): CardScene {
     disc.rotation.y = rand() * Math.PI
     vinis.add(disc)
   }
+  // selo do disco de cima: deixa claro que é uma pilha de vinis
+  const selo = cylinder(0.1, 0.1, 0.01, '#d8b24a', { roughness: 0.5 })
+  selo.position.set(0, 0.02 + 3 * 0.038 + 0.02, 0)
+  vinis.add(selo)
+  const furo = cylinder(0.018, 0.018, 0.012, '#1a161d', { roughness: 0.5 })
+  furo.position.set(0, 0.02 + 3 * 0.038 + 0.022, 0)
+  vinis.add(furo)
   base.add(vinis)
 
   const vaso = lathe(
@@ -122,15 +129,19 @@ function createScene(): CardScene {
   // ---- bumbo deitado com aros cromados ----------------------------------------
   const bumbo = new THREE.Group()
   bumbo.position.set(0.95, GY, 0.2)
-  bumbo.rotation.y = -0.18
+  bumbo.rotation.y = -0.4
   const DRUM_Y = 0.74
 
   // casco: sólido de revolução aberto nas duas pontas, deitado no eixo z
   const casco = lathe(
-    [[0.7, -0.29], [0.725, -0.2], [0.73, 0], [0.725, 0.2], [0.7, 0.29]],
+    [[0.7, 0.29], [0.725, 0.2], [0.73, 0], [0.725, -0.2], [0.7, -0.29]],
     CREAM,
     { roughness: 0.35 },
   )
+  // casco aberto: as duas faces precisam aparecer (por fora e por dentro da boca)
+  const cascoMat = (casco.material as THREE.MeshStandardMaterial).clone()
+  cascoMat.side = THREE.DoubleSide
+  casco.material = cascoMat
   casco.rotation.x = Math.PI / 2
   casco.position.y = DRUM_Y
   bumbo.add(casco)
@@ -238,7 +249,7 @@ function createScene(): CardScene {
 
   const manto = lathe(
     [
-      [0.02, 0], [0.3, 0.05], [0.4, 0.2], [0.43, 0.4],
+      [0, 0], [0.3, 0.05], [0.4, 0.2], [0.43, 0.4],
       [0.38, 0.6], [0.26, 0.75], [0.12, 0.83], [0, 0.85],
     ],
     PURPLE,
@@ -347,21 +358,30 @@ function createScene(): CardScene {
 
   // ---- travesseiro (acento coral) ----------------------------------------------
   const travesseiro = new THREE.Group()
-  travesseiro.position.set(0.9, 0.88, 0.56)
-  travesseiro.rotation.set(-0.12, -0.18, 0.08)
+  // enfiado até a metade na boca do bumbo, estufado contra o aro de baixo
+  travesseiro.position.set(0.872, 0.8, 0.384)
+  travesseiro.rotation.set(-0.06, -0.4, 0.07)
 
-  const fronha = rbox(0.62, 0.21, 0.44, 0.1, CREAM_LIGHT, { roughness: 0.95 })
+  const fronha = rbox(0.96, 0.3, 0.56, 0.14, CREAM_LIGHT, { roughness: 0.95 })
   travesseiro.add(fronha)
-  for (const x of [-0.14, 0.14]) {
-    const listra = rbox(0.05, 0.215, 0.445, 0.022, ACCENT, { roughness: 0.95 })
+  // miolo estufado: o enchimento empurrando a fronha
+  const miolo = sphere(0.3, CREAM_LIGHT, { roughness: 0.95 })
+  miolo.scale.set(1.45, 0.62, 0.92)
+  travesseiro.add(miolo)
+  for (const x of [-0.2, 0.2]) {
+    const listra = rbox(0.07, 0.31, 0.565, 0.03, ACCENT, { roughness: 0.95 })
     listra.position.x = x
+    listra.scale.y = 1.12
     travesseiro.add(listra)
   }
+  // orelhas dos cantos, beliscadas
   for (const sx of [-1, 1]) {
     for (const sz of [-1, 1]) {
-      const canto = sphere(0.05, CREAM_LIGHT, { roughness: 0.95 })
-      canto.position.set(sx * 0.29, 0, sz * 0.2)
-      canto.scale.set(0.8, 0.55, 0.8)
+      const canto = cone(0.07, 0.16, CREAM_LIGHT, { roughness: 0.95 })
+      canto.position.set(sx * 0.48, 0, sz * 0.26)
+      canto.rotation.set(0, sz > 0 ? 0 : Math.PI, -sx * (Math.PI / 2))
+      canto.rotation.y = Math.atan2(sz * 0.26, sx * 0.48)
+      canto.scale.set(1, 1, 0.5)
       travesseiro.add(canto)
     }
   }
@@ -469,10 +489,10 @@ function createScene(): CardScene {
     }),
 
     seq('travesseiro-enfia', 'travesseiro', 8.6, 0.7, [
-      ch('position.z', 1.62, 0.56),
-      ch('position.y', 0.3, 0.88),
-      ch('rotation.x', 0, -0.12),
-      ch('rotation.y', 0, -0.18),
+      ch('position.z', 1.62, 0.384),
+      ch('position.y', 0.3, 0.8),
+      ch('rotation.x', 0, -0.06),
+      ch('rotation.y', 0, -0.4),
     ], {
       ease: 'easeIn',
       caption: '…CAN-NI… DÉM-PA! — e enfia o travesseiro na boca do bumbo: puf, abafou.',
@@ -498,11 +518,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.35, 3.15, 6.4], target: [0.15, 1.05, 0.05] },
+    cameraHint: { position: [0.3, 2.75, 5.3], target: [0.2, 0.98, 0.0] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['polvo', 'tentaculos'] },
   meta: {
     id: 'kan-ni-dampa-er-lite',
     contexto: 'Batendo na porta do vizinho tarde da noite, ou numa festa barulhenta no prédio.',

@@ -2,12 +2,12 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng,
-  rbox, capsule, cylinder, sphere, cone, lathe, puff,
+  rbox, capsule, cylinder, sphere, cone, lathe, puff, torus,
 } from '../rig/helpers'
 
 /**
  * "Ta med, tack." — a CABRA de avental que atende no balcão só sabe berrar
- * "TÁ! MÉÉÉ!", cospe o sanduíche já embrulhadinho dentro da sacola kraft e
+ * "TÁ! MÊÊÊ!", cospe o sanduíche já embrulhadinho dentro da sacola kraft e
  * crava o casco no tampo: TAC!
  *
  * Diorama: piso quadriculado creme, balcão de madeira clara atravessado,
@@ -67,13 +67,28 @@ function createScene(): CardScene {
   const caixote = new THREE.Group()
   caixote.position.set(-1.82, GY, 0.6)
   caixote.rotation.y = 0.35 + (rand() - 0.5) * 0.3
-  const crateBody = rbox(0.52, 0.44, 0.44, 0.04, WOOD_DARK, { roughness: 0.8 })
-  crateBody.position.y = 0.22
+  // caixote de feira: fundo escuro, ripas finas com frestas e quatro
+  // colunas nos cantos (antes as ripas largas liam como pilha de panquecas)
+  const crateBody = rbox(0.48, 0.42, 0.4, 0.02, '#4a3824', { roughness: 0.9 })
+  crateBody.position.y = 0.21
   caixote.add(crateBody)
-  for (const sy of [0.09, 0.22, 0.35]) {
-    const slat = rbox(0.54, 0.07, 0.46, 0.02, WOOD, { roughness: 0.8 })
+  for (const sy of [0.08, 0.2, 0.32]) {
+    const slat = rbox(0.5, 0.06, 0.42, 0.012, WOOD, { roughness: 0.8 })
     slat.position.y = sy
     caixote.add(slat)
+  }
+  for (const cx of [-1, 1]) {
+    for (const cz of [-1, 1]) {
+      const coluna = rbox(0.06, 0.44, 0.06, 0.012, WOOD_DARK, { roughness: 0.8 })
+      coluna.position.set(cx * 0.24, 0.22, cz * 0.2)
+      caixote.add(coluna)
+    }
+  }
+  // maçãs dentro do caixote
+  for (const [ax, az] of [[-0.1, -0.05], [0.08, 0.06], [0.02, -0.1]] as const) {
+    const maca = sphere(0.075, '#9c4a3a', { roughness: 0.55 })
+    maca.position.set(ax, 0.45, az)
+    caixote.add(maca)
   }
   base.add(caixote)
 
@@ -91,9 +106,28 @@ function createScene(): CardScene {
   planta.add(folhagem)
   base.add(planta)
 
-  const tapete = cylinder(0.55, 0.55, 0.02, APRON_DARK, { roughness: 0.92 })
-  tapete.position.set(-0.15, GY + 0.012, 1.55)
-  tapete.scale.set(1.5, 1, 1)
+  // tapete de retalhos (trasmatta sueca): retângulo listrado com franjas —
+  // claro e com espessura, para não ler como buraco no piso
+  const tapete = new THREE.Group()
+  tapete.position.set(-0.1, GY, 1.45)
+  tapete.rotation.y = 0.06
+  const tapeteBase = rbox(1.5, 0.035, 0.7, 0.015, '#d8cdb6', { roughness: 0.95 })
+  tapeteBase.position.y = 0.018
+  tapete.add(tapeteBase)
+  const listras = ['#6f8fa8', '#b9a98a', '#6f8fa8', '#8a9c7a', '#6f8fa8']
+  listras.forEach((cor, i) => {
+    const listra = rbox(0.1, 0.012, 0.66, 0.005, cor, { roughness: 0.95 })
+    listra.position.set(-0.56 + i * 0.28, 0.038, 0)
+    tapete.add(listra)
+  })
+  for (const side of [-1, 1]) {
+    for (let k = 0; k < 9; k++) {
+      const franja = rbox(0.022, 0.012, 0.09, 0.005, '#cfc3aa', { roughness: 0.95 })
+      franja.position.set(side * 0.79, 0.012, -0.29 + k * 0.0725)
+      franja.rotation.y = Math.PI / 2
+      tapete.add(franja)
+    }
+  }
   base.add(tapete)
   root.add(base)
 
@@ -302,6 +336,13 @@ function createScene(): CardScene {
   const fundo = rbox(0.44, 0.03, 0.36, 0.01, KRAFT_DARK, { roughness: 0.9 })
   fundo.position.y = 0.015
   sacola.add(fundo)
+
+  // alças de papel torcido (metade de baixo do anel fica escondida na sacola)
+  for (const side of [-1, 1]) {
+    const alcaSacola = torus(0.1, 0.014, KRAFT_DARK, { roughness: 0.85 })
+    alcaSacola.position.set(0, 0.41, side * 0.19)
+    sacola.add(alcaSacola)
+  }
   root.add(sacola)
 
   // ---- o sanduíche embrulhado (fita vermelha = o acento da cena) ------------
@@ -381,7 +422,7 @@ function createScene(): CardScene {
     ),
 
     seq('cabeca-berro', 'cabeca', 4.3, 0.6, [ch('rotation.x', -0.05, -0.7)], {
-      caption: 'Você pede pra viagem e ela só berra pro alto: "TÁ! MÉÉÉ!"',
+      caption: 'Você pede pra viagem e ela só berra pro alto: "TÁ! MÊÊÊ!"',
     }),
     seq('cabra-pulo', 'cabra', 4.45, 0.28, [ch('position.y', GY, GY + 0.08)], { ease: 'easeOut' }),
     seq('cabra-pousa', 'cabra', 4.73, 0.32, [ch('position.y', GY + 0.08, GY)], { ease: 'easeIn' }),
@@ -463,7 +504,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.35, 3.0, 6.0], target: [0.15, 1.05, -0.1] },
+    cameraHint: { position: [0.5, 4.0, 3.7], target: [0.25, 1.3, -0.3] },
   }
 }
 
@@ -474,13 +515,14 @@ export const card: Card = {
       "Resposta à pergunta padrão do balcão: 'Här eller ta med?'. Para comer no local: 'Här, tack.'",
     fraseFonte: 'Para viagem, por favor.',
     fraseAlvo: 'Ta med, tack.',
-    pronuncia: "ta mé, tak (o 'd' de 'med' praticamente não soa)",
+    pronuncia: "ta MÊ, tak (Ê fechado e longo, como em 'você'; o 'd' de 'med' praticamente não soa)",
     ponteSonora:
-      '"Ta med, tack" ~ "TÁ, MÉÉ! TAC!" — a CABRA de avental berra "TÁ! MÉÉÉ!" e crava o casco no balcão: TAC!',
+      '"Ta med, tack" ~ "TÁ, MÊÊ! TAC!" (o berro é de Ê FECHADO, boca quase sorrindo — com É aberto vira \'mä\') — a CABRA de avental berra "TÁ! MÊÊÊ!" e crava o casco no balcão: TAC!',
     historia:
-      'Você pede pra viagem e quem atende é uma cabra de avental que não sabe falar, só berrar: "TÁ! MÉÉÉ!". Ela engole seu sanduíche inteiro, cospe ele já embrulhadinho dentro da sacola de papel e crava o casco no balcão: TAC!',
+      'Você pede pra viagem e quem atende é uma cabra de avental que não sabe falar, só berrar: "TÁ! MÊÊÊ!". Ela engole seu sanduíche inteiro, cospe ele já embrulhadinho dentro da sacola de papel e crava o casco no balcão: TAC!',
   },
   createScene,
+  refine: { organic: ['cabeca'] }, // 'cabra' fundia o avental no pelo (manchas)
 }
 
 export default card

@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng, mat,
-  rbox, capsule, cylinder, sphere, cone, torus, rock, puff,
+  rbox, capsule, cylinder, sphere, cone, torus, puff,
 } from '../rig/helpers'
 
 /**
@@ -30,7 +30,7 @@ const STEEL = '#575e64'
 const CHROME = '#9aa1a6'
 const IVORY = '#ded6c4' // presas
 const RUST = '#8c5f42'
-const STONE = '#787f84'
+const STONE = '#6a7176'
 const GOLD = '#f0b429' // ÚNICO acento saturado: a estrela que afunda
 const GY = 0.18 // topo da calçada
 
@@ -61,91 +61,112 @@ function createScene(): CardScene {
     base.add(seam)
   }
 
-  // poças menores de ambientação
+  // manchas de molhado: lâminas finas e irregulares, mais claras que a laje
+  // (disco escuro e grosso lia como buraco)
   for (const [px, pz, pr] of [
-    [-1.72, -0.4, 0.32],
-    [1.62, -1.05, 0.24],
+    [-1.5, -0.75, 0.26],
+    [1.55, -0.85, 0.2],
   ] as const) {
-    const spill = cylinder(pr, pr * 0.94, 0.028, WET_DARK, { roughness: 0.08, metalness: 0.55 })
-    spill.position.set(px, 0.19, pz)
-    spill.rotation.y = rand() * Math.PI
-    base.add(spill)
+    for (let k = 0; k < 3; k++) {
+      const rr = pr * (k === 0 ? 1 : 0.55 + rand() * 0.2)
+      const spill = cylinder(rr, rr, 0.008, '#71889a', { roughness: 0.12, metalness: 0.25 })
+      const a = rand() * Math.PI * 2
+      spill.position.set(px + (k ? Math.cos(a) * pr * 0.8 : 0), 0.183 + k * 0.001, pz + (k ? Math.sin(a) * pr * 0.6 : 0))
+      spill.scale.z = 0.7 + rand() * 0.3
+      base.add(spill)
+    }
   }
 
-  const pedrinha = rock(0.13, '#6d7378', 31, { roughness: 0.9 })
-  pedrinha.position.set(-1.98, 0.24, 0.92)
-  pedrinha.rotation.y = rand() * Math.PI
-  base.add(pedrinha)
-
   const mato = puff(0.15, '#5b6357', 5, 32, { roughness: 0.95 })
-  mato.position.set(1.92, 0.26, 0.6)
+  mato.position.set(1.75, 0.26, -0.35)
   base.add(mato)
 
   const jornal = rbox(0.36, 0.03, 0.27, 0.012, '#7b7d78', { roughness: 0.95 })
-  jornal.position.set(1.32, 0.2, 1.62)
+  jornal.position.set(-1.45, 0.2, 0.35)
   jornal.rotation.y = rand() * Math.PI
   base.add(jornal)
   root.add(base)
 
   // ---- a poça grande: espalha pelo chão -------------------------------------
   const poca = new THREE.Group()
-  poca.position.set(-0.15, GY + 0.012, 1.15)
+  poca.position.set(-0.35, GY, 0.95)
 
-  const agua = cylinder(0.85, 0.8, 0.03, WET, { roughness: 0.06, metalness: 0.6 })
-  agua.position.y = 0.015
+  // lâmina d'água rente à laje, com a borda escura de molhado em volta
+  const molhado = cylinder(0.68, 0.68, 0.006, WET_DARK, { roughness: 0.35, metalness: 0.2 })
+  molhado.position.y = 0.003
+  molhado.scale.z = 0.82
+  poca.add(molhado)
+
+  const agua = cylinder(0.6, 0.6, 0.012, WET, { roughness: 0.05, metalness: 0.55 })
+  agua.position.y = 0.008
+  agua.scale.z = 0.8
   poca.add(agua)
 
-  const borda = torus(0.83, 0.035, WET_DARK, { roughness: 0.5 })
-  borda.rotation.x = Math.PI / 2
-  borda.position.y = 0.012
-  borda.scale.y = 0.4
-  poca.add(borda)
-
-  for (const [rr, tt] of [[0.42, 0.016], [0.63, 0.012]] as const) {
-    const onda = torus(rr, tt, '#8fa7b4', { roughness: 0.1, metalness: 0.4 })
+  // anéis de onda onde a estrela afundou (achatados na vertical)
+  for (const [rr, tt] of [[0.26, 0.012], [0.41, 0.01]] as const) {
+    const onda = torus(rr, tt, '#7f98a6', { roughness: 0.3, metalness: 0.15 })
     onda.rotation.x = Math.PI / 2
-    onda.position.y = 0.031
-    onda.scale.y = 0.35
+    onda.position.set(0.08, 0.015, 0.02)
+    onda.scale.set(1, 0.85, 0.35)
     poca.add(onda)
   }
   root.add(poca)
 
   // ---- a morsa de macacão (pose final: já escorregada pro chão) -------------
   const morsa = new THREE.Group()
-  morsa.position.set(-0.8, GY, -0.25)
-  morsa.rotation.set(0.16, 0.96, 0) // desabada pra frente, olhando pro kit
+  morsa.position.set(-0.55, GY, -0.3)
+  morsa.rotation.set(0.16, 0.5, 0) // desabada pra frente: a boca em Ô pra você, a nadadeira no kit
 
   const barriga = sphere(0.56, FUR, { roughness: 0.8 })
   barriga.scale.set(1.05, 0.6, 1.15) // espalhada no chão: nada aqui fica em pé
   barriga.position.y = 0.33
   morsa.add(barriga)
 
-  const macacao = cylinder(0.56, 0.63, 0.3, DENIM, { roughness: 0.9 })
-  macacao.position.y = 0.19
+  // calça do macacão: casca da metade de baixo da barriga, um pouco maior que
+  // ela, cortada acima do equador — a borda se fecha pra dentro como cintura
+  // (cortada no equador ela parecia uma bacia)
+  const CORTE = 0.62 // ângulo polar da cintura: o jeans sobe até o peito
+  const calcaMat = mat(DENIM, { roughness: 0.9, size: 1.2 })
+  calcaMat.side = THREE.DoubleSide
+  const macacao = new THREE.Mesh(
+    new THREE.SphereGeometry(0.575, 40, 20, 0, Math.PI * 2, CORTE, Math.PI - CORTE),
+    calcaMat,
+  )
+  macacao.castShadow = true
+  macacao.receiveShadow = true
+  macacao.scale.set(1.05, 0.6, 1.15)
+  macacao.position.y = 0.33
   morsa.add(macacao)
+
+  const cos = torus(0.575 * Math.sin(CORTE), 0.024, DENIM_LIGHT, { roughness: 0.9 }) // barra da cintura
+  cos.rotation.x = Math.PI / 2
+  cos.scale.set(1.05, 1.15, 1)
+  cos.position.y = 0.33 + 0.575 * Math.cos(CORTE) * 0.6
+  morsa.add(cos)
+
 
   const peito = sphere(0.4, FUR, { roughness: 0.8 })
   peito.scale.set(0.95, 0.9, 0.95)
   peito.position.set(0, 0.66, 0.06)
   morsa.add(peito)
 
-  const peitilho = rbox(0.44, 0.34, 0.09, 0.05, DENIM, { roughness: 0.9 })
-  peitilho.position.set(0, 0.72, 0.31)
-  peitilho.rotation.x = -0.12
+  const peitilho = rbox(0.5, 0.34, 0.08, 0.05, DENIM, { roughness: 0.9 })
+  peitilho.position.set(0, 0.58, 0.43)
+  peitilho.rotation.x = -0.3
   const bolso = rbox(0.18, 0.14, 0.03, 0.02, DENIM_LIGHT, { roughness: 0.9 })
   bolso.position.set(0, -0.05, 0.05)
   peitilho.add(bolso)
   morsa.add(peitilho)
 
   for (const side of [-1, 1]) {
-    const alca = rbox(0.09, 0.44, 0.07, 0.025, DENIM, { roughness: 0.9 })
-    alca.position.set(side * 0.15, 0.92, 0.19)
-    alca.rotation.x = -0.42
+    const alca = rbox(0.09, 0.42, 0.06, 0.025, DENIM, { roughness: 0.9 })
+    alca.position.set(side * 0.2, 0.83, 0.3)
+    alca.rotation.set(-0.75, 0, -side * 0.1)
     morsa.add(alca)
 
-    const botao = cylinder(0.036, 0.036, 0.02, CHROME, { roughness: 0.3, metalness: 0.7 })
-    botao.rotation.x = Math.PI / 2
-    botao.position.set(side * 0.16, 0.85, 0.37)
+    const botao = cylinder(0.04, 0.04, 0.025, CHROME, { roughness: 0.3, metalness: 0.7 })
+    botao.rotation.x = Math.PI / 2 - 0.3
+    botao.position.set(side * 0.19, 0.69, 0.49)
     morsa.add(botao)
   }
 
@@ -162,13 +183,14 @@ function createScene(): CardScene {
   nadEsq.position.set(-0.52, 0.11, 0.18)
   morsa.add(nadEsq)
 
-  // nadadeira direita enfiada pra frente, na direção do kit
-  const nadDir = capsule(0.12, 0.3, FUR, { roughness: 0.8 })
+  // nadadeira direita esticada até a tampa do kit (ponta = -y da cápsula)
+  const nadDir = capsule(0.12, 0.34, FUR, { roughness: 0.8 })
   nadDir.scale.set(1, 1, 0.6)
-  nadDir.rotation.set(2.2, 0, 0)
-  nadDir.position.set(0.3, 0.5, 0.28)
+  const nadAlvo = new THREE.Vector3(0.62, -0.18, 0.72).normalize()
+  nadDir.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), nadAlvo)
+  nadDir.position.set(0.36, 0.56, 0.24).addScaledVector(nadAlvo, 0.26)
   const pingoNad = sphere(0.035, WET, { roughness: 0.08, metalness: 0.5 })
-  pingoNad.position.y = -0.29
+  pingoNad.position.y = -0.31
   nadDir.add(pingoNad)
   morsa.add(nadDir)
 
@@ -211,9 +233,9 @@ function createScene(): CardScene {
     cabeca.add(cenho)
 
     // presa apontando pra baixo, pingando
-    const presa = cone(0.05, 0.36, IVORY, { roughness: 0.35 })
-    presa.position.set(side * 0.26, -0.34, 0.22)
-    presa.rotation.set(Math.PI + 0.12, 0, -side * 0.1)
+    const presa = cone(0.05, 0.38, IVORY, { roughness: 0.35 })
+    presa.position.set(side * 0.25, -0.4, 0.34)
+    presa.rotation.set(Math.PI + 0.2, 0, -side * 0.06)
     const pingoPresa = sphere(0.032, WET, { roughness: 0.08, metalness: 0.5 })
     pingoPresa.position.y = 0.21
     presa.add(pingoPresa)
@@ -235,11 +257,12 @@ function createScene(): CardScene {
 
   // ---- a boca em Ô: toro escuro, grande e redondo ---------------------------
   const boca = new THREE.Group()
-  boca.position.set(0, -0.3, 0.29)
+  boca.position.set(0, -0.3, 0.37)
+  boca.rotation.x = -0.35 // virada pra cima/pra frente: o Ô se lê da câmera
 
-  const labio = torus(0.155, 0.062, '#3a2f2a', { roughness: 0.7 })
+  const labio = torus(0.165, 0.06, '#5b3d39', { roughness: 0.6 })
   boca.add(labio)
-  const goela = cylinder(0.152, 0.152, 0.03, '#161210', { roughness: 0.85 })
+  const goela = cylinder(0.165, 0.165, 0.03, '#161210', { roughness: 0.85 })
   goela.rotation.x = Math.PI / 2
   goela.position.z = -0.015
   boca.add(goela)
@@ -249,8 +272,8 @@ function createScene(): CardScene {
 
   // ---- kit de ferramentas ---------------------------------------------------
   const kit = new THREE.Group()
-  kit.position.set(1.0, GY, 1.0)
-  kit.rotation.y = -0.55
+  kit.position.set(0.64, GY, 0.08)
+  kit.rotation.y = -0.35
 
   const caixa = rbox(0.76, 0.36, 0.44, 0.05, STEEL, { roughness: 0.45 })
   caixa.position.y = 0.18
@@ -312,7 +335,7 @@ function createScene(): CardScene {
 
   // ---- a troca: pedra cinza montada numa mola --------------------------------
   const pedraMola = new THREE.Group()
-  pedraMola.position.set(0.55, GY, 0.55)
+  pedraMola.position.set(1.28, GY, 0.78)
   pedraMola.rotation.z = -0.05
 
   const chapa = cylinder(0.13, 0.15, 0.04, '#4c5257', { roughness: 0.5, metalness: 0.55 })
@@ -333,14 +356,17 @@ function createScene(): CardScene {
   mola.receiveShadow = true
   pedraMola.add(mola)
 
-  const pedra = rock(0.17, STONE, 44, { roughness: 0.9 })
+  // seixo facetado (rock() racha em lascas: a malha do icosaedro não é indexada)
+  const pedra = sphere(0.2, STONE, { roughness: 1, flat: true }, 9)
+  pedra.scale.set(1.12, 0.8, 0.98)
+  pedra.rotation.set(0.3, 0.6, 0.2)
   pedra.position.y = 0.46
   pedraMola.add(pedra)
   root.add(pedraMola)
 
   // ---- a estrela dourada (pose final: meio submersa na poça) ----------------
   const estrela = new THREE.Group()
-  estrela.position.set(-0.15, GY + 0.02, 1.15)
+  estrela.position.set(-0.27, GY + 0.02, 0.97)
   estrela.rotation.set(-Math.PI / 2 + 0.3, 0.5, 0)
 
   const shape = new THREE.Shape()
@@ -437,7 +463,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.4, 2.95, 6.0], target: [0.05, 0.8, 0.4] },
+    cameraHint: { position: [0.35, 1.95, 4.05], target: [0.15, 0.62, 0.3] },
   }
 }
 
@@ -454,6 +480,7 @@ export const card: Card = {
       'Você conta a má notícia e a morsa mecânica de macacão abre a boca num Ô enorme, redondo feito pneu. Ela enfia a nadadeira no kit de ferramentas e faz a única coisa que sabe fazer: Ô, VÁ TRÔ-KIT! — e troca a sua estrelinha dourada por uma pedra cinza montada numa mola. A tampa do kit fecha com um T seco e a estrela afunda na poça.',
   },
   createScene,
+  refine: { organic: ['morsa', 'cabeca'] },
 }
 
 export default card

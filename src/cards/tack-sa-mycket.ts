@@ -13,6 +13,7 @@ import {
   rock,
   seq,
   sphere,
+  torus,
 } from '../rig/helpers'
 
 /**
@@ -161,11 +162,12 @@ function createScene(): CardScene {
   // Segurança bombado: terno escuro, boné, óculos e crachá dourado
   const guarda = person({ body: SUIT, skin: SKIN, height: 1.6, armAngle: 0.3 })
   guarda.position.set(-0.5, TOP, 0)
-  guarda.rotation.y = 1.2 // olha para quem chega
+  guarda.rotation.y = 0.3 // de frente, exibindo o muque para quem chega
   guarda.getObjectByName('armR')!.visible = false // dá lugar ao braço flexionado
 
   const cabeca = guarda.getObjectByName('head')!
-  cabeca.rotation.y = -0.35 // admira o próprio muque
+  cabeca.rotation.y = 0.5 // admira o próprio muque
+  cabeca.rotation.z = -0.08
   const copa = cylinder(0.245, 0.29, 0.13, SUIT_DARK, { roughness: 0.8 })
   copa.position.set(0, 0.225, 0)
   const aba = rbox(0.42, 0.035, 0.26, 0.015, '#141824', { roughness: 0.8 })
@@ -181,45 +183,64 @@ function createScene(): CardScene {
   root.add(guarda)
 
   // ------------------------------------------------------------ braço + muque
-  // Braço flexionado brota do ombro: manga, cotovelo, antebraço e punho
+  // Braço flexionado (pose 💪) brota do ombro direito: manga arregaçada,
+  // braço horizontal, cotovelo, antebraço de pé e punho fechado no alto
+  const SKIN_SHADE = '#ddb08a'
   const bracoMuque = new THREE.Group()
-  const ombro = sphere(0.16, SUIT, { roughness: 0.8 })
-  ombro.position.set(0.02, 0, 0)
-  const bracoSup = capsule(0.135, 0.3, SUIT, { roughness: 0.8 })
+  const ombro = sphere(0.17, SUIT, { roughness: 0.8 })
+  const manga = cylinder(0.168, 0.16, 0.17, SUIT_DARK, { roughness: 0.8 })
+  manga.rotation.z = Math.PI / 2
+  manga.position.set(0.11, 0, 0)
+  const bainha = torus(0.158, 0.026, SUIT, { roughness: 0.8 })
+  bainha.rotation.y = Math.PI / 2
+  bainha.position.set(0.2, 0, 0)
+  const bracoSup = capsule(0.135, 0.36, SKIN)
   bracoSup.rotation.z = -Math.PI / 2
-  bracoSup.position.set(0.3, 0.02, 0)
-  const punhoManga = cylinder(0.155, 0.155, 0.07, SUIT_DARK, { roughness: 0.8 })
-  punhoManga.rotation.z = Math.PI / 2
-  punhoManga.position.set(0.47, 0.02, 0)
-  const cotovelo = sphere(0.115, SKIN)
-  cotovelo.position.set(0.58, 0.05, 0)
-  const antebraco = capsule(0.105, 0.26, SKIN)
-  antebraco.position.set(0.58, 0.3, 0)
-  const punho = sphere(0.15, SKIN)
-  punho.scale.set(1, 0.88, 0.92)
-  punho.position.set(0.58, 0.52, 0)
-  bracoMuque.add(ombro, bracoSup, punhoManga, cotovelo, antebraco, punho)
-  bracoMuque.position.set(-0.24, 0.74, 0.06)
-  bracoMuque.rotation.y = -0.45
+  bracoSup.position.set(0.36, 0, 0)
+  const cotovelo = sphere(0.13, SKIN)
+  cotovelo.position.set(0.62, 0.02, 0)
+  const antebraco = capsule(0.118, 0.34, SKIN)
+  antebraco.rotation.z = 0.08
+  antebraco.position.set(0.63, 0.3, 0)
+  const punho = sphere(0.155, SKIN)
+  punho.scale.set(0.95, 0.9, 1)
+  punho.position.set(0.61, 0.6, 0)
+  bracoMuque.add(ombro, manga, bainha, bracoSup, cotovelo, antebraco, punho)
+  // nós dos dedos voltados para a cabeça + polegar por cima
+  for (let i = 0; i < 4; i++) {
+    const no = sphere(0.048, SKIN_SHADE, { roughness: 0.6 })
+    no.position.set(0.49, 0.5 + i * 0.062, 0.05)
+    bracoMuque.add(no)
+  }
+  const polegar = capsule(0.04, 0.1, SKIN_SHADE, { roughness: 0.6 })
+  polegar.rotation.z = Math.PI / 2
+  polegar.position.set(0.56, 0.6, 0.13)
+  bracoMuque.add(polegar)
+  bracoMuque.position.set(-0.2, 0.69, -0.09) // ombro direito do segurança
+  bracoMuque.rotation.y = 0.3
   root.add(bracoMuque)
 
-  // O MUQUE — bíceps vermelho gigante, o acento da cena, brota do braço
+  // O MUQUE — bíceps vermelho gigante, o acento da cena, estufa em cima do braço
   const muque = new THREE.Group()
-  const biceps = sphere(0.4, MUQUE_RED, { roughness: 0.42 })
-  biceps.scale.y = 0.92
-  biceps.position.set(0, 0.15, 0.02)
-  const brilho = sphere(0.085, '#f4ddd2', { roughness: 0.25 })
-  brilho.scale.set(1, 0.55, 0.4)
-  brilho.position.set(-0.13, 0.42, 0.31)
-  muque.add(biceps, brilho)
-  muque.position.set(0.03, 0.9, 0.17)
+  const biceps = sphere(0.25, MUQUE_RED, { roughness: 0.42 })
+  biceps.scale.set(1.32, 1, 1)
+  const pico = sphere(0.15, MUQUE_RED, { roughness: 0.42 })
+  pico.position.set(0.04, 0.12, 0)
+  const brilho = sphere(0.07, '#f4ddd2', { roughness: 0.25 })
+  brilho.scale.set(1.4, 0.5, 0.4)
+  brilho.position.set(-0.06, 0.2, 0.17)
+  muque.add(biceps, pico, brilho)
+  muque.position.set(0.135, 0.84, -0.16)
+  muque.rotation.y = 0.3
   root.add(muque)
 
   // ------------------------------------------------------------ quem agradece
   // De suéter verde-azulado, chega e desfere o tapa de gratidão
-  const fa = person({ body: TEAL, skin: SKIN, height: 1.45, armAngle: 0.3 })
-  fa.position.set(0.92, TOP, 0.38)
-  fa.rotation.y = -1.82 // encara o muque
+  // mais baixo que o segurança: a cabeça dele não tapa o punho erguido
+  const FA_H = 1.32
+  const fa = person({ body: TEAL, skin: SKIN, height: FA_H, armAngle: 0.3 })
+  fa.position.set(0.78, TOP, -0.1)
+  fa.rotation.y = -1.57 // encara o muque
   const cabecaFa = fa.getObjectByName('head')!
   cabecaFa.rotation.x = -0.12 // olha para cima, para o bíceps
   const cabelo = puff(0.13, '#3a2a1e', 5, 21, { roughness: 0.9 })
@@ -228,9 +249,9 @@ function createScene(): CardScene {
 
   // pivô no ombro para o braço do tapa girar de verdade
   const bracoTapa = new THREE.Group()
-  bracoTapa.position.set(0.2835, 0.6, 0)
+  bracoTapa.position.set(FA_H * 0.17 * 1.15, FA_H * 0.52 * 0.62 + 0.12, 0)
   const bracoFa = fa.getObjectByName('armR')!
-  bracoFa.position.set(0, -0.1325, 0)
+  bracoFa.position.set(0, -0.12, 0)
   bracoFa.rotation.z = -0.12
   bracoTapa.add(bracoFa) // re-parenta o braço para dentro do pivô
   bracoTapa.rotation.x = -1.9 // pose final: mão estendida sobre o muque
@@ -244,20 +265,20 @@ function createScene(): CardScene {
   for (let i = 0; i < 6; i++) {
     const a = (i * Math.PI) / 3 + 0.26
     const longa = i % 2 === 0
-    const raio = cone(longa ? 0.065 : 0.05, longa ? 0.3 : 0.18, '#f2b23a', brilhoOpts)
+    const raio = cone(longa ? 0.045 : 0.035, longa ? 0.21 : 0.13, '#f2b23a', brilhoOpts)
     raio.rotation.z = a
-    const dist = 0.1 + (longa ? 0.15 : 0.09)
+    const dist = 0.07 + (longa ? 0.105 : 0.065)
     raio.position.set(-Math.sin(a) * dist, Math.cos(a) * dist, 0)
     estrela.add(raio)
   }
-  const nucleo = sphere(0.09, '#ffd47a', {
+  const nucleo = sphere(0.065, '#ffd47a', {
     emissive: '#ffca5e',
     emissiveIntensity: 1.2,
     roughness: 0.3,
   })
   estrela.add(nucleo)
-  estrela.position.set(0.36, 1.0, 0.47)
-  estrela.rotation.y = 0.5
+  estrela.position.set(0.44, 0.98, 0.14)
+  estrela.rotation.y = 0.3
   root.add(estrela)
 
   const parts = [
@@ -337,7 +358,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.0, 3.0, 6.1], target: [0.05, 0.95, 0.05] },
+    cameraHint: { position: [0.7, 1.95, 4.9], target: [-0.15, 1.15, -0.1] },
   }
 }
 
@@ -355,6 +376,7 @@ export const card: Card = {
       "O SÔ MUQUE, segurança bombado da portaria, segurou a porta aberta pra você. Palavras não bastam pra tanta gentileza: você agradece dando um tapa sonoro — TAC! — no MUQUE gigante dele. Diga 'muque' com bico ('müque') e o bíceps estufa ainda mais de orgulho: TAC, SÔ MÜQUE — muito obrigado!",
   },
   createScene,
+  refine: { organic: ['bracoMuque', 'muque'] },
 }
 
 export default card

@@ -44,6 +44,10 @@ const DRUM_Z = POST_Z + BOOM_LEN * Math.sin(-BOOM_YAW)
 const MARM_X = -1.45
 const MARM_Z = 0.45
 const FOLHA_Y = 1.12
+// folhinha voando (pose final): à direita do dedo, de frente para a câmera
+const FLY_X = DRUM_X + 0.85
+const FLY_Y = 1.95
+const FLY_Z = DRUM_Z + 0.75
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -71,17 +75,17 @@ function createScene(): CardScene {
     CREAM,
     { roughness: 0.5 },
   )
-  pot.position.set(-1.95, GY, -1.1)
+  pot.position.set(-1.95, GY, 1.25)
   pot.rotation.y = rand() * Math.PI
   base.add(pot)
 
   const fern = puff(0.24, IVY, 6, 41, { roughness: 0.88 })
-  fern.position.set(-1.95, GY + 0.5, -1.1)
+  fern.position.set(-1.95, GY + 0.5, 1.25)
   base.add(fern)
 
   // lixeira de pedal
   const lixeira = new THREE.Group()
-  lixeira.position.set(1.9, GY, -0.75)
+  lixeira.position.set(1.65, GY, -0.45)
   lixeira.rotation.y = rand() * Math.PI
   const canBody = cylinder(0.24, 0.21, 0.44, MINT_DARK, { roughness: 0.4 })
   canBody.position.y = 0.22
@@ -98,15 +102,15 @@ function createScene(): CardScene {
 
   // rolo de gaze caído no chão
   const gaze = cylinder(0.11, 0.11, 0.13, WHITE, { roughness: 0.9 })
-  gaze.position.set(-0.35, GY + 0.11, 1.75)
+  gaze.position.set(-0.15, GY + 0.11, 1.35)
   gaze.rotation.set(Math.PI / 2, 0, rand() * Math.PI)
   base.add(gaze)
 
-  // adesivo de piso (marca de "fique aqui")
-  const marca = cylinder(0.3, 0.3, 0.012, MINT_DARK, { roughness: 0.5 })
-  marca.position.set(1.15, GY + 0.002, 1.55)
-  marca.rotation.y = rand() * Math.PI
-  base.add(marca)
+  // tira de esparadrapo solta ao lado da gaze
+  const tape = rbox(0.34, 0.012, 0.07, 0.005, '#efe6d2', { roughness: 0.85 })
+  tape.position.set(0.22, GY + 0.007, 1.42)
+  tape.rotation.y = 0.5
+  base.add(tape)
 
   root.add(base)
 
@@ -161,8 +165,8 @@ function createScene(): CardScene {
 
   // ---- folhinha de ONTEM (pose construída = já voando) ----------------------
   const folhinha = new THREE.Group()
-  folhinha.position.set(DRUM_X + 0.55, 2.5, DRUM_Z + 1.15)
-  folhinha.rotation.set(0.85, 0.3, 2.4)
+  folhinha.position.set(FLY_X, FLY_Y, FLY_Z)
+  folhinha.rotation.set(-0.3, 0.4, 0.5)
 
   const sheet = rbox(0.3, 0.36, 0.018, 0.015, '#f6f0e0', { roughness: 0.75 })
   folhinha.add(sheet)
@@ -357,27 +361,51 @@ function createScene(): CardScene {
   cuffBand.position.y = -0.11
   dedo.add(cuffBand)
 
-  const mitt = rbox(0.3, 0.34, 0.16, 0.08, FOAM, { roughness: 0.92 })
+  const mitt = rbox(0.34, 0.34, 0.2, 0.09, FOAM, { roughness: 0.92 })
   mitt.position.y = -0.28
   dedo.add(mitt)
 
-  const thumb = capsule(0.055, 0.1, FOAM, { roughness: 0.92 })
-  thumb.position.set(-0.17, -0.3, 0)
+  // três dedos dobrados (nós) na base da mão de espuma
+  for (const kx of [-0.115, -0.04, 0.035]) {
+    const knuckle = capsule(0.055, 0.08, FOAM, { roughness: 0.92 })
+    knuckle.rotation.x = Math.PI / 2
+    knuckle.position.set(kx, -0.46, 0.035)
+    dedo.add(knuckle)
+  }
+  // costura branca no punho da mão
+  const seam = rbox(0.3, 0.02, 0.205, 0.008, '#f6d9cf', { roughness: 0.9 })
+  seam.position.y = -0.14
+  dedo.add(seam)
+
+  const thumb = capsule(0.06, 0.12, FOAM, { roughness: 0.92 })
+  thumb.position.set(-0.2, -0.3, 0.02)
   thumb.rotation.z = 0.75
   dedo.add(thumb)
 
-  const finger = capsule(0.085, 0.2, FOAM, { roughness: 0.92 })
-  finger.position.set(0.02, -0.62, 0)
+  // o indicador apontado
+  const FINGER_X = 0.11
+  const finger = capsule(0.07, 0.26, FOAM, { roughness: 0.92 })
+  finger.position.set(FINGER_X, -0.6, 0)
   dedo.add(finger)
 
-  const nail = sphere(0.083, FOAM_DARK, { roughness: 0.92 })
-  nail.position.set(0.02, -0.79, 0)
+  const nail = rbox(0.08, 0.1, 0.03, 0.012, '#f27a62', { roughness: 0.6 })
+  nail.position.set(FINGER_X, -0.73, 0.06)
   dedo.add(nail)
 
+  const tip = new THREE.Object3D()
+  tip.position.set(FINGER_X, -0.81, 0)
+  dedo.add(tip)
+
   // ---- HERA brotando no ponto do cutucão ------------------------------------
-  const tipLocal = new THREE.Vector3(BOOM_LEN - 0.805 * Math.sin(0.14), 0, 0)
-  const pokeX = POST_X + tipLocal.x * Math.cos(BOOM_YAW)
-  const pokeZ = POST_Z + tipLocal.x * Math.sin(-BOOM_YAW)
+  // ponto do cutucão: ponta do indicador com o braço na pose de cutucar
+  braco.rotation.z = BOOM_POKE
+  braco.updateMatrixWorld(true)
+  const tipWorld = new THREE.Vector3()
+  tip.getWorldPosition(tipWorld)
+  braco.rotation.z = BOOM_REST
+  braco.updateMatrixWorld(true)
+  const pokeX = tipWorld.x
+  const pokeZ = tipWorld.z
 
   const hera = new THREE.Group()
   hera.position.set(pokeX, DRUM_TOP, pokeZ)
@@ -497,12 +525,12 @@ function createScene(): CardScene {
       11.15,
       1.0,
       [
-        ch('position.x', DRUM_X, DRUM_X + 0.55),
-        ch('position.y', FOLHA_Y, 2.5),
-        ch('position.z', DRUM_Z + 0.46, DRUM_Z + 1.15),
-        ch('rotation.x', -0.22, 0.85),
-        ch('rotation.y', 0, 0.3),
-        ch('rotation.z', 0, 2.4),
+        ch('position.x', DRUM_X, FLY_X),
+        ch('position.y', FOLHA_Y, FLY_Y),
+        ch('position.z', DRUM_Z + 0.46, FLY_Z),
+        ch('rotation.x', -0.22, -0.3),
+        ch('rotation.y', 0, 0.4),
+        ch('rotation.z', 0, 0.5),
       ],
       { ease: 'easeOut' },
     ),
@@ -526,7 +554,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.9, 3.0, 5.6], target: [-0.05, 1.12, 0.35] },
+    cameraHint: { position: [1.45, 2.75, 4.7], target: [-0.1, 1.25, 0.35] },
   }
 }
 

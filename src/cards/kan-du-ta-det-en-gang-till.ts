@@ -79,7 +79,7 @@ function createScene(): CardScene {
   // ---- canguru recepcionista (olha para o gongo, +z local) -----------------
   const canguru = new THREE.Group()
   canguru.position.set(-1.25, GY, 0.1)
-  canguru.rotation.y = 1.35
+  canguru.rotation.y = 0.95 // três-quartos: barriga e crachá para a plateia
 
   const torso = capsule(0.29, 0.47, FUR, { roughness: 0.75 })
   torso.position.y = 0.68
@@ -136,6 +136,7 @@ function createScene(): CardScene {
   // cabeça telescopa de dentro do tronco (peça própria)
   const cabeca = new THREE.Group()
   cabeca.position.set(0, 1.38, 0.12)
+  cabeca.rotation.y = 0.55 // o olhar vai para o gongo
 
   const skull = sphere(0.27, FUR, { roughness: 0.75 })
   skull.scale.set(0.92, 1, 0.95)
@@ -215,7 +216,7 @@ function createScene(): CardScene {
       [0.1, 0.13], [0, 0.13],
     ],
     GOLD,
-    { roughness: 0.25, metalness: 0.8 },
+    { roughness: 0.3, metalness: 0.5 }, // menos espelho: lê ouro claro, não bronze escuro
   )
   disc.rotation.x = Math.PI / 2
   disc.position.set(0, -1.02, 0)
@@ -224,31 +225,33 @@ function createScene(): CardScene {
   // ---- o TIL (~) preto, pintado bem no centro ------------------------------
   const til = new THREE.Group()
   til.position.set(0, -1.02, 0.12)
-  const tildeCurve = new THREE.CatmullRomCurve3([
-    new THREE.Vector3(-0.24, -0.05, 0),
-    new THREE.Vector3(-0.12, 0.085, 0),
-    new THREE.Vector3(0, 0, 0),
-    new THREE.Vector3(0.12, -0.085, 0),
-    new THREE.Vector3(0.24, 0.05, 0),
-  ])
+  // ~ de verdade: um período de seno, suave, corcova à esquerda
+  const TIL_W = 0.62
+  const TIL_A = 0.085
+  const tildeCurve = new THREE.CatmullRomCurve3(
+    Array.from({ length: 17 }, (_, i) => {
+      const x = -TIL_W / 2 + (i / 16) * TIL_W
+      return new THREE.Vector3(x, -TIL_A * Math.sin((2 * Math.PI * x) / TIL_W), 0)
+    }),
+  )
   const tilde = new THREE.Mesh(
-    new THREE.TubeGeometry(tildeCurve, 32, 0.045, 12, false),
+    new THREE.TubeGeometry(tildeCurve, 64, 0.058, 14, false),
     mat('#1f1f1f', { roughness: 0.5 }),
   )
   tilde.castShadow = true
   tilde.receiveShadow = true
   til.add(tilde)
   for (const end of [-1, 1]) {
-    const cap = sphere(0.045, '#1f1f1f', { roughness: 0.5 })
-    cap.position.set(end * 0.24, end * 0.05, 0)
+    const cap = sphere(0.058, '#1f1f1f', { roughness: 0.5 })
+    cap.position.set((end * TIL_W) / 2, 0, 0)
     til.add(cap)
   }
   gongo.add(til)
 
   // ---- baqueta na pata do canguru ------------------------------------------
   const baqueta = new THREE.Group()
-  baqueta.position.set(-0.92, 1.08, -0.16)
-  baqueta.rotation.z = 0.85 // pose final: armada sobre o ombro
+  baqueta.position.set(-0.84, 1.08, -0.05) // na pata direita erguida
+  baqueta.rotation.z = -0.3 // pose final: erguida bem alto, apontando o gongo
 
   const pawGrip = sphere(0.12, FUR, { roughness: 0.75 })
   baqueta.add(pawGrip)
@@ -329,7 +332,7 @@ function createScene(): CardScene {
       0.5,
       [
         ch('rotation.z', 0.85, -0.85),
-        ch('position.x', -0.92, 0.3),
+        ch('position.x', -0.84, 0.3),
         ch('position.y', 1.08, 0.92),
       ],
       { ease: 'easeIn' },
@@ -346,8 +349,8 @@ function createScene(): CardScene {
       8.45,
       0.8,
       [
-        ch('rotation.z', -0.85, 0.85),
-        ch('position.x', 0.3, -0.92),
+        ch('rotation.z', -0.85, -0.3),
+        ch('position.x', 0.3, -0.84),
         ch('position.y', 0.92, 1.08),
       ],
       { ease: 'easeOut' },
@@ -360,11 +363,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.4, 3.0, 6.2], target: [0.05, 1.05, -0.05] },
+    cameraHint: { position: [0.3, 2.8, 5.35], target: [0.05, 1.3, -0.1] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['canguru', 'cabeca'] },
   meta: {
     id: 'kan-du-ta-det-en-gang-till',
     contexto: 'Qualquer conversa: caixa, balcão, telefone com banco, número ditado rápido demais.',

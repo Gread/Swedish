@@ -22,9 +22,9 @@ const WOOD = '#4a3220'
 const WOOD_LIGHT = '#6b4a2e'
 const SILVER = '#c6ccd4'
 const STEEL = '#8f979f'
-const FUR = '#8f4f34'
-const FUR_LIGHT = '#a9664a'
-const PAW = '#6b3823'
+const FUR = '#9a6a44' // castanho-dourado de capivara (não o ruivo de urso)
+const FUR_LIGHT = '#b48558'
+const PAW = '#5a3b25'
 const APRON = '#98a0a8'
 const BREAD = '#d3b478'
 const GOLD = '#f2b32c' // acento reservado: as duas OPINIÕES
@@ -49,8 +49,22 @@ const OVER = Math.sin(0.05) * ARM // repique do travessão
 const PLATE_L = { level: PIVOT, dip: PIVOT - DIP, over: PIVOT + OVER }
 const PLATE_R = { level: PIVOT, up: PIVOT + DIP, over: PIVOT - OVER }
 
-// paw da capivara (origem física das bolinhas)
-const PAW_POS: [number, number, number] = [-0.93, 0.9, 0.79]
+// capivara: na frente da bancada, 3/4 para a câmera (polegar e avental à vista)
+const CAP_POS: [number, number, number] = [-1.0, GY, 0.72]
+const CAP_ROT = 0.95
+const CAP_SCALE = 1.12
+
+// punho do polegar na pose de arremesso (rotation.x = 1.45), em coordenadas do
+// mundo: origem física das bolinhas
+const PAW_POS: [number, number, number] = (() => {
+  const local = new THREE.Vector3(
+    -0.36,
+    0.72 + 0.37 * Math.cos(1.45),
+    0.16 + 0.37 * Math.sin(1.45),
+  ).multiplyScalar(CAP_SCALE)
+  local.applyAxisAngle(new THREE.Vector3(0, 1, 0), CAP_ROT)
+  return [CAP_POS[0] + local.x, CAP_POS[1] + local.y, CAP_POS[2] + local.z]
+})()
 
 function metalOpts(rough = 0.22) {
   return { roughness: rough, metalness: 0.85 }
@@ -169,7 +183,7 @@ function createScene(): CardScene {
   base.add(caixinha)
 
   const caixote = rbox(0.52, 0.44, 0.44, 0.04, WOOD_LIGHT, { roughness: 0.8 })
-  caixote.position.set(2.02, GY + 0.22, 0.92)
+  caixote.position.set(2.0, GY + 0.22, -1.05)
   caixote.rotation.y = 0.4 + rand() * 0.3
   base.add(caixote)
 
@@ -268,8 +282,9 @@ function createScene(): CardScene {
 
   // ---- capivara ourives mineira -------------------------------------------
   const capivara = new THREE.Group()
-  capivara.position.set(-1.35, GY, 0.35)
-  capivara.rotation.y = 1.4 // olha (+z local) para a balança
+  capivara.position.set(...CAP_POS)
+  capivara.rotation.y = CAP_ROT
+  capivara.scale.setScalar(CAP_SCALE)
 
   for (const side of [-1, 1]) {
     const leg = capsule(0.115, 0.2, FUR, { roughness: 0.85 })
@@ -302,31 +317,38 @@ function createScene(): CardScene {
   }
 
   // cabeça retangular, focinho chato, orelhinhas
-  const head = rbox(0.44, 0.36, 0.48, 0.1, FUR, { roughness: 0.85 })
-  head.position.set(0, 1.4, 0.06)
+  // cabeça de capivara: caixa comprida, focinho largo e rombudo, olhos no
+  // alto das laterais, orelhinhas mínimas
+  const head = rbox(0.42, 0.38, 0.62, 0.12, FUR, { roughness: 0.85 })
+  head.position.set(0, 1.42, 0.1)
   capivara.add(head)
 
-  const muzzle = rbox(0.29, 0.18, 0.2, 0.06, FUR_LIGHT, { roughness: 0.85 })
-  muzzle.position.set(0, 1.31, 0.32)
+  const muzzle = rbox(0.36, 0.27, 0.26, 0.1, FUR_LIGHT, { roughness: 0.85 })
+  muzzle.position.set(0, 1.34, 0.36)
   capivara.add(muzzle)
 
+  const nariz = rbox(0.24, 0.09, 0.05, 0.035, '#4a2e1c', { roughness: 0.5 })
+  nariz.position.set(0, 1.42, 0.49)
+  capivara.add(nariz)
+
   for (const side of [-1, 1]) {
-    const nostril = sphere(0.028, '#3a2018', { roughness: 0.4 })
-    nostril.position.set(side * 0.07, 1.35, 0.41)
+    const nostril = sphere(0.026, '#2a170e', { roughness: 0.4 })
+    nostril.position.set(side * 0.075, 1.415, 0.515)
+    nostril.scale.set(1.3, 0.7, 0.6)
     capivara.add(nostril)
 
-    const eye = sphere(0.058, '#ffffff', { roughness: 0.25 })
-    eye.position.set(side * 0.135, 1.47, 0.24)
-    eye.scale.z = 0.6
-    const pupil = sphere(0.028, '#1a1a1a', { roughness: 0.2 })
-    pupil.position.set(side * 0.135, 1.47, 0.275)
+    const eye = sphere(0.052, '#ffffff', { roughness: 0.25 })
+    eye.position.set(side * 0.19, 1.53, 0.2)
+    eye.scale.set(0.6, 1, 1)
+    const pupil = sphere(0.03, '#1a1a1a', { roughness: 0.2 })
+    pupil.position.set(side * 0.215, 1.535, 0.215)
     capivara.add(eye, pupil)
 
-    const ear = sphere(0.078, FUR, { roughness: 0.85 })
-    ear.position.set(side * 0.2, 1.57, 0.0)
-    ear.scale.set(1, 0.9, 0.5)
-    const inner = sphere(0.042, PAW, { roughness: 0.85 })
-    inner.position.set(side * 0.21, 1.57, 0.035)
+    const ear = sphere(0.055, FUR, { roughness: 0.85 })
+    ear.position.set(side * 0.17, 1.62, -0.1)
+    ear.scale.set(1, 0.9, 0.55)
+    const inner = sphere(0.03, PAW, { roughness: 0.85 })
+    inner.position.set(side * 0.175, 1.62, -0.075)
     inner.scale.set(1, 0.9, 0.4)
     capivara.add(ear, inner)
   }
@@ -482,11 +504,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.3, 3.05, 6.3], target: [0.15, 1.25, 0] },
+    cameraHint: { position: [0.2, 2.5, 4.75], target: [0.2, 1.18, -0.05] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['capivara', 'polegar'] },
   meta: {
     id: 'ja-precis-det-tycker-jag-ocksa',
     contexto:

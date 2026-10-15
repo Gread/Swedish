@@ -76,7 +76,7 @@ function createScene(): CardScene {
 
   // poste de rua baixo, canto de trás
   const poste = new THREE.Group()
-  poste.position.set(-2.25, GY, 0.85)
+  poste.position.set(2.15, GY, -1.2)
   const mastro = cylinder(0.045, 0.06, 0.86, '#3a3f47', { roughness: 0.5 })
   mastro.position.y = 0.43
   const luminaria = lathe(
@@ -190,8 +190,8 @@ function createScene(): CardScene {
 
   // ---- cabeça (telescopa de dentro do corpo) -------------------------------
   const cabeca = new THREE.Group()
-  cabeca.position.set(-1.85, CORPO_Y - 0.02, 0.15)
-  cabeca.rotation.y = 0.38
+  cabeca.position.set(-1.95, CORPO_Y + 0.02, 0.38)
+  cabeca.rotation.y = 0.12
 
   const cranio = sphere(0.45, GATA, { roughness: 0.85 })
   cranio.scale.set(1, 0.94, 0.96)
@@ -242,13 +242,22 @@ function createScene(): CardScene {
   root.add(corpo)
 
   // ---- ondas de ronronar: RÜÜR ---------------------------------------------
+  // arcos de vibração "((( )))" subindo do dorso, de ponta a ponta da gata
   const ronrom = new THREE.Group()
-  ronrom.position.set(-0.95, CORPO_Y, 0.15)
-  for (let i = 0; i < 3; i++) {
-    const onda = torus(0.66 + i * 0.19, 0.036 - i * 0.006, '#cfe0ff', { roughness: 0.3 })
-    onda.rotation.y = Math.PI / 2
-    onda.position.x = -i * 0.09
-    ronrom.add(onda)
+  ronrom.position.set(-0.1, CORPO_Y + 0.42, 0.15)
+  const ondaMat = mat('#dcebff', { roughness: 0.3, emissive: '#9fc3ff', emissiveIntensity: 0.35 })
+  for (const cx of [-0.95, 0.15, 1.1]) {
+    for (let i = 0; i < 3; i++) {
+      const arco = 1.5 - i * 0.12
+      const onda = new THREE.Mesh(
+        new THREE.TorusGeometry(0.2 + i * 0.16, 0.034 - i * 0.006, 10, 40, arco),
+        ondaMat,
+      )
+      onda.rotation.z = Math.PI / 2 - arco / 2
+      onda.position.set(cx, -0.06, 0)
+      onda.castShadow = true
+      ronrom.add(onda)
+    }
   }
   root.add(ronrom)
 
@@ -314,22 +323,27 @@ function createScene(): CardScene {
   root.add(latinha)
 
   // ---- o rabo que vira TIL dourado ----------------------------------------
+  // sai do alto da garupa (traseira da gata) e sobe livre, sem nada na frente
   const rabo = new THREE.Group()
-  rabo.position.set(1.78, 0, -0.32)
+  rabo.position.set(1.22, 0, 0.0)
 
-  const haste = capsule(0.11, 0.85, GATA, { roughness: 0.85 })
-  haste.position.y = GY + 0.53
+  const haste = capsule(0.11, 1.0, GATA, { roughness: 0.85 })
+  haste.position.y = GY + 0.98
   rabo.add(haste)
   for (let i = 0; i < 3; i++) {
     const anelRabo = torus(0.113, 0.045, GATA_ESC, { roughness: 0.85 })
     anelRabo.rotation.x = Math.PI / 2
-    anelRabo.position.y = GY + 0.3 + i * 0.24
+    anelRabo.position.y = GY + 0.98 + i * 0.24
     rabo.add(anelRabo)
   }
+  const ponteira = sphere(0.125, GATA_ESC, { roughness: 0.85 })
+  ponteira.position.y = GY + 1.6
+  rabo.add(ponteira)
 
   // o glifo do TIL (~), desenhado no alto do rabo
   const til = new THREE.Group()
-  til.position.y = GY + 1.24
+  til.position.y = GY + 1.86
+  til.scale.setScalar(1.25)
   const curva = new THREE.CatmullRomCurve3([
     new THREE.Vector3(-0.34, -0.08, 0),
     new THREE.Vector3(-0.17, 0.13, 0),
@@ -378,7 +392,7 @@ function createScene(): CardScene {
       ease: 'easeOut',
       caption: '…e o quarteirão inteiro é uma gata laranja gigante deitada: a STÚR GATA (gata = RUA).',
     }),
-    seq('cabeca-out', 'cabeca', 2.6, 0.8, [ch('position.x', -0.3, -1.85)], { ease: 'easeOut' }),
+    seq('cabeca-out', 'cabeca', 2.6, 0.8, [ch('position.x', -0.3, -1.95)], { ease: 'easeOut' }),
 
     seq(
       'ronrom-grow',
@@ -424,11 +438,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.8, 3.1, 6.4], target: [-0.1, 0.95, 0.15] },
+    cameraHint: { position: [0.5, 2.55, 5.55], target: [0.0, 1.05, 0.1] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['corpo', 'cabeca'] },
   meta: {
     id: 'hur-kommer-jag-till',
     contexto: 'Parando alguém na rua com o endereço na mão. Troque pelo nome da rua ou do lugar.',

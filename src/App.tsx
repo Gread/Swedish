@@ -1,31 +1,13 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import type { Card } from './rig/types'
 import { cards } from './data/cards'
 import { HomeView } from './views/HomeView'
 import { BuildView } from './views/BuildView'
 import { ReviewView } from './views/ReviewView'
-import { CardCanvas } from './components/CardCanvas'
-import { ReviewScene } from './components/ReviewScene'
 import { useProgress } from './store/progress'
 import { ContactSheet, ExportBlockout, RenderReview } from './dev/DevTools'
-import { useCardScene } from './rig/useCardScene'
+import { PoseDebug } from './dev/DevRoutes'
 import './App.css'
-
-function PoseDebug({ card, raw }: { card: Card; raw: boolean }) {
-  const refined = useCardScene(card)
-  const plain = useMemo(() => card.createScene(), [card])
-  const scene = raw ? plain : refined.scene
-  if (!raw && !refined.ready) return null
-  return (
-    <div className="view" style={{ height: '100vh' }}>
-      <div className="canvas-wrap">
-        <CardCanvas scene={scene}>
-          <ReviewScene scene={scene} opacity={1} />
-        </CardCanvas>
-      </div>
-    </div>
-  )
-}
 
 type Route = { view: 'home' } | { view: 'build'; card: Card } | { view: 'review'; cards: Card[] }
 

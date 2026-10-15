@@ -29,11 +29,14 @@ const GOLD = '#f2b32c' // acento saturado reservado: o DENTE
 const ENGRAVED = '#2a2118'
 
 const GY = 0.18 // topo do piso do diorama
-const PED_X = 0.95
+const PED_X = 0.8
 const PED_Z = 0.15
 const PED_TOP = GY + 0.98 // superfície do pedestal
 const BOT_Y = 0.44 // altura das pernas do robô
 const SLOT_Y = BOT_Y + 0.33 // altura da fenda nas costas
+const DENTE_X = 0.42 // para o lado de fora (esquerda na tela)
+const DENTE_Y = SLOT_Y + 0.36 // dente de pé, acima e ao lado da boca da fenda
+const DENTE_TILT = -0.35 // rotation.z da pose final
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -144,8 +147,8 @@ function createScene(): CardScene {
 
   // ---- robô vendedor, de costas para você ----------------------------------
   const robo = new THREE.Group()
-  robo.position.set(-0.95, GY, -0.05)
-  robo.rotation.y = Math.PI - 0.45 // costas voltadas para a câmera
+  robo.position.set(-0.7, GY, -0.05)
+  robo.rotation.y = Math.PI + 0.23 // costas (o caixa eletrônico) de frente pra câmera
 
   const bot = person({ body: BOT, skin: BOT_LIGHT, height: 1.15, armAngle: 0.45 })
   bot.position.y = BOT_Y
@@ -241,30 +244,39 @@ function createScene(): CardScene {
 
   robo.add(fenda)
 
-  // ---- o DENTE de ouro gigante (telescopa da fenda) ------------------------
+  // ---- o DENTE de ouro gigante (salta da fenda, de pé, de perfil) ---------
+  // Molar inteiro visível: coroa com cúspides em cima, raízes de marfim
+  // embaixo mergulhando na boca da fenda. O preço fica na face voltada pra
+  // câmera (de frente, legível) — antes a coroa vinha de topo e lia como caixa.
   const dente = new THREE.Group()
-  dente.position.set(0, SLOT_Y, -0.4)
-  dente.rotation.x = -1.0 // coroa apontando para fora e para cima
+  // salta da fenda para o lado (não tampa o caixa eletrônico), raízes
+  // apontando de volta para a boca da fenda
+  dente.position.set(DENTE_X, DENTE_Y, -0.45)
+  dente.rotation.set(-0.3, 0, DENTE_TILT)
 
-  const crown = rbox(0.46, 0.3, 0.4, 0.13, GOLD, { roughness: 0.2, metalness: 0.9 })
-  crown.position.y = 0.16
+  const crown = rbox(0.56, 0.34, 0.42, 0.09, GOLD, { roughness: 0.2, metalness: 0.9 })
+  crown.position.y = 0.17
   dente.add(crown)
 
-  for (const side of [-1, 1]) {
-    const ridge = capsule(0.055, 0.26, GOLD, { roughness: 0.2, metalness: 0.9 })
-    ridge.rotation.z = Math.PI / 2
-    ridge.position.set(0, 0.29, side * 0.14)
-    dente.add(ridge)
+  // quatro cúspides arredondadas: o contorno de molar
+  for (const cx of [-1, 1]) {
+    for (const cz of [-1, 1]) {
+      const cusp = sphere(0.12, GOLD, { roughness: 0.2, metalness: 0.9 })
+      cusp.position.set(cx * 0.13, 0.32, cz * 0.1)
+      cusp.scale.y = 0.75
+      dente.add(cusp)
+    }
   }
 
-  const neck = cylinder(0.18, 0.2, 0.09, '#d99f24', { roughness: 0.25, metalness: 0.85 })
+  const neck = cylinder(0.2, 0.22, 0.09, '#d99f24', { roughness: 0.25, metalness: 0.85 })
   neck.position.y = -0.02
   dente.add(neck)
 
   for (const side of [-1, 1]) {
-    const rootFang = capsule(0.075, 0.2, '#e8dcc0', { roughness: 0.3 })
-    rootFang.position.set(side * 0.1, -0.2, 0)
-    rootFang.rotation.z = side * 0.22
+    const rootFang = capsule(0.075, 0.24, '#e8dcc0', { roughness: 0.3 })
+    rootFang.position.set(side * 0.11, -0.22, 0)
+    rootFang.rotation.z = side * 0.2
+    rootFang.scale.set(1, 1, 0.85)
     dente.add(rootFang)
   }
 
@@ -272,21 +284,22 @@ function createScene(): CardScene {
 
   // ---- o preço gravado no esmalte ------------------------------------------
   const preco = new THREE.Group()
-  preco.position.set(0, 0.335, 0)
-  preco.rotation.x = -Math.PI / 2 // deitado sobre a coroa, legível de fora
+  preco.position.set(0, 0.16, -0.212)
+  preco.rotation.y = Math.PI // na face da coroa voltada pra câmera, de pé
 
   /** Traço gravado: barra fina escura no plano xy do grupo. */
-  function bar(x: number, y: number, w: number, h: number) {
+  function bar(x: number, y: number, w: number, h: number, rot = 0) {
     const b = rbox(w, h, 0.02, 0.007, ENGRAVED, { roughness: 0.55 })
     b.position.set(x, y, 0.005)
+    b.rotation.z = rot
     preco.add(b)
   }
 
   /** Dígito de sete segmentos, gravado. */
   function digit(cx: number, on: string) {
-    const w = 0.062
-    const h = 0.13
-    const t = 0.016
+    const w = 0.065
+    const h = 0.15
+    const t = 0.02
     if (on.includes('a')) bar(cx, h / 2, w, t)
     if (on.includes('g')) bar(cx, 0, w, t)
     if (on.includes('d')) bar(cx, -h / 2, w, t)
@@ -296,14 +309,16 @@ function createScene(): CardScene {
     if (on.includes('c')) bar(cx + w / 2, -h / 4, t, h / 2)
   }
 
-  digit(-0.105, 'bc') // 1
-  digit(0, 'abcdfg') // 9
-  digit(0.105, 'abcdfg') // 9
+  digit(-0.17, 'bc') // 1
+  digit(-0.07, 'abcdfg') // 9
+  digit(0.03, 'abcdfg') // 9
 
-  // "kr" abreviado à direita
-  bar(0.175, 0, 0.014, 0.11)
-  bar(0.2, 0.028, 0.045, 0.013)
-  bar(0.2, -0.03, 0.045, 0.013)
+  // "kr" minúsculo à direita: k (haste + duas diagonais) e r (haste + braço)
+  bar(0.09, 0, 0.018, 0.14)
+  bar(0.113, 0.022, 0.06, 0.017, 0.85)
+  bar(0.113, -0.04, 0.06, 0.017, -0.85)
+  bar(0.155, -0.03, 0.018, 0.085)
+  bar(0.172, 0.0, 0.04, 0.017, 0.45)
 
   dente.add(preco)
 
@@ -353,7 +368,12 @@ function createScene(): CardScene {
       'dente',
       7.5,
       0.85,
-      [ch('position.z', 0.02, -0.4), ...grow(0.15)],
+      [
+        ch('position.x', 0, DENTE_X),
+        ch('position.y', SLOT_Y + 0.06, DENTE_Y),
+        ch('position.z', 0.02, -0.45),
+        ...grow(0.15),
+      ],
       {
         caption: 'Da fenda salta um DENte de ouro gigante, rosnando raspado: "RRÉÉR!" (den här)',
       },
@@ -362,9 +382,9 @@ function createScene(): CardScene {
       caption: 'No esmalte, gravado, o preço que faltava na etiqueta: 199 kr.',
     }),
 
-    seq('dente-growl-a', 'dente', 9.4, 0.35, [ch('rotation.z', 0, 0.16)]),
-    seq('dente-growl-b', 'dente', 9.75, 0.35, [ch('rotation.z', 0.16, -0.13)]),
-    seq('dente-settle', 'dente', 10.1, 0.6, [ch('rotation.z', -0.13, 0)], {
+    seq('dente-growl-a', 'dente', 9.4, 0.35, [ch('rotation.z', DENTE_TILT, DENTE_TILT + 0.16)]),
+    seq('dente-growl-b', 'dente', 9.75, 0.35, [ch('rotation.z', DENTE_TILT + 0.16, DENTE_TILT - 0.13)]),
+    seq('dente-settle', 'dente', 10.1, 0.6, [ch('rotation.z', DENTE_TILT - 0.13, DENTE_TILT)], {
       caption: 'Vad kostar den här? — "Quanto custa esse aqui?"',
     }),
   ]
@@ -373,7 +393,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 2.95, 6.2], target: [-0.05, 1.05, 0.05] },
+    cameraHint: { position: [0.3, 2.15, 4.15], target: [0.0, 1.1, 0.0] },
   }
 }
 

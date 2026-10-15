@@ -57,7 +57,7 @@ function createScene(): CardScene {
     base.add(pad)
   }
 
-  const pedra = rock(0.24, '#8d9296', 31, { roughness: 0.9 })
+  const pedra = rock(0.24, '#6c7176', 31, { roughness: 0.9 })
   pedra.position.set(-2.05, 0.22, -0.62)
   pedra.rotation.y = rand() * Math.PI
   base.add(pedra)
@@ -134,6 +134,7 @@ function createScene(): CardScene {
   // ---- laptop aberto em L --------------------------------------------------
   const laptop = new THREE.Group()
   laptop.position.set(0.5, DY + 0.37, 0.05)
+  laptop.rotation.y = -0.45 // tela entre o castor e o espectador
 
   const chassi = rbox(0.62, 0.045, 0.42, 0.018, '#9aa2a8', { roughness: 0.4 })
   chassi.position.y = 0.023
@@ -176,16 +177,17 @@ function createScene(): CardScene {
   root.add(laptop)
 
   // ---- castor engravatado (olha para a mesa: +z local) --------------------
+  // três-quartos (rumo à mesa e à câmera): os DOIS braços erguidos aparecem
   const castor = new THREE.Group()
-  castor.position.set(-0.62, DY, 0.14)
-  castor.rotation.y = 1.35
+  castor.position.set(-0.75, DY, 0.25)
+  castor.rotation.y = 0.7
 
   const corpo = capsule(0.3, 0.42, FUR, { roughness: 0.85 })
   corpo.position.y = 0.6
   castor.add(corpo)
 
   const barriga = capsule(0.17, 0.24, FUR_LIGHT, { roughness: 0.85 })
-  barriga.position.set(0, 0.56, 0.19)
+  barriga.position.set(0, 0.56, 0.235)
   barriga.scale.z = 0.5
   castor.add(barriga)
 
@@ -198,7 +200,7 @@ function createScene(): CardScene {
 
   // colarinho + gravata
   const camisa = sphere(0.19, '#e8e4da', { roughness: 0.9 })
-  camisa.position.set(0, 0.92, 0.16)
+  camisa.position.set(0, 0.92, 0.2)
   camisa.scale.set(0.9, 0.85, 0.6)
   castor.add(camisa)
 
@@ -208,11 +210,11 @@ function createScene(): CardScene {
   castor.add(colarinho)
 
   const no = rbox(0.09, 0.09, 0.06, 0.025, TIE, { roughness: 0.45 })
-  no.position.set(0, 0.99, 0.24)
+  no.position.set(0, 0.99, 0.28)
   castor.add(no)
 
   const gravata = rbox(0.13, 0.34, 0.05, 0.03, TIE, { roughness: 0.45 })
-  gravata.position.set(0, 0.78, 0.26)
+  gravata.position.set(0, 0.76, 0.33)
   gravata.rotation.x = -0.12
   castor.add(gravata)
 
@@ -236,7 +238,7 @@ function createScene(): CardScene {
 
   for (const side of [-1, 1]) {
     const dente = rbox(0.075, 0.12, 0.03, 0.012, '#fdf6e3', { roughness: 0.25 })
-    dente.position.set(side * 0.042, -0.16, 0.28)
+    dente.position.set(side * 0.042, -0.2, 0.325) // dentões aparecendo sob o focinho
     cabeca.add(dente)
 
     const olho = sphere(0.062, '#ffffff', { roughness: 0.25 })
@@ -275,23 +277,58 @@ function createScene(): CardScene {
   }
 
   // ---- cauda chapada (bate o ponto na água) -------------------------------
-  const cauda = new THREE.Group()
-  cauda.position.set(0, 0.3, -0.26)
-  cauda.rotation.x = 0.12
-  castor.add(cauda)
+  // o pivô gira a cauda pro lado esquerdo do castor: ela sai da represa e
+  // fica de perfil pra câmera, apontando a lâmina d'água onde estala
+  const caudaPivo = new THREE.Group()
+  caudaPivo.position.set(0, 0.3, -0.2)
+  caudaPivo.rotation.y = 1.0
+  castor.add(caudaPivo)
 
-  const base_cauda = capsule(0.09, 0.14, FUR, { roughness: 0.85 })
+  const cauda = new THREE.Group()
+  cauda.rotation.x = -0.5
+  caudaPivo.add(cauda)
+
+  const base_cauda = capsule(0.1, 0.16, FUR, { roughness: 0.85 })
   base_cauda.rotation.x = Math.PI / 2
-  base_cauda.position.z = -0.1
+  base_cauda.position.z = -0.12
   cauda.add(base_cauda)
 
-  const pa = rbox(0.34, 0.09, 0.56, 0.045, LOG_DARK, { roughness: 0.85 })
-  pa.position.set(0, -0.02, -0.42)
+  // remo de castor: oval achatado, escamado em grade
+  const pa = sphere(0.3, '#4a3424', { roughness: 0.75 })
+  pa.scale.set(0.68, 0.16, 1.15)
+  pa.position.set(0, -0.01, -0.5)
   cauda.add(pa)
 
-  const sulco = rbox(0.02, 0.02, 0.44, 0.008, '#43301c', { roughness: 0.9 })
-  sulco.position.set(0, 0.045, -0.42)
+  for (let i = 0; i < 4; i++) {
+    const escama = rbox(0.3 - Math.abs(i - 1.5) * 0.06, 0.012, 0.018, 0.006, '#33241a', { roughness: 0.9 })
+    escama.position.set(0, 0.045, -0.32 - i * 0.12)
+    cauda.add(escama)
+  }
+  const sulco = rbox(0.018, 0.012, 0.5, 0.006, '#33241a', { roughness: 0.9 })
+  sulco.position.set(0, 0.045, -0.5)
   cauda.add(sulco)
+
+  // ---- o respingo do ponto batido (NI-DÁG!) -------------------------------
+  const respingo = new THREE.Group()
+  respingo.position.set(-1.8, WY, 0.28)
+
+  const onda = torus(0.24, 0.025, '#cfe9f6', { roughness: 0.1 })
+  onda.rotation.x = Math.PI / 2
+  respingo.add(onda)
+  const onda2 = torus(0.38, 0.018, '#bfe0f1', { roughness: 0.1 })
+  onda2.rotation.x = Math.PI / 2
+  respingo.add(onda2)
+  const coluna = capsule(0.05, 0.16, '#d8eef8', { roughness: 0.08 })
+  coluna.position.y = 0.16
+  respingo.add(coluna)
+  for (let i = 0; i < 7; i++) {
+    const a = (i / 7) * Math.PI * 2
+    const gota = sphere(0.035 + (i % 3) * 0.008, '#d8eef8', { roughness: 0.08 })
+    gota.position.set(Math.cos(a) * 0.2, 0.1 + (i % 3) * 0.09, Math.sin(a) * 0.2)
+    gota.scale.y = 1.4
+    respingo.add(gota)
+  }
+  root.add(respingo)
 
   // ---- girassol de vaso: RÊMI, a FRÔ --------------------------------------
   const vaso = new THREE.Group()
@@ -360,6 +397,7 @@ function createScene(): CardScene {
     { name: 'castor', group: 'castor', object: castor },
     { name: 'bracos', group: 'castor', object: bracos },
     { name: 'cauda', group: 'castor', object: cauda },
+    { name: 'respingo', group: 'castor', object: respingo },
     { name: 'vaso', group: 'girassol', object: vaso },
     { name: 'petalas', group: 'girassol', object: petalas },
   ]
@@ -438,12 +476,20 @@ function createScene(): CardScene {
       caption: '…que se vira pra ser a luz de webcam dele — RRÊ-MI-FRÔ, trabalhando de casa.',
     }),
 
-    seq('cauda-arma', 'cauda', 10.7, 0.45, [ch('rotation.x', 0.12, 0.95)], {
+    seq('cauda-arma', 'cauda', 10.7, 0.45, [ch('rotation.x', -0.5, 0.95)], {
       ease: 'easeOut',
       caption: 'Pra bater o ponto, ele estala a cauda na água: NI-DÁG! (idag = hoje)',
     }),
     seq('cauda-bate', 'cauda', 11.15, 0.3, [ch('rotation.x', 0.95, -0.85)], { ease: 'easeIn' }),
-    seq('cauda-volta', 'cauda', 11.45, 0.6, [ch('rotation.x', -0.85, 0.12)], {
+    seq(
+      'respingo-pop',
+      'respingo',
+      11.35,
+      0.4,
+      [ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1)],
+      { ease: 'easeOut' },
+    ),
+    seq('cauda-volta', 'cauda', 11.45, 0.6, [ch('rotation.x', -0.85, -0.5)], {
       ease: 'easeOut',
       caption: 'Jag jobbar hemifrån idag. — "Hoje eu trabalho de casa."',
     }),
@@ -453,11 +499,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.3, 3.1, 6.3], target: [0.2, 1.05, 0] },
+    cameraHint: { position: [0.35, 2.85, 4.4], target: [0.05, 1.1, 0] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['castor', 'bracos', 'cauda'] },
   meta: {
     id: 'jag-jobbar-hemifran',
     contexto: 'Mensagem curta no chat de manhã, ou resposta quando perguntam se ele vai ao escritório.',

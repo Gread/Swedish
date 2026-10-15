@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
-  person, rbox, capsule, cylinder, sphere, cone, torus, lathe, puff,
+  person, rbox, capsule, cylinder, sphere, cone, torus, lathe, puff, mat,
   rng, seq, ch, riseFrom,
 } from '../rig/helpers'
 
@@ -50,7 +50,7 @@ function createScene(): CardScene {
     fruta.position.set(-0.11 + i * 0.11, 0.44, (rand() - 0.5) * 0.12)
     cesta.add(fruta)
   }
-  cesta.position.set(1.55, 0, 1.15)
+  cesta.position.set(0.95, 0, 0.6) // ao pé do balcão, dentro do quadro
   cesta.rotation.y = 0.5
   base.add(cesta)
 
@@ -131,8 +131,8 @@ function createScene(): CardScene {
   cabecaCaixa.rotation.x = -0.18 // olhando para cima, para a galinha
   const bracoDir = caixa.getObjectByName('armR')!
   bracoDir.rotation.z = -2.45 // braço erguido de espanto
-  caixa.position.set(1.15, 0.17, -1.15)
-  caixa.rotation.y = -0.85 // virada para a cana e a galinha
+  caixa.position.set(0.5, 0.17, -1.2) // atrás do balcão, livre da registradora
+  caixa.rotation.y = -0.5 // virada para a cana e a galinha
   root.add(caixa)
 
   // ---------- a CANA-de-açúcar gigante fincada no balcão ----------
@@ -209,9 +209,9 @@ function createScene(): CardScene {
   asaEsq.rotation.z = 0.55
   asaEsq.scale.z = 0.55
   galinha.add(asaEsq)
-  const asaDir = capsule(0.08, 0.24, '#e9bd55', { roughness: 0.7 })
-  asaDir.position.set(0.3, 0.3, 0.06)
-  asaDir.rotation.z = -2.45 // erguida, segurando a sacola no alto
+  const asaDir = capsule(0.08, 0.32, '#e9bd55', { roughness: 0.7 })
+  asaDir.position.set(0.41, 0.32, 0.06)
+  asaDir.rotation.z = -0.78 // erguida para o lado: a ponta enfia na alça da sacola
   asaDir.scale.z = 0.55
   galinha.add(asaDir)
 
@@ -232,22 +232,40 @@ function createScene(): CardScene {
 
   // ---------- a SACOLA azul (påse) — o acento saturado da cena ----------
   const sacola = new THREE.Group()
-  const sacolaCorpo = rbox(0.42, 0.5, 0.16, 0.05, '#2e86de', { roughness: 0.4 })
+  const AZUL = '#2e86de'
+  const AZUL_ESC = '#1f66b8'
+  const sacolaCorpo = rbox(0.44, 0.5, 0.2, 0.035, AZUL, { roughness: 0.45 })
   sacola.add(sacolaCorpo)
-  const dobra = rbox(0.44, 0.06, 0.18, 0.02, '#1f66b8', { roughness: 0.4 })
-  dobra.position.y = 0.25
-  sacola.add(dobra)
+  // sanfonas laterais (fole) — o que faz ler sacola, não caixa
   for (const lado of [-1, 1]) {
-    const alca = torus(0.1, 0.026, '#1f66b8', { roughness: 0.4 })
-    alca.position.set(0, 0.32, lado * 0.045)
+    const fole = rbox(0.03, 0.46, 0.13, 0.012, AZUL_ESC, { roughness: 0.5 })
+    fole.position.set(lado * 0.212, -0.01, 0)
+    sacola.add(fole)
+  }
+  // bainha dobrada na boca da sacola
+  const dobra = rbox(0.45, 0.05, 0.21, 0.018, AZUL_ESC, { roughness: 0.45 })
+  dobra.position.y = 0.235
+  sacola.add(dobra)
+  // alças em arco (meio toro), uma de cada face
+  for (const lado of [-1, 1]) {
+    const alca = new THREE.Mesh(
+      new THREE.TorusGeometry(0.11, 0.018, 12, 32, Math.PI),
+      mat(AZUL_ESC, { roughness: 0.45 }),
+    )
+    alca.castShadow = true
+    alca.position.set(0, 0.25, lado * 0.07)
     sacola.add(alca)
   }
+  // logo da loja: disco branco com anel azul
   const selo = cylinder(0.11, 0.11, 0.02, '#f5f2ea', { roughness: 0.35 })
   selo.rotation.x = Math.PI / 2
-  selo.position.set(0, 0.02, 0.085)
+  selo.position.set(0, 0.0, 0.105)
   sacola.add(selo)
-  sacola.position.set(0.02, 2.52, 0.24) // erguida junto à asa da galinha
-  sacola.rotation.z = -0.15
+  const seloAnel = torus(0.065, 0.016, AZUL, { roughness: 0.4 })
+  seloAnel.position.set(0, 0.0, 0.118)
+  sacola.add(seloAnel)
+  sacola.position.set(0.12, 1.97, 0.18) // pendurada na ponta da asa erguida
+  sacola.rotation.z = -0.06
   root.add(sacola)
 
   const parts = [
@@ -298,9 +316,9 @@ function createScene(): CardScene {
       caption: '…no balcão brota a sacola azul — e a galinha FÔfa a agarra… (få)',
     }),
     seq('sacola-ergue', 'sacola', 6.8, 0.8, [
-      ch('position.x', 0.55, 0.02),
-      ch('position.y', 1.3, 2.52),
-      ch('rotation.z', 0, -0.15),
+      ch('position.x', 0.55, 0.12),
+      ch('position.y', 1.3, 1.97),
+      ch('rotation.z', 0, -0.06),
     ], {
       caption: '…ergue a sacola bem alto e congela EN PÔSE de modelo! (en påse)',
     }),
@@ -318,11 +336,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [3.0, 2.9, 5.2], target: [-0.1, 1.0, 0.1] },
+    cameraHint: { position: [2.25, 2.95, 4.7], target: [-0.1, 1.5, 0.0] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['galinha'] },
   meta: {
     id: 'kan-jag-fa-en-pase',
     contexto: 'Caixa do supermercado — e a mesma estrutura em café, restaurante e balcão.',

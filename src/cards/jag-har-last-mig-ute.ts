@@ -34,6 +34,9 @@ const PELE = '#e8c39e'
 const SEA_TOP = 0.16   // topo do mar
 const ILHA_Y = 0.13    // origem da ilha
 const SAND = 0.43      // platô de areia (ILHA_Y + 0.30)
+const BOIA_Y = 0.38    // a boia e o mastro ficam na encosta da duna, mais baixa
+const MAST_Y = 0.35
+const LOCK = 1.3       // escala do cadeado gigante
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -107,10 +110,10 @@ function createScene(): CardScene {
     seixo.rotation.y = rand() * Math.PI
     ilha.add(seixo)
   }
-  for (const [cx, cz] of [[-0.35, 1.05], [1.2, 0.62]] as const) {
+  for (const [cx, cz] of [[-0.45, 1.15], [0.55, 1.3]] as const) {
     const concha = lathe(
-      [[0, 0], [0.09, 0.02], [0.13, 0.06], [0.1, 0.1], [0, 0.11]],
-      '#efe0cf',
+      [[0, 0], [0.06, 0.015], [0.085, 0.045], [0.065, 0.075], [0, 0.085]],
+      '#e8c2ad',
       { roughness: 0.6 },
       18,
     )
@@ -222,6 +225,7 @@ function createScene(): CardScene {
   // ---- CADEADO cromado gigante (filho da porta, no espaço local dela) -------
   const cadeado = new THREE.Group()
   cadeado.position.set(0.35, 0.72, 0.24)
+  cadeado.scale.setScalar(LOCK)
 
   const corpo = rbox(0.46, 0.42, 0.2, 0.09, CROMO, { roughness: 0.18, metalness: 0.9 })
   cadeado.add(corpo)
@@ -270,7 +274,7 @@ function createScene(): CardScene {
 
   // ---- boia laranja-e-branca encostada na areia -----------------------------
   const boia = new THREE.Group()
-  boia.position.set(1.35, SAND, 0.62)
+  boia.position.set(0.98, BOIA_Y, 0.82)
   boia.rotation.set(-0.3, 0.35, 0.12)
 
   const aro = torus(0.31, 0.1, LARANJA, { roughness: 0.42 })
@@ -287,7 +291,7 @@ function createScene(): CardScene {
 
   // ---- mastro fincado -------------------------------------------------------
   const mastro = new THREE.Group()
-  mastro.position.set(0.32, SAND, 0.92)
+  mastro.position.set(1.32, MAST_Y, 0.08) // à direita da porta: a bandeira não tapa o cadeado
 
   const haste = cylinder(0.042, 0.06, 1.42, MADEIRA, { roughness: 0.8 })
   haste.position.y = 0.71
@@ -331,8 +335,9 @@ function createScene(): CardScene {
 
   // ---- gaivota com a chave no bico ------------------------------------------
   const gaivota = new THREE.Group()
-  gaivota.position.set(1.55, 2.6, 0.85)
-  gaivota.rotation.set(0, -2.5, 0.12)
+  gaivota.position.set(1.75, 2.15, 0.6)
+  // três-quartos: foge pra direita mostrando a chave no bico E as asas abertas
+  gaivota.rotation.set(0, 0.75, 0.12)
 
   const tronco = capsule(0.155, 0.3, '#f7f6f1', { roughness: 0.85 })
   tronco.rotation.x = Math.PI / 2
@@ -363,14 +368,14 @@ function createScene(): CardScene {
 
     const asa = capsule(0.075, 0.46, '#eceae2', { roughness: 0.85 })
     asa.position.set(side * 0.2, 0.12, -0.02)
-    asa.rotation.z = side * 1.15
+    asa.rotation.z = -side * 1.15 // asas erguidas em V
     asa.rotation.x = 0.12
     asa.scale.set(1, 1, 0.42)
     gaivota.add(asa)
 
     const ponta = capsule(0.06, 0.12, '#5c6469', { roughness: 0.85 })
-    ponta.position.set(side * 0.63, 0.34, -0.02)
-    ponta.rotation.z = side * 1.15
+    ponta.position.set(side * 0.58, 0.29, -0.02) // emenda na ponta da asa
+    ponta.rotation.z = -side * 1.15
     ponta.scale.set(1, 1, 0.42)
     gaivota.add(ponta)
   }
@@ -441,9 +446,9 @@ function createScene(): CardScene {
       3.8,
       0.7,
       [
-        ch('scale.x', 0.01, 1),
-        ch('scale.y', 0.01, 1),
-        ch('scale.z', 0.01, 1),
+        ch('scale.x', 0.01, LOCK),
+        ch('scale.y', 0.01, LOCK),
+        ch('scale.z', 0.01, LOCK),
         ch('position.y', 1.15, 0.8),
       ],
       {
@@ -457,9 +462,9 @@ function createScene(): CardScene {
       ease: 'easeOut',
       caption: 'IÁ RRÁR: LÔST! — náufrago de MEIAS brancas, braços pro alto, ilha do tamanho do capacho.',
     }),
-    seq('boia-rise', 'boia', 5.8, 0.7, [riseFrom(SAND, 1.5)], { ease: 'easeOut' }),
+    seq('boia-rise', 'boia', 5.8, 0.7, [riseFrom(BOIA_Y, 1.5)], { ease: 'easeOut' }),
 
-    seq('mastro-rise', 'mastro', 7.4, 0.8, [riseFrom(SAND, 2.2)], { ease: 'easeOut' }),
+    seq('mastro-rise', 'mastro', 7.4, 0.8, [riseFrom(MAST_Y, 2.2)], { ease: 'easeOut' }),
     seq(
       'bandeira-desfralda',
       'bandeira',
@@ -475,13 +480,16 @@ function createScene(): CardScene {
       'gaivota',
       9.6,
       1.2,
-      [ch('position.x', 6.6, 1.85), ch('position.y', 3.2, 2.15), ch('rotation.z', -0.28, 0.12)],
+      [
+        ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1),
+        ch('position.x', 0.8, 1.4), ch('position.y', 1.45, 1.85), ch('rotation.z', -0.28, 0.12),
+      ],
       {
         ease: 'easeOut',
         caption: 'A gaivota some com a chave, lá fora e fora de alcance: Ü-TE! — Jag har låst mig ute.',
       },
     ),
-    seq('gaivota-sobe', 'gaivota', 10.9, 0.8, [ch('position.x', 1.85, 1.55), ch('position.y', 2.15, 2.6)], {
+    seq('gaivota-sobe', 'gaivota', 10.9, 0.8, [ch('position.x', 1.4, 1.75), ch('position.y', 1.85, 2.15)], {
       ease: 'easeOut',
     }),
     seq('naufrago-pula', 'naufrago', 11.0, 0.35, [ch('position.y', SAND + 0.13, SAND + 0.34)], {
@@ -496,11 +504,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.0, 6.2], target: [0.15, 1.05, 0] },
+    cameraHint: { position: [0.55, 2.4, 4.95], target: [0.25, 1.15, 0.05] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['gaivota'] },
   meta: {
     id: 'jag-har-last-mig-ute',
     contexto:

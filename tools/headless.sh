@@ -15,26 +15,47 @@ CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 cd "$ROOT"
 rm -f "$WAIT"
-# perfil próprio por execução: vários agentes podem renderizar em paralelo
-PROF="$ROOT/blockout/.chrome/$$-$RANDOM"
-mkdir -p "$PROF"
+# Tenta primeiro na GPU (Metal); se travar — acontece com a GPU disputada por
+# vários bakes/renders, ou com sessão de compartilhamento de tela aberta —
+# repete com o rasterizador em software (SwiftShader), mais lento mas estável.
+attempt() {
+  local angle="$1" secs="$2"
+  # perfil próprio por execução: vários agentes podem renderizar em paralelo
+  local prof="$ROOT/blockout/.chrome/$$-$RANDOM"
+  mkdir -p "$prof"
+  "$CHROME" --headless=new --no-first-run --no-default-browser-check \
+    --user-data-dir="$prof" --use-angle="$angle" --enable-unsafe-swiftshader \
+    --ignore-gpu-blocklist --window-size=1200,900 \
+    "http://127.0.0.1:5173/$QUERY" >/dev/null 2>&1 &
+  local pid=$! ok=0
+  for _ in $(seq 1 "$secs"); do
+    if [ -f "$WAIT" ]; then sleep 1; ok=1; break; fi
+    sleep 1
+  done
+  kill "$pid" 2>/dev/null || true
+  wait "$pid" 2>/dev/null || true
+  rm -rf "$prof" 2>/dev/null || true
+  [ "$ok" = 1 ]
+}
 
-"$CHROME" --headless=new --no-first-run --no-default-browser-check \
-  --user-data-dir="$PROF" --use-angle=metal --ignore-gpu-blocklist \
-  --window-size=1200,900 "http://127.0.0.1:5173/$QUERY" >/dev/null 2>&1 &
-PID=$!
-
-ok=0
-for _ in $(seq 1 "$TIMEOUT"); do
-  if [ -f "$WAIT" ]; then sleep 1; ok=1; break; fi
-  sleep 1
+# No máximo 4 Chromes ao mesmo tempo: com muitos agentes renderizando em
+# paralelo a GPU trava e os buffers de rede da máquina se esgotam
+# (ERR_NO_BUFFER_SPACE). Vagas por mkdir; vaga de processo morto é liberada.
+SLOT=""
+while [ -z "$SLOT" ]; do
+  for i in 0 1 2 3; do
+    d="$ROOT/blockout/.render-slot$i"
+    if mkdir "$d" 2>/dev/null; then echo $$ > "$d/pid"; SLOT="$d"; break; fi
+    holder="$(cat "$d/pid" 2>/dev/null || true)"
+    if [ -n "$holder" ] && ! kill -0 "$holder" 2>/dev/null; then rm -rf "$d"; fi
+  done
+  [ -n "$SLOT" ] || sleep 1
 done
-kill "$PID" 2>/dev/null || true
-wait "$PID" 2>/dev/null || true
-rm -rf "$PROF"
+trap 'rm -rf "$SLOT"' EXIT
 
-if [ "$ok" != 1 ]; then
+if attempt metal "$TIMEOUT" || attempt swiftshader $((TIMEOUT * 2)); then
+  echo "ok $WAIT"
+else
   echo "timeout esperando $WAIT (o dev server está rodando? a carta compila?)" >&2
   exit 1
 fi
-echo "ok $WAIT"

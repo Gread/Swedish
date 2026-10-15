@@ -35,7 +35,6 @@ const WOOD = '#6e4a28'
 const YELLOW = '#f2c02e' // acento saturado: RESERVADO à RÉGUA (höger)
 
 const GY = 0.18 // topo da base do diorama
-const ARM_LEN = 2.0 // braço comprido do macaco
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -100,29 +99,42 @@ function createScene(): CardScene {
   root.add(base)
 
   // ---- viajante de mochila, travado na dúvida ------------------------------
-  const pessoa = person({ body: CLOTH, skin: SKIN, height: 1.7, armAngle: 1.05 })
-  pessoa.position.set(0.15, GY, 1.55)
+  const ALTURA = 1.45
+  const pessoa = person({ body: CLOTH, skin: SKIN, height: ALTURA, armAngle: 1.05 })
+  pessoa.position.set(0.3, GY, 1.75) // à frente e de lado: não tampa o livro
   pessoa.rotation.y = 2.45 // pose final: virado para a RÉGUA, à direita
 
-  const mochila = rbox(0.46, 0.54, 0.26, 0.09, MOSS_DARK, { roughness: 0.9 })
-  mochila.position.set(0, 0.6, -0.3)
+  // adereços modelados para altura 1.7; k reescala para a altura real
+  const k = ALTURA / 1.7
+  const mochila = rbox(0.46 * k, 0.54 * k, 0.26 * k, 0.09 * k, MOSS_DARK, { roughness: 0.9 })
+  mochila.position.set(0, 0.6 * k, -0.3 * k)
   pessoa.add(mochila)
 
-  const flap = rbox(0.4, 0.16, 0.1, 0.04, '#2f5228', { roughness: 0.9 })
-  flap.position.set(0, 0.78, -0.4)
+  const flap = rbox(0.4 * k, 0.16 * k, 0.1 * k, 0.04 * k, '#2f5228', { roughness: 0.9 })
+  flap.position.set(0, 0.78 * k, -0.4 * k)
   pessoa.add(flap)
 
+  const bolso = rbox(0.3 * k, 0.18 * k, 0.06 * k, 0.03 * k, '#2f5228', { roughness: 0.9 })
+  bolso.position.set(0, 0.46 * k, -0.44 * k)
+  pessoa.add(bolso)
+
   for (const side of [-1, 1]) {
-    const strap = rbox(0.08, 0.42, 0.08, 0.03, '#2f5228', { roughness: 0.9 })
-    strap.position.set(side * 0.15, 0.68, -0.09)
+    const strap = rbox(0.08 * k, 0.42 * k, 0.08 * k, 0.03 * k, '#2f5228', { roughness: 0.9 })
+    strap.position.set(side * 0.15 * k, 0.68 * k, -0.09 * k)
     strap.rotation.x = 0.12
     pessoa.add(strap)
   }
 
-  const cabelo = puff(0.19, '#3b2a1e', 5, 44, { roughness: 0.85 })
-  cabelo.position.set(0, 0.13, -0.05)
-  cabelo.scale.set(1, 0.75, 1)
-  pessoa.getObjectByName('head')!.add(cabelo)
+  // cabelo: calota cobrindo o alto e a nuca (ele está de costas para a câmera)
+  const headR = ALTURA * 0.19
+  const cabecaPessoa = pessoa.getObjectByName('head')!
+  const cabelo = sphere(headR * 1.06, '#3b2a1e', { roughness: 0.85 })
+  cabelo.position.set(0, headR * 0.2, -headR * 0.16)
+  cabelo.scale.set(1, 0.86, 0.98)
+  cabecaPessoa.add(cabelo)
+  const topete = puff(headR * 0.4, '#3b2a1e', 4, 44, { roughness: 0.85 })
+  topete.position.set(0, headR * 0.92, headR * 0.2)
+  cabecaPessoa.add(topete)
   root.add(pessoa)
 
   // ---- RÉGUA amarela gigante: DIREITA da tela (x positivo, höger) ----------
@@ -153,8 +165,9 @@ function createScene(): CardScene {
 
   // ---- LIVRO gigante aberto em V, lombada azul (vértice da forquilha) ------
   const livro = new THREE.Group()
-  livro.position.set(-0.05, GY, -0.9)
+  livro.position.set(-0.05, GY, -0.95)
   livro.rotation.y = 0.1
+  livro.scale.setScalar(1.25) // do tamanho de uma porta
 
   const lombada = rbox(0.2, 1.3, 0.22, 0.07, BLUE_DARK, { roughness: 0.55 })
   lombada.position.y = 0.68
@@ -321,7 +334,12 @@ function createScene(): CardScene {
 
   // ---- braço comprido: do ombro do macaco até o ombro do viajante ----------
   const ombroMacaco = new THREE.Vector3(-1.11, 1.80, -0.17)
-  const alvoOmbro = new THREE.Vector3(-0.02, 0.92, 1.28)
+  // alvo = topo do ombro direito do viajante, na pose final
+  pessoa.updateMatrixWorld(true)
+  const alvoOmbro = pessoa.localToWorld(
+    new THREE.Vector3(0.178 * ALTURA, 0.435 * ALTURA, 0.06 * ALTURA),
+  )
+  const ARM_LEN = ombroMacaco.distanceTo(alvoOmbro) // braço comprido do macaco
 
   const braco = new THREE.Group()
   braco.position.copy(ombroMacaco)
@@ -377,7 +395,7 @@ function createScene(): CardScene {
       caption: 'A trilha de terra batida brota do chão e se abre num Y…',
     }),
 
-    seq('pessoa-rise', 'pessoa', 1.7, 0.8, [riseFrom(GY, 1.95)], {
+    seq('pessoa-rise', 'pessoa', 1.7, 0.8, [riseFrom(GY, 1.7)], {
       caption: '…você chega de mochila e trava na forquilha: direita ou esquerda?',
     }),
 
@@ -427,7 +445,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.2, 3.0, 6.4], target: [0, 1.05, -0.1] },
+    cameraHint: { position: [0.2, 3.5, 6.1], target: [0, 1.15, -0.1] },
   }
 }
 

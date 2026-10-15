@@ -28,6 +28,9 @@ const AMBER = '#e08a1e' // ACENTO: o vidro de PENICILÍN
 const PINK = '#e0729a'
 const ALERT = '#c94f3d'
 const GY = 0.14 // topo da base do diorama
+// recuo em z do conjunto carrinho + vidro + vaca + bolhas, para que a seringa
+// (na frente) não esconda o vidro de PENICILÍN nem a cabeça da vaca
+const DZ = -0.5
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -50,7 +53,7 @@ function createScene(): CardScene {
 
   // carrinho de enfermagem com rodízios
   const carrinho = new THREE.Group()
-  carrinho.position.set(1.5, GY, -0.35)
+  carrinho.position.set(1.5, GY, -0.35 + DZ) // recuado: o vidro aparece acima do êmbolo
   carrinho.rotation.y = -0.35
 
   for (const sx of [-1, 1]) {
@@ -101,7 +104,7 @@ function createScene(): CardScene {
   base.add(lixeira)
 
   const banquinho = new THREE.Group()
-  banquinho.position.set(-1.72, GY, 1.12)
+  banquinho.position.set(-1.95, GY, -0.15)
   banquinho.rotation.y = rand() * Math.PI
   const assento = cylinder(0.23, 0.21, 0.07, TEAL, { roughness: 0.5 })
   assento.position.y = 0.44
@@ -115,7 +118,7 @@ function createScene(): CardScene {
   }
   base.add(banquinho)
 
-  for (const [rx, rz] of [[0.35, 1.62], [-0.55, -1.78]] as const) {
+  for (const [rx, rz] of [[0.35, 1.62], [-1.15, -1.7]] as const) {
     const gaze = cylinder(0.09, 0.09, 0.15, '#f2ede2', { roughness: 0.9 })
     gaze.position.set(rx, GY + 0.09, rz)
     gaze.rotation.set(Math.PI / 2, 0, rand() * Math.PI)
@@ -206,7 +209,7 @@ function createScene(): CardScene {
 
   // ---- vidro âmbar de penicilina (ACENTO) ---------------------------------
   const vidro = new THREE.Group()
-  vidro.position.set(1.426, 1.02, -0.363) // pose final: já tombado pela cabeçada
+  vidro.position.set(1.426, 1.02, -0.363 + DZ) // pose final: já tombado pela cabeçada
   vidro.rotation.y = -0.4914 // o tombo cai na direção do empurrão da vaca
   vidro.rotation.z = -0.55
 
@@ -231,7 +234,7 @@ function createScene(): CardScene {
 
   // ---- vaca-enfermeira -----------------------------------------------------
   const vaca = new THREE.Group()
-  vaca.position.set(0.05, GY, -1.1)
+  vaca.position.set(0.05, GY, -1.1 + DZ)
   vaca.rotation.y = 1.0793 // encara o vidro no carrinho
 
   const tronco = capsule(0.31, 0.5, ICE, { roughness: 0.85 })
@@ -332,7 +335,7 @@ function createScene(): CardScene {
 
   // ---- seis bolhas rosa ----------------------------------------------------
   const bolhas = new THREE.Group()
-  bolhas.position.set(1.65, 1.434, -0.243) // boca do frasco já tombado
+  bolhas.position.set(1.65, 1.434, -0.243 + DZ) // boca do frasco já tombado
   for (let i = 0; i < 6; i++) {
     const r = 0.075 + rand() * 0.075
     const bolha = sphere(r, PINK, { roughness: 0.1 })
@@ -434,7 +437,7 @@ function createScene(): CardScene {
       'vaca',
       8.6,
       0.4,
-      [ch('position.x', 0.05, 0.4909), ch('position.z', -1.1, -0.8641)],
+      [ch('position.x', 0.05, 0.4909), ch('position.z', -1.1 + DZ, -0.8641 + DZ)],
       { ease: 'easeIn' },
     ),
     seq('cabeca-baixa', 'cabeca', 8.6, 0.4, [ch('rotation.x', 0, 0.6)], { ease: 'easeIn' }),
@@ -446,7 +449,7 @@ function createScene(): CardScene {
       [
         ch('position.x', 1.32, 1.426),
         ch('position.y', 0.94, 1.02),
-        ch('position.z', -0.42, -0.363),
+        ch('position.z', -0.42 + DZ, -0.363 + DZ),
         ch('rotation.z', 0, -0.55),
       ],
       { ease: 'easeOut' },
@@ -464,7 +467,7 @@ function createScene(): CardScene {
       'vaca',
       9.4,
       0.6,
-      [ch('position.x', 0.4909, 0.05), ch('position.z', -0.8641, -1.1)],
+      [ch('position.x', 0.4909, 0.05), ch('position.z', -0.8641 + DZ, -1.1 + DZ)],
       { ease: 'easeOut' },
     ),
     seq('cabeca-ergue', 'cabeca', 9.4, 0.6, [ch('rotation.x', 0.6, 0)], { ease: 'easeOut' }),
@@ -505,11 +508,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.9, 3.0, 6.4], target: [0.05, 1.05, -0.1] },
+    cameraHint: { position: [0.35, 3.15, 2.95], target: [0.35, 1.12, -0.42] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['vaca', 'cabeca'] },
   meta: {
     id: 'jag-ar-allergisk-mot-penicillin',
     contexto:

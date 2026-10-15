@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
 import {
   seq, ch, riseFrom, rng,
-  rbox, capsule, cylinder, sphere, cone, torus, lathe, rock, puff,
+  rbox, capsule, cylinder, sphere, cone, torus, lathe, puff,
 } from '../rig/helpers'
 
 /**
@@ -74,15 +74,34 @@ function createScene(): CardScene {
   tablado.add(via)
 
   // adereços de plataforma
-  const pedraA = rock(0.15, '#78838a', 31, { roughness: 0.95 })
-  pedraA.position.set(-1.95, GY + 0.05, 0.95)
-  pedraA.rotation.y = rand() * Math.PI
-  tablado.add(pedraA)
+  // seixos facetados (rock() racha em lascas brancas: icosaedro não indexado)
+  for (const [px, pz, pr, cor] of [
+    [-1.85, 0.95, 0.13, '#78838a'],
+    [1.6, 1.25, 0.09, '#6b767d'],
+  ] as const) {
+    const seixo = sphere(pr, cor, { roughness: 0.95, flat: true }, 8)
+    seixo.scale.set(1.2, 0.65, 1)
+    seixo.position.set(px, GY + pr * 0.5, pz)
+    seixo.rotation.y = rand() * Math.PI
+    tablado.add(seixo)
+  }
 
-  const pedraB = rock(0.1, '#6b767d', 32, { roughness: 0.95 })
-  pedraB.position.set(1.75, GY + 0.03, 1.3)
-  pedraB.rotation.y = rand() * Math.PI
-  tablado.add(pedraB)
+  // banco da plataforma: quem espera o trem que não vem
+  const banco = new THREE.Group()
+  banco.position.set(-1.75, GY, 0.55)
+  banco.rotation.y = 0.75
+  const assento = rbox(0.8, 0.07, 0.3, 0.03, WOOD, { roughness: 0.75 })
+  assento.position.y = 0.36
+  const encosto = rbox(0.8, 0.22, 0.05, 0.025, WOOD, { roughness: 0.75 })
+  encosto.position.set(0, 0.56, -0.14)
+  encosto.rotation.x = -0.12
+  banco.add(assento, encosto)
+  for (const bx of [-0.32, 0.32]) {
+    const pe = rbox(0.06, 0.36, 0.28, 0.02, SLATE_DARK, { roughness: 0.5, metalness: 0.5 })
+    pe.position.set(bx, 0.18, -0.01)
+    banco.add(pe)
+  }
+  tablado.add(banco)
 
   const mato = puff(0.19, '#4a7040', 6, 33, { roughness: 0.9 })
   mato.position.set(-1.5, GY + 0.12, -1.55)
@@ -349,7 +368,7 @@ function createScene(): CardScene {
   lombada.position.set(0, 0.45, 0)
   lombada.rotation.x = -0.5
   atril.add(lombada)
-  lhama.add(atril)
+  lhama.add(atril) // peça própria (sem animação): fica fora da pele refinada da lhama
 
   palco.add(lhama)
 
@@ -421,6 +440,7 @@ function createScene(): CardScene {
     { name: 'sopro', group: 'lhama', object: sopro },
     { name: 'lhama', group: 'lhama', object: lhama },
     { name: 'escudo', group: 'lhama', object: escudo },
+    { name: 'atril', group: 'lhama', object: atril },
     { name: 'ampulheta', group: 'final', object: ampulheta },
   ]
 
@@ -494,7 +514,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.9, 3.2, 6.2], target: [0.05, 1.2, 0.0] },
+    cameraHint: { position: [0.75, 2.75, 5.2], target: [0.1, 1.42, 0.0] },
   }
 }
 
@@ -512,6 +532,7 @@ export const card: Card = {
       'O trem TÔ-GUET não vem, e num vagão azul parado alguém pregou um palquinho de teatro. Um sopro FÖ abre a cortina e entra a LHAMA de óculos fantasiada de XENA, com um T de tábua pregado no escudo: FÖ-XÊ-NAT. Se o trem está só atrasado, ela não explica nada, só empurra um livro na sua cara dizendo É-LER até a ampulheta virar. Se foi cancelado, ela puxa com os dentes a alavanca do disjuntor e o palco apaga: ÍNS-TELT!',
   },
   createScene,
+  refine: { organic: ['lhama'] },
 }
 
 export default card

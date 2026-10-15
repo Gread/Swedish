@@ -472,6 +472,7 @@ function createScene(): CardScene {
   // construída na pose final (já para fora do nicho); a montagem a puxa de dentro
   papel.position.set(0.55, 1.05, -1.18)
   papel.rotation.z = -0.12
+  papel.scale.setScalar(1.2)
 
   const sheet = rbox(0.44, 0.58, 0.02, 0.008, '#f6f2e6', { roughness: 0.75 })
   papel.add(sheet)
@@ -480,14 +481,27 @@ function createScene(): CardScene {
     line.position.set(-0.03, 0.2 - i * 0.075, 0.014)
     papel.add(line)
   }
-  const stampRing = torus(0.1, 0.018, '#c94f3d', { roughness: 0.6 })
-  stampRing.position.set(0.07, -0.15, 0.016)
-  stampRing.rotation.z = 0.3
-  papel.add(stampRing)
-  const stampBar = rbox(0.15, 0.035, 0.01, 0.006, '#c94f3d', { roughness: 0.6 })
-  stampBar.position.set(0.07, -0.15, 0.018)
-  stampBar.rotation.z = 0.3
-  papel.add(stampBar)
+  // carimbo retangular de "aprovado" com visto — círculo cortado leria como
+  // placa de proibido
+  const stamp = new THREE.Group()
+  stamp.position.set(0.07, -0.16, 0.016)
+  stamp.rotation.z = 0.25
+  for (const [sw, sh, sx, sy] of [
+    [0.26, 0.022, 0, 0.065], [0.26, 0.022, 0, -0.065], [0.022, 0.15, -0.12, 0], [0.022, 0.15, 0.12, 0],
+  ] as const) {
+    const lado = rbox(sw, sh, 0.008, 0.004, '#c94f3d', { roughness: 0.6 })
+    lado.position.set(sx, sy, 0)
+    stamp.add(lado)
+  }
+  const vistoCurto = rbox(0.06, 0.026, 0.01, 0.005, '#2f8a4a', { roughness: 0.6 })
+  vistoCurto.position.set(-0.035, -0.005, 0.004)
+  vistoCurto.rotation.z = -0.8
+  stamp.add(vistoCurto)
+  const vistoLongo = rbox(0.13, 0.026, 0.01, 0.005, '#2f8a4a', { roughness: 0.6 })
+  vistoLongo.position.set(0.03, 0.02, 0.004)
+  vistoLongo.rotation.z = 0.75
+  stamp.add(vistoLongo)
+  papel.add(stamp)
   root.add(papel)
 
   // ---- peças ---------------------------------------------------------------
@@ -563,11 +577,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 3.05, 5.7], target: [0.05, 1.2, -0.35] },
+    cameraHint: { position: [0.35, 2.6, 4.45], target: [0.0, 1.32, -0.45] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['coruja'] },
   meta: {
     id: 'jag-maste-gora-en-felanmalan',
     contexto:

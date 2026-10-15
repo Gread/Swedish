@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import type { Card, CardScene } from '../rig/types'
-import { capsule, ch, cylinder, lathe, puff, rbox, riseFrom, rng, seq, sphere } from '../rig/helpers'
+import { capsule, ch, cylinder, lathe, mat, puff, rbox, riseFrom, rng, seq, sphere } from '../rig/helpers'
 
 /**
  * det-ar-lugnt — "Det är lugnt." (Tranquilo. / Sem problema.)
@@ -22,7 +22,7 @@ function createScene(): CardScene {
   const MANCHA = '#584634'
   const FOCINHO = '#cbb59a'
   const CREME = '#f4efe6'
-  const ACO = '#9aa7b5'
+  const ACO = '#b9c3cc'
   const MANTEIGA = '#f0b429' // acento reservado: a manteiga que ela UNTA
 
   // ── Base do diorama: piso da padaria + ambientação ───────────────────
@@ -41,7 +41,7 @@ function createScene(): CardScene {
   const sacoNo = sphere(0.075, '#cbbfa4', { roughness: 0.95 })
   sacoNo.position.y = 0.66
   saco.add(sacoCorpo, sacoGola, sacoNo)
-  saco.position.set(-1.85, 0.16, -0.85)
+  saco.position.set(-1.45, 0.16, -0.55)
   saco.rotation.z = 0.07
   base.add(saco)
 
@@ -57,7 +57,7 @@ function createScene(): CardScene {
     paoCaixa.rotation.x = 0.2
     caixote.add(paoCaixa)
   }
-  caixote.position.set(1.95, 0.16, 0.9)
+  caixote.position.set(1.72, 0.16, 0.85)
   caixote.rotation.y = -0.4
   base.add(caixote)
 
@@ -111,16 +111,16 @@ function createScene(): CardScene {
 
   // ── O acidente: bandeja tombada, pães, poof de farinha ───────────────
   const bandeja = new THREE.Group()
-  const chapa = rbox(0.85, 0.05, 0.6, 0.02, ACO, { roughness: 0.3, metalness: 0.7 })
+  const chapa = rbox(0.85, 0.05, 0.6, 0.02, ACO, { roughness: 0.42, metalness: 0.45 })
   bandeja.add(chapa)
   for (const s of [-1, 1]) {
-    const borda = rbox(0.85, 0.07, 0.05, 0.02, ACO, { roughness: 0.3, metalness: 0.7 })
+    const borda = rbox(0.85, 0.07, 0.05, 0.02, ACO, { roughness: 0.42, metalness: 0.45 })
     borda.position.set(0, 0.03, s * 0.275)
     bandeja.add(borda)
   }
-  bandeja.position.set(-1.35, 0.47, 0.55)
+  bandeja.position.set(-0.98, 0.36, 0.72)
   bandeja.rotation.y = -0.3
-  bandeja.rotation.z = 0.95
+  bandeja.rotation.z = 0.5 // caída de lado, apoiada nos pães
   root.add(bandeja)
 
   const paes = new THREE.Group()
@@ -139,11 +139,11 @@ function createScene(): CardScene {
     migalha.position.set((rand() - 0.5) * 0.9, 0.03, (rand() - 0.5) * 0.8)
     paes.add(migalha)
   }
-  paes.position.set(-1.05, 0.16, 0.5)
+  paes.position.set(-0.62, 0.16, 0.78)
   root.add(paes)
 
   const farinha = puff(0.15, '#efe8da', 5, 11, { roughness: 0.95 })
-  farinha.position.set(-1.62, 0.3, 0.62)
+  farinha.position.set(-1.32, 0.3, 1.0)
   root.add(farinha)
 
   // ── A preguiça padeira ───────────────────────────────────────────────
@@ -213,7 +213,7 @@ function createScene(): CardScene {
   for (const s of [-1, 1]) {
     const mancha = sphere(0.07, MANCHA)
     mancha.scale.set(1.0, 2.0, 0.5)
-    mancha.rotation.z = -s * 0.4
+    mancha.rotation.z = s * 0.4 // listra desce pra fora: cara mansa (ao contrário lia como cenho bravo)
     mancha.position.set(s * 0.135, 0.03, 0.22)
     cabeca.add(mancha)
     const esclera = sphere(0.062, '#ffffff', { roughness: 0.25 })
@@ -221,18 +221,25 @@ function createScene(): CardScene {
     esclera.position.set(s * 0.115, 0.02, 0.245)
     const pupila = sphere(0.028, '#1a1a1a', { roughness: 0.2 })
     pupila.position.set(s * 0.115, 0.012, 0.295)
-    const palpebra = sphere(0.068, MANCHA)
-    palpebra.scale.set(1.15, 0.6, 0.75)
-    palpebra.position.set(s * 0.115, 0.068, 0.25)
+    // pálpebra clara caindo pra fora: olho meio fechado de sono feliz
+    // (escura e reta lia como sobrancelha franzida)
+    const palpebra = sphere(0.068, FOCINHO)
+    palpebra.scale.set(1.12, 0.62, 0.78)
+    palpebra.position.set(s * 0.115, 0.05, 0.252)
+    palpebra.rotation.z = -s * 0.28
     cabeca.add(esclera, pupila, palpebra)
   }
   const nariz = sphere(0.045, '#463626')
   nariz.scale.set(1.3, 0.8, 0.7)
   nariz.position.set(0, -0.075, 0.26)
   cabeca.add(nariz)
-  const sorriso = capsule(0.012, 0.06, '#463626')
-  sorriso.rotation.z = Math.PI / 2
-  sorriso.position.set(0, -0.14, 0.245)
+  // sorrisinho curvo (meio toro virado pra baixo)
+  const sorriso = new THREE.Mesh(
+    new THREE.TorusGeometry(0.05, 0.011, 8, 20, Math.PI),
+    mat('#463626', { roughness: 0.5, size: 0.1 }),
+  )
+  sorriso.rotation.z = Math.PI
+  sorriso.position.set(0, -0.12, 0.262)
   cabeca.add(sorriso)
   const touca = lathe(
     [
@@ -340,8 +347,8 @@ function createScene(): CardScene {
       caption: '…e derruba a bandeja dela: pães espatifados no chão!',
     }),
     seq('bandeja-tomba', 'bandeja', 2.3, 0.7, [
-      ch('rotation.z', 0, 0.95),
-      ch('position.y', 0.185, 0.47),
+      ch('rotation.z', 0, 0.5),
+      ch('position.y', 0.185, 0.36),
     ]),
     seq('paes-caem', 'paes', 2.45, 0.6, [riseFrom(0.16, 0.6)]),
     seq('farinha-poof', 'farinha', 2.55, 0.55, [
@@ -383,7 +390,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.5, 3.0, 6.2], target: [0, 0.95, 0] },
+    cameraHint: { position: [0.35, 2.45, 4.45], target: [0.1, 0.85, 0.05] },
   }
 }
 
@@ -400,6 +407,7 @@ export const card: Card = {
       "Você esbarra na preguiça padeira e derruba a bandeja de pães dela no chão. Ela nem pisca: continua UNTANDO a fôrma em câmera lenta, pincel gotejando manteiga, e murmura fanha: 'dêê... éLE UNTA...'. Quem unta devagar não se estressa com nada — tranquilo, sem problema.",
   },
   createScene,
+  refine: { organic: ['preguica', 'cabeca', 'bracoR'] },
 }
 
 export default card

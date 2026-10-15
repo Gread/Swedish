@@ -16,6 +16,19 @@ import {
  */
 const PELE = '#e8c39e'
 
+/**
+ * O braço de person() gira pelo MEIO (meio braço sobe acima do ombro quando
+ * ele levanta). Aqui o pivô vai para o topo do braço — mesma pose de repouso,
+ * mas ao erguer/estender o braço sai inteiro do ombro.
+ */
+function pivoNoOmbro(arm: THREE.Object3D, height: number) {
+  const d = 0.19 * height
+  const m = arm as THREE.Mesh
+  m.geometry = m.geometry.clone().translate(0, -d, 0)
+  m.position.y += d
+  for (const c of m.children) c.position.y -= d
+}
+
 function createScene(): CardScene {
   const root = new THREE.Group()
   const rand = rng(17)
@@ -69,8 +82,8 @@ function createScene(): CardScene {
   const alca = torus(0.13, 0.018, '#2d4f68', { roughness: 0.55 })
   alca.position.y = 0.53
   cestas.add(alca)
-  cestas.position.set(1.7, 0, -0.5)
-  cestas.rotation.y = -0.3
+  cestas.position.set(-1.75, 0, 0.35)
+  cestas.rotation.y = 0.4
   base.add(cestas)
 
   // adereço 3: placa de campanha da loja
@@ -103,7 +116,7 @@ function createScene(): CardScene {
   const limaTopo = sphere(0.075, '#7cba5f', { roughness: 0.5 })
   limaTopo.position.set(0, 0.39, -0.03)
   limas.add(limaTopo)
-  limas.position.set(1.35, 0, 1.15)
+  limas.position.set(-1.55, 0, -1.2)
   base.add(limas)
 
   base.position.y = 0
@@ -148,10 +161,10 @@ function createScene(): CardScene {
 
   // a compra do cliente: caixinha de leite já paga
   const leite = rbox(0.16, 0.26, 0.16, 0.02, '#f5f2ea', { roughness: 0.4 })
-  leite.position.set(0.95, 0.93, 0.05)
+  leite.position.set(-0.35, 0.93, 0.1)
   balcao.add(leite)
   const tampaLeite = rbox(0.17, 0.06, 0.17, 0.02, '#6d93b8', { roughness: 0.4 })
-  tampaLeite.position.set(0.95, 1.05, 0.05)
+  tampaLeite.position.set(-0.35, 1.05, 0.1)
   balcao.add(tampaLeite)
 
   balcao.position.set(0, 0.18, -0.35)
@@ -174,8 +187,10 @@ function createScene(): CardScene {
   const bracoOferta = atendente.getObjectByName('armL')!
   bracoOferta.rotation.z = 0.75 // gesto aberto de quem vai oferecer algo
   const bracoCaixa = atendente.getObjectByName('armR')!
+  pivoNoOmbro(bracoCaixa, 1.42)
   bracoCaixa.rotation.x = -1.5 // pose final: empurrando o taco
   bracoCaixa.rotation.z = -0.35
+  atendente.scale.setScalar(1.22) // alto o bastante para aparecer acima do balcão
   atendente.position.set(0.5, 0.18, -0.95)
   atendente.rotation.y = 0.15 // encarando o cliente
   atendente.rotation.x = 0.12 // pose final: inclinado no empurrão
@@ -183,34 +198,37 @@ function createScene(): CardScene {
 
   // ---------- CLIENTE de barriga verde estufada, mössa azul ----------
   const cliente = person({ body: '#5f9e4a', skin: PELE, height: 1.58, armAngle: 0.5 })
-  const barriga = sphere(0.44, '#6fb757', { roughness: 0.65 })
-  barriga.position.set(0, 0.6, 0.3)
+  const barriga = sphere(0.4, '#6fb757', { roughness: 0.65 })
+  barriga.position.set(0, 0.5, 0.28)
   cliente.add(barriga)
   // botões da camisa quase estourando
-  const posBotoes: [number, number][] = [[0.46, 0.71], [0.6, 0.75], [0.74, 0.69]]
+  const posBotoes: [number, number][] = [[0.34, 0.65], [0.5, 0.69], [0.66, 0.63]]
   for (const [by, bz] of posBotoes) {
     const botao = sphere(0.032, '#f5f2ea', { roughness: 0.35 })
     botao.position.set(0, by, bz)
     cliente.add(botao)
   }
   const cabecaCli = cliente.getObjectByName('head')!
-  cabecaCli.rotation.x = 0.25 // olhando para baixo, para o taco
-  const mossa = sphere(0.305, '#46628a', { roughness: 0.9 })
+  cabecaCli.rotation.x = 0.06 // encarando o taco
+  const mossa = sphere(0.3, '#46628a', { roughness: 0.9 })
   mossa.scale.y = 0.72
-  mossa.position.y = 0.12
+  mossa.position.y = 0.17
   cabecaCli.add(mossa)
   const bainha = torus(0.27, 0.045, '#3a5271', { roughness: 0.9 })
   bainha.rotation.x = Math.PI / 2
-  bainha.position.y = 0.04
+  bainha.position.y = 0.11
   cabecaCli.add(bainha)
   const pompom = sphere(0.07, '#d9c9a8', { roughness: 0.95 })
-  pompom.position.y = 0.36
+  pompom.position.y = 0.4
   cabecaCli.add(pompom)
 
-  // braço da recusa (mão espalmada gigante) — dobradiça animada
-  const bracoPare = cliente.getObjectByName('armL')!
-  bracoPare.rotation.x = -2.5 // pose final: erguido bloqueando o taco
-  bracoPare.rotation.z = 0.15
+  // braço da recusa (mão espalmada gigante) — o braço do lado do balcão,
+  // erguido entre o rosto e o taco. Dobradiça animada.
+  const bracoPare = cliente.getObjectByName('armR')!
+  pivoNoOmbro(bracoPare, 1.58)
+  bracoPare.rotation.x = -2.6 // pose final: erguido bloqueando o taco
+  bracoPare.rotation.z = 0.1
+  bracoPare.children[0].visible = false // a palma gigante substitui a mão-luva
   const palma = new THREE.Group()
   const palmaDisco = sphere(0.145, PELE, { roughness: 0.6 })
   palmaDisco.scale.set(1, 1.05, 0.45)
@@ -224,19 +242,27 @@ function createScene(): CardScene {
     palma.add(dedo)
   }
   const polegar = capsule(0.036, 0.07, PELE, { roughness: 0.6 })
-  polegar.position.set(0.14, -0.03, 0)
-  polegar.rotation.z = -1.15
+  polegar.position.set(-0.14, -0.03, 0)
+  polegar.rotation.z = 1.15
   palma.add(polegar)
-  palma.position.set(0, -0.3, 0)
-  palma.rotation.x = -0.5
+  const punho = torus(0.075, 0.025, '#4e8a3c', { roughness: 0.7 })
+  punho.rotation.x = Math.PI / 2
+  punho.position.y = -0.5
+  bracoPare.add(punho)
+  palma.position.set(0, -0.68, 0)
+  palma.rotation.x = -0.45
+  palma.rotation.y = 0.7 // palma virada para a câmera
+  palma.scale.setScalar(1.35)
   bracoPare.add(palma)
 
-  // braço do tapinha na barriga — dobradiça animada
-  const bracoTapinha = cliente.getObjectByName('armR')!
-  bracoTapinha.rotation.x = -1.0 // pose final: mão pousada na barriga
+  // braço do tapinha na barriga (lado da câmera) — dobradiça animada
+  const bracoTapinha = cliente.getObjectByName('armL')!
+  pivoNoOmbro(bracoTapinha, 1.58)
+  bracoTapinha.rotation.x = -1.2 // pose final: mão pousada na barriga
+  bracoTapinha.rotation.z = -0.1
 
   cliente.position.set(0.05, 0.18, 1.2)
-  cliente.rotation.y = 2.6 // de frente para o balcão, 3/4 para a câmera
+  cliente.rotation.y = 2.25 // de frente para o balcão, 3/4 para a câmera
   root.add(cliente)
 
   // ---------- o TACO gigante de brinde (acento dourado da cena) ----------
@@ -324,10 +350,10 @@ function createScene(): CardScene {
       ch('scale.y', 0.72, 1),
       ch('scale.z', 0.72, 1),
     ], { caption: 'Você chega com a barriga verde estufada — não cabe mais NADA.' }),
-    seq('braco-pare-assenta', 'braco-pare', 3.3, 0.5, [ch('rotation.z', 1.3, 0.5)], {
+    seq('braco-pare-assenta', 'braco-pare', 3.3, 0.5, [ch('rotation.z', 0.9, 0.3)], {
       ease: 'easeOut',
     }),
-    seq('braco-tapinha-assenta', 'braco-tapinha', 3.42, 0.5, [ch('rotation.z', -1.3, -0.5)], {
+    seq('braco-tapinha-assenta', 'braco-tapinha', 3.42, 0.5, [ch('rotation.z', -0.9, -0.1)], {
       ease: 'easeOut',
     }),
 
@@ -349,20 +375,20 @@ function createScene(): CardScene {
 
     // ---- mão espalmada: NÊI, TACO! ----
     seq('braco-pare-ergue', 'braco-pare', 7.4, 0.6, [
-      ch('rotation.x', 0, -2.75),
-      ch('rotation.z', 0.5, 0.15),
+      ch('rotation.x', 0, -2.85),
+      ch('rotation.z', 0.3, 0.1),
     ], {
       ease: 'easeOut',
       caption: 'Mão espalmada na frente do taco: "NÊI, TACO!" — nej tack, nem taco!',
     }),
-    seq('braco-pare-firma', 'braco-pare', 8.15, 0.5, [ch('rotation.x', -2.75, -2.5)]),
+    seq('braco-pare-firma', 'braco-pare', 8.15, 0.5, [ch('rotation.x', -2.85, -2.6)]),
 
     // ---- tapinha na barriga: DÊ… É BRÁ! ----
-    seq('braco-tapinha-pousa', 'braco-tapinha', 9.3, 0.6, [ch('rotation.x', 0, -1.0)], {
+    seq('braco-tapinha-pousa', 'braco-tapinha', 9.3, 0.6, [ch('rotation.x', 0, -1.2)], {
       caption: 'Tapinha na barriga: "DÊ… É BRÁ!" — tá ótimo assim: Nej tack, det är bra.',
     }),
-    seq('tapinha-sobe', 'braco-tapinha', 10.1, 0.35, [ch('rotation.x', -1.0, -0.62)]),
-    seq('tapinha-desce', 'braco-tapinha', 10.5, 0.4, [ch('rotation.x', -0.62, -1.0)]),
+    seq('tapinha-sobe', 'braco-tapinha', 10.1, 0.35, [ch('rotation.x', -1.2, -0.8)]),
+    seq('tapinha-desce', 'braco-tapinha', 10.5, 0.4, [ch('rotation.x', -0.8, -1.2)]),
 
     // ---- pulinho satisfeito do cliente ----
     seq('cliente-pula', 'cliente', 11.0, 0.35, [ch('position.y', 0.18, 0.32)], {
@@ -377,7 +403,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [4.8, 3.0, 3.3], target: [0.1, 1.0, 0.1] },
+    cameraHint: { position: [3.9, 2.25, 1.55], target: [0.15, 1.05, 0.2] },
   }
 }
 

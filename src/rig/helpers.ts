@@ -158,9 +158,16 @@ export function rock(radius: number, color: string | number, seed = 1, opts?: Ma
   const rand = rng(seed)
   const pos = geo.attributes.position
   const v = new THREE.Vector3()
+  // A geometria não é indexada: cada canto de face é um vértice próprio. O
+  // deslocamento é sorteado por POSIÇÃO (não por vértice), senão os cantos
+  // que coincidem se separam e a rocha vira cacos com frestas de luz.
+  const offsets = new Map<string, number>()
   for (let i = 0; i < pos.count; i++) {
     v.fromBufferAttribute(pos, i)
-    v.multiplyScalar(1 + (rand() - 0.5) * 0.45)
+    const key = `${v.x.toFixed(4)},${v.y.toFixed(4)},${v.z.toFixed(4)}`
+    let k = offsets.get(key)
+    if (k === undefined) offsets.set(key, (k = 1 + (rand() - 0.5) * 0.45))
+    v.multiplyScalar(k)
     pos.setXYZ(i, v.x, v.y, v.z)
   }
   geo.computeVertexNormals()
@@ -274,4 +281,20 @@ export function person({ body, skin, height = 1.5, armAngle = 0.5 }: PersonOpts)
     g.add(arm)
   }
   return g
+}
+
+/**
+ * Os braços de person() giram pelo MEIO (a mão fica a ~0.19·h abaixo do pivô
+ * e o topo do braço, acima). Para levantar/estender um braço de verdade —
+ * acenar, apontar, erguer algo acima da cabeça — chame isto antes de girar:
+ * o pivô passa para o OMBRO, a pose de repouso não muda e `rotation` passa a
+ * girar o braço inteiro em torno do ombro.
+ *   const braco = p.getObjectByName('armL')!; shoulderPivot(braco, 1.5)
+ */
+export function shoulderPivot(arm: THREE.Object3D, height = 1.5) {
+  const d = 0.19 * height
+  const m = arm as THREE.Mesh
+  m.geometry = m.geometry.clone().translate(0, -d, 0)
+  m.position.y += d
+  for (const c of m.children) c.position.y -= d
 }

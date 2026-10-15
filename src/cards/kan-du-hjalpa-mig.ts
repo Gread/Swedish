@@ -19,8 +19,8 @@ import {
 const SNOW = '#eef4f9'
 const SNOW_SHADE = '#c3d4e4'
 const ICE = '#a8bfd4'
-const STONE = '#8b929a'
-const STONE_DARK = '#6f767e'
+const STONE = '#7a828b'
+const STONE_DARK = '#5f666e'
 const HOLE = '#2b3540'
 const WOOD = '#8a6a42'
 const CLOTH = '#8a4234' // vermelho apagado do iodelador
@@ -140,8 +140,8 @@ function createScene(): CardScene {
 
   // ---- o soterrado: só a cabeça passa da neve ------------------------------
   const soterrado = person({ body: '#3f5b74', skin: SKIN, height: 1.4 })
-  soterrado.position.set(-1.2, -0.594, 0.6)
-  soterrado.rotation.y = 1.35 // olha para cima, na direção do iodelador
+  soterrado.position.set(-1.2, -0.5, 0.6)
+  soterrado.rotation.y = 0.8 // rosto para a plateia, virado para o iodelador
 
   const buriedHead = soterrado.getObjectByName('head')!
 
@@ -175,7 +175,7 @@ function createScene(): CardScene {
 
   // ---- o braço erguido, pedindo socorro ------------------------------------
   const braco = new THREE.Group()
-  braco.position.set(-0.88, 0.1, 0.78)
+  braco.position.set(-1.52, 0.1, 0.62) // ao lado da cabeça, sem tapar o rosto
   braco.rotation.z = 0.12
 
   const forearm = capsule(0.075, 0.4, '#3f5b74', { roughness: 0.85 })
@@ -202,30 +202,45 @@ function createScene(): CardScene {
   root.add(braco)
 
   // ---- o M gigante esculpido na neve ---------------------------------------
+  // M de verdade: hastes verticais nas pontas e as diagonais DESCENDO do topo
+  // das hastes até o vértice no meio (nunca subindo — de cima isso vira W).
   const letraM = new THREE.Group()
   letraM.position.set(-0.35, GY, -0.85)
-  letraM.rotation.y = 0.22
+  letraM.rotation.y = 0.1 // de frente para a câmera
 
-  const mound = cylinder(0.78, 0.86, 0.14, SNOW_SHADE, { roughness: 0.92 })
+  const mound = cylinder(0.82, 0.9, 0.14, SNOW_SHADE, { roughness: 0.92 })
   mound.position.y = 0.06
-  mound.scale.z = 0.55
+  mound.scale.z = 0.5
   letraM.add(mound)
 
+  const M_TOP = 1.3 // topo das hastes
+  const M_VERTEX = 0.5 // vértice central (bem abaixo do topo: lê como M)
+  const M_X = 0.5
+  const diagDX = M_X - 0.06
+  const diagDY = M_TOP - 0.08 - M_VERTEX
+  const diagLen = Math.hypot(diagDX, diagDY) + 0.1
+  const diagAng = Math.atan2(diagDX, diagDY)
+
   for (const side of [-1, 1]) {
-    const post = rbox(0.2, 1.1, 0.22, 0.055, SNOW, { roughness: 0.92 })
-    post.position.set(side * 0.44, 0.68, 0)
+    const post = rbox(0.24, M_TOP - 0.1, 0.24, 0.06, SNOW, { roughness: 0.92 })
+    post.position.set(side * M_X, 0.1 + (M_TOP - 0.1) / 2, 0)
     letraM.add(post)
 
-    const diag = rbox(0.19, 0.8, 0.21, 0.05, SNOW, { roughness: 0.92 })
-    diag.position.set(side * 0.22, 0.9, 0.01)
-    diag.rotation.z = side * 0.6
+    const diag = rbox(0.22, diagLen, 0.22, 0.055, SNOW, { roughness: 0.92 })
+    diag.position.set(side * (0.06 + diagDX / 2), M_VERTEX + diagDY / 2, 0.012)
+    diag.rotation.z = -side * diagAng // topo encosta na haste, pé desce ao meio
     letraM.add(diag)
 
     // aresta de gelo no topo de cada haste: a luz pega a quina
-    const edge = rbox(0.14, 0.05, 0.16, 0.02, ICE, { roughness: 0.3 })
-    edge.position.set(side * 0.44, 1.24, 0)
+    const edge = rbox(0.18, 0.05, 0.2, 0.02, ICE, { roughness: 0.3 })
+    edge.position.set(side * M_X, M_TOP + 0.01, 0)
     letraM.add(edge)
   }
+  // vértice do M: bloco de neve onde as diagonais se encontram
+  const vertex = rbox(0.24, 0.22, 0.23, 0.07, SNOW, { roughness: 0.92 })
+  vertex.position.set(0, M_VERTEX + 0.02, 0.012)
+  vertex.rotation.z = Math.PI / 4
+  letraM.add(vertex)
   root.add(letraM)
 
   // ---- a pedra do iodelador ------------------------------------------------
@@ -347,6 +362,18 @@ function createScene(): CardScene {
   bladeEdge.position.set(0, 0.79, 0.012)
   pa.add(bladeEdge)
 
+  // abas laterais e traseira: pá de neve de verdade, não uma raquete
+  for (const side of [-1, 1]) {
+    const lip = rbox(0.045, 0.46, 0.14, 0.018, ACCENT, { roughness: 0.4 })
+    lip.position.set(side * 0.215, 1.0, 0.03)
+    lip.rotation.x = -0.12
+    pa.add(lip)
+  }
+  const backLip = rbox(0.44, 0.045, 0.14, 0.018, ACCENT, { roughness: 0.4 })
+  backLip.position.set(0, 1.215, 0.0)
+  backLip.rotation.x = -0.12
+  pa.add(backLip)
+
   const bladeRib = rbox(0.07, 0.4, 0.09, 0.025, ACCENT_LIGHT, { roughness: 0.4 })
   bladeRib.position.set(0, 1.0, -0.01)
   bladeRib.rotation.x = -0.12
@@ -382,7 +409,7 @@ function createScene(): CardScene {
       [ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1)],
       { ease: 'easeOut', caption: 'Você afunda: abre-se um BURACO e some ali dentro.' },
     ),
-    seq('soterrado-rise', 'soterrado', 1.95, 0.8, [riseFrom(-0.594, 1.0)], { ease: 'easeOut' }),
+    seq('soterrado-rise', 'soterrado', 1.95, 0.8, [riseFrom(-0.5, 1.0)], { ease: 'easeOut' }),
     seq('braco-rise', 'braco', 2.15, 0.8, [riseFrom(0.1, 1.1)], { ease: 'easeOut' }),
 
     seq('braco-wave-a', 'braco', 3.2, 0.6, [ch('rotation.z', 0.12, -0.45)], {
@@ -435,7 +462,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.35, 3.1, 6.3], target: [0.1, 1.05, 0.05] },
+    cameraHint: { position: [0.3, 2.85, 5.25], target: [0.15, 1.15, -0.15] },
   }
 }
 

@@ -25,6 +25,11 @@ const YELLOW = '#f4b41a'      // acento reservado: o número SEIS
 const PINK = '#d76a80'        // línguas
 const SKIN = '#e8c39e'
 const GY = 0.16 // topo da base do diorama
+// braço do aceno: repouso de person() → erguido com o ombro como pivô
+const BRACO_X = -0.293
+const BRACO_Y = 0.4836
+const ACENO_X = -0.421
+const ACENO_Y = 0.854
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -81,9 +86,16 @@ function createScene(): CardScene {
   // ---- você, acenando no corredor ------------------------------------------
   const pessoa = person({ body: '#4a6274', skin: SKIN, height: 1.5, armAngle: 0.35 })
   pessoa.position.set(-1.65, GY, -0.45)
-  pessoa.rotation.y = 1.3 // olha para a porta (olhos em +z local)
-  const aceno = pessoa.getObjectByName('armR')!
+  // corpo quase de frente para a câmera (o aceno abre no plano da imagem);
+  // só a cabeça vira para a porta do vizinho
+  pessoa.rotation.y = 0.55
+  pessoa.getObjectByName('head')!.rotation.y = 0.6
+  // braço do lado da câmera (armL): rotação negativa abre para fora e para cima
+  // O braço de person() gira em torno do próprio centro; para a mão subir acima
+  // do ombro, o centro do braço também sobe/abre (pivô no ombro).
+  const aceno = pessoa.getObjectByName('armL')!
   aceno.rotation.z = -2.45 // pose final: braço no alto, acenando
+  aceno.position.set(ACENO_X, ACENO_Y, 0)
   root.add(pessoa)
 
   // ---- porta do vizinho ----------------------------------------------------
@@ -227,8 +239,9 @@ function createScene(): CardScene {
 
   // ---- o SEIS amarelo gigante ----------------------------------------------
   const numeroSeis = new THREE.Group()
-  numeroSeis.position.set(1.95, GY, -0.15)
-  numeroSeis.rotation.y = -0.5
+  // entre você e a porta, de frente para a câmera: o "VI SEIS!" materializado
+  numeroSeis.position.set(-0.3, GY, 0.2)
+  numeroSeis.rotation.y = 0.05
 
   const barriga = torus(0.4, 0.13, YELLOW, { roughness: 0.4 })
   barriga.position.set(0, 0.58, 0)
@@ -279,7 +292,7 @@ function createScene(): CardScene {
       ease: 'easeOut',
       caption: '…VOCÊ acena tchau — em sueco quem se despede assim diz "VI…"',
     }),
-    seq('aceno-raise', 'aceno', 1.7, 0.85, [ch('rotation.z', -0.35, -2.45)], { ease: 'easeOut' }),
+    seq('aceno-raise', 'aceno', 1.7, 0.85, [ch('rotation.z', 0.35, -2.45), ch('position.x', BRACO_X, ACENO_X), ch('position.y', BRACO_Y, ACENO_Y)], { ease: 'easeOut' }),
 
     seq('marco-rise', 'marco', 3.4, 0.85, [riseFrom(GY, 2.7)], {
       ease: 'easeOut',
@@ -348,7 +361,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.4, 3.0, 6.1], target: [0.5, 1.1, -0.35] },
+    cameraHint: { position: [0.15, 2.45, 4.8], target: [0.2, 1.15, -0.45] },
   }
 }
 
@@ -365,6 +378,7 @@ export const card: Card = {
       'Você acena tchau no corredor e da porta do vizinho sai uma mão gigante verde com SEIS dedos — cada dedo é uma cobrinha. Você conta alto: "VI SEIS!" e os seis dedos respondem juntos com um SSSSS comprido.',
   },
   createScene,
+  refine: { organic: ['braco', 'mao', 'dedos'] },
 }
 
 export default card

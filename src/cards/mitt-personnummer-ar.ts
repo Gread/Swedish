@@ -33,7 +33,7 @@ function createScene(): CardScene {
   const root = new THREE.Group()
   const rand = rng(2026)
 
-  const ouroMetal = { roughness: 0.25, metalness: 0.9 }
+  const ouroMetal = { roughness: 0.3, metalness: 0.62 }
 
   // ------------------------------------------------------- base do diorama
   // Piso de bétula da repartição + tapete de fila
@@ -121,7 +121,7 @@ function createScene(): CardScene {
   balcao.add(botaoSineta)
   // bandeirinha sueca no mastro
   const mastro = cylinder(0.022, 0.022, 0.55, '#8f979f', { metalness: 0.6, roughness: 0.35 })
-  mastro.position.set(0.8, 1.17, 0)
+  mastro.position.set(1.0, 1.17, 0)
   balcao.add(mastro)
   const bandeira = new THREE.Group()
   const pano = rbox(0.5, 0.34, 0.045, 0.01, '#2a5ca8', { roughness: 0.5 })
@@ -131,18 +131,19 @@ function createScene(): CardScene {
   const cruzV = rbox(0.085, 0.34, 0.055, 0.01, '#e0b23f', { roughness: 0.5 })
   cruzV.position.x = -0.07
   bandeira.add(cruzV)
-  bandeira.position.set(0.8, 1.3, 0.04)
+  bandeira.position.set(1.0, 1.3, 0.04)
   balcao.add(bandeira)
   balcao.position.set(0, 0.16, -1.1)
   root.add(balcao)
 
   // Atendente sueca de camisa azul, olhando para a fila
-  const atendente = person({ body: '#4a7aa6', skin: PELE, height: 1.4, armAngle: 0.35 })
+  const atendente = person({ body: '#4a7aa6', skin: PELE, height: 1.55, armAngle: 0.35 })
   const cabeloAtendente = puff(0.085, '#5d4630', 5, 31, { roughness: 0.9 })
   cabeloAtendente.position.set(0, 0.16, -0.03)
   cabeloAtendente.scale.set(1.15, 0.75, 1.15)
   atendente.getObjectByName('head')!.add(cabeloAtendente)
-  atendente.position.set(0.1, 0.16, -1.6)
+  atendente.position.set(-0.45, 0.16, -1.6)
+  atendente.rotation.y = 0.35
   root.add(atendente)
 
   // ------------------------------------------------------- o MITO
@@ -164,12 +165,15 @@ function createScene(): CardScene {
   cinto.rotation.x = Math.PI / 2
   cinto.position.y = 0.34
   zeus.add(cinto)
+  // braços abertos em abraço, cada um envolvendo um dígito
   const bracoDireito = zeus.getObjectByName('armR')!
-  bracoDireito.rotation.z = -2.25
+  bracoDireito.rotation.set(0.35, 0, 1.2)
+  const bracoEsquerdo = zeus.getObjectByName('armL')!
+  bracoEsquerdo.rotation.set(0.35, 0, -1.2)
 
-  // pose final: virado para os números, curvado no abraço
-  zeus.position.set(-0.55, 0.16, 0.35)
-  zeus.rotation.set(0.12, 0.85, 0)
+  // pose final: de frente para você, entre o 0 e o 1, curvado no abraço
+  zeus.position.set(-0.1, 0.16, 0.45)
+  zeus.rotation.set(0.12, 0.69, 0)
   zeus.scale.y = 0.88
   root.add(zeus)
 
@@ -179,7 +183,7 @@ function createScene(): CardScene {
     roughness: 0.35,
     metalness: 0.3,
     emissive: '#ffcf5e',
-    emissiveIntensity: 1.1,
+    emissiveIntensity: 0.45,
   })
   raioAlto.position.set(-0.05, 0.21, 0)
   raioAlto.rotation.z = 0.38
@@ -188,7 +192,7 @@ function createScene(): CardScene {
     roughness: 0.35,
     metalness: 0.3,
     emissive: '#ffcf5e',
-    emissiveIntensity: 1.1,
+    emissiveIntensity: 0.45,
   })
   raioBaixo.position.set(0.07, -0.17, 0)
   raioBaixo.rotation.z = -0.38
@@ -197,19 +201,23 @@ function createScene(): CardScene {
     roughness: 0.35,
     metalness: 0.3,
     emissive: '#ffcf5e',
-    emissiveIntensity: 1.1,
+    emissiveIntensity: 0.45,
   })
   raioPonta.rotation.z = Math.PI - 0.38
   raioPonta.position.set(0.16, -0.44, 0)
   raio.add(raioPonta)
-  raio.position.set(0, -0.3, 0.02)
-  raio.rotation.z = 2.1
-  bracoDireito.add(raio)
+  // raio embainhado nas costas, a ponta aparecendo por cima do ombro
+  raio.position.set(0.3, 1.12, -0.24)
+  raio.rotation.set(0, 0, -0.3)
+  zeus.add(raio)
 
   // ------------------------------------------------------- números dourados
   // O dígito 0: aro dourado polido, em pé sobre o piso
-  const zero = torus(0.4, 0.13, OURO, ouroMetal)
-  zero.position.set(0.5, 0.69, 0.5)
+  // oval como o algarismo, não um anel redondo
+  const zero = torus(0.38, 0.12, OURO, ouroMetal)
+  zero.scale.set(0.78, 1.12, 1)
+  zero.rotation.y = 0.69
+  zero.position.set(-0.47, 0.72, 0.95)
   root.add(zero)
 
   // O dígito 1: coluna dourada com serifa e pedestal
@@ -223,26 +231,31 @@ function createScene(): CardScene {
   const umPedestal = rbox(0.44, 0.1, 0.32, 0.03, OURO, ouroMetal)
   umPedestal.position.y = -0.6
   um.add(umPedestal)
-  um.rotation.y = -0.2
-  um.position.set(1.15, 0.81, 0.35)
+  um.rotation.y = 0.69
+  um.position.set(0.46, 0.81, 0.18)
   root.add(um)
 
   // ------------------------------------------------------- a paixão
   // Coração vermelho que salta do peito do mito
   const coracao = new THREE.Group()
+  // forma inclinada para trás: a câmera vem de cima, o coração olha para ela
+  const forma = new THREE.Group()
+  forma.rotation.x = -0.4
+  coracao.add(forma)
   for (const lado of [-1, 1]) {
-    const lobo = sphere(0.16, '#c94f3d', { roughness: 0.4 })
-    lobo.position.set(lado * 0.115, 0.09, 0)
+    const lobo = sphere(0.17, '#c94f3d', { roughness: 0.4 })
+    lobo.position.set(lado * 0.11, 0.09, 0)
     lobo.scale.z = 0.78
-    coracao.add(lobo)
+    forma.add(lobo)
   }
-  const ponta = cone(0.23, 0.34, '#c94f3d', { roughness: 0.4 })
+  // base do cone escondida dentro dos lobos (sem degrau chato no topo)
+  const ponta = cone(0.215, 0.36, '#c94f3d', { roughness: 0.4 })
   ponta.rotation.z = Math.PI
-  ponta.position.y = -0.1
-  ponta.scale.z = 0.78
-  coracao.add(ponta)
-  coracao.rotation.y = 0.3
-  coracao.position.set(0.35, 2.3, 0.6)
+  ponta.position.y = -0.07
+  ponta.scale.z = 0.7
+  forma.add(ponta)
+  coracao.rotation.y = 0.69
+  coracao.position.set(0.12, 1.82, 0.72)
   root.add(coracao)
 
   const parts = [
@@ -290,14 +303,14 @@ function createScene(): CardScene {
     ),
 
     // --- os números dourados da paixão
-    seq('zero-rise', 'zero', 4.8, 0.8, [riseFrom(0.69, 1.4)], {
+    seq('zero-rise', 'zero', 4.8, 0.8, [riseFrom(0.72, 1.4)], {
       ease: 'easeOut',
       caption: 'Zeus se ajoelha e abraça um 0 e um 1 dourados: os NÚMEROS são sua paiXÃO (pe-XÔN)!',
     }),
     seq('um-rise', 'um', 5.0, 0.8, [riseFrom(0.81, 1.7)], { ease: 'easeOut' }),
-    seq('zeus-vira', 'zeus', 5.0, 0.7, [ch('rotation.y', 2.95, 0.85)]),
+    seq('zeus-vira', 'zeus', 5.0, 0.7, [ch('rotation.y', 2.95, 0.69)]),
     seq('zeus-abraca', 'zeus', 5.8, 0.6, [ch('rotation.x', 0, 0.12), ch('scale.y', 1, 0.88)]),
-    seq('zero-spin', 'zero', 5.9, 0.7, [ch('rotation.y', 0, Math.PI * 2)]),
+    seq('zero-spin', 'zero', 5.9, 0.7, [ch('rotation.y', 0.69 - Math.PI * 2, 0.69)]),
 
     // --- a paixão salta do peito
     seq(
@@ -306,9 +319,9 @@ function createScene(): CardScene {
       6.8,
       0.6,
       [
-        ch('position.x', -0.45, 0.35),
-        ch('position.y', 1.05, 1.75),
-        ch('position.z', 0.55, 0.6),
+        ch('position.x', 0.0, 0.12),
+        ch('position.y', 1.0, 1.6),
+        ch('position.z', 0.55, 0.72),
         ch('scale.x', 0.01, 1),
         ch('scale.y', 0.01, 1),
         ch('scale.z', 0.01, 1),
@@ -318,7 +331,7 @@ function createScene(): CardScene {
         caption: "O coração pula para fora do peito: 'MITO, sua paiXÃO-NÚMERO É…?'",
       },
     ),
-    seq('coracao-float', 'coracao', 7.5, 0.8, [ch('position.y', 1.75, 2.3)], {
+    seq('coracao-float', 'coracao', 7.5, 0.8, [ch('position.y', 1.6, 1.82)], {
       caption: "E ele declama: 'Mitt personnummer är… 1-9-0-8-0-1!'",
     }),
   ]
@@ -327,11 +340,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [3.9, 3.0, 4.7], target: [0.1, 1.0, 0] },
+    cameraHint: { position: [2.8, 2.3, 3.6], target: [-0.05, 0.95, 0.1] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['coracao'] },
   meta: {
     id: 'mitt-personnummer-ar',
     contexto:

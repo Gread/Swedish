@@ -121,10 +121,22 @@ function createScene(): CardScene {
     const chapa = rbox(0.34, 0.26, 0.035, 0.03, '#e3dbcb', { roughness: 0.45 })
     chapa.position.y = 0.66
     placa.add(chapa)
-    const borrao = rbox(0.29, 0.15, 0.02, 0.02, TINTA, { roughness: 0.6 })
-    borrao.position.set(0.01, 0.65, 0.03)
-    borrao.rotation.z = -0.18
-    placa.add(borrao)
+    // número raspado: sobra um pedaço do dígito e por cima a pincelada de tinta
+    const resto = rbox(0.045, 0.2, 0.012, 0.01, '#3d5f8f', { roughness: 0.5 })
+    resto.position.set(0.1, 0.66, 0.022)
+    resto.rotation.z = 0.12
+    placa.add(resto)
+    for (const [bx, by, bw, bz] of [[0.0, 0.69, 0.3, -0.16], [0.02, 0.62, 0.27, 0.1]] as const) {
+      const borrao = rbox(bw, 0.085, 0.02, 0.04, TINTA, { roughness: 0.55 })
+      borrao.position.set(bx, by, 0.03)
+      borrao.rotation.z = bz
+      placa.add(borrao)
+    }
+    for (const [dx, dl] of [[-0.08, 0.07], [0.05, 0.11], [0.11, 0.05]] as const) {
+      const escorrido = capsule(0.011, dl, TINTA, { roughness: 0.5 })
+      escorrido.position.set(dx, 0.585 - dl / 2, 0.035)
+      placa.add(escorrido)
+    }
     via.add(placa)
   }
 
@@ -171,12 +183,15 @@ function createScene(): CardScene {
     doninha.add(pe)
   }
 
+  // rabo pendendo para trás e para baixo, com a ponta escura NA ponta
   const rabo = capsule(0.085, 0.46, WEASEL, { roughness: 0.85 })
-  rabo.position.set(0, 0.3, -0.34)
-  rabo.rotation.x = -1.05
+  rabo.position.set(0, 0.06, -0.3)
+  rabo.rotation.x = -2.5
   doninha.add(rabo)
-  const raboPonta = sphere(0.085, MASK, { roughness: 0.85 })
-  raboPonta.position.set(0, 0.14, -0.6)
+  const raboPonta = sphere(0.09, MASK, { roughness: 0.85 })
+  raboPonta.position.set(0, -0.2, -0.5)
+  raboPonta.scale.set(1, 1, 1.25)
+  raboPonta.rotation.x = -2.5
   doninha.add(raboPonta)
 
   // cabeça: focinho pontudo, antifaz escuro, olhos
@@ -428,6 +443,8 @@ function createScene(): CardScene {
     { name: 'trilhos', group: 'patio', object: trilhos },
     { name: 'cone', group: 'doninha', object: cone },
     { name: 'doninha', group: 'doninha', object: doninha },
+    // adereço rígido à parte, só para o refinamento não fundi-lo na pele da doninha
+    { name: 'rolinho', group: 'doninha', object: rolinho },
     { name: 'fronha', group: 'urso', object: fronha },
     { name: 'urso', group: 'urso', object: urso },
     { name: 'cabeca', group: 'urso', object: cabeca },
@@ -529,7 +546,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.05, 3.05, 6.25], target: [-0.15, 1.0, 0.15] },
+    cameraHint: { position: [0.85, 2.85, 5.75], target: [-0.15, 1.05, 0.05] },
   }
 }
 
@@ -546,6 +563,7 @@ export const card: Card = {
       'Uma doninha VIL, comprida feito um cachecol, apagou o número de todos os trilhos com um rolinho de tinta. Do trilho do meio vem um ronco em dois tempos — SPÔR... GÔR... — de um urso hibernando em cima de uma FRÔnha gigante, com um trenzinho TÔ-GUET apitando na barriga dele sem sair do lugar. Regra do pátio: o trem parte do trilho onde o urso ronca mais alto.',
   },
   createScene,
+  refine: { organic: ['urso', 'cabeca', 'doninha', 'roncoA', 'roncoB'] },
 }
 
 export default card

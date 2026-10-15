@@ -24,7 +24,7 @@ const SOUP = '#d0973f'
 const STEAM = '#f4f5f3'
 const FUR = '#6b4a33'
 const FUR_LIGHT = '#8d6448'
-const SPINE = '#8d8f93'
+const SPINE = '#a9a39a'
 const CAP_RED = '#b3453c'
 const CAP_CREAM = '#efe6d2'
 const BIRD = '#2c2c33'
@@ -39,6 +39,7 @@ const BOWL_X = -0.55
 const BOWL_Z = -0.15
 const CARROT_Z = 0.28
 const CARROT_X = [-0.3, 0.02, 0.34]
+const BENCH_Y = GY + 0.375 // topo do banco de trás, onde o ouriço senta
 
 const UP = new THREE.Vector3(0, 1, 0)
 
@@ -182,12 +183,12 @@ function createScene(): CardScene {
 
   // ---- vapor da ceia: três bolotas subindo em espiral -----------------------
   const vapor = new THREE.Group()
-  vapor.position.set(BOWL_X, TOP + 0.34, BOWL_Z)
+  vapor.position.set(BOWL_X + 0.18, TOP + 0.34, BOWL_Z + 0.05) // sobe à frente do focinho, sem tapar os olhos
   const steamA = puff(0.075, STEAM, 5, 41, { roughness: 0.95 })
   const steamB = puff(0.062, STEAM, 5, 42, { roughness: 0.95 })
-  steamB.position.set(0.11, 0.2, -0.07)
+  steamB.position.set(0.1, 0.2, 0.04) // o vapor deriva para longe do rosto do ouriço
   const steamC = puff(0.05, STEAM, 5, 43, { roughness: 0.95 })
-  steamC.position.set(-0.03, 0.39, 0.1)
+  steamC.position.set(0.2, 0.38, 0.08)
   vapor.add(steamA, steamB, steamC)
   root.add(vapor)
 
@@ -272,11 +273,13 @@ function createScene(): CardScene {
   bico.add(anel)
   root.add(tucano)
 
-  // ---- ouriço IMÓRON: casca externa anima, miolo carrega a rotação de olhar --
+  // ---- ouriço IMÓRON: brota do banco de trás e senta à mesa, de frente para
+  // a câmera, com o focinho sobre a tigela. Casca externa anima, miolo olha.
   const ourico = new THREE.Group()
-  ourico.position.set(-1.42, GY, 0.3)
+  ourico.position.set(-0.98, BENCH_Y, -0.97)
+  ourico.scale.setScalar(1.3)
   const bicho = new THREE.Group()
-  bicho.rotation.y = 1.5 // olha para a mesa (+x)
+  bicho.rotation.y = 0.85 // 3/4: espinhos de perfil, olha para a tigela e para a câmera
   ourico.add(bicho)
 
   const corpo = sphere(0.32, FUR, { roughness: 0.9 })
@@ -291,12 +294,13 @@ function createScene(): CardScene {
 
   // coroa de espinhos cobrindo as costas e o topo
   for (const [phi, count, len, rad] of [
-    [0.32, 5, 0.19, 0.024],
-    [0.78, 8, 0.22, 0.026],
-    [1.2, 8, 0.2, 0.024],
+    [0.3, 6, 0.24, 0.038],
+    [0.72, 10, 0.27, 0.04],
+    [1.1, 11, 0.25, 0.038],
+    [1.5, 9, 0.2, 0.034],
   ] as const) {
     for (let i = 0; i < count; i++) {
-      const theta = Math.PI * (0.72 + (i / (count - 1)) * 1.56)
+      const theta = Math.PI * (0.58 + (i / (count - 1)) * 1.84)
       const dir = new THREE.Vector3(
         Math.sin(phi) * Math.sin(theta),
         Math.cos(phi),
@@ -470,7 +474,7 @@ function createScene(): CardScene {
       ch('position.y', TOP + 0.12, TOP + 0.24),
     ], { ease: 'easeOut' }),
 
-    seq('ourico-rise', 'ourico', 9.0, 0.8, [riseFrom(GY, 1.45)], {
+    seq('ourico-rise', 'ourico', 9.0, 0.8, [riseFrom(BENCH_Y, 1.45)], {
       ease: 'easeOut',
       caption: 'O convidado brota do chão: o IMÓRON, ouriço que só acorda amanhã.',
     }),
@@ -495,7 +499,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 2.95, 6.1], target: [-0.05, 0.95, 0.05] },
+    cameraHint: { position: [0.3, 2.55, 3.45], target: [-0.05, 1.35, -0.35] },
   }
 }
 
@@ -513,6 +517,7 @@ export const card: Card = {
       'Na Suécia ninguém marca hora falando alto: chega uma bandinha de SKA e o tucano trombonista solta as duas notas do convite pelo bico — SKA-VI! O bico dele É a corneta, um funil laranja que ele aponta pra cima. Serve-se então uma CEIA fumegante na mesa, e o convidado brota do banco: o IMÓRON, um ouriço de touca de dormir que só acorda amanhã. Ele fareja a tigela, aceita o combinado e finca três cenouras em fila na toalha — CLÓ-CAN TRÊ.',
   },
   createScene,
+  refine: { organic: ['ourico'] },
 }
 
 export default card

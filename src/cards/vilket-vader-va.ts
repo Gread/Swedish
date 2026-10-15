@@ -41,7 +41,6 @@ const SUN = '#f6c34a'
 const GY = 0.18 // topo da calçada
 
 // pose final das peças móveis (repetida nas sequences)
-const SACHE_Y = 0.9
 const CLOUD_Y = 2.15
 const UMB_TILT = 0.18
 const COPA_TILT = 0.1
@@ -133,8 +132,17 @@ function createScene(): CardScene {
   const head = p.getObjectByName('head')!
   const armR = p.getObjectByName('armR')!
   const armL = p.getObjectByName('armL')!
-  armR.rotation.set(0.5, 0, -3.05) // mão erguida com o sachê
-  armL.rotation.set(0.45, 0, 2.9) // apontando pro céu: "olha isso!"
+  // O braço de person() gira em torno do próprio centro: para erguer de
+  // verdade, cada braço é apontado a partir do ombro (pivô reposicionado).
+  const aim = (arm: THREE.Object3D, shoulder: THREE.Vector3, dir: THREE.Vector3) => {
+    const d = dir.clone().normalize()
+    arm.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), d)
+    arm.position.copy(shoulder).addScaledVector(d, 0.2)
+  }
+  // braço de trás estende o sachê à frente do rosto, na altura da "janela"
+  aim(armR, new THREE.Vector3(0.293, 0.7, 0), new THREE.Vector3(-0.05, 0.45, 0.6))
+  // braço do lado da câmera aponta pro céu: "olha isso!"
+  aim(armL, new THREE.Vector3(-0.293, 0.7, 0), new THREE.Vector3(-0.3, 0.9, 0.3))
 
   // capa: sólido de revolução achatado em z, pendurado atrás
   const capa = lathe(
@@ -177,9 +185,14 @@ function createScene(): CardScene {
   root.add(vilao)
 
   // ---- o sachê de KETchup (acento) -----------------------------------------
+  // fica exatamente na mão erguida do vilão (pose montada)
+  vilao.updateMatrixWorld(true)
+  const maoSache = new THREE.Vector3()
+  armR.children[0].getWorldPosition(maoSache)
   const sache = new THREE.Group()
-  sache.position.set(-1.0, SACHE_Y, 0.4)
+  sache.position.copy(maoSache).add(new THREE.Vector3(0.04, 0.12, 0))
   sache.rotation.set(0, 0.6, -0.5)
+  const SACHE_Y = sache.position.y
 
   const pouch = rbox(0.26, 0.3, 0.075, 0.035, KETCHUP, { roughness: 0.32 })
   sache.add(pouch)
@@ -207,16 +220,17 @@ function createScene(): CardScene {
   root.add(sache)
 
   // ---- o jato de ketchup, do bico até a barriga da nuvem --------------------
+  sache.updateMatrixWorld(true)
+  const jatoIni = sache.localToWorld(new THREE.Vector3(0.12, 0.24, 0))
+  const jatoFim = new THREE.Vector3(0.3, 1.62, -0.3)
   const esguicho = new THREE.Group()
-  esguicho.position.set(-0.88, 1.11, 0.36)
+  esguicho.position.copy(jatoIni)
 
-  const jatoCurve = new THREE.CatmullRomCurve3([
-    new THREE.Vector3(0, 0, 0),
-    new THREE.Vector3(0.36, 0.46, -0.2),
-    new THREE.Vector3(0.72, 0.66, -0.4),
-    new THREE.Vector3(1.02, 0.64, -0.56),
-    new THREE.Vector3(1.18, 0.51, -0.66),
-  ])
+  // arco em parábola, do bico (origem local) até o respingo na nuvem
+  const E = jatoFim.clone().sub(jatoIni)
+  const arco = (t: number) =>
+    E.clone().multiplyScalar(t).add(new THREE.Vector3(0, 4 * 0.42 * t * (1 - t), 0))
+  const jatoCurve = new THREE.CatmullRomCurve3([0, 0.25, 0.5, 0.75, 1].map(arco))
   const jato = new THREE.Mesh(
     new THREE.TubeGeometry(jatoCurve, 48, 0.05, 12, false),
     mat(KETCHUP, { roughness: 0.3, size: 1.6 }),
@@ -226,17 +240,14 @@ function createScene(): CardScene {
   esguicho.add(jato)
 
   const splat = sphere(0.17, KETCHUP, { roughness: 0.3 })
-  splat.position.set(1.18, 0.51, -0.66)
+  splat.position.copy(E)
   splat.scale.set(1.1, 0.55, 1.1)
   esguicho.add(splat)
 
-  for (const [dx, dy, dz, dr] of [
-    [0.5, 0.28, -0.28, 0.045],
-    [0.86, 0.44, -0.46, 0.036],
-    [1.24, 0.28, -0.7, 0.05],
-  ] as const) {
+  // gotas pingando logo abaixo do arco
+  for (const [t, dy, dr] of [[0.4, -0.2, 0.045], [0.7, -0.16, 0.036], [1.0, -0.24, 0.05]] as const) {
     const gota = sphere(dr, KETCHUP, { roughness: 0.3 })
-    gota.position.set(dx, dy, dz)
+    gota.position.copy(arco(t)).add(new THREE.Vector3(0.04, dy, 0))
     gota.scale.y = 1.35
     esguicho.add(gota)
   }
@@ -263,31 +274,45 @@ function createScene(): CardScene {
   nuvem.add(barriga)
 
   // olhos da nuvem (esclera achatada + pupila) — as sobrancelhas são peça à parte
+  // cada olho é pousado na superfície real da nuvem (os caroços do puff são
+  // aleatórios e engoliam um dos olhos): raio de frente até bater na pele
+  const pele = new THREE.Group()
+  pele.add(corpo.clone(), lobeL.clone(), lobeR.clone(), barriga.clone())
+  pele.updateMatrixWorld(true)
+  const raio = new THREE.Raycaster()
+  let faceZ = 0.62
+  for (const side of [-1, 1]) {
+    raio.set(new THREE.Vector3(side * 0.3, -0.14, 3), new THREE.Vector3(0, 0, -1))
+    const hit = raio.intersectObject(pele, true)[0]
+    if (hit) faceZ = Math.max(faceZ, hit.point.z)
+  }
   for (const side of [-1, 1]) {
     const eye = sphere(0.13, '#f4f4ef', { roughness: 0.25 })
-    eye.position.set(side * 0.3, -0.14, 0.5)
+    eye.position.set(side * 0.3, -0.14, faceZ - 0.01)
     eye.scale.z = 0.55
     const pupil = sphere(0.06, '#1a1a1a', { roughness: 0.2 })
-    pupil.position.set(side * 0.3, -0.14, 0.57)
+    pupil.position.set(side * 0.3, -0.14, faceZ + 0.06)
     nuvem.add(eye, pupil)
   }
 
-  // sol espiando no mesmo metro quadrado do granizo
-  const sol = sphere(0.28, SUN, { emissive: SUN, emissiveIntensity: 1.2 })
+  // sol espiando no mesmo metro quadrado do granizo (grupo próprio: é luz,
+  // não entra na pele refinada da nuvem)
+  const sol = new THREE.Group()
   sol.position.set(1.22, 0.24, -0.2)
-  nuvem.add(sol)
+  sol.add(sphere(0.28, SUN, { emissive: SUN, emissiveIntensity: 1.2 }))
   for (let i = 0; i < 7; i++) {
     const raio = cone(0.05, 0.2, SUN, { emissive: SUN, emissiveIntensity: 1.0 })
     const a = (i / 7) * Math.PI * 2
-    raio.position.set(1.22 + Math.cos(a) * 0.38, 0.24 + Math.sin(a) * 0.38, -0.2)
+    raio.position.set(Math.cos(a) * 0.38, Math.sin(a) * 0.38, 0)
     raio.rotation.z = a - Math.PI / 2
-    nuvem.add(raio)
+    sol.add(raio)
   }
+  nuvem.add(sol)
   root.add(nuvem)
 
   // sobrancelhas raivosas (peça própria, filha da nuvem)
   const sobrancelhas = new THREE.Group()
-  sobrancelhas.position.set(0, -0.02, 0.52)
+  sobrancelhas.position.set(0, -0.02, faceZ + 0.02)
   for (const side of [-1, 1]) {
     const brow = rbox(0.36, 0.1, 0.1, 0.04, '#1e2126', { roughness: 0.7 })
     brow.position.set(side * 0.31, 0.1, 0)
@@ -320,11 +345,11 @@ function createScene(): CardScene {
 
   // ---- guarda-chuva plantado na poça ---------------------------------------
   const guardaChuva = new THREE.Group()
-  guardaChuva.position.set(1.35, GY, 0.15)
+  guardaChuva.position.set(1.4, GY, 0.45)
   guardaChuva.rotation.set(-0.08, 0, UMB_TILT)
 
-  const haste = cylinder(0.032, 0.038, 1.3, STEEL, { roughness: 0.3, metalness: 0.7 })
-  haste.position.y = 0.68
+  const haste = cylinder(0.032, 0.038, 0.95, STEEL, { roughness: 0.3, metalness: 0.7 })
+  haste.position.y = 0.5
   guardaChuva.add(haste)
 
   const punho = cylinder(0.052, 0.052, 0.24, '#2c2f36', { roughness: 0.65 })
@@ -337,14 +362,14 @@ function createScene(): CardScene {
   guardaChuva.add(anel)
 
   const ponteira = cone(0.04, 0.2, STEEL, { roughness: 0.25, metalness: 0.75 })
-  ponteira.position.y = 1.42
+  ponteira.position.y = 1.07
   guardaChuva.add(ponteira)
 
   // copa: concha com o ápice no pivô e a boca virada para cima (pose final =
   // do avesso). rotation.x = PI é exatamente a cúpula normal, então o "vira do
   // avesso" é um giro de PI → 0 nesta peça.
   const copa = new THREE.Group()
-  copa.position.y = 1.3
+  copa.position.y = 0.95
   copa.rotation.set(Math.PI, 0, COPA_TILT)
 
   const concha = lathe(
@@ -424,6 +449,7 @@ function createScene(): CardScene {
     { name: 'sache', group: 'ketchup', object: sache },
     { name: 'esguicho', group: 'ketchup', object: esguicho },
     { name: 'nuvem', group: 'tempo', object: nuvem },
+    { name: 'sol', group: 'tempo', object: sol },
     { name: 'sobrancelhas', group: 'tempo', object: sobrancelhas },
     { name: 'granizo', group: 'granizo', object: granizo },
     { name: 'guardaChuva', group: 'granizo', object: guardaChuva },
@@ -512,7 +538,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.55, 3.0, 6.3], target: [0.15, 1.2, 0] },
+    cameraHint: { position: [0.45, 2.7, 5.4], target: [0.3, 1.35, -0.05] },
   }
 }
 
@@ -530,6 +556,7 @@ export const card: Card = {
       'Um VILão de capa espreme um sachê de KETchup na sua janela e manda você olhar o céu. Lá fora, a nuvem cospe granizo e sol no mesmo metro quadrado, e seu guarda-chuva vira do avesso na hora.',
   },
   createScene,
+  refine: { organic: ['nuvem'] },
 }
 
 export default card

@@ -48,12 +48,12 @@ function createScene(): CardScene {
   terreno.add(grama)
 
   const pedra = rock(0.16, '#8b8474', 11, { roughness: 0.85 })
-  pedra.position.set(1.55 + (scatter() - 0.5) * 0.2, 0.22, 1.35 + (scatter() - 0.5) * 0.2)
+  pedra.position.set(1.85 + (scatter() - 0.5) * 0.2, 0.22, 0.85 + (scatter() - 0.5) * 0.2)
   pedra.rotation.y = scatter() * Math.PI
   terreno.add(pedra)
 
   const arbusto = puff(0.24, '#3f7a33', 6, 5, { roughness: 0.9 })
-  arbusto.position.set(-0.75 + (scatter() - 0.5) * 0.2, 0.34, 1.75 + (scatter() - 0.5) * 0.2)
+  arbusto.position.set(-1.85 + (scatter() - 0.5) * 0.2, 0.34, 0.75 + (scatter() - 0.5) * 0.2)
   terreno.add(arbusto)
 
   const flores: [number, number, string][] = [
@@ -96,8 +96,11 @@ function createScene(): CardScene {
 
   // ── Sven, o viking SKAtista (olha para -x, onde você chega) ────────────
   const sven = person({ body: '#46689c', skin: '#e8c39e', height: 1.55, armAngle: 0.6 })
-  sven.position.set(1.05, DECK_TOP, 0)
-  sven.rotation.y = -Math.PI / 2
+  sven.position.set(1.0, DECK_TOP, 0)
+  // postura de skatista: o corpo de lado na prancha (de frente pra câmera),
+  // só um quarto de volta na direção de quem chega — assim os chifres e a
+  // barba ficam de frente pro espectador
+  sven.rotation.y = -0.5
 
   const cabecaSven = sven.getObjectByName('head')!
   const narizSven = sphere(0.05, '#e8c39e', { roughness: 0.6 })
@@ -124,11 +127,30 @@ function createScene(): CardScene {
   aro.rotation.x = Math.PI / 2
   aro.position.y = 0.04
   capacete.add(aro)
+  // chifres grandes e curvos, apontando pro alto: a silhueta do viking
   for (const lado of [-1, 1]) {
-    const chifre = cone(0.06, 0.26, '#f0e6d2', { roughness: 0.6 })
-    chifre.position.set(lado * 0.34, 0.15, 0)
-    chifre.rotation.z = -lado * 1.25
+    const chifre = new THREE.Group()
+    chifre.position.set(lado * 0.27, 0.13, 0)
+    chifre.rotation.z = -lado * 0.95
+    const raiz = cylinder(0.055, 0.075, 0.16, '#f0e6d2', { roughness: 0.55 })
+    raiz.position.y = 0.08
+    chifre.add(raiz)
+    const meio = cylinder(0.035, 0.055, 0.16, '#ece0c6', { roughness: 0.55 })
+    meio.position.set(-lado * 0.02, 0.22, 0)
+    meio.rotation.z = lado * 0.35
+    chifre.add(meio)
+    const ponta = cone(0.035, 0.16, '#d9c8a5', { roughness: 0.5 })
+    ponta.position.set(-lado * 0.08, 0.35, 0)
+    ponta.rotation.z = lado * 0.7
+    chifre.add(ponta)
     capacete.add(chifre)
+  }
+  // rebites no aro: capacete forjado, não tigela
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * Math.PI * 2
+    const rebite = sphere(0.022, '#5f666e', { metalness: 0.8, roughness: 0.35 })
+    rebite.position.set(Math.cos(a) * 0.3, 0.07, Math.sin(a) * 0.3)
+    capacete.add(rebite)
   }
   capacete.position.y = 0.1
   cabecaSven.add(capacete)
@@ -140,8 +162,8 @@ function createScene(): CardScene {
 
   // ── Você, o caipira (olha para +x, na direção do Sven) ─────────────────
   const caipira = person({ body: '#6f7d3f', skin: '#e8c39e', height: 1.45, armAngle: 0.5 })
-  caipira.position.set(-1.05, BASE_TOP, 0)
-  caipira.rotation.y = Math.PI / 2
+  caipira.position.set(-0.95, BASE_TOP, 0)
+  caipira.rotation.y = 0.95 // três-quartos: encara o Sven sem dar o perfil à câmera
 
   for (const lado of [-1, 1]) {
     const alca = rbox(0.07, 0.34, 0.025, 0.01, '#4f6785', { roughness: 0.85 })
@@ -179,18 +201,40 @@ function createScene(): CardScene {
   fita.rotation.x = Math.PI / 2
   fita.position.y = 0.09
   chapeu.add(fita)
-  chapeu.position.set(-1.05, 1.38, 0) // pose final: reassentado de banda
+  chapeu.position.set(-0.95, 1.38, 0) // pose final: reassentado de banda
   chapeu.rotation.z = 0.12
   root.add(chapeu)
 
   // ── A barra de PRATA ÍNTEgra — único metal polido da cena ──────────────
-  const prata = rbox(0.62, 0.16, 0.2, 0.045, '#d7dde4', { metalness: 0.95, roughness: 0.22 })
-  prata.position.set(-0.48, 0.26, 0.02)
+  // lingote: tronco de pirâmide (cilindro de 4 lados) esticado, com o
+  // selo de pureza em relevo no topo — lê como barra de PRATA, não lanterna
+  const prata = new THREE.Group()
+  const lingote = cylinder(0.2, 0.27, 0.2, '#e3e8ee', { metalness: 0.85, roughness: 0.2 }, 4)
+  lingote.geometry.rotateY(Math.PI / 4) // gira a geometria: a escala estica sem cisalhar
+  lingote.scale.set(1.55, 1, 0.62)
+  prata.add(lingote)
+  const selo = rbox(0.2, 0.025, 0.1, 0.01, '#c5ccd4', { metalness: 0.85, roughness: 0.3 })
+  selo.position.y = 0.105
+  prata.add(selo)
+  const seloAro = torus(0.035, 0.008, '#aab2bb', { metalness: 0.85, roughness: 0.3 })
+  seloAro.rotation.x = Math.PI / 2
+  seloAro.position.set(0.06, 0.12, 0)
+  prata.add(seloAro)
+  prata.position.set(-0.4, 0.28, 0.2)
   prata.rotation.z = -6.36 // um giro completo na queda, pousa quase reta
   root.add(prata)
 
-  const poeira = puff(0.13, '#c2b89b', 5, 17, { roughness: 0.95 })
-  poeira.position.set(-0.46, 0.3, 0.1)
+  // nuvem de poeira em anel ao redor da barra (não por cima dela)
+  const poeira = new THREE.Group()
+  for (const [px, pz, pr, ps] of [
+    [-0.4, 0.05, 0.1, 17], [0.42, -0.02, 0.09, 18], [-0.12, 0.2, 0.07, 19], [0.2, 0.2, 0.075, 20],
+    [0.05, -0.2, 0.08, 21],
+  ] as const) {
+    const nuvem = puff(pr, '#c9bf9f', 4, ps, { roughness: 0.95 })
+    nuvem.position.set(px, 0, pz)
+    poeira.add(nuvem)
+  }
+  poeira.position.set(-0.4, 0.26, 0.2)
   root.add(poeira)
 
   const parts = [
@@ -253,7 +297,7 @@ function createScene(): CardScene {
         ch('scale.x', 0.05, 1),
         ch('scale.y', 0.05, 1),
         ch('scale.z', 0.05, 1),
-        ch('position.x', -0.8, -0.68),
+        ch('position.x', -0.75, -0.62),
         ch('position.y', 1.07, 1.0),
         ch('rotation.z', -0.15, -0.55),
       ],
@@ -268,8 +312,8 @@ function createScene(): CardScene {
       8.1,
       0.65,
       [
-        ch('position.x', -0.68, -0.48),
-        ch('position.y', 1.0, 0.26),
+        ch('position.x', -0.62, -0.4),
+        ch('position.y', 1.0, 0.28),
         ch('rotation.z', -0.55, -6.36),
       ],
       { ease: 'easeIn' },
@@ -283,7 +327,7 @@ function createScene(): CardScene {
         ch('scale.x', 0.01, 1),
         ch('scale.y', 0.01, 1),
         ch('scale.z', 0.01, 1),
-        ch('position.y', 0.24, 0.3),
+        ch('position.y', 0.2, 0.26),
       ],
       { ease: 'easeOut' },
     ),
@@ -318,7 +362,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [1.5, 3.0, 6.0], target: [0, 0.95, 0] },
+    cameraHint: { position: [0.35, 2.45, 4.45], target: [0.05, 1.0, 0.05] },
   }
 }
 

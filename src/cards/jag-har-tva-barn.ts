@@ -31,9 +31,13 @@ const PURPLE_DARK = '#563389'
 const GOLD = '#f2b52b' // acento saturado, RESERVADO aos oito ouros da carta
 
 const GY = 0.18 // topo da base do diorama
-const TOP = 1.0 // tampo do balcão
-const PIRATE_X = -0.5
+const TOP = 0.82 // tampo do balcão (baixo: o pirata aparece da cintura para cima)
+const PIRATE_X = -0.2
 const PIRATE_Z = -0.85
+const PIRATE_Y = GY + 0.2 // pisa num estrado atrás do balcão
+const FEMUR_Y = TOP + 0.1
+const BAT1: [number, number, number] = [-0.95, 2.12, -0.65]
+const BAT2: [number, number, number] = [0.2, 2.36, -0.5]
 
 /** Traço de letra da placa: caixinha fina em pé no plano xy. */
 function stroke(w: number, h: number, x: number, y: number, rot = 0) {
@@ -205,19 +209,50 @@ function createScene(): CardScene {
   counterTop.position.set(0, TOP - 0.07, -0.15)
   balcao.add(counterTop)
 
-  const front = rbox(3.15, 0.74, 0.14, 0.03, HONEY, { roughness: 0.75 })
-  front.position.set(0, GY + 0.37, 0.16)
+  const PANEL_H = TOP - 0.12 - GY
+  const front = rbox(3.15, PANEL_H, 0.14, 0.03, HONEY, { roughness: 0.75 })
+  front.position.set(0, GY + PANEL_H / 2, 0.16)
   balcao.add(front)
+  // tábuas verticais do frontal: frestas escuras
+  for (let i = -6; i <= 6; i++) {
+    if (Math.abs(i * 0.23 - 0.1) < 0.6) continue // atrás da placa não aparece
+    const groove = rbox(0.018, PANEL_H - 0.06, 0.02, 0.006, '#7e5424', { roughness: 0.85 })
+    groove.position.set(i * 0.23, GY + PANEL_H / 2, 0.235)
+    balcao.add(groove)
+  }
+  // rodapé e friso sob o tampo
+  const kick = rbox(3.2, 0.08, 0.2, 0.025, WOOD_DARK, { roughness: 0.8 })
+  kick.position.set(0, GY + 0.04, 0.17)
+  balcao.add(kick)
+  const lip = rbox(3.2, 0.05, 0.18, 0.02, WOOD_DARK, { roughness: 0.8 })
+  lip.position.set(0, TOP - 0.16, 0.17)
+  balcao.add(lip)
+  // trilho de latão para o pé
+  const rail = cylinder(0.025, 0.025, 3.0, '#c9a250', { roughness: 0.3, metalness: 0.8 })
+  rail.rotation.z = Math.PI / 2
+  rail.position.set(0, GY + 0.16, 0.36)
+  balcao.add(rail)
+  for (const rx of [-1.35, 1.35]) {
+    const post = cylinder(0.018, 0.018, 0.16, '#c9a250', { roughness: 0.3, metalness: 0.8 })
+    post.rotation.x = Math.PI / 2
+    post.position.set(rx, GY + 0.16, 0.29)
+    balcao.add(post)
+  }
 
-  const backPanel = rbox(3.15, 0.74, 0.12, 0.03, HONEY, { roughness: 0.8 })
-  backPanel.position.set(0, GY + 0.37, -0.48)
+  const backPanel = rbox(3.15, PANEL_H, 0.12, 0.03, HONEY, { roughness: 0.8 })
+  backPanel.position.set(0, GY + PANEL_H / 2, -0.48)
   balcao.add(backPanel)
 
   for (const side of [-1, 1]) {
-    const cap = rbox(0.16, 0.76, 0.72, 0.03, WOOD_DARK, { roughness: 0.8 })
-    cap.position.set(side * 1.6, GY + 0.38, -0.16)
+    const cap = rbox(0.16, PANEL_H + 0.02, 0.72, 0.03, WOOD_DARK, { roughness: 0.8 })
+    cap.position.set(side * 1.6, GY + (PANEL_H + 0.02) / 2, -0.16)
     balcao.add(cap)
   }
+
+  // estrado atrás do balcão onde o pirata pisa
+  const step = rbox(1.0, PIRATE_Y - GY, 0.7, 0.02, WOOD_DARK, { roughness: 0.85 })
+  step.position.set(PIRATE_X, GY + (PIRATE_Y - GY) / 2, PIRATE_Z)
+  balcao.add(step)
 
   // fenda na madeira onde a carta fica cravada
   const slot = rbox(0.4, 0.03, 0.07, 0.01, '#4a3320', { roughness: 0.9 })
@@ -238,7 +273,7 @@ function createScene(): CardScene {
     '#8e959b',
     { roughness: 0.3, metalness: 0.6 },
   )
-  mug.position.set(-1.25, TOP, 0.0)
+  mug.position.set(-1.38, TOP, -0.12)
   const handle = torus(0.055, 0.015, '#8e959b', { roughness: 0.3, metalness: 0.6 })
   handle.position.set(0.1, 0.1, 0)
   handle.rotation.y = Math.PI / 2
@@ -249,7 +284,7 @@ function createScene(): CardScene {
 
   // ---- placa BAR'N pendurada na frente do balcão ---------------------------
   const placa = new THREE.Group()
-  placa.position.set(0.1, 0.6, 0.3)
+  placa.position.set(0.1, 0.47, 0.3)
 
   const plank = rbox(1.06, 0.34, 0.06, 0.03, WOOD_DARK, { roughness: 0.8 })
   placa.add(plank)
@@ -265,15 +300,16 @@ function createScene(): CardScene {
 
   for (const side of [-1, 1]) {
     const cord = cylinder(0.014, 0.014, 0.18, '#7d6640', { roughness: 0.9 })
-    cord.position.set(side * 0.42, 0.25, -0.01)
+    cord.position.set(side * 0.42, 0.24, -0.01)
     placa.add(cord)
   }
   root.add(placa)
 
   // ---- pirata (olha para a frente, +z: câmera e balcão) ---------------------
   const pirata = person({ body: RED, skin: SKIN, height: 1.55, armAngle: 0.45 })
-  pirata.position.set(PIRATE_X, GY, PIRATE_Z)
+  pirata.position.set(PIRATE_X, PIRATE_Y, PIRATE_Z)
   pirata.rotation.y = 0.16
+  pirata.scale.setScalar(1.12)
 
   // camisa listrada: três faixas cremes no tronco
   for (const sy of [0.3, 0.4, 0.5]) {
@@ -317,7 +353,7 @@ function createScene(): CardScene {
 
   // braço direito é peça própria: cai ao lado e depois aponta para a carta
   const bracoR = pirata.getObjectByName('armR') as THREE.Object3D
-  bracoR.rotation.z = 2.2 // pose final: apontando para cima/direita (a carta)
+  bracoR.rotation.z = 1.9 // pose final: apontando para a direita (a carta)
 
   root.add(pirata)
 
@@ -350,19 +386,20 @@ function createScene(): CardScene {
 
   // ---- DOIS morceguinhos ----------------------------------------------------
   const morcego1 = makeBat(5)
-  morcego1.position.set(-1.05, 2.3, -0.7)
+  morcego1.position.set(...BAT1)
   morcego1.rotation.y = 0.35
   root.add(morcego1)
 
   const morcego2 = makeBat(8)
-  morcego2.position.set(-0.02, 2.62, -0.55)
+  morcego2.position.set(...BAT2)
   morcego2.rotation.y = -0.4
   root.add(morcego2)
 
   // ---- FÊMUR com CINCO riscos ----------------------------------------------
   const femur = new THREE.Group()
-  femur.position.set(-0.62, TOP + 0.075, 0.02)
+  femur.position.set(-0.78, FEMUR_Y, 0.02)
   femur.rotation.y = 0.14
+  femur.scale.setScalar(1.35)
 
   const shaft = capsule(0.05, 0.42, BONE, { roughness: 0.6 })
   shaft.rotation.z = Math.PI / 2
@@ -427,7 +464,7 @@ function createScene(): CardScene {
     }),
     seq('balcao-rise', 'balcao', 0.2, 0.9, [riseFrom(0, 1.6)], { ease: 'easeOut' }),
 
-    seq('pirata-rise', 'pirata', 1.9, 0.8, [riseFrom(GY, 1.9)], {
+    seq('pirata-rise', 'pirata', 1.9, 0.8, [riseFrom(PIRATE_Y, 1.9)], {
       ease: 'easeOut',
       caption: 'Você pergunta quantos filhos ele tem e o pirata rosna: IÁ! RRÁR!',
     }),
@@ -462,7 +499,7 @@ function createScene(): CardScene {
       0.9,
       [
         ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1),
-        ch('position.x', PIRATE_X, -1.05), ch('position.y', 1.45, 2.3),
+        ch('position.x', PIRATE_X, BAT1[0]), ch('position.y', 1.45, BAT1[1]),
       ],
       { ease: 'easeOut' },
     ),
@@ -473,7 +510,7 @@ function createScene(): CardScene {
       0.9,
       [
         ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1),
-        ch('position.x', PIRATE_X, -0.02), ch('position.y', 1.45, 2.62),
+        ch('position.x', PIRATE_X, BAT2[0]), ch('position.y', 1.45, BAT2[1]),
       ],
       { ease: 'easeOut' },
     ),
@@ -483,11 +520,11 @@ function createScene(): CardScene {
       ch('position.y', 0.62, 0.2), ch('position.x', -0.3, 0), ch('rotation.z', -0.55, 0),
     ]),
 
-    seq('femur-rise', 'femur', 5.8, 0.8, [riseFrom(TOP + 0.075, 1.6)], {
+    seq('femur-rise', 'femur', 5.8, 0.8, [riseFrom(FEMUR_Y, 1.6)], {
       ease: 'easeOut',
       caption: 'Do balcão do BÁR\'N ele saca um FÊMUR com CINCO riscos — FÉM!',
     }),
-    seq('placa-rise', 'placa', 6.0, 0.8, [riseFrom(0.6, 1.05)], { ease: 'easeOut' }),
+    seq('placa-rise', 'placa', 6.0, 0.8, [riseFrom(0.47, 1.05)], { ease: 'easeOut' }),
     seq('placa-balanca', 'placa', 6.85, 0.5, [ch('rotation.z', 0, -0.08)]),
     seq('placa-assenta', 'placa', 7.35, 0.6, [ch('rotation.z', -0.08, 0)]),
 
@@ -504,14 +541,14 @@ function createScene(): CardScene {
     ),
 
     seq('femur-arma', 'femur', 8.7, 0.5, [
-      ch('position.y', TOP + 0.075, TOP + 0.42), ch('rotation.z', 0, 0.4),
+      ch('position.y', FEMUR_Y, FEMUR_Y + 0.35), ch('rotation.z', 0, 0.4),
     ], { ease: 'easeOut' }),
-    seq('pirata-impulso', 'pirata', 8.8, 0.4, [ch('position.y', GY, GY + 0.09)], { ease: 'easeOut' }),
+    seq('pirata-impulso', 'pirata', 8.8, 0.4, [ch('position.y', PIRATE_Y, PIRATE_Y + 0.09)], { ease: 'easeOut' }),
     seq('femur-bate', 'femur', 9.2, 0.4, [
-      ch('position.y', TOP + 0.42, TOP + 0.075), ch('rotation.z', 0.4, 0),
+      ch('position.y', FEMUR_Y + 0.35, FEMUR_Y), ch('rotation.z', 0.4, 0),
     ], { ease: 'easeIn' }),
-    seq('pirata-assenta', 'pirata', 9.25, 0.4, [ch('position.y', GY + 0.09, GY)], { ease: 'easeIn' }),
-    seq('braco-aponta', 'bracoR', 9.4, 0.6, [ch('rotation.z', -0.42, 2.2)], { ease: 'easeOut' }),
+    seq('pirata-assenta', 'pirata', 9.25, 0.4, [ch('position.y', PIRATE_Y + 0.09, PIRATE_Y)], { ease: 'easeIn' }),
+    seq('braco-aponta', 'bracoR', 9.4, 0.6, [ch('rotation.z', -0.42, 1.9)], { ease: 'easeOut' }),
 
     seq('morcego1-bate-b', 'morcego1', 10.1, 0.6, [ch('rotation.z', 0.22, 0)], {
       caption: 'Jag har två barn, fem och åtta år. — Tenho dois filhos, de cinco e oito anos.',
@@ -523,7 +560,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.35, 3.05, 6.2], target: [-0.05, 1.15, -0.15] },
+    cameraHint: { position: [0.3, 2.55, 5.05], target: [0.0, 1.1, -0.2] },
   }
 }
 
@@ -541,6 +578,7 @@ export const card: Card = {
       "No bar mais fedido do porto você pergunta ao pirata quantos filhos ele tem. Ele rosna IÁ! RRÁR!, tira o chapéu e dois morceguinhos saem em T'VÔO lá de dentro — são os filhos. Ele bate um FÊMUR com cinco riscos no balcão do BAR'N e grita Ó! apontando pra carta cravada na madeira: o OITO DE OURO. Cinco riscos no osso, oito ouros na carta: as idades da molecada.",
   },
   createScene,
+  refine: { organic: ['morcego1', 'morcego2'] },
 }
 
 export default card

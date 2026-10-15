@@ -15,6 +15,16 @@ import {
  * (#2f66b5/#1d55c0), asfalto escuro — e o DOURADO saturado (#dfa142)
  * reservado ao golden, o objeto-chave da ponte sonora.
  */
+// placa do T: no fundo à esquerda do golden, sem tapar o cachorro nem o trem
+const PLACA_X = -0.6
+const PLACA_Z = 0.05
+const POSTE_H = 1.45
+const POSTE_Y = 0.52 + POSTE_H / 2
+const PLACA_Y = 0.52 + POSTE_H + 0.35
+// golden maior que o blockout: é o protagonista; patas apoiadas no piso (0.52)
+const DOG_S = 1.35
+const DOG_Y = 0.52 - 0.045 * DOG_S
+
 function createScene(): CardScene {
   const root = new THREE.Group()
 
@@ -163,11 +173,24 @@ function createScene(): CardScene {
   corpo.add(peito)
   for (const sx of [-0.12, 0.12]) {
     for (const sz of [-0.22, 0.22]) {
+      if (sx < 0 && sz > 0) continue // a pata dianteira do lado da câmera aponta pro trem
       const pata = capsule(0.055, 0.14, OURO, { roughness: 0.8 })
       pata.position.set(sx, 0.17, sz)
       corpo.add(pata)
     }
   }
+  // pata apontando: pivô no ombro, erguida para a frente (na direção do trem)
+  const ombro = new THREE.Group()
+  ombro.position.set(-0.13, 0.33, 0.2)
+  ombro.rotation.set(-1.45, 0, 0.12)
+  const pataErguida = capsule(0.055, 0.2, OURO, { roughness: 0.8 })
+  pataErguida.position.y = -0.14
+  ombro.add(pataErguida)
+  const almofada = sphere(0.06, OURO_CLARO, { roughness: 0.85 })
+  almofada.position.y = -0.27
+  almofada.scale.set(1, 0.8, 1)
+  ombro.add(almofada)
+  corpo.add(ombro)
   const coleira = torus(0.17, 0.035, '#a8402f', { roughness: 0.6 })
   coleira.position.set(0, 0.44, 0.3)
   corpo.add(coleira)
@@ -177,8 +200,9 @@ function createScene(): CardScene {
   const chipSL = rbox(0.055, 0.045, 0.016, 0.006, AZUL_SL, { roughness: 0.3 })
   chipSL.position.set(0, 0.295, 0.345)
   corpo.add(chipSL)
-  corpo.position.set(0.55, 0.52, 0.55)
-  corpo.rotation.y = Math.PI - 0.7 // olha para o trem, de três-quartos pra câmera
+  corpo.scale.setScalar(DOG_S)
+  corpo.position.set(0.45, DOG_Y, 0.6)
+  corpo.rotation.y = Math.PI - 1.25 // de perfil pra câmera, focinho e pata apontando a cabine do trem
   root.add(corpo)
 
   // ── Golden: cabeça (telescopa do corpo), olhos esclera+pupila ─────
@@ -232,9 +256,36 @@ function createScene(): CardScene {
   corpo.add(rabo)
 
   // ── Poste da placa ────────────────────────────────────────────────
-  const poste = cylinder(0.045, 0.055, 2.1, '#7d838a', { roughness: 0.4, metalness: 0.6 })
-  poste.position.set(1.8, 1.57, 0.95)
+  const poste = cylinder(0.045, 0.055, POSTE_H, '#7d838a', { roughness: 0.4, metalness: 0.6 })
+  poste.position.set(PLACA_X, POSTE_Y, PLACA_Z)
   root.add(poste)
+
+  // ── O osso enterrado bem debaixo do T: rachadura no piso + osso aflorando ─
+  const osso = new THREE.Group()
+  const terra = rbox(0.5, 0.03, 0.3, 0.012, '#6d5440', { roughness: 0.95 })
+  terra.position.y = 0.005
+  osso.add(terra)
+  const ossoBranco = '#efe6cf'
+  const haste = capsule(0.03, 0.26, ossoBranco, { roughness: 0.6 })
+  haste.rotation.z = Math.PI / 2
+  haste.position.y = 0.035
+  osso.add(haste)
+  for (const ex of [-0.17, 0.17]) {
+    for (const ez of [-0.035, 0.035]) {
+      const no = sphere(0.045, ossoBranco, { roughness: 0.6 })
+      no.position.set(ex, 0.04, ez)
+      osso.add(no)
+    }
+  }
+  const torroes = rng(7)
+  for (let i = 0; i < 4; i++) {
+    const torrao = rock(0.035 + torroes() * 0.025, '#5a4636', 60 + i, { roughness: 0.95 })
+    torrao.position.set(-0.2 + i * 0.13, 0.03, (i % 2 ? 1 : -1) * 0.12)
+    osso.add(torrao)
+  }
+  osso.position.set(PLACA_X + 0.12, 0.52, PLACA_Z + 0.32)
+  osso.rotation.y = 0.5
+  root.add(osso)
 
   // ── Placa branca polida com o T azul da TÊ-CENTRÁLEN ──────────────
   const placa = new THREE.Group()
@@ -250,7 +301,7 @@ function createScene(): CardScene {
     tVertical.position.set(0, -0.08, face * 0.045)
     placa.add(tHorizontal, tVertical)
   }
-  placa.position.set(1.8, 2.45, 0.95)
+  placa.position.set(PLACA_X, PLACA_Y, PLACA_Z)
   placa.rotation.y = 0.65
   root.add(placa)
 
@@ -265,6 +316,7 @@ function createScene(): CardScene {
     { name: 'golden-rabo', group: 'golden', object: rabo },
     { name: 'poste', group: 'placa', object: poste },
     { name: 'placa', group: 'placa', object: placa },
+    { name: 'osso', group: 'placa', object: osso },
   ]
 
   const build = [
@@ -286,7 +338,7 @@ function createScene(): CardScene {
     }),
 
     // Golden retriever
-    seq('corpo-rise', 'golden-corpo', 4.6, 0.8, [riseFrom(0.52, 1.2)], {
+    seq('corpo-rise', 'golden-corpo', 4.6, 0.8, [riseFrom(DOG_Y, 1.2)], {
       ease: 'easeOut',
       caption: '…um GOLDEN retriever chamado RÉR, de crachá do SL no pescoço, sobe na plataforma…',
     }),
@@ -311,11 +363,16 @@ function createScene(): CardScene {
     seq('rabo-wag-3', 'golden-rabo', 7.45, 0.35, [ch('rotation.z', -0.4, 0)]),
 
     // Placa da estação
-    seq('poste-rise', 'poste', 8.2, 0.7, [riseFrom(1.57, 2.8)], {
+    seq('poste-rise', 'poste', 8.2, 0.7, [riseFrom(POSTE_Y, 2.8)], {
       ease: 'easeOut',
       caption: '…o osso está enterrado bem debaixo do grande T azul da TÊ-CENTRÁLEN…',
     }),
-    seq('placa-up', 'placa', 8.95, 0.9, [ch('position.y', -0.6, 2.45)], { ease: 'easeOut' }),
+    seq('placa-up', 'placa', 8.95, 0.9, [ch('position.y', -0.6, PLACA_Y)], { ease: 'easeOut' }),
+    seq('osso-pop', 'osso', 9.3, 0.5, [
+      ch('scale.x', 0.05, 1),
+      ch('scale.y', 0.05, 1),
+      ch('scale.z', 0.05, 1),
+    ], { ease: 'easeOut' }),
     seq('placa-spin', 'placa', 9.95, 0.7, [ch('rotation.y', 0.65 - Math.PI * 2, 0.65)], {
       caption: 'Antes das portas fecharem, ele late: GOLDEN-RÉR, TIL TÊ-CENTRÁLEN? — "Går den här till T-Centralen?"',
     }),
@@ -325,7 +382,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [4.1, 3.0, 4.7], target: [0.2, 1.0, -0.2] },
+    cameraHint: { position: [2.6, 2.5, 4.5], target: [-0.05, 1.3, -0.35] },
   }
 }
 
@@ -342,6 +399,7 @@ export const card: Card = {
       'Na plataforma da tunnelbana, um GOLDEN retriever chamado RÉR, de crachá do SL no pescoço, aponta a pata para o trem azul que acabou de chegar. Ele só embarca se ESTE trem aqui for ATÉ (\'til) a TÊ-CENTRAL, porque foi lá que ele enterrou o osso, bem debaixo da placa do grande T azul. Antes das portas fecharem, ele late a pergunta pro maquinista: "GOLDEN-RÉR? TIL TÊ-CENTRÁLEN?"',
   },
   createScene,
+  refine: { organic: ['golden-corpo', 'golden-cabeca', 'golden-orelhas', 'golden-rabo'] },
 }
 
 export default card

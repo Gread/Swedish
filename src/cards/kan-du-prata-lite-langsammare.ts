@@ -135,7 +135,7 @@ function createScene(): CardScene {
       [0.82, 0.905], [0.55, 0.928], [0, 0.932],
     ],
     CREAM,
-    { roughness: 0.92 },
+    { roughness: 0.84 }, // sem sheen: o reflexo do ambiente virava um risco vertical na borda
   )
   mesa.add(cloth)
 
@@ -145,8 +145,8 @@ function createScene(): CardScene {
   mesa.add(napkin)
 
   const knife = rbox(0.024, 0.014, 0.22, 0.006, SILVER, { roughness: 0.2, metalness: 0.85 })
-  knife.position.set(-0.26, 0.94, 0.3)
-  knife.rotation.y = 0.12
+  knife.position.set(-0.3, 0.94, 0.42)
+  knife.rotation.y = 1.25 // deitada de lado: lê faca, não palito
   mesa.add(knife)
 
   const glass = new THREE.Group()
@@ -305,21 +305,44 @@ function createScene(): CardScene {
   root.add(corpo)
 
   // ---- broche redondo "LITE" no peito ------------------------------------
+  // Na frente-lateral do casco, do lado da câmera (a frente da tartaruga
+  // aponta para a mesa), inclinado com a curva do casco.
+  const BROCHE_A = 2.6 // ângulo no plano xz local do casco
   const broche = new THREE.Group()
-  broche.position.set(0, 0.26, 0.53)
-  broche.rotation.x = -0.22
+  broche.position.set(Math.cos(BROCHE_A) * 0.47, 0.45, Math.sin(BROCHE_A) * 0.47)
+  broche.rotation.order = 'YXZ'
+  broche.rotation.y = Math.atan2(Math.cos(BROCHE_A), Math.sin(BROCHE_A))
+  broche.rotation.x = -0.55
 
-  const brocheDisc = cylinder(0.115, 0.115, 0.03, '#efe3cd', { roughness: 0.35 })
+  const brocheDisc = cylinder(0.155, 0.155, 0.03, '#efe3cd', { roughness: 0.35 })
   brocheDisc.rotation.x = Math.PI / 2
   broche.add(brocheDisc)
 
-  const brocheRim = torus(0.118, 0.024, BRASS, { roughness: 0.25, metalness: 0.85 })
+  const brocheRim = torus(0.158, 0.026, BRASS, { roughness: 0.25, metalness: 0.85 })
   broche.add(brocheRim)
 
-  for (const lx of [-0.063, -0.021, 0.021, 0.063]) {
-    const letter = rbox(0.02, 0.052, 0.012, 0.005, INK, { roughness: 0.5 })
-    letter.position.set(lx, 0, 0.021)
-    broche.add(letter)
+  // letras L-I-T-E em traços: [cx, cy, w, h]
+  const H = 0.085
+  const T = 0.02
+  const strokes: [number, number, number, number][] = [
+    // L
+    [-0.105 + T / 2, 0, T, H],
+    [-0.105 + 0.023, -H / 2 + T / 2, 0.046, T],
+    // I
+    [-0.04, 0, T, H],
+    // T
+    [0.017, H / 2 - T / 2, 0.054, T],
+    [0.017, 0, T, H],
+    // E
+    [0.06 + T / 2, 0, T, H],
+    [0.06 + 0.022, H / 2 - T / 2, 0.044, T],
+    [0.06 + 0.019, 0, 0.038, T],
+    [0.06 + 0.022, -H / 2 + T / 2, 0.044, T],
+  ]
+  for (const [cx, cy, w, h] of strokes) {
+    const stroke = rbox(w, h, 0.014, 0.005, INK, { roughness: 0.5 })
+    stroke.position.set(cx - 0.004, cy, 0.022)
+    broche.add(stroke)
   }
   corpo.add(broche)
 
@@ -401,28 +424,37 @@ function createScene(): CardScene {
   const pratinho = new THREE.Group()
   pratinho.position.set(0.27, TOP, 0)
 
-  const dish = lathe(
-    [[0, 0], [0.16, 0.014], [0.24, 0.05], [0.285, 0.09], [0.3, 0.095]],
-    GOLD,
-    { roughness: 0.24, metalness: 0.85 },
-  )
+  // prato maciço (sem interior de lathe visto pelo avesso): aba larga + rim
+  const dish = cylinder(0.3, 0.17, 0.05, GOLD, { roughness: 0.32, metalness: 0.45 })
+  dish.position.y = 0.035
   pratinho.add(dish)
 
-  const dishFoot = cylinder(0.15, 0.13, 0.02, BRASS, { roughness: 0.3, metalness: 0.8 })
-  dishFoot.position.y = -0.01
+  const dishRim = torus(0.29, 0.018, BRASS, { roughness: 0.28, metalness: 0.6 })
+  dishRim.rotation.x = Math.PI / 2
+  dishRim.position.y = 0.06
+  pratinho.add(dishRim)
+
+  const dishFoot = cylinder(0.15, 0.13, 0.02, BRASS, { roughness: 0.3, metalness: 0.6 })
+  dishFoot.position.y = 0.0
   pratinho.add(dishFoot)
   root.add(pratinho)
 
   // ---- sílaba solitária azul --------------------------------------------
   const silaba = new THREE.Group()
-  silaba.position.set(0.27, TOP + 0.035, 0)
-  silaba.rotation.y = 0.35
+  silaba.position.set(0.27, TOP + 0.085, 0)
+  silaba.rotation.y = 0.15
 
-  const tile = rbox(0.19, 0.05, 0.13, 0.022, BLUE, { roughness: 0.35 })
+  const tile = rbox(0.24, 0.05, 0.17, 0.022, BLUE, { roughness: 0.35 })
   silaba.add(tile)
-  for (const lx of [-0.045, 0.005, 0.05]) {
-    const glyph = rbox(0.018, 0.012, 0.055, 0.005, CREAM, { roughness: 0.5 })
-    glyph.position.set(lx, 0.03, 0)
+  // "LI" deitado no ladrilho, legível de cima
+  const glyphs: [number, number, number, number][] = [
+    [-0.055, 0, 0.024, 0.1], // L haste
+    [-0.032, 0.038, 0.07, 0.024], // L pé (lado da câmera)
+    [0.065, 0, 0.024, 0.1], // I
+  ]
+  for (const [gx, gz, w, d] of glyphs) {
+    const glyph = rbox(w, 0.014, d, 0.006, CREAM, { roughness: 0.5 })
+    glyph.position.set(gx, 0.03, gz)
     silaba.add(glyph)
   }
   root.add(silaba)
@@ -532,7 +564,7 @@ function createScene(): CardScene {
       'cupula',
       8.8,
       0.85,
-      [ch('position.y', TOP + 0.04, TOP + 0.51), ch('position.x', 0.27, 0.62)],
+      [ch('position.y', TOP + 0.07, TOP + 0.51), ch('position.x', 0.27, 0.62)],
       {
         caption:
           'Ergue a PRATA: sai UMA sílaba só, um pouquinho — LÍ-TE. Kan du prata lite långsammare?',
@@ -554,11 +586,12 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.9, 3.1, 5.9], target: [-0.15, 1.15, 0.1] },
+    cameraHint: { position: [0.6, 2.95, 5.0], target: [-0.1, 1.4, 0.1] },
   }
 }
 
 export const card: Card = {
+  refine: { organic: ['corpo', 'pescoco', 'cabeca'] },
   meta: {
     id: 'kan-du-prata-lite-langsammare',
     contexto:

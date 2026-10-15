@@ -33,7 +33,7 @@ const BRASS = '#c8922e'
 const GY = 0.2               // topo da base do diorama
 const PERCH_H = 0.95         // altura do poleiro acima da base
 const PERCH_TOP = GY + PERCH_H
-const FLY_Y = PERCH_TOP + 0.7 // altura da arara depois de decolar
+const FLY_Y = PERCH_TOP + 0.24 // altura da arara depois de decolar
 
 const BALLOON_Y = 1.35
 const BALLOON_UP = 1.55
@@ -111,10 +111,34 @@ function createScene(): CardScene {
   )
   poleiro.add(trunk)
 
-  const bark = torus(0.27, 0.035, WOOD_DARK, { roughness: 0.82 })
-  bark.rotation.x = Math.PI / 2
-  bark.position.y = 0.46
-  poleiro.add(bark)
+  // topo serrado: anéis do tronco (claro) sobre o corte
+  const cut = cylinder(0.29, 0.3, 0.025, '#d9b27a', { roughness: 0.8 })
+  cut.position.y = PERCH_H - 0.005
+  poleiro.add(cut)
+  for (const rr of [0.2, 0.11]) {
+    const ring = torus(rr, 0.012, WOOD, { roughness: 0.8 })
+    ring.rotation.x = Math.PI / 2
+    ring.position.y = PERCH_H + 0.01
+    poleiro.add(ring)
+  }
+
+  // raízes abrindo na base: tira a cara de carretel, vira toco
+  for (let i = 0; i < 5; i++) {
+    const a = (i / 5) * Math.PI * 2 + 0.4
+    const raiz = capsule(0.075, 0.26, WOOD_DARK, { roughness: 0.85 })
+    raiz.position.set(Math.cos(a) * 0.33, 0.06, Math.sin(a) * 0.33)
+    raiz.rotation.set(0, -a, 0)
+    raiz.rotateZ(Math.PI / 2 - 0.35)
+    poleiro.add(raiz)
+  }
+
+  // sulcos verticais da casca
+  for (let i = 0; i < 7; i++) {
+    const a = (i / 7) * Math.PI * 2 + 0.2
+    const groove = capsule(0.018, 0.42, WOOD_DARK, { roughness: 0.85 })
+    groove.position.set(Math.cos(a) * 0.225, 0.47, Math.sin(a) * 0.225)
+    poleiro.add(groove)
+  }
 
   const knot = sphere(0.08, WOOD_DARK, { roughness: 0.8 })
   knot.position.set(0.2, 0.66, 0.19)
@@ -128,44 +152,69 @@ function createScene(): CardScene {
   root.add(poleiro)
 
   // ---- corneta dourada: a orelha que OUVE (höra) ----------------------------
+  // Corneta acústica (trompa de ouvido), não taça: campânula deitada com a
+  // boca virada pra arara, e o tubo saindo da ponta estreita faz uma curva
+  // em U que apoia no tapete e termina no bocal de ouvido.
   const corneta = new THREE.Group()
-  corneta.position.set(0.98, GY, -0.05)
-  corneta.rotation.set(0.06, 0, 0.17) // boca inclinada na direção da arara
+  corneta.position.set(1.3, GY, -0.1)
+
+  const trompa = new THREE.Group()
+  trompa.position.y = 0.2 // ponta estreita: a curva do tubo encosta no tapete
+  trompa.rotation.set(0, 0.4, 0.62) // boca inclinada pra arara e um tico pra câmera
+  corneta.add(trompa)
 
   const horn = lathe(
     [
-      [0, 0], [0.34, 0], [0.33, 0.07], [0.14, 0.12], [0.115, 0.46],
-      [0.16, 0.82], [0.29, 1.12], [0.47, 1.34], [0.65, 1.48], [0.73, 1.56],
-      [0.7, 1.61], [0.62, 1.55], [0.44, 1.41], [0.26, 1.18], [0.13, 0.88],
-      [0.095, 0.5], [0.095, 0.14], [0, 0.14],
+      [0.075, 0], [0.09, 0.3], [0.13, 0.66], [0.22, 0.96], [0.38, 1.2],
+      [0.56, 1.36], [0.7, 1.46], [0.68, 1.5], [0.54, 1.41], [0.36, 1.25],
+      [0.2, 1.0], [0.11, 0.68], [0.07, 0.3], [0.055, 0],
     ],
     GOLD,
     { roughness: 0.22, metalness: 0.85 },
   )
-  corneta.add(horn)
+  trompa.add(horn)
 
-  const rim = torus(0.715, 0.045, GOLD, { roughness: 0.2, metalness: 0.9 })
+  const rim = torus(0.69, 0.04, GOLD, { roughness: 0.2, metalness: 0.9 })
   rim.rotation.x = Math.PI / 2
-  rim.position.y = 1.58
-  corneta.add(rim)
+  rim.position.y = 1.48
+  trompa.add(rim)
 
-  for (const [by, br] of [[0.34, 0.125], [0.66, 0.145]] as const) {
-    const band = torus(br, 0.032, BRASS, { roughness: 0.28, metalness: 0.75 })
+  for (const [by, br] of [[0.3, 0.1], [0.66, 0.14]] as const) {
+    const band = torus(br, 0.028, BRASS, { roughness: 0.28, metalness: 0.75 })
     band.rotation.x = Math.PI / 2
     band.position.y = by
-    corneta.add(band)
+    trompa.add(band)
   }
 
-  const footRing = torus(0.3, 0.05, BRASS, { roughness: 0.3, metalness: 0.7 })
-  footRing.rotation.x = Math.PI / 2
-  footRing.position.y = 0.05
-  corneta.add(footRing)
+  // tubo: desce reto, faz a curva em U e sobe até o bocal de ouvido
+  const TUBE_R = 0.065
+  const descida = cylinder(TUBE_R, TUBE_R, 0.12, BRASS, { roughness: 0.25, metalness: 0.8 })
+  descida.position.y = -0.06
+  trompa.add(descida)
+  const curva = torus(0.16, TUBE_R, BRASS, { roughness: 0.25, metalness: 0.8 })
+  ;(curva.geometry as THREE.BufferGeometry).dispose()
+  curva.geometry = new THREE.TorusGeometry(0.16, TUBE_R, 16, 32, Math.PI)
+  curva.rotation.z = Math.PI
+  curva.position.set(0.16, -0.12, 0)
+  trompa.add(curva)
+  const subida = cylinder(TUBE_R, TUBE_R, 0.14, BRASS, { roughness: 0.25, metalness: 0.8 })
+  subida.position.set(0.32, -0.05, 0)
+  trompa.add(subida)
+  const bocal = lathe(
+    [[0.06, 0], [0.07, 0.06], [0.11, 0.12], [0.12, 0.15], [0.08, 0.14], [0, 0.13]],
+    GOLD,
+    { roughness: 0.2, metalness: 0.85 },
+  )
+  bocal.position.set(0.32, 0.02, 0)
+  trompa.add(bocal)
+
   root.add(corneta)
 
   // ---- arara turquesa (cresce do topo do poleiro, olha pra corneta) ---------
   const arara = new THREE.Group()
   arara.position.set(-1.05, FLY_Y, 0.25)
-  arara.rotation.y = Math.atan2(0.98 - -1.05, -0.05 - 0.25) // +z local → corneta
+  // corpo de frente pra câmera (asas abertas em silhueta); a cabeça vira pra corneta
+  arara.rotation.y = 0.45
 
   for (const side of [-1, 1]) {
     const leg = cylinder(0.042, 0.05, 0.15, '#6c6058', { roughness: 0.7 })
@@ -202,6 +251,7 @@ function createScene(): CardScene {
   // cabeça
   const head = new THREE.Group()
   head.position.set(0, 1.03, 0.04)
+  head.rotation.y = 0.6
   const skull = sphere(0.2, TURQ, { roughness: 0.6 })
   skull.scale.set(0.98, 1, 0.96)
   head.add(skull)
@@ -225,12 +275,12 @@ function createScene(): CardScene {
   const bico = new THREE.Group()
   bico.position.set(0, -0.02, 0.14)
 
-  const upperBeak = cone(0.11, 0.32, ORANGE, { roughness: 0.45 })
+  const upperBeak = cone(0.13, 0.38, ORANGE, { roughness: 0.45 })
   upperBeak.position.set(0, 0.055, 0)
   upperBeak.rotation.x = Math.PI / 2 + 0.34
   bico.add(upperBeak)
 
-  const lowerBeak = cone(0.1, 0.28, ORANGE_DEEP, { roughness: 0.45 })
+  const lowerBeak = cone(0.12, 0.33, ORANGE_DEEP, { roughness: 0.45 })
   lowerBeak.position.set(0, -0.045, 0)
   lowerBeak.rotation.x = Math.PI / 2 - 0.3
   bico.add(lowerBeak)
@@ -258,26 +308,39 @@ function createScene(): CardScene {
   head.add(crista)
 
   // ---- asas abertas pra cima ------------------------------------------------
+  // Asa no plano do corpo (xy): coberteiras turquesa, faixa amarela e um
+  // leque de rêmiges azuis — de frente lê como "asas abertas", não placa.
   function makeWing(side: number) {
     const wing = new THREE.Group()
     wing.position.set(side * 0.2, 0.68, -0.02)
     wing.rotation.z = side * 0.95
 
-    const plate = rbox(0.82, 0.1, 0.42, 0.048, TURQ, { roughness: 0.62 })
-    plate.position.set(side * 0.44, 0, 0)
-    plate.rotation.z = side * 0.1
-    wing.add(plate)
+    const flat = (m: THREE.Mesh, rz: number) => {
+      m.rotation.z = rz
+      m.scale.z = 0.42
+      wing.add(m)
+    }
 
-    const bandY = rbox(0.5, 0.07, 0.32, 0.032, WING_Y, { roughness: 0.6 })
-    bandY.position.set(side * 0.66, 0.055, 0.01)
-    bandY.rotation.z = side * 0.1
-    wing.add(bandY)
+    const covert = capsule(0.15, 0.3, TURQ, { roughness: 0.62 })
+    covert.position.set(side * 0.26, -0.02, 0)
+    flat(covert, Math.PI / 2 + side * 0.08)
 
-    for (let i = 0; i < 3; i++) {
-      const quill = capsule(0.048, 0.3 - i * 0.04, WING_B, { roughness: 0.62 })
-      quill.position.set(side * (1.02 + i * 0.02), 0.03 - i * 0.02, (i - 1) * 0.14)
-      quill.rotation.z = -side * (Math.PI / 2 - 0.12)
-      wing.add(quill)
+    const band = capsule(0.11, 0.34, WING_Y, { roughness: 0.6 })
+    band.position.set(side * 0.42, -0.13, 0.015)
+    flat(band, Math.PI / 2 + side * 0.22)
+
+    for (let k = 0; k < 4; k++) {
+      const phi = -0.1 - 0.2 * k // rêmiges em leque, cada vez mais caídas
+      const len = 0.5 - k * 0.07
+      const r = 0.062
+      const reach = len / 2 + r
+      const quill = capsule(r, len, k % 2 === 0 ? WING_B : '#2560bf', { roughness: 0.62 })
+      quill.position.set(
+        side * (0.5 + Math.cos(phi) * reach),
+        -0.06 - k * 0.05 + Math.sin(phi) * reach,
+        -0.01 - k * 0.012,
+      )
+      flat(quill, side * (phi + Math.PI / 2))
     }
     return wing
   }
@@ -430,7 +493,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.25, 3.15, 6.4], target: [-0.05, 1.25, 0] },
+    cameraHint: { position: [0.1, 3.0, 6.3], target: [-0.05, 1.45, 0] },
   }
 }
 
@@ -449,6 +512,7 @@ export const card: Card = {
       'Você solta a boa notícia e a arara turquesa fecha o bico num bico de beijo e guincha VÁ, CÜL! tão forte que decola do poleiro. A notícia cai dentro da corneta dourada gigante — a orelha dela — e a arara devolve tudo repetindo AT-RRÖ-RA! AT-RRÖ-RA!, porque arara só sabe repetir o que OUVE. Os balões sobem junto e o confete se recusa a cair.',
   },
   createScene,
+  refine: { organic: ['arara'] },
 }
 
 export default card

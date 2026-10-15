@@ -16,7 +16,7 @@ import {
  */
 
 const CONCRETE = '#8e9490'
-const CONCRETE_DARK = '#6f746f'
+const CONCRETE_DARK = '#848a86' // mancha sutil: escura demais lia como buraco
 const YELLOW = '#c9a53f'
 const BLUE = '#2f5d92'
 const BLUE_LIGHT = '#3f74ad'
@@ -53,23 +53,30 @@ function link(
 }
 
 // ---- geometria de cena resolvida uma vez (a mão e a caixa precisam bater) ----
-const CONTAINER_POS = new THREE.Vector3(1.8, GY, -0.35)
-const CONTAINER_RY = -1.345 // fenda virada para o guaxinim
-const MOUTH = new THREE.Vector3(1.293, GY + 1.05, -0.233)
-const MOUTH_N = new THREE.Vector3(-0.974, 0, 0.226) // normal da fenda, para fora
-
-const SLING_POS = new THREE.Vector3(-0.55, GY, 0.18)
-const SLING_RY = 0.26 // forquilha mirando o container
+// O tiro corre na diagonal (frente-esquerda → fundo-direita): assim a forquilha
+// em Y fica de 3/4 para a câmera em vez de de perfil, e a fenda do container
+// olha para o estilingue E para quem assiste.
+const SLING_POS = new THREE.Vector3(-0.65, GY, 0.6)
+const SLING_RY = 0.62 // forquilha mirando o container
+const SHOT = new THREE.Vector3(Math.cos(SLING_RY), 0, -Math.sin(SLING_RY)) // direção do tiro
 const POUCH_LOCAL = new THREE.Vector3(-0.42, 1.18, 0)
-// bolsa em mundo: (-0.956, GY + 1.18, 0.288) — a pata do guaxinim e a caixa
-// partem daí, cada uma no seu próprio espaço local.
+const POUCH = POUCH_LOCAL.clone().applyAxisAngle(UP, SLING_RY).add(SLING_POS)
 
-const BOX_IN_POUCH = new THREE.Vector3(-0.9, GY + 1.18, 0.3)
-const BOX_APEX = new THREE.Vector3(0.3, 2.05, 0.02)
+const CONTAINER_RY = Math.atan2(-SHOT.x, -SHOT.z) // fenda (+z local) virada para o tiro
+const MOUTH_N = SHOT.clone().negate() // normal da fenda, para fora
+const MOUTH = SLING_POS.clone().addScaledVector(SHOT, 2.2).setY(GY + 1.05)
+const CONTAINER_POS = MOUTH.clone().addScaledVector(SHOT, 0.52).setY(GY)
+
+const BOX_IN_POUCH = POUCH.clone().addScaledVector(SHOT, 0.06)
+const BOX_APEX = BOX_IN_POUCH.clone().lerp(MOUTH, 0.5).setY(GY + 2.0)
 const BOX_END = MOUTH.clone()
 
-const COON_POS = new THREE.Vector3(-1.5, GY, 0.45)
-const COON_RY = 1.62 // de perfil, olhando para o container
+// guaxinim quase de perfil (cara para a direita), a pata de trás segurando a bolsa
+const COON_RY = 1.78
+const COON_PAW_LOCAL = new THREE.Vector3(0.135, 1.18, 0.551)
+const COON_POS = POUCH.clone()
+  .sub(COON_PAW_LOCAL.clone().applyAxisAngle(UP, COON_RY))
+  .setY(GY)
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -125,7 +132,7 @@ function createScene(): CardScene {
 
   // ---- placa branca com seta azul -------------------------------------------
   const placa = new THREE.Group()
-  placa.position.set(0.45, GY, -1.95)
+  placa.position.set(-0.25, GY, -1.9)
 
   const post = cylinder(0.05, 0.058, 1.35, STEEL, { roughness: 0.32, metalness: 0.7 })
   post.position.y = 0.675
@@ -273,6 +280,7 @@ function createScene(): CardScene {
   // cabeça
   const cabeca = new THREE.Group()
   cabeca.position.set(0, 1.28, 0.06)
+  cabeca.rotation.y = -0.6 // vira a cara para quem pergunta VÁR?
 
   const skull = sphere(0.24, FUR, { roughness: 0.88 })
   skull.scale.set(0.95, 0.92, 1.0)
@@ -319,7 +327,7 @@ function createScene(): CardScene {
   guaxinim.add(cabeca)
 
   // braço que puxa a bolsa do estilingue (local, calculado a partir de POUCH)
-  const pouchLocal = new THREE.Vector3(0.135, 1.18, 0.551)
+  const pouchLocal = COON_PAW_LOCAL
   const shoulderPull = new THREE.Vector3(0.29, 1.0, 0.02)
   guaxinim.add(link(shoulderPull, pouchLocal, 0.06, FUR, { roughness: 0.88 }))
   const pawPull = sphere(0.078, MASK, { roughness: 0.85 })
@@ -338,7 +346,7 @@ function createScene(): CardScene {
 
   // ---- muleta de madeira ----------------------------------------------------
   const muleta = new THREE.Group()
-  muleta.position.set(-1.5, GY, 0.86)
+  muleta.position.copy(COON_POS).add(new THREE.Vector3(0, 0, 0.41))
   muleta.rotation.set(-0.14, 0, 0.05)
 
   const shaft = cylinder(0.042, 0.048, 0.76, WOOD, { roughness: 0.72 })
@@ -525,7 +533,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.1, 6.4], target: [0.0, 1.0, -0.1] },
+    cameraHint: { position: [-0.7, 2.8, 5.45], target: [0.15, 1.0, -0.15] },
   }
 }
 
@@ -543,6 +551,7 @@ export const card: Card = {
       'Você está no återvinningsrum com a caixa na mão, sem ideia de qual container é o certo, e só consegue apontar e perguntar: VÁR?. Do meio das caixas sai SLÉNGUER, o guaxinim que MANCA de uma perna e mora ali há anos. Ele arranca o papelão da sua mão, monta num estilingue gigante e dispara: TÓNG! — a caixa bate no fundo do container azul.',
   },
   createScene,
+  refine: { organic: ['guaxinim'] },
 }
 
 export default card

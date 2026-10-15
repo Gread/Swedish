@@ -145,8 +145,8 @@
     },
     {
       "id": "ta-med-tack",
-      "ponte_sonora": "TÁ, MÉÉ! TAC!",
-      "historia": "Você pede pra viagem e quem atende é uma cabra de avental que não sabe falar, só berrar: \"TÁ! MÉÉÉ!\". Ela engole seu sanduíche inteiro, cospe ele já embrulhadinho dentro da sacola de papel e crava o casco no balcão: TAC!",
+      "ponte_sonora": "TÁ, MÊÊ! TAC!",
+      "historia": "Você pede pra viagem e quem atende é uma cabra de avental que não sabe falar, só berrar: \"TÁ! MÊÊÊ!\". Ela engole seu sanduíche inteiro, cospe ele já embrulhadinho dentro da sacola de papel e crava o casco no balcão: TAC!",
       "cena": {
         "descricao": "Balcão de lanchonete: a cabra atendente berra com a cabeça pro alto, o casco batendo no balcão ao lado da sacola de viagem com o sanduíche embrulhado.",
         "partes": [

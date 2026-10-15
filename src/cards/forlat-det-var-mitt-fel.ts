@@ -31,6 +31,7 @@ const INK = '#3a2f26'
 const FEL = '#a8e02a' // ACENTO saturado, reservado ao FEL
 
 const GY = 0.16 // topo da base do diorama
+const VIDRO_TILT = 0.95 // o vidro tomba para a frente, entornando
 
 function createScene(): CardScene {
   const root = new THREE.Group()
@@ -74,7 +75,7 @@ function createScene(): CardScene {
   base.add(rubbleB)
 
   const coneObra = new THREE.Group()
-  coneObra.position.set(-0.15, GY, 1.62)
+  coneObra.position.set(-0.55, GY, 1.05)
   const conePad = rbox(0.36, 0.05, 0.36, 0.02, ORANGE, { roughness: 0.45 })
   conePad.position.y = 0.025
   const coneBody = cone(0.16, 0.44, ORANGE, { roughness: 0.45 })
@@ -85,7 +86,7 @@ function createScene(): CardScene {
   base.add(coneObra)
 
   const cement = rbox(0.4, 0.17, 0.26, 0.07, '#cfc6b2', { roughness: 0.95 })
-  cement.position.set(-1.42, GY + 0.085, 1.45)
+  cement.position.set(-1.25, GY + 0.085, 1.3)
   cement.rotation.set(0.06, 0.55, 0.12)
   base.add(cement)
 
@@ -195,8 +196,8 @@ function createScene(): CardScene {
 
   // ---- pedreiro cabisbaixo ---------------------------------------------
   const pedreiro = person({ body: SHIRT, skin: SKIN, height: 1.5, armAngle: 0.42 })
-  pedreiro.position.set(0.95, GY, 0.15)
-  pedreiro.rotation.y = -0.75
+  pedreiro.position.set(0.55, GY, 0.2)
+  pedreiro.rotation.y = -0.32
 
   const bodyH = 1.5 * 0.52 // 0.78
   const bodyR = 1.5 * 0.17 // 0.255
@@ -215,8 +216,8 @@ function createScene(): CardScene {
   head.rotation.x = 0.28 // cabisbaixo, assumindo a culpa
 
   const armR = pedreiro.getObjectByName('armR')!
-  armR.position.set(bodyR * 1.15, bodyH * 0.72, 0.02)
-  armR.rotation.set(-1.3, 0, -0.12) // estende o vidro à frente
+  armR.position.set(bodyR * 1.2, bodyH * 0.66, 0.1)
+  armR.rotation.set(-1.15, 0, 0.42) // estende o vidro à frente e para o lado (longe do MITO)
 
   const armL = pedreiro.getObjectByName('armL')!
   armL.rotation.set(0.18, 0, 0.3)
@@ -235,8 +236,8 @@ function createScene(): CardScene {
     { roughness: 0.35 },
   )
   capacete.add(shell)
-  const crest = rbox(0.055, 0.06, 0.44, 0.02, '#c8901a', { roughness: 0.35 })
-  crest.position.y = 0.205
+  const crest = rbox(0.05, 0.05, 0.34, 0.02, '#c8901a', { roughness: 0.35 })
+  crest.position.y = 0.2
   capacete.add(crest)
   head.add(capacete)
 
@@ -283,8 +284,7 @@ function createScene(): CardScene {
 
   // ---- o vidro de FEL, rachado ------------------------------------------
   const vidro = new THREE.Group()
-  vidro.position.set(0.99, 0.5, 0.52)
-  vidro.rotation.y = 0.4
+  vidro.rotation.set(0, -0.32, -VIDRO_TILT) // tomba de lado, para fora do corpo
 
   const flask = lathe(
     [
@@ -327,24 +327,37 @@ function createScene(): CardScene {
   cork.rotation.z = -0.55
   vidro.add(cork)
 
+  // o vidro fica na mão direita: a mão segura a lateral do frasco
+  pedreiro.updateMatrixWorld(true)
+  const handW = new THREE.Vector3()
+  armR.children[0].getWorldPosition(handW)
+  const grip = new THREE.Vector3(-0.12, 0.16, 0).applyEuler(vidro.rotation)
+  vidro.position.copy(handW).sub(grip)
+  const VIDRO_Y = vidro.position.y
   root.add(vidro)
+
+  // boca do gargalo no mundo (pose tombada)
+  vidro.updateMatrixWorld(true)
+  const mouthW = new THREE.Vector3(0, 0.47, 0)
+  vidro.localToWorld(mouthW)
+  const fallH = mouthW.y - GY
 
   // ---- jato de fel (pivô no gargalo: cresce para baixo) ------------------
   const jato = new THREE.Group()
-  jato.position.set(0.99, 0.87, 0.76)
-  const stream = cylinder(0.045, 0.078, 0.71, FEL, { roughness: 0.2 })
-  stream.position.y = -0.355
+  jato.position.copy(mouthW)
+  const stream = cylinder(0.04, 0.075, fallH, FEL, { roughness: 0.2 })
+  stream.position.y = -fallH / 2
   jato.add(stream)
-  for (const [dx, dy, dz, r] of [[0.075, -0.2, 0.05, 0.035], [-0.06, -0.5, -0.04, 0.028]] as const) {
+  for (const [dx, k, dz, r] of [[0.07, 0.3, 0.05, 0.035], [-0.06, 0.65, -0.04, 0.028]] as const) {
     const bead = sphere(r, FEL, { roughness: 0.2 })
-    bead.position.set(dx, dy, dz)
+    bead.position.set(dx, -fallH * k, dz)
     jato.add(bead)
   }
   root.add(jato)
 
   // ---- poça verde-limão com respingos ------------------------------------
   const poca = new THREE.Group()
-  poca.position.set(1.0, GY + 0.005, 0.8)
+  poca.position.set(mouthW.x, GY + 0.005, mouthW.z)
 
   const pool = cylinder(0.46, 0.42, 0.035, FEL, { roughness: 0.15 })
   pool.position.y = 0.018
@@ -424,11 +437,11 @@ function createScene(): CardScene {
       { ease: 'easeOut', caption: "Na camiseta, MITO com o O arrancado: MIT'! (mitt = meu)" },
     ),
 
-    seq('vidro-rise', 'vidro', 9.0, 0.8, [riseFrom(0.5, 1.35)], {
+    seq('vidro-rise', 'vidro', 9.0, 0.8, [riseFrom(VIDRO_Y, 1.35)], {
       ease: 'easeOut',
       caption: 'Ele estende o vidro rachado de FÊL, o verde amargo de trinta anos.',
     }),
-    seq('vidro-tomba', 'vidro', 10.0, 0.7, [ch('rotation.x', 0, 0.55)]),
+    seq('vidro-tomba', 'vidro', 10.0, 0.7, [ch('rotation.z', 0, -VIDRO_TILT)]),
     seq('jato-corre', 'jato', 10.45, 0.6, [ch('scale.y', 0.01, 1)], { ease: 'easeIn' }),
     seq(
       'poca-espalha',
@@ -447,7 +460,7 @@ function createScene(): CardScene {
     root,
     parts,
     build,
-    cameraHint: { position: [0.6, 3.0, 6.0], target: [-0.05, 1.05, 0.05] },
+    cameraHint: { position: [0.3, 2.6, 5.25], target: [-0.3, 1.15, 0.15] },
   }
 }
 
