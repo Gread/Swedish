@@ -1,0 +1,159 @@
+{
+  "phrases": [
+    {
+      "id": "jag-ar-klar",
+      "sv": "Jag är klar.",
+      "pt": "Terminei. / Estou pronto.",
+      "pronuncia": "iá é KLÁÁR ('jag' = iá, o -g não soa; 'är' na fala é só É aberto e curto; 'klar' com A LONGO e o R do fim brando, de 'caro', mas audível — sem ele sobra 'kla'; com um -a no fim vira 'klara', outro verbo)",
+      "contexto": "No trabalho, ao entregar uma tarefa ('Är du klar?' — 'Ja, jag är klar'); no caixa, quando terminou de passar as compras; no vestiário, no médico, sempre que alguém está esperando você terminar.",
+      "porque": "'Klar' é palavra-curinga: quer dizer pronto, terminado e também claro. Dizer 'jag är klar' em vez de só fazer joinha mostra que você acompanha o ritmo do escritório, e a mesma palavra reaparece em 'självklart' e em 'förklara'."
+    },
+    {
+      "id": "jag-forstar-vad-du-menar",
+      "sv": "Jag förstår vad du menar.",
+      "pt": "Entendo o que você quer dizer.",
+      "pronuncia": "iá fesh-TÔR va dü MÊÊ-nar ('förstår' é o mesmo de 'Jag förstår': o 'rs' vira CH, força no TÔR, com Ô FECHADO e o R audível; 'vad' perde o d e fica VÁ; 'du' com Ü de bico; 'menar' com Ê FECHADO e LONGO e a força nele, e o -nar fraquinho com R brando — sem o R vira 'mena', o infinitivo)",
+      "contexto": "Em reunião, quando um colega explica um problema ou um ponto de vista; numa conversa difícil, para mostrar empatia antes de discordar ('Jag förstår vad du menar, men...').",
+      "porque": "É a ponte educada do consenso sueco: reconhece o argumento do outro antes de você trazer o seu. Com um 'men...' (mas) depois, vira o jeito mais suave de discordar numa reunião."
+    },
+    {
+      "id": "kan-du-forklara",
+      "sv": "Kan du förklara?",
+      "pt": "Pode explicar?",
+      "pronuncia": "kan dü fö(r)-KLÁÁ-ra? ('kan' como em 'cana', sem nasal; 'du' com Ü de bico; o 'för' é um 'fö' fraquinho e rápido, de lábios arredondados, com R leve que já encosta no K, e SEM chiado — aqui não tem 'rs', então nada do CH de 'förstår'; a força cai no KLÁ, A LONGO, R de um toque só e o -a final fraco)",
+      "contexto": "Em reunião, quando alguém solta uma sigla ou um termo técnico; no banco, na Försäkringskassan, no médico, diante de uma regra ou formulário que você não entendeu.",
+      "porque": "Pedir explicação em sueco mantém a conversa em sueco em vez de virar inglês, e os suecos costumam explicar com gosto. Funciona sozinha ou com complemento: 'Kan du förklara vad det betyder?'"
+    },
+    {
+      "id": "jag-aterkommer",
+      "sv": "Jag återkommer.",
+      "pt": "Eu te dou um retorno.",
+      "pronuncia": "iá ÔÔ-ter-kom-mer ('återkommer' é palavra composta: a força principal cai no Å, que é um Ô FECHADO e LONGO de 'avô'; o -ter é fraquinho; o 'kom' leva uma segunda força, com O ABERTO e curto e o M demorado; R brando no fim)",
+      "contexto": "Por e-mail, telefone ou em reunião, quando você não tem a resposta na hora: 'Jag återkommer (till dig) i morgon' — eu te retorno amanhã. Também ao sair de uma conversa que vai continuar depois.",
+      "porque": "É a frase-padrão do trabalho sueco para ganhar tempo sem parecer enrolação, porque promete uma resposta. Serve com chefe, cliente, escola e Försäkringskassan, e com 'till dig' ou 'i morgon' você monta as variações."
+    },
+    {
+      "id": "det-beror-pa",
+      "sv": "Det beror på.",
+      "pt": "Depende.",
+      "pronuncia": "dê be-RÚÚR PÔ ('det' = dê, sem o T; 'beror' com a força no RÚ — U FECHADO e LONGO, de 'urso' — e R de um toque só, de 'caro', nos dois lugares; sem o R final vira 'bero', o infinitivo; 'på' = PÔ fechado, e leva força porque fecha a frase)",
+      "contexto": "Quando a resposta não é simples: no trabalho ('Hinner du till fredag?' — 'Det beror på'), sobre planos de fim de semana, sobre o tempo. Dá pra completar: 'Det beror på vädret' (depende do tempo).",
+      "porque": "É a resposta mais sueca que existe: cautelosa, sem prometer demais. Sozinha já funciona, e com 'på' + qualquer coisa vira 'depende de...'."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-ar-klar",
+      "elenco": "maestro confeiteiro + tigela de claras em neve",
+      "ponte_sonora": "IÁ! É CLÁR(a)! (3 sílabas: iá-é-KLÁÁR; tônica forte no CLÁ; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; É = 'är', aberto e curto, o mesmo de 'Jag är sjuk', 'Jag är trött' e 'Jag är hungrig'; CLÁR = a CLARA em neve SEM o -A — da tigela virada não cai nada, nem o -A: A LONGO e de boca bem aberta (CLÁÁ), e o R do fim BRANDO, um toque de língua como em 'caro', nunca o RR raspado carioca — mas AUDÍVEL: sem ele sobra 'kla'; com o -A de volta vira 'klara' (dar conta), que é a CLARA INTEIRA de 'Kan du förklara?'; é o mesmo CLAR do CLÁR-T da piranha de 'Självklart!': 'klar' quer dizer pronto E claro)",
+      "historia": "No ensaio geral da Filarmônica de Estocolmo, o MAESTRO não rege a orquestra: rege uma tigela gigante de CLARAS, com um batedor de arame no lugar da batuta, em prestíssimo, a cabeleira branca voando. Quando as claras sobem em picos duros, ele faz o teste que toda avó conhece: vira a tigela de boca pra baixo em cima da própria cabeça. Não cai NADA — nem uma gota, nem o -A. Ele ergue o batedor como no acorde final e berra pros músicos: 'IÁ! É CLAR!' — terminei, está pronto.",
+      "cena": {
+        "descricao": "No pódio de um palco de concerto, um maestro de fraque segura uma tigela de inox de boca pra baixo sobre a própria cabeça, com as claras em neve grudadas lá dentro sem cair, e ergue um batedor de arame no lugar da batuta, como no acorde final.",
+        "partes": [
+          "tablado de madeira escura do palco (chão)",
+          "concha acústica ao fundo: painel curvo de madeira clara",
+          "pódio de maestro: plataforma baixa quadrada com corrimão dourado",
+          "estante de partitura preta com uma partitura branca aberta",
+          "três cascas de ovo brancas quebradas aos pés do pódio",
+          "corpo do maestro de fraque preto com cauda, camisa branca e gravata-borboleta branca",
+          "cabeça do maestro com cabeleira branca desgrenhada (tufos) e boca aberta no grito",
+          "braço esquerdo erguido segurando a tigela",
+          "tigela grande de inox de boca pra baixo sobre a cabeça (meia-esfera prateada)",
+          "claras em neve: picos brancos (cones) de ponta pra baixo saindo da boca da tigela virada, grudados, sem cair",
+          "braço direito erguido com um batedor de arame prateado (cabo + quatro laços de arame)"
+        ]
+      }
+    },
+    {
+      "id": "jag-forstar-vad-du-menar",
+      "elenco": "gambá de escritório + martelo do Thor + colega de prendedor no nariz",
+      "ponte_sonora": "IÁ... FEIXE-THOR! VÁ, DÜ... MÊU-NAR(iz)! (7 sílabas: iá-fesh-TÔR-va-dü-MÊÊ-nar; tônicas em TÔR e MÊ; IÁ = 'jag', I de IOGA; FEIXE-THOR é o MESMO âncora de 'Jag förstår' e 'Ursäkta, jag förstår inte' — e aqui o feixe do martelo ENTRA e FICA na cabeça (entendeu): FEIXE emendado no THOR sai fesh-TÔR, o X de FEIXE é o chiado do 'rs', sem o -e final; THOR com Ô FECHADO de 'avô' e R brando audível — sem ele sobra 'förstå', o infinitivo; VÁ é o MESMO 'vad' de 'VÁ, ASSADO?!' e 'VÁ, CÜL!' — um grito SEM R (com R vira 'var', onde); DÜ com BICO DE PATO, o 'du' de CAN-DU; MÊU-NAR(iz) = o 'O MEU NARIZ...' fanho do colega, que trava antes do -IZ pra não ter que puxar ar; a FORÇA fica no MEU, e o português já faz isso sozinho: MEU é palavra forte e o NA de 'nariz' é fraco — é só não reacentuar no corte, MÊÊ-nar, nunca 'me-NAR'; o U do MEU quase some — estique o Ê, FECHADO e LONGO: MÊÊ; o -NAR é o MESMO NAR(iz) do SÁC-NAR de 'Jag saknar dig' (o -nar dos verbos), fraquinho, com o R de um toque só do meio de naRiz, nunca o RR de 'rua'; sem esse R sobra 'mena', o infinitivo; e não é o MÊ seco do MEDO de 'Vad jobbar du med?': aquele termina no MÊ, este tem NARIZ)",
+      "historia": "Segunda de manhã, o GAMBÁ chega ao escritório de bicicleta, suado e de rabo em pé, e senta na baia dele. O colega do lado não diz uma palavra — é sueco —: só aparece por cima da divisória com um PRENDEDOR DE ROUPA no nariz e murmura, fanho: 'O MEU NAR...' — e trava antes do -IZ, porque pra terminar teria que respirar. O gambá não pega a indireta até que o martelo do THOR, seu peso de papel, dispara um FEIXE dourado na testa dele — e o feixe FICA lá dentro, acendendo a cabeça listrada. Ele leva a pata ao peito, aponta o colega e diz: 'IÁ... FEIXE-THOR! VÁ, DÜ... MÊU NAR(iz)!' — entendo o que você quer dizer.",
+      "cena": {
+        "descricao": "Numa baia de escritório, um gambá de camisa e gravata, com o rabo listrado erguido soltando cheiro, recebe na testa iluminada o feixe dourado de um martelo de Thor que está sobre a mesa, enquanto aponta para a cabeça de um colega que espia por cima da divisória com um prendedor de roupa no nariz.",
+        "partes": [
+          "carpete cinza-grafite de escritório (chão)",
+          "mesa de escritório branca com um monitor preto",
+          "divisória de baia verde-musgo (painel retangular) ao lado da mesa",
+          "cabeça redonda bege do colega espiando por cima da divisória, olhos apertados de nojo",
+          "nariz rosado do colega (esfera) com um prendedor de roupa de madeira clara preso nele",
+          "corpo do gambá preto sentado numa cadeira giratória cinza, de camisa branca e gravata vermelha",
+          "cabeça do gambá preta com listra branca da testa ao focinho, brilhando amarelo por dentro (emissiva)",
+          "pata do gambá estendida apontando o colega",
+          "rabo enorme e peludo erguido atrás da cadeira, preto com duas listras brancas",
+          "três fitas onduladas verde-amareladas subindo do rabo (o cheiro)",
+          "martelo do Thor em pé sobre a mesa: cabeça cinza-metal (box) e cabo marrom curto",
+          "feixe dourado (cilindro fino amarelo-luminoso) do martelo até a testa do gambá, terminando dentro dela"
+        ]
+      }
+    },
+    {
+      "id": "kan-du-forklara",
+      "elenco": "Frankenstein na reunião + furadeira + ovo gigante",
+      "ponte_sonora": "CAN-DU... FUR-CLÁRA? (5 sílabas: kan-dü-fö-KLÁÁ-ra; tônica forte no CLÁ; CAN-DU é o 'kan du' de sempre — C+A+N como em 'cana', sem o glide de 'quando', e o DU com BICO DE PATO (Ü); FUR = o FURA da FURADEIRA sem o -A, o MESMO FUR do FURA-LOTE de 'Förlåt' e do FU de 'Var försiktig': fraquinho e rápido, com R brando que já encosta no C — é o 'för' sem força, e FUR-CLÁRA é UMA palavra só, sem pausa nem acento no FUR (nunca 'FUR... clara' nem 'fura-clara' com o -A, que cria sílaba a mais); ATENÇÃO: não é o FEIXE do Thor de 'förstår' — lá tem 'rs' e sai chiado (fesh-TÔR); aqui não tem S nenhum, então nada de CH: fur-CLÁ-ra, nunca 'fesh-CLÁ-ra'; CLÁRA = a CLARA do ovo INTEIRA, com o -A: força no CLÁ, A LONGO e aberto, R de um toque só, de 'caro', e o -a final fraquinho; é a mesma CLARA de 'Jag är klar', só que lá ela perde o -A e aqui sai INTEIRA do ovo — 'förklara' termina em -a; e é literal: för-klara = esclarecer, deixar claro)",
+      "historia": "Reunião de segunda: no cavalete, em vez de slide, o chefe apresenta um OVO gigante — 'o projeto novo' — e só fala em siglas. Na ponta da mesa, o FRANKENSTEIN não entende nada, e os parafusos do pescoço começam a soltar faísca. Ele se levanta de braços esticados, puxa da caixa de ferramentas uma FURADEIRA e pergunta, com voz de trovão: 'CAN-DU... FUR-CLÁRA?' — dá pra furar até a clara? Pra mostrar o que quer, crava a broca na casca: sai um jorro de CLARA transparente e, pela primeira vez, todo mundo enxerga o que tem lá dentro. Pode explicar?",
+      "cena": {
+        "descricao": "Numa sala de reunião, o Frankenstein, de pé e de braços esticados, crava uma furadeira amarela num ovo gigante pousado num cavalete de apresentação, e um jorro de clara transparente espirra do furo sobre a mesa.",
+        "partes": [
+          "piso de madeira clara da sala de reunião (chão)",
+          "mesa de reunião comprida cinza-clara",
+          "cavalete de apresentação de madeira (tripé) com bandeja",
+          "ovo gigante branco-creme (esfera alongada) apoiado na bandeja do cavalete",
+          "corpo enorme do Frankenstein de paletó preto curto demais e calça cinza",
+          "botas pretas pesadas de sola grossa",
+          "cabeça verde-oliva achatada em cima (box arredondado), franja preta reta e cicatriz costurada na testa",
+          "dois parafusos prateados saindo do pescoço, com faíscas amarelas (estrelinhas)",
+          "braços verdes esticados pra frente segurando a furadeira",
+          "furadeira amarela com broca prateada cravada no ovo",
+          "jorro de clara transparente-azulada (cone translúcido) saindo do furo",
+          "poça de clara translúcida sobre a mesa (disco achatado)"
+        ]
+      }
+    },
+    {
+      "id": "jag-aterkommer",
+      "elenco": "centauro gerente de contas + embornal de aveia",
+      "ponte_sonora": "IÁ... ÔÔ-TER, CÓ-MER! (5 sílabas: iá-ÔÔ-ter-kóm-mer; força principal no ÔÔ e uma segunda no CÓ; é a fala de Tarzan do centauro com fome — 'eu... ôôô-ter... comer!' —, e o TER vem GRUDADO no ÔÔ, sem pausa: ÔÔ-ter é UMA palavra, 'åter'; IÁ = 'jag', I de IOGA, nunca J chiado; ÔÔ = o 'ÔÔÔ!' de segurar cavalo — a freada que faz a metade de baixo dar MEIA-VOLTA, e 'åter' quer dizer justamente 'de volta': Ô FECHADO de 'avô' e LONGO, nunca o Ó aberto de 'ó'; TER = o verbo 'ter', FRACO e colado no Ô — Ô-ter, nunca 'ô-TÊR' com força (em português o R final puxa o acento; aqui não) —, com R BRANDO de um toque só que já encosta no C, nunca o 'teh' carioca; CÓ-MER é o MESMO 'comer' de 'Jag kommer från Brasilien' e 'Jag kommer om fem minuter': força no CÓ, Ó ABERTO, M demorado e -mer fraquinho com R brando, nunca 'co-MÊR'; ATENÇÃO ao par: o sumô de 'Jag kommer om fem minuter' também grita 'IÁ, CÓ-MER!' — mas ele VEM; o centauro FREIA no ÔÔ e VOLTA: sem o ÔÔ-ter sobra 'jag kommer' (já vou), não 'eu te dou retorno')",
+      "historia": "Reunião às 11h29: o cliente pergunta o preço, e o CENTAURO, gerente de contas, não tem a resposta. O relógio vira 11h30 — hora do almoço sueco — e as quatro patas disparam sozinhas a galope rumo ao refeitório, com o embornal de aveia balançando no braço. Na porta, a metade de cima puxa o freio na metade de baixo — 'ÔÔÔ!' —, os cascos derrapam soltando faísca e ele vira o tronco pra trás, de dedo erguido, falando aos pedaços de tanta fome, feito Tarzan: 'IÁ... ÔÔ-TER, CÓ-MER!' — eu... ôôô-ter... comer! Ele come, dá meia-volta e traz a resposta: eu te dou um retorno.",
+      "cena": {
+        "descricao": "Na porta de uma sala de reunião, um centauro de camisa social freia a galope com os cascos derrapando em faíscas, o tronco humano virado pra trás, a boca aberta num Ô redondo e o dedo erguido, com um embornal de aveia no braço e um relógio de parede marcando 11h30.",
+        "partes": [
+          "piso de vinil cinza-claro de escritório (chão)",
+          "parede bege ao fundo com uma porta aberta de moldura branca",
+          "relógio de parede redondo branco com ponteiros pretos em 11h30",
+          "mesa de reunião de madeira clara com uma folha em branco",
+          "corpo de cavalo do centauro castanho, inclinado pra trás na freada",
+          "quatro patas com cascos pretos, as da frente fincadas e abertas, com faíscas amarelas (estrelinhas) no chão",
+          "rabo de cavalo preto esvoaçando",
+          "tronco humano de camisa social azul-clara e gravata listrada, torcido pra trás",
+          "cabeça com cabelo castanho e boca aberta num Ô redondo",
+          "mão esquerda erguida com o dedo indicador pra cima (um minutinho)",
+          "embornal de aveia: saco de lona bege com alça, pendurado no braço direito"
+        ]
+      }
+    },
+    {
+      "id": "det-beror-pa",
+      "elenco": "águia apresentadora + barulhômetro gigante",
+      "ponte_sonora": "DÊ... BARÚR... PÔ! (4 sílabas: dê-ba-RÚÚR-PÔ; força no RÚ e de novo no PÔ; DÊ = 'det', o 'dê' fechado de sempre, sem T — o mesmo DÊ de 'DÊ, PÔ!' em 'Kan du skicka det på mejl?'; BARÚR = o BARULHO que a águia pede, cortado no RU e com um R BRANDO no lugar do -LHO: ba-RÚR; o BA é fraquinho e apagado, quase um 'bê' engolido — é o 'be-' sem força de 'be-TÜ-der' ('betyder') e 'be-RRÖ-ver' ('behöver'), nunca um BÁ aberto com acento; a força cai no RÚ, U FECHADO e LONGO de 'urso', SEM o bico do Ü; os dois R são de um toque só, de 'caro' — o primeiro já vem certo no próprio baRUlho, nunca o RR de 'rua'; o R do fim é OBRIGATÓRIO: sem ele sobra 'bero', o infinitivo; PÔ = o 'pô!' do português, Ô FECHADO, o mesmo 'på' de 'GRÁTIS, PÔ!' — e aqui leva força, porque fecha a frase; ATENÇÃO ao trio DÊ...PÔ: em 'Kan du skicka det på mejl?' é DÊ, PÔ! colado e depois vem o MÊIL (a pata rica); em 'Kan vi dela på notan?' é DÊ-LA, PÔ! (a onça partindo a nota); aqui, ENTRE o DÊ e o PÔ, ruge o BARULHÔMETRO da águia — BARÚR é o miolo da frase: sem ele sobra só 'det på', e a resposta 'depende' some)",
+      "historia": "Festa de fim de ano da firma, e a dúvida é quem ganha a viagem pra Kiruna: vendas ou financeiro? A ÁGUIA apresentadora diz que depende: aponta o BARULHÔMETRO gigante no palco, põe a asa em concha atrás da cabeça e berra pro salão: 'DÊ... BARÚR... PÔ!' — façam barulho, pô! Os dois lados gritam exatamente igual, e no eco do salão o -LHO se perde: das paredes volta só 'ba-RÚÚR'. A agulha treme, vai pra um lado, pro outro, e trava bem no meio: quem ganha? Depende.",
+      "cena": {
+        "descricao": "No palco da festa da firma, uma águia-de-cabeça-branca de gravata-borboleta põe a asa em concha atrás da cabeça e aponta com a outra para um barulhômetro gigante cuja agulha está travada bem no meio, entre o verde e o vermelho.",
+        "partes": [
+          "tablado de palco de madeira clara (chão)",
+          "varal de bandeirinhas coloridas (triângulos) atravessando o fundo",
+          "barulhômetro gigante em pé: meio-disco branco com faixa verde à esquerda e vermelha à direita",
+          "agulha preta do barulhômetro apontando reto pra cima, no meio",
+          "base cinza do barulhômetro (box)",
+          "corpo da águia marrom-escuro, em pé no palco",
+          "cabeça branca da águia com bico amarelo curvo e olhar duro",
+          "gravata-borboleta dourada no pescoço",
+          "asa direita dobrada em concha atrás da cabeça (o gesto de 'mais alto!')",
+          "asa esquerda aberta apontando o barulhômetro",
+          "garras amarelas plantadas no tablado",
+          "dois leques de ondas sonoras, um azul e um laranja (arcos finos), chegando de lados opostos do palco"
+        ]
+      }
+    }
+  ]
+}

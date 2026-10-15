@@ -1,0 +1,158 @@
+{
+ "phrases": [
+  {
+   "id": "ett-bord-for-tva-tack",
+   "sv": "Ett bord för två, tack.",
+   "pt": "Uma mesa para dois, por favor.",
+   "pronuncia": "et BÚURD för TVÔ, tak ('bord' com U LONGO e fechado, e o 'rd' vira um D de língua enrolada pra trás, com o R quase sumindo; 'för' curto, com o ö de bico, e o R dele também derrete no T seguinte; 'två' = TVÔ numa sílaba só, ô fechado e longo; 'ett' com É aberto e T seco)",
+   "contexto": "Na porta do restaurante, quando o garçom recebe com 'Hej! Hur många är ni?' ou 'Har ni bokat?'. Troque o número: 'för en', 'för tre', 'för fyra'.",
+   "porque": "É a primeira frase de qualquer refeição fora e cabe numa respiração: em vez de erguer dois dedos e torcer pra entenderem, ele já entra falando sueco. O molde serve pra qualquer número de pessoas."
+  },
+  {
+   "id": "kan-jag-fa-menyn",
+   "sv": "Kan jag få menyn?",
+   "pt": "Pode me trazer o cardápio?",
+   "pronuncia": "kan iá fô me-NÜÜN ('jag' = iá, o -g não soa; 'få' = fô, ô fechado e longo; a força cai no NÜÜN: o 'y' é Ü, com lábios de U em bico e língua de I, e é longo; o N final é o artigo e sempre soa)",
+   "contexto": "Ao sentar no restaurante ou no bar quando ninguém trouxe o cardápio, ou depois, pra pedir de novo na hora da sobremesa. Em lugar com QR code na mesa, serve pra pedir o cardápio de papel.",
+   "porque": "Sem o cardápio na mão ele não pede nada; com ele, basta apontar. E 'menyn' ensina de graça o artigo sueco grudado no fim da palavra: 'meny' é um cardápio, 'menyn' é O cardápio, o mesmo -n de 'notan'."
+  },
+  {
+   "id": "vad-rekommenderar-du",
+   "sv": "Vad rekommenderar du?",
+   "pt": "O que você recomenda?",
+   "pronuncia": "va-re-ko-men-DÊ-rar dü ('vad' perde o d e emenda no 're' sem pausa; o 'ko' é curto e fraco, de 'cópia'; a força cai no DÊ, Ê fechado e longo, e não no fim como no português 'recomendAR'; o R inicial é um toque só, de 'caro', nunca o RR carioca; o -r final cola no 'du'; 'du' com ü de bico)",
+   "contexto": "Com o cardápio aberto, quando os nomes dos pratos não dizem nada ('dagens', 'husmanskost', 'pyttipanna'): pergunta ao garçom. Também serve com amigos e colegas: 'Vad rekommenderar du i Göteborg?'.",
+   "porque": "Transforma um cardápio ilegível numa conversa: o garçom aponta e ele só precisa dizer 'den, tack'. E 'rekommendera' é quase português, então sai de graça; só a tônica muda de lugar."
+  },
+  {
+   "id": "kan-jag-fa-lite-vatten",
+   "sv": "Kan jag få lite vatten?",
+   "pt": "Pode me trazer um pouco de água?",
+   "pronuncia": "kan iá fô LÍ-te VÁT-ten ('lite' = LÍ-te, nunca 'láite'; 'vatten' com A CURTO e o T segurado um instante, VÁT-ten, e o -en fraco e sem nasal)",
+   "contexto": "No restaurante, no café, na lanchonete, na casa de alguém. Na Suécia a água da torneira (kranvatten) é boa e quase sempre de graça; muitos lugares deixam jarra e copos num canto pra você se servir.",
+   "porque": "Água da torneira é grátis e ninguém estranha o pedido; quem não sabe a frase acaba pagando água mineral. É o mesmo molde de 'Kan jag få menyn?', e o 'lite' deixa o pedido mais leve."
+  },
+  {
+   "id": "kan-vi-dela-pa-notan",
+   "sv": "Kan vi dela på notan?",
+   "pt": "Podemos dividir a conta?",
+   "pronuncia": "kan vi DÊ-la pô NÚ-tan ('dela' com Ê FECHADO e longo, força no DÊ; 'på' = pô, ô fechado; 'notan' = NÚ-tan, porque o 'o' sueco longo soa U)",
+   "contexto": "No fim do jantar com amigos ou colegas, falando com o garçom ou entre vocês na mesa. Muitas vezes o garçom pergunta antes: 'Tillsammans eller var för sig?' (juntos ou separado?).",
+   "porque": "Na Suécia dividir a conta é o normal, até em encontro, e ninguém acha mesquinho. A frase resolve a divisão sem calculadora nem inglês e reaproveita o 'notan' que ele já conhece de 'Kan vi få notan, tack?'."
+  }
+ ],
+ "mnemonics": [
+  {
+   "id": "ett-bord-for-tva-tack",
+   "elenco": "burro maître + mesa no lombo",
+   "ponte_sonora": "ÉT! BÚR'D... FÖ T'VÔO! TAC! (5 batidas: ét-BÚURD-fö-TVÔ-tak; tônicas em BÚR e TVÔ; ÉT é o ÉTA! de espanto com o A engolido, o mesmo ÉT do ÉTER de 'Jag har ett möte': É ABERTO de 'pé' e T seco, nunca 'étchi'; BÚR'D é o que está escrito no crachá do burro: do BURRO só fica o BU, com U LONGO e FECHADO de URSO (com 'ô' vira 'bård', outra palavra); o R escrito ali NÃO é o RR de garganta de 'burro', é o R CAIPIRA de 'porta', o mesmo do BÁR'N de 'Jag har två barn' e do CÓRT de 'kort': a língua enrola pra trás sem vibrar e já cai no D, e o R quase some dentro dele, que é como o sueco funde o 'rd'; o D do crachá é OBRIGATÓRIO e fecha seco, nada de 'BÚR-dji' com vogal no fim; FÖ é o beijinho soprado de BICO, lábios de Ô com língua de Ê, o mesmo ö do MÖÖ de 'Jag har ett möte', CURTO e fraco, e o R de 'för' derrete no T seguinte; não confunda com o FÔ de 'få': o burro sopra BEIJO de bico (coração), o chef e o policial sopram de BOCHECHA estufada (nuvem); T'VÔO = o MESMO T'VÔO de 'Jag har två barn': VÔO com T colado, UMA sílaba, Ô FECHADO e longo, e é nele que cai a força; TAC = o 'tack' de sempre, A curto e K seco)",
+   "historia": "Restaurante lotado, sexta à noite: você ergue dois dedos na porta e solta um ÉTA! de susto, porque o maître é um BURRO de gravata-borboleta, com um crachá dourado no peito que diz BÚR'D e uma mesa redonda amarrada no lombo, toalha branca e vela acesa: a mesa já chega montada no burro. Ele estica o beiço num bico e manda um beijinho soprado, FÖ!, tão forte que solta as duas cadeiras penduradas na cangalha: elas saem em T'VÔO, uma pra cada lado, e cravam os pés no chão, TAC! Aí o burro trava imóvel feito móvel, a vela nem treme, e a mesa está servida: uma mesa pra dois, por favor.",
+   "cena": {
+    "descricao": "Na entrada de um restaurante, um burro maître de gravata-borboleta e crachá dourado BÚR'D carrega no lombo uma mesa redonda posta com vela acesa, solta um coraçãozinho soprado do beiço em bico, e duas cadeiras voam uma de cada lado dele.",
+    "partes": [
+     "piso de tábuas cor de mel do restaurante",
+     "tapete vermelho curto da entrada",
+     "corpo do burro cinza-pardo de pé, de lado, com barriga clara",
+     "quatro pernas finas do burro com cascos pretos",
+     "cabeça do burro com focinho claro, orelhonas compridas em pé e beiço esticado em bico",
+     "gravata-borboleta vermelha no pescoço",
+     "crachá dourado retangular no peito com a palavra BÚR'D (o D é o que importa)",
+     "cangalha de couro marrom no lombo",
+     "tampo redondo de mesa com toalha branca preso em cima da cangalha",
+     "vela acesa num castiçal dourado no centro da toalha (chama emissiva)",
+     "duas cadeiras de bistrô de madeira escura voando inclinadas, uma de cada lado",
+     "coraçãozinho vermelho soprado saindo do beiço (o FÖ)"
+    ]
+   }
+  },
+  {
+   "id": "kan-jag-fa-menyn",
+   "elenco": "chef francês + cana-baguete + cardápio de Napoleão",
+   "ponte_sonora": "CA-NIÁ, FÔ... me-NÜÜN? (5 sílabas: ca-niá-fô-me-NÜÜN; a força vai TODA pro NÜÜN; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag betala med kort?' e 'Kan jag swisha?', emendado, com I de IOGA, nunca o J chiado de 'canja'; FÔ é o sopro de bochechas redondas de 'Kan vi få notan, tack?' (e o FÔ da galinha FÔfa): Ô FECHADO de 'avô', nunca 'fó'; me-NÜÜN é o MENU dito por um francês, e o U francês é EXATAMENTE o y sueco: lábios de U em bico de pato, língua de I, e LONGO; o 'me' vem fraquinho e rápido, nunca 'MÊ-nu' com força na frente; o N final é o N dourado de Napoleão: OBRIGATÓRIO, batido na ponta da língua, sem nasalar. Ele é o artigo 'o': sem ele sobra 'meny', UM cardápio qualquer)",
+   "historia": "No bistrô ninguém trouxe o cardápio, então você ergue a mão e chama: CANA, IÁ! Quem vem é o chef francês de bigode enrolado, que anda com uma cana-de-açúcar curtinha debaixo do braço no lugar da baguete e, debaixo do outro, o cardápio da casa: um livrão de couro tão antigo que ainda tem o N dourado de Napoleão na capa. Ele enche as bochechas e sopra um século de poeira, FÔÔ!, numa nuvem que cobre a mesa inteira. Quando a poeira baixa, ele faz o bico mais francês do mundo, le me-NÜÜ..., e crava o dedo no N dourado: me-NÜÜN! Pronto: O cardápio chegou à sua mesa.",
+   "cena": {
+    "descricao": "Num bistrô de ladrilho xadrez, um chef francês de bigode enrolado, com uma cana-de-açúcar curta debaixo do braço feito baguete, ergue com a outra mão um cardápio gigante de couro com um N dourado de Napoleão na capa e sopra dele uma nuvem de poeira, de bochechas estufadas.",
+    "partes": [
+     "piso de ladrilhos xadrez preto e branco do bistrô",
+     "parede creme ao fundo",
+     "mesinha redonda de bistrô com toalha xadrez vermelha e branca",
+     "corpo do chef de dólmã branca com botões pretos",
+     "lenço tricolor azul, branco e vermelho no pescoço",
+     "cabeça do chef com bigode preto de pontas enroladas e bochechas estufadas de sopro",
+     "touca de chef branca, alta e pregueada",
+     "cana-de-açúcar verde curta, do tamanho de uma baguete, com gomos (cilindros) e tufo de folhas na ponta, presa na horizontal debaixo do braço",
+     "cardápio gigante de capa de couro vinho erguido na outra mão, de frente pro espectador",
+     "N dourado grande em relevo na capa do cardápio",
+     "nuvem de poeira cinza-clara (3 esferas) saindo da capa (o FÔ)"
+    ]
+   }
+  },
+  {
+   "id": "vad-rekommenderar-du",
+   "elenco": "unicórnia recomendêra + travessas tampadas",
+   "ponte_sonora": "VÁ-RE-CO-MEN-DÊ-RAR-DÜ? (7 sílabas num fôlego só: va-re-ko-men-DÊ-rar-dü; a força TODA no DÊ; VÁ é o MESMO 'vad' de 'VÁ, CÜL!', 'VÁ! É CLÓ-CAN' e 'Vad sa du?', um grito sem R próprio; RECOMENDÊRA é a 'recomendadeira' dita à caipira, como cadêra, bandêra, benzedêra, e o caipira acerta a tônica que o português erra: a força cai no DÊ, Ê FECHADO e longo, e não no fim como em 'recomendAR'; o RE vem COLADO no VÁ, sem pausa nem interrogação no meio (va-re...), pra o R ficar entre vogais e sair BRANDO, um toque só, de 'caro': depois de uma pausa o brasileiro faz RR carioca, que em sueco soa como H; esse R é do RE, não do VÁ (VÁR seria 'var', onde); 'men' sem nasal, a língua bate no N antes do D; o R do fim é OBRIGATÓRIO e BRANDO, à caipira, e encosta direto no DÜ: recomendêrar-DÜ, como o IÓBAR-DÜ de 'Vad jobbar du med?'; sem ele sobra 'rekommendera', o infinitivo; DÜ = o 'du' de CAN-DU, com BICO DE PATO, apontado pra ela)",
+   "historia": "O cardápio é todo em sueco e nenhum prato diz nada, então você solta um VÁ? desesperado. Da cozinha surge a RECOMENDÊRA da casa: uma unicórnia branca de lenço florido na cabeça e raminho de arruda atrás da orelha que, como as benzedêras do interior, não lê cardápio: ela SENTE. Passa o chifre por cima das três travessas tampadas, devagar, feito pêndulo, até ele esquentar, acender e travar em cima de uma só. Você aponta pra ela e emenda tudo num fôlego só, VÁ-RECOMENDÊRAR-DÜ?, e ela ergue a tampa com a ponta do chifre aceso: é este que eu recomendo.",
+   "cena": {
+    "descricao": "Diante de um balcão com três travessas tampadas, uma unicórnia branca de lenço florido e crina arco-íris ergue com a ponta do chifre aceso a tampa da travessa do meio, enquanto o dedo do freguês aponta pra ela.",
+    "partes": [
+     "piso de tábuas claras",
+     "balcão comprido de madeira escura",
+     "três travessas brancas em fila sobre o balcão, as das pontas com tampa-cúpula prateada",
+     "cúpula prateada da travessa do meio erguida no ar, presa na ponta do chifre",
+     "salmão rosa com raminho verde de endro na travessa do meio, à mostra",
+     "corpo da unicórnia branca de pé ao lado do balcão",
+     "crina e rabo em mechas arco-íris",
+     "cabeça com lenço florido amarelo amarrado de benzedeira e raminho verde de arruda atrás da orelha",
+     "chifre dourado em espiral aceso (emissivo)",
+     "três faíscas douradas sobre o salmão",
+     "braço do freguês entrando pela borda, dedo apontado pra ela (o DÜ)"
+    ]
+   }
+  },
+  {
+   "id": "kan-jag-fa-lite-vatten",
+   "elenco": "policial-tenente + mangueira de bombeiro",
+   "ponte_sonora": "CA-NIÁ, FÔ LÍTE... VÁT-TEN! (7 sílabas: ca-niá-fô-LÍ-te-VÁT-ten; tônicas em LÍ e VÁT; CA-NIÁ é a CANA + IÁ de sempre, I de IOGA, nunca 'canja', e aqui a CANA vale dobrado, porque na gíria CANA é a POLÍCIA; FÔ é o MESMO sopro de bochechas redondas de 'Kan jag få menyn?': Ô FECHADO, nunca 'fó'; LÍTE é o LITE de 'Vänta lite' e 'Förlåt, jag är lite sen': LÍ-te, nunca 'láite'; VÁT-TEN = 'VÁ, TEN(ente)!' dito como UMA palavra: A CURTO e a língua segura o T um instante, que é o 'tt', nada do VÁ comprido e solto de 'vad'; o TEN é o TENENTE cortado antes do segundo E: T duro de 'tatu', nunca 'tchen', e N batido na ponta da língua, sem o 'tẽi' nasal de 'tem'; força no VÁT, o TEN sai fraquinho)",
+   "historia": "Meio-dia de julho na varanda do restaurante, e a garganta é uma lixa: você ergue um copinho vazio e chama, CANA, IÁ!, e chega a CANA em pessoa: um policial de quepe, com um cassetete de cana-de-açúcar no cinto e uma mangueira de bombeiro no ombro. Ele chega bufando de calor, de bochechas redondas: FÔÔ! Você aponta o LITE escrito no copo (é só um pouquinho!) e late a ordem num golpe só, sem respirar entre as palavras: VÁT-TEN! (vá, tenente!). O tenente abre a mangueira com tudo... e sai UMA gota só, gorda e redondinha, que cai certinha no copo: um pouco de água, exatamente como você pediu.",
+   "cena": {
+    "descricao": "Numa varanda ensolarada, um policial de quepe e bochechas estufadas, com um cassetete de cana-de-açúcar no cinto, aponta o esguicho de uma mangueira de bombeiro para um copinho escrito LITE, e uma única gota gigante cai dentro dele.",
+    "partes": [
+     "piso de lajotas terracota da varanda",
+     "mesinha redonda verde de café com uma cadeira",
+     "sol amarelo emissivo no alto",
+     "copinho de vidro translúcido em cima da mesa com faixa branca escrita LITE",
+     "corpo do policial de farda azul-marinho e cinto preto",
+     "cabeça com bochechas estufadas e boca redonda soprando",
+     "quepe azul de aba preta com distintivo dourado",
+     "cassetete de cana-de-açúcar verde com gomos pendurado no cinto",
+     "mangueira de bombeiro vermelha enrolada no ombro (toros)",
+     "esguicho de latão dourado apontado pro copinho",
+     "gota d'água gigante azul-translúcida caindo do esguicho no copo",
+     "nuvenzinha branca do bafo de calor saindo da boca (o FÔ)"
+    ]
+   }
+  },
+  {
+   "id": "kan-vi-dela-pa-notan",
+   "elenco": "onça-pintada + nota fatiada na adega",
+   "ponte_sonora": "CA-VI DÊ-LA, PÔ! NÚ-TAN? (7 sílabas: ca-vi-DÊ-la-pô-NÚ-tan; tônicas em DÊ e NÚ; CA-VI é o MESMO 'kan vi' de 'Kan vi få notan, tack?': CAVE lido à brasileira, KÁ-vi; lá era a ordem pra toupeira cavar, aqui é a CAVE, a adega do restaurante; DÊ-LA é o 'dela' do português ('metade DELA'), mas com Ê FECHADO e LONGO, de 'você': o português abre em 'déla', o sueco fecha a boca, DÊÊ-la, com a força no DÊ; e é UMA palavra só, o verbo 'dela' (dividir): não é o DÊ solto de 'det' do 'DÊ, PÔ!' de 'Kan du skicka det på mejl?' — aqui o DÊ vem sempre grudado no LA da metade DELA; PÔ é o 'pô!' brasileiro, Ô FECHADO de boca redonda, o mesmo 'på' de 'Grattis på födelsedagen', nunca 'pó'; NÚ-TAN é a mesma NOTA NUA de 'Kan vi få notan, tack?': U FECHADO e longo, TAN com N batido, sem nasal. O par é o perigo: lá a toupeira só TRAZ a nota (FÔ = 'få'); aqui a onça PARTE a nota (DÊ-LA, PÔ = 'dela på'))",
+   "historia": "Jantar romântico na CAVE do restaurante, a adega de pedra, com um barril em pé servindo de mesa. Chega a NOTA NUA, sem envelope nem pires, e você já puxa a carteira pra pagar tudo. A onça-pintada do outro lado do barril rosna, arreganha uma garra só e, ZÁS!, fatia a nota de cima a baixo. Puxa uma metade pra ela, empurra a outra pra você e decreta, de boca fechadinha no Ê: metade DÊ-LA é sua, PÔ! Na Suécia a conta se divide, até no encontro.",
+   "cena": {
+    "descricao": "Numa adega de pedra à luz de lampião, uma onça-pintada sentada atrás de um barril-mesa acaba de fatiar a nota branca com a garra, e as duas metades deslizam uma pra cada lado do barril.",
+    "partes": [
+     "piso de pedra cinza da adega",
+     "parede em arco de tijolos alaranjados ao fundo",
+     "pilha de três barris deitados, madeira marrom com aros pretos",
+     "barril em pé servindo de mesa",
+     "lampião de ferro preto com vidro e chama emissiva sobre o barril",
+     "duas taças de vinho tinto translúcidas",
+     "corpo da onça-pintada sentada, amarelo-ouro com rosetas pretas",
+     "cabeça da onça rosnando, presas brancas à mostra",
+     "pata dianteira erguida com três garras brancas de fora",
+     "nota branca cortada em duas metades, uma deslizando pra cada lado do barril",
+     "risco dourado brilhante do corte entre as duas metades"
+    ]
+   }
+  }
+ ]
+}

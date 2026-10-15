@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "jag-behover-traffa-en-lakare",
+      "sv": "Jag behöver träffa en läkare.",
+      "pt": "Preciso ver um médico.",
+      "pronuncia": "iá be-RRÖÖ-ver TRÉF-fa en LÉÉ-ka-re ('jag' = iá, o -g não soa; o h de 'behöver' é soprado como RR carioca e o ö é lábios de Ô com língua de Ê, longo; na fala corrida o -r de 'behöver' gruda no T de 'träffa'; 'träffa' com É aberto e F dobrado; 'en' curto e sem nasal; 'läkare' com É aberto e longo, força no LÉ e o '-kare' leve, de K duro)",
+      "contexto": "Ao telefone com a vårdcentral ou o 1177, quando a enfermeira da triagem tenta resolver tudo com conselho por telefone; também na recepção do pronto-atendimento.",
+      "porque": "Na Suécia o primeiro contato quase sempre é com a enfermeira, e muita coisa se resolve sem médico — esta é a frase que pede, com todas as letras, para ser examinado. E 'behöver' serve para tudo: 'jag behöver hjälp', 'jag behöver vila'."
+    },
+    {
+      "id": "jag-har-feber",
+      "sv": "Jag har feber.",
+      "pt": "Estou com febre.",
+      "pronuncia": "iá rar FÊÊ-ber ('har' com h soprado e R brando no fim; 'feber' com Ê FECHADO e longo — nada do É aberto de 'febre' — e o R no FIM da palavra; o '-ber' é curtinho)",
+      "contexto": "Ligando para o trabalho de manhã, falando com o 1177 ou no apotek. Com criança: 'Hon har feber' — e a förskola costuma pedir um dia inteiro sem febre antes de ela voltar.",
+      "porque": "Febre é o critério que decide se você ou seu filho fica em casa, então é a palavra que mais aparece nessas ligações. É quase 'febre', só com o R trocado de lugar — vocabulário de graça."
+    },
+    {
+      "id": "jag-mar-illa",
+      "sv": "Jag mår illa.",
+      "pt": "Estou enjoado.",
+      "pronuncia": "iá môr ÍL-la ('mår' com Ô fechado e longo e um R brando que emenda no i: mô-RÍL-la; 'illa' com I curto e L dobrado de ponta de língua, força no ÍL)",
+      "contexto": "No barco para o arquipélago ou para a Finlândia, no banco de trás do carro, depois de comer algo estragado, na gravidez. Na farmácia: 'Jag mår illa, har ni något mot det?'",
+      "porque": "'Må illa' é especificamente ENJOO, vontade de vomitar — não é o 'estou mal' genérico, que é 'jag mår dåligt'. E usa o mesmo 'mår' de 'Hur mår du?' e 'Jag mår bra'."
+    },
+    {
+      "id": "jag-ar-forkyld",
+      "sv": "Jag är förkyld.",
+      "pt": "Estou resfriado.",
+      "pronuncia": "iá é för-CHÜLD ('är' na fala é só 'é'; 'för' fraquinho; o 'ky' é o chiado do tj — um CH macio, língua alta e lábios em bico de Ü curto, nunca K duro; força toda no CHÜLD e um D leve no fim)",
+      "contexto": "Avisando o chefe ou os colegas, desmarcando um fika, explicando a fungação na reunião. Muito comum com 'lite': 'Jag är lite förkyld'.",
+      "porque": "É a doença oficial do inverno sueco. E não é 'sjuk': förkyld é o resfriado (nariz, garganta, espirro); 'sjuk' é estar doente de verdade, de cama ou de atestado."
+    },
+    {
+      "id": "ring-112",
+      "sv": "Ring 112!",
+      "pt": "Liga pro 112!",
+      "pronuncia": "RING ÉT ÉT TVÔÔ ('ring' com R de ponta de língua — nunca o RR de garganta — e NG no nariz, sem estalar o G; o número vai dígito por dígito, 'ett ett två'; 'ett' = ÉT, É aberto e T seco; 'två' = TVÔ, Ô fechado e longo)",
+      "contexto": "Emergência de verdade: acidente, incêndio, alguém desacordado, crime acontecendo — gritado para quem estiver perto enquanto você ajuda. Para saúde sem risco de vida o número é 1177; para polícia sem urgência, 114 14.",
+      "porque": "Na hora do susto ninguém acha palavra nova, então vale treinar antes. E o sueco fala o número dígito por dígito — 'ett ett två' —, como a própria central SOS Alarm diz."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-behover-traffa-en-lakare",
+      "elenco": "ciclope na guerra de geleca",
+      "ponte_sonora": "IÁ! BERRÔ: VER! TRÉFA... EN... (ge)LÉ-CA-re! (10 sílabas: iá-be-RRÖÖ-ver-TRÉF-fa-en-LÉÉ-ka-re; tônicas em RRÖÖ, TRÉF e LÉÉ, a mais forte no LÉÉ; IÁ é o 'jag' de sempre, I de IOGA, nunca o J chiado de 'já'; BERRÔ: VER! = BERROU 'VER!' num fôlego só, e é o MESMO be-RRÖ-ver de 'Det är akut, jag behöver komma in idag': o BE é fraquinho, o RR carioca soprado é o h, e a força cai no RRÔ — sem o U do 'ou' e de BICO: lábios de Ô com língua de Ê, longo, o truque do TRÖTT e do MÖÖ-te; o VER vem grudado e sem força, mas com o R brando no fim — sem ele sobra 'behöva', o infinitivo; TRÉFA = a TREVA COCHICHADA: no cochicho o V perde a voz e vira F (sussurre 'treva' e ouça) — É ABERTO, como em 'treva', e o F sem voz e segurado (TRÉF-fa); é o mesmo TRÉ-fa de 'Trevligt att träffas!' (lá, TRÉ-fas, com S); dito com V em voz alta sai 'träva', que não existe e puxa pro TRÊV de 'trevligt', outra palavra — lá é V e Ê fechado, aqui é F e É aberto; EN = 'um', o mesmo dedinho erguido de 'Har du tid en stund?' e 'Ha en bra dag!' — aqui o dedo do ciclope —, curto, oral, N na língua; nunca ÉT, que é o 'ett' de contar; (ge)LÉ-CA-re = a GELECA sem o GE, com um -re no fim: força no LÉ, É ABERTO e LONGO (o mesmo É escancarado do LÉÉR de 'Jag lär mig svenska'), CA curto de K duro, e o -re fraquinho, R brando, como o -re de SÊNA-re ('senare') — mas obrigatório: sem ele sobra 'läka', o verbo curar; nunca 'le-CA-re')",
+      "historia": "Guerra de GELECA no pátio: o ciclope solta o grito de guerra — IÁ! — e se vira bem na hora em que uma bola verde ACERTA em cheio o único olho dele (e 'träffa', em sueco, também é acertar o alvo). Ele BERROU: VER! — mas na frente dele só tem TREVA, e o gigante, morrendo de medo do escuro, perde a voz: só consegue COCHICHAR 'tréfa...', e no cochicho o V sai sem voz, F. Ergue UM dedo pro alto: é UM olho só, e esse UM está grudado de geLECA. Puxa, sacode, esfrega e nada; agora só um médico resolve — o único que descola geLECA de olho de ciclope, o LÉ-ca-re.",
+      "cena": {
+        "descricao": "No pátio, um ciclope enorme de túnica de couro berra de boca escancarada, com o único olho tampado por uma bola de geleca verde-limão e UM dedo erguido para o alto, enquanto fiapos de fumaça preta de treva escapam por baixo da geleca.",
+        "partes": [
+          "chão de grama verde-clara (disco largo)",
+          "pote de geleca rosa tombado no chão, de tampa amarela, com uma poça verde-limão escorrendo",
+          "duas bolas de geleca verde-limão voando no ar ao fundo (esferas brilhantes)",
+          "corpo do ciclope gigante de pele bege-rosada, pernas grossas, em pé",
+          "túnica de couro marrom presa num ombro só, com cinto de corda",
+          "cabeça grande e careca com UM olho enorme no meio da testa",
+          "bola de geleca verde-limão brilhante tampando o olho, com três gotas escorrendo pela bochecha",
+          "boca escancarada no berro, com dentes brancos tortos",
+          "braço erguido com UM dedo indicador apontado para o alto",
+          "outro braço esticado à frente, tateando o ar",
+          "três fiapos de fumaça preta de treva (cones finos cinza-chumbo) escapando por baixo da geleca"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-feber",
+      "elenco": "naja de sangue frio com febre + termômetro",
+      "ponte_sonora": "IÁ, RRÁR... FÊ-BER! (4 sílabas: iá-rrár-FÊÊ-ber; força no FÊÊ; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; RRÁR = o BAFO QUENTE de febre que a naja solta no lugar do chiado de cobra, o MESMO RRÁR de 'Jag har ont i magen', 'Jag har ett möte' e 'Jag har missat bussen': h soprado de RR carioca, A longo e R BRANDO no fim, AUDÍVEL — sem esse R sobra 'ha', outro verbo (por isso nada de 'há' do português, que é mudo e sem R); FÊ-BER = a FEBRE com o R escorregado pro FIM, F-E-B-E-R, nunca 'fé-bri': com o termômetro atravessado na boca a língua não faz o 'bre' e o R desliza pra depois do E; o FÊ é FECHADO, o de 'você', e LONGO — o termômetro também não deixa a boca escancarar o É aberto de 'febre' — e leva a força; o -ber sai curtinho e fraco, com o R brando bem no fim)",
+      "historia": "A naja é bicho de SANGUE FRIO: nunca na vida sentiu calor. Hoje, dentro do cesto, ela está FERVENDO — bolsa de gelo na cabeça, bochechas vermelhas e um termômetro atravessado entre as presas; a flauta do encantador ficou largada no tapete, porque hoje não tem dança. Ela solta um IÁ! de susto com o próprio calor e, em vez do chiado de cobra, sai pela boca um bafo quente de dragão: RRÁR! Tenta dizer FEBRE, mas o termômetro trava a língua, a boca não abre o É e o R escorrega pro fim: FÊ-BER! O bulbo do termômetro estoura no vermelho — se até a cobra de sangue frio está com febre, a coisa é séria.",
+      "cena": {
+        "descricao": "Saindo de um cesto de vime, uma naja amarelo-mostarda de capelo aberto e bochechas vermelhas morde um termômetro de bulbo vermelho estourando e solta uma baforada quente pelo canto da boca, com uma bolsa de gelo azul equilibrada na cabeça e a flauta de encantador largada no tapete.",
+        "partes": [
+          "tapete redondo vermelho com borda dourada (chão)",
+          "cesto de vime bege-mel redondo e baixo, com a tampa caída de lado",
+          "flauta de encantador marrom de ponta bojuda, largada no tapete",
+          "corpo da naja amarelo-mostarda com losangos marrons, erguido em S para fora do cesto",
+          "capelo aberto atrás da cabeça, com o desenho de óculos marrom",
+          "cabeça da naja com bochechas vermelhas de febre e olhos semicerrados",
+          "duas presas brancas mordendo o termômetro",
+          "termômetro de vidro comprido atravessado na boca, com o bulbo vermelho brilhante estourando na ponta",
+          "bolsa de gelo azul-clara xadrez equilibrada no topo da cabeça",
+          "baforada de bafo quente (nuvenzinha laranja-clara) saindo do canto da boca",
+          "três ondinhas de calor laranja subindo do corpo"
+        ]
+      }
+    },
+    {
+      "id": "jag-mar-illa",
+      "elenco": "borboleta apaixonada pelo farol da ilha",
+      "ponte_sonora": "IÁ, MÔR... ÍL-LA! (4 sílabas: iá-mô-RÍL-la; tônica forte no ÍL; IÁ, MÔR é o MESMO começo do astronauta de 'Jag mår bra, tack. Och du?' — 'já, amor', respondendo pro amor: IÁ com I de IOGA, nunca J chiado; MÔR = o 'mor' de AMOR, Ô FECHADO e longo — se fechar em U vira 'mor', mãe —, e o R NÃO some (sem ele sobra 'må'): é R BRANDO, de 'caro', que emenda direto no I seguinte, mô-RÍL-la, do jeitinho que o sueco fala; ÍL-LA = a ILHA trocando o LH por um L de verdade: ponta da língua no céu da boca, L comprido (é L dobrado), I CURTO e com a força, e um -la fraquinho no fim — nunca 'Í-lia'; o astronauta respondia BRÁ (bem), a borboleta responde ÍL-LA: enjoada)",
+      "historia": "A borboleta se apaixonou pela luz do farol da ILHA: é o grande AMOR da vida dela. Passou a noite inteira dando voltas em volta da lâmpada — mil, duas mil voltas, sem parar um segundo. De manhã o farol apaga e ela despenca na grade da varanda, verde, com espirais no lugar dos olhos. A lâmpada dá uma última piscada, como quem pergunta 'tudo bem, amor?', e ela, vendo a ILHA inteira girar lá embaixo, só consegue gemer: IÁ, MÔR... ÍL-LA... — e põe pra fora, no mar, tudo o que comeu. Estou enjoada.",
+      "cena": {
+        "descricao": "Numa ilhota de pedras no mar, no alto de um farol listrado de vermelho e branco, uma borboleta azul de rosto verde e olhos em espiral desaba sobre a grade da varanda, com a lâmpada do farol brilhando atrás dela.",
+        "partes": [
+          "mar azul-escuro com ondinhas e espuma branca",
+          "ilhota de pedras cinza-escuras arredondadas no meio do mar",
+          "torre do farol listrada de vermelho e branco, afinando para cima",
+          "varanda redonda no topo da torre, com grade preta",
+          "cúpula de vidro com a lâmpada amarela brilhante e dois fachos de luz em cone",
+          "telhadinho cônico vermelho no topo do farol",
+          "corpo da borboleta caído de bruços sobre a grade",
+          "quatro asas azul-turquesa de borda preta e pintas brancas, caídas e tortas",
+          "rosto verde-enjoado de bochechas estufadas e olhos em espiral",
+          "duas antenas pretas enroladas feito molas",
+          "rastro circular de purpurina dourada em volta da lâmpada (as voltas da noite)"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-forkyld",
+      "elenco": "minhoca que furou até o Chile",
+      "ponte_sonora": "IÁ É FUR-CHÜLD! (4 sílabas: iá-é-fur-CHÜLD; força toda no CHÜLD; IÁ É = 'jag är', o de sempre — o MESMO de 'Jag är sjuk', 'Jag är trött' e 'Jag är hungrig': I de IOGA, nunca J chiado, e É aberto e curto; FUR = o FURA sem o -A, o MESMO FUR do FURA-LOTE de 'Förlåt' e da FURADEIRA de 'Kan du förklara?': fraquinho e rápido — é o 'för' sem força; CHÜLD = o CHILE dito de BICO: o CH macio do português (o K sueco antes de Y vira esse chiado — nunca K duro, 'kild' está errado), a língua parada no I e os lábios espichados num bico de U, que dá o Ü, CURTO; corta o -E do Chile e fecha num D leve de ponta de língua: CHÜLD, uma sílaba só, nunca 'chí-le' nem 'chül-de'; nada a ver com o RRÜÜK soprado de 'Jag är sjuk' — lá é o sopro de assoar, aqui é o chiado do CH: doente é 'sjuk', resfriado é 'förkyld')",
+      "historia": "A minhoca ouviu que quem cava bem fundo sai no Japão e começou a FURAR: FURA, FURA, FURA, por baixo do Brasil inteiro... e errou a curva. Brota no topo dos Andes rasgando de baixo pra cima a bandeira que os alpinistas deixaram estendida no pico: FUROU o CHILE. Lá em cima o vento corta, e em dois segundos ela está de nariz vermelho, pingando, espirrando — ATCHIM! E como boca de minhoca é uma rodinha em bico, até o nome do país sai de bico quando ela resume a viagem: IÁ É FUR-CHÜLD! — furou o Chile e pegou um resfriado.",
+      "cena": {
+        "descricao": "No topo pedregoso dos Andes, uma minhoca rosa sai em arco de um rasgo no meio de uma bandeira do Chile estendida no chão e tomba a cabeça de lado, de nariz vermelho pingando, no meio de um espirro, com picos cinzentos ao fundo.",
+        "partes": [
+          "chão de rocha cinza do pico (disco largo e irregular)",
+          "três picos de montanha cinza-azulados ao fundo, de pontas brancas",
+          "bandeira do Chile estendida no chão: metade de cima branca, metade de baixo vermelha e quadrado azul com estrela branca",
+          "rasgo redondo no meio da bandeira, com torrões de terra marrom em volta",
+          "mastro curto tombado ao lado da bandeira",
+          "corpo da minhoca rosa-salmão, comprido e anelado, saindo do rasgo em arco",
+          "cabeça redonda da minhoca tombada de lado, com olhinhos lacrimejando e boquinha redonda em bico",
+          "nariz vermelho grande e redondo (esfera brilhante) com uma gota pendurada",
+          "nuvenzinha branca de espirro saindo da frente da cabeça"
+        ]
+      }
+    },
+    {
+      "id": "ring-112",
+      "elenco": "ganso de guarda + sino de alarme + cilindros de éter",
+      "ponte_sonora": "R-R-RING! ÉT! ÉT! T'VÔO! (4 batidas: ring-ét-ét-TVÔÔ; cada uma leva força, porque o número sai dígito por dígito, e a maior cai no TVÔÔ; RING = o MESMO RINGUE de 'Jag ringer dig senare', cortado no NG — aqui sozinho, sem o -er, porque é ORDEM: liga!; o R é o tremido do sino, R de PONTA DE LÍNGUA vibrando, o 'rrrr' de motorzinho de criança — por isso vem escrito R-R-R, separado: NÃO é o RR soprado de RRÁR e RRÜR das outras cartas, nem o RR de garganta de 'rato', que sopra um h e vira 'hing'; o NG fica no nariz, sem estalar o G e sem o 'gue'; ÉT = o ÉTER sem o -ER, o MESMO ÉT de 'Jag har ett möte' e do ÉTA! de 'Ett bord för två': É ABERTO de 'pé', curto, T seco, nunca 'étchi' — e vem DUAS vezes, porque o sueco fala o 112 dígito por dígito, 'ett ett två', nunca 'hundratolv'; contando é sempre ÉT, nunca o EN do dedinho; T'VÔO = o VÔO com T colado, o mesmo dos morceguinhos de 'Jag har två barn' e das cadeiras voadoras de 'Ett bord för två': UMA sílaba só, Ô FECHADO e longo)",
+      "historia": "Madrugada na fazenda: o ganso de guarda (ganso é alarme desde a Roma antiga) vê fumaça no galpão — os dois cilindros de ÉTER pegaram fogo, e as chamas já comeram o -ER das etiquetas: sobrou só ÉT e ÉT. Ele crava o bico na corda do sino e puxa com tudo: R-R-RING! — o sino treme, e o R treme junto, na ponta da língua. Aí abre as asas, curva o pescoço feito um 2 e decola rumo à cidade: T'VÔO! Vista de cima, a cena já é o número — cilindro, cilindro, pescoço de ganso: 1, 1, 2 — e o recado vem na ordem: RING! ÉT! ÉT! TVÔ! Liga pro 112!",
+      "cena": {
+        "descricao": "À noite, no pátio de uma fazenda, dois cilindros altos de éter pegam fogo lado a lado como dois 1 e, à direita deles, um ganso branco de pescoço curvado em forma de 2 decola de asas abertas puxando com o bico a corda de um sino de bronze que balança num poste.",
+        "partes": [
+          "chão de terra batida marrom (disco largo)",
+          "parede de galpão de madeira vermelha ao fundo",
+          "dois cilindros altos e finos cinza-metálicos em pé lado a lado, como dois 1",
+          "etiqueta branca chamuscada em cada cilindro com as letras ÉT em preto",
+          "chamas laranja e amarelas (cones) no topo de cada cilindro",
+          "poste de madeira escura com braço horizontal",
+          "sino de bronze dourado pendurado, inclinado no balanço",
+          "três arcos amarelos de som saindo do sino",
+          "corda bege descendo do sino até o bico do ganso",
+          "corpo do ganso branco de patas laranja já fora do chão",
+          "pescoço do ganso curvado em forma de 2, com o bico laranja mordendo a corda",
+          "asas brancas bem abertas na decolagem"
+        ]
+      }
+    }
+  ]
+}

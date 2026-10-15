@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "var-ar-kassan",
+      "sv": "Var är kassan?",
+      "pt": "Onde fica o caixa?",
+      "pronuncia": "var é KÁS-san? ('var' com A longo e R brando de 'caro', que já emenda no 'är': va-RÉ; 'är' = É aberto e curto; 'kassan' com a força no KÁS, A curto e aberto, SS de cobra — nunca Z —, e o -an final fraquinho, com N de língua, sem nasalizar)",
+      "contexto": "Em loja grande — IKEA, Clas Ohlson, loja de departamento, farmácia — quando você já pegou o que queria e não acha onde pagar. 'Kassan' é O caixa; 'kassa', sem o -n, é um caixa qualquer.",
+      "porque": "Pergunta curtíssima de todo dia, que resolve a situação sem trocar pro inglês. O molde 'Var är ___?' serve pra qualquer coisa: toaletten, hissen (o elevador), utgången (a saída)."
+    },
+    {
+      "id": "det-ar-fel-pris",
+      "sv": "Det är fel pris.",
+      "pt": "O preço está errado.",
+      "pronuncia": "dê é FÊL PRIIS ('det' = dê, o T não soa; 'är' = é, aberto e curto; 'fel' com Ê FECHADO e longo e L de verdade no fim, língua no céu da boca — nunca o 'féu' do português; 'pris' com R de um toque só, I longo e S sibilante, nunca o 'x' carioca; a força maior cai no FEL)",
+      "contexto": "No caixa do ICA, Coop ou Lidl, quando o valor que passou não bate com a etiqueta da prateleira — o clássico é a oferta (extrapris) que não entrou no sistema. Costuma vir junto: 'Det stod … kronor på hyllan' (na prateleira estava … coroas).",
+      "porque": "Erro de preço no caixa é comum, e o funcionário corrige na hora — desde que você aponte. E 'fel' (errado) é palavra de todo dia: fel buss, fel nummer, fel dag."
+    },
+    {
+      "id": "kan-jag-byta-den-har",
+      "sv": "Kan jag byta den här?",
+      "pt": "Posso trocar isto?",
+      "pronuncia": "kan iá BÜÜ-ta den RRÉR? ('kan jag' = ka-niá, o -g não soa; 'byta' com Ü LONGO — lábios no bico do U e língua na posição do I —, a força nele, e o -ta fraquinho; 'den' curto, N de língua sem nasalizar; 'här' com h soprado, É bem aberto, R brando e força de novo; 'den här' = este aqui)",
+      "contexto": "No balcão da loja, com o recibo (kvitto) na mão, para trocar tamanho, cor ou um produto com defeito. Muita loja sueca dá prazo de troca (bytesrätt) — vale perguntar antes de comprar presente.",
+      "porque": "Troca é rotina no comércio sueco, e começar pela pergunta certa resolve tudo no balcão. 'Byta' serve pra muita coisa: byta tåg (trocar de trem), byta däck (trocar os pneus), byta jobb."
+    },
+    {
+      "id": "jag-vill-lamna-tillbaka-den-har",
+      "sv": "Jag vill lämna tillbaka den här.",
+      "pt": "Quero devolver isto.",
+      "pronuncia": "iá vil lém-na til-BÁÁ-ka den RRÉR ('jag' = iá; 'vill' com I curto e L de verdade, que emenda no L de 'lämna'; 'lämna' com É curto e aberto, M e N colados, sem vogal no meio, e dito RÁPIDO e SEM FORÇA — em verbo com partícula a força vai toda pra partícula: lämna tillBAka, como 'ta BORT', 'gå UT'; 'tillbaka' com a força no BÁ, A longo, e o 'till' fraquinho; 'den här' como em 'Vad kostar den här?', com força de novo no HÄR)",
+      "contexto": "No balcão da loja para devolver e receber o dinheiro de volta — dentro do prazo do 'öppet köp', normalmente com o recibo —, ou no ombud do correio ao devolver uma compra online (lá também se ouve 'returnera').",
+      "porque": "Devolver é direito comum nas lojas suecas, e essa frase abre o processo inteiro. 'Lämna tillbaka' serve pra tudo que se devolve: livro da biblioteca, chave do apartamento, ferramenta emprestada."
+    },
+    {
+      "id": "nar-stanger-ni",
+      "sv": "När stänger ni?",
+      "pt": "A que horas vocês fecham?",
+      "pronuncia": "nér STÉNG-er ni? ('när' com É bem aberto e longo + R brando de 'caro'; 'stänger' com a força no STÉNG, É aberto e CURTO e o NG só nasal, no fundo da boca, como no inglês 'sing' — o G não estala —, e o -er fraquinho mas presente: sem ele vira 'stäng!' (feche!); 'ni' = vocês, I limpo e sem força)",
+      "contexto": "Antes de sair correndo pra loja, farmácia, Systembolaget ou ombud do correio — pessoalmente ou por telefone. Na Suécia o horário encurta muito no sábado, no domingo e nas vésperas de feriado (julafton, midsommarafton).",
+      "porque": "Evita dar com a cara na porta fechada às 18h. E o par sai no mesmo molde: 'När öppnar ni?' (a que horas vocês abrem?)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "var-ar-kassan",
+      "elenco": "T-rex caçador do mercado + vara de bambu + registradora fujona",
+      "ponte_sonora": "VAR É... CAÇA-N? (4 sílabas: var-é-KÁS-san, saindo va-ré-KÁS-san; força principal no CÁ; VAR = a VARA sem o -a, a MESMA VARA de 'Var kan jag köpa biljett?', 'Var bor du?' e 'Var ska jag byta?' — R BRANDO de 'caro' e AUDÍVEL, que já escorrega no É: va-RÉ; sem ele sobra VÁ É, que é 'vad är' (o que é?), e a pergunta muda; É = 'är', aberto e curto, o mesmo de 'Jag är' e 'Det är'; CAÇA = a caça do T-rex, que o português já fala do jeito certo: força no CÁ, A aberto, Ç de cobra — nunca o Z de 'casa', que daria 'kasa'; o N do fim é o rosnado de dente cerrado, NNN, com a ponta da língua colada atrás dos dentes de cima: é ele que transforma 'kassa' (um caixa) em 'kassan' (O caixa); sem nasalizar o A — nada de 'caçã')",
+      "historia": "Carrinho lotado e nenhum caixa à vista: neste mercado as registradoras criam perninhas e fogem pelos corredores. Você grita VAR É...? e quem atende é o T-rex que patrulha os corredores — mas, com aqueles bracinhos, ele não alcança nada. Então morde uma VARA de bambu comprida e sai na CAÇA: prende a registradora fujona contra o chão com a ponta da vara e rosna de dente cerrado, sem largar o bambu: É CAÇA... NNN! A caça dele é o caixa — siga a vara e pague ali.",
+      "cena": {
+        "descricao": "No corredor de um supermercado, um T-rex verde-oliva de bracinhos encolhidos morde uma vara de bambu comprida cuja ponta prende no chão uma caixa registradora de perninhas, enquanto um carrinho lotado espera atrás.",
+        "partes": [
+          "piso de supermercado branco-gelo com uma faixa verde no meio",
+          "gôndola de prateleiras azul-clara com caixinhas coloridas (boxes vermelhos, amarelos e verdes)",
+          "carrinho de compras prateado lotado de caixinhas coloridas",
+          "caixa registradora cinza com tela verde e gaveta aberta, tombada de lado no chão",
+          "duas perninhas finas amarelas da registradora esperneando no ar",
+          "corpo do T-rex verde-oliva inclinado pra frente, com barriga creme",
+          "cauda grossa e comprida esticada pra trás em equilíbrio",
+          "cabeça enorme do T-rex com olhos amarelos e fileira de dentes brancos cerrados",
+          "dois bracinhos curtos encolhidos no peito",
+          "vara de bambu bege com nós marrons, mordida pelos dentes e descendo em diagonal até a registradora",
+          "três anéis cinza de rosnado saindo dos dentes cerrados"
+        ]
+      }
+    },
+    {
+      "id": "det-ar-fel-pris",
+      "elenco": "rinoceronte furioso + etiqueta PARIS + vidro de fel",
+      "ponte_sonora": "DÊ É FÊL... P'RIS! (4 sílabas: dê-é-FÊÊL-PRIIS; força no FÊL e no PRIS; DÊ É = o 'det är' de sempre, de 'Det är lugnt' e 'Det är akut': DÊ fechado e sem T, É aberto e curto; FÊL = o FEL, o líquido verde e amargo do vidro de 'Förlåt, det var mitt fel' — e em sueco 'fel' é justamente ERRADO —, mas dito com Ê FECHADO de 'você' e L DE VERDADE, a ponta da língua grudando no céu da boca: o português fala 'féu', com É aberto e o L virando U, e assim o sueco não reconhece; P'RIS = PARIS sem o A: o chifre arrancou o A, então o P cola direto no R — PRIS, uma sílaba só —, e o R é o de 'Paris' mesmo, um toque só, de 'caro'; o I fica LONGO e com a força que já tinha em 'Pa-RIS'; S de cobra no fim, nunca o 'Paríx' carioca)",
+      "historia": "No corredor do mercado, o rinoceronte pega um vidrinho de FEL — aquele verde amargo, coisa baratinha — e lê a etiqueta: preço de PARIS! O amargo sobe até o chifre e ele bufa: DÊ É FÊL! Abaixa a cabeça, investe contra a etiqueta e o chifre atravessa bem no A, que sai espetado na ponta. Na prateleira sobra só P·RIS, e ele aponta o chifre pro caixa: DÊ É FÊL... PRIS! — esse preço está errado.",
+      "cena": {
+        "descricao": "Num corredor de supermercado, um rinoceronte cinza investe de cabeça baixa contra uma etiqueta de preço amarela gigante: o chifre a atravessou e leva espetada a letra A, deixando na etiqueta só P RIS, ao lado de uma fileira de vidrinhos verdes de fel.",
+        "partes": [
+          "piso de supermercado cinza-claro",
+          "prateleira de madeira clara com duas tábuas",
+          "fileira de cinco vidrinhos verdes de fel na tábua de cima",
+          "um vidrinho de fel tombado no chão com poça verde-limão",
+          "etiqueta de preço amarela gigante presa na beirada da prateleira, escrita P RIS, com um buraco redondo no lugar do A",
+          "corpo do rinoceronte cinza-chumbo, robusto, investindo de cabeça baixa",
+          "quatro patas grossas, as da frente fincadas no chão",
+          "chifre grande bege-osso atravessando o buraco da etiqueta",
+          "letra A vermelha espetada na ponta do chifre",
+          "olhinhos bravos com sobrancelhas franzidas e orelhas pra trás",
+          "duas baforadas brancas (cones) saindo das narinas"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-byta-den-har",
+      "elenco": "sereia no balcão de trocas + biruta-trocadora + dente de ouro rosnador",
+      "ponte_sonora": "CA-NIÁ BI(R)ÚTA... DEN RRÉR? (6 sílabas: ca-niá-BÜÜ-ta-den-RRÉR; força no BÜÜ e no RRÉR; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag betala med kort?' e 'Kan jag swisha?' — emendado, I de IOGA, nunca 'canja'; BI(R)ÚTA = a MESMA BIRUTA de 'Var ska jag byta?': sem o R e com o BI e o U FUNDIDOS numa vogal só — língua parada no I e lábios no bico do U ao mesmo tempo — é o Ü, o 'y' sueco, LONGO e com toda a força: BÜÜ-ta; nunca 'bi-Ú-ta' em pedaços nem o 'biú' deslizado, que soa 'bjuda' (convidar); só o I dá 'bita' (morder), só o U dá 'bota' (curar); T seco e -a fraquinho; DEN = o DENTE de ouro de 'Vad kostar den här?' — o mesmo dente, comprado naquela loja de souvenirs —, só o DEN, curto, com o N na ponta da língua, sem o 'dẽ' nasal de 'dente'; RRÉR = o rosnado soprado do dente, o mesmo 'här' da HERA de 'Det gör ont här': h soprado como RR carioca leve, É bem aberto, R brando no fim; DEN RRÉR é sempre esse dente — o mesmo de 'Jag vill lämna tillbaka den här')",
+      "historia": "A sereia comprou o DENTE de ouro da loja de souvenirs e se arrependeu: ele não para de rosnar RRÉR e de morder as conchas dela. Ela volta à loja batendo no chão o tridente de CANA — CA-NIÁ! — e vai direto à BIRUTA listrada deitada no balcão: é a biruta-trocadora da loja, entra uma coisa pela boca larga e sai outra pela ponta fina. Ela enfia o dente rosnando na boca da biruta — CA-NIÁ, BIRUTA, DEN RRÉR? — e lá na pontinha rola pra fora uma pérola. Trocado.",
+      "cena": {
+        "descricao": "No balcão de uma loja, uma sereia de cauda verde-esmeralda sentada na beirada empurra um dente de ouro rosnando para dentro da boca larga de uma biruta listrada de laranja e branco, deitada no balcão, de cuja ponta fina rola uma pérola; na outra mão, um tridente com cabo de cana-de-açúcar.",
+        "partes": [
+          "piso de tábuas claras da loja",
+          "balcão de madeira branca com tampo azul-turquesa",
+          "biruta listrada laranja e branca (cone oco deitado) sobre o balcão, com a boca larga virada pra sereia",
+          "pérola branca brilhante rolando da ponta fina da biruta",
+          "cauda de sereia verde-esmeralda escamada pendendo da beirada do balcão",
+          "barbatana da cauda turquesa aberta em leque",
+          "tronco da sereia com top de duas conchas lilás",
+          "cabeça com cabelo ruivo comprido e ondulado caindo nas costas",
+          "dente de ouro gigante (molar de duas raízes) com sobrancelhas pretas bravas, na mão da sereia, entrando na boca da biruta",
+          "dois anéis cinza de rosnado saindo do dente",
+          "tridente com cabo de cana-de-açúcar roxo-esverdeada com nós e três pontas douradas"
+        ]
+      }
+    },
+    {
+      "id": "jag-vill-lamna-tillbaka-den-har",
+      "elenco": "carteiro mordido + barca em til + dente de ouro rosnador",
+      "ponte_sonora": "IÁ, VIL! LÉM(e)-NA TIL-BÁ(r)CA... DEN RRÉR! (9 sílabas: iá-vil-lém-na-til-BÁÁ-ka-den-RRÉR; força no BÁ e no RRÉR — o LEME corre leve, sem força: em verbo com partícula quem leva a pancada é a partícula, lämna tillBAka; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; VIL = o 'vill' da bruxa vil e da avestruz vilã ('Vill du ha något att dricka?', 'Vill du ha kvittot?'): I curto e L DE VERDADE, língua no céu da boca — nunca 'viu' —, e esse L emenda direto no L do leme, vi-LÉM, um L só, comprido; LÉM(e) = o LEME sem o -e final, com o E um pouco mais aberto que no 'leme' português, quase o É de 'pé', e o M de lábios fechados soltando direto no NA: LÉM-na, nunca 'lê-mi-na'; e o M é obrigatório — sem ele, com Ô, vira o LÔ-NA da lona da iguana, 'låna' (pegar emprestado), o contrário de devolver; NA fraquinho; TIL = o til (~) de 'Lycka till' e 'Hur kommer jag till Storgatan?': L de verdade, nunca 'tiu', e sem força; BÁ(r)CA = a BARCA sem o R: A LONGO e com toda a força, BÁÁ-ca — o R não soa (com ele vira 'barka', que é descascar árvore); DEN RRÉR = o dente de ouro rosnando, o MESMO 'den här' de 'Vad kostar den här?' e 'Kan jag byta den här?': DEN curto sem nasal, RRÉR soprado com É bem aberto)",
+      "historia": "O DENTE de ouro que você encomendou é VIL: na entrega, mordeu o dedo do carteiro. Furioso, ele decide devolver na hora — enfia o dente rosnando na bolsa, pula na TIL-BARCA do correio fluvial, uma barca de madeira torta, curvada feito um til, e agarra o LEME: IÁ! VIL! LEME NA TIL-BARCA! A barca dá meia-volta rumo à loja do outro lado do rio, e da bolsa o dente ainda rosna: DEN... RRÉR. Quero devolver isto.",
+      "cena": {
+        "descricao": "Num rio verde-azulado, um carteiro de camisa amarela e quepe azul, com o dedo enfaixado erguido, empurra o leme de uma barca de madeira curvada em forma de til, enquanto da bolsa a tiracolo sai um dente de ouro rosnando; ao fundo, a lojinha de toldo listrado no cais.",
+        "partes": [
+          "água de rio verde-azulada (plano liso)",
+          "cais de madeira ao fundo com uma lojinha de toldo listrado vermelho e branco",
+          "barca de madeira marrom comprida, sem vela, curvada em forma de til (~)",
+          "leme de madeira na popa: pá vertical e barra de mão comprida",
+          "corpo do carteiro de camisa amarela e bermuda azul, em pé na popa",
+          "quepe azul de carteiro com aba",
+          "mão erguida com o dedo indicador enfaixado de branco",
+          "bolsa de carteiro de couro marrom a tiracolo, aberta",
+          "dente de ouro gigante (molar de duas raízes) com sobrancelhas pretas bravas, saindo da bolsa",
+          "dois anéis cinza de rosnado saindo do dente"
+        ]
+      }
+    },
+    {
+      "id": "nar-stanger-ni",
+      "elenco": "bombeiro de plantão + loja do Nero + porta de aço",
+      "ponte_sonora": "NÉR(o)... STÉNG-er... NI? (4 sílabas: nér-STÉNG-er-ni; força no STÉNG; NÉR = NERO sem o -O, o imperador que tocava lira enquanto Roma queimava — o MESMO NÉR de 'När går nästa buss?': o português já diz NÉ-ro com É ABERTO de 'pé' e R de um toque só, de 'caro', que é o R sueco; com Ê fechado vira 'ner' (pra baixo); STÉNG = o estrondo da porta de aço da loja descendo e batendo no cabo do machado — é o próprio som de FECHAR: o SSS do aço deslizando gruda direto no TÉNG da pancada, numa sílaba só — sem o 'is' que o brasileiro põe antes de S (nada de 'is-téng') —, É ABERTO e CURTO, uma pancada seca (o que fica ressoando é o NG, não o É), e o NG fica só no fundo da boca, como no inglês 'sing': o G NÃO estala, nada de 'stén-gui'; -er é o tremidinho fraco que as lâminas da porta dão depois da pancada, com R brando — e ele é OBRIGATÓRIO: sem ele sobra 'stäng!', que é a ordem 'feche!', e não a pergunta; não confunda com SLÉNGUER, o guaxinim que arremessa o papelão em 'Var slänger man kartong?': lá é SL (joga fora), aqui é ST (fecha); NI = 'vocês', I limpo e sem força, o mesmo NI de 'Har ni...?' e 'Kan ni dämpa er lite?')",
+      "historia": "Na galeria, a loja do imperador NERO tem fama: na hora de fechar, ele baixa a porta de aço e, lá dentro, dedilha a lira enquanto tudo pega fogo. O bombeiro aprendeu a lição e agora chega ANTES: finca o cabo do machado no chão bem debaixo da porta — e ela desce SSS... TÉNG! —, bate no cabo e trava a um palmo do chão, com as lâminas ainda tremendo: -er-r-r. Agachado na fresta, de onde já escapa um brilho laranja, ele grita: NÉR!... STÉNG-er... NI? Ele quer saber o minuto exato em que vocês fecham, pra ficar de plantão.",
+      "cena": {
+        "descricao": "Numa galeria, diante de uma loja com o letreiro dourado NERO, uma porta de aço ondulada acaba de descer e bater no cabo do machado que um bombeiro de capacete amarelo fincou embaixo dela, travando-a a um palmo do chão; da fresta escapa um brilho laranja, com um extintor vermelho a seus pés e um relógio redondo na parede.",
+        "partes": [
+          "piso de lajotas bege da galeria",
+          "fachada da loja cinza-clara",
+          "letreiro dourado NERO em letras romanas acima da porta",
+          "porta de aço ondulada prateada, quase toda baixada (box com sulcos horizontais)",
+          "fresta de um palmo embaixo da porta brilhando laranja, com três fagulhas laranja saltando",
+          "três anéis cinza de som (o TÉNG) saindo do ponto onde a porta bate no cabo do machado",
+          "relógio redondo branco de ponteiros pretos na parede ao lado da porta",
+          "corpo do bombeiro de farda vermelho-escura com faixas refletivas amarelas",
+          "capacete de bombeiro amarelo com aba larga atrás",
+          "machado de cabo vermelho e lâmina prateada, de pé com o cabo fincado debaixo da porta de aço, segurando-a",
+          "extintor vermelho com mangueirinha preta, em pé no chão ao lado do bombeiro"
+        ]
+      }
+    }
+  ]
+}

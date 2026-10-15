@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "hur-langt-ar-det",
+      "sv": "Hur långt är det?",
+      "pt": "É longe? / Quanto falta até lá?",
+      "pronuncia": "rrü LÓNGT é dê? ('hur' com h soprado tipo RR carioca e Ü de bico; o -r final quase some antes do L; 'långt' com Ó ABERTO e CURTO — o å curto, como em 'åtta' —, NG nasal sem estalar o G e um T seco que gruda no 'är': LÓNG-té; 'är' = é (na fala, quase só 'e'); 'det' = dê; a força da frase cai no LÓNGT)",
+      "contexto": "Pedindo informação na rua ou na estação, perguntando ao motorista ou a um colega quanto falta até a loja, a parada, o lago — antes de decidir se vai a pé, de bicicleta ou de ônibus.",
+      "porque": "É a pergunta que decide 'vou a pé ou pego o ônibus?'. E a resposta muitas vezes vem em 'mil' — a milha sueca, que vale 10 km —, uma pegadinha que ele vai ouvir a vida toda."
+    },
+    {
+      "id": "nar-gar-nasta-buss",
+      "sv": "När går nästa buss?",
+      "pt": "Quando sai o próximo ônibus?",
+      "pronuncia": "nér gôr NÉS-ta BÖSS? ('när' com É ABERTO de 'pé' e R brando de 'caro'; 'går' com G duro, Ô FECHADO e longo de 'avô' e R brando — o mesmo 'går' de 'Går den här till T-Centralen?'; 'nästa' com É aberto e curto e S + T secos, sem 'tchi'; 'buss' com U CURTO de bico puxando pra Ô — quase 'böss' — e SS bem esticado; força em NÄS e BUSS)",
+      "contexto": "No ponto de ônibus quando a tela de horários apagou, quando o motorista avisa que esse não serve, à noite e no fim de semana, quando os intervalos do SL ficam longos.",
+      "porque": "Fora do pico os ônibus suecos ficam espaçados e perder um é comum: perguntar quando vem o próximo resolve. E 'nästa' (próximo) está em todo anúncio de bordo: 'nästa hållplats', 'nästa station'."
+    },
+    {
+      "id": "var-ska-jag-byta",
+      "sv": "Var ska jag byta?",
+      "pt": "Onde eu tenho que trocar (de ônibus/trem)?",
+      "pronuncia": "var ska iá BÜÜ-ta? ('var' com R brando — é ele que separa de 'vad': sem R vira 'Vad ska jag byta?', 'o que eu troco?'; na fala rápida o R e o S se fundem num CH leve, 'vach-ka', e isso também está certo; 'ska' seco, sem 'is' na frente; 'jag' = iá, na fala só 'ja'; 'byta' com Y = Ü LONGO: lábios de U e língua de I ao mesmo tempo; T seco e -a fraquinho; força no BÜÜ)",
+      "contexto": "Em viagem com baldeação no SL, no pendeltåg ou nos trens regionais: perguntando ao motorista, ao funcionário da plataforma ou a quem está do lado — sobretudo em dia de obra, com ônibus substituto ('ersättningsbuss').",
+      "porque": "A baldeação é onde todo estrangeiro se perde, e perguntar resolve em dez segundos. E 'byta' serve pra qualquer troca: 'byta jobb' (de emprego), 'byta om' (de roupa), 'byta tåg' (de trem)."
+    },
+    {
+      "id": "jag-har-missat-bussen",
+      "sv": "Jag har missat bussen.",
+      "pt": "Perdi o ônibus.",
+      "pronuncia": "iá rar MÍS-sat BÖS-sen ('jag' = iá; 'har' com h soprado e R brando — na fala corrida sai quase só 'rrá'; 'missat' com I curto, SS esticado e T seco no fim — sem ele fica 'missa', o infinitivo; 'bussen' = 'buss' + '-en' (O ônibus): U curto de bico puxando pra Ô, SS longo e -en fraquinho; força em MIS e BUSS)",
+      "contexto": "Mensagem ou ligação pro trabalho, pra förskola ou pra quem está esperando — 'Jag har missat bussen, jag kommer lite senare' —, ou o desabafo no ponto vazio vendo as lanternas se afastarem.",
+      "porque": "É a justificativa de atraso mais comum da Suécia e encaixa com 'Förlåt, jag är lite sen' e 'Jag kommer om fem minuter'. E 'missa' (perder) vale pra trem, reunião e prazo também."
+    },
+    {
+      "id": "jag-ar-pa-vag",
+      "sv": "Jag är på väg.",
+      "pt": "Estou a caminho.",
+      "pronuncia": "iá é pô VÉÉG ('jag' = iá; 'är' = é aberto e curto — na fala, quase só 'e'; 'på' = pô de boca redonda, Ô fechado; 'väg' com Ä LONGO e bem aberto, de 'pé', e G seco no fim, sem 'gui'; força no VÄG)",
+      "contexto": "Resposta a 'Var är du?' ou 'Kommer du?' por mensagem ou telefone: indo pro trabalho, buscando as crianças, chegando atrasado na fika ou no jantar.",
+      "porque": "Curtíssima e usada todo dia, no SMS e ao vivo. E 'väg' (caminho, estrada) está em inúmeros endereços suecos — Kungsvägen, Storvägen, Skolvägen — e em 'vägen' (o caminho)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "hur-langt-ar-det",
+      "elenco": "hamster na bola de corrida + trilha em T",
+      "ponte_sonora": "RRÜR?! LÓNG-TÉ DÊ? (4 batidas: rrü-LÓNG-té-dê, força TODA no LÓNG; RRÜR é o 'hur' de sempre — o MESMO de 'Hur kommer jag till Storgatan?' e 'Hur bokar man tvättstugan?', o RRÜ de 'Hur mår du?': RR soprado de carioca (é o h), Ü de BICO — lábios de U, língua de I, nunca o U chapado de 'urso' — e o R final BRANDO, que quase some antes do L; LÓNG-T = o 'LONG T' da cena, um T LONGUÍSSIMO: LONG é o mesmo LONG do pescoço LONGUÍSSIMO da Sâmara em 'Kan du prata lite långsammare?', mas dito como o 'long' de 'long neck' — Ó ABERTO e CURTO de 'só' (é o å curto, sempre curto antes de NG: o mesmo do CÓ de 'kommer' e do ÓTA de 'åtta'), nunca o 'lõ' nasal e fechado de 'longo'; a língua fecha no fundo, NG de 'ping', e o G não estala nem vira 'gui'; o T é o T DA TRILHA, e é ele que faz 'långt' (longe): sem ele sobra 'lång', que é 'comprido, alto' — o pescoço da Sâmara NÃO tem T, a trilha do hamster tem; é só a consoante, seca, de 'tatu' — nunca a letra 'tê' nem 'tchi' —, e pra não escorregar ele já sai GRUDADO na vogal seguinte, que é o 'är': LÓNG-TÉ, do mesmo jeito que 'ont i' vira ÓN-TI em 'Jag har ont i magen'; TÉ DÊ = esse T + o 'är det' de 'Är det ledigt här?' e 'Är det till höger eller till vänster?': É aberto e curto (é o 'är'), DÊ fechado, o T de 'det' mudo; o TÉ sai fraco — quem leva a força é o LÓNG, nunca 'long-TÉ')",
+      "historia": "O hamster resolveu ir até o ponto de ônibus por conta própria, dentro da bola de corrida transparente, e lá vai ela rolando pela trilha de terra: RRÜÜR... RRÜÜR... Na entrada, uma placa de madeira em forma de T mostra o caminho — e a trilha inteira tem a mesma forma, só que é um T LONGUÍSSIMO: a perna corre reta até sumir no horizonte, e a parada fica lá na barra de cima, pequena feito um grão de milho. Ele freia, as bochechas murchas de cansaço, gruda o focinho no plástico, mede com os olhos aquele LONG T sem fim e pergunta, ofegante, com o T já colado no É: RRÜR?! LÓNG-TÉ DÊ? — quanto falta até lá, é longe?",
+      "cena": {
+        "descricao": "No começo de uma trilha de terra em forma de T comprido demais, ao lado de uma placa de madeira em forma de T, um hamster gorducho freia dentro da bola de corrida transparente, de focinho grudado no plástico, olhando a plaquinha da parada de ônibus lá no fim do T.",
+        "partes": [
+          "gramado verde-claro largo (chão)",
+          "perna do T: trilha de terra bege, comprida e estreita, saindo da frente da cena e sumindo no fundo",
+          "barra do T: trilha de terra bege atravessada lá no fim, larga de ponta a ponta da cena",
+          "plaquinha de parada de ônibus minúscula na barra do T: disco amarelo num poste fino",
+          "placa de trilha de madeira marrom em forma de T maiúsculo, da altura da bola, fincada na beira da trilha bem ao lado do hamster",
+          "duas fileiras de pinheirinhos verde-escuros (cones) ladeando a perna do T, diminuindo com a distância",
+          "bola de hamster transparente-azulada (esfera translúcida) no começo da trilha",
+          "corpo do hamster dourado-caramelo de barriga creme, em pé nas patas de trás dentro da bola",
+          "cabeça redonda com bochechas murchas, orelhinhas rosadas e focinho rosa encostado no plástico",
+          "duas gotas de suor azul-claras saltando da testa",
+          "três nuvenzinhas de poeira bege atrás da bola (esferas achatadas)"
+        ]
+      }
+    },
+    {
+      "id": "nar-gar-nasta-buss",
+      "elenco": "pantera-negra Nero, gorda e entalada + porta do ônibus",
+      "ponte_sonora": "NÉR(o)... GÔR(do)... NESTA? BUS?! (5 sílabas: nér-gôr-NÉS-ta-BÖSS; força no NÉS e no BUSS; NÉR = NERO, o imperador da lira, sem o -O: o português já diz NÉ-ro com É ABERTO de 'pé' e R de um toque só, de 'caro' — que é exatamente o R sueco; com Ê fechado vira 'ner' (pra baixo); GÔR = GORDO sem o -DO: G duro de 'gato', Ô FECHADO de 'avô' e LONGO, R BRANDO à caipira, nunca o R raspado carioca — é o mesmo GÔR de 'Vilket spår går tåget från?' e o 'go' arrastado de 'Går den här till T-Centralen?'; sem o R sobra 'gå', o infinitivo; e nada a ver com o IÖR de 'Det gör ont här', que é outro verbo; NESTA = o 'nesta' do português, que já tem o É ABERTO certo, como 'festa' — NÉS-ta, nunca 'nêsta' —, com S e T secos, sem 'néstcha'; BUS = o -BUS de ÔNIBUS, mas com a força em cima e curtinho: U de BICO puxando pra Ô, quase 'BÖSS', e o SS esticado de cobra; com Ü longo vira 'bus', que é travessura)",
+      "historia": "O ponto de ônibus tem imperador: NERO, uma pantera-negra de coroa de louros que passa o dia dedilhando a lira e devorando cacho de uva atrás de cacho, até ficar GORDO feito um barril. O ônibus vermelho encosta, abre a porta, ele salta com toda a majestade — e ENTALA: a pança trava no vão, a lira fica pra dentro e o rabo pra fora. O motorista só balança a cabeça: 'NESTA, não.' De coroa torta, preso no meio da porta, Nero rosna a única pergunta que importa: NÉR... GÔR... NESTA... BUS?! — e o próximo, sai quando?",
+      "cena": {
+        "descricao": "Na porta aberta de um ônibus vermelho, uma pantera-negra gorducha de coroa de louros e lira dourada está entalada pela barriga no vão, virando a cabeça para trás num rosnado.",
+        "partes": [
+          "calçada cinza-clara com meio-fio (chão)",
+          "abrigo de ponto de ônibus ao lado: teto azul-escuro sobre dois postes e painel de vidro azulado",
+          "frente de ônibus vermelho grande (box) com para-brisa escuro e dois faróis amarelos",
+          "porta dupla do ônibus aberta: dois painéis de vidro com moldura preta, dobrados pra dentro",
+          "corpo da pantera-negra preto-azulado, barriga redonda enorme entalada no vão da porta",
+          "cabeça da pantera virada pra trás, olhos amarelos e boca aberta mostrando os caninos",
+          "coroa de louros verde (toro de folhinhas) torta na cabeça",
+          "lira dourada em U com quatro cordas, presa numa pata dianteira",
+          "rabo preto comprido pendurado pra fora da porta, com a ponta enrolada",
+          "cacho de uvas roxas (esferas) caído na calçada"
+        ]
+      }
+    },
+    {
+      "id": "var-ska-jag-byta",
+      "elenco": "grilo trompetista de ska + vara com biruta",
+      "ponte_sonora": "VAR! SKA... IÁ... BI(R)ÚTA? (5 sílabas: var-ska-iá-BÜÜ-ta; força no BÜÜ; VAR = a VARA sem o -a, a MESMA VARA de 'Var kan jag köpa biljett?' e 'Var bor du?': R BRANDO de 'caro' e AUDÍVEL — sem ele sobra VÁ, que é 'vad' (o quê), e a pergunta vira 'o que eu troco?'; SKA = o MESMO SKA da bandinha jamaicana de 'Ska vi säga imorgon klockan tre?': colado, sem 'is' na frente; IÁ é o 'jag' de sempre, I de ioga, nunca J chiado; BI(R)ÚTA = a BIRUTA de aeroporto SEM o R e com o BI e o U FUNDIDOS numa vogal só: a língua fica parada no I e os lábios fazem o bico do U ao MESMO tempo — isso é o Ü, o 'y' sueco; a força, que na biruta já cai no U, fica toda nessa vogal fundida, e LONGA: BÜÜ-ta; nunca 'bi-Ú-ta' em três pedaços nem o 'biú' deslizado, que soa 'bjuda' (convidar); e não largue nenhum dos dois: só o I dá 'bita' (morder), só o U dá 'bota' (curar) — por isso a ponte é a BIRUTA, que traz o I e o U juntos; T seco de 'tatu' e -a fraquinho)",
+      "historia": "Na estação de baldeação não tem placa nenhuma: só uma VARA altíssima com uma BIRUTA laranja no topo, e a regra é velha — você troca pro trem que a biruta apontar. Mas hoje não venta, e a biruta pende murcha. O grilo de chapéu porkpie sobe pela VARA com o trompete e solta um SKA tão furioso que o sopro enche a biruta: ela gira feito doida e — IÁ! — trava apontando pro trem verde do outro lado. A biruta trocou de lado, e você troca de trem: é ali.",
+      "cena": {
+        "descricao": "Numa plataforma de baldeação, um grilo verde de chapéu porkpie agarrado a uma vara altíssima sopra um trompete para cima e enche de vento uma biruta laranja, que aponta para um trem verde-limão ao fundo.",
+        "partes": [
+          "plataforma de concreto cinza com faixa amarela na borda (chão)",
+          "quadrado de piso xadrez preto-e-branco na base da vara (o tabuleiro do ska)",
+          "vara altíssima e fina bege-mel (cilindro), fincada numa base de concreto",
+          "biruta listrada laranja e branca (cone oco deitado) no topo da vara, inflada e apontando pro lado",
+          "corpo do grilo verde-folha agarrado no meio da vara, com as patas de trás compridas dobradas em V",
+          "duas antenas longas e finas, curvadas pra trás",
+          "chapéu porkpie preto pequeno com fita vermelha",
+          "trompete dourado na boca do grilo, apontado pra cima",
+          "três anéis de vento azul-claros (toros) subindo do trompete até a boca da biruta",
+          "vagão de trem verde-limão ao fundo (box com janelas escuras), na direção para onde a biruta aponta"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-missat-bussen",
+      "elenco": "pavão Miss Atraso + ônibus partindo",
+      "ponte_sonora": "IÁ, RRÁR! MISS-AT... BUS-SEM! (6 sílabas: iá-rrár-MÍS-sat-BÖS-sen; força no MÍS e no BÖS; IÁ, RRÁR é o 'jag har' de sempre — o MESMO de 'Jag har ett möte' e 'Jag har ont i magen', aqui o grito do pavão: I de ioga, nunca J chiado, e RRÁR com h soprado, A longo e R BRANDO no fim; MISS = a MISS do concurso, do jeito que o português já fala: I curto e SS esticado de cobra — é o 'miss' do inglês, perder; AT = o que SOBROU da faixa de MISS ATRASO depois que o ônibus a rasgou bem depois do T: A curto e fraquinho e T SECO de 'tatu', sem 'tchi' — é esse T que faz 'missat' (perdi); sem ele sobra 'missa', o infinitivo — e nada de MISSA de igreja: a faixa rasgou DEPOIS do T; BUS = o MESMO -BUS de ÔNIBUS de 'När går nästa buss?': curto, U de BICO puxando pra Ô, quase 'BÖS', SS esticado; SEM = o 'sem' de 'foi SEM mim', mas SEM NASALAR: E curtinho e fraco e N batido na língua — é o '-en' de 'bussen', O ônibus; nunca um SÊÊN longo e forte, que é o 'sen' (atrasado) de 'Förlåt, jag är lite sen')",
+      "historia": "Acabaram de coroar o pavão MISS ATRASO, o título mais cobiçado do ponto de ônibus: faixa de cetim, coroa e buquê. Ele abre o leque inteiro de penas pra foto oficial, posa de um lado, faz biquinho do outro... e não vê que a ponta da faixa ficou presa no para-choque do ônibus vermelho. A porta fecha, o ônibus arranca soltando fumacinha e a faixa RASGA bem depois do T: o ônibus leva o 'RASO' embora e no peito do pavão sobra só MISS AT. Ele solta o grito — IÁ, RRÁR! —, larga o buquê e dispara atrás, com a cauda arrastando no chão: MISS-AT... BUS-SEM! — a Miss Atraso ficou, e o ônibus foi SEM mim. Perdi o ônibus.",
+      "cena": {
+        "descricao": "Numa calçada com tapete vermelho de passarela, um pavão de coroa torta e faixa rasgada escrita MISS AT corre com o leque de penas aberto e o bico escancarado atrás de um ônibus vermelho que se afasta soltando fumaça, levando no para-choque o pedaço que faltava da faixa.",
+        "partes": [
+          "calçada cinza-clara (chão)",
+          "tapete vermelho comprido de passarela sobre a calçada",
+          "traseira de ônibus vermelho se afastando (box), com duas lanternas vermelhas acesas",
+          "três nuvenzinhas cinza de fumaça saindo do escapamento",
+          "tira branca rasgada da faixa presa no para-choque do ônibus, esvoaçando atrás dele",
+          "corpo do pavão azul-real, inclinado pra frente na corrida, com uma pata erguida",
+          "pescoço comprido azul e cabeça com penacho em leque, bico aberto no grito",
+          "cauda aberta em leque atrás: penas verde-esmeralda com olhos azul-e-dourados (discos)",
+          "faixa de Miss branca atravessada no peito, escrita MISS AT e rasgada logo depois do T, com a ponta esfiapada",
+          "coroinha prateada de Miss torta na cabeça",
+          "buquê de rosas vermelhas caído no tapete"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-pa-vag",
+      "elenco": "lagosta capitã + barquinho a vela na rodovia",
+      "ponte_sonora": "IÁ! É... PÔ, (na)VÉÉG(a)! (4 sílabas: iá-é-pô-VÉÉG; força no VÉÉG; IÁ É é o 'jag är' de sempre — o MESMO de 'Jag är trött' e 'Jag är hungrig': I de ioga, nunca J chiado, e É aberto e curto; PÔ = o 'pô!' brasileiro, o MESMO PÔ de 'Grattis på födelsedagen' e 'Kan du skicka det på mejl?': Ô FECHADO de boca redonda, nunca 'pó'; VÉÉG = NAVEGA sem o NA e sem o -A: do 'na-VÉ-ga' sobra só a sílaba forte, que já vem com o É ABERTO certo — é só esticar, LONGO — e o G SECO no fim, de 'gato', sem soltar 'gui'; se o -a ficar vira 'väga' (pesar), e com Ê fechado o 'ä' se perde; e a pista da cena É a 'väg' — 'väg' é estrada: o barco NAVEGA na väg, e 'på väg' é, ao pé da letra, 'na estrada', a caminho)",
+      "historia": "Você manda mensagem: cadê você? A lagosta de quepe de capitã já está a caminho — de barco, só que NA RODOVIA: o barquinho a vela vem pelo meio da pista, com a placa azul da estrada passando ao lado. No asfalto seco o casco empaca e começa a raspar, cuspindo faísca; ela bate a garra no timão e berra IÁ! É... PÔ, NAVEGA! — e o barco obedece: dispara pela faixa deslizando como se a estrada fosse mar. Com a outra garra, ela digita a resposta: estou a caminho.",
+      "cena": {
+        "descricao": "No meio de uma rodovia, um barquinho a vela vermelho raspa o asfalto soltando faíscas, pilotado por uma lagosta de quepe de capitã que bate a garra no timão e segura um celular com a outra.",
+        "partes": [
+          "asfalto cinza-escuro de rodovia, largo (chão)",
+          "faixas brancas tracejadas no meio da pista",
+          "guard-rail prateado na beira da pista",
+          "placa azul de rodovia num poste, com uma seta branca pra frente",
+          "casco de barquinho de madeira vermelho-tijolo deslizando no asfalto",
+          "mastro bege com vela branca triangular estufada",
+          "timão de madeira (toro com raios) na popa",
+          "corpo da lagosta vermelho-vivo em pé no barco, com a cauda segmentada dobrada",
+          "duas garras grandes: uma no timão, outra segurando um celular de tela verde-clara",
+          "antenas compridas e finas curvadas pra trás com o vento",
+          "quepe branco de capitã com aba preta",
+          "três faíscas amarelas (estrelinhas) saltando de onde o casco raspa no asfalto"
+        ]
+      }
+    }
+  ]
+}

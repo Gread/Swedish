@@ -1,0 +1,154 @@
+{
+  "phrases": [
+    {
+      "id": "vi-hors",
+      "sv": "Vi hörs!",
+      "pt": "A gente se fala!",
+      "pronuncia": "vi RRÖÖSH! ('vi' com I limpo e longo; 'hörs' com h soprado tipo RR carioca, ö LONGO de BICO — boca de Ó redonda com a língua empurrada pra frente, o mesmo ö de 'höra' — e o 'rs' vira um X chiado: tudo numa sílaba só)",
+      "contexto": "Fim de ligação, fim de conversa no chat, despedida de quem você vai encontrar de novo por telefone ou mensagem — no trabalho e entre amigos.",
+      "porque": "É o par exato de 'Vi ses!': 'ses' é se VER (encontro em pessoa), 'hörs' é se OUVIR (telefone, mensagem). Quase toda ligação sueca termina nele, e o -s no fim é o mesmo 'um ao outro' de 'vi ses'."
+    },
+    {
+      "id": "sov-gott",
+      "sv": "Sov gott!",
+      "pt": "Durma bem! / Dorme gostoso!",
+      "pronuncia": "SÔÔV GÓT! ('sov' com Ô FECHADO e longo, o mesmo som de 'så', mais um V no fim; 'gott' com Ó ABERTO e curto, g duro e T seco)",
+      "contexto": "Boa-noite pro filho, pra parceira, pra visita que dorme em casa; última mensagem da noite.",
+      "porque": "'God natt' é o boa-noite neutro; 'sov gott' é o carinhoso, o que se diz pra quem a gente gosta. E o 'gott' volta em 'jättegott' e 'Gott nytt år!': aprende um, reconhece vários."
+    },
+    {
+      "id": "ha-en-bra-dag",
+      "sv": "Ha en bra dag!",
+      "pt": "Tenha um bom dia!",
+      "pronuncia": "rrá en BRÁ DÁG! ('ha' com h soprado tipo RR carioca, A longo e sem R; 'en' curtinho e sem nasal; 'bra' e 'dag' com A longo de 'pá'; o g de 'dag' é duro e seco — na fala rápida às vezes some: 'bra da')",
+      "contexto": "No caixa do mercado, na farmácia, no café, no fim de um atendimento por telefone — e de manhã, se despedindo de alguém que vai trabalhar.",
+      "porque": "É a despedida padrão de qualquer atendimento: ele ouve isso todo dia e responde 'Tack, detsamma!'. Diferente de 'Ha det bra!' (tchau, se cuida), aqui se deseja o DIA — e o molde troca o fim: 'Ha en bra kväll!', 'Ha en bra helg!'."
+    },
+    {
+      "id": "sjalvklart",
+      "sv": "Självklart!",
+      "pt": "Claro! / Com certeza!",
+      "pronuncia": "RRÉLV-klaart! ('sj' = sopro forte e raspado, o mesmo de 'sjuk'; 'själv' com É aberto e L de língua; a força principal cai no RRÉLV e o 'klart' vem logo atrás com A longo; o 'rt' do fim é um T de língua enrolada pra trás, sem R vibrado; na fala rápida o v quase some: 'RRÉL-klaart')",
+      "contexto": "Resposta a qualquer pedido — 'Kan du hjälpa mig?' 'Självklart!' — no trabalho, com vizinho, com amigo.",
+      "porque": "É o 'claro!' sueco, e o 'klart' já É 'claro': själv-klart = claro por si só. Uma palavra que transforma um 'ja' seco numa resposta calorosa."
+    },
+    {
+      "id": "var-forsiktig",
+      "sv": "Var försiktig!",
+      "pt": "Cuidado! / Toma cuidado!",
+      "pronuncia": "var fö-SHÍK-ti! ('var' com A longo e R brando; o 'rs' vira um X chiado: fö-SHÍK; força no SHÍK, com I curto e K firme, grudado no T sem vogal no meio; o -ti do fim é fraquinho e de T duro, nunca 'tchi'; o -g final não soa na fala)",
+      "contexto": "Quando alguém sai pro gelo, pega o carro, sobe numa escada — e o clássico de inverno: 'Var försiktig, det är halt ute!' (cuidado, tá escorregadio lá fora).",
+      "porque": "É o cuidado que todo sueco diz de novembro a março. E o molde 'Var + adjetivo' rende mais: 'Var snäll!' (seja bonzinho / por favor), 'Var tyst!' (fica quieto)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "vi-hors",
+      "elenco": "água-viva-telefone + orelha roxa",
+      "ponte_sonora": "VI... RRÖX! (2 sílabas, tônica no RRÖX; VI = o 'eu VI' do português, o MESMO VI de 'Vi ses!' (VI SEIS) — I limpo e LONGO; RRÖX = ROXO cortado no X: o R de começo de palavra já sai soprado à carioca, e esse sopro é o h de 'hörs'; a vogal é o MESMO RRÖ de AT-RRÖ-RA ('Vad kul att höra!'), e LONGA como lá: boca de Ó redonda, em BICO, com a língua empurrada pra frente — estique a VOGAL, nunca o fim da palavra; o X é o chiado do 'rs', o mesmo de FÖ-XÊ-NAT e FÖ-XKU-LAN; corte o -o: RRÖX numa sílaba só, nunca 'RRÔ-xu', que cria uma sílaba a mais. Pra se VER, a mão de SEIS dedos; pra se OUVIR, a orelha ROXA)",
+      "historia": "Na sua casa sueca, o telefone é uma água-viva roxa gigante: você encosta o sino gelatinoso na orelha e os tentáculos se enrolam no seu braço feito fio de telefone em espiral. A conversa dura uma hora inteira, e a cada frase a água-viva pulsa roxa e dá uma queimadinha. Na despedida você arranca a água-viva da cabeça — e a orelha, inchada do tamanho de um prato de tanto OUVIR, tomba por cima do seu olho. Tudo o que você enxerga é roxo, e você grita o que VIU: VI... RRÖX! Ligação sueca termina assim, com a orelha roxa e a água-viva pulsando no ar, já esperando a próxima: a gente se fala.",
+      "cena": {
+        "descricao": "No hall de casa, você ergue no alto uma água-viva roxa gigante recém-arrancada da cabeça, os tentáculos ainda enrolados em espiral feito fio de telefone, enquanto a sua orelha, inchada, roxa e do tamanho de um prato, tomba por cima de um dos seus olhos.",
+        "partes": [
+          "tapete redondo cinza-azulado (chão do hall)",
+          "você: corpo de moletom amarelo-mostarda, de frente",
+          "cabeça bege com a boca aberta num O de susto",
+          "orelha gigante roxa inchada (disco achatado do tamanho de um prato) tombada pra frente, tapando um olho",
+          "olho livre arregalado, virado de lado pra orelha",
+          "braço erguido segurando a água-viva pela borda",
+          "sino da água-viva roxo-translúcido emissivo, maior que a sua cabeça",
+          "franja de bracinhos lilás na borda do sino",
+          "quatro tentáculos roxos em espiral de fio de telefone (hélices) descendo até o seu ombro",
+          "três pintinhas de luz rosa pulsando no topo do sino"
+        ]
+      }
+    },
+    {
+      "id": "sov-gott",
+      "elenco": "iaque-cama + pijama",
+      "ponte_sonora": "SÔÔV... GÓT! (2 sílabas, força nas duas, um pouco mais no GÓT; SÔÔV = o SOVACO cortado logo depois do V, com a força puxada toda pro SÔ: Ô FECHADO e LONGO — o mesmo Ô do 'så' (SÔ) das outras cartas — e o V colado no fim, dente de cima no lábio de baixo; sem o V sobra 'så gott', que é 'que gostoso!', outra frase; e não deixe escapar o VA de sovaco: 'sova' é o infinitivo sueco ('dormir'), e o pedido é 'sov!'; nunca o Ó aberto de 'sova' (surra) nem o 'su-' de quem fala 'suvaco' — é SÔ de boca redonda, o mesmo SÔ mineiro de 'Tack så mycket'; GÓT = o MESMO GÓT de IÉ-TE-GÓT ('Det var jättegott'): o começo de GÓSTOSO com o G duro de 'gato', Ó ABERTO e CURTO, e um T seco no lugar do resto — nunca 'GÓ-tchi'. Juntando: dorme no SOVACO GOSTOSO)",
+      "historia": "No seu quarto não tem cama: tem um iaque do Himalaia, peludo até o chão, deitado no tapete. Na hora de dormir ele levanta a pata da frente e abre o SOVACO, uma caverna de lã comprida, morninha e com cheiro de feno. Você entra de pijama e touca e começa a dizer 'que SOVACO...', mas só sai o começo, comprido e sonolento — SÔÔÔV — e a pata desce por cima de você feito um edredom, engolindo o resto da palavra. Lá do alto, o iaque grunhe o boa-noite dele, com um T batendo seco no fim: GÓT! Não existe lugar mais GÓSTOSO no mundo pra dormir — durma bem.",
+      "cena": {
+        "descricao": "Num quarto escuro de lua cheia, um iaque gigante de lã comprida está deitado no tapete com a pata da frente erguida, abrindo o sovaco felpudo onde há um travesseiro, e você de pijama listrado e touca já está meio enfiado lá dentro.",
+        "partes": [
+          "tapete retangular azul-noite (chão do quarto)",
+          "janela redonda com lua cheia amarelo-clara emissiva",
+          "corpo do iaque deitado, marrom-escuro, com franja de lã comprida até o chão",
+          "corcova de lã sobre os ombros",
+          "cabeça do iaque com focinho claro e olhos sonolentos semicerrados",
+          "dois chifres curvos cor de creme",
+          "pata da frente erguida em arco, abrindo o sovaco",
+          "ninho de lã creme no sovaco com travesseiro branco",
+          "você de pijama listrado azul e branco, meio enfiado no ninho",
+          "touca de dormir vermelha com pompom",
+          "par de pantufas azuis largadas no tapete"
+        ]
+      }
+    },
+    {
+      "id": "ha-en-bra-dag",
+      "elenco": "estrela-do-mar em brasa",
+      "ponte_sonora": "RRÁ! EN BRÁ... DÁG! (4 sílabas: rrá-en-BRÁ-DÁG; tônicas em BRÁ e DÁG; RRÁ = a gargalhada soprada de sempre, o MESMO RRÁ de 'Ha det bra' — h soprado como RR carioca, A longo e SEM R no fim: com R vira 'har', outro verbo; EN = o EM de EM BRASA, mas ORAL: E curto e N batido na língua, nunca o 'ẽi' nasal do português — é o mesmo EN = 'um' das outras cartas, por isso a estrela ergue UM braço só; BRÁ = o BRÁ de BRASA, R brando e A longo, o mesmo 'bra' de 'Ha det bra' e 'Jag mår bra'; DÁG = D'ÁGUA cortado no G: A longo e G DURO de 'gato' fechando seco — nunca 'DÁ-gui' nem 'DÁ-gua'; é o mesmo DÁG de 'idag'. Do 'Ha det bra' do dragão ela troca o DÊ pelo UM e ganha um DÁG no fim: uma brasa d'água)",
+      "historia": "O mar sueco é tão gelado que ninguém tem coragem de pular do píer. Aí uma estrela-do-mar laranja solta uma gargalhada soprada — RRÁ! — e fica EM BRASA, vermelha feito carvão de churrasco, ali mesmo, dentro D'ÁGUA. O mar ferve em volta dela, as placas de gelo derretem chiando, sobe vapor, e ela ergue UM braço só na direção da escadinha: pode pular. É a única brasa d'água do mundo, e ela acende toda manhã só pra você ter um bom dia.",
+      "cena": {
+        "descricao": "Ao lado de um píer de madeira sobre o mar gelado, uma estrela-do-mar laranja gigante brilha em brasa dentro d'água, com o mar fervendo e soltando vapor à volta, e ergue um único braço na direção da escadinha do píer.",
+        "partes": [
+          "mar azul-petróleo (disco largo)",
+          "píer de tábuas cinza-claras com escadinha de metal",
+          "placas de gelo branco-azuladas boiando nas bordas",
+          "anel de água fervendo laranja-translúcido em volta da estrela",
+          "corpo da estrela-do-mar laranja-brasa emissivo, deitado na água",
+          "quatro braços abertos na água com pontinhos amarelos",
+          "quinto braço erguido bem alto (o UM)",
+          "carinha da estrela gargalhando, boca aberta",
+          "brasas vermelho-vivo brilhando espalhadas no dorso",
+          "três nuvens de vapor brancas subindo",
+          "toalha listrada vermelha e branca pendurada no píer"
+        ]
+      }
+    },
+    {
+      "id": "sjalvklart",
+      "elenco": "piranha cortadora de grama",
+      "ponte_sonora": "RRÉLV... CLÁR-T! (2 batidas, força principal no RRÉLV e a segunda no CLÁR; RRÉLV = RELVA, a grama, sem o -A; o RR da frente é o sopro do 'sj' — FORTE e raspado, o ronco de motor de cortador, o mesmo sopro de RRÜÜK ('sjuk') e RRÍCA ('skicka'), bem mais forte que o h leve de RRÁ ('ha'), com os lábios já em bico no sopro; É ABERTO e curto; o L é de LÍNGUA no céu da boca — nunca o 'RRÉU-va' do português — e o V morde o lábio e já emenda no C; CLÁR-T = o CLARO! do português com o -O trocado por um T seco, o estalo das mandíbulas: A LONGO, e o R não vibra nem raspa — a língua enrola pra trás e cai direto no T, como no CÓRT de 'kort'; sem o T sobra 'självklar', o adjetivo — a resposta é 'klart'. E é literal: själv-klart = claro por si só)",
+      "historia": "O vizinho sueco não tem cortador de grama: tem uma piranha. Ele aponta o gramado e pergunta se ela dá conta de toda aquela RELVA — e a piranha nem espera: sai voando rente ao chão com um ronco de motor, RRRÉLV!, cuspindo aparas verdes pros lados e deixando atrás uma faixa perfeita. No fim da faixa ela fecha as mandíbulas num estalo seco — CLÁR-T! — e o cortador de verdade, encostado na cerca, fica aposentado. Perguntar a uma piranha se ela quer morder alguma coisa? Claro, óbvio.",
+      "cena": {
+        "descricao": "Num jardim de cerquinha branca, uma piranha gigante voa rente ao gramado de boca escancarada arrancando a grama, deixando atrás uma faixa verde-clara perfeitamente aparada, com aparas voando dos dentes e um cortador vermelho encostado e esquecido.",
+        "partes": [
+          "gramado verde-escuro de grama alta (disco largo)",
+          "faixa reta de grama aparada verde-clara atravessando o gramado",
+          "cerquinha branca de ripas ao fundo",
+          "cortador de grama vermelho desligado, encostado na cerca",
+          "corpo da piranha cinza-prateado com barriga vermelho-alaranjada",
+          "mandíbula de baixo enorme e prognata, escancarada",
+          "duas fileiras de dentes triangulares brancos",
+          "olho redondo amarelo de olhar mau",
+          "barbatanas e cauda cinza-escuras",
+          "nuvem de aparas de grama verdes saindo da boca"
+        ]
+      }
+    },
+    {
+      "id": "var-forsiktig",
+      "elenco": "vovó fuxiqueira + vara de testar gelo",
+      "ponte_sonora": "VAR! FU-XÍK-TI! (4 sílabas: var-fö-SHÍK-ti; força total no XÍK; VAR = a VARA sem o -a, a mesma VARA de 'Var kan jag köpa biljett?' e 'Var bor du?' — R BRANDO e AUDÍVEL: sem ele sobra VÁ, que é 'vad'; aqui o 'var' é o 'seja!' (de 'vara'), mas o som é o mesmo; FU-XÍK = o FUXICO cortado no K: FU fraquinho e rápido — é o 'för' sem força, o mesmo FUR de FUR-LÔT ('Förlåt'), com os lábios já arredondados —, o X é o chiado do 'rs', o mesmo de FÖ-XÊ-NAT e FÖ-XKU-LAN, e a força TODA cai no XÍK, I CURTO; TI = o primeiro TI do ti-ti-ti, a fofoca que vem junto com todo fuxico — UM só, e GRUDADO no K, sem respiro nem vogal no meio: XÍK-TI sai num empurrão só, como o CHÉK-ta de 'Ursäkta', nunca 'xí-ki-ti' nem 'xí-ko-ti', que criam uma sílaba a mais; o T é DURO, de 'tatu', o mesmo T de TITA em 'Jag tittar bara' — nunca 'tchi' — e o I sai curtinho e sem força; o -g final de 'försiktig' não soa na fala, como o de 'trevlig' e 'hungrig')",
+      "historia": "Lago congelado em janeiro: a vovó vai na sua frente, enrolada num xale de FUXICO colorido, batendo uma VARA comprida no gelo como fazem os patinadores suecos — VAR! VAR! Fuxiqueira de nascença, ela se abaixa e cola a orelha no gelo pra escutar o FUXICO lá de baixo. Mas o gelo fino só consegue soltar o primeiro TI do ti-ti-ti — um TI! único, agudo e seco — e racha: a rachadura corre direto pros seus patins. A vovó ergue a mão espalmada na sua cara e crava a vara no gelo: cuidado!",
+      "cena": {
+        "descricao": "Num lago congelado, a vovó de xale de fuxico colorido, agachada com a orelha colada no gelo, crava uma vara comprida no ponto de onde sai uma rachadura azul que corre até um par de patins, e ergue a outra mão espalmada mandando parar.",
+        "partes": [
+          "lago congelado azul-claro brilhante (disco largo)",
+          "margem de neve branca com dois pinheiros verde-escuros",
+          "rachadura em zigue-zague azul-escura no gelo",
+          "par de patins de lâmina prateada parados na ponta da rachadura",
+          "corpo da vovó de vestido azul-marinho, agachada",
+          "cabeça com coque branco e óculos redondos, orelha colada no gelo",
+          "xale de fuxicos: discos de pano franzidos vermelho, amarelo, verde e rosa",
+          "mão erguida espalmada (pare!)",
+          "vara comprida de madeira clara cravada em pé no gelo",
+          "ponteira de metal na ponta da vara",
+          "um único anel de som branco saltando da ponta da rachadura (o TI, um só)"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "phrases": [
+    {
+      "id": "hur-var-det-i-skolan",
+      "sv": "Hur var det i skolan?",
+      "pt": "Como foi na escola?",
+      "pronuncia": "rrür VÁR dê i SKÚU-lan? ('hur' com h soprado tipo rr carioca e U de BICO, quase Ü; 'var' = VÁR, A longo e R brando, que na fala rápida muita gente engole: 'hu va de'; 'det' = dê; 'i' = i curto; 'skolan' com o 'o' longo sueco, que soa U FECHADO: SKÚU-lan, nunca o 'skó' aberto de 'escola'; o -an do fim é o artigo colado, 'a escola'; força principal no SKÚU)",
+      "contexto": "Buscando o filho na skola ou no fritids, no carro de volta pra casa, no jantar: é a pergunta de todo fim de tarde, e a resposta clássica da criança é um 'Bra.' seco. Pra creche se usa 'på': 'Hur var det på förskolan?'.",
+      "porque": "É a frase que abre a conversa do dia com o filho, e ele vai ouvir outros pais dizendo no portão. O molde 'Hur var det ...?' serve pra qualquer coisa: hur var det på jobbet, hur var det på semestern, hur var det på festen."
+    },
+    {
+      "id": "dags-att-sova",
+      "sv": "Dags att sova!",
+      "pt": "Hora de dormir!",
+      "pronuncia": "DAKS a SÔÔ-va! ('dags' = DAKS: o g vira k colado no s e o A é curto, nada de 'dá-gui-s'; 'att' antes de verbo encolhe num 'a' rapidinho, e muito sueco fala 'ó'; 'sova' é uma das exceções em que o 'o' longo soa como o å: Ô FECHADO e longo, SÔÔ-va, o mesmo Ô de 'så' e de 'Sov gott!'; força no SÔ, nunca o 'SÓ-va' aberto de 'sova' (surra) em português, nem um 'SÚ-va' de U)",
+      "contexto": "A frase do läggdags, a hora de deitar: na porta do quarto, desligando o tablet, no fim da historinha. Também na versão longa: 'Nu är det dags att sova'.",
+      "porque": "'Dags att ...' (hora de ...) é um molde que serve pra rotina inteira: dags att äta, dags att gå, dags att borsta tänderna. Ele aprende uma estrutura e comanda o dia todo."
+    },
+    {
+      "id": "ta-pa-dig-jackan",
+      "sv": "Ta på dig jackan!",
+      "pt": "Vista a jaqueta!",
+      "pronuncia": "ta PÔ dêi IÁK-kan! ('ta på' é verbo com partícula e a força cai no PÔ: Ô fechado e longo; 'dig' na fala = dêi; 'jackan' com J = I de ioga, A curto e K dobrado: IÁK-kan; o -n do fim é o artigo, 'a jaqueta'; força no PÔ e no IÁK)",
+      "contexto": "Na hallen, de outubro a abril, antes de sair pra förskola, pro parque ou pro carro, dita dez vezes por dia. Troque a peça: ta på dig mössan (o gorro), vantarna (as luvas), skorna (os sapatos), overallen (o macacão).",
+      "porque": "É o molde do inverno sueco com criança: 'ta på dig ...' veste qualquer coisa. E é exatamente assim que os pedagogos da förskola falam, então o filho ouve em casa o mesmo comando que ouve lá."
+    },
+    {
+      "id": "skynda-dig",
+      "sv": "Skynda dig!",
+      "pt": "Anda logo! / Rápido!",
+      "pronuncia": "RRÜN-da dêi! ('sk' antes de y soa como o 'sj': um sopro forte e raspado, tipo rr carioca com os lábios em bico, o mesmo de 'sjuk' e 'skicka'; 'y' = Ü curto, lábios de U e língua de I; N de verdade antes do d; 'dig' na fala = dêi; força no RRÜN)",
+      "contexto": "De manhã a caminho da förskola, no supermercado, atravessando a rua, quando o ônibus já está no ponto: é o 'anda logo!' sueco. Mais suave: 'Skynda på lite'; mais urgente: 'Skynda dig, vi är sena!'.",
+      "porque": "Curtíssima e de uso diário, e ele vai ouvir de outros pais e dos pedagogos também. De quebra treina o sopro do 'sk' antes de y, que volta em 'sky' (nuvem) e 'skylt' (placa)."
+    },
+    {
+      "id": "har-du-borstat-tanderna",
+      "sv": "Har du borstat tänderna?",
+      "pt": "Você escovou os dentes?",
+      "pronuncia": "rrar-dü BÓSH-tat TÉN-de-na? ('har du' cola na fala: rrá-dü, h soprado e o R derretendo no d; 'borstat' com Ó aberto e curto e o 'rs' virando X: BÓSH-tat, com o T final; 'tänderna' com É aberto, e o 'rn' do fim derrete num N só: TÉN-de-na; força no BÓSH e no TÉN)",
+      "contexto": "Toda noite antes de dormir e toda manhã, na porta do banheiro; também é a pergunta da tandsköterska na consulta da criança na Folktandvården.",
+      "porque": "Rotina garantida duas vezes por dia. 'Borsta tänderna' é a expressão fixa, e 'Har du ...?' + particípio é o molde de toda pergunta de checagem: har du ätit? har du packat väskan? har du kissat?"
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "hur-var-det-i-skolan",
+      "elenco": "zumbi escolar + vara com a prova nota D",
+      "ponte_sonora": "RRÜR! VÁR... DÊ? IS-KÚÚ-LAN? (6 batidas: rrür-vár-dê-is-KÚÚ-lan; tônica forte no KÚÚ; RRÜR é o rosnado do zumbi E o 'hur' de sempre, o MESMO RRÜR de 'Hur kommer jag till Storgatan?' e 'Hur bokar man tvättstugan?': h soprado como RR carioca, vogal de BICO (lábios de U, língua de I, nunca o U chapado de 'urso') e R final BRANDO; VÁR = a VARA sem o -a, a mesma de 'Var bor du?' e 'Var kan jag köpa biljett?' (aqui 'var' quer dizer 'foi', mas a palavra é a mesma): A longo e R BRANDO e AUDÍVEL, porque sem ele sobra VÁ, que é 'vad' (o quê); DÊ = a nota D da prova, Ê FECHADO, o 'det' de sempre, e SOZINHO: colado no I vira DÊI, que nas cartas é 'dig'; IS-KÚÚ-LAN = a ESCOLA do jeito que o brasileiro fala, 'iscola', e esse I que a gente põe antes do S é justamente o 'i' (= na) sueco, de graça; o S é de 'sapo', sibilante, nunca o X chiado do carioca ('ishcola'); só que gemida por um zumbi: o Ó aberto vira um UUU fechado e comprido (é o 'o' longo sueco, o mesmo BÚ de 'bokar' e STÚR de 'stor'), e o -A do fim se arrasta num N, que é o artigo colado no FIM: skola = escola, skolan = A escola; N com a ponta da língua, sem virar o 'lã' nasal)",
+      "historia": "Três da tarde: o portão da ESCOLA se abre e lá vem ele se arrastando, o zumbi, de mochila num ombro só, um braço esticado pra frente, rosnando sem parar: RRÜÜR... Na outra mão ele ergue uma VARA comprida, feito bandeira branca de rendição, com a prova espetada na ponta e um DÊ vermelho enorme no meio da folha. Ele nem precisava abrir a boca, mas abre, e geme o nome do lugar de onde acabou de sair, com um U de zumbi que não termina nunca: IS-KUUUU-LAN... E você pergunta assim mesmo: como foi na escola?",
+      "cena": {
+        "descricao": "Na saída de uma escola de parede amarela, um zumbi-criança verde-acinzentado se arrasta pela calçada com um braço esticado e a boca aberta no gemido, erguendo na outra mão uma vara comprida com uma prova espetada na ponta, marcada com um D vermelho enorme.",
+        "partes": [
+          "calçada cinza retangular com faixas de grama verde nas bordas",
+          "fachada baixa de escola, parede amarela com telhado vermelho",
+          "porta dupla azul aberta no meio da fachada",
+          "placa branca sobre a porta escrita 'ESCOLA'",
+          "zumbi-criança de pele verde-acinzentada, corpo inclinado pra frente, um braço esticado à frente",
+          "cabeça com olheiras roxas fundas, cabelo preto espetado e boca aberta num gemido",
+          "camiseta laranja rasgada na barra e bermuda azul",
+          "mochila vermelha pendurada num ombro só, escorregando",
+          "vara de madeira marrom comprida erguida na outra mão, feito mastro",
+          "prova (folha branca) espetada no topo da vara, com um 'D' vermelho enorme"
+        ]
+      }
+    },
+    {
+      "id": "dags-att-sova",
+      "elenco": "coala dorminhoco + livro de historinha + sovaco-travesseiro",
+      "ponte_sonora": "DÁKS! A... SÔÔ-VA(co)! (4 batidas: DÁKS-a-SÔÔ-va; força no DÁKS e, mais ainda, no SÔÔ; DÁKS = a pancada do livro de historinha fechando de uma vez: D de 'dado', A curto e aberto, e um K e um S colados no fim, SEM vogal no meio, nunca 'DÁ-kis' nem 'DÁ-gui-s'; é o 'dags', parente do DÁG de 'idag' (dia), mas na fala o G vira K antes do S e o A encurta; sem o S sobra 'dag', que é só 'dia'; A = o bocejo curtinho do coala, que é o 'att': fraco, rápido e sem força; SÔÔ-VA = o SOVACO do coala, o MESMO SOVACO de 'Sov gott!' (SÔÔV), só que cortado DEPOIS do VA: Ô FECHADO e LONGO, de boca redonda, o Ô do 'så' (SÔ) das outras cartas, com a força TODA no SÔ (o português joga a força no VA de so-VA-co: puxe pro SÔ) e o -CO engolido pelo ronco; lá no 'Sov gott!' o VA cai, porque 'sov!' é o pedido (durma!); aqui ele FICA, porque depois de 'att' vem o infinitivo 'sova' (dormir); nunca o Ó aberto de 'sova' (surra) em português, nem o U fechado de IS-KÚÚ-LAN: 'sova' é das palavras em que o 'o' longo sueco soa como å)",
+      "historia": "O coala dorme vinte horas por dia, e as outras quatro passa pedindo historinha. Hoje você abre o livro lá no alto do eucalipto, lê meia linha, e é ele mesmo quem fecha o livro com uma patada só: DÁKS! Solta um bocejo curtinho, A..., ergue o braço e deita a cabeça no próprio SOVACO, branquinho e fofo feito travesseiro, que é onde coala que se preze dorme. Ainda tenta anunciar a cama, 'no SÔÔÔ-VA...', mas apaga antes do CO, que já sai em ronco. Hora de dormir!",
+      "cena": {
+        "descricao": "No alto de um eucalipto à noite, um coala deitado num colchãozinho sobre o galho acaba de fechar com a pata um livro de historinha vermelho e, de olhos fechados e boca aberta num bocejo, deita a cabeça no próprio sovaco branco e felpudo, com o braço erguido em arco por cima feito travesseiro.",
+        "partes": [
+          "chão de grama verde-escura (disco)",
+          "tronco de eucalipto cinza-claro e liso, com um galho grosso na horizontal",
+          "tufos de folhas de eucalipto verde-acinzentadas no alto",
+          "colchãozinho azul-claro em cima do galho, sem travesseiro",
+          "cobertor amarelo com bolinhas brancas",
+          "abajur pequeno de cúpula laranja acesa pendurado num galho de cima",
+          "livro de historinha vermelho e grosso, fechado, equilibrado no galho",
+          "corpo do coala cinza deitado de lado, com o peito branco e uma pata da frente ainda em cima do livro",
+          "braço de cima erguido em arco por cima da cabeça, mostrando o sovaco de pelo branco e felpudo (o travesseiro)",
+          "cabeça do coala encostada no sovaco, olhos fechados e boca aberta num bocejo",
+          "orelhas redondas felpudas com miolo branco e nariz preto grande"
+        ]
+      }
+    },
+    {
+      "id": "ta-pa-dig-jackan",
+      "elenco": "quati de Foz do Iguaçu + jaca-casaco",
+      "ponte_sonora": "TÁ, PÔ! DÊI... IÁK-KAN! (5 batidas: tá-PÔ-dêi-IÁK-kan; tônicas no PÔ e no IÁK; TÁ = o 'ta' de sempre, o mesmo TÁ de 'Ta med, tack' (TÁ, MÊÊ!) e de 'Kan du ta det en gång till?': A aberto e longo; PÔ = o 'pô!' brasileiro, Ô FECHADO de boca redonda, o mesmo 'på' de 'GRÁTIS, PÔ!' e 'DÊ, PÔ!', e aqui ele leva força, porque 'ta PÅ' (vestir) é verbo com partícula; 'TÁ, PÔ!' é o resmungo inteiro, de uma vez; DÊI = o 'DEI!' satisfeito de quem acabou de fazer o serviço em você, o mesmo DÊI da raposa de 'Kom in och sätt dig!': 'dig' na fala é 'dej', UMA sílaba, nunca 'dê-i'; IÁK-KAN = a JACA com o J virando I de IOGA, como todo J sueco ('jag' = IÁ, 'jobbar' = IÓBAR), nunca o J chiado do português; A curto, K dobrado (a língua segura o K um instante antes de soltar) e o N do fim é o artigo colado: jacka = jaqueta, jackan = A jaqueta, o mesmo N de IS-KÚÚ-LAN ('i skolan'); N de ponta de língua, sem nasal; e é UMA palavra só, a jaca inteira: picada em 'IÁ... CAN' ela soa 'jag kan' (eu posso))",
+      "historia": "Lá fora faz dez graus abaixo de zero, e o quati recém-chegado de Foz do Iguaçu quer ir pra rua de bermuda e chinelo. Quando vê o casaco chegando, ele revira os olhos e resmunga: TÁ, PÔ! A mãe nem discute: enfia o casaco pela cabeça dele de uma vez e dá dois tapinhas no peito, satisfeita: DEI! Só aí ele olha pra baixo e vê o que está vestindo: não é jaqueta nenhuma, é uma JACA inteira, oca, verde e cheia de espinhos, com dois furos pros bracinhos, e quentinha que só. Vista a jaqueta!",
+      "cena": {
+        "descricao": "Na hallen de uma casa sueca, um quati de bermuda e chinelo, de cara emburrada, está enfiado até o pescoço numa jaca verde oca e espinhenta, com os bracinhos saindo por dois furos e a cauda listrada erguida.",
+        "partes": [
+          "piso de madeira clara da hallen",
+          "capacho cinza retangular na frente da porta",
+          "porta de entrada vermelho-sueco com moldura branca, entreaberta, com uma fresta de neve no chão lá fora",
+          "cabideiro de parede com ganchos e um gorro azul de pompom pendurado",
+          "sapateira baixa com duas botinhas de neve amarelas",
+          "quati em pé, pelo marrom-alaranjado, focinho comprido e escuro, cara emburrada de sobrancelhas franzidas",
+          "jaca verde-amarelada oca vestindo o tronco do quati (casca coberta de pontinhas), com os bracinhos saindo por dois furos",
+          "cauda longa listrada de anéis marrons e pretos, erguida",
+          "bermuda azul-turquesa e chinelos verdes",
+          "três gomos amarelos de jaca caídos no chão"
+        ]
+      }
+    },
+    {
+      "id": "skynda-dig",
+      "elenco": "urubu-médico + estetoscópio + perna parada",
+      "ponte_sonora": "RUIM DA... DÊI! (3 batidas: RRÜN-da-dêi; força no RRÜN; RUIM DA = o 'RUIM DA perna' do diagnóstico do urubu, sem a perna; o R de começo de palavra já sai soprado à carioca, e esse sopro é o 'sk' antes de Y: FORTE, raspado e já com os lábios em bico, o MESMO sopro de RRÜÜK ('sjuk') e RRÍCA ('skicka'), bem mais forte que o h leve de RRÜR ('hur') e RRÁR ('har'); o pulo do gato: o RUIM do português traz o U e o I em fila, e aqui você aperta os dois num som SÓ e CURTO, lábios no bico do U e língua no lugar do I: é o Ü, o y sueco, o mesmo de TÜ ('tycker') e LÜ ('lycka'); nunca 'ru-ÍM' em duas sílabas, que cria uma sílaba a mais; o N é de verdade, ponta da língua no céu da boca, sem o nasal do português, e emenda direto no DA, fraquinho; e repare: RRÜR ('hur') acaba em R, RRÜN-DA tem N e DA; DÊI = o 'DEI!' satisfeito de serviço feito em você, o mesmo DÊI de 'Ta på dig jackan!' e de 'Kom in och sätt dig!': 'dig', uma sílaba só)",
+      "historia": "Sete e quarenta, casaco no gancho, e você ainda está sentado na frente do cereal, de colher no ar, sem piscar. Tão parado que entra pela janela da cozinha um urubu de estetoscópio no pescoço: encosta o aparelho na sua perna, que não mexe nem a pau, e dá o diagnóstico já de olho no almoço: RUIM DA PERNA... Você pula da cadeira na hora, ele enfia a mochila nas suas costas com uma bicada e te empurra porta afora, todo satisfeito com o susto: DEI! Anda logo!",
+      "cena": {
+        "descricao": "Numa cozinha de manhã, um urubu preto enorme de estetoscópio no pescoço ausculta a sua perna esticada, enquanto você, congelado na cadeira, segura a colher no ar diante de uma tigela de cereal intocada.",
+        "partes": [
+          "piso de ladrilhos brancos e cinza da cozinha",
+          "mesa de cozinha quadrada branca",
+          "tigela azul cheia de cereal amarelo, intocada",
+          "cadeira vermelha",
+          "você sentado, de moletom laranja, duro feito estátua, com uma colher erguida no ar",
+          "perna esticada pra frente, de meia listrada vermelha e branca",
+          "mochila escolar verde caída ao pé da cadeira",
+          "urubu preto grande em pé no chão diante da perna, asas meio abertas",
+          "cabeça pelada cinza-enrugada com bico curvo branco-amarelado",
+          "estetoscópio prateado no pescoço do urubu, com a ponta redonda encostada no seu joelho",
+          "pés cinza com dedos compridos"
+        ]
+      }
+    },
+    {
+      "id": "har-du-borstat-tanderna",
+      "elenco": "tubarão BOSS + tender de Natal",
+      "ponte_sonora": "RRÁR-DÜ? BÓSH... TAT! TÉN-DER-NA? (7 batidas: rrar-dü-BÓSH-tat-TÉN-de-na; tônicas no BÓSH e no TÉN; RRÁR-DÜ = o 'har du' de sempre, o MESMO de 'Har du tid en stund?': o rugido curto com h soprado, A longo e R BRANDO que derrete direto no D, rrá-dü; sem esse R sobra 'ha', outro verbo; DÜ com BICO de pato; BÓSH = o BOSS do mar, dito como o carioca diz 'o boss tá...': Ó ABERTO e curto, e o S chiando em X de xarope porque vem um T atrás; é o 'rs' sueco, que sempre vira X (o mesmo de FEIXE-THOR, 'förstår', e de ÚÚÚ-XAK, 'orsak'); TAT = UMA batida seca da nadadeira na pia, T seco de 'tatu', nunca 'tchi', e esse T do fim não cai: 'borstat' (escovou), não 'borsta' (escovar); TÉN-DER = o TENDER de Natal, mas com É ABERTO de 'pé' e N na ponta da língua, sem o 'tẽ' nasal do português: é o 'tänder' (dentes); NA = o artigo colado no fim, agora no plural, 'OS dentes' (como o -N de 'skolan' e 'jackan'), e o R antes dele não soa: a ponta da língua já vai enrolada pra trás e cai direto no N, como o R que cai no T de CLÁR-T ('självklart'): TÉN-de-na)",
+      "historia": "Dez da noite, e na porta do banheiro está ele: o tubarão, o BOSS do mar, de gravata vermelha e corrente de ouro. Ele solta um rugido curto, RRÁR!, e espeta a nadadeira no seu nariz: DÜ? Enquanto espera a resposta, bate a outra nadadeira na pia, uma vez só, seco: TAT! Mas quando abre o sorriso de sete fileiras de dentes, lá está, entalado NA dentadura do próprio chefão, um TENDER de Natal inteiro, com cravo e tudo. E quem pergunta é ele: você escovou os dentes?",
+      "cena": {
+        "descricao": "Num banheiro de azulejos, um tubarão enorme de gravata vermelha e corrente de ouro, em pé sobre a cauda ao lado da pia, aponta a nadadeira pra frente com a bocarra aberta, onde um tender de Natal inteiro está entalado entre as fileiras de dentes.",
+        "partes": [
+          "piso de azulejos azul-claros e brancos em xadrez",
+          "pia branca de coluna com espelho redondo de moldura dourada",
+          "copo verde na pia com uma escova de dentes amarela",
+          "corpo do tubarão cinza-azulado de pé sobre a cauda, barriga branca",
+          "nadadeira dorsal alta e triangular",
+          "bocarra aberta com várias fileiras de dentes triangulares brancos",
+          "tender de Natal (oval rosado com casca dourada em xadrez e cravos escuros) entalado entre os dentes",
+          "gravata vermelha pendurada no peito",
+          "corrente dourada grossa com plaquinha escrita 'BOSS'",
+          "uma nadadeira esticada apontando pra frente e a outra apoiada na borda da pia",
+          "olhinhos pretos redondos"
+        ]
+      }
+    }
+  ]
+}

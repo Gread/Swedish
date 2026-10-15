@@ -1,0 +1,154 @@
+{
+  "phrases": [
+    {
+      "id": "vad-heter-du",
+      "sv": "Vad heter du?",
+      "pt": "Qual é o seu nome?",
+      "pronuncia": "va RRÊÊ-ter dü? ('vad' = VÁ, o D não soa; 'heter' com H soprado — um RR carioca levinho, nunca vibrado — e Ê FECHADO e LONGO de 'você', com a força toda nele; o -ter é fraquinho e o R dele se funde com o D de 'du' num D de língua enrolada pra trás, como em 'Hur mår du?'; 'du' com bico de pato: dü)",
+      "contexto": "Quando o outro não se apresentou: criança no parquinho ou na förskola, colega novo no curso de SFI, alguém na fila de atendimento, ou quando você esqueceu o nome de quem já conhece. Entre adultos o sueco costuma dizer o próprio nome primeiro ('Jag heter...') e esperar o seu.",
+      "porque": "Fecha o par da apresentação com 'Jag heter...': você sabe dizer o seu nome e pedir o do outro. E é a pergunta que toda criança sueca faz — com filhos na förskola, você vai ouvir e usar o tempo todo."
+    },
+    {
+      "id": "hur-stavar-man-det",
+      "sv": "Hur stavar man det?",
+      "pt": "Como se escreve isso?",
+      "pronuncia": "rür STÁA-var man dê? ('hur' com H soprado, Ü de bico e R final brando; 'stavar' começa DIRETO no S, sem o 'i' que o brasileiro põe na frente ('istavar'), força no STÁ com A LONGO, e o -var curto com R BRANDO de 'cara', que TEM que soar: sem ele vira 'stava', o infinitivo; 'man' seco, fraquinho e sem nasal; 'det' = dê)",
+      "contexto": "Quando alguém diz um nome de rua, sobrenome, remédio ou palavra que você precisa anotar ou digitar: no telefone com a vårdcentral, no balcão da Skatteverket, numa reunião. E é o que o atendente te pergunta quando você diz o SEU nome brasileiro.",
+      "porque": "Nome sueco quase nunca se escreve como soa (e o seu também não, para eles) — a frase evita erro em formulário, e-mail e agenda. E usa o molde 'Hur ___ar man ___?' (como se faz X), o mesmo de 'Hur bokar man tvättstugan?'."
+    },
+    {
+      "id": "tack-for-hjalpen",
+      "sv": "Tack för hjälpen!",
+      "pt": "Obrigado pela ajuda!",
+      "pronuncia": "TAK fö IÉL-pen! ('tack' com A curto e K seco; 'för' fraquinho, lábios em bico com língua de É, e o R some antes do 'hj'; 'hjälpen' começa com I de IOGA — o H não soa —, força no IÉL com É aberto e L de verdade, língua no céu da boca; o -pen final é curto e sem nasal)",
+      "contexto": "Depois que alguém te ajudou: o vizinho que segurou a porta para o carrinho, o funcionário que achou o produto, o colega que explicou o sistema, o motorista que esperou você chegar no ponto. Também por escrito, no fim de e-mail e mensagem.",
+      "porque": "Agradece a ajuda concreta, não só um 'obrigado' genérico — soa caloroso e é exatamente o que o sueco diz. E abre a família 'Tack för ...': 'Tack för maten', 'Tack för idag', 'Tack för senast'."
+    },
+    {
+      "id": "ursakta-far-jag-komma-forbi",
+      "sv": "Ursäkta, får jag komma förbi?",
+      "pt": "Com licença, posso passar?",
+      "pronuncia": "ÜÜ-shék-ta, fô(r) ia KÓM-ma fö-BÍÍ? ('ursäkta' como sempre: ÜÜ longo com bico, o 'rs' vira CH, -ta fraquinho; 'får jag' sai quase uma palavra só, 'fô-r'ia': FÔ com Ô FECHADO e longo e um R de um toque só, de 'cara', encostado no 'ia' — na fala rápida ele fica levíssimo, mas é ele que faz 'får' (posso) e não 'få', o infinitivo; 'komma' com Ó ABERTO e M demorado; 'förbi' tem a força no FIM: fö-BÍÍ, Ö curtinho de bico e I longo)",
+      "contexto": "No corredor do ônibus ou do trem, entre as gôndolas estreitas do ICA, na porta do metrô lotado, na fileira do cinema — sempre que alguém está no caminho. A frase é dita baixinho e a pessoa se encolhe com um 'Javisst!' (claro).",
+      "porque": "Substitui o 'sorry' murmurado e o empurrãozinho calado, que na Suécia pegam mal. E 'Får jag ...?' é o jeito educado de pedir permissão pra qualquer coisa: 'Får jag sitta här?', 'Får jag fråga en sak?'."
+    },
+    {
+      "id": "jag-maste-ga-nu",
+      "sv": "Jag måste gå nu.",
+      "pt": "Tenho que ir agora.",
+      "pronuncia": "iá MÓS-te gô NÜÜ ('jag' = iá; 'måste' com força no MÓS, Ó ABERTO e CURTO — é o å curto, como em 'åtta' —, S comprido e o -te fraquinho de T duro, nunca 'tchi'; 'gå' = GÔ com Ô FECHADO e LONGO — o å longo —, SEM R — com R vira 'går', outra forma; 'nu' com bico de pato, longo e com força: é o 'agora' da frase)",
+      "contexto": "Saindo da festa, do after-work, da fika que se estendeu, do papo no corredor ou do telefonema. Quase sempre com o motivo junto: '..., jag ska hämta på förskolan' ou '..., bussen går snart'.",
+      "porque": "O sueco vai embora cedo e sem drama, e esta é a saída educada que todo mundo aceita. E 'måste' + verbo é o molde de toda obrigação: 'Jag måste jobba', 'Jag måste handla', 'Jag måste gå'."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "vad-heter-du",
+      "elenco": "narval recepcionista + etiqueta de nome em branco",
+      "ponte_sonora": "VÁ! RRÊÊ-ter... DÜ? (4 sílabas: va-RRÊÊ-te-dü; a força TODA no RRÊÊ; VÁ é o MESMO 'vad' de 'VÁ, ASSADO?!', 'VÁ, CÜL!' e 'VÁ! É CLÓ-CAN' — um grito SEM R e sem adereço: com R vira 'var' (onde); RRÊÊ-ter é o MESMO 'heter' de 'Jag heter...' e 'Vad heter det på svenska?': o pigarro raspado, em que o RR é só o sopro do h, LEVE, nunca vibrado, com Ê FECHADO de 'você', longo, e o -ter curtinho, cujo R encosta no D e some dentro dele, língua enrolada pra trás, como o sueco funde o 'rd'; DÜ = o 'du' de CAN-DU, com BICO DE PATO, e é ele que separa esta carta de 'Vad heter det på svenska?': lá o alce aponta um OBJETO (DÊ, isso), aqui a presa do narval aponta VOCÊ (DÜ))",
+      "historia": "Primeiro dia do curso de sueco: todo mundo com etiqueta de nome no peito, e a sua em branco. A recepção é um tanque, e de dentro dele emerge um narval de quatro metros com uma prancheta na nadadeira. Ele solta um VÁ! que espirra água na sala inteira e depois pigarreia pelo respiradouro — RRÊÊÊ-ter! —, um jato de vapor que embaça os óculos de todo mundo. Aí estica a presa de dois metros e encosta a pontinha, devagar, bem no meio da sua etiqueta vazia: DÜ? — e VOCÊ, qual é o seu nome?",
+      "cena": {
+        "descricao": "Numa sala de aula, um narval cinza-malhado ergue-se de um tanque turquesa soltando um jato de vapor pelo respiradouro e encosta a ponta da presa espiralada na etiqueta de nome em branco presa no peito de um manequim.",
+        "partes": [
+          "piso de linóleo verde-claro",
+          "tanque retangular com borda branca e água azul-turquesa",
+          "corpo do narval cinza-azulado com manchas escuras, erguido para fora d'água (cápsula grande inclinada)",
+          "cabeça arredondada do narval com olhinhos pretos e boca em sorriso curto",
+          "presa espiralada cor de marfim, longa e fina (cone comprido com sulco em espiral), apontando para a frente",
+          "jato de vapor branco translúcido saindo do respiradouro (esferas empilhadas)",
+          "nadadeira lateral segurando uma prancheta marrom com papel branco",
+          "busto de manequim bege (você) de frente para o narval",
+          "etiqueta de nome branca com faixa vermelha no topo, em branco, no peito do manequim, tocada pela ponta da presa",
+          "três etiquetas de nome soltas sobre a borda do tanque (quadradinhos brancos com faixa vermelha)"
+        ]
+      }
+    },
+    {
+      "id": "hur-stavar-man-det",
+      "elenco": "detetive de lupa e cachimbo + axolote suspeito no aquário",
+      "ponte_sonora": "RRÜR! (e)STAVA AR-MAN... DÊ? (5 sílabas: rür-STÁ-var-man-dê; a força TODA no STÁ; RRÜR é o 'hur' de sempre — o MESMO ronco de 'Hur bokar man tvättstugan?', 'Hur kommer jag till Storgatan?' e 'Hur mår du?': RR soprado leve na frente, Ü DE BICO (nunca o U chapado de 'urso') e R brando no fim; (e)STAVA AR-MAN = a acusação do detetive, 'você ESTAVA ARMANDO!', engasgada no MAN e emendada do jeito que todo brasileiro já fala, 'stavarman': os dois A viram um só e o R do AR gruda no VA — STÁ-VAR-man; três ajustes: (1) o S cola DIRETO no T, sem 'i' nem 'e' na frente, como em SVÊNS-ka; (2) a força é do esTÁva — é ali que a lupa bate na mesa —, com o A LONGO, e o MAN sai engolido pela tosse: fraquinho, seco e SEM nasal, nunca o 'arMÃNdo' forte do português; é o mesmo 'man' átono de CARMAN ('bokar man') e MANCA ('slänger man'); (3) o R entre os dois é de UM TOQUE SÓ, como o paulista fala 'ARMA', nunca o RR raspado carioca — mas TEM que soar: sem ele sobra 'stava', o infinitivo; DÊ = o 'det' de sempre, Ê fechado e sem T: é o ISSO apontado com a caneta, o rabisco do bloquinho)",
+      "historia": "Sala de interrogatório, um abajur só. No aquário em cima da mesa o filtro ronca — RRÜR! — e lá dentro o axolote rosa sorri aquele sorriso que nunca sai da cara dele, como quem não fez nada. O detetive de capa, cachimbo no canto da boca, bate a lupa na mesa com toda a força no TÁ — 'Você esTÁVA AR-MAN...' — e no MAN engasga com a fumaça do próprio cachimbo: o -DO nunca sai. Tossindo, ele abre o bloquinho pra fichar o suspeito, escreve A... X... e trava. Bate a caneta no rabisco e vira o bloquinho pro aquário: DÊ? — isso aqui, como é que se escreve?",
+      "cena": {
+        "descricao": "Sob um abajur, um detetive de sobretudo e chapéu, tossindo fumaça do cachimbo, aponta a caneta para o 'AX?' rabiscado num bloquinho virado para um aquário onde um axolote rosa de brânquias em leque sorri.",
+        "partes": [
+          "piso de tábuas marrom-escuras",
+          "mesa de metal cinza",
+          "abajur de mesa com cúpula verde e luz amarela emissiva",
+          "aquário retangular de vidro azulado translúcido sobre a mesa",
+          "filtro preto no canto do aquário soltando bolhas brancas (esferinhas em coluna)",
+          "axolote rosa-claro dentro do aquário, de frente, com seis brânquias rosa-choque em leque dos lados da cabeça e sorriso largo",
+          "corpo do detetive em sobretudo bege com cinto, inclinado sobre a mesa",
+          "cabeça do detetive com chapéu fedora marrom, bigode e cachimbo marrom no canto da boca soltando três nuvenzinhas de fumaça cinza (esferas)",
+          "braço estendido segurando uma caneta preta apontada para o bloquinho",
+          "lupa dourada com lente azulada na outra mão",
+          "bloquinho branco aberto na mesa, virado para o aquário, com 'AX?' rabiscado"
+        ]
+      }
+    },
+    {
+      "id": "tack-for-hjalpen",
+      "elenco": "beija-flor pescador de chave + bueiro",
+      "ponte_sonora": "TAC! FÖ... IÉL-PEN! (4 sílabas: tak-fö-IÉL-pen; a força no IÉL; TAC = o 'tack' de sempre, A curto e K seco; FÖ = o beijinho soprado de BICO, o MESMO FÖ de 'Ett bord för två': lábios de Ô com língua de Ê, CURTO e fraco — é um BEIJA-flor, afinal —, e o R de 'för' derrete antes do I; nunca o FÔ de bochecha estufada de 'få'; IÉL = o MESMO IÉL do iodel de 'Kan du hjälpa mig?': I de IOGA — o H de 'hjälp' NÃO soa, e com RR carioca vira outra coisa —, É ABERTO e L DE VERDADE, língua no céu da boca, nunca 'iéu'; PEN = a PENA sem o -A: E curto, SEM nasal, N batido na língua — esse -EN é o 'a' de 'a ajuda'; sem ele sobra 'hjälp', ajuda qualquer)",
+      "historia": "Sua chave escorrega da mão e cai entre as barras do bueiro. Do nada surge um beija-flor verde-esmeralda, enfia o bico de agulha pela grade e pesca a chave pela argola. Você agradece com um toquinho de dedo na asa dele — TAC! — e, já que é um BEIJA-flor, manda um beijinho soprado de bico: FÖ! Ele fica tão orgulhoso que solta um iodel de vitória, IÉÉÉL!, o mesmo grito de quem pede socorro na montanha, e na pirueta deixa cair uma PENA verde que pousa no seu nariz: PEN. Obrigado pela ajuda!",
+      "cena": {
+        "descricao": "Sobre a grade de um bueiro na calçada, um beija-flor verde-esmeralda paira segurando uma chave dourada pela argola na ponta do bico, enquanto um dedo humano toca a ponta da asa dele e uma pena verde cai girando.",
+        "partes": [
+          "calçada de pedra cinza-clara",
+          "meio-fio cinza mais escuro",
+          "grade de bueiro preta retangular com barras paralelas",
+          "corpo do beija-flor verde-esmeralda com peito branco, pairando inclinado",
+          "cabeça do beija-flor com garganta vermelho-rubi brilhante e olhinho preto",
+          "bico preto longo e fino (cilindro afilado) apontando para baixo",
+          "duas asas abertas em leque, verde translúcido",
+          "chave dourada grande pendurada pela argola na ponta do bico",
+          "mão humana bege com o indicador tocando a ponta de uma asa",
+          "pena verde comprida caindo inclinada no ar"
+        ]
+      }
+    },
+    {
+      "id": "ursakta-far-jag-komma-forbi",
+      "elenco": "chinchila bloqueando a fileira do cinema + folha de alface",
+      "ponte_sonora": "ÜÜÜ... CHEQUE-ta! FÔ(r)-IA... CÓ-MA! FOBI(a)! (9 sílabas: ÜÜ-shék-ta-fô-ia-KÓM-ma-fö-BÍ; força no ÜÜ, no CÓ e, mais que tudo, no BÍ; ÜÜÜ... CHEQUE-ta é o MESMO 'ursäkta' de 'Ursäkta, jag förstår inte' e 'Ursäkta att jag stör': gemido envergonhado LONGO e de bico, depois CHÉK-ta numa palavra só, sem o 'i' de 'chéki', -ta fraquinho; FÔ(r)-IA = FOLHA dita à caipira, 'FÔIA', sem o LH: Ô FECHADO e longo, o mesmo Ô de 'få' — mas com um toquezinho de R entre o FÔ e o IA, de um toque só, de 'cara' (fô-r'ia, nunca o RR raspado): na fala rápida ele fica levíssimo, só que é ele que faz 'får' (posso); sem ele sobra 'få', o infinitivo de 'Kan jag få menyn?'; o IA é o 'jag' de sempre, só que sem força; CÓ-MA = 'COMA!', do verbo comer, irmão do CÓ-MER de 'Jag kommer från Brasilien' e o mesmo CÓ-MA de 'Det är akut': Ó ABERTO do 'CÓME!' que a gente grita ('come logo!'), de 'cópia', nunca o 'cô' nasal de 'coma', e M demorado; FOBI(a) = FOBIA sem o -A, com a força no BÍ igualzinho ao português; só o FO ganha BICO — é o MESMO FÖ do beijinho de 'Tack för hjälpen': lábios de beijo com língua de É, curtinho — e o I é LONGO: fö-BÍÍ; com O de boca aberta sai 'fobi', que em sueco é a própria fobia: é o bico que faz 'förbi')",
+      "historia": "A sessão acabou, as luzes acenderam e você precisa sair — mas na fileira apertada do cinema, entre você e o corredor, tem uma chinchila do tamanho de uma poltrona: uma bola de pelo cinza que tapa a passagem de encosto a encosto. Você solta o gemido de sempre, ÜÜÜ..., e estende o CHEQUE-ta: ela nem pisca. Então tira da bolsa uma FOLHA de alface e balança na frente do focinho: FÔ-IA! ... CÓ-MA! Ela abocanha — mas tem FOBIA de gente tão perto: arregala os olhos e, como chinchila assustada faz de verdade, solta o pelo de uma vez só. Sobra uma chinchilinha magrela mastigando alface encolhida na poltrona, e você passa por cima da montanha de pelo até o corredor.",
+      "cena": {
+        "descricao": "Na fileira de um cinema, com a tela acesa ao fundo, uma chinchila magrela e sem pelo, de olhos arregalados, mastiga uma folha de alface encolhida numa poltrona, ao lado de uma montanha de pelo cinza que acabou de soltar no meio da passagem e de um cheque caído.",
+        "partes": [
+          "piso de carpete vinho entre as fileiras (chão)",
+          "fileira de poltronas de cinema azul-marinho com braços, lado a lado",
+          "encostos da fileira da frente, mais baixos, delimitando a passagem estreita",
+          "tela de cinema branca e luminosa ao fundo (painel retangular emissivo)",
+          "montanha de pelo cinza fofo no meio da passagem (esferas agrupadas)",
+          "corpo da chinchila magrela rosada, sem pelo, encolhida sentada numa poltrona",
+          "cabeça da chinchila com orelhas redondas enormes e olhos pretos arregalados",
+          "bigodes brancos longos (cilindros finos)",
+          "folha de alface verde-clara ondulada entre as patinhas, saindo da boca",
+          "cheque branco com borda verde caído no chão ao lado do pelo",
+          "balde de pipoca listrado de vermelho e branco tombado no carpete"
+        ]
+      }
+    },
+    {
+      "id": "jag-maste-ga-nu",
+      "elenco": "salamandra de fogo + nuvem de chuva",
+      "ponte_sonora": "IÁ! MÓSTE... GÔ(ta)! NÜ(vem)! (5 sílabas: iá-MÓS-te-gô-NÜÜ; força no MÓS e no NÜÜ; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; MÓSTE é o MESMO 'måste' de 'Jag måste vabba idag' e 'Jag måste göra en felanmälan': MOSTRE sem o R, força no MÓS, e na cena ela MOSTRA mesmo; o Ó é ABERTO e CURTO, exatamente como o brasileiro já fala 'mostre' e 'mostra' — é o å CURTO, o mesmo Ó de 'kommer' e de 'åtta' —, e o -te é fraquinho e de T duro, nunca 'mós-tchi'; GÔ = a GOTA cortada no Ô: aqui sim Ô FECHADO de 'avô' e LONGO — é o å LONGO, e o contraste MÓS aberto / GÔ fechado é exatamente o que o sueco faz —, e PARE AÍ — com o -TA vira 'gåta' (charada) — e NADA de R: 'går' é outra forma; depois de 'måste' o verbo fica pelado: gå; NÜ = a NUVEM cortada no NU, com BICO DE PATO — lábios em bico e língua pra frente, o mesmo Ü de DÜ —, LONGO e com força: é o 'agora')",
+      "historia": "Fika ao ar livre no parque: a convidada mais quentinha da roda é uma salamandra de fogo, com chamas dançando pelas costas e pelo rabo — é ela que esquenta os kanelbullar. De repente escurece: uma NUVEM cinza estaciona bem em cima dela, e a primeira GOTA cai na ponta do rabo — TSSSS!, sobe uma fumacinha. A salamandra dá um pulo, IÁ!, MOSTRA pra roda inteira a ponta do rabo apagada com a GOTA ainda pendurada, aponta a NUVEM e já sai correndo: tenho que ir embora agora!",
+      "cena": {
+        "descricao": "Numa toalha de piquenique no gramado, uma salamandra preta e amarela com chamas nas costas ergue o rabo e mostra a ponta apagada e fumegante, com uma gota azul pendurada, sob uma nuvem cinza de chuva que paira logo acima dela.",
+        "partes": [
+          "gramado verde (chão)",
+          "toalha de piquenique xadrez vermelho e branco",
+          "prato branco com três kanelbullar (toros marrons em espiral)",
+          "garrafa térmica vermelha",
+          "corpo da salamandra preto brilhante com manchas amarelas, de pé nas patas traseiras",
+          "cabeça larga e achatada com olhos pretos saltados e boca aberta de susto",
+          "chamas laranja e amarelas emissivas (cones) ao longo das costas",
+          "rabo erguido com a ponta apagada, cinza, soltando fumacinha (esferas translúcidas)",
+          "gota azul grande (esfera com bico) pendurada na ponta do rabo",
+          "nuvem cinza-escura de chuva (esferas agrupadas) pairando acima",
+          "três fios de chuva azuis (cilindros finos) caindo da nuvem"
+        ]
+      }
+    }
+  ]
+}

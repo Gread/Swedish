@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "det-ar-kallt-i-lagenheten",
+      "sv": "Det är kallt i lägenheten.",
+      "pt": "Está frio no apartamento.",
+      "pronuncia": "dê é KALT i LÉÉ-guen-rrê-ten ('det är' na fala vira 'dê é'; 'kallt' com A curto e L de verdade, ponta da língua grudada no céu da boca, soltando num T seco, nunca 'cáu(tchi)'; 'lägenheten' com a força no LÉÉ, É bem aberto e longo, G duro de 'guerra', e uma segunda força leve no 'he', com h soprado e Ê fechado; o -ten do fim é fraquinho)",
+      "contexto": "Reclamando em casa, com o vizinho no trapphus ou, o uso mais importante, na felanmälan pro hyresvärd quando o element (o aquecedor) não esquenta. No inverno é assunto fixo do grupo de inquilinos do prédio.",
+      "porque": "Na Suécia o aquecimento é obrigação do proprietário: o normal é uns 20 °C, e abaixo de 18 °C já cabe reclamação formal e até desconto no aluguel. Repare no -T: com 'det är' o adjetivo vai pro neutro (kall → kallt), o mesmo molde de 'Det är varmt' e 'Det är mörkt'."
+    },
+    {
+      "id": "kan-du-ta-emot-mitt-paket",
+      "sv": "Kan du ta emot mitt paket?",
+      "pt": "Você pode receber meu pacote?",
+      "pronuncia": "kan dü ta e-MÚUT mit pa-KÊÊT? ('du' com bico de pato; 'ta emot' é um verbo só, receber, e a força cai no MOT: O soando U fechado e longo, T seco; 'mitt' curtinho; 'paket' com a força no KÊ, Ê fechado e longo, e T seco no fim)",
+      "contexto": "Com o vizinho de porta quando você vai viajar ou trabalhar e a entrega vem direto pra casa (hemleverans). Também no trabalho, pedindo pra um colega pegar algo que chega na recepção.",
+      "porque": "'Ta emot' (receber) é o verbo de toda entrega, visita e ligação: 'ta emot gäster', 'ta emot ett samtal'. E favor de vizinho na Suécia se pede assim, direto, com 'Kan du...?', e a mesma frase volta pra você quando é o vizinho que vai viajar."
+    },
+    {
+      "id": "jag-har-tappat-min-planbok",
+      "sv": "Jag har tappat min plånbok.",
+      "pt": "Perdi minha carteira.",
+      "pronuncia": "iá rrar TÁP-pat min PLÔN-buuk ('jag' = iá; 'har' com h soprado e R brando, que na fala quase some; 'tappat' com A curto, P dobrado e T seco no fim; 'min' curtinho, N na língua; 'plånbok' com a força no PLÔN, Ô fechado e longo, o N quase virando M antes do B, e 'bok' com U fechado e longo e K seco)",
+      "contexto": "Com o vizinho ou o zelador do prédio, ligando pro banco pra spärra (bloquear) o cartão, na polícia ou no achados e perdidos (hittegods) do transporte. A pergunta de volta costuma ser 'Var tappade du den?', onde você perdeu?",
+      "porque": "'Tappa' é derrubar ou perder sem querer, e serve pra tudo: 'tappat nycklarna' (as chaves), 'tappat mobilen'. É a frase que abre a ligação pro banco e o boletim na polícia, justo na hora em que o nervoso apaga o resto do sueco."
+    },
+    {
+      "id": "kan-jag-lana-din-laddare",
+      "sv": "Kan jag låna din laddare?",
+      "pt": "Posso pegar seu carregador emprestado?",
+      "pronuncia": "kan iá LÔÔ-na din LÁD-da-re? ('jag' = iá; 'låna' com a força no LÔ, Ô fechado e longo, sem nasalar; 'din' curtinho, N na língua; 'laddare' com a força no LÁ, A curto, D dobrado e um -re fraquinho com R brando, mas que não cai: sem ele é 'ladda', o verbo)",
+      "contexto": "Na casa de amigos, no escritório, na escola dos filhos ou no trem, quando o celular está morrendo. E na vaga do prédio: 'laddare' é carregador de qualquer coisa, celular, notebook ou carro elétrico.",
+      "porque": "'Låna' é pedir emprestado; emprestar pra alguém é 'låna ut', a confusão clássica de quem aprende. E 'ladda' (carregar) está em todo canto: 'ladda mobilen', 'laddstolpe', 'ladda ner' (baixar); o -are transforma o verbo em quem faz a ação, como o nosso -dor: ladda → laddare (carregador), läka → läkare (médico), lära → lärare (professor)."
+    },
+    {
+      "id": "vad-ar-losenordet-till-wifit",
+      "sv": "Vad är lösenordet till wifit?",
+      "pt": "Qual é a senha do wifi?",
+      "pronuncia": "va é LÖÖ-sen-ÚU-det til UÁI-fai-et? ('vad' perde o d; 'lösenordet' com a força no LÖÖ, boca em bico de Ô e língua de Ê, longo, e uma segunda força no 'ord', U fechado e longo; o 'rd' vira um D de língua dobrada pra trás; 'wifit' se escreve com -t mas se fala UÁI-fai-et: o 'uai-fai' do Brasil é a pronúncia que o dicionário sueco dá primeiro, e muitos suecos dizem VÁI-fai — as duas valem —, com a força no UÁI; o -et do fim é o artigo)",
+      "contexto": "Chegando na casa de alguém, no café, no hotel ou na sala de reunião. Muitas vezes a resposta é 'Det står på routern' (está escrito no roteador) ou um papelzinho preso na geladeira.",
+      "porque": "É a pergunta mais feita por visita no mundo inteiro, e dá pra fazer em sueco desde o primeiro dia. 'Lösenord' aparece em todo login sueco ('Glömt lösenordet?'), e o molde 'Vad är ... till ...?' serve também pra 'Vad är koden till porten?', o código do portão do prédio."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "det-ar-kallt-i-lagenheten",
+      "elenco": "ovelha tosada de legging + caldo congelado + aquecedor gelado",
+      "ponte_sonora": "DÊ É CÁLT-I... LÉ-GUEN-RRÊ-TEN! (8 sílabas: dê-é-KALT-i-LÉÉ-guen-rrê-ten; tônicas em CÁLT e LÉÉ, e uma força leve no RRÊ; DÊ É = o 'det är' de sempre, de 'Det är lugnt' e 'Det är akut': DÊ fechado e sem T, É aberto e curto; CÁLT = o MESMO CALDO congelado de 'Oj, vad kallt!': o frio encolhe a palavra numa sílaba só, dura — A curto, L DE VERDADE (o brasileiro fala 'CÁU-do'; aqui a ponta da língua GRUDA no céu da boca de tanto frio, como na história, e é isso que faz o L: nunca 'cáu') e o D endurece num T SECO, a língua se soltando do céu da boca num estalo, que já emenda no 'i': CÁL-TI, como o ÓN-TI de 'ont i'; sem o T sobra 'kall', a forma de 'handen är kall' (a mão está fria) — com 'det är' é sempre kallT; LÉ-GUEN = a LEGGING do jeito que o Brasil fala, LÉ-guin, com a força no LÉ: É ABERTO e esticado — é o ä longo, o mesmo É escancarado do LÉÉR de 'Jag lär mig svenska' — e G DURO de 'guerra'; só troque o -guin por -GUEN, E curto e N batido na língua, sem nasal; RRÊ = o bafo quente soprado nos cascos: é o h sueco, soprado leve como RR carioca — o mesmo RRÊ de 'Jag heter' —, com Ê FECHADO de 'você'; TEN = a pancada do caldo-pedra no aquecedor: T seco de 'tatu', E curto e N na língua, bem fraquinho — nunca 'tẽi')",
+      "historia": "Janeiro em Estocolmo e o aquecedor do apartamento pifou de vez: até o CALDO que a ovelha esquentou pro jantar congelou na tigela, com a colher em pé. Ela tenta dizer 'CALDO', mas o frio encolhe a palavra numa sílaba só: a ponta da língua gruda no céu da boca no L e só se solta num estalo seco, CÁLT! Aí tem a ideia genial de tosar a própria lã pra tricotar uma LEGGING cor-de-rosa, e agora está de legging e pelada da cintura pra cima, arrepiada da cabeça aos cascos. Sopra o bafo quente nos cascos, RRÊÊ, e bate o caldo-pedra no aquecedor gelado: TEN! TEN! Nada esquenta: DÊ É CÁLT I LÉ-GUEN-RRÊ-TEN, está frio no apartamento.",
+      "cena": {
+        "descricao": "Na sala gelada do apartamento, uma ovelha tosada, de pele rosada arrepiada e legging de tricô cor-de-rosa, sopra bafo numa pata e com a outra bate uma tigela de caldo congelado, de colher em pé, no aquecedor coberto de pingentes de gelo; no chão, o monte de lã tosada com as agulhas de tricô.",
+        "partes": [
+          "piso de tábuas de madeira clara com uma camada de geada branco-azulada",
+          "parede creme com janela de vidro embaçado e cristais de gelo nos cantos",
+          "aquecedor branco de aletas sob a janela (o element sueco)",
+          "três pingentes de gelo azul-claros translúcidos pendurados no aquecedor",
+          "monte de lã branca tosada no chão, com um novelo e duas agulhas de tricô espetadas",
+          "corpo da ovelha tosado, pele rosa-clara com bolinhas de arrepio, em pé nas patas de trás",
+          "cabeça preta de ovelha com orelhas caídas e um tufo de lã branca no topo",
+          "legging de tricô rosa-chiclete nas patas de trás, com nervuras em anéis",
+          "pata dianteira em concha diante do focinho, com nuvem de bafo branca translúcida (o RRÊ)",
+          "tigela marrom com o caldo congelado num bloco laranja-acastanhado e a colher em pé, encostada no aquecedor",
+          "anel amarelo de impacto no ponto da pancada (o TEN)"
+        ]
+      }
+    },
+    {
+      "id": "kan-du-ta-emot-mitt-paket",
+      "elenco": "aranha vizinha + pacote na teia",
+      "ponte_sonora": "CAN-DU, TÁ É-MÚT... MIT' PA-KÊT? (7 sílabas: kan-dü-ta-e-MÚUT-mit-pa-KÊÊT; tônicas em MÚUT e KÊÊT; CAN-DU é o 'kan du' de sempre — C+A+N como em 'cana', sem o glide de 'quando', e o DU com BICO DE PATO; TÁ = o 'ta' (pegar), o mesmo TÁ de 'Kan du ta det en gång till?' e 'Ta med, tack': A aberto e sem força; É-MÚT = 'emot', que é o 'mot' com um É na frente: o É fraquinho e curto, e a pancada no MÚT, o MESMO MUT de 'Jag är allergisk mot penicillin' — lá o baque surdo da cabeçada, aqui o do pacote afundando na teia: U FECHADO e LONGO e T seco no fim; com Ó aberto ('e-MÓT') a vogal sai errada; 'ta emot' é um verbo só, receber; MIT' = o MITO com o O arrancado, o mesmo de 'Förlåt, det var mitt fel' e 'Mitt personnummer är...': I curto e a língua travada no T; PA-KÊT = o PACOTE do ET de 'Jag ska hämta ut ett paket', dito à sueca: a força no KÊ, Ê FECHADO e longo de 'você', T seco e SEM o -e — nunca 'pa-CÓ-tchi')",
+      "historia": "Você viaja amanhã cedo e a sua encomenda chega justo quando a casa vai estar vazia. Bate na porta ao lado — a vizinha é uma aranha peluda que transformou o patamar inteiro numa teia — e pergunta, de mala na mão: CAN-DU, TÁ...? Nem dá tempo de terminar: o entregador arremessa a caixa escada acima e — É... MÚT! — ela afunda bem no meio da teia, com um baque surdo. Na etiqueta, rasgada no tombo, o seu apelido no prédio, MITO, perdeu o O e ficou MIT' — 'é MEU!', você aponta; a aranha enrola o PACOTE em seda com quatro patas e acena com as outras quatro: pode viajar tranquilo, ela recebe a sua encomenda.",
+      "cena": {
+        "descricao": "No patamar da escada do prédio, uma aranha roxa e peluda, com a teia esticada na frente da própria porta, segura com quatro patas um pacote de papelão recém-afundado no meio da teia, meio enrolado em seda e com a etiqueta MIT, enquanto a sua mala de viagem espera encostada na porta ao lado.",
+        "partes": [
+          "piso de granilite cinza-claro do patamar",
+          "duas portas de apartamento marrom-escuras lado a lado, cada uma com plaquinha dourada",
+          "teia branca translúcida em raios e anéis cobrindo a porta da vizinha",
+          "corpo da aranha roxo-escuro e peludo: abdômen redondo grande e cabeça menor",
+          "oito patas articuladas roxo-escuras com pontas lilás",
+          "oito olhinhos pretos brilhantes e um lacinho amarelo de bolinhas na cabeça",
+          "pacote de papelão marrom afundado no centro da teia",
+          "fitas de seda branca enrolando metade do pacote",
+          "etiqueta branca de borda rasgada no pacote, com a palavra MIT",
+          "três anéis cinza de impacto em volta do pacote (o baque MÚT)",
+          "mala de viagem azul com a alça puxada, encostada na outra porta"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-tappat-min-planbok",
+      "elenco": "hiena de roupão + duto de lixo",
+      "ponte_sonora": "IÁ, RRÁR! TÁPA-T... MIN PLÔN-BUUK! (7 sílabas: iá-rrar-TÁP-pat-min-PLÔN-buuk; tônicas em TÁP e PLÔN, e uma força menor no BUUK; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; RRÁR = a risada soprada da hiena, o MESMO RRÁR de 'Jag har ont i magen', 'Jag har ett möte' e do pavão de 'Jag har missat bussen': h soprado leve como RR carioca, A longo e R BRANDO no fim — sem ele sobra 'ha', outro verbo; TÁPA-T = a TAPA nos bolsos com um T seco colado: força no TÁ, A curto, o P segurado um instante (é dobrado) e o T sem vogal depois — nunca 'tápatchi'; sem esse T sobra 'tappa', o infinitivo; MIN = a MINHA cortada no N: I curto e N DE VERDADE, ponta da língua no céu da boca, como o co-MÍN de 'Kom in och sätt dig' — nunca o 'mĩ' só nasal; PLÔN = o eco da carteira batendo no duto de metal: Ô FECHADO e LONGO de 'avô' (é o å), ORAL, e o N já vira M colando no B: PLÔM-BUUK; BUUK = o baque lá no fundo e o BOOK do inglês, porque a carteira cai aberta feito um livrinho — e 'bok' em sueco é LIVRO mesmo: U FECHADO e longo, K seco, nunca 'BÓK')",
+      "historia": "Sábado cedo, de roupão e pantufa, a hiena do terceiro andar vai jogar o lixo no duto do corredor. Empurra o saco pela portinhola com um IÁ! e solta, como sempre, a risada de hiena: RRÁR! Aí TAPA os bolsos do roupão — TÁPA-T, TÁPA-T — e eles estão vazios: 'a MINHA...!'. De dentro do duto sobe o eco da queda, PLÔÔN... BUUK, a carteira batendo no metal e caindo lá no fundo, aberta feito um livrinho. A hiena gargalha ainda mais alto, de puro nervoso: perdi a minha carteira.",
+      "cena": {
+        "descricao": "No corredor do prédio, uma hiena de roupão azul e pantufas, gargalhando de boca escancarada, bate as patas nos bolsos virados do avesso diante da portinhola aberta do duto de lixo, onde uma carteira despenca aberta como um livrinho e anéis de eco sobem do metal.",
+        "partes": [
+          "piso de linóleo verde-musgo do corredor",
+          "parede bege com a portinhola de metal prateado do duto de lixo, aberta pra baixo",
+          "saco de lixo preto amarrado, entalado na boca da portinhola",
+          "carteira marrom aberta como um livro, despencando de ponta-cabeça dentro da portinhola",
+          "três anéis prateados saindo do duto (o eco PLÔN)",
+          "corpo da hiena bege-amarelado com manchas marrom-escuras, em pé nas patas de trás",
+          "crina curta e eriçada marrom-escura no pescoço e nas costas",
+          "cabeça de focinho preto, orelhas redondas e boca escancarada na gargalhada, dentes à mostra",
+          "roupão felpudo azul-claro com os dois bolsos virados do avesso (forro branco pra fora)",
+          "patas dianteiras batendo nos bolsos, com risquinhos de movimento (a TAPA)",
+          "pantufas felpudas cor-de-rosa"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-lana-din-laddare",
+      "elenco": "iguana sem bateria + Lada elétrico sob a lona",
+      "ponte_sonora": "CA-NIÁ, LÔ-NA... DIN! LÁDA-re? (7 sílabas: ca-niá-LÔÔ-na-din-LÁD-da-re; tônicas em LÔ e LÁ; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag betala med kort?' e 'Kan jag swisha?', emendado, com I de IOGA, nunca o J chiado de 'canja'; LÔ-NA = a LONA que cobria o carro: Ô FECHADO e LONGO de 'avô' (é o å) e ORAL — o português nasaliza 'lõna' por causa do N; aqui a boca fica redonda e o N só encosta a língua; DIN = o 'plim' do plugue encaixando: I curto, N na língua e sem força, nunca o 'dĩ' nasal; LÁDA-re = o LADA, o carro russo quadradão, que na cena tem a placa personalizada LADDARE: a força no LÁ, A curto e o D segurado um instante (é dobrado); o -re do fim é fraquinho mas OBRIGATÓRIO, R BRANDO de 'cara' (um toque só — nunca o RR soprado, que nas cartas é o h) e E apagado, o mesmo -re de SÊNA-re ('senare') e de LÉ-ca-re ('läkare'): LÁ-da-re, proparoxítona como LÂMPADA — nunca 'la-DÁ-re' nem 'la-da-RÉ'; sem o -re sobra 'ladda', o verbo carregar; é o -are que faz o '-dor' do sueco: ladda = carregar, laddare = carregaDOR, como läka = curar, läkare = médico)",
+      "historia": "Na garagem do prédio, a iguana do quarto andar chega com o celular em 1%, mastigando um toco de CANA, e solta o grito de guerra: CANA, IÁ! Com o rabo, arranca a LONA cinza de cima do carro do vizinho, desengata o cabo grosso que carregava o carro e encosta o plugue gigante no celular minúsculo — DIN! — a tela acende. Debaixo da lona apareceu um LADA quadradão verde-musgo, convertido em elétrico, com placa personalizada LADDARE: é o Lada que virou carregaDOR, com um -re fraquinho no fim. De plugue na pata e olhar pidão, ela pergunta ao dono: CA-NIÁ, LÔNA DIN LÁDA-re? Posso pegar emprestado o teu carregador?",
+      "cena": {
+        "descricao": "Na garagem do prédio, uma iguana verde com um toco de cana na boca, de rabo enrolado na lona cinza que acabou de arrancar de cima de um Lada quadradão verde-musgo de placa LADDARE, encosta o plugue gigante do carregador do carro num celular minúsculo que acende num anel de luz verde.",
+        "partes": [
+          "piso de concreto cinza da garagem com faixas amarelas de vaga",
+          "poste de recarga cinza com luzinha verde, ao lado da vaga",
+          "carro Lada quadradão verde-musgo (caixas) com faróis redondos, para-choque cromado e placa branca personalizada escrita LADDARE",
+          "lona cinza-chumbo meio arrancada, escorregando do teto pro lado do carro",
+          "cabo preto grosso saindo do poste de recarga em curva até a pata da iguana",
+          "corpo da iguana verde-vivo com crista de espinhos no dorso, em pé nas patas de trás",
+          "cabeça da iguana com papada laranja e olhos dourados arregalados de pidona",
+          "rabo comprido listrado de verde e marrom, enrolado na ponta da lona",
+          "toco de cana-de-açúcar verde com gomos atravessado na boca",
+          "plugue gigante preto na pata, encostado num celular minúsculo de tela verde acesa",
+          "anel de luz verde emissivo em volta do celular (o DIN)"
+        ]
+      }
+    },
+    {
+      "id": "vad-ar-losenordet-till-wifit",
+      "elenco": "pombo-correio arauto + pergaminho sem ordem",
+      "ponte_sonora": "VÁ! É... LÊ SEM ORDEM... TIL UÁI-FAI-ET? (10 sílabas: va-é-LÖÖ-se-nuur-det-til-UÁI-fai-et; tônicas em LÖÖ, ÚU e UÁI; VÁ! É = o MESMO 'vad är' de 'Vad är klockan?' — VÁ sem R (com R vira 'var', onde) e o É aberto e curto; LÊ SEM ORDEM = 'lösenord', a senha que o pombo lê com as letras SEM ORDEM nenhuma — e pombo não tem lábios: lê de BICO, e o bico conserta as duas vogais; LÊ = a língua parada no Ê e os lábios empurrados num bico de Ô, longo: LÖÖ, o mesmo truque do TRÖTT, do FÖÖ e do MÖÖ-te, e é nele que cai a força; é o TERCEIRO jeito de ler do baralho: a fada de 'Är det ledigt här?' lê de boquinha fechada (LÊÊ, 'ledigt'), o palhaço de 'Jag lär mig svenska' lê escancarado (LÉÉR, 'lär') e o pombo lê de BICO (LÖÖ, 'lösen'); sem o bico sai 'le-'; SEM fecha num N DE VERDADE, sem nasal, e esse N já gruda no 'ord': LÖÖ-se-NUUR; ORDEM = o bico fecha também o Ó: o pombo arrulha em U, ÚUR — U FECHADO e LONGO, a segunda força da palavra; 'ord' rima com o BÚR'D do burro de 'Ett bord för två' e tem o mesmo U de BUR ('Var bor du?') e de STÚR —, e o R se derrete num D de língua dobrada pra trás, à caipira, como no CÓRT de 'kort'; com o Ó aberto de 'ordem' a vogal sai errada; o -DEM vira -DET: sem nasal, E curto e T leve (na fala rápida muito sueco quase engole esse T) — é o artigo, 'A senha'; TIL = o til (~) de 'en gång till' e 'Lycka till', I curto e L de verdade; UÁI-FAI = 'wifi' exatamente como o Brasil já fala — o dicionário sueco (Svensk ordbok) dá esse som em primeiro lugar, 'waj-faj', e muitos suecos dizem VÁI-fai, as duas valem —, força no UÁI e o FAI fraquinho; -ET = o toque seco do bico na anilha, um 'ét' curtinho, o artigo de novo: escreve-se 'wifit', fala-se UÁI-fai-et)",
+      "historia": "Você chega pro jantar na casa da vizinha, saca o celular e pergunta da senha. Ela abre a janela e ordena: VÁ! — É... um pombo-correio gordo, de peito estufado, que pousa na mesa com um rolinho amarrado na pata: o wifi dela é sem fio de verdade. Empertigado como um arauto, ele desenrola o pergaminho e LÊ em voz alta — de BICO, que pombo não tem lábios — uma senha SEM ORDEM nenhuma: K, 7, cerquilha, Q; e até o 'ordem' sai arrulhado em U: LÖÖ-SEN-ÚURDET. A fita do rolinho cai enrolada num TIL, e o pombo bate o bico na anilha da pata, gravada WIFI: UÁI-FAI... ÉT! É assim que se pede a senha do wifi na casa dos outros.",
+      "cena": {
+        "descricao": "Na mesa da sala da vizinha, um pombo-correio gordo, de bico esticado pra frente, lê em voz alta um pergaminho de letras embaralhadas lacrado com o símbolo do wifi, enquanto a fita do rolinho cai em forma de til e a anilha prateada da pata mostra WIFI; ao fundo, a janela aberta com o poleiro.",
+        "partes": [
+          "piso de tábuas de madeira escura",
+          "janela aberta ao fundo com um poleiro de madeira no parapeito",
+          "mesa redonda branca de jantar com um celular em cima, tela com cadeado",
+          "corpo do pombo cinza-azulado e gorducho, peito iridescente verde e roxo, em pé sobre a mesa",
+          "cabeça do pombo com olhos laranja e o bico rosado esticado pra frente, aberto na leitura (o LÖÖ de bico)",
+          "tubinho de mensagem de couro marrom, aberto, preso na pata (o correio de onde saiu o pergaminho)",
+          "pergaminho creme aberto entre as patas com 'K7#Q' em letras pretas grandes e tortas",
+          "lacre de cera vermelho no pergaminho com o símbolo do wifi (três arcos)",
+          "fita vermelha solta do rolinho, curvada em forma de til (~)",
+          "anilha prateada na pata com plaquinha escrita WIFI"
+        ]
+      }
+    }
+  ]
+}
