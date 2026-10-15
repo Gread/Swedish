@@ -6,11 +6,11 @@ import {
 } from '../rig/helpers'
 
 /**
- * "Jag har låst mig ute." — IÁ RRÁR: LÔST, MÊI ÜTE!
+ * "Jag har låst mig ute." — IÁ RRÁR: LÓST, MÊI ÜTE!
  *
  * O corredor virou oceano de linóleo azul-petróleo. No meio boia uma ilha do
  * tamanho de um capacho, com a porta do apartamento plantada sozinha na areia,
- * trancada por um CADEADO cromado gigante (LÔST). O náufrago laranja de MEIAS
+ * trancada por um CADEADO cromado gigante (LÓST). O náufrago laranja de MEIAS
  * brancas ergue os braços, a MEIA que ele tirou virou bandeira no mastro, e a
  * gaivota foge com a chave no bico — ÜTE, fora de alcance.
  */
@@ -22,7 +22,7 @@ const AREIA = '#d7bd8c'      // matiz 2: a ilha-capacho
 const AREIA_ESCURA = '#bd9f6f'
 const PORTA_BEGE = '#c9a97e' // matiz 3: a porta sueca
 const BATENTE = '#a8875f'
-const LARANJA = '#e0662c'    // acento saturado: o náufrago LÔST e a MEIA-bandeira
+const LARANJA = '#e0662c'    // acento saturado: o náufrago LÓST e a MEIA-bandeira
 const CROMO = '#c6ced5'
 const CROMO_CLARO = '#e0e7ec'
 const DOURADO = '#d9a441'
@@ -453,14 +453,14 @@ function createScene(): CardScene {
       ],
       {
         ease: 'easeOut',
-        caption: 'Um CADEADO cromado gigante desce na maçaneta: você virou o LÔST (låst).',
+        caption: 'Um CADEADO cromado gigante desce na maçaneta: você virou o LÓST (låst).',
       },
     ),
     seq('cadeado-clack', 'cadeado', 4.5, 0.3, [ch('position.y', 0.8, 0.72)], { ease: 'easeIn' }),
 
     seq('naufrago-rise', 'naufrago', 5.6, 0.8, [riseFrom(SAND + 0.13, 2.3)], {
       ease: 'easeOut',
-      caption: 'IÁ RRÁR: LÔST! — náufrago de MEIAS brancas, braços pro alto, ilha do tamanho do capacho.',
+      caption: 'IÁ RRÁR: LÓST! — náufrago de MEIAS brancas, braços pro alto, ilha do tamanho do capacho.',
     }),
     seq('boia-rise', 'boia', 5.8, 0.7, [riseFrom(BOIA_Y, 1.5)], { ease: 'easeOut' }),
 
@@ -516,9 +516,9 @@ export const card: Card = {
       'Falando com vizinho, hyresvärd ou o plantão (jour) depois de fechar a porta sem a chave.',
     fraseFonte: 'Me tranquei do lado de fora.',
     fraseAlvo: 'Jag har låst mig ute.',
-    pronuncia: "iá har LÓST mêi Ü-te ('låst' com ó bem fechado; 'mig' se fala 'mêi')",
+    pronuncia: "iá har LÓST mêi Ü-te ('låst' com Ó ABERTO (å curto), como no LOST da série; 'mig' se fala 'mêi')",
     ponteSonora:
-      "IÁ RRÁR: LÔST, MÊI ÜTE! (6 sílabas, picos em LÔST e Ü; RRÁR = 'har' com h soprado tipo RR carioca e R final brando; LÔST NUMA SÍLABA SÓ, como o seriado LOST, com Ô BEM FECHADO e sem 'i' no fim; MÊI = 'mig'; Ü-te com lábios de u e língua de i)",
+      "IÁ RRÁR: LÓST, MÊI ÜTE! (6 sílabas, picos em LÓST e Ü; RRÁR = 'har' com h soprado tipo RR carioca e R final brando; LÓST NUMA SÍLABA SÓ, como o seriado LOST, com Ó ABERTO como o brasileiro já fala 'LÓST' e sem 'i' no fim; MÊI = 'mig'; Ü-te com lábios de u e língua de i)",
     historia:
       'Você sai de meias pra pegar a correspondência, a porta sueca fecha sozinha — RRÁR! — e pronto: virou o LOST da série, náufrago numa ilha do tamanho do capacho, com um cadeado gigante brilhando na porta. A gaivota rouba a MEIA que você tirou pra fazer bandeira e voa com a chave no bico, fora de alcance.',
   },

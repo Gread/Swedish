@@ -1,20 +1,34 @@
-import type { ReactNode } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { useLayoutEffect, type ReactNode } from 'react'
+import * as THREE from 'three'
+import { Canvas, useThree } from '@react-three/fiber'
 import { ContactShadows, OrbitControls } from '@react-three/drei'
 import { Effects } from './Effects'
 import { DustMotes, HORIZON, KeySoftbox, SkyDome, StarField, StudioEnv } from './Stage'
 import type { CardScene } from '../rig/types'
+import { BASE_FOV, fitCamera } from '../rig/camera'
+
+/** Reenquadra a câmera quando o canvas muda de proporção (ex.: celular em pé). */
+function FitCamera({ position, target }: { position: [number, number, number]; target: [number, number, number] }) {
+  const camera = useThree((s) => s.camera)
+  const { width, height } = useThree((s) => s.size)
+  useLayoutEffect(() => {
+    const cam = camera as THREE.PerspectiveCamera
+    if (!cam.isPerspectiveCamera || !width || !height) return
+    fitCamera(cam, position, target, width / height)
+  }, [camera, width, height, ...position, ...target])
+  return null
+}
 
 /**
  * Canvas compartilhado: céu com profundidade, estúdio de iluminação,
  * atmosfera e pós-processamento — o mesmo palco para todas as cartas.
  */
 export function CardCanvas({ scene, children }: { scene: CardScene; children?: ReactNode }) {
-  const camPos = scene.cameraHint?.position ?? [4, 3.2, 5.5]
-  const camTarget = scene.cameraHint?.target ?? [0, 1, 0]
+  const camPos = scene.cameraHint?.position ?? ([4, 3.2, 5.5] as [number, number, number])
+  const camTarget = scene.cameraHint?.target ?? ([0, 1, 0] as [number, number, number])
   return (
     <Canvas
-      camera={{ position: camPos, fov: 38 }}
+      camera={{ position: camPos, fov: BASE_FOV }}
       // VSM: penumbra real — sombra dura é o que mais denuncia render de brinquedo
       shadows="variance"
       dpr={[1, 2]}
@@ -57,6 +71,7 @@ export function CardCanvas({ scene, children }: { scene: CardScene; children?: R
       </mesh>
       <ContactShadows position={[0, 0, 0]} opacity={0.55} scale={12} blur={2.4} far={4} resolution={512} />
 
+      <FitCamera position={camPos} target={camTarget} />
       <DustMotes />
       {children}
 
@@ -67,7 +82,7 @@ export function CardCanvas({ scene, children }: { scene: CardScene; children?: R
         target={camTarget}
         enablePan={false}
         minDistance={2.5}
-        maxDistance={12}
+        maxDistance={16}
         maxPolarAngle={Math.PI / 2 - 0.08}
       />
     </Canvas>

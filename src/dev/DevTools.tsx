@@ -4,6 +4,7 @@ import { GLTFExporter, RoomEnvironment } from 'three-stdlib'
 import type { Card, CardScene } from '../rig/types'
 import { disposeScene, poseAt, sceneDuration } from '../rig/pose'
 import { applyRefined } from '../rig/refined'
+import { fitCamera } from '../rig/camera'
 
 /*
  * Ferramentas de desenvolvimento, acessíveis só por query string:
@@ -182,10 +183,12 @@ export function RenderReview({ cards, raw }: { cards: Card[]; raw: boolean }) {
   useEffect(() => {
     let alive = true
     ;(async () => {
-      const FW = 960
-      const FH = 600
-      const SW = 240
-      const SH = 150
+      // &size=LxA renderiza noutra proporção (ex.: 400x700, celular em pé)
+      const size = new URLSearchParams(window.location.search).get('size')?.match(/^(\d+)x(\d+)$/)
+      const FW = size ? Number(size[1]) : 960
+      const FH = size ? Number(size[2]) : 600
+      const SW = Math.round(FW / 4)
+      const SH = Math.round(FH / 4)
       const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true })
       renderer.setPixelRatio(1)
       renderer.toneMapping = THREE.ACESFilmicToneMapping
@@ -210,8 +213,7 @@ export function RenderReview({ cards, raw }: { cards: Card[]; raw: boolean }) {
           const t = cs.cameraHint?.target ?? [0, 1, 0]
           const shoot = (w: number, h: number) => {
             const cam = new THREE.PerspectiveCamera(38, w / h, 0.1, 200)
-            cam.position.set(p[0], p[1], p[2])
-            cam.lookAt(t[0], t[1], t[2])
+            fitCamera(cam, p, t, w / h)
             renderer.setSize(w, h)
             renderer.render(scene, cam)
             return renderer.domElement
@@ -232,7 +234,7 @@ export function RenderReview({ cards, raw }: { cards: Card[]; raw: boolean }) {
           ctx.font = 'bold 15px sans-serif'
           ctx.fillText(`${card.meta.id}  ·  ${card.meta.fraseAlvo}`, 10, 22)
           const blob = await new Promise<Blob>((r) => sheet.toBlob((b) => r(b!), 'image/jpeg', 0.9))
-          const suffix = raw ? '-raw' : ''
+          const suffix = (raw ? '-raw' : '') + (size ? `-${FW}x${FH}` : '')
           const res = await fetch(`/__dev/save?path=review/${card.meta.id}${suffix}.jpg`, { method: 'POST', body: blob })
           if (!res.ok) throw new Error(await res.text())
           if (alive) setLog((l) => [...l, `OK  ${card.meta.id}`])

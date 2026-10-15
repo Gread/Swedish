@@ -534,7 +534,7 @@ function createScene(): CardScene {
       [ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1)],
       {
         ease: 'easeOut',
-        caption: 'O pescoço dela é LONGUÍSSIMO (LÔNG) e se estica sobre a mesa…',
+        caption: 'O pescoço dela é LONGUÍSSIMO (LÓNG) e se estica sobre a mesa…',
       },
     ),
     seq(
@@ -599,9 +599,9 @@ export const card: Card = {
     fraseFonte: 'Você pode falar um pouco mais devagar?',
     fraseAlvo: 'Kan du prata lite långsammare?',
     pronuncia:
-      "kan du PRÂ-ta LÍ-te LÔNG-sam-ma-re ('lite' com i longo; 'ng' nasal como em 'tango')",
+      "kan du PRÂ-ta LÍ-te LÓNG-sam-ma-re ('lite' com i longo; 'ng' nasal como em 'tango')",
     ponteSonora:
-      '"CAN-DU PRÁ-TA LÍ-TE... LÔNG SÂ-ma-ra!" (CAN-DU é C+A+N, sem o glide de \'quando\'; SÂ-ma-ra proparoxítona)',
+      '"CAN-DU PRÁ-TA LÍ-TE... LÓNG SÂ-ma-ra!" (LÓNG com Ó ABERTO, de pescoço comprido — nunca o \'lõ\' fechado e nasal de \'longo\'; o NG soa no nariz depois da vogal limpa; CAN-DU é C+A+N, sem o glide de \'quando\'; SÂ-ma-ra proparoxítona)',
     historia:
       'A garçonete do restaurante mais chique de Estocolmo é SÂMARA, uma tartaruga de pescoço LONGUÍSSIMO. No peito dela um broche diz "PRA TÁ LITE" — pra ficar leve. Ela serve UMA sílaba por vez num pratinho dourado: quanto mais longo o pescoço, mais devagar sai a sílaba.',
   },

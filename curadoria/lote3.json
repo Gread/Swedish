@@ -12,7 +12,7 @@
       "id": "jag-maste-vabba-idag",
       "sv": "Jag måste vabba idag, mitt barn är sjukt.",
       "pt": "Preciso ficar em casa com meu filho hoje, ele está doente.",
-      "pronuncia": "iá MÓS-te VÁB-ba i-DÁG, mit BÁRN é RHÚUKT ('måste' com ó fechado; 'vabba' com A aberto)",
+      "pronuncia": "iá MÓS-te VÁB-ba i-DÁG, mit BÁRN é RHÚUKT ('måste' com Ó ABERTO (å curto); 'vabba' com A aberto)",
       "contexto": "Aviso ao chefe ou ao chat da equipe quando o filho está doente (VAB = vård av barn).",
       "porque": "'Vabba' não existe em português e virou verbo no dia a dia sueco ('ska du vabba?'). Sem essa palavra ele não entende metade das conversas de escritório com colegas que têm filhos."
     },
@@ -44,7 +44,7 @@
       "id": "jag-haller-inte-riktigt-med",
       "sv": "Jag håller inte riktigt med.",
       "pt": "Não concordo muito, não.",
-      "pronuncia": "iá RÔL-ler ín-te RÍK-tit me ('hålla' com H soprado e ó fechado; 'riktigt' perde o -g: RÍK-tit; 'med' = me)",
+      "pronuncia": "iá RÓL-ler ín-te RÍK-tit me ('håller' com H soprado e Ó ABERTO — å curto; 'riktigt' perde o -g: RÍK-tit; 'med' = me)",
       "contexto": "Reunião, quando ele discorda mas quer soar colaborativo.",
       "porque": "É o modo padrão sueco de discordar: o 'inte riktigt' amortece tudo. Um 'nej, det är fel' soa rude no consenso sueco — essa frase abre o debate sem queimar ninguém."
     },
@@ -156,7 +156,7 @@
       "id": "jag-maste-gora-en-felanmalan",
       "sv": "Jag måste göra en felanmälan.",
       "pt": "Preciso abrir um chamado de manutenção.",
-      "pronuncia": "iá MÓS-te IÖ-ra en FÉL-an-mé-lan ('göra' começa com som de I; 'å' de måste = ó fechado)",
+      "pronuncia": "iá MÓS-te IÖ-ra en FÉL-an-mé-lan ('göra' começa com som de I; 'å' de måste = Ó ABERTO (å curto))",
       "contexto": "Falando com o hyresvärd quando a torneira vaza, o aquecedor não esquenta ou a fechadura emperra.",
       "porque": "'Felanmälan' é A palavra do sistema sueco de moradia — sem ela você não é entendido; com ela o processo inteiro se abre."
     },
@@ -164,7 +164,7 @@
       "id": "jag-har-last-mig-ute",
       "sv": "Jag har låst mig ute.",
       "pt": "Me tranquei do lado de fora.",
-      "pronuncia": "iá har LÓST mêi Ü-te ('låst' com ó bem fechado; 'mig' se fala 'mêi')",
+      "pronuncia": "iá har LÓST mêi Ü-te ('låst' com Ó ABERTO (å curto), como no LOST da série; 'mig' se fala 'mêi')",
       "contexto": "Falando com vizinho, hyresvärd ou o plantão (jour) depois de fechar a porta sem a chave.",
       "porque": "Porta sueca tranca sozinha ao fechar, então acontece com todo mundo. É expressão fixa que não se traduz literalmente do português."
     },
@@ -266,7 +266,7 @@
     {
       "id": "jag-maste-vabba-idag",
       "elenco": "papai lontra + filhote de lontra",
-      "ponte_sonora": "IÁ MÔSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT! (11 sílabas; MÔSTE = 'mostre' sem R, Ô FECHADO; VÁBA = 'baba' com V, força na 1ª; o N de 'barn' emenda: BÁR, NÉ?; RRÜÜKT fecha em KT seco)",
+      "ponte_sonora": "IÁ MÓSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT! (11 sílabas; MÓSTE = 'mostre' sem R, Ó ABERTO como no próprio 'mostre'; VÁBA = 'baba' com V, força na 1ª; o N de 'barn' emenda: BÁR, NÉ?; RRÜÜKT fecha em KT seco)",
       "historia": "Papai lontra precisa MOSTRAR pro chefe por que não vai aparecer: vira o celular pro filhote, que virou fábrica de VÁBA — o fio de baba já chega ao chão. O filhotinho febril, deitado de barriga pra cima como toda lontra, montou um BAR de xaropes num caixote virado e, bem na hora da câmera, arranca o dardo de ventosa da própria testa: RRÜÜKT!",
       "cena": {
         "descricao": "Chão do quarto: fortaleza de almofadões, filhote de lontra caído de barriga pra cima babando ao lado do seu bar de xaropes, e o pai de gravata erguendo o celular pra filmar a prova.",
@@ -349,8 +349,8 @@
     {
       "id": "jag-haller-inte-riktigt-med",
       "elenco": "texugo de patins",
-      "ponte_sonora": "IÁ RRÔLER ÍNTE-RÍKTIT MÊ (8 sílabas; 'håller' = RRÔLER, o patins roller: RR soprado + Ô FECHADO; emende 'inte riktigt' num fôlego só — ÍNTE-RÍKTIT — pro R sair BRANDO, de 'caro', e não estourar em RR carioca; o -gt vira só T; 'med' = MÊ, sem D)",
-      "historia": "Na reunião, o texugo de gravata-borboleta nunca briga: quando discorda, calça os RRÔLER e desliza um palmo pra trás em cima da mesa, as unhas de cavar raspando o tampo e as rodinhas fazendo ÍNTE-RÍKTIT, ÍNTE-RÍKTIT num fôlego só. Aí ergue uma plaquinha minúscula com um MÊ engolido, do tamanho de um grão de arroz. Discordar em sueco é isso.",
+      "ponte_sonora": "IÁ RRÓLER ÍNTE-RÍKTIT MÊ (8 sílabas; 'håller' = RRÓLER, o patins roller: RR soprado + Ó ABERTO (å curto: diga RRÓ-ler como em 'rola', não o 'rôler' fechado); emende 'inte riktigt' num fôlego só — ÍNTE-RÍKTIT — pro R sair BRANDO, de 'caro', e não estourar em RR carioca; o -gt vira só T; 'med' = MÊ, sem D)",
+      "historia": "Na reunião, o texugo de gravata-borboleta nunca briga: quando discorda, calça os RRÓLER e desliza um palmo pra trás em cima da mesa, as unhas de cavar raspando o tampo e as rodinhas fazendo ÍNTE-RÍKTIT, ÍNTE-RÍKTIT num fôlego só. Aí ergue uma plaquinha minúscula com um MÊ engolido, do tamanho de um grão de arroz. Discordar em sueco é isso.",
       "cena": {
         "descricao": "Em cima da mesa oval de reunião, um texugo de patins desliza pra trás numa faixa de tapete azul, erguendo uma plaquinha minúscula.",
         "partes": [
@@ -639,8 +639,8 @@
     {
       "id": "jag-maste-gora-en-felanmalan",
       "elenco": "coruja-zeladora IÔRA + cano",
-      "ponte_sonora": "IÁ MÔS-TE IÔRA EN FÊ-LAN-MÉ-LAN (10 sílabas, picos em MÔS, IÔ e FÊ; 'måste' = MÔS-TE, com Ô FECHADO de 'avô' e um -TE fraquinho no fim: é 'mostre' SEM O R — se sair MOS-TRA você inventa uma palavra que não existe em sueco; IÔRA começa com I de IOGA, jamais G duro, e o Ô é dito com BICO, que é o ö; FÊ-LAN-MÉ-LAN nas quatro batidas, FÊ fechado, MÉ bem aberto e nenhum dos dois LAN nasalado)",
-      "historia": "Sua torneira virou chafariz e melou o corredor, mas na Suécia nada se conserta sozinho: você precisa MOSTRAR a poça pra IÔRA, a coruja-zeladora empoleirada no cano — só que o grito é MÔS-TE!, sem o R (e se você disser GÔ-ra em vez de IÔRA ela finge que não é com ela). Ela examina a poça, ergue a chave inglesa e bate duas vezes no cano: FÊ-LAN! MÉ-LAN! Na segunda batida o papel do chamado sai da parede já carimbado.",
+      "ponte_sonora": "IÁ MÓS-TE IÔRA EN FÊ-LAN-MÉ-LAN (10 sílabas, picos em MÓS, IÔ e FÊ; 'måste' = MÓS-TE, com Ó ABERTO de 'pó' (o mesmo do 'mostre' falado) e um -TE fraquinho no fim: é 'mostre' SEM O R — se sair MOS-TRA você inventa uma palavra que não existe em sueco; IÔRA começa com I de IOGA, jamais G duro, e o Ô é dito com BICO, que é o ö; FÊ-LAN-MÉ-LAN nas quatro batidas, FÊ fechado, MÉ bem aberto e nenhum dos dois LAN nasalado)",
+      "historia": "Sua torneira virou chafariz e melou o corredor, mas na Suécia nada se conserta sozinho: você precisa MOSTRAR a poça pra IÔRA, a coruja-zeladora empoleirada no cano — só que o grito é MÓS-TE!, sem o R (e se você disser GÔ-ra em vez de IÔRA ela finge que não é com ela). Ela examina a poça, ergue a chave inglesa e bate duas vezes no cano: FÊ-LAN! MÉ-LAN! Na segunda batida o papel do chamado sai da parede já carimbado.",
       "cena": {
         "descricao": "Corredor com uma poça brilhando: a pia despeja um jato em arco e, no cano que atravessa o teto, a coruja-zeladora de molho de chaves bate duas vezes com a chave inglesa; da parede sai o papel do chamado carimbado.",
         "partes": [
@@ -659,7 +659,7 @@
     {
       "id": "jag-har-last-mig-ute",
       "elenco": "náufrago de meias + gaivota",
-      "ponte_sonora": "IÁ RRÁR: LÔST, MÊI ÜTE! (6 sílabas, picos em LÔST e Ü; RRÁR = 'har' com h soprado tipo RR carioca e R final brando; LÔST NUMA SÍLABA SÓ, como o seriado LOST, com Ô BEM FECHADO e sem 'i' no fim; MÊI = 'mig'; Ü-te com lábios de u e língua de i)",
+      "ponte_sonora": "IÁ RRÁR: LÓST, MÊI ÜTE! (6 sílabas, picos em LÓST e Ü; RRÁR = 'har' com h soprado tipo RR carioca e R final brando; LÓST NUMA SÍLABA SÓ, como o seriado LOST, com Ó ABERTO como o brasileiro já fala 'LÓST' e sem 'i' no fim; MÊI = 'mig'; Ü-te com lábios de u e língua de i)",
       "historia": "Você sai de meias pra pegar a correspondência, a porta sueca fecha sozinha — RRÁR! — e pronto: virou o LOST da série, náufrago numa ilha do tamanho do capacho, com um cadeado gigante brilhando na porta. A gaivota rouba a MEIA que você tirou pra fazer bandeira e voa com a chave no bico, fora de alcance.",
       "cena": {
         "descricao": "O corredor virou oceano: no meio boia uma ilha do tamanho de um capacho, com a porta do apartamento plantada sozinha na areia, trancada por um cadeado gigante.",

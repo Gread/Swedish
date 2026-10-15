@@ -7,13 +7,13 @@ import {
 
 /**
  * "Jag måste vabba idag, mitt barn är sjukt."
- * IÁ MÔSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT!
+ * IÁ MÓSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT!
  *
  * Diorama: chão do quarto com tapete creme e fortaleza de almofadões.
  * O filhote de lontra febril está de barriga pra cima, virou fábrica de VÁBA
  * (o fio de baba chega ao tapete), montou um BÁR de xaropes num caixote
  * virado, e arranca o dardo de ventosa da testa — RRÜÜKT! — bem na hora em
- * que o papai lontra de gravata ergue o celular pra MÔSTRAR a prova ao chefe.
+ * que o papai lontra de gravata ergue o celular pra MÓSTRAR a prova ao chefe.
  */
 
 const RUG = '#e0d2b4'
@@ -451,7 +451,7 @@ function createScene(): CardScene {
 
     seq('papai-rise', 'papai', 8.0, 0.9, [riseFrom(GY, 1.9)], {
       ease: 'easeOut',
-      caption: 'Papai lontra de gravata torta sobe pra MÔSTE-ar a prova ao chefe (måste = preciso).',
+      caption: 'Papai lontra de gravata torta sobe pra MÓSTE-ar a prova ao chefe (måste = preciso).',
     }),
     seq(
       'celular-pop',
@@ -506,9 +506,9 @@ export const card: Card = {
     fraseFonte: 'Preciso ficar em casa com meu filho hoje, ele está doente.',
     fraseAlvo: 'Jag måste vabba idag, mitt barn är sjukt.',
     pronuncia:
-      "iá MÓS-te VÁB-ba i-DÁG, mit BÁRN é RHÚUKT ('måste' com ó fechado; 'vabba' com A aberto)",
+      "iá MÓS-te VÁB-ba i-DÁG, mit BÁRN é RHÚUKT ('måste' com Ó ABERTO (å curto); 'vabba' com A aberto)",
     ponteSonora:
-      "IÁ MÔSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT! (11 sílabas; MÔSTE = 'mostre' sem R, Ô FECHADO; VÁBA = 'baba' com V, força na 1ª; o N de 'barn' emenda: BÁR, NÉ?; RRÜÜKT fecha em KT seco)",
+      "IÁ MÓSTE VÁBA IDÁG — MIT BÁR, NÉ? RRÜÜKT! (11 sílabas; MÓSTE = 'mostre' sem R, Ó ABERTO como no próprio 'mostre'; VÁBA = 'baba' com V, força na 1ª; o N de 'barn' emenda: BÁR, NÉ?; RRÜÜKT fecha em KT seco)",
     historia:
       'Papai lontra precisa MOSTRAR pro chefe por que não vai aparecer: vira o celular pro filhote, que virou fábrica de VÁBA — o fio de baba já chega ao chão. O filhotinho febril, deitado de barriga pra cima como toda lontra, montou um BAR de xaropes num caixote virado e, bem na hora da câmera, arranca o dardo de ventosa da própria testa: RRÜÜKT!',
   },

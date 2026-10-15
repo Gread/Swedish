@@ -7,7 +7,7 @@ import {
 
 /**
  * "Jag håller inte riktigt med." — na mesa de reunião, o TEXUGO de gravata-
- * borboleta calça os RRÔLER (håller), desliza um palmo pra trás fazendo
+ * borboleta calça os RRÓLER (håller), desliza um palmo pra trás fazendo
  * ÍNTE-RÍKTIT com as rodinhas e ergue uma plaquinha minúscula com um MÊ (med).
  *
  * Diorama: tampo oval de madeira clara é o chão da cena; faixa de tapete
@@ -25,7 +25,7 @@ const WHITE = '#f2eee6' // cabeça
 const BLACK = '#232323' // faixas dos olhos
 const CREAM = '#ded3bd' // garras de cavar
 const WINE = '#8f3b31' // gravata-borboleta
-const ACCENT = '#e2542f' // acento reservado: os PATINS (RRÔLER)
+const ACCENT = '#e2542f' // acento reservado: os PATINS (RRÓLER)
 
 const TY = 0.17 // topo do tampo da mesa
 const TEX_Y = 0.206 // o texugo roda em cima do tapete
@@ -203,7 +203,7 @@ function createScene(): CardScene {
   }
   texugo.add(gravata)
 
-  // ---- os RRÔLER: dois patins com toros pretos -----------------------------
+  // ---- os RRÓLER: dois patins com toros pretos -----------------------------
   const patins = new THREE.Group()
   for (const side of [-1, 1]) {
     const skate = new THREE.Group()
@@ -327,7 +327,7 @@ function createScene(): CardScene {
       [ch('scale.x', 0.01, 1), ch('scale.y', 0.01, 1), ch('scale.z', 0.01, 1)],
       {
         ease: 'easeOut',
-        caption: '…quando discorda, ele calça os RRÔLER (håller) em cima da mesa.',
+        caption: '…quando discorda, ele calça os RRÓLER (håller) em cima da mesa.',
       },
     ),
 
@@ -379,11 +379,11 @@ export const card: Card = {
     fraseFonte: 'Não concordo muito, não.',
     fraseAlvo: 'Jag håller inte riktigt med.',
     pronuncia:
-      "iá RÔL-ler ín-te RÍK-tit me ('hålla' com H soprado e ó fechado; 'riktigt' perde o -g: RÍK-tit; 'med' = me)",
+      "iá RÓL-ler ín-te RÍK-tit me ('håller' com H soprado e Ó ABERTO — å curto; 'riktigt' perde o -g: RÍK-tit; 'med' = me)",
     ponteSonora:
-      "IÁ RRÔLER ÍNTE-RÍKTIT MÊ (8 sílabas; 'håller' = RRÔLER, o patins roller: RR soprado + Ô FECHADO; emende 'inte riktigt' num fôlego só — ÍNTE-RÍKTIT — pro R sair BRANDO, de 'caro', e não estourar em RR carioca; o -gt vira só T; 'med' = MÊ, sem D)",
+      "IÁ RRÓLER ÍNTE-RÍKTIT MÊ (8 sílabas; 'håller' = RRÓLER, o patins roller: RR soprado + Ó ABERTO (å curto: diga RRÓ-ler como em 'rola', não o 'rôler' fechado); emende 'inte riktigt' num fôlego só — ÍNTE-RÍKTIT — pro R sair BRANDO, de 'caro', e não estourar em RR carioca; o -gt vira só T; 'med' = MÊ, sem D)",
     historia:
-      'Na reunião, o texugo de gravata-borboleta nunca briga: quando discorda, calça os RRÔLER e desliza um palmo pra trás em cima da mesa, as unhas de cavar raspando o tampo e as rodinhas fazendo ÍNTE-RÍKTIT, ÍNTE-RÍKTIT num fôlego só. Aí ergue uma plaquinha minúscula com um MÊ engolido, do tamanho de um grão de arroz. Discordar em sueco é isso.',
+      'Na reunião, o texugo de gravata-borboleta nunca briga: quando discorda, calça os RRÓLER e desliza um palmo pra trás em cima da mesa, as unhas de cavar raspando o tampo e as rodinhas fazendo ÍNTE-RÍKTIT, ÍNTE-RÍKTIT num fôlego só. Aí ergue uma plaquinha minúscula com um MÊ engolido, do tamanho de um grão de arroz. Discordar em sueco é isso.',
   },
   createScene,
 }

@@ -7,7 +7,7 @@ import {
 
 /**
  * "Jag måste göra en felanmälan." — o corredor alagou: você tem que MOSTRAR
- * (MÔS-TE, sem o R) a poça para IÔRA, a coruja-zeladora empoleirada no cano.
+ * (MÓS-TE, sem o R) a poça para IÔRA, a coruja-zeladora empoleirada no cano.
  * Ela ergue a chave inglesa e bate duas vezes: FÊ-LAN! MÉ-LAN! — e o papel do
  * chamado sai da parede já carimbado.
  *
@@ -534,7 +534,7 @@ function createScene(): CardScene {
 
     seq('pia-rise', 'pia', 2.0, 0.85, [riseFrom(GY, 1.95)], {
       ease: 'easeOut',
-      caption: '…a torneira virou chafariz, e você precisa MOSTRAR a poça: MÔS-TE!, sem o R.',
+      caption: '…a torneira virou chafariz, e você precisa MOSTRAR a poça: MÓS-TE!, sem o R.',
     }),
     seq('jato-grow', 'jato', 2.25, 0.7, grow(), { ease: 'easeOut' }),
 
@@ -590,11 +590,11 @@ export const card: Card = {
     fraseFonte: 'Preciso abrir um chamado de manutenção.',
     fraseAlvo: 'Jag måste göra en felanmälan.',
     pronuncia:
-      "iá MÓS-te IÖ-ra en FÉL-an-mé-lan ('göra' começa com som de I; 'å' de måste = ó fechado)",
+      "iá MÓS-te IÖ-ra en FÉL-an-mé-lan ('göra' começa com som de I; 'å' de måste = Ó ABERTO (å curto))",
     ponteSonora:
-      "IÁ MÔS-TE IÔRA EN FÊ-LAN-MÉ-LAN (10 sílabas, picos em MÔS, IÔ e FÊ; 'måste' = MÔS-TE, com Ô FECHADO de 'avô' e um -TE fraquinho no fim: é 'mostre' SEM O R — se sair MOS-TRA você inventa uma palavra que não existe em sueco; IÔRA começa com I de IOGA, jamais G duro, e o Ô é dito com BICO, que é o ö; FÊ-LAN-MÉ-LAN nas quatro batidas, FÊ fechado, MÉ bem aberto e nenhum dos dois LAN nasalado)",
+      "IÁ MÓS-TE IÔRA EN FÊ-LAN-MÉ-LAN (10 sílabas, picos em MÓS, IÔ e FÊ; 'måste' = MÓS-TE, com Ó ABERTO de 'pó' (o mesmo do 'mostre' falado) e um -TE fraquinho no fim: é 'mostre' SEM O R — se sair MOS-TRA você inventa uma palavra que não existe em sueco; IÔRA começa com I de IOGA, jamais G duro, e o Ô é dito com BICO, que é o ö; FÊ-LAN-MÉ-LAN nas quatro batidas, FÊ fechado, MÉ bem aberto e nenhum dos dois LAN nasalado)",
     historia:
-      'Sua torneira virou chafariz e melou o corredor, mas na Suécia nada se conserta sozinho: você precisa MOSTRAR a poça pra IÔRA, a coruja-zeladora empoleirada no cano — só que o grito é MÔS-TE!, sem o R (e se você disser GÔ-ra em vez de IÔRA ela finge que não é com ela). Ela examina a poça, ergue a chave inglesa e bate duas vezes no cano: FÊ-LAN! MÉ-LAN! Na segunda batida o papel do chamado sai da parede já carimbado.',
+      'Sua torneira virou chafariz e melou o corredor, mas na Suécia nada se conserta sozinho: você precisa MOSTRAR a poça pra IÔRA, a coruja-zeladora empoleirada no cano — só que o grito é MÓS-TE!, sem o R (e se você disser GÔ-ra em vez de IÔRA ela finge que não é com ela). Ela examina a poça, ergue a chave inglesa e bate duas vezes no cano: FÊ-LAN! MÉ-LAN! Na segunda batida o papel do chamado sai da parede já carimbado.',
   },
   createScene,
 }

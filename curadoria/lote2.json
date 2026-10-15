@@ -100,7 +100,7 @@
       "id": "kan-du-prata-lite-langsammare",
       "sv": "Kan du prata lite långsammare?",
       "pt": "Você pode falar um pouco mais devagar?",
-      "pronuncia": "kan du PRÂ-ta LÍ-te LÔNG-sam-ma-re ('lite' com i longo; 'ng' nasal como em 'tango')",
+      "pronuncia": "kan du PRÂ-ta LÍ-te LÓNG-sam-ma-re ('lite' com i longo; 'ng' nasal como em 'tango')",
       "contexto": "No telefone, no balcão da vårdcentral, com colega que dispara sueco em velocidade normal.",
       "porque": "O 'lite' é o que faz soar educado e não crítico. Diferente de pedir para repetir: muda o ritmo da conversa inteira em vez de recomeçar do zero."
     },
@@ -358,7 +358,7 @@
     },
     {
       "id": "kan-du-prata-lite-langsammare",
-      "ponte_sonora": "CAN-DU PRÁ-TA LÍ-TE... LÔNG SÂ-ma-ra! (CAN-DU é C+A+N, sem o glide de 'quando'; SÂ-ma-ra proparoxítona)",
+      "ponte_sonora": "CAN-DU PRÁ-TA LÍ-TE... LÓNG SÂ-ma-ra! (CAN-DU é C+A+N, sem o glide de 'quando'; SÂ-ma-ra proparoxítona)",
       "historia": "A garçonete do restaurante mais chique de Estocolmo é SÂMARA, uma tartaruga de pescoço LONGUÍSSIMO. No peito dela um broche diz \"PRA TÁ LITE\" — pra ficar leve. Ela serve UMA sílaba por vez num pratinho dourado: quanto mais longo o pescoço, mais devagar sai a sílaba.",
       "cena": {
         "descricao": "Restaurante fino: tartaruga de pescoço longuíssimo curvado sobre a mesa posta, servindo uma única sílaba num pratinho dourado sob o lustre.",
