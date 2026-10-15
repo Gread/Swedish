@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# geometria intermediária do pipeline do Blender
+blockout/

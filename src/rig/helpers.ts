@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { RoundedBoxGeometry } from 'three-stdlib'
+import { GLTFLoader, RoundedBoxGeometry } from 'three-stdlib'
 import type { Channel, ChannelTarget, Ease, Sequence } from './types'
 import { surfaceDetail } from './textures'
 import { rng } from './rand'
@@ -186,6 +186,39 @@ export function puff(radius: number, color: string | number, lumps = 6, seed = 1
   return group
 }
 
+/*
+ * Peças-base esculpidas no Blender (tools/blender/bases.py → public/assets/
+ * bases.glb): cabeça com nariz/orelhas/órbitas, corpo com ombros e pés, braço
+ * afunilado com punho de manga, mão-luva com polegar. Autoradas para um
+ * personagem de altura 1 nas MESMAS dimensões das primitivas que substituem,
+ * então person() troca só a geometria — hierarquia, nomes e posições ficam
+ * idênticos e os adereços das cartas continuam encaixando.
+ */
+let bases: Record<string, THREE.BufferGeometry> | null = null
+
+/** Carrega as peças-base. Chamado uma vez antes de montar qualquer cena. */
+export async function loadBases(url = '/assets/bases.glb') {
+  try {
+    const gltf = await new GLTFLoader().loadAsync(url)
+    const found: Record<string, THREE.BufferGeometry> = {}
+    gltf.scene.traverse((o) => {
+      const m = o as THREE.Mesh
+      if (m.isMesh && m.name.startsWith('base_')) found[m.name] = m.geometry
+    })
+    bases = found
+  } catch {
+    bases = null // sem as peças-base, person() segue com as primitivas
+  }
+}
+
+/** Troca a geometria do mesh pela peça-base escalada, se ela existir. */
+function useBase(mesh: THREE.Mesh, name: string, scale: number) {
+  const g = bases?.[name]
+  if (!g) return
+  mesh.geometry.dispose()
+  mesh.geometry = g.clone().scale(scale, scale, scale)
+}
+
 export interface PersonOpts {
   body: string | number
   skin: string | number
@@ -207,6 +240,7 @@ export function person({ body, skin, height = 1.5, armAngle = 0.5 }: PersonOpts)
   const headR = height * 0.19
 
   const bodyMesh = capsule(bodyR, bodyH - bodyR * 2, body)
+  useBase(bodyMesh, 'base_body', height)
   bodyMesh.name = 'body'
   bodyMesh.position.y = bodyH / 2
   g.add(bodyMesh)
@@ -215,6 +249,7 @@ export function person({ body, skin, height = 1.5, armAngle = 0.5 }: PersonOpts)
   head.name = 'head'
   head.position.y = bodyH + headR * 0.85
   const skull = sphere(headR, skin)
+  useBase(skull, 'base_head', height)
   head.add(skull)
   for (const side of [-1, 1]) {
     const eye = sphere(headR * 0.22, '#ffffff', { roughness: 0.25 })
@@ -228,10 +263,12 @@ export function person({ body, skin, height = 1.5, armAngle = 0.5 }: PersonOpts)
 
   for (const side of [-1, 1]) {
     const arm = capsule(bodyR * 0.38, bodyH * 0.5, body)
+    useBase(arm, 'base_arm', height)
     arm.name = side < 0 ? 'armL' : 'armR'
     arm.position.set(side * bodyR * 1.15, bodyH * 0.62, 0)
     arm.rotation.z = -side * armAngle
     const hand = sphere(bodyR * 0.4, skin)
+    useBase(hand, 'base_hand', height)
     hand.position.y = -bodyH * 0.32
     arm.add(hand)
     g.add(arm)
