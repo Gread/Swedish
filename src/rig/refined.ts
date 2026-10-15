@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { GLTFLoader } from 'three-stdlib'
+import { DRACOLoader, GLTFLoader } from 'three-stdlib'
 import type { CardScene } from './types'
 import { mat } from './helpers'
 
@@ -14,7 +14,7 @@ import { mat } from './helpers'
  * peça) seguem valendo sem nenhuma alteração.
  */
 
-const loader = new GLTFLoader()
+const loader = new GLTFLoader().setDRACOLoader(new DRACOLoader().setDecoderPath('/draco/'))
 const cache = new Map<string, Promise<THREE.Group | null>>()
 
 function load(id: string): Promise<THREE.Group | null> {

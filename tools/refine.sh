@@ -35,9 +35,14 @@ else
   echo $$ > "$LOCK/pid"
   trap 'rm -rf "$LOCK"' EXIT
   # timeout: um bake normal leva <1 min; travado, desiste e libera a fila
-  perl -e 'alarm shift; exec @ARGV' 300 "$BLENDER" -b --python tools/blender/refine.py -- \
-    "blockout/$ID.glb" "blockout/refined/$ID.glb" --organic "$ORGANIC" --ao 2>&1 \
-    | grep -E "^\[refine\]|Error|Traceback" || true
+  run_blender() {
+    perl -e 'alarm shift; exec @ARGV' 300 "$BLENDER" -b --python tools/blender/refine.py -- \
+      "blockout/$ID.glb" "blockout/refined/$ID.glb" --organic "$ORGANIC" --ao 2>&1 \
+      | grep -E "^\[refine\]|Error|Traceback" || true
+  }
+  run_blender
+  # o bake na GPU (Metal) às vezes derruba o Blender: repete na CPU
+  [ -f "blockout/refined/$ID.glb" ] || REFINE_CPU=1 run_blender
   rm -rf "$LOCK"
   trap - EXIT
   [ -f "blockout/refined/$ID.glb" ] || { echo "$ID: Blender não gerou saída" >&2; exit 1; }

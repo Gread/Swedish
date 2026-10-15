@@ -11,6 +11,7 @@ Contrato com o runtime (src/rig/refined.ts):
     o refinado volta exatamente para o lugar e as animações seguem valendo;
   - peças fora de --organic passam intactas (só reagrupadas por material).
 """
+import os
 import sys
 
 import bmesh
@@ -189,6 +190,9 @@ def bake_ao(objs):
     scene.render.engine = "CYCLES"
     scene.cycles.samples = 64
     scene.cycles.device = "CPU"
+    if os.environ.get("REFINE_CPU"):  # repescagem do refine.sh após crash na GPU
+        log("dispositivo de bake: CPU (forçado)")
+        return bake_groups(objs)
     try:  # GPU (Metal no Mac) quando disponível: bake bem mais rápido
         prefs = bpy.context.preferences.addons["cycles"].preferences
         prefs.compute_device_type = "METAL"
@@ -200,6 +204,10 @@ def bake_ao(objs):
     except Exception as e:  # noqa: BLE001
         log(f"GPU indisponível, bake em CPU ({e})")
     log(f"dispositivo de bake: {scene.cycles.device}")
+    bake_groups(objs)
+
+
+def bake_groups(objs):
     for o in objs:
         if not o.data.color_attributes.get("AO"):
             o.data.color_attributes.new("AO", "BYTE_COLOR", "CORNER")
@@ -274,5 +282,13 @@ bpy.ops.export_scene.gltf(
     export_apply=True,
     export_vertex_color="ACTIVE" if AO else "MATERIAL",
     export_all_vertex_colors=False,
+    # Draco: as peles fundidas são densas; comprimido o arquivo cai ~10x
+    # (o app decodifica com public/draco/, ver src/rig/refined.ts)
+    export_draco_mesh_compression_enable=True,
+    export_draco_mesh_compression_level=6,
+    export_draco_position_quantization=14,
+    export_draco_normal_quantization=10,
+    export_draco_texcoord_quantization=12,
+    export_draco_color_quantization=10,
 )
 log(f"salvo {DST}")

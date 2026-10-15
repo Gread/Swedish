@@ -66,6 +66,48 @@ import vadKulAttHora from '../cards/vad-kul-att-hora'
 import ahVadTrakigt from '../cards/ah-vad-trakigt'
 import detVarJattegott from '../cards/det-var-jattegott'
 
+// Lote 4 — cumprimentos, cortesia, conversa, trabalho e pagamentos
+import godMorgon from '../cards/god-morgon'
+import hurMarDu from '../cards/hur-mar-du'
+import jagMarBraTackOchDu from '../cards/jag-mar-bra-tack-och-du'
+import hejDa from '../cards/hej-da'
+import varsagod from '../cards/varsagod'
+import ingenOrsak from '../cards/ingen-orsak'
+import tackDetsamma from '../cards/tack-detsamma'
+import vantaLite from '../cards/vanta-lite'
+import ursaktaAttJagStor from '../cards/ursakta-att-jag-stor'
+import jagVetInte from '../cards/jag-vet-inte'
+import jagForstar from '../cards/jag-forstar'
+import vadSaDu from '../cards/vad-sa-du'
+import detSpelarIngenRoll from '../cards/det-spelar-ingen-roll'
+import lyckaTill from '../cards/lycka-till'
+import grattisPaFodelsedagen from '../cards/grattis-pa-fodelsedagen'
+import skal from '../cards/skal'
+import smakligMaltid from '../cards/smaklig-maltid'
+import villDuHaNagotAttDricka from '../cards/vill-du-ha-nagot-att-dricka'
+import komInOchSattDig from '../cards/kom-in-och-satt-dig'
+import jagArHungrig from '../cards/jag-ar-hungrig'
+import vadGorDuIHelgen from '../cards/vad-gor-du-i-helgen'
+import jagArTrott from '../cards/jag-ar-trott'
+import harDuTidEnStund from '../cards/har-du-tid-en-stund'
+import jagRingerDigSenare from '../cards/jag-ringer-dig-senare'
+import jagKommerFranBrasilien from '../cards/jag-kommer-fran-brasilien'
+import varKommerDuIfran from '../cards/var-kommer-du-ifran'
+import jagHarBottHarISjuAr from '../cards/jag-har-bott-har-i-sju-ar'
+import jagLarMigSvenska from '../cards/jag-lar-mig-svenska'
+import vadJobbarDuMed from '../cards/vad-jobbar-du-med'
+import varBorDu from '../cards/var-bor-du'
+import jagHarEttMote from '../cards/jag-har-ett-mote'
+import kanDuSkickaDetPaMejl from '../cards/kan-du-skicka-det-pa-mejl'
+import kanJagBetalaMedKort from '../cards/kan-jag-betala-med-kort'
+import kanJagSwisha from '../cards/kan-jag-swisha'
+import villDuHaKvittot from '../cards/vill-du-ha-kvittot'
+import jagTittarBara from '../cards/jag-tittar-bara'
+import harNiDenIEnAnnanStorlek from '../cards/har-ni-den-i-en-annan-storlek'
+import arDetLedigtHar from '../cards/ar-det-ledigt-har'
+import forlatJagArLiteSen from '../cards/forlat-jag-ar-lite-sen'
+import jagKommerOmFemMinuter from '../cards/jag-kommer-om-fem-minuter'
+
 export const cards: Card[] = [
   hejHurArLaget,
   tackSaMycket,
@@ -129,4 +171,44 @@ export const cards: Card[] = [
   vadKulAttHora,
   ahVadTrakigt,
   detVarJattegott,
+  godMorgon,
+  hurMarDu,
+  jagMarBraTackOchDu,
+  hejDa,
+  varsagod,
+  ingenOrsak,
+  tackDetsamma,
+  vantaLite,
+  ursaktaAttJagStor,
+  jagVetInte,
+  jagForstar,
+  vadSaDu,
+  detSpelarIngenRoll,
+  lyckaTill,
+  grattisPaFodelsedagen,
+  skal,
+  smakligMaltid,
+  villDuHaNagotAttDricka,
+  komInOchSattDig,
+  jagArHungrig,
+  vadGorDuIHelgen,
+  jagArTrott,
+  harDuTidEnStund,
+  jagRingerDigSenare,
+  jagKommerFranBrasilien,
+  varKommerDuIfran,
+  jagHarBottHarISjuAr,
+  jagLarMigSvenska,
+  vadJobbarDuMed,
+  varBorDu,
+  jagHarEttMote,
+  kanDuSkickaDetPaMejl,
+  kanJagBetalaMedKort,
+  kanJagSwisha,
+  villDuHaKvittot,
+  jagTittarBara,
+  harNiDenIEnAnnanStorlek,
+  arDetLedigtHar,
+  forlatJagArLiteSen,
+  jagKommerOmFemMinuter,
 ]

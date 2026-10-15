@@ -104,13 +104,27 @@ export function poseAt(scene: CardScene, t: number) {
 /** Aplica opacidade global (0..1) a todos os materiais da cena. */
 export function setSceneOpacity(scene: CardScene, opacity: number) {
   scene.root.traverse((obj) => {
+    // luzes próprias da cena (vela, meteoro…) somem junto com a imagem
+    const light = obj as THREE.Light
+    if (light.isLight) {
+      light.userData.baseIntensity ??= light.intensity
+      light.intensity = light.userData.baseIntensity * opacity
+      return
+    }
     const mesh = obj as THREE.Mesh
     if (!mesh.isMesh) return
     const materials = Array.isArray(mesh.material) ? mesh.material : [mesh.material]
     for (const mat of materials) {
-      mat.transparent = opacity < 1
-      mat.opacity = opacity
-      mat.depthWrite = opacity >= 0.5
+      // o fade multiplica a transparência própria do material (vidro, fumaça)
+      // em vez de sobrescrevê-la
+      const base = (mat.userData.base ??= {
+        opacity: mat.opacity,
+        transparent: mat.transparent,
+        depthWrite: mat.depthWrite,
+      })
+      mat.transparent = base.transparent || opacity < 1
+      mat.opacity = base.opacity * opacity
+      mat.depthWrite = base.depthWrite && opacity >= 0.5
     }
   })
 }
