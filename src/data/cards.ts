@@ -108,6 +108,58 @@ import arDetLedigtHar from '../cards/ar-det-ledigt-har'
 import forlatJagArLiteSen from '../cards/forlat-jag-ar-lite-sen'
 import jagKommerOmFemMinuter from '../cards/jag-kommer-om-fem-minuter'
 
+// Lote 5 — compras, restaurante, transporte, saúde, casa, filhos, trabalho, sentimentos e expressões
+import varArKassan from '../cards/var-ar-kassan'
+import detArFelPris from '../cards/det-ar-fel-pris'
+import kanJagBytaDenHar from '../cards/kan-jag-byta-den-har'
+import jagVillLamnaTillbakaDenHar from '../cards/jag-vill-lamna-tillbaka-den-har'
+import narStangerNi from '../cards/nar-stanger-ni'
+import ettBordForTvaTack from '../cards/ett-bord-for-tva-tack'
+import kanJagFaMenyn from '../cards/kan-jag-fa-menyn'
+import vadRekommenderarDu from '../cards/vad-rekommenderar-du'
+import kanJagFaLiteVatten from '../cards/kan-jag-fa-lite-vatten'
+import kanViDelaPaNotan from '../cards/kan-vi-dela-pa-notan'
+import hurLangtArDet from '../cards/hur-langt-ar-det'
+import narGarNastaBuss from '../cards/nar-gar-nasta-buss'
+import varSkaJagByta from '../cards/var-ska-jag-byta'
+import jagHarMissatBussen from '../cards/jag-har-missat-bussen'
+import jagArPaVag from '../cards/jag-ar-pa-vag'
+import jagBehoverTraffaEnLakare from '../cards/jag-behover-traffa-en-lakare'
+import jagHarFeber from '../cards/jag-har-feber'
+import jagMarIlla from '../cards/jag-mar-illa'
+import jagArForkyld from '../cards/jag-ar-forkyld'
+import ring112 from '../cards/ring-112'
+import detArKalltILagenheten from '../cards/det-ar-kallt-i-lagenheten'
+import kanDuTaEmotMittPaket from '../cards/kan-du-ta-emot-mitt-paket'
+import jagHarTappatMinPlanbok from '../cards/jag-har-tappat-min-planbok'
+import kanJagLanaDinLaddare from '../cards/kan-jag-lana-din-laddare'
+import vadArLosenordetTillWifit from '../cards/vad-ar-losenordet-till-wifit'
+import hurVarDetISkolan from '../cards/hur-var-det-i-skolan'
+import dagsAttSova from '../cards/dags-att-sova'
+import taPaDigJackan from '../cards/ta-pa-dig-jackan'
+import skyndaDig from '../cards/skynda-dig'
+import harDuBorstatTanderna from '../cards/har-du-borstat-tanderna'
+import jagArKlar from '../cards/jag-ar-klar'
+import jagForstarVadDuMenar from '../cards/jag-forstar-vad-du-menar'
+import kanDuForklara from '../cards/kan-du-forklara'
+import jagAterkommer from '../cards/jag-aterkommer'
+import detBerorPa from '../cards/det-beror-pa'
+import jagArSaGlad from '../cards/jag-ar-sa-glad'
+import jagArStressad from '../cards/jag-ar-stressad'
+import jagSaknarDig from '../cards/jag-saknar-dig'
+import jagAlskarDig from '../cards/jag-alskar-dig'
+import ojVadKallt from '../cards/oj-vad-kallt'
+import vadHeterDu from '../cards/vad-heter-du'
+import hurStavarManDet from '../cards/hur-stavar-man-det'
+import tackForHjalpen from '../cards/tack-for-hjalpen'
+import ursaktaFarJagKommaForbi from '../cards/ursakta-far-jag-komma-forbi'
+import jagMasteGaNu from '../cards/jag-maste-ga-nu'
+import viHors from '../cards/vi-hors'
+import sovGott from '../cards/sov-gott'
+import haEnBraDag from '../cards/ha-en-bra-dag'
+import sjalvklart from '../cards/sjalvklart'
+import varForsiktig from '../cards/var-forsiktig'
+
 export const cards: Card[] = [
   hejHurArLaget,
   tackSaMycket,
@@ -211,4 +263,54 @@ export const cards: Card[] = [
   arDetLedigtHar,
   forlatJagArLiteSen,
   jagKommerOmFemMinuter,
+  varArKassan,
+  detArFelPris,
+  kanJagBytaDenHar,
+  jagVillLamnaTillbakaDenHar,
+  narStangerNi,
+  ettBordForTvaTack,
+  kanJagFaMenyn,
+  vadRekommenderarDu,
+  kanJagFaLiteVatten,
+  kanViDelaPaNotan,
+  hurLangtArDet,
+  narGarNastaBuss,
+  varSkaJagByta,
+  jagHarMissatBussen,
+  jagArPaVag,
+  jagBehoverTraffaEnLakare,
+  jagHarFeber,
+  jagMarIlla,
+  jagArForkyld,
+  ring112,
+  detArKalltILagenheten,
+  kanDuTaEmotMittPaket,
+  jagHarTappatMinPlanbok,
+  kanJagLanaDinLaddare,
+  vadArLosenordetTillWifit,
+  hurVarDetISkolan,
+  dagsAttSova,
+  taPaDigJackan,
+  skyndaDig,
+  harDuBorstatTanderna,
+  jagArKlar,
+  jagForstarVadDuMenar,
+  kanDuForklara,
+  jagAterkommer,
+  detBerorPa,
+  jagArSaGlad,
+  jagArStressad,
+  jagSaknarDig,
+  jagAlskarDig,
+  ojVadKallt,
+  vadHeterDu,
+  hurStavarManDet,
+  tackForHjalpen,
+  ursaktaFarJagKommaForbi,
+  jagMasteGaNu,
+  viHors,
+  sovGott,
+  haEnBraDag,
+  sjalvklart,
+  varForsiktig,
 ]
