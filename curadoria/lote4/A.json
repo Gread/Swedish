@@ -1,0 +1,123 @@
+{
+  "phrases": [
+    {
+      "id": "god-morgon",
+      "sv": "God morgon!",
+      "pt": "Bom dia!",
+      "pronuncia": "gu-MÓR-ron (na fala vira uma palavra só, 'gomorron'; o 'd' de god e o 'g' de morgon NÃO soam; o 'o' de god = U fechado; 'mor' com Ó ABERTO e R batido de 'caro'; o -on final também com Ó aberto, sem nasalizar)",
+      "contexto": "Chegando no escritório, na creche, no elevador com o vizinho — vale até umas 10h, depois disso é 'hej'. No escritório muita gente encurta para 'Morrn!' ou 'Morsning!'.",
+      "porque": "É a primeira coisa que ele ouve todo dia útil, e responder com a mesma fórmula na hora soa natural. Reconhecer a forma falada 'gomorron' evita aquele 'hã?' logo cedo."
+    },
+    {
+      "id": "hur-mar-du",
+      "sv": "Hur mår du?",
+      "pt": "Como você está?",
+      "pronuncia": "rrü MÔR dü? ('hur' com H soprado e Ü de bico; na fala o -r de 'hur' quase some: 'hu mår du'; 'mår' com Ô FECHADO e longo, e o R dele se funde com o D de 'du' num D de língua enrolada pra trás (rd retroflexo), como um R caipira emendado no D; 'du' com bico de pato)",
+      "contexto": "Com amigos, colegas próximos, alguém que esteve doente ou que você não vê há tempo. Para conhecidos e no dia a dia rápido o sueco usa mais 'Hur är läget?'.",
+      "porque": "Diferente de 'hur är läget', aqui o sueco espera uma resposta de verdade sobre como a pessoa está. Saber a diferença evita parecer frio com amigo — ou invasivo com o caixa do mercado."
+    },
+    {
+      "id": "jag-mar-bra-tack-och-du",
+      "sv": "Jag mår bra, tack. Och du?",
+      "pt": "Estou bem, obrigado. E você?",
+      "pronuncia": "iá môr BRÁ, TAK. ó DÜ? ('jag' = iá, o -g não soa; 'mår' com Ô FECHADO; 'och' na fala é só Ó aberto, sem o K; 'du' com bico de pato)",
+      "contexto": "A resposta padrão para 'Hur mår du?' — e o 'Och du?' devolve a pergunta, que é o que todo sueco faz por educação.",
+      "porque": "É a resposta automática que fecha o ritual de cumprimento; sem o 'och du?' a conversa morre ali. 'Mår bra' também serve sozinho em mensagem: 'Jag mår bra!'."
+    },
+    {
+      "id": "hej-da",
+      "sv": "Hej då!",
+      "pt": "Tchau!",
+      "pronuncia": "rrêi DÔ! ('h' soprado tipo RR carioca; 'då' = DÔ com Ô FECHADO e longo, tônica nele; muitas vezes sai colado: 'hejdå')",
+      "contexto": "Saindo da loja, do escritório, da creche, desligando o telefone. Na fala rápida também se ouve 'hej hej!' ou 'hejdå!'.",
+      "porque": "É a despedida universal da Suécia, do caixa ao chefe. 'Hej' sozinho cumprimenta; o 'då' é o que deixa claro que você está indo embora."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "god-morgon",
+      "elenco": "camelo do moinho",
+      "ponte_sonora": "GU-MÓRON! (3 sílabas numa palavra só, tônica única no MÓ; GU = o gargarejo do camelo, U FECHADO e curto — é o 'god', o mesmo GÚD de 'Varsågod' só que engolindo o D; MÓ = a MÓ, a pedra do moinho (a que MÓI o trigo), com Ó ABERTO de 'pó'; RON gruda no MÓ com R BATIDO de 'caro' — um R só, entre vogais, jamais o RR de 'rua' — e Ó também aberto, com o N na ponta da língua, sem virar o 'rõ' nasal de 'náilon'; MÓRON é o MESMO 'morgon' do ouriço IMÓRON da carta 'Ska vi säga imorgon klockan tre?' — e confere de ouvido: é o GOOD MORning do inglês com o rabo trocado por -RON; o g de 'morgon' é mudo)",
+      "historia": "Antes do sol nascer, o camelo do moinho acorda o vilarejo inteiro. Primeiro ele infla o balão rosa da garganta e gargareja GUUU! até as janelas tremerem. Depois encosta o peito na trave e empurra a MÓ, a pedra redonda gigante do moinho, que gira gemendo grudadinho: MÓ-ron, MÓ-ron, MÓ-ron. Quando o sol aparece no horizonte, ele cospe o balão de volta, arreganha os dentes amarelos e grita pra cada vizinho que abre a janela, tudo num fôlego só: GU-MÓRON! — é o bom-dia do deserto.",
+      "cena": {
+        "descricao": "Deserto ao amanhecer: um camelo bege, com um balão rosa saindo da boca, empurra com o peito a trave de madeira de uma mó de pedra cinza gigante, enquanto metade do sol laranja surge no horizonte.",
+        "partes": [
+          "chão de areia laranja-clara",
+          "meio sol laranja-forte despontando no horizonte",
+          "palmeira verde com tronco marrom ao fundo",
+          "base circular de pedra cinza-escura do moinho",
+          "mó: pedra redonda cinza-clara gigante em pé sobre a base",
+          "eixo de madeira escura no centro da mó",
+          "trave de madeira mel ligando o eixo ao camelo",
+          "corpo do camelo bege-areia",
+          "corcova bege-areia",
+          "pescoço comprido e cabeça do camelo com dentes amarelos",
+          "balão rosa inflado saindo da boca do camelo"
+        ]
+      }
+    },
+    {
+      "id": "hur-mar-du",
+      "elenco": "abelha fofoqueira",
+      "ponte_sonora": "RRÜ-MÔR, DÜ? (3 sílabas, tônica no MÔR; é RUMOR dito à carioca — o RR do começo é o h soprado de 'hur', o MESMO RÜR de 'Hur kommer jag till?' e 'Hur bokar man tvättstugan?', só que aqui o R final de 'hur' some antes do M, como o sueco faz na fala: 'hu mår du'; a vogal é Ü de BICO, nunca o U chapado de 'urso'; MÔR com Ô FECHADO e longo, o 'mor' de 'amor' — se fechar em U vira 'mor', que é MÃE; o R de MÔR NÃO some (sem ele sobra 'må', outro verbo): é R à caipira, de língua enrolada, que já encosta no D seguinte como o rd sueco, nunca o R raspado carioca de fim de palavra; DÜ = o 'du' de CAN-DU, com bico de pato)",
+      "historia": "Na colmeia do seu prédio mora a abelha fofoqueira: em vez de mel, ela fabrica RUMOR — está até escrito na placa da porta. Toda vez que você passa, ela dispara pra fora feito repórter de fofoca, para a um palmo do seu nariz, enfia um microfone na sua cara e aponta o ferrão bem pra você: RRÜ-MÔR, DÜ?! — qual é o rumor de VOCÊ? Ela não sai dali, zumbindo, até você contar como está de verdade.",
+      "cena": {
+        "descricao": "Diante de uma colmeia com a placa RUMOR, uma abelha gorda amarela e preta paira no ar estendendo um microfone de repórter para o espectador e apontando o ferrão para ele.",
+        "partes": [
+          "gramado verde-claro",
+          "flor rosa com miolo amarelo",
+          "colmeia amarelo-mel em camadas pendurada num galho marrom",
+          "placa de madeira clara na colmeia escrita RUMOR",
+          "corpo da abelha gorda listrado amarelo e preto",
+          "cabeça preta da abelha com olhos grandes curiosos",
+          "duas antenas pretas inclinadas para a frente",
+          "quatro asas translúcidas azuladas",
+          "microfone de repórter prateado com globo preto, apontado para o espectador",
+          "ferrão preto apontando para o espectador"
+        ]
+      }
+    },
+    {
+      "id": "jag-mar-bra-tack-och-du",
+      "elenco": "astronauta surfando a reentrada",
+      "ponte_sonora": "IÁ, MÔR! BRÁ... TAC! Ó, DÜ? (6 sílabas, tônicas em MÔR, BRÁ, TAC e DÜ; IÁ é o 'jag' de sempre, I de ioga — nunca o J chiado de 'já'; MÔR = o 'mor' de 'amor', o MESMO MÔR de RUMOR na carta 'Hur mår du?', com Ô FECHADO e R final BRANDO à caipira, AUDÍVEL antes do BRÁ — se cair, sobra 'må', outro verbo; se fechar em U vira 'mor' (mãe); BRÁ = o BRÁ de BRASA, R brando e A longo, o mesmo 'bra' de 'låter bra'; TAC = o tapa do 'tack' de sempre; Ó aberto e curto é o 'och' da fala, sem K; DÜ com bico de pato)",
+      "historia": "O astronauta volta pra Terra em pé em cima do escudo térmico da cápsula, surfando a reentrada, com tudo em volta pegando fogo, em BRASA. No rádio, a esposa pergunta desesperada como ele está. Ele responde de boa: IÁ, MÔR! BRÁ-sa por fora, mas eu tô BRÁ! — e dá um TAC! no próprio capacete pra mostrar que está inteirinho. Aí aponta lá pra baixo, direto pra você: Ó, DÜ? — e você, tá bem?",
+      "cena": {
+        "descricao": "No céu azul-escuro, um astronauta de traje branco surfa em pé sobre um escudo térmico em brasa laranja, com chamas atrás, segurando um rádio no ouvido e apontando o outro braço direto para o espectador.",
+        "partes": [
+          "céu azul-escuro de fundo",
+          "duas nuvens brancas lá embaixo",
+          "escudo térmico: disco grosso laranja-brasa servindo de prancha",
+          "cápsula cônica prateada logo atrás do escudo",
+          "rastro de chamas laranja e vermelhas atrás da cápsula",
+          "corpo do astronauta de traje branco, em pé sobre o disco",
+          "mochila de oxigênio cinza nas costas",
+          "capacete branco redondo com viseira dourada",
+          "rádio preto com antena encostado no capacete",
+          "braço apontando para o espectador"
+        ]
+      }
+    },
+    {
+      "id": "hej-da",
+      "elenco": "faraó dourado no sarcófago",
+      "ponte_sonora": "RÊI... DÔ! (2 sílabas, tônica no DÔ; RÊI é o MESMO REI do 'Hej!' de 'Hej! Hur är läget?', com o R carioca soprado que é o h sueco; DÔ = o começo de DOUrado, com Ô FECHADO e LONGO — estique ele e corte o '-rado'; nunca 'do' falado 'du', que vira 'hej du' (oi, você), nem 'dó' aberto)",
+      "historia": "No fim da festa no palácio, o faraó — o REI DOUrado, máscara de ouro e tudo — se despede do jeito dele: deita no próprio sarcófago dourado, acena com a mão cheia de anéis e vai puxando a tampa por cima de si mesmo, devagarinho, gritando RÊÊI... DÔÔÔ! A tampa bate, a pirâmide se fecha atrás, e ninguém vê o faraó de novo até a próxima cheia do Nilo. Isso é que é tchau.",
+      "cena": {
+        "descricao": "Ao pôr do sol, diante de uma pirâmide, um faraó vivo de máscara dourada e colar largo está sentado num sarcófago dourado aberto, acenando com a mão cheia de anéis enquanto puxa a tampa sobre si.",
+        "partes": [
+          "chão de areia dourada",
+          "pirâmide bege ao fundo",
+          "sol poente laranja baixo no céu",
+          "sarcófago dourado aberto (caixa comprida)",
+          "tampa dourada do sarcófago inclinada, meio fechada",
+          "corpo do faraó de pele morena com saiote branco de linho e colar largo azul e dourado, sentado no sarcófago",
+          "máscara-cabeça dourada com listras azuis (nemes)",
+          "barba postiça dourada fina sob o queixo",
+          "braço com bracelete dourado acenando para fora do sarcófago",
+          "cetro dourado em gancho apoiado na borda"
+        ]
+      }
+    }
+  ]
+}

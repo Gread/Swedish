@@ -1,0 +1,123 @@
+{
+  "phrases": [
+    {
+      "id": "jag-kommer-fran-brasilien",
+      "sv": "Jag kommer från Brasilien.",
+      "pt": "Eu sou do Brasil.",
+      "pronuncia": "iá KÓM-mer frôn bra-SÍ-li-en ('jag' = iá, o -g não soa; 'kommer' com O ABERTO e força no KÓM; 'från' com ô fechado e sem nasal; Brasilien com S de cobra, nunca Z, e força no SÍ)",
+      "contexto": "A resposta padrão quando perguntam de onde você é: no trabalho, na förskola, no SFI, no cabeleireiro, no vizinho do elevador.",
+      "porque": "É a frase que ele mais vai ter que dizer na vida sueca — e responder em sueco, em vez de em inglês, mantém a conversa em sueco. A estrutura 'kommer från' serve pra qualquer lugar."
+    },
+    {
+      "id": "var-kommer-du-ifran",
+      "sv": "Var kommer du ifrån?",
+      "pt": "De onde você é?",
+      "pronuncia": "var KÓM-mer dü i-FRÔN? ('var' com R brando audível — sem ele vira 'vad', o quê; 'du' com ü de bico; a pergunta termina em i-FRÔN, força no FRÔN)",
+      "contexto": "A pergunta que todo sueco faz depois de ouvir o sotaque — e a que ele pode devolver a outro imigrante, a um colega novo ou ao pai de outra criança da förskola.",
+      "porque": "Reconhecer a pergunta na hora evita o 'sorry?' que faz o sueco trocar pro inglês. E devolvê-la é o jeito mais fácil de puxar conversa com outros estrangeiros, que são metade dos colegas."
+    },
+    {
+      "id": "jag-har-bott-har-i-sju-ar",
+      "sv": "Jag har bott här i sju år.",
+      "pt": "Moro aqui há sete anos.",
+      "pronuncia": "iá rrar BÓT rrér i RRÜÜ ÔR ('har' e 'här' com o h soprado leve tipo RR carioca e R final brando; 'bott' com Ó ABERTO e CURTO, T segurado — com ô fechado e longo vira 'båt', barco; 'sju' = o sopro FORTE do 'sj', raspado e com ü de bico, longo — mais forte que o h de 'har/här'; 'år' com ô fechado)",
+      "contexto": "Continuação natural de 'Jag kommer från Brasilien' — logo vem 'Hur länge har du bott här?' (há quanto tempo você mora aqui?).",
+      "porque": "É a pergunta seguinte em 100% das conversas sobre origem. E a estrutura 'har bott ... i X år' (morei/moro há X anos) serve pra trabalho, casa, cidade — basta trocar o número."
+    },
+    {
+      "id": "jag-lar-mig-svenska",
+      "sv": "Jag lär mig svenska.",
+      "pt": "Estou aprendendo sueco.",
+      "pronuncia": "iá LÉR mêi SVÉN-ska ('lär' com É BEM ABERTO e longo, quase puxando pra A — com ê fechado vira 'ler', que é sorrir; 'mig' = mêi, uma sílaba só; 'svenska' com força no SVÉN)",
+      "contexto": "Pra abrir qualquer conversa ou pedir paciência: no trabalho, com vizinhos, no caixa, ao telefone — antes que o outro troque pro inglês.",
+      "porque": "Avisar que está aprendendo faz muitos suecos desacelerarem e continuarem em sueco em vez de mudar pro inglês. É também a frase mais honesta e simpática pra quem está há 7 anos no país."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-kommer-fran-brasilien",
+      "elenco": "panda imigrante + Brasília amarela de placa sueca",
+      "ponte_sonora": "IÁ! CÓ-MER FRÔN... BRASÍLI-EN! (8 sílabas: iá-KÓ-mer-frôn-bra-SÍ-li-en; tônicas em CÓ e SÍ; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; CÓ-MER é o MESMO 'comer' de 'Hur kommer jag till?' — mas com a força no CÓ, Ó ABERTO, e o -MER fraquinho com R BRANDO: nunca 'co-MÊR' à portuguesa; FRÔN é a FRÔNha sem o -nha, o mesmo FRÔN de 'Vilket spår går tåget från?': Ô FECHADO e N batido na língua, sem a nasal de 'fronha'; BRASÍLI-EN é a BRASÍLIA que imigrou e ganhou PLACA SUECA — na placa está escrito BRASILIEN: o -A final NÃO cai, ele VIRA -EN (4 sílabas, bra-SÍ-li-en; nunca 'brasíli' cortado como o HUNGRI mordido de 'Jag är hungrig'); força no SÍ igualzinho à Brasília, S de COBRA, nunca o Z de 'brazil'; o EN é curto, com N na língua e sem nasal)",
+      "historia": "Na esteira de bagagens de Arlanda desce um panda gigante com uma FRONHA verde-amarela estufada amarrada nas costas, a única mala que ele trouxe. Em vez de bambu, ele trouxe pra CÓ-MER uma BRASÍLIA amarela inteira — e já está roendo o para-choque da frente feito talo de bambu. Mas a traseira está intacta, com placa sueca novinha: BRASILIEN — na Suécia até a Brasília termina em -EN. O fiscal da alfândega pergunta de onde ele vem; o panda bate na fronha, aponta a placa e responde de boca cheia: IÁ! CÓ-MER FRÔN BRASÍLIEN! — eu sou do Brasil.",
+      "cena": {
+        "descricao": "Esteira de bagagens do aeroporto: um panda gigante em pé, com uma fronha verde-amarela estufada amarrada nas costas, rói o para-choque dianteiro de uma Brasília amarela cuja traseira exibe uma placa sueca BRASILIEN, enquanto um fiscal de quepe azul ergue a mão pedindo o passaporte.",
+        "partes": [
+          "piso de aeroporto cinza-claro em placas quadradas",
+          "esteira de bagagens preta comprida com borda prateada",
+          "Brasília amarela em blocos (carroceria baixa, vidros azul-claros, rodas pretas) sobre a esteira",
+          "para-choque dianteiro cromado com marca de mordida (meia-lua escura recortada)",
+          "placa sueca branca com faixa azul na traseira da Brasília, escrita BRASILIEN",
+          "corpo do panda branco em pé sobre a esteira, abraçado à frente do carro",
+          "braços, pernas e orelhas pretos do panda; manchas pretas nos olhos",
+          "fronha verde-amarela estufada (almofadão verde com faixa amarela) amarrada nas costas do panda com uma corda marrom",
+          "fiscal da alfândega de uniforme azul-marinho",
+          "quepe azul com aba preta e mão erguida segurando um passaporte vermelho"
+        ]
+      }
+    },
+    {
+      "id": "var-kommer-du-ifran",
+      "elenco": "ninja curioso + vara de bambu",
+      "ponte_sonora": "VAR! CÓ-MER... DÜ? I-FRÔN?! (6 sílabas: var-KÓ-mer-dü-i-FRÔN; tônicas em CÓ e FRÔN; VAR é a VARA sem o -a, o mesmo de 'Var kan jag köpa biljett?' — R BRANDO e AUDÍVEL: sem ele sobra VÁ, que é 'vad' (o quê) e a pergunta vira outra; CÓ-MER igual à carta 'Jag kommer från Brasilien': Ó ABERTO, força no CÓ, -mer fraquinho — nunca 'co-MÊR'; DÜ é o 'du' de CAN-DU, com BICO DE PATO, apontado pra você; I-FRÔN = o hashi espetado em pé na fronha, um I de pau, + a FRÔNha sem o -nha, Ô FECHADO e sem nasal: a pergunta TERMINA em 'ifrån' — fronha COM o I espetado é pergunta; fronha sem nada, na carta da resposta, é só 'från')",
+      "historia": "Você acabou de chegar e está jantando sentado na sua fronha verde-amarela de viagem quando um ninja atravessa a janela num salto com VARA — VAR! — e crava o bambu no tapete. Sem pedir licença ele pega sua tigela e começa a CÓ-MER, com a força toda no CÓ, de boca aberta. De boca cheia, aponta um hashi pra você — DÜ? — e espeta o outro em pé na fronha, feito um I de pau: I... FRÔN?! O ninja quer saber de onde você veio.",
+      "cena": {
+        "descricao": "Sala de apartamento sueco: um ninja todo de preto, recém-pousado ao lado de uma vara de bambu fincada no tapete, segura uma tigela de arroz e aponta um hashi para você, enquanto o outro hashi está espetado em pé na fronha verde-amarela onde você está sentado.",
+        "partes": [
+          "piso de tábuas claras de pinho",
+          "tapete retangular cinza",
+          "mesinha baixa branca com um prato vazio",
+          "vara de bambu verde-clara fincada no tapete, inclinada",
+          "corpo do ninja preto agachado em pose de pouso",
+          "cabeça do ninja com capuz preto e faixa de olhos vermelha",
+          "tigela branca de arroz numa das mãos do ninja",
+          "hashi marrom esticado na outra mão, apontando para você",
+          "fronha verde-amarela estufada no chão (almofadão verde com faixa amarela) com um segundo hashi marrom espetado em pé, vertical como um I",
+          "você: figura simples de camiseta azul, sentado na fronha com os braços erguidos de susto"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-bott-har-i-sju-ar",
+      "elenco": "golfinho de banheira + bota com hera",
+      "ponte_sonora": "IÁ RRÁR... BÓT' RRÉ-RI... RRÜÜ ÔR! (7 sílabas: iá-rrar-BÓT-rrér-i-RRÜÜ-ÔR; tônicas em BÓT, RRÜÜ e ÔR; IÁ RRÁR = 'eu HÁ...' — o HÁ de 'há sete anos', com o h soprado LEVE em RR carioca e R final BRANDO, o mesmo RRÁR de 'Jag har ont i magen'; BÓT' é a BOTA sem o -a, Ó ABERTO e CURTO, com o T segurado um instante (tt) — com ô fechado e longo sai 'båt' (barco); RRÉR é a HERA sem o -a com o h soprado leve, o mesmo de 'Det gör ont här', e o R dela emenda no I — o guinchinho do golfinho: RRÉ-RI; RRÜÜ é o sopro do 'sj', o MESMO de RRÜÜK ('sjuk') mas SEM o K — com K vira 'doente'; esse sopro é FORTE e raspado, com o BICO já esticado, bem mais forte que o h leve de 'har/här' — fraquinho ele vira 'hu'; ÔR é o OURO sem o -o, Ô FECHADO, o mesmo 'år' do oito-de-ouro de 'Jag har två barn')",
+      "historia": "Um golfinho mora há tanto tempo na banheira de um apartamento sueco que ele mesmo perdeu a conta: IÁ RRÁR... — eu HÁ... A galocha que alguém largou no canto no primeiro dia virou vaso: da BOTA brotou uma HERA que já subiu até o teto. E todo ano, no aniversário da mudança, ele solta um guinchinho — I! —, estica o BICO e sopra com toda a força — RRÜÜ! —, disparando uma moeda de OURO pela boca até a borda da banheira. A pilha já tem sete moedas: sete anos morando aqui.",
+      "cena": {
+        "descricao": "Banheiro de azulejos: um golfinho erguido numa banheira branca, de bico esticado, sopra uma moeda de ouro pela boca em direção a uma pilha de seis moedas na borda, ao lado de uma bota preta de onde sobe uma hera até o teto.",
+        "partes": [
+          "piso de azulejo branco com rejunte cinza",
+          "parede de azulejos azul-claros ao fundo",
+          "banheira branca com pés dourados",
+          "água azul-turquesa (disco achatado) dentro da banheira",
+          "corpo do golfinho cinza-azulado erguido na água, barriga clara",
+          "bico comprido esticado pra frente, olhos pretos e nadadeiras abertas",
+          "sopro saindo da ponta do bico (cone branco translúcido curto, horizontal)",
+          "moeda de ouro voando na ponta do sopro",
+          "pilha de seis moedas de ouro na borda da banheira",
+          "bota de borracha preta no chão, ao lado da banheira",
+          "hera verde subindo da bota pela parede em ramos (cilindros finos + folhinhas)"
+        ]
+      }
+    },
+    {
+      "id": "jag-lar-mig-svenska",
+      "elenco": "palhaço aprendiz + skate do Sven + meia-livro com chulé",
+      "ponte_sonora": "IÁ LÉÉR MÊI SVÉN-SKA! (5 sílabas: iá-LÉR-mêi-SVÉN-ska; tônicas em LÉR e SVÉN; LÉÉR = LER, mas com o É BEM ABERTO de chuLÉ — a meia fede, e a cara de nojo escancara a boca no É: longo, quase puxando pra A; com o ê fechado do 'ler' português sai 'ler', que em sueco é SORRIR; o R final é BRANDO e quase gruda no M; MÊI é a MEIA sem o -a, UMA sílaba só, o mesmo 'mig' de 'Jag har låst mig ute'; SVÉN-SKA é o SVEN SKAtista do card 'Jag pratar inte så bra svenska': força no SVÉN, É aberto e N batido na língua, e o SKA curtinho de SKAtista — nunca o 'skêit' do inglês)",
+      "historia": "O palhaço decidiu aprender sueco do jeito dele: as lições estão escritas numa MEIA listrada gigante, e ele a abre como se fosse um livro, de óculos na ponta do nariz vermelho. Só que a meia tem um CHULÉ medonho — então ele lê de boca escancarada de nojo, esticando o É do chuLÉ: LÉÉÉR! Pra não perder tempo, lê equilibrado no skate que pegou emprestado do SVEN SKAtista, com o nome SVEN pintado embaixo. IÁ LÉÉR MÊI SVÉN-SKA: eu estou aprendendo sueco.",
+      "cena": {
+        "descricao": "No picadeiro do circo, um palhaço de nariz vermelho e óculos, boca escancarada de nojo, se equilibra num skate azul com a placa SVEN enquanto lê, como um livro aberto, uma meia listrada gigante de onde sobe fumacinha verde de chulé.",
+        "partes": [
+          "picadeiro redondo vermelho com borda amarela",
+          "skate azul com 4 rodinhas brancas",
+          "placa SVEN presa na frente do skate",
+          "sapatos enormes amarelos do palhaço plantados no skate",
+          "corpo do palhaço de macacão de bolinhas verde e branco, inclinado pra equilibrar",
+          "cabeça branca com peruca laranja em tufos",
+          "nariz vermelho (esfera) e boca escancarada em careta de nojo (oval escuro grande, sem sorriso pintado)",
+          "óculos redondos pretos na ponta do nariz",
+          "meia gigante listrada vermelho e branco aberta nas duas mãos como livro, com linhas de texto (faixas pretas finas) dentro",
+          "fumacinha de chulé verde subindo da meia (3 fitas onduladas verde-limão)"
+        ]
+      }
+    }
+  ]
+}

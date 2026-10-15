@@ -1,0 +1,125 @@
+{
+  "phrases": [
+    {
+      "id": "har-ni-den-i-en-annan-storlek",
+      "sv": "Har ni den i en annan storlek?",
+      "pt": "Vocês têm em outro tamanho?",
+      "pronuncia": "rrar ni den i en ÁN-nan STÚUR-lêk ('har' com h soprado e R brando; 'annan' com A aberto e ORAL, força no primeiro A; 'storlek' com U fechado e longo, o R some dentro do L, e Ê fechado no fim)",
+      "contexto": "Na loja de roupa ou de sapato, com a peça na mão — pro vendedor, ou de dentro do provador. 'Den' vale pra uma peça (en tröja, en jacka); pra calça, que em sueco é plural, vira 'dem' (falado 'dom').",
+      "porque": "Comprar roupa sem precisar trocar pro inglês. 'Har ni...?' é o molde de todo pedido em loja (o mesmo da farmácia), e 'storlek' está em toda etiqueta, site e provador."
+    },
+    {
+      "id": "ar-det-ledigt-har",
+      "sv": "Är det ledigt här?",
+      "pt": "Esse lugar está livre?",
+      "pronuncia": "é dê LÊÊ-dit RRÉR ('det' com o t mudo; 'ledigt' com Ê fechado e longo, o g some e sobra só o T; 'här' com h soprado e ä bem aberto)",
+      "contexto": "No ônibus, trem, café ou sala de espera lotados, apontando pro lugar vago ao lado de alguém — às vezes com uma bolsa em cima. Resposta: 'Ja, det är ledigt' ou 'Nej, det är upptaget'.",
+      "porque": "Sueco não puxa conversa com estranho, então muitas vezes essa é a ÚNICA frase trocada no transporte — sentar sem perguntar soa grosseiro. 'Ledig' também é folga ('jag är ledig idag') e está na tranca do banheiro (LEDIGT/UPPTAGET)."
+    },
+    {
+      "id": "forlat-jag-ar-lite-sen",
+      "sv": "Förlåt, jag är lite sen.",
+      "pt": "Desculpa, estou um pouco atrasado.",
+      "pronuncia": "fö-LÔT, iá é LÍ-te SÊÊN ('förlåt' com força no LÔT e ô fechado; 'jag' = iá; 'lite' = LÍ-te, nunca 'láite'; 'sen' com Ê fechado e longo, N sem nasal)",
+      "contexto": "Chegando atrasado em reunião, consulta, fika, na busca do filho na förskola — ou por SMS antes de chegar: 'Förlåt, jag är lite sen!' (no SMS também se ouve 'jag blir lite sen', 'vou me atrasar um pouco').",
+      "porque": "Pontualidade é quase sagrada na Suécia: dois minutos de atraso já pedem essa frase. 'Lite' suaviza, e 'sen' (atrasado) é a mesma raiz de 'senare' (mais tarde)."
+    },
+    {
+      "id": "jag-kommer-om-fem-minuter",
+      "sv": "Jag kommer om fem minuter.",
+      "pt": "Chego em cinco minutos.",
+      "pronuncia": "iá KÓ-mer om FÉM mi-NÜÜ-ter ('kommer' com Ó aberto e força no KÓ; 'om' = ÓM curto e oral; 'fem' com É aberto; 'minuter' com u de bico, longo, e força no NÜ)",
+      "contexto": "Por SMS ou telefone pra quem está esperando, ou gritando de dentro de casa. Troque o número: 'om tio minuter', 'om en kvart'.",
+      "porque": "'Om' + tempo = 'daqui a': serve pra qualquer prazo ('om en timme', 'om två dagar'). E 'kommer' é o mesmo verbo de 'Jag kommer från Brasilien'."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "har-ni-den-i-en-annan-storlek",
+      "elenco": "búfalo no provador + jaqueta de denim + leque STOR",
+      "ponte_sonora": "RRÁR-NI DÊ-NI EN... ÁN-NAN! STÚUR-LÊK? (9 sílabas: rrar-ni-den-i-en-ÁN-nan-STÚUR-lêk; tônicas em ÁN e STÚUR; RRÁR-NI = a ÁRNIca sem o -ca, o MESMO de 'Har ni något receptfritt mot det här?' — h SOPRADO na frente e R brando colado no NI; DÊ-NI = o DENIM da jaqueta SEM o M: 'den i' grudados, DEN curto como o começo de DENTE (o mesmo DEN de 'Vad kostar den här?'); EN = UM, curto e oral; ÁN-NAN = o 'ãn-ãn' de quem balança a cabeça dizendo ESSA NÃO — mas ORAL e com a LÍNGUA: o 'ãn-ãn' português sai só pelo nariz, aqui são dois N DE VERDADE, a ponta da língua batendo no céu da boca duas vezes, como ANA-ANA dito rápido e sem os A do fim; A aberto de 'pá', força no primeiro; STÚUR = 'stor', GRANDE, o mesmo STÚR da Storgatan: U FECHADO e LONGO, e o R quase some dentro do L; LÊK = o LEQUE com Ê FECHADO de 'você' e sem o -e final — nunca o É aberto do leque português)",
+      "historia": "O búfalo sai do provador bufando RRÁR!, esfregando ÁRNIca nos braços roxos de tanto apertar — RRÁR-NI. Pendurada no chifre, a culpada: uma jaqueta de DENIM tamanho infantil com a costura estourada — DÊ-NI(m). Ele ergue UM dedo, EN, e balança a cabeçorra: ÁN-NAN! — essa não, OUTRA. Pingando de suor, se abana com um LEQUE vermelho gigante escrito STOR: STÚUR-LÊK — vocês têm em OUTRO tamanho?",
+      "cena": {
+        "descricao": "Diante do provador de cortina vermelha, um búfalo marrom-escuro de pé nas patas de trás, braços roxos lambuzados de arnica, com uma jaqueta jeans minúscula e rasgada pendurada no chifre e um leque vermelho gigante escrito STOR abanando o focinho suado.",
+        "partes": [
+          "piso de madeira clara da loja",
+          "cortina vermelha do provador num trilho cromado",
+          "espelho alto de moldura dourada",
+          "corpo do búfalo marrom-escuro de pé nas patas de trás, barrigudo e de corcova alta",
+          "cabeça larga com chifres bege curvados para os lados e focinho preto",
+          "jaqueta jeans azul minúscula e rasgada pendurada num chifre",
+          "manchas roxas (discos achatados) nos dois braços",
+          "bisnaga de arnica amarela de tampa verde numa pata",
+          "leque vermelho gigante aberto com a palavra STOR na outra pata",
+          "três gotas de suor azul-claro voando da testa"
+        ]
+      }
+    },
+    {
+      "id": "ar-det-ledigt-har",
+      "elenco": "fada do ônibus + jornal guarda-lugar + hera",
+      "ponte_sonora": "É DÊ LÊÊ-DIT', RRÉR? (5 sílabas: é-dê-LÊÊ-dit-RRÉR; tônicas em LÊÊ e RRÉR; É DÊ = o 'är det' de 'Är det till höger eller till vänster?' — a pergunta começa pelo verbo: É aberto e curto, DÊ fechado, o T de 'det' mudo; LÊÊ = 'lê', do verbo ler, exatamente como o português já diz — Ê FECHADO de 'você', boquinha quase fechada, só que bem LONGO, e é nele que cai a força; é o OPOSTO do palhaço de 'Jag lär mig svenska', que lê de boca ESCANCARADA de nojo (LÉÉR, É aberto de chulé): a fada lê de boquinha fechada e sai 'le-', o palhaço escancara e sai 'lär'; DIT' = DITO sem o -O, o 'dito e feito' da varinha: D de 'dado', nunca 'dji', e T seco no fim — o -gt de 'ledigt' na fala vira só T; RRÉR = a HERA soprada, o mesmo 'här' de 'Det gör ont här': H nada mudo, É bem aberto, R brando)",
+      "historia": "Ônibus lotado no fim da tarde. Uma fada do tamanho de um palmo voa arrastando uma sacola de compras três vezes maior que ela e acha UM banco vago — mas com um jornal dobrado em cima, guardando lugar. Ela pousa no encosto e LÊ a manchete em voz alta, devagarinho e de boquinha fechada: LÊÊ... nenhum nome de dono. Ergue a varinha — DIT'! dito e feito — o jornal vira faísca e do assento brota uma HERA em forma de seta, apontando: RRÉR, aqui. Educada, ainda pergunta pro corredor antes de sentar: É DÊ LÊÊ-DIT', RRÉR? — esse lugar está livre?",
+      "cena": {
+        "descricao": "Dentro do ônibus, uma fada minúscula de vestido lilás pousada no encosto de um banco azul vago aponta a varinha estrelada para o assento, onde um jornal dobrado se desfaz em faíscas e brota uma hera verde em forma de seta.",
+        "partes": [
+          "piso do ônibus cinza-chumbo com faixa amarela",
+          "parede lateral com janela larga de céu azul",
+          "dois bancos de ônibus azul-petróleo lado a lado",
+          "barra de apoio amarela vertical",
+          "jornal cinza dobrado no assento vago soltando faíscas douradas",
+          "hera verde brotando do assento enrolada em seta",
+          "corpo da fada com vestido lilás em forma de sino",
+          "cabeça com coque castanho e tiara de florzinhas brancas",
+          "quatro asas translúcidas azuladas",
+          "varinha com estrela dourada na ponta",
+          "sacola de compras vermelha enorme pendurada no outro braço"
+        ]
+      }
+    },
+    {
+      "id": "forlat-jag-ar-lite-sen",
+      "elenco": "tamanduá escavador + claquete CENA",
+      "ponte_sonora": "FUR-LÔT! IÁ É LÍ-TE SÊÊN! (7 sílabas: fur-LÔT-iá-é-LÍ-te-SÊÊN; tônicas em LÔT, LÍ e SÊÊN; FUR-LÔT = o FURA-LOTE de 'Förlåt, det var mitt fel' — FUR fraquinho e rápido, força no LÔT com Ô FECHADO, e nenhuma vogal depois do T; IÁ É = 'jag är', o de sempre: I de ioga, nunca J chiado, e É aberto e curto; LÍ-TE = o LITE de 'Vänta lite' e 'prata lite', LÍ-te, nunca 'láite'; SÊÊN = a CENA cortada no N: Ê FECHADO e LONGO, N batido na língua, sem nasalar — pense 'SÊ-N(a)' com a língua já no N e o A engolido, nunca o 'sẽi' de SEM; o mesmo SÊN da Mega-SENA de 'Jag ringer dig senare': 'sen' é atrasado, 'senare' é mais tarde)",
+      "historia": "Num LOTE baldio virado set de filmagem, a claquete já bateu a CENA três vezes e a estrela não aparece. De repente o chão estoura: o tamanduá FURA o LOTE por baixo com as garras-escavadeira — FUR-LÔT! — e brota de capacete de mineiro, focinho sujo de terra. Na garra erguida, a desculpa: o potinho de formigas LITE que ele parou pra lanchar — IÁ É LÍTE... Ofegante, aponta a claquete: SÊÊN(a)! Desculpa, cheguei um pouco atrasado pra cena.",
+      "cena": {
+        "descricao": "Num lote de terra virado set de filmagem, um tamanduá de capacete de mineiro brota de uma cratera recém-estourada, ao lado da claquete CENA e da cadeira vazia do diretor, erguendo um potinho LITE na garra.",
+        "partes": [
+          "chão de terra marrom do lote",
+          "placa de madeira escrita LOTE fincada no canto",
+          "cratera estourada no centro (toro marrom-escuro)",
+          "torrões de terra voando (esferas marrons)",
+          "claquete preta e branca aberta escrita CENA num tripé",
+          "cadeira de diretor de lona vermelha, vazia",
+          "corpo do tamanduá cinza com faixa preta diagonal, saindo da cratera até a cintura",
+          "focinho longo e fino com pontinha preta e língua rosa de fora",
+          "duas garras dianteiras enormes cor de creme",
+          "capacete de mineiro amarelo com lanterna",
+          "potinho de vidro com rótulo LITE na garra erguida"
+        ]
+      }
+    },
+    {
+      "id": "jag-kommer-om-fem-minuter",
+      "elenco": "lutador de sumô + mantra OM + fêmur de carne + timer",
+      "ponte_sonora": "IÁ, CÓ-MER... ÓMMM... FÉM(ur)... MI-NÜÜ-TER! (8 sílabas: iá-KÓ-mer-om-FÉM-mi-NÜÜ-ter; tônicas em CÓ, FÉM e NÜÜ; IÁ = 'jag', I de ioga; CÓ-MER = o COMER de 'Hur kommer jag till...?' e 'Jag kommer från Brasilien' — força no CÓ, Ó ABERTO, -mer fraquinho com R brando, nunca 'co-MÊR'; ÓM = o mantra OM da meditação, só que curtinho: Ó ABERTO igual ao CÓ de 'comer', e os LÁBIOS FECHAM no M — o zumbido de boca fechada já deixa a boca pronta pro F de 'fem'; nunca o 'ũ' nasal de 'um', que troca a vogal e engole o M; FÉM = o FÊMUR do pirata de 'Jag har två barn' cortado no M — É bem aberto, lábios fechados, sem nasalar; MI-NÜÜ-TER = MINUTO trocando o -to por -TER (a tônica já cai no mesmo lugar): força no NÜÜ, U de BICO e longo, T duro, nunca 'tcher', R brando no fim)",
+      "historia": "O tablado de argila está pronto e chamam o lutador de sumô pela terceira vez — mas ele está sentado no chão diante de um panelão de chanko, com um FÊMUR de carne de desenho animado do tamanho de um braço na mão. Anuncia de boca cheia: IÁ, CÓ-MER! Antes da quinta mordida fecha os olhos, aperta os lábios e entoa o mantra da digestão: ÓMMM... — e crava os dentes no FÊ...MUR. Com a outra mão gira o timer de cozinha pros cinco MINUTOS e estica os cinco dedos abertos pro tablado: MI-NÜÜ-TER. Já vou — daqui a cinco minutos.",
+      "cena": {
+        "descricao": "À beira do tablado de argila, um lutador de sumô sentado no chão diante de um panelão fumegante, de olhos fechados e lábios apertados entoando OMMM, ergue um osso de carne gigante com quatro mordidas, a outra mão aberta em cinco dedos ao lado de um timer de cozinha.",
+        "partes": [
+          "tablado quadrado de argila bege (o dohyo do sumô)",
+          "círculo de corda de palha trançada (toro dourado-claro)",
+          "panelão preto de chanko com legumes coloridos",
+          "três fios de vapor branco subindo",
+          "corpo do lutador de sumô sentado de pernas abertas, pele bege-rosada e barrigão redondo",
+          "mawashi (faixa) azul-marinho na cintura",
+          "cabeça redonda de bochechas cheias, olhos fechados e lábios apertados, com coque preto no alto",
+          "três ondinhas de som lilás saindo da boca fechada (o OMMM)",
+          "osso de carne gigante de desenho animado: carne marrom com quatro mordidas e pontas de osso brancas",
+          "mão erguida com os cinco dedos abertos",
+          "timer de cozinha redondo vermelho com o ponteiro no 5"
+        ]
+      }
+    }
+  ]
+}

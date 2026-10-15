@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "smaklig-maltid",
+      "sv": "Smaklig måltid!",
+      "pt": "Bom apetite!",
+      "pronuncia": "SMÁA-kli MÔL-tiid ('smaklig' com A longo e o -g mudo, igual ao 'trevlig' = TRÊV-li; 'måltid' com Ô fechado e longo e força no MÔL; 'tid' com T seco e I longo, nunca 'tchi')",
+      "contexto": "Quem serviu ou o anfitrião diz quando todo mundo já está sentado, antes da primeira garfada. Também se ouve no lunchrum do trabalho quando alguém abre a marmita. A resposta é 'Tack, detsamma!' e, no fim da refeição, 'Tack för maten'.",
+      "porque": "É a frase que abre qualquer refeição em grupo, do jantar com os sogros ao almoço com colegas. Dizer primeiro, em sueco, já é meio caminho pra parecer da casa."
+    },
+    {
+      "id": "vill-du-ha-nagot-att-dricka",
+      "sv": "Vill du ha något att dricka?",
+      "pt": "Quer alguma coisa pra beber?",
+      "pronuncia": "vil dü rrá nôt a DRÍK-ka? (a força principal cai no DRÍ; 'vill' com I curto e L de verdade; na fala 'något' vira 'nåt' = nôt, Ô fechado e sem força; 'du' com bico de pato; 'ha' com h soprado tipo RR carioca e A longo, mas sem pancada; o 'att' encolhe num 'a' rápido; 'dricka' com I curto e K dobrado)",
+      "contexto": "A primeira pergunta do anfitrião quando a visita tira o casaco. Colegas também perguntam no escritório antes de uma reunião, e garçons em restaurante simples.",
+      "porque": "É a fórmula de hospitalidade número um: serve pra entender quando te oferecem e pra oferecer na sua casa. E o molde 'nåt att ...' rende outras frases, como 'nåt att äta' (algo pra comer)."
+    },
+    {
+      "id": "kom-in-och-satt-dig",
+      "sv": "Kom in och sätt dig!",
+      "pt": "Entra e senta aí!",
+      "pronuncia": "kom ÍN ó SÉT dêi! ('kom' com O curto e aberto e M de lábios fechados; força no IN e no SÄTT; 'och' = ó; 'dig' = dêi, rimando com 'mig' = mêi)",
+      "contexto": "Recebendo visita na porta de casa, ou um colega/médico chamando você pra sala dele. Muitas vezes os dois pedaços aparecem sozinhos: 'Kom in!' na porta, 'Sätt dig!' apontando a cadeira.",
+      "porque": "São os dois imperativos mais usados por qualquer anfitrião sueco. Com eles você recebe gente em casa e entende na hora quando te mandam entrar na consulta."
+    },
+    {
+      "id": "jag-ar-hungrig",
+      "sv": "Jag är hungrig.",
+      "pt": "Estou com fome.",
+      "pronuncia": "iá é RRÚNG-ri(g) ('jag' = iá; 'är' = é; 'hungrig' com h soprado, U curto meio arredondado (quase ö), NG nasal sem estalar o G, R de um toque só; o -g final é fraquinho ou some na fala)",
+      "contexto": "Em casa, com o parceiro ou os filhos; com colegas pouco antes do almoço ('ska vi äta?'); na estrada, procurando onde parar pra comer.",
+      "porque": "Frase de sobrevivência e molde pra 'jag är + estado': troque por 'trött' (cansado) ou 'törstig' (com sede) e já tem frase nova. Os filhos vão usar isso com ele todo dia."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "smaklig-maltid",
+      "elenco": "baleia-chef + bandeira de largada",
+      "ponte_sonora": "SMÁÁC-LI MÔL-TIID! (4 sílabas, tônicas em SMÁ e MÔL; SMÁÁC = o estalo do beijo de chef, com A LONGO e o S grudado no M — nada de 'is' na frente; -LI é o mesmo -lig mudo de TRÊV-LI ('trevlig'), fraquinho e sem G; MÔL = o MÔ de MÔLHO, Ô FECHADO de 'avô', e o LH do molho achatado num L DE VERDADE (ponta da língua no céu da boca, logo atrás dos dentes) que já encosta no T seguinte: MÔL-TIID, sem vogal no meio — nunca 'MÔU' nem 'MÔ-lhe-tid'; é o mesmo L final do CÔL de 'skål'; TIID = o TÍD de parTÍDa, a mesma ponte de 'boka en tid', com T seco de 'tatu', nunca 'tchi', I longo e D leve; a força principal fica no MÔL, o TIID vem esticado mas mais fraco)",
+      "historia": "Num deque à beira-mar, uma baleia-chef de touca branca serviu o banquete numa mesa comprida. Ela leva a ponta da nadadeira aos beiços e estala o beijo de chef mais alto do oceano: SMÁÁC!, e o finalzinho escorrega num -LI. Aí abre o respiradouro e, em vez de água, jorra um gêiser de MÔLHO marrom que cai certinho na travessa. Com o molho ainda pingando, ela baixa a bandeira verde de largada: é dada a parTÍDa! Agora todo mundo pode atacar: bom apetite.",
+      "cena": {
+        "descricao": "Deque de madeira à beira-mar: uma baleia azul de touca de chef faz o beijo de chef com uma nadadeira, cospe um arco de molho marrom do respiradouro direto na travessa e ergue uma bandeira verde de largada com a outra.",
+        "partes": [
+          "deque de tábuas de madeira clara",
+          "mesa comprida e baixa com toalha xadrez vermelha e branca",
+          "travessa funda branca sobre a mesa",
+          "poça de molho marrom brilhante na travessa",
+          "corpo da baleia azul-marinho com barriga listrada creme",
+          "touca de chef branca alta no topo da cabeça",
+          "nadadeira esquerda dobrada até a boca (o beijo de chef)",
+          "três estrelinhas amarelas emissivas saindo dos beiços (o SMÁÁC)",
+          "arco de molho marrom saindo do respiradouro até a travessa (cilindro curvo + gotas)",
+          "mastro fino com bandeira verde de largada na nadadeira direita"
+        ]
+      }
+    },
+    {
+      "id": "vill-du-ha-nagot-att-dricka",
+      "elenco": "bruxa vil + bailarina Drica",
+      "ponte_sonora": "VIL DÜ RRÁ NÔT A DRÍCA? (6 sílabas; a pancada forte é no DRÍ, o RRÁ vem esticado mas mais leve e o NÔT é rápido e sem força; VIL com L DE VERDADE, língua no céu da boca — se virar 'viu', some o L que o sueco tem; é o mesmo som do VILão de 'vilket', mas aqui SEM o 'que' e nunca VÍLIA, que é 'vilja': 'vill' é o quer curtinho; DÜ = o 'du' de CAN-DU, com bico de pato; RRÁ = UMA gargalhada só, o mesmo RRÁ soprado de 'Ha det bra', A longo; NÔT = o 'nåt' de 'något', Ô BEM FECHADO como na carta da farmácia — com bico de ö vira 'nöt', noz; A DRÍCA = 'att dricka' como se fala: o 'att' encolhe num 'a' e emenda no T de NÔT; DRICA é o apelido de Adriana, força no DRÍ, I curto, R de um toque só)",
+      "historia": "Na cozinha escura, uma bruxa VIL de verruga mexe um caldeirão verde que borbulha e cospe fumaça. Ela aponta o dedo torto pra você, DÜ?, e solta uma única gargalhada, RRÁ!, que apaga todas as velas. Antes que você responda, entra rodopiando a bailarina DRICA, morta de sede depois do ensaio, e a bruxa estende a concha fumegante com uma xícara de porcelana na ponta: NÔT, A DRICA? Até bruxa, na Suécia, oferece algo pra beber assim que a visita chega.",
+      "cena": {
+        "descricao": "Uma bruxa de chapéu pontudo estende, por cima do caldeirão verde borbulhante, uma concha comprida com uma xícara fumegante, e a bailarina de tutu rosa chega girando na ponta do pé para pegá-la.",
+        "partes": [
+          "piso de pedras cinza-arroxeadas",
+          "fogueira de três chamas laranja emissivas",
+          "caldeirão preto redondo sobre o fogo",
+          "poção verde-limão com bolhas (esferas) subindo",
+          "corpo da bruxa em vestido roxo-escuro (cone)",
+          "cabeça verde-clara com nariz comprido e verruga marrom",
+          "chapéu pontudo preto com fivela dourada",
+          "concha de cabo longo estendida para a frente",
+          "xícara de porcelana branca na ponta da concha, com fumacinha verde",
+          "bailarina de collant e tutu rosa (disco) na ponta do pé, braços em arco"
+        ]
+      }
+    },
+    {
+      "id": "kom-in-och-satt-dig",
+      "elenco": "raposa anfitriã + poltrona nº 7",
+      "ponte_sonora": "CÓM-MÍN! Ó, SÉT-DÊI! (5 sílabas: co-MÍN-ó-SÉT-dêi; tônicas em MÍN e SÉT; o gancho é VEM COM MIM — que é exatamente o que 'kom in' quer dizer —, dito de uma vez, com UM M só: co-MÍN; dois ajustes: o CÓ é Ó ABERTO de 'cópia' (o mesmo de CÓ-MA e CÓ-MER), não o 'cõ' nasal de 'com'; e o 'mim' do português termina só no nariz, sem consoante — aqui ele tem que fechar num N DE VERDADE, ponta da língua no céu da boca, como o começo de MINA (MÍ-na) cortado antes do -A; esse N emenda no 'och': co-MI-NÓ; Ó = o 'och' de sempre, de 'fem och åtta'; SÉT = SETE sem o -E, É aberto e T seco, nunca 'sétchi'; DÊI = 'dig', irmão do M'ÊI de 'mig', uma sílaba só e fraquinha)",
+      "historia": "Está nevando e você bate na portinha redonda de uma toca no barranco. Quem abre é uma raposa de avental xadrez, que enrola o rabo no seu gorro e te arrasta pra dentro: CÓM-MÍN! Vem com mim, vem! Lá dentro só existe uma poltrona, gorda e vermelha, com um SETE dourado no encosto. A raposa aponta, Ó, SÉT!, e te afunda nela com uma patada no ombro, toda orgulhosa: DÊI! Entrou, sentou: aqui a casa é sua.",
+      "cena": {
+        "descricao": "Dentro da toca: uma raposa de avental, com o rabo enrolado num gorro azul de lã, aponta para uma poltrona vermelha com um 7 dourado no encosto, ao lado da porta redonda aberta para a neve.",
+        "partes": [
+          "chão de terra batida marrom com tapete redondo verde-musgo",
+          "arco de porta redonda de madeira, aberta",
+          "montinho de neve branca na soleira",
+          "lamparina amarela emissiva pendurada",
+          "poltrona vermelha gorda",
+          "placa dourada com o número 7 no encosto da poltrona",
+          "corpo da raposa laranja de pé, peito branco",
+          "cabeça com focinho pontudo e orelhas triangulares de pontas pretas",
+          "avental xadrez verde",
+          "pata dianteira apontando a poltrona",
+          "rabo felpudo de ponta branca enrolado num gorro azul de lã (o da visita)"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-hungrig",
+      "elenco": "leão faminto + mapa da Hungria",
+      "ponte_sonora": "IÁ É RRÚNG-RI! (4 sílabas, tônica forte no RRÚNG; IÁ é o 'jag' de sempre, I de ioga; É = 'är', aberto e curto, o mesmo de 'Jag är sjuk'; RRÚNG = o ronco da barriga do leão: o RR carioca soprado é o h sueco, o U é curto e meio arredondado, quase ö, e o NG é nasal como no fim de 'ping' — o G não estala; RI = o mesmo -ig mudo de TRÊV-LI, R de um toque só, de 'cara', nunca RR. A HUNGRIA mordida dá a palavra inteira, MAS CUIDADO: lida em português, 'Hungria' sai 'un-GRI-a', com H mudo e força no GRI — e 'HUNGRI' sozinho viraria oxítona, como 'saci'. Por isso o ronco vem PRIMEIRO e carrega a força: a mordida arrancou o -A e, com ele, o acento, que caiu inteiro no RRÚNG; no mapa sobra 'HUNG' em letras enormes e um 'ri' minúsculo — RRÚNG-ri, forte no começo, nunca 'hun-GRI'. De quebra, é o 'hungry' do inglês, mesma tônica, dito com U)",
+      "historia": "O leão está de guardanapo amarrado no pescoço, garfo e faca em pé nas patas, esperando há horas um garçom que não vem. A barriga dele ruge mais alto que ele: RRÚNG! Sem paciência, ele abre o mapa-múndi em cima do prato e crava os dentes num país, a HUNGRIA. A mordida leva o -A embora e o resto do nome encolhe de susto: no mapa fica um HUNG gigante e um 'ri' miudinho. A barriga ronca de novo por cima, RRÚNG!, e o ri sai baixinho atrás. De boca cheia, ele bate os talheres na mesa e anuncia pra todo o restaurante, com toda a força no ronco: IÁ É RRÚNG-ri! É tanta fome que ele come um país.",
+      "cena": {
+        "descricao": "Mesa de restaurante: um leão de guardanapo no pescoço, garfo e faca em pé, ruge sobre um mapa da Hungria no prato com uma mordida em meia-lua arrancada da ponta, enquanto anéis de ronco saem da barriga dele.",
+        "partes": [
+          "piso xadrez vinho e creme",
+          "mesa redonda de madeira",
+          "toalha branca redonda",
+          "prato branco grande",
+          "mapa verde-oliva sobre o prato, com uma mordida em meia-lua na ponta e placa curta 'HUNG' em letras grandes seguida de 'ri' em letras pequenas",
+          "corpo do leão dourado, sentado",
+          "juba laranja-ferrugem volumosa em volta da cabeça",
+          "boca escancarada com dentes brancos",
+          "guardanapo branco amarrado no pescoço",
+          "garfo e faca prateados erguidos em pé nas patas",
+          "três anéis laranja saindo da barriga (o ronco RRÚNG)"
+        ]
+      }
+    }
+  ]
+}

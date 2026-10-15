@@ -1,0 +1,126 @@
+{
+  "phrases": [
+    {
+      "id": "kan-jag-betala-med-kort",
+      "sv": "Kan jag betala med kort?",
+      "pt": "Posso pagar com cartão?",
+      "pronuncia": "kan iá be-TÁA-la mê KÚT? ('jag' = iá, o -g não soa; 'betala' tem a força no TÁ, com A longo e o 'be-' fraquinho; 'med' = mê, sem D; 'kort' = KÓT curtinho, com Ó ABERTO como em 'um corte' — nunca o U de 'curto' —, e o 'rt' vira um T de língua dobrada pra trás: o R se dissolve dentro do T)",
+      "contexto": "No caixa de loja, café, quiosque ou feirinha. Na Suécia quase tudo aceita cartão (muita coisa SÓ aceita cartão), mas em food truck, loppis ou barraca de feira vale perguntar antes de pedir.",
+      "porque": "'Betala' (pagar) é o verbo de toda compra: 'Kan jag betala?', 'Jag betalar' (eu pago). E 'med kort' fecha o pedido — o mesmo 'med' de 'Ta med' e 'Vad jobbar du med?'."
+    },
+    {
+      "id": "kan-jag-swisha",
+      "sv": "Kan jag swisha?",
+      "pt": "Posso pagar por Swish?",
+      "pronuncia": "kan iá SVÍ-sha? ('jag' = iá; o 'sw' soa SV, porque sueco não tem W — 'svisha' é o padrão, e o 'suísha' à inglesa também passa; I curto e com toda a força; o 'sh' é o X de xarope; termina em -A, porque é verbo)",
+      "contexto": "Onde não tem maquininha: loppis (bazar), venda no Blocket, barraca de feira, rifa do clube das crianças, rachar a conta com amigos. Também no caixa pequeno que aceita Swish por QR code.",
+      "porque": "Swish virou verbo: 'swisha' = pagar por Swish, e todo sueco usa ('Jag swishar dig' = te mando por Swish). Com esta frase você paga quase qualquer pessoa física na Suécia."
+    },
+    {
+      "id": "vill-du-ha-kvittot",
+      "sv": "Vill du ha kvittot?",
+      "pt": "Quer o recibo?",
+      "pronuncia": "vil dü rrá KVÍT-tut? (a força está no KVÍT; 'vill' com I curto e L de verdade; 'du' com bico de pato; 'ha' com h soprado tipo RR carioca, leve; 'kvittot' com K e V colados — o V de verdade, dente no lábio —, I curto, e o -tot final curtinho e sem força, entre Ó e U)",
+      "contexto": "É o que o caixa pergunta depois de toda compra, muitas vezes rápido e já com a mão na impressora. Resposta: 'Ja tack' (sim, obrigado) ou 'Nej tack' (não, obrigado).",
+      "porque": "Você ouve isso várias vezes por semana — entender na hora evita o 'ãh?' no caixa. E 'Vill du ha ...?' é o molde de toda oferta: 'Vill du ha en påse?' (quer sacola?)."
+    },
+    {
+      "id": "jag-tittar-bara",
+      "sv": "Jag tittar bara.",
+      "pt": "Só estou olhando.",
+      "pronuncia": "iá TÍT-tar BÁA-ra ('jag' = iá; T duro de 'tatu', nunca 'tchi'; I curto e com força; o -R de 'tittar' é brando e emenda no B; 'bara' com A longo e R de 'cara')",
+      "contexto": "Quando o vendedor chega com 'Kan jag hjälpa dig?' (posso te ajudar?) ou 'Hittar du det du letar efter?' (está achando o que procura?). Ele sorri e te deixa em paz — não é falta de educação.",
+      "porque": "Livra você da conversa em inglês em qualquer loja. E 'bara' (só, apenas) é palavra coringa: 'bara lite' (só um pouco), 'bara en' (só um), 'Det är bara bra' (está ótimo)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "kan-jag-betala-med-kort",
+      "elenco": "gorila de tala + quiosque de caldo de cana",
+      "ponte_sonora": "CA-NIÁ! BÊ-TÁLA... MÊ CÓRT(e)? (7 sílabas: ca-niá-be-TÁ-la-mê-KÓRT; tônicas em TÁ e CÓRT; CANA + IÁ = 'kan jag', o MESMO âncora da galinha de 'Kan jag få en påse?' — emendado CA-NIÁ, com I de IOGA, nunca o J chiado de 'canja'; BÊ = o bipe da maquininha, curtinho e SEM força — é o 'be-' de 'betala'; TALA = a tala do braço, força no TÁ com A longo: be-TÁA-la, nunca 'BÉ-ta-la'; MÊ = MEDO sem o -DO, o mesmo 'med' de 'Vad jobbar du med?', Ê fechado e D mudo; CÓRT(e) = o CORTE da cana-espada, sem o -e, com o Ó ABERTO de 'um corte' — nunca 'CURT', que com U fechado vira outra vogal; o R quase some: a língua dobra pra trás e já dispara o T)",
+      "historia": "No quiosque de caldo de CANA, um gorila de dois metros, com o braço direito imobilizado numa TALA de madeira, arranca uma cana do feixe e a ergue feito espada de caratê: CANA, IÁ! Depois bate a TALA inteira na maquininha, que apita BÊ! — BÊ-TALA, BÊ-TALA —, mas o cartão dele é do tamanho de uma porta e não encosta direito. Morrendo de MEDO de ser recusado, ele desce a cana num CORTE seco — CÓRT! —, a metade gigante despenca no chão e o pedacinho que sobra ele aproxima da máquina, perguntando baixinho: MÊ CÓRT? É assim que se pergunta, em sueco, se dá pra pagar no cartão.",
+      "cena": {
+        "descricao": "Diante de um quiosque de caldo de cana, um gorila preto-prateado acaba de cortar com uma cana-espada seu cartão azul gigante: a metade grande cai no chão e o pedaço pequeno, na mão da tala, encosta na maquininha apitando.",
+        "partes": [
+          "calçada de pedra cinza-clara (chão)",
+          "balcão do quiosque em madeira verde-folha",
+          "toldo listrado amarelo e branco sobre o balcão",
+          "feixe de 5 canas verdes com gomos (cilindros) encostado no balcão",
+          "copo alto de caldo de cana verde-claro no balcão",
+          "maquininha de cartão cinza-escuro com tela verde emissiva acesa",
+          "corpo do gorila preto com costas prateadas, em pé e inclinado pra frente",
+          "cabeça do gorila de testa larga e focinho cinza-escuro, olhos assustados",
+          "braço baixado no fim do golpe, segurando uma cana verde como espada",
+          "braço na tala: duas réguas de madeira clara presas com faixas brancas",
+          "pedaço pequeno de cartão azul-royal (box fininho, borda reta do corte) na ponta dos dedos da tala, tocando a maquininha",
+          "metade grande do cartão azul-royal (placa fina do tamanho do gorila) tombada no chão"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-swisha",
+      "elenco": "foca equilibrista + carrinho de pipoca",
+      "ponte_sonora": "CA-NIÁ, SUÍ-XA? (4 sílabas: ca-niá-SVÍ-sha; força total no SVÍ; CA-NIÁ é o MESMO âncora da galinha de 'Kan jag få en påse?' — CANA + IÁ emendados, I de IOGA, nunca 'canja'; SUÍ-XA = SUÍÇA dita rápido e com chiado: o SU aperta os lábios até virar SV (uma sílaba só, 'svi' — o mesmo SV do SVEN de 'svenska'), o I é CURTO e leva a força, como no próprio 'Su-Í-ça', e o Ç vira o X de xarope; termina em -A: é 'swisha', o verbo — nunca o 'suísh' do nome do app)",
+      "historia": "No zoológico, a foca quer pipoca mas não tem carteira — só nadadeiras molhadas. Ela equilibra uma CANA comprida na ponta do nariz, como no circo, e grita IÁ! pra chamar atenção do carrinho de pipoca. No topo da cana gira uma bola com a bandeira da SUÍÇA, mas o bigode encharcado transforma tudo em chiado: SUÍ-XA?! — e com a outra nadadeira ela estende o celular. Onde não tem maquininha, é isso que se pergunta na Suécia: dá pra pagar por Swish?",
+      "cena": {
+        "descricao": "Na borda de um tanque, uma foca cinza sobre um pedestal vermelho equilibra no nariz uma cana com uma bola da bandeira suíça no topo, estendendo um celular aceso para o carrinho de pipoca.",
+        "partes": [
+          "chão de pedras molhadas azul-acinzentadas (borda do tanque)",
+          "pedaço de água azul-turquesa (disco) atrás",
+          "pedestal redondo vermelho com borda dourada",
+          "corpo da foca cinza-chumbo, erguido sobre o pedestal (cápsula)",
+          "cabeça da foca com focinho e bigodes brancos (cilindros finos)",
+          "cana-de-açúcar verde em pé, equilibrada na ponta do nariz",
+          "bola vermelha com cruz branca (bandeira da Suíça) no topo da cana",
+          "nadadeira estendida segurando um celular preto com tela verde-água emissiva",
+          "carrinho de pipoca vermelho e branco com vitrine translúcida",
+          "pipocas (esferas creme) dentro da vitrine",
+          "saquinho de pipoca listrado em cima do carrinho"
+        ]
+      }
+    },
+    {
+      "id": "vill-du-ha-kvittot",
+      "elenco": "avestruz vilã do caixa + fita de recibo",
+      "ponte_sonora": "VIL DÜ RRÁ... QÜÍTO-T? (5 sílabas: vil-dü-rrá-KVÍT-tut; a pancada forte é no KVÍT; VIL DÜ RRÁ é o MESMO começo da bruxa de 'Vill du ha något att dricka?' — VIL com L DE VERDADE, língua no céu da boca; DÜ com bico de pato; RRÁ = UMA gargalhada só, soprada e leve; QÜÍTO = 'quito', do verbo QUITAR (o recibo é a prova de que você quitou), lido com o QÜ de trema de 'tranqüilo': o K solta um V colado — KVÍ, nunca o 'KÍ' seco —, e esse U de 'tranqüilo' aperta até virar V DE VERDADE, dente de cima no lábio de baixo, como o V de VIL, I CURTO, e o -to sai 'tu'; fecha com o T EXTRA da bicada que corta o papel: KVÍT-tut — esse T final é o 'o' de 'O recibo'; sem ele sobra 'kvitto', um recibo qualquer)",
+      "historia": "No caixa da loja quem atende é uma avestruz VIL — vilã das bravas —, de máscara preta de bandido e capa vinho. Ela estica o pescoção por cima do balcão até encostar no seu nariz, aponta uma pena: DÜ? — e solta uma gargalhada só, RRÁ!, enquanto a registradora cospe um recibo de três metros carimbado QUITO. Se você demorar a responder, ela corta o papel com uma bicada seca — T! — e engole tudo. Por isso, quando o caixa sueco perguntar se você quer o recibo, responda rápido: 'Ja tack' ou 'Nej tack'.",
+      "cena": {
+        "descricao": "Atrás do balcão do caixa, uma avestruz de máscara de bandido e capa estica o pescoço pra frente e morde a ponta de uma fita de recibo comprida, carimbada QUITO, que sai da registradora.",
+        "partes": [
+          "piso quadriculado preto e branco",
+          "balcão do caixa cinza-claro",
+          "caixa registradora bege com gaveta aberta",
+          "fita de recibo branca, longa, em zigue-zague (caixas finas) saindo da registradora",
+          "placa vermelha de carimbo 'QUITO' no meio da fita",
+          "corpo da avestruz: esfera grande de penas pretas fofas atrás do balcão",
+          "cauda de penas brancas (cones) arrepiada",
+          "pescoço longo rosado curvado pra frente",
+          "cabeça pequena com máscara preta de bandido e olhos arregalados",
+          "bico laranja aberto mordendo a ponta da fita",
+          "capa vinho de vilão caída sobre as costas"
+        ]
+      }
+    },
+    {
+      "id": "jag-tittar-bara",
+      "elenco": "mímico na chocolateria + barra de chocolate gigante",
+      "ponte_sonora": "IÁ... TÍTA-R BÁRA! (5 sílabas: iá-TÍT-tar-BÁA-ra; tônicas em TÍT e BÁ; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; TÍTA = TITA, o apelido da dona da chocolateria (apelido de verdade, de tia e de vó), escrito no papel do chocolate artesanal dela, com T DURO de 'tatu' — nunca 'tchita' — e I CURTO, o T dobrado travando a língua; o R depois do TITA é OBRIGATÓRIO e BRANDO, de 'cara', e escorrega direto no B: TÍTAR-BÁRA — sem ele sobra 'titta', o infinitivo (olhar), em vez de 'tittar', estou olhando; BÁRA = a BARRA de chocolate, mas com R BRANDO de 'cara' — RR carioca daria 'baha' — e o A da frente longo: BÁÁ-ra)",
+      "historia": "Na chocolateria da dona TITA, ela se aproxima com o 'posso ajudar?' e o mímico entra em pânico: mímico não fala! Ele cola as luvas brancas numa vitrine invisível e faz binóculo com as mãos, encarando uma BARRA de chocolate do tamanho de uma porta, embrulhada em papel dourado com o nome da dona: TITA. Pela primeira vez na carreira ele rompe o silêncio — IÁ! —, aponta o rótulo, TÍTA-R..., e a barra, BÁRA!, e volta a olhar sem comprar nada. É a frase que diz ao vendedor sueco: tô só olhando.",
+      "cena": {
+        "descricao": "Numa chocolateria, um mímico de camisa listrada e boina faz binóculo com as luvas brancas diante de uma vitrine de vidro onde está em pé uma barra de chocolate gigante com papel dourado rotulado TITA.",
+        "partes": [
+          "piso de tábuas marrom-chocolate",
+          "balcão-vitrine de vidro azulado translúcido (box)",
+          "barra de chocolate gigante marrom com gomos (box com sulcos), em pé dentro da vitrine",
+          "papel dourado meio aberto envolvendo a base da barra",
+          "placa-rótulo branca 'TITA' no papel dourado",
+          "três bombons coloridos (esferas rosa, verde e amarela) em cima da vitrine",
+          "pernas do mímico em calça preta justa",
+          "tronco em camisa listrada preta e branca com suspensórios vermelhos",
+          "cabeça branca com boina preta e lábios vermelhos arregalados",
+          "mãos de luvas brancas em binóculo diante dos olhos"
+        ]
+      }
+    }
+  ]
+}

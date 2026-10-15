@@ -1,0 +1,122 @@
+{
+  "phrases": [
+    {
+      "id": "ursakta-att-jag-stor",
+      "sv": "Ursäkta att jag stör.",
+      "pt": "Desculpa incomodar.",
+      "pronuncia": "ÜÜ-chék-ta a iá STÖR ('ursäkta': a força principal cai no Ü do começo, LONGO e com bico + língua pra frente; o CHÉK também é forte (é palavra composta, ur+säkta), o 'rs' vira CH, e o -ta final é FRACO; 'att' quase some, fica só 'a', colado no -ta; 'jag' = iá; 'stör' com Ö antes do R = boca de É aberto com bico, LONGO, R brando no fim)",
+      "contexto": "Batendo na porta da sala de um colega, interrompendo uma reunião, abordando um funcionário ocupado na loja ou um vizinho no portão.",
+      "porque": "É a abertura educada sueca por excelência: os suecos valorizam muito não invadir o espaço do outro, e começar assim desarma qualquer cara fechada. Depois dela, qualquer pergunta (mesmo em inglês) soa respeitosa."
+    },
+    {
+      "id": "jag-vet-inte",
+      "sv": "Jag vet inte.",
+      "pt": "Eu não sei.",
+      "pronuncia": "iá VÊT ÍN-te ('vet' com Ê FECHADO e longo, T seco que cola no 'inte'; na fala rápida sai 'iá vê-TÍN-te' ou só 'vet int'')",
+      "contexto": "Resposta a qualquer pergunta que você não sabe responder: no trabalho, na rua, com as crianças. Também como 'sei lá' num papo informal.",
+      "porque": "Dizer 'não sei' em sueco em vez de travar ou trocar pro inglês mantém a conversa no sueco. É uma das frases mais frequentes da língua falada e base de variações ('jag vet inte riktigt', 'vet inte')."
+    },
+    {
+      "id": "jag-forstar",
+      "sv": "Jag förstår.",
+      "pt": "Eu entendo. / Entendi.",
+      "pronuncia": "iá fesh-TÔR (mesmo 'förstår' da carta 'Ursäkta, jag förstår inte': o 'rs' vira CH/X; tônica no TÔR, com Ô FECHADO e LONGO de 'avô' — é o å sueco, não o Ó aberto de 'só'; o -R final é brando mas TEM que soar — sem ele vira 'förstå', o infinitivo)",
+      "contexto": "Para confirmar que acompanhou uma explicação: no médico, no banco, numa reunião, ao telefone. Também como 'entendo' empático quando alguém conta um problema.",
+      "porque": "É o par positivo de 'jag förstår inte': com as duas, você sinaliza o tempo todo se a pessoa pode seguir ou precisa repetir. Mostrar que entendeu faz o sueco continuar falando sueco com você."
+    },
+    {
+      "id": "vad-sa-du",
+      "sv": "Vad sa du?",
+      "pt": "O que você disse?",
+      "pronuncia": "va SÁ dü? ('vad' perde o d na fala: VÁ, sem R; 'sa' é a forma falada de 'sade' (disse), A longo; 'du' com U de bico (Ü), longo)",
+      "contexto": "Quando você não ouviu ou não pegou o que disseram: barulho no ônibus, ligação ruim, alguém falando baixo na fika.",
+      "porque": "Mais curta e natural que pedir para repetir com frase longa; é o que os próprios suecos dizem entre si. Pedir de novo em sueco, em vez de 'sorry, what?', mantém você dentro da conversa."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "ursakta-att-jag-stor",
+      "elenco": "hipopótamo com estéreo",
+      "ponte_sonora": "ÜÜÜ... CHEQUE-ta! A-IÁ-STÉR(eo)! (5 batidas: ÜÜ-CHÉK-ta-a-iá-STÉR, força no ÜÜ, no CHÉK e no STÉR; o CHEQUE é o MESMO âncora de 'ursäkta' da carta 'Ursäkta, jag förstår inte', mas dito do jeito certo: o 'o' do 'o CHEQUE' vira o gemido envergonhado ÜÜÜ — LONGO, lábios em bico e língua pra frente, nunca um 'u' rapidinho; CHEQUE-ta numa palavra só, CHÉK-ta, SEM o 'i' do 'chéki' e com o -ta fraquinho, sem virar um 'TÁ!' tônico no fim; o 'a' solto é o 'att', grudado no -ta; IÁ é o 'jag' de sempre, I de ioga, nunca J chiado; o S de ESTÉREO gruda no IÁ sem o E inicial — IÁ-STÉR — e corta-se o '-eo', ficando o R brando no fim; o É de ESTÉREO já é aberto como o Ö sueco antes de R, só falta o BICO: lábios de beijo. Sem bico vira um 'stär' esquisito; com Ô fechado vira 'står' (está em pé), que é o -STÔR de 'förstår' — o estéreo é É, o Thor é Ô)",
+      "historia": "Biblioteca sueca em silêncio absoluto. A porta voa das dobradiças: é o hipopótamo, com um ESTÉREO do tamanho de uma geladeira no ombro, tocando no talo — os livros pulam das prateleiras. Todo mundo faz 'psiu'. Morrendo de vergonha, ele baixa o volume e solta um gemido comprido de bico — 'ÜÜÜ...' —, abre a bocarra e, em cima da língua, oferece um cheque gigante: 'ÜÜÜ... CHEQUE-ta! A-IÁ-ESTÉREO!' — fui eu e o estéreo; desculpa incomodar.",
+      "cena": {
+        "descricao": "Na porta arrombada de uma biblioteca, um hipopótamo de bocarra aberta oferece um cheque sobre a língua enquanto equilibra um estéreo gigante no ombro, com ondas sonoras saindo das caixas.",
+        "partes": [
+          "piso de tábuas bege-claro (chão da biblioteca)",
+          "estante alta de madeira escura com fileiras de livros coloridos (boxes finos)",
+          "porta marrom caída de lado no chão, arrancada das dobradiças",
+          "três livros voando no ar (boxes azul, vermelho e verde inclinados)",
+          "corpo do hipopótamo cinza-arroxeado, enorme, sentado sobre as patas traseiras",
+          "cabeça larga do hipopótamo com bocarra escancarada (interior rosa) e orelhinhas redondas",
+          "cheque branco retangular apoiado na língua rosa, com borda verde",
+          "estéreo prateado gigante (box) no ombro, preso por uma pata",
+          "duas caixas de som pretas redondas na frente do estéreo",
+          "três anéis amarelos concêntricos saindo das caixas (ondas sonoras)"
+        ]
+      }
+    },
+    {
+      "id": "jag-vet-inte",
+      "elenco": "formiga gulosa",
+      "ponte_sonora": "IÁ? sorVÊTE ÍNTEgro! (3 batidas: IÁ-VÊT-ÍNTE, tônicas em VÊ e ÍN; IÁ é o 'jag' de sempre, I de ioga; de SORVETE só fica o VÊT — o 'sor' cai, Ê FECHADO e LONGO como no próprio 'sorVÊte'; o T é DURO, de 'tatu', e emenda direto no ÍNTE: VÊ-TÍN-te — nunca o 'tchi' carioca de 'sorvetchi', e sem vogal sobrando no meio: se sobrar o -e vira 'vete', que é TRIGO; ÍNTEgro é o MESMO âncora de 'inte' das cartas 'Ursäkta, jag förstår inte' e 'Jag pratar inte så bra svenska' — força no ÍN, corta o '-gro')",
+      "historia": "Uma formiga do tamanho de um gato está ao lado de uma casquinha de SORVETE gigante, que parece ÍNTEGRA. O dono volta e encontra a formiga com um bigode rosa de morango. Ela dá de ombros com as SEIS patas ao mesmo tempo: 'IÁ? sorVÊTE ÍNTEgro!' — e com um peteleco da antena a bola desaba, oca por dentro, com um túnel do tamanho exato dela. Eu? Não sei de nada.",
+      "cena": {
+        "descricao": "Numa mesa de piquenique, uma formiga vermelha de bigode rosa dá de ombros com as seis patas erguidas ao lado de uma casquinha gigante cuja bola de sorvete tem um túnel escuro aberto na lateral.",
+        "partes": [
+          "toalha de piquenique quadriculada vermelha e branca (chão)",
+          "casquinha de sorvete gigante (cone bege em pé, ponta pra baixo, num suporte)",
+          "bola de sorvete rosa-morango enorme em cima da casquinha",
+          "boca de túnel escura e redonda na lateral da bola",
+          "trilha de migalhas rosa (esferinhas) do túnel até a formiga",
+          "corpo da formiga vermelho-tijolo em três segmentos (cabeça, tórax, abdômen esferas)",
+          "seis patas finas pretas, todas erguidas para os lados (o dar de ombros)",
+          "duas antenas pretas curvas",
+          "bigode de sorvete rosa sobre as mandíbulas",
+          "colher de plástico branca caída na toalha"
+        ]
+      }
+    },
+    {
+      "id": "jag-forstar",
+      "elenco": "múmia de museu",
+      "ponte_sonora": "IÁ... FEIXE-THOR! (3 batidas, tônica no THOR; é o MESMO âncora 'FEIXE-THOR' da carta 'Ursäkta, jag förstår inte' — mas aqui SEM o ÍNTEgro: o feixe fica dentro, você entendeu; IÁ = 'jag', I de ioga; FEIXE emendado no THOR sai 'fei-sh-TÔR' ≈ fesh-TÔR: o X de FEIXE é justamente o chiado do 'rs' — só corte o -e final ('feixi'), senão nasce uma sílaba a mais; THOR com Ô FECHADO de 'avô' (o å sueco), não o Ó aberto de 'só', e com o R final BRANDO e audível: sem ele sobra 'förstå', o infinitivo)",
+      "historia": "Num museu em Estocolmo, a múmia acorda depois de 3000 anos, empurra o vidro da vitrine e não entende uma palavra do sueco dos visitantes. No pedestal ao lado, o martelo do THOR em exposição começa a zumbir e dispara um FEIXE dourado direto na testa dela. Dessa vez o feixe não atravessa: fica preso lá dentro, e a cabeça enfaixada acende inteira feito abajur. A múmia levanta o dedo, iluminada: 'IÁ... FEIXE-THOR!' — entendi tudo.",
+      "cena": {
+        "descricao": "Sala de museu: um martelo de Thor num pedestal dispara um feixe dourado que termina dentro da cabeça brilhante de uma múmia de pé, recém-saída de uma vitrine de vidro aberta, com o dedo erguido.",
+        "partes": [
+          "piso de mármore cinza-claro (chão do museu)",
+          "vitrine de museu aberta ao fundo: moldura de madeira escura com painéis de vidro transparente-azulado, porta de vidro escancarada",
+          "corpo da múmia em faixas creme-amareladas, de pé na frente da vitrine",
+          "cabeça da múmia em faixas, brilhando amarelo por dentro (esfera emissiva)",
+          "braço direito da múmia erguido com o dedo indicador para cima",
+          "duas pontas de faixa soltas flutuando dos braços",
+          "pedestal branco de museu ao lado (box alto)",
+          "martelo do Thor sobre o pedestal: cabeça cinza-metal (box) e cabo marrom curto",
+          "feixe dourado (cilindro fino amarelo-luminoso) do martelo até a testa da múmia, terminando dentro dela",
+          "corda vermelha de isolamento entre dois pilaretes dourados"
+        ]
+      }
+    },
+    {
+      "id": "vad-sa-du",
+      "elenco": "coelho de cartola + mágico de bigodão",
+      "ponte_sonora": "VÁ, ASSADO?! (3 batidas, va-SÁ-dü, tônica no SÁ; VÁ é o MESMO 'vad' de 'VÁ, CÓS-TAR', 'VÁ, CÜL!' e 'VÁ! É CLÓ-CAN' — sem R nenhum, senão vira 'var' (onde); o A de VÁ se funde no A de ASSADO: VA-SSÁ-DU, nada de duas vogais nem de dois acentos; o SS é S de cobra, nunca Z; o -DO final o brasileiro já fala 'du' — só falta empurrar a LÍNGUA pra frente, como se fosse dizer 'di' de bico: DÜ, no tom de pergunta)",
+      "historia": "No palco, o mágico de bigodão murmura a fórmula tão baixo, por baixo do bigode, que ninguém entende nada — e na mesa, ao lado da cartola, está uma ASSADEIRA com batatas e um raminho de alecrim, pronta para o próximo número. Dentro da cartola, o coelho só pesca uma palavra no murmúrio: ASSADO. Ele pula pra fora de olhos arregalados, estica as duas orelhas na direção do bigode e berra, tremendo: 'VÁ, ASSADO?!' — o que foi que você disse?!",
+      "cena": {
+        "descricao": "Num palco de cortina vermelha, um coelho branco salta de dentro de uma cartola com as duas orelhas esticadas para a frente, de olho arregalado numa assadeira de batatas ao lado, enquanto o mágico de bigodão segura a varinha com a boca escondida pelo bigode.",
+        "partes": [
+          "tablado de madeira avermelhada (chão do palco)",
+          "cortina vermelha de veludo ao fundo (painéis em ondas)",
+          "mesinha redonda de mágico com toalha roxa",
+          "cartola preta grande sobre a mesa, com faixa vermelha",
+          "coelho branco saltando da cartola, metade do corpo pra fora, olhos arregalados",
+          "orelhas compridas do coelho, as duas esticadas para a frente, na direção do mágico",
+          "assadeira prateada retangular na mesa ao lado da cartola, com batatas douradas (esferas) e um raminho verde de alecrim",
+          "mágico de fraque preto e capa roxa, de pé ao lado da mesa",
+          "bigodão preto enorme cobrindo toda a boca do mágico",
+          "varinha preta de ponta branca na mão do mágico"
+        ]
+      }
+    }
+  ]
+}

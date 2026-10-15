@@ -1,0 +1,123 @@
+{
+  "phrases": [
+    {
+      "id": "vad-jobbar-du-med",
+      "sv": "Vad jobbar du med?",
+      "pt": "Com o que você trabalha?",
+      "pronuncia": "va IÓB-bar dü MÊ? ('vad' = vá, o d mudo e SEM R; 'j' = i de ioga; 'jobbar' com Ó aberto e B dobrado; o R de 'jobbar' encosta no D de 'du' e os dois viram um D de língua enrolada; 'du' com bico; 'med' = mê, sem D, e leva força no fim da pergunta)",
+      "contexto": "A pergunta nº 1 de qualquer mingel, after-work, festa de vizinho ou porta da förskola, logo depois do nome. A resposta é 'Jag jobbar med ...' ou 'Jag jobbar som ...'.",
+      "porque": "Na Suécia o small talk gira em torno do trabalho; sem essa pergunta ele trava na segunda frase da conversa. E o mesmo molde já dá a resposta: 'Jag jobbar med IT'."
+    },
+    {
+      "id": "var-bor-du",
+      "sv": "Var bor du?",
+      "pt": "Onde você mora?",
+      "pronuncia": "var BUUR dü? ('var' com R brando, de 'caro' — é ele que separa de 'vad'; 'bor' com U fechado e longo; o R de 'bor' encosta no D: 'bu-dü' com a língua enrolada; 'du' com bico)",
+      "contexto": "Papo com colega novo, vizinho, outros pais na förskola ou no SFI — vem logo depois de 'Vad heter du?'. A resposta é 'Jag bor i ...'.",
+      "porque": "Pergunta curtíssima e de altíssima frequência; e o verbo 'bo' (morar) volta em tudo: 'Jag bor i Göteborg', 'boende', 'bostad', 'bostadsrätt'."
+    },
+    {
+      "id": "jag-har-ett-mote",
+      "sv": "Jag har ett möte.",
+      "pt": "Tenho uma reunião.",
+      "pronuncia": "iá rár et MÖÖ-te ('jag' = iá; 'har' com h soprado e R brando que emenda no 'ett': rá-rét; 'möte' com Ö longo — boca de Ô, língua de Ê — e um -te fraquinho)",
+      "contexto": "Pra sair de uma conversa no corredor, recusar uma ligação, explicar por que não pode agora; é também o status padrão no Teams e na agenda do escritório.",
+      "porque": "'Möte' é talvez a palavra mais dita num escritório sueco (mötesrum, mötet börjar, 'jag sitter i ett möte'). A frase inteira é a saída educada universal."
+    },
+    {
+      "id": "kan-du-skicka-det-pa-mejl",
+      "sv": "Kan du skicka det på mejl?",
+      "pt": "Você pode me mandar isso por e-mail?",
+      "pronuncia": "kan dü RRÍK-ka dê pô MÊIL? ('sk' antes de i é o sopro do 'sj' de 'sjuk', com lábios em bico — nunca 'ski' nem o 'ch' de chuva; 'det' = dê; 'på' = pô fechado; 'mejl' = mêil com L de verdade)",
+      "contexto": "Quando alguém explica algo rápido demais em sueco — no telefone com Försäkringskassan, na escola, no balcão, com o chefe — e ele quer tudo por escrito.",
+      "porque": "É a tábua de salvação dele: transforma uma conversa difícil num texto que pode ler com calma e com tradutor, sem precisar pular pro inglês."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "vad-jobbar-du-med",
+      "elenco": "camaleão de after-work + tapetinho de ioga",
+      "ponte_sonora": "VÁ! IÓ-BAR-DÜ... MÊ? (5 sílabas: va-IÓB-bar-dü-MÊ; tônicas em IÓ e MÊ; VÁ é o MESMO 'vad' de 'VÁ, CÜL!', 'VÁ! É CLÓ-CAN' e 'Vad gör du i helgen?' — um grito SEM R e sem adereço; com R vira 'var' (onde), que nas cartas é sempre a VARA; IÓBAR é o MESMO 'jobbar' do castor de 'Jag jobbar hemifrån': o IÓ da IOGA (I de ioga + Ó ABERTO, nunca o J chiado de 'jóba') + o BAR inteiro, COM o R — é o BAR que garante o -R de 'jobbar'; sem ele sobra 'jobba', o infinitivo; esse R é BRANDO, à caipira, e encosta direto no D: IÓBAR-DÜ sai quase 'ióba-dü' de língua enrolada, exatamente como o sueco funde o 'rd'; DÜ com BICO DE PATO, o 'du' de CAN-DU; MÊ = MEDO sem o -DO, Ê FECHADO, o mesmo MÊ de 'Jag håller inte riktigt med' — e a pergunta TERMINA nele, com força: sem o MÊ ela fica pela metade)",
+      "historia": "No after-work da firma, todo sueco faz a mesma pergunta já na segunda frase — e o camaleão morre de MEDO dela, porque já trabalhou com tanta coisa que nem sabe responder. Pra sumir, ele pula no balcão do BAR, estende um tapetinho e congela numa postura de IOGA, numa pata só, tentando ficar da cor da madeira. Você aponta e berra VÁ!, e a língua dele dispara dois metros e gruda na SUA testa — DÜ! —, como quem devolve: e você? Mas de MEDO o corpo dele já pisca listrado com as cores de todos os uniformes que vestiu na vida: é a resposta inteira pra 'com o que você trabalha?'.",
+      "cena": {
+        "descricao": "Em cima do balcão de um bar de after-work, um camaleão listrado de cores de uniforme se equilibra numa pata só sobre um tapetinho de ioga, suando de medo, com a língua esticada até a testa do espectador.",
+        "partes": [
+          "piso de taco marrom-escuro",
+          "balcão de bar comprido, madeira vinho com tampo preto",
+          "plaquinha néon laranja escrita BAR na ponta do balcão",
+          "dois copos de drink translúcidos com canudinho verde",
+          "tapetinho de ioga roxo estendido sobre o tampo",
+          "corpo do camaleão de pé numa pata só (postura da árvore), listrado em faixas verde, laranja, azul e amarelo",
+          "cabeça com crista e olhos de torre, um deles virado pro espectador",
+          "cauda enrolada em espiral (toro verde)",
+          "língua rosa comprida esticada até o espectador, com bolota na ponta",
+          "três gotas de suor azul-claras saltando da testa"
+        ]
+      }
+    },
+    {
+      "id": "var-bor-du",
+      "elenco": "gnomo de jardim + vara de pescar + casinha fisgada",
+      "ponte_sonora": "VÁR? BUR... DÜ? (3 sílabas: var-BUUR-dü; tônica no BUR; VÁR é a VARA sem o -a — a mesma VARA de pescar de 'Var kan jag köpa biljett?' —, R BRANDO de 'caro' e AUDÍVEL: sem ele sobra VÁ, que é 'vad' (o quê), e a pergunta perde o sentido; BUR = o começo de BURACO parando no R — sem o -A (nada de 'bura') e com a força no BU, que em 'buraco' é fraco: U FECHADO e LONGO de URSO (é o 'o' sueco de 'bor', o mesmo BÚ de 'Hur bokar man tvättstugan?'), SEM o bico do Ü — com bico vira 'bur' (gaiola) —, e nunca 'bôr' de boca aberta, que vira 'bår' (maca); o R é BRANDO, à caipira, e encosta no D — 'bu(r)-dü' de língua enrolada, como o sueco funde o 'rd'; sem R nenhum sobra 'bo', o infinitivo; DÜ com BICO DE PATO, o 'du' de CAN-DU, dito apontando pra você)",
+      "historia": "O vizinho novo é um gnomo de jardim que passa o dia de VARA de pescar na mão — só que não tem lago nenhum: a linha desce direto num BURACO redondo no gramado. Você pergunta onde ele mora e ele dá um puxão de pescador: do BURACO sobe, fisgada pela chaminé, a casinha dele inteira, com porta e janela, espalhando torrão de terra pra todo lado. Com a casa ainda balançando no anzol, ele aponta o dedo gordinho pra VOCÊ — DÜ? — e devolve a pergunta: e você, mora onde?",
+      "cena": {
+        "descricao": "Num gramado, um gnomo de jardim de gorro vermelho ergue a vara de pescar e tira de um buraco no chão a própria casinha, pendurada pela chaminé, enquanto aponta o dedo para o espectador.",
+        "partes": [
+          "gramado verde-claro (disco largo)",
+          "buraco redondo preto no gramado com borda de terra (toro marrom)",
+          "três torrões de terra marrom voando acima do buraco",
+          "cogumelo vermelho de bolinhas brancas ao lado do buraco",
+          "corpo do gnomo atarracado de casaco azul e cinto preto",
+          "barba branca volumosa e nariz-bolota rosado",
+          "gorro vermelho pontudo bem alto",
+          "vara de pescar bege-mel curvada pelo peso",
+          "linha esticada até a chaminé da casinha",
+          "casinha em miniatura de paredes amarelas, telhado vermelho e porta verde, pendurada pela chaminé",
+          "braço livre do gnomo com o dedo indicador apontado pro espectador"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-ett-mote",
+      "elenco": "cientista maluca + meteoro na sala de reunião",
+      "ponte_sonora": "IÁ, RRÁR! ÉT... MÖÖ-te! (5 sílabas: iá-rrár-ét-MÖÖ-te; tônica forte no MÖÖ; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; RRÁR é a gargalhada soprada — o MESMO RRÁR de 'Jag har ont i magen' e 'Har du tid en stund?': h soprado como RR carioca e R final BRANDO, que já escorrega pro É seguinte (rrá-rét) — sem esse R sobra 'ha', outro verbo; ÉT = o ÉTER sem o -ER, a força já é no É: É ABERTO, curto, e T seco — é o 'ett', a mesma vogal do SÉT de 'sätt dig'; MÖÖ-te = o grito 'METE(oro)!' que o estrondo cortou no meio: sobram só as duas primeiras sílabas e a força passa pro MÊ — MÊ-te, nunca me-TE —, e esse MÊ sai no BEIJINHO DE BICO que ela manda pra visita: língua de Ê, lábios de Ô, e LONGO, o mesmo truque do FÖÖ de 'födelsedagen' e do TRÖTT; sem o bico sai um 'mête' que o sueco não reconhece; o -te é fraquinho e de T duro, nunca 'tchi' — e é -TE, nunca -TA: 'möta' é o verbo 'encontrar', não a reunião)",
+      "historia": "A cientista maluca não pode atender ninguém hoje: tem reunião marcada às duas — com um METEORO. Na hora certa ela solta a gargalhada de vilã, IÁ, RRÁR!, e destampa um frasco de ÉTER pra perfumar a sala. Quando o teto estoura, ela abre os braços pra anunciar a visita — 'METE...!' — e o resto da palavra some no estrondo. O METEORO aterrissa sentadinho na cadeira em frente a ela, do outro lado da jarra d'água e dos copinhos da mesa de reunião, e ela, encantada, manda um beijinho de bico pra ele: MÖÖ-te. Se alguém bater na porta agora, a resposta é uma só: estou numa reunião.",
+      "cena": {
+        "descricao": "Numa mesa de reunião de laboratório, uma cientista de cabelo eletrizado ergue um frasco de éter fumegante e manda um beijinho de bico para um meteoro em brasa sentado na cadeira em frente.",
+        "partes": [
+          "piso de laboratório xadrez preto-e-branco",
+          "mesa redonda branca de reunião",
+          "jarra d'água azul-clara e dois copinhos translúcidos sobre a mesa",
+          "duas cadeiras cinza, uma de cada lado da mesa",
+          "meteoro cinza-carvão cheio de crateras, com rachaduras laranja brilhando, sentado numa das cadeiras",
+          "cauda de fogo laranja-amarela (cone) subindo do meteoro em direção ao teto",
+          "cientista de jaleco branco comprido de pé do outro lado da mesa",
+          "cabelo branco eletrizado em espetos e óculos de proteção verdes",
+          "lábios rosa projetados num bico de beijo (cilindro curto) virados pro meteoro",
+          "frasco erlenmeyer de vidro azul erguido na mão, com três nuvens brancas de éter saindo"
+        ]
+      }
+    },
+    {
+      "id": "kan-du-skicka-det-pa-mejl",
+      "elenco": "pata rica + pilha de papel + @ voador",
+      "ponte_sonora": "CAN-DU, RRÍCA... DÊ, PÔ! MÊIL! (7 sílabas: kan-dü-RRÍK-ka-dê-pô-MÊIL; tônicas em RRÍ e MÊIL; CAN-DU é o 'kan du' de sempre — C+A+N como em 'cana', sem o glide de 'quando', e o DU com bico; RRÍCA é RICA dita à carioca: o R de começo de palavra já sai soprado, e esse sopro é o 'sj' de 'skicka' (o 'sk' antes de I NÃO soa 'sk'); faça com os lábios EM BICO e mais forte, raspado, que o RR leve de RRÁR ('har') — é o mesmo sopro de RRÜÜK ('sjuk') e RRÜTA ('skjuta'), só que aqui o bico não vem de graça na vogal, então segure-o no próprio sopro; com o h leve, sem bico, vira 'hicka' (soluço); o C é um K dobrado e seco, e a força cai no RRÍ; DÊ, PÔ! é o 'dê, pô!' impaciente do português: DÊ fechado = 'det', PÔ FECHADO = 'på', o mesmo PÔ de 'GRÁTIS, PÔ!' ('Grattis på födelsedagen'); MÊIL = o 'e-mail' sem o 'e', com o ÊI de NÊI e M'ÊI e L DE VERDADE no fim, língua no céu da boca — nunca 'mêiu')",
+      "historia": "A pata mais RICA da cidade ainda manda tudo em papel: na sua frente despenca uma pilha da altura de uma geladeira, amarrada com fita vermelha e lacrada com cera. Você se ajoelha no tapete de veludo e implora: CAN-DU, RRICA... DÊ, PÔ — MÊIL! Ela bufa, ajeita a tiara, abre um laptop de ouro em cima do cofre onde está sentada e aperta UMA tecla: um @ gigante sai voando da tela e a pilha começa a murchar. Pronto — a papelada toda foi pro seu e-mail.",
+      "cena": {
+        "descricao": "Sobre um tapete de veludo, uma pata branca de tiara e colar de pérolas, sentada num cofre-forte, aperta uma tecla do laptop dourado e faz um @ gigante voar da tela, ao lado de uma pilha de papel amarrada com fita vermelha.",
+        "partes": [
+          "tapete retangular de veludo vermelho",
+          "cofre-forte verde-escuro com roda de segredo dourada",
+          "almofada roxa em cima do cofre",
+          "pilha alta de folhas brancas (blocos empilhados meio tortos)",
+          "fita vermelha cruzada na pilha com lacre de cera vermelho-escuro",
+          "corpo da pata branca gorducha sentada na almofada",
+          "bico laranja largo e olhos semicerrados de impaciência",
+          "tiara dourada e colar de pérolas (esferas brancas)",
+          "laptop dourado aberto ao lado dela, tela azul-clara",
+          "@ gigante azul-turquesa (esfera + toro aberto) voando da tela"
+        ]
+      }
+    }
+  ]
+}

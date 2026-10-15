@@ -1,0 +1,123 @@
+{
+ "phrases": [
+  {
+   "id": "varsagod",
+   "sv": "Varsågod!",
+   "pt": "Aqui está! / Pode se servir!",
+   "pronuncia": "va-xô-GÚUD ('var så' se funde: o R some dentro de um X de xarope — VAXÔ, fraco e corrido; toda a força no GÚUD, U longo e fechado; na fala o -d quase cai: 'varsågo')",
+   "contexto": "Na hora de ENTREGAR algo: o caixa passando o troco ou o recibo, o barista empurrando o café no balcão, o anfitrião chamando pra mesa ('Varsågoda!'), ou segurando a porta pra alguém passar.",
+   "porque": "Não existe equivalente de uma palavra em português, e ele ouve isso dezenas de vezes por semana sem saber o que responder. Dizer 'Varsågod' ao entregar algo é o que faz a interação soar sueca, e não só educada."
+  },
+  {
+   "id": "ingen-orsak",
+   "sv": "Ingen orsak!",
+   "pt": "De nada! / Não há de quê!",
+   "pronuncia": "ÍNG-en ÚU-xaak ('ng' como no fim de 'ping', sem estalar o G; o 'o' de 'orsak' é U LONGO e fechado, e o 'rs' vira X de xarope — nunca 'ÓR-sak' com O de 'orelha')",
+   "contexto": "Resposta a um 'tack' — alguém agradece porque você segurou a porta, emprestou uma caneta, ajudou com a sacola.",
+   "porque": "É o 'de nada' padrão. E evita um erro comum: 'Ingen fara' responde a um PEDIDO DE DESCULPA ('förlåt'); 'Ingen orsak' responde a um OBRIGADO ('tack'). Mesma primeira palavra, situações opostas."
+  },
+  {
+   "id": "tack-detsamma",
+   "sv": "Tack detsamma!",
+   "pt": "Obrigado, igualmente!",
+   "pronuncia": "tak de-SÁM-ma (o T de 'det' some na fala: sai 'desamma'; força no SÁM, com o M demorado; 'tack' com A curto e K seco)",
+   "contexto": "Resposta automática a qualquer bom desejo: 'Trevlig helg!', 'Ha en bra dag!', 'God jul!', 'Lycka till!' — na saída do trabalho, no caixa, com o vizinho.",
+   "porque": "Quando alguém deseja 'Trevlig helg!', o silêncio ou um 'tack' seco soa frio. 'Tack detsamma' devolve o desejo inteiro em duas palavras — e literalmente quer dizer 'obrigado, o mesmo'."
+  },
+  {
+   "id": "vanta-lite",
+   "sv": "Vänta lite!",
+   "pt": "Espera um pouco!",
+   "pronuncia": "VÉN-ta LÍ-te ('ä' = É ABERTO, como em 'pé'; o N é batido na língua, sem o 'ẽ' nasal do português; 'lite' = LÍ-te, nunca 'láite')",
+   "contexto": "Ao telefone ('vänta lite, jag ska kolla'), no balcão enquanto procura o cartão, quando alguém fala rápido e ele precisa de um segundo, ou segurando o elevador.",
+   "porque": "É a frase que compra tempo: em vez de travar em silêncio ou trocar pro inglês, ele pausa a conversa em sueco. 'Lite' (um pouco) é o mesmo das cartas 'prata lite långsammare' e 'dämpa er lite'."
+  }
+ ],
+ "mnemonics": [
+  {
+   "id": "varsagod",
+   "elenco": "girafa feirante",
+   "ponte_sonora": "VA-XÔ GÚD'! (3 batidas; VA-XÔ fraquinho e grudado, quase uma palavra só — é o 'var så' com o R engolido pelo X de xarope, Ô FECHADO como o SÔ de 'så' das outras cartas; a força TODA cai no GÚ, U longo e fechado; GÚD' é a bolinha de GUDE com o E arrancado — nunca 'GÚ-dji', que cria uma sílaba a mais; na fala o D quase cai: 'varsågo')",
+   "historia": "A girafa tem a barraca de gude mais alta da feira: o estoque fica lá em cima, na boca dela, e as entregas descem pelo pescoço, enrolado numa calha em espiral. Quando o freguês paga, ela solta uma bolinha de GUDE gigante no alto da calha e enxota com a língua — VA, XÔ, GÚD'! A gude desce rodopiando a espiral inteira, quica uma vez no balcão e cai redondinha dentro do saquinho do freguês. Aqui está, é seu: VARSÅGOD!",
+   "cena": {
+    "descricao": "Barraca de feira de toldo listrado: uma girafa de avental de feirante com o pescoço enrolado numa calha em espiral, e uma bolinha de gude azul gigante caindo bem na boca do saquinho aberto em cima do balcão.",
+    "partes": [
+     "chão de paralelepípedos cinza da feira",
+     "balcão de madeira da barraca",
+     "toldo listrado verde e branco sobre quatro varas",
+     "saquinho de pano bege aberto em cima do balcão",
+     "corpo da girafa amarelo-mostarda com manchas marrons",
+     "quatro pernas finas da girafa com cascos escuros",
+     "pescoço longo da girafa subindo acima do toldo",
+     "calha em espiral laranja enrolada no pescoço (toros inclinados empilhados)",
+     "cabeça da girafa com ossicones e língua roxa esticada",
+     "avental verde de feirante amarrado no peito",
+     "bolinha de gude gigante azul-translúcida no fim da calha, entrando no saquinho"
+    ]
+   }
+  },
+  {
+   "id": "ingen-orsak",
+   "elenco": "lobo-enfermeiro + joaninha",
+   "ponte_sonora": "ÍNG-EN? ÚÚÚ-XAK! (4 sílabas; ÍNG-EN é a mesma ÍNGUA de 'Ingen fara' — ÍNG como no fim de 'ping', G quase sumindo, depois -EN; ÚÚÚ é o uivo do lobo: U LONGO e FECHADO, nunca 'ór' nem 'AU-u'; XAK é a tesourada que corta o uivo — X de xarope, porque o 'rs' sueco vira X, A comprido e K seco no fim, sem 'xáque' com vogal depois)",
+   "historia": "O lobo mau se aposentou e virou enfermeiro da floresta, de touca branca. Chega a joaninha com uma ÍNGUA roxa inchada brotando do casco, do tamanho dela. O lobo examina — ÍNG-EN? —, enche o peito, solta um uivo longo ÚÚÚÚ... e corta o próprio uivo com uma tesourada: XAK! A íngua murcha num puf. A joaninha agradece mil vezes e o lobo só abana a pata: ÍNGEN ÚUXAK — de nada, não há de quê.",
+   "cena": {
+    "descricao": "Clareira à noite: lobo cinza de touca de enfermeiro uivando pra lua com uma tesoura prateada aberta na pata, enquanto a íngua roxa da joaninha murcha em cima do toco-maca.",
+    "partes": [
+     "chão de grama verde-escura da clareira",
+     "toco de árvore marrom servindo de maca",
+     "lençolzinho branco sobre o toco",
+     "joaninha vermelha de bolinhas pretas deitada no toco",
+     "íngua roxa murchando sobre o casco dela (esfera amassada)",
+     "corpo do lobo cinza sentado nas patas traseiras",
+     "cabeça do lobo erguida, focinho apontado pro céu, boca aberta no uivo",
+     "touca branca de enfermeiro com cruz vermelha",
+     "tesoura prateada gigante aberta na pata",
+     "lua crescente amarela no alto"
+    ]
+   }
+  },
+  {
+   "id": "tack-detsamma",
+   "elenco": "samurai + espelho",
+   "ponte_sonora": "TAC! DÊ-SÁMA! (3 batidas; TAC é o mesmo tapa sonoro de 'tack' das outras cartas — aqui o estalo do leque fechando; DÊ-SÁMA é o honorífico de anime, 'Senhor Dê', dito num fôlego só: o T de 'det' não aparece, DÊ curto e fechado, força no SÁ — A ABERTO, de boca escancarada, SEM o 'sã' nasal que o português põe antes de M — e o M bem demorado: SÁM-MA; e 'samma' quer dizer 'o mesmo' de verdade)",
+   "historia": "Sexta-feira no dojo: um pergaminho desce do teto desejando 'Trevlig helg!' ao samurai. Ele fecha o leque num estalo — TAC! — e faz a reverência mais funda da vida pro espelho gigante, chamando o reflexo com a honra máxima: DÊ-SÁMA! O reflexo devolve TUDO igualzinho: o mesmo TAC, a mesma reverência, o mesmo DÊ-SÁMA. O desejo voltou inteiro — obrigado, igualmente.",
+   "cena": {
+    "descricao": "Dojo de tatame: o samurai de armadura vermelha curvado em reverência com o leque fechado, e no espelho de moldura de madeira o reflexo idêntico curvado de volta.",
+    "partes": [
+     "chão de tatame verde-palha em placas",
+     "parede de papel creme com ripas de madeira escura",
+     "pergaminho pendurado escrito HELG",
+     "espelho grande em pé com moldura de madeira escura",
+     "corpo do samurai em armadura vermelha, curvado em reverência",
+     "cabeça do samurai com coque preto no alto",
+     "katana na cintura com bainha preta",
+     "leque fechado na mão, dourado",
+     "reflexo do samurai dentro do espelho (cópia espelhada em tons mais claros)"
+    ]
+   }
+  },
+  {
+   "id": "vanta-lite",
+   "elenco": "porco guloso + forno",
+   "ponte_sonora": "VÉNTA! LÍTE! (4 sílabas, força no VÉN e no LÍ; VÉNTA é a VENTA do porco — o focinho — mas com É ABERTO de 'pé' e o N batido na língua, sem o 'ẽ' nasal do português; LÍTE é o mesmo LITE de 'prata lite' e 'dämpa er lite', dito LÍ-te, nunca 'láite')",
+   "historia": "O porco de babador está colado no vidro do forno onde assa o bolo LITE da dieta dele. A VENTA gigante gruda no vidro e bufa tanto que embaça tudo — a venta VENTA! O garfo treme na pata, ele quase abre a porta... mas vira a ampulheta e se obriga: VÉNTA, LÍTE! Espera um pouco, ainda não tá pronto.",
+   "cena": {
+    "descricao": "Cozinha de azulejos: um porco rosa de babador com o focinho achatado no vidro do forno, nuvens de bafo embaçando a porta, enquanto lá dentro assa um bolo com bandeirinha LITE.",
+    "partes": [
+     "piso de azulejos xadrez azul e branco",
+     "forno branco com porta de vidro escuro",
+     "forma redonda com bolo amarelo dentro do forno",
+     "bandeirinha espetada no bolo escrita LITE",
+     "ampulheta de madeira com areia rosa em cima do forno",
+     "corpo do porco rosa sentado, barrigudo",
+     "cabeça do porco com orelhas caídas",
+     "focinho (venta) achatado contra o vidro, narinas grandes",
+     "babador branco de bolinhas vermelhas",
+     "garfo prateado erguido na pata",
+     "três nuvens de bafo brancas embaçando o vidro"
+    ]
+   }
+  }
+ ]
+}

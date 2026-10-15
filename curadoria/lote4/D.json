@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "det-spelar-ingen-roll",
+      "sv": "Det spelar ingen roll.",
+      "pt": "Não faz diferença. / Tanto faz.",
+      "pronuncia": "dê SPÊÊ-la-RÍNG-en RÓL ('det' = dê, quase engolido — muita gente até corta: 'spelar ingen roll'; SPÊÊ com Ê fechado e longo e a força nele, o '-lar' é curto e fraco; o R de 'spelar' não some: emenda no 'ingen' como R brando de 'caro' — 'spela-ríngen'; 'ingen' sem G, o ng é o fim de 'ping'; 'roll' com R de LÍNGUA, Ó ABERTO e curto e L comprido)",
+      "contexto": "Resposta curta quando te oferecem uma escolha que não importa ('kaffe eller te?' — 'spelar ingen roll') e para tranquilizar alguém ('det spelar ingen roll om du är sen' — não faz mal se você atrasar).",
+      "porque": "É o 'tanto faz' sueco e aparece o dia inteiro. Complementa o 'Ingen fara' (que responde a um pedido de desculpas): este aqui diz que a diferença simplesmente não importa."
+    },
+    {
+      "id": "lycka-till",
+      "sv": "Lycka till!",
+      "pt": "Boa sorte!",
+      "pronuncia": "LÜK-ka TIL ('y' = Ü: lábios de U com língua de I, o 'u' do francês; o K é dobrado e seco; 'till' com T duro — nunca 'tchil' — e L de língua no fim, nunca 'tiu')",
+      "contexto": "Antes de prova, entrevista de emprego, körprov (prova de direção), cirurgia, mudança — dito em voz alta ou escrito em cartão e mensagem.",
+      "porque": "É a frase de apoio padrão na Suécia, para colegas, vizinhos e a escola dos filhos. Duas palavras curtas que resolvem a situação inteira."
+    },
+    {
+      "id": "grattis-pa-fodelsedagen",
+      "sv": "Grattis på födelsedagen!",
+      "pt": "Feliz aniversário!",
+      "pronuncia": "GRÁT-tis pô FÖÖ-del-se-DÁ-guen — na fala solta: FÖÖ-del-se-DÁN ('grattis' com T duro, nunca 'grátchis'; 'på' = pô de boca redonda; FÖÖ com bico de Ô e língua de Ê, longo; o '-dagen' vira 'dan' na boca de todo mundo)",
+      "contexto": "Aniversário de colega na fika com tårta, mensagem no Facebook/SMS, festa de criança. 'Grattis!' sozinho serve para qualquer parabéns (formatura, filho, emprego novo).",
+      "porque": "Todo escritório sueco comemora aniversário com bolo e o 'Ja, må hon leva' — ficar calado na hora pega mal. E 'grattis' sozinho já cobre todos os outros parabéns."
+    },
+    {
+      "id": "skal",
+      "sv": "Skål!",
+      "pt": "Saúde! (brinde)",
+      "pronuncia": "SKÔÔL (Ô fechado e longo, o de 'avô'; sem 'i' na frente — o S sai seco direto no K; L final de língua no céu da boca, nunca 'iscôu')",
+      "contexto": "Todo brinde: julbord, midsommar, kräftskiva (festa do lagostim em agosto), jantar com amigos. A etiqueta manda olhar nos olhos de quem brinda antes de beber e de novo depois.",
+      "porque": "É a palavra obrigatória de qualquer mesa sueca com copo erguido; não saber a hora e o jeito de dizer é o tipo de detalhe que denuncia o estrangeiro."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "det-spelar-ingen-roll",
+      "elenco": "esquilo despejado + pipa cortada no cerol",
+      "ponte_sonora": "DÊ-SPÊÊ-la-RÍNG-en (ce)RÓL! (6 sílabas, força no SPÊÊ, no RÍNG e no RÓL; DÊ-SPÊÊ = o DESPEJO cortado no PÊ — Ê FECHADO e LONGO, é nele que a força cai; o DÊ é o 'dê' fechado de sempre, jamais o 'dji' de 'djispejo'; 'la' = o LAR fraquinho e curto, e o R dele NÃO some — gruda na ÍNGUA seguinte e sai 'la-RÍNGUA', R brando de 'caro', exatamente como o sueco emenda 'spelar ingen' (sem esse R sobra 'spela', o infinitivo); ÍNG-EN = a mesma ÍNGUA de 'Ingen fara' e 'Ingen orsak', com o G sumindo como no fim de 'ping'; (ce)RÓL = o CEROL da linha de pipa sem o CE: o R é o do meio de ceROL, BRANDO, de língua — nunca o RR de garganta de 'rolo', que em sueco é H e vira 'hål' (buraco); Ó ABERTO e curto, L de língua bem comprido, nunca 'cerou')",
+      "historia": "O esquilo volta pra casa e encontra a toca lacrada: uma placa vermelha de DESPEJO pregada no tronco — foi DESPÊ-jado do próprio LAR. Pra piorar, acorda com uma ÍNGUA roxa do tamanho de uma noz inchando no pescoço. E pra fechar o dia, a linha de CEROL de uma pipa rival corta a pipa dele, que some no céu. E daí? Sem LAR, com ÍNGUA, sem pipa — ele amarra as nozes numa trouxinha e dá de ombros com as duas patinhas: DÊ-SPÊÊ-la-RÍNG-en (ce)RÓL — nada disso faz a menor diferença.",
+      "cena": {
+        "descricao": "Ao pé de um tronco com a placa vermelha DESPEJO pregada na toca, um esquilo ruivo de íngua roxa no pescoço dá de ombros, trouxinha de nozes no ombro e linha cortada na pata, enquanto a pipa dele voa embora no alto.",
+        "partes": [
+          "gramado verde-musgo (chão)",
+          "tronco de árvore marrom-escuro com toca redonda (buraco preto)",
+          "placa vermelha 'DESPEJO' pregada no tronco, sobre a toca",
+          "corpo do esquilo ruivo-alaranjado de barriga creme, em pé nas patas traseiras",
+          "cabeça com orelhas pontudas com tufinho e dentinhos brancos",
+          "patinhas dianteiras abertas para os lados (dando de ombros)",
+          "rabo enorme e felpudo em S, laranja com ponta creme",
+          "íngua roxa (esfera brilhante) inchada no pescoço",
+          "trouxinha de pano bege amarrada num graveto, no ombro",
+          "pedaço de linha de pipa cortada pendurado na pata, prateado e cintilante de cerol (cilindro fino com pontinhos brilhantes)",
+          "pipa em losango amarela e vermelha com rabiola, voando embora no alto e inclinada"
+        ]
+      }
+    },
+    {
+      "id": "lycka-till",
+      "elenco": "Dona Caracol, a maluca de foguete",
+      "ponte_sonora": "(ma)LÜ-CA, TIL! (3 sílabas, força no LÜ e de novo no TIL; é MALUCA sem o MA — mas o LÜ é de BICO DE PATO: lábios de U com língua de I, o 'u' do francês, igual ao MÜ de 'mycket'; com o U chapado de 'maluca' sai 'lucka' (portinhola), outra palavra; o Ü é CURTO e o C é um K DOBRADO — a língua segura o K um instante antes de soltar o -a, nunca o 'lu-uuca' arrastado de 'maluca'; TIL = o mesmo TIL (~) do gongo do 'en gång till': T DURO, nunca 'tchil', I curto e L de língua no céu da boca, nunca 'tiu')",
+      "historia": "A Dona Caracol, a MALUCA da pista, se inscreveu nos 100 metros rasos e, pra compensar a lentidão, amarrou um foguete na concha. Só que a pista não tem barreiras: tem uma rampa gigante em forma de TIL (~) bem no meio, onda pra cima, onda pra baixo. Na largada as antenas tremem, o pavio chia, o trevo de quatro folhas balança... e só sai da sua boca o que se grita pra quem vai precisar de muita sorte: (ma)LÜCA, TIL! — boa sorte!",
+      "cena": {
+        "descricao": "Na linha de largada de uma pista de corrida, uma caracol de capacete com um foguete amarrado na concha encara uma rampa gigante em forma de til (~).",
+        "partes": [
+          "pista de corrida vermelho-tijolo com duas faixas brancas",
+          "linha de largada xadrez preto e branco",
+          "rampa gigante em forma de til (~), tubo ondulado azul-turquesa",
+          "corpo da caracol, lesma verde-oliva comprida e brilhante",
+          "concha em espiral laranja e creme",
+          "duas antenas com olhos esbugalhados nas pontas",
+          "capacete de corrida vermelho com viseira preta",
+          "foguete prateado de bico vermelho amarrado em cima da concha",
+          "pavio aceso atrás do foguete (cilindro fino + esfera amarelo-chama)",
+          "trevo de quatro folhas verde preso numa antena",
+          "rastro de baba brilhante atrás dela (fita translúcida)"
+        ]
+      }
+    },
+    {
+      "id": "grattis-pa-fodelsedagen",
+      "elenco": "zebra aniversariante + sedã listrado",
+      "ponte_sonora": "GRÁTIS, PÔ! FÖÖ-deu-se-DÁN! (7 sílabas, força no GRÁ e no FÖÖ, e uma força menor no DÁN; GRÁTIS é o grátis do português mesmo, mas com T DURO — nunca 'grátchis'; PÔ = o 'på' de sempre, Ô FECHADO de boca redonda; FÖÖ = o sopro nas velas: BICO DE Ô com língua de Ê, longo — e é tudo UMA palavra, sem pausa depois do sopro; 'deu-se' sai fraquinho e corrido, como 'deu sedã!' dito de uma vez, em que a força cai no DÃ e nunca no DEU (fö-DEU-se-dan é tônica errada); o 'deu' fecha com L de língua no céu da boca, não com U; SEDÁN = o carro SEDÃ sem nasalar: A aberto e longo e N batido na língua — é o '-dagen' do jeito que todo sueco fala, 'födelsedan')",
+      "historia": "É aniversário da zebra e a concessionária pendurou a placa: GRÁTIS, PÔ! — quem apagar todas as velas do bolo num sopro só leva o carro de presente. A zebra faz um bico enorme e sopra FÖÖÖÖ — trinta velas se apagam de uma vez, a fumacinha sobe... e deu SEDÃ! O sedã listradinho de preto e branco, de laço vermelho no teto, é dela. GRÁTIS, PÔ, FÖÖ-deu-SEDÃ: feliz aniversário!",
+      "cena": {
+        "descricao": "De chapeuzinho de festa, a zebra sopra com um bico enorme as velas de um bolo, ao lado de um sedã listrado de preto e branco com laço vermelho no teto e a placa GRÁTIS no para-brisa.",
+        "partes": [
+          "piso de showroom cinza-claro brilhante",
+          "sedã listrado preto e branco (caixa longa + cabine arredondada)",
+          "quatro rodas pretas com calotas prateadas",
+          "laço vermelho gigante no teto do carro",
+          "placa amarela 'GRÁTIS' apoiada no para-brisa",
+          "mesinha redonda branca",
+          "bolo de aniversário rosa com velas brancas soltando fumacinha cinza",
+          "corpo da zebra listrado em pé nas patas traseiras",
+          "cabeça de zebra com crina preta espetada e chapéu de festa em cone azul",
+          "focinho esticado em bico, soprando (cone com bochechas infladas)"
+        ]
+      }
+    },
+    {
+      "id": "skal",
+      "elenco": "vampiro no julbord + cálice de alho",
+      "ponte_sonora": "SSS-CÔL! (1 sílaba só; é a ESCOLHA sem o E e sem o -HA: o S sai SECO, sibilado como o chiado do vampiro, e cai direto no K — nada de 'is' na frente; Ô FECHADO e LONGO, o de 'avô'; L final de língua no céu da boca, nunca 'côu')",
+      "historia": "No julbord sueco, o vampiro tem que fazer uma ESCOLHA: na frente dele, um cálice de suco de tomate vermelho-sangue e outro com uma cabeça de alho inteira boiando. Ele recua do alho com um chiado de cobra — SSSS! — agarra o cálice vermelho e o ergue bem alto, caninos brilhando à luz do candelabro. Olhando fundo nos seus olhos, como manda a etiqueta sueca, ele sibila a escolha feita: SSS-CÔL... SKÔL! — saúde!",
+      "cena": {
+        "descricao": "Um vampiro de capa preta e forro vermelho ergue um cálice vermelho num brinde enquanto chia para o segundo cálice na mesa, com uma cabeça de alho dentro.",
+        "partes": [
+          "piso de pedra cinza-escuro",
+          "mesa comprida de madeira escura com toalha branca",
+          "candelabro dourado com três velas acesas",
+          "segundo cálice de vidro na mesa com uma cabeça de alho branca dentro",
+          "corpo do vampiro com capa preta de gola alta e forro vermelho",
+          "cabeça pálida esverdeada com cabelo preto em bico (V) na testa",
+          "olhos vermelhos brilhantes",
+          "dois caninos brancos pontudos à mostra",
+          "braço erguido bem alto",
+          "cálice do brinde cheio de líquido vermelho, na mão erguida"
+        ]
+      }
+    }
+  ]
+}

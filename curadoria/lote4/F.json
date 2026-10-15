@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "vad-gor-du-i-helgen",
+      "sv": "Vad gör du i helgen?",
+      "pt": "O que você vai fazer no fim de semana?",
+      "pronuncia": "va IÖR-dü i RRÉL-ien? ('vad' perde o d na fala: VÁ, sem R; 'gör' começa com I de ioga + ö: IÖR, R brando que DERRETE no 'du' — na fala 'gör du' sai quase 'iö-rü', com a língua enrolada; 'du' com U de bico (Ü); 'helgen' = RRÉL-ien, h soprado tipo rr carioca e o g vira i — duas sílabas; força em IÖR e em RRÉL)",
+      "contexto": "Quinta ou sexta-feira na fika do trabalho, no portão da förskola, com o vizinho no elevador: o small talk oficial do fim da semana. Na segunda vira 'Vad gjorde du i helgen?' (o que você fez).",
+      "porque": "É o par natural de 'Trevlig helg!': em vez de só desejar bom fim de semana, ele puxa a conversa. Perguntar é a forma mais barata de participar — o outro fala e ele só precisa ouvir."
+    },
+    {
+      "id": "jag-ar-trott",
+      "sv": "Jag är trött.",
+      "pt": "Estou cansado.",
+      "pronuncia": "iá é TRÖTT ('jag' = iá; 'trött' com ö CURTO: língua de Ê e lábios em bico — nunca o Ó aberto de 'trote', que dá 'trott' (acreditado); R de um toque só, de 'trave', e TT seco no fim, sem 'tchi')",
+      "contexto": "Em casa, no trabalho de manhã, no fim do treino, no auge do inverno escuro — dita e ouvida o tempo todo, muitas vezes como 'Jag är så trött'.",
+      "porque": "Frase curtíssima que resolve um sentimento do dia a dia. Em novembro na Suécia todo mundo está trött: é assunto garantido e conecta na hora."
+    },
+    {
+      "id": "har-du-tid-en-stund",
+      "sv": "Har du tid en stund?",
+      "pt": "Você tem um minutinho?",
+      "pronuncia": "rrá-dü TÍD en STUND? (na fala 'har du' cola: o R derrete no D, rrá-dü, h soprado; 'tid' com T seco, I longo e d leve — o mesmo parTÍD de 'boka en tid'; 'en' fraquinho; 'stund' com u curto de bico, puxando para ô, d leve; força em TÍD e STUND)",
+      "contexto": "Na porta da sala do chefe, na mesa de um colega, ligando para alguém: o jeito educado de pedir atenção antes de fazer uma pergunta ou pedir ajuda.",
+      "porque": "Na Suécia não se interrompe sem pedir licença ao tempo do outro. Com essa frase ele abre qualquer conversa difícil sem precisar de vocabulário sofisticado — o resto pode vir até em inglês."
+    },
+    {
+      "id": "jag-ringer-dig-senare",
+      "sv": "Jag ringer dig senare.",
+      "pt": "Eu te ligo mais tarde.",
+      "pronuncia": "iá RÍNG-er dêi SÊ-na-re ('ringer' com R batido de 'arara', nunca rr, e NG só no nariz, sem estalar o g; 'dig' na fala é 'dej' = DÊI; 'senare' com Ê fechado e longo, -re fraquinho)",
+      "contexto": "Atendendo o telefone no ônibus, na fila, com as crianças gritando ao fundo; também por SMS: 'Ringer dig senare!'.",
+      "porque": "Permite atender a ligação de um sueco sem pânico e encerrar com educação, ganhando tempo. 'Ringa' (ligar) e 'senare' (mais tarde) servem em dezenas de outras frases."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "vad-gor-du-i-helgen",
+      "elenco": "cegonha de folga + hélice da laje",
+      "ponte_sonora": "VÁ, IÖR-DÜ I RRÉL-IEN? (6 batidas, tônicas em IÖR e RRÉL; VÁ é o MESMO 'vad' de 'VÁ, CÜL!' e 'VÁ! É CLÓ-CAN' — sem R nenhum, senão vira 'var' (onde); IÖR é o rangido da manivela da carta 'Det gör ont här' — I de IOGA (nunca G duro nem J chiado), boca de Ô com língua de Ê; o R BRANDO do IÖR não para: derrete direto no DÜ, sem pausa — IÖR-DÜ num fôlego só, quase 'iö-rü', que é como o sueco fala; DÜ com BICO de beijo, nunca o U chapado de 'tu'; RRÉL-IEN é a HÉLICE de 'Trevlig helg!' (RRÉLI) com o -EN sueco colado — DUAS sílabas só, o I vira ponte de ioga entre o L e o EN, e o h é soprado como RR carioca)",
+      "historia": "Sexta, seis da tarde: a cegonha pendura a trouxinha de bebê no prego — fim de semana não tem entrega pra ninguém. Ela berra VÁ!, agarra a manivela enferrujada e gira sem parar, o rangido emendando no sopro: iiiÖR-DÜÜ, iiiÖR-DÜÜ — o mesmo rangido do consultório da marmota, agora com o bico de meio metro fazendo biquinho de beijo. Mais uma volta, I... — e a velha hélice travada da laje finalmente pega no tranco: RRÉLI-EN, RRÉLI-EN! Com a malinha amarela no pé, ela decola, e o prédio inteiro se debruça na mureta perguntando: e aí, o que você vai fazer no fim de semana?",
+      "cena": {
+        "descricao": "Na mesma laje da dona do trevo, uma cegonha de óculos de aviador gira a manivela enferrujada de um mastro e a hélice de duas pás no topo começa a girar, com a trouxinha de bebê pendurada no prego ao lado.",
+        "partes": [
+          "laje cinza-clara com mureta baixa (a laje de 'Trevlig helg!')",
+          "ninho de gravetos marrom-palha num canto",
+          "prego cinza na mureta com a trouxinha de bebê branca pendurada (fora de serviço)",
+          "mastro cinza-metal no centro",
+          "caixa de engrenagem cor de ferrugem com manivela de ferro",
+          "hélice de duas pás madeira-mel no topo do mastro, inclinada no giro",
+          "cegonha branca de pé, pernas finas vermelhas, pontas das asas pretas",
+          "bico longo laranja-avermelhado fazendo biquinho de beijo",
+          "óculos de aviador marrons com lentes verdes",
+          "malinha de fim de semana amarela presa no pé da cegonha"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-trott",
+      "elenco": "cowboy exausto + cavalo xucro dorminhoco",
+      "ponte_sonora": "IÁ! É TRÖTT! (3 batidas, tônica em TRÖTT; IÁ é o grito de cowboy E o 'jag' de sempre — I de ioga, nunca J chiado; É aberto e curto = 'är', o mesmo de 'Jag är sjuk' e 'Jag är hungrig'; TRÖTT = TRETA sem o -A, dita de BEICINHO: mantenha a língua do Ê da treta e empurre os lábios num bico de choro — é o ö, o mesmo truque de IÖR e FÖÖ; nunca troque por TROTE: o Ó aberto de 'trote' dá 'trott', que é outra palavra (acreditado); Ö CURTO, R de um toque só grudado no T, e o TT final seco — nada de 'TRÉ-tchi', que cria uma sílaba a mais)",
+      "historia": "O cowboy passou a noite inteira em cima do cavalo xucro gritando IÁ! IÁ! — o bicho pinoteava, corcoveava, e cada pulo era uma TRETA nova: É TRETA! É TRETA! Ao amanhecer os dois apagam de pé no meio do curral: o cavalo dorme, o chapéu escorrega pro nariz do cowboy, os braços pendem até o chão. Sem força nem pra soltar o -A, ele faz um beicinho de choro e resmunga o resumo da noite: IÁ... É... TRÖTT. Estou cansado.",
+      "cena": {
+        "descricao": "Curral de terra ao nascer do sol: depois de uma noite de treta, um cowboy desmaiado sobre a sela, chapéu caído no nariz, beicinho de choro e braços pendurados até o chão, montado num cavalo que dorme de pé.",
+        "partes": [
+          "chão de terra batida laranja-areia",
+          "sol nascente laranja no horizonte (meia esfera)",
+          "cerca de madeira com dois postes e duas travessas",
+          "cacto verde de dois braços",
+          "cavalo marrom de pé, cabeça baixa e olhos fechados, crina toda desgrenhada da noite de pinotes",
+          "sela marrom-escura",
+          "cowboy desabado pra frente na sela, camisa vermelha e colete de couro, lábios num beicinho de choro bem saliente",
+          "chapéu de cowboy bege escorregado sobre o nariz",
+          "braços pendurados até quase tocar o chão",
+          "laço de corda bege enrolado na terra",
+          "três letras 'Z' azuis flutuando sobre a cabeça"
+        ]
+      }
+    },
+    {
+      "id": "har-du-tid-en-stund",
+      "elenco": "tigre siberiano + rato da ampulheta",
+      "ponte_sonora": "RRÁR-DÜ... parTÍD! EN... STUND(ra)? (5 batidas: rrá-dü-TÍD-en-STUND, tônicas em TÍD e STUND; RRÁR é o 'har' de sempre — o MESMO RRÁR de 'Jag har ont i magen' e 'Jag har två barn', aqui o mini-rugido do rato: h soprado, A longo, e o R BRANDO derrete direto no D: rrá-dü; DÜ = o 'du' de CAN-DU, com bico; TÍD = o parTÍD(a) de 'Jag skulle vilja boka en tid' e 'Smaklig måltid', a mesma ponte de 'tid' — só o pedaço forte: T SECO de 'tatu', nunca 'tchi', I LONGO e D leve no fim; EN = 'um', o dedinho erguido, curto e sem nasal; STUND = a TUNDRA sem o -RA, com o S do vento grudado na frente — STUND numa sílaba só, sem 'is' antes (como o SSS-CÔL de 'Skål'); U de BICO puxando pra Ô, D leve, nunca 'TUN-dji' nem 'tunda')",
+      "historia": "Linha de PARTIDA da corrida de trenó na TUNDRA: o tigre siberiano, de arreio, raspa a neve esperando a bandeira baixar. Lá embaixo, um rato do tamanho de uma pata dele puxa a sua cauda e, pra ser ouvido, solta um mini-rugido — RRÁR! — e aponta a patinha pra cima: DÜ! Aponta a faixa quadriculada da parTÍDa, ergue UM dedinho — EN! — e o vento da tundra assobia SSS pela neve. Na outra pata, uma ampulheta minúscula: o tigre larga o arreio e senta — você tem um minutinho? Só o tempo da areia cair.",
+      "cena": {
+        "descricao": "Na linha de partida de uma corrida de trenó na tundra, um tigre siberiano enorme de arreio vermelho olha pra baixo, onde um ratinho cinza puxa a sua cauda com um dedo erguido e uma ampulheta dourada na outra pata.",
+        "partes": [
+          "chão de neve branca (disco largo) com tufos de musgo verde-escuro e montes de neve arredondados ao fundo",
+          "placa de madeira meio soterrada escrita 'TUNDRA'",
+          "faixa quadriculada preta e branca no chão (a linha de partida)",
+          "poste fino com bandeirinha quadriculada preta e branca",
+          "trenó de madeira-mel com dois blocos de gelo azul-claro",
+          "corpo do tigre laranja com listras pretas, de lado, patas dianteiras na linha de partida",
+          "peito e focinho brancos, cabeça virada pra baixo com olhar surpreso",
+          "arreio vermelho no peito ligado ao trenó",
+          "cauda listrada comprida descendo até o chão",
+          "rato cinza pequeno em pé sobre um bloquinho de neve, boca aberta no mini-rugido, puxando a cauda e com UM dedo erguido",
+          "ampulheta dourada minúscula na outra pata do rato"
+        ]
+      }
+    },
+    {
+      "id": "jag-ringer-dig-senare",
+      "elenco": "freira boxeadora + telefone vermelho",
+      "ponte_sonora": "IÁ-RÍNGUER, DÊI SÊNA-re! (7 batidas, tônicas em RÍN e SÊ; IÁ é o 'jag' de sempre, I de ioga; emende IÁ + RINGUE num fôlego só, 'iaríngue', pro R sair BATIDO como em 'arara' — se disser 'iá... RRINGUE' com RR carioca sai um h e a palavra vira outra; do RINGUE fica só o NG no nariz, SEM estalar o G e sem o 'gui' final, e cola um -er com R BRANDO: RÍNG-er; DÊI = 'dei' do português, o mesmo molde de M'ÊI ('mig') — 'dig' na fala é 'dej'; SÊNA = a Mega-SENA, Ê FECHADO e longo, a força cai aqui; o -re do fim é fraquinho, R brando, quase engolido — nunca 'se-na-RÉ')",
+      "historia": "No meio do RINGUE, a freira boxeadora solta o gancho de direita gritando IÁ! — e o saco de pancada voa contra as cordas. No córner, o telefone vermelho toca sem parar, o fone pulando no gancho. Ela nem olha: puxa de dentro da luva o bilhete da Mega-Sena, confere os seis números e berra DEI SENA! Milionária de repente, ergue a luva pro telefone que ainda toca: agora não — eu te ligo mais tarde.",
+      "cena": {
+        "descricao": "Num ringue de boxe, uma freira de luvas vermelhas ergue triunfante um bilhete da Mega-Sena, de costas para o telefone vermelho que toca sem parar no banquinho do córner.",
+        "partes": [
+          "tablado do ringue azul (caixa larga e baixa)",
+          "quatro postes de canto vermelhos",
+          "cordas brancas em volta (cilindros finos)",
+          "saco de pancada vermelho tombado contra as cordas",
+          "banquinho de madeira no córner",
+          "telefone antigo vermelho no banquinho, fone saltando do gancho",
+          "corpo da freira de hábito preto",
+          "cabeça com véu preto e faixa branca na testa",
+          "luvas de boxe vermelhas, uma erguida para o alto",
+          "bilhete verde-e-branco escrito 'SENA' preso na luva erguida"
+        ]
+      }
+    }
+  ]
+}
