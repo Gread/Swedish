@@ -475,6 +475,7 @@ export const card: Card = {
       'O yeti do andar de cima desceu pro jantar, sentou numa mesinha que bate no joelho dele e raspou a tigela até ela brilhar. Ele aponta pro vazio e grunhe DÊ, VÁR!, revira os olhos, estufa a barriga e ruge IÉ-TE-GÓT! — porque jätte é GIGANTE e gott é GÓSTOSO. Aí bate a pata na tábua: TAC! e o lustre do vizinho cai.',
   },
   createScene,
+  refine: { organic: ['yeti', 'cabeca', 'pata', 'barriga', 'lingua'] },
 }
 
 export default card

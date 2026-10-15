@@ -199,6 +199,9 @@ bpy.ops.import_scene.gltf(filepath=SRC)
 root = bpy.data.objects["blockout"]
 parts = [o for o in root.children]
 log(f"{len(parts)} peças; orgânicas: {sorted(ORGANIC) or 'nenhuma'}")
+unknown = ORGANIC - {p.name for p in parts}
+if unknown:
+    log(f"AVISO: peças declaradas que não existem na carta: {sorted(unknown)}")
 
 refined_all = []
 for part in parts:

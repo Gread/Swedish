@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
+import { useCardScene } from '../rig/useCardScene'
 import type { Card } from '../rig/types'
 import { CardCanvas } from '../components/CardCanvas'
 import { ReviewScene } from '../components/ReviewScene'
@@ -6,7 +7,7 @@ import { BuildView } from './BuildView'
 import { LEVEL_OPACITY, useProgress } from '../store/progress'
 
 function ReviewCard({ card, onNext }: { card: Card; onNext: () => void }) {
-  const scene = useMemo(() => card.createScene(), [card])
+  const { scene, ready } = useCardScene(card)
   const [revealed, setRevealed] = useState(false)
   const [rebuilding, setRebuilding] = useState(false)
   const [feedback, setFeedback] = useState<'certo' | 'errado' | null>(null)
@@ -39,7 +40,7 @@ function ReviewCard({ card, onNext }: { card: Card; onNext: () => void }) {
 
       <div className="canvas-wrap">
         <CardCanvas scene={scene}>
-          <ReviewScene scene={scene} opacity={feedback === 'errado' ? 1 : opacity} />
+          {ready && <ReviewScene scene={scene} opacity={feedback === 'errado' ? 1 : opacity} />}
         </CardCanvas>
         {feedback && (
           <div className={`feedback ${feedback}`}>

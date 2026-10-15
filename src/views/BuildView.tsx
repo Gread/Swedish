@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
+import { useCardScene } from '../rig/useCardScene'
 import type { Card } from '../rig/types'
 import { disposeScene, sceneDuration, stepTargets } from '../rig/pose'
 import { CardCanvas } from '../components/CardCanvas'
@@ -6,7 +7,7 @@ import { BuildPlayer } from '../components/BuildPlayer'
 import { useProgress } from '../store/progress'
 
 export function BuildView({ card, onDone }: { card: Card; onDone: () => void }) {
-  const scene = useMemo(() => card.createScene(), [card])
+  const { scene, ready } = useCardScene(card)
   const duration = useMemo(() => sceneDuration(scene), [scene])
   const targets = useMemo(() => stepTargets(scene), [scene])
   const sceneRef = useRef(scene)
@@ -36,12 +37,14 @@ export function BuildView({ card, onDone }: { card: Card; onDone: () => void }) 
 
       <div className="canvas-wrap">
         <CardCanvas scene={scene}>
-          <BuildPlayer
-            scene={scene}
-            target={target}
-            onCaption={setCaption}
-            onTime={(t) => setProgress(t)}
-          />
+          {ready && (
+            <BuildPlayer
+              scene={scene}
+              target={target}
+              onCaption={setCaption}
+              onTime={(t) => setProgress(t)}
+            />
+          )}
         </CardCanvas>
         {caption && <div className="caption">{caption}</div>}
         <div className="progress-bar">

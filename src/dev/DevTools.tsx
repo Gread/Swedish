@@ -266,6 +266,11 @@ async function exportCard(card: Card): Promise<string> {
   disposeScene(cs)
   const res = await fetch(`/__dev/save?path=${card.meta.id}.glb`, { method: 'POST', body: buffer })
   if (!res.ok) throw new Error(await res.text())
+  // manifesto por último: tools/headless.sh espera por ele, então quando ele
+  // existe o .glb já foi gravado por inteiro
+  const manifest = { id: card.meta.id, organic: card.refine?.organic ?? [], parts: cs.parts.map((p) => p.name) }
+  const mres = await fetch(`/__dev/save?path=${card.meta.id}.json`, { method: 'POST', body: JSON.stringify(manifest) })
+  if (!mres.ok) throw new Error(await mres.text())
   return `${card.meta.id}: ${(buffer.byteLength / 1024).toFixed(0)} KB, ${blockout.children.length} peças`
 }
 

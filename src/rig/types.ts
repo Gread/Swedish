@@ -54,4 +54,13 @@ export interface CardMeta {
 export interface Card {
   meta: CardMeta
   createScene: () => CardScene
+  /**
+   * Refinamento no Blender (tools/refine.sh). `organic` lista as peças
+   * (pelo `name` em parts) feitas de várias primitivas que formam UMA
+   * criatura/forma orgânica — o Blender funde numa pele contínua, esculpe
+   * relevo e faz bake de oclusão. Não inclua personagens de person() (já usam
+   * peças esculpidas), peças com letras/números, adereços rígidos nem nada
+   * transparente.
+   */
+  refine?: { organic: string[] }
 }
