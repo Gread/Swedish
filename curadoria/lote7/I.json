@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "jag-vill-ha-en-kopp-te",
+      "sv": "Jag vill ha en kopp te.",
+      "pt": "Eu quero uma xícara de chá.",
+      "pronuncia": "iá vil rrá en KÓP TÊÊ ('jag' = iá, o G não soa; 'vill' com I curto e L de verdade — língua no céu da boca, nunca 'viu' —, emendado no 'ha'; 'ha' com h soprado e A longo, mas sem pancada e sem R no fim; 'en' curtinho, N de língua, sem o 'ẽ' nasal; 'kopp' com Ó ABERTO e CURTO de 'só' e o P segurado um instante (é dobrado), seco, sem 'pi' no fim; 'te' = TÊÊ, Ê FECHADO e LONGO, T seco de 'tatu' — nunca 'tchê'; a força cai no KÓP e, maior, no TÊ)",
+      "contexto": "No café, na cafeteria do trabalho, no vagão-bistrô do trem ou na casa de alguém, quando perguntam 'Kaffe eller te?'. No balcão costuma vir a pergunta do sabor — 'Vilket te?' — ou te entregam a caneca com água quente pra você escolher o saquinho numa caixinha de madeira.",
+      "porque": "Nem todo mundo aguenta o café sueco o dia inteiro: com essa frase você pede o seu chá sem apontar. E o molde 'Jag vill ha en/ett ___' serve pra pedir qualquer coisa: en kanelbulle, ett glas vatten, en kopp kaffe."
+    },
+    {
+      "id": "kan-jag-fa-mer",
+      "sv": "Kan jag få mer?",
+      "pt": "Pode me dar mais?",
+      "pronuncia": "ka-niá fô MÊÊR? ('kan jag' = ka-niá, o G não soa; 'få' = fô, Ô FECHADO e longo de 'avô', nunca 'fó', e sem R; 'mer' com a força toda, Ê FECHADO e LONGO, e o R do fim brando, de um toque só, mas audível — é nele que a pergunta sobe)",
+      "contexto": "À mesa na casa de alguém, quando o prato acaba e a comida está boa; no almoço do trabalho ou da escola, com a travessa no meio; no café, pedindo a segunda xícara (påtår, muitas vezes de graça). Muito sueco diz também 'Kan jag få lite mer?' (um pouquinho mais) ou 'mera'.",
+      "porque": "Elogio sem precisar de palavras: pedir mais é o melhor jeito de dizer que a comida está boa. E 'mer' cola em tudo: mer kaffe, mer tid (mais tempo), lite mer (um pouco mais)."
+    },
+    {
+      "id": "jag-ar-torstig",
+      "sv": "Jag är törstig.",
+      "pt": "Estou com sede.",
+      "pronuncia": "iá é TÖSH-ti ('jag' = iá; 'är' = é, aberto e curto; 'törstig' com toda a força no TÖ — Ö CURTO e meio aberto: lábios redondos de Ó com a língua lá na frente, de É —; o R e o S se fundem num X de 'xarope', como em 'förstår' e 'personnummer', e o T vem colado e seco, nunca 'tchi'; o -ig final quase some na fala: um 'ti' rápido, no máximo com um G leve)",
+      "contexto": "Depois do treino, numa trilha de verão, na casa de alguém ou — principalmente — de criança no banco de trás do carro. A resposta típica é 'Vill du ha vatten?', e na Suécia a água da torneira (kranvatten) é ótima: pode pedir sem medo.",
+      "porque": "Fecha o trio com 'Jag är hungrig' (com fome) e 'Jag är mätt' (satisfeito): o mesmo molde 'jag är + estado', só trocando a palavra. E é frase que os filhos vão usar todo dia."
+    },
+    {
+      "id": "vad-finns-det-till-efterratt",
+      "sv": "Vad finns det till efterrätt?",
+      "pt": "O que tem de sobremesa?",
+      "pronuncia": "va FÍNS dê til ÉF-te-rét? ('vad' perde o D: VA, sem R; 'finns' com I curto, o N batido na ponta da língua — sem o 'fĩ' nasal de 'fim' — e um S seco, obrigatório; 'det' = dê; 'till' com L de verdade, nunca 'tiu'; 'efterrätt' com a força no ÉF — É ABERTO e curto, F e T colados sem vogal no meio —, o -ter fraquinho, e o R de 'efter' e o de 'rätt' viram um R só, de um toque, emendado: ÉF-te-RÉT, com um acento menor no RÄTT, É aberto e curto e T seco)",
+      "contexto": "No restaurante, depois do prato principal, quando o garçom recolhe os pratos e pergunta 'Var det gott?'; na casa dos sogros; no almoço de domingo. As respostas clássicas: kladdkaka, äppelpaj med vaniljsås, glass ou, no verão, jordgubbar med grädde.",
+      "porque": "Na Suécia a sobremesa muitas vezes nem está no cardápio — perguntar é o jeito de descobrir. E 'Vad finns det...?' (o que tem...?) serve pra tudo: Vad finns det att dricka? Vad finns det att göra här?"
+    },
+    {
+      "id": "kan-jag-fa-en-servett",
+      "sv": "Kan jag få en servett?",
+      "pt": "Pode me dar um guardanapo?",
+      "pronuncia": "ka-niá fô en ser-VÉT? ('kan jag' = ka-niá, o G mudo; 'få' = fô, Ô FECHADO e sem R; 'en' curtinho, N de língua, sem o 'ẽ' nasal; 'servett' com a força no fim, no VÉT: É ABERTO e curto e TT seco atrás dos dentes, sem 'tchi'; o 'ser' vem fraquinho, com R brando de um toque só, que emenda direto no V)",
+      "contexto": "No café, no self-service, no food truck, na festa de criança — em muito lugar sueco o guardanapo fica num pote no balcão, e quando acaba você pede. E na hora do desastre: derrubou café, o filho se lambuzou de sorvete.",
+      "porque": "Pedido curtinho que você vai usar sempre. E 'Kan jag få en ___?' é o molde que já rendeu påse, menyn e lite vatten: troque o fim e peça qualquer coisa — en sked (uma colher), en gaffel (um garfo), ett sugrör (um canudo)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-vill-ha-en-kopp-te",
+      "elenco": "pulga vilã de cartola e capa + copo de chá gigante + etiqueta do saquinho escrita TÊ",
+      "ponte_sonora": "IÁ, VIL! RRÁ! EN... CÓP(o)... TÊ! (6 sílabas: iá-vil-rrá-en-KÓP-TÊÊ; força no CÓP e, maior, no TÊ; IÁ é o 'jag' de sempre, I de IOGA, nunca o J chiado de 'já'; VIL = o 'vill' da bruxa vil e da avestruz vilã ('Vill du ha något att dricka?', 'Vill du ha kvittot?', 'Jag vill lämna tillbaka den här'): I curto e L DE VERDADE, língua no céu da boca — nunca 'viu' —, e nunca VÍLIA, que é 'vilja'; RRÁ = a gargalhada de vilã, UMA só, o MESMO RRÁ soprado de 'Ha det bra' e 'Vill du ha...?': h como RR carioca leve, A longo e SEM R no fim — com R vira 'har' (tenho); EN = o 'en' (um) de sempre, a patinha erguida — o MESMO dedo erguido de 'Har du tid en stund?' e 'Får jag fråga en sak?': E curto, N de língua, sem o 'ẽ' nasal; CÓP(o) = o COPO sem o -O, que o português já fala com Ó ABERTO de 'só' e a força no lugar certo: é só NÃO dizer o -O — os lábios fecham no P e param, segurando um instante (é o 'pp' dobrado), nunca 'CÓ-pi'; TÊ = o nome da letra T, do jeito que o alfabeto português diz — e é assim, escrito TÊ, de chapeuzinho, que vem na etiqueta: não é o T mudo e seco da trilha em T de 'Hur långt är det?' nem da mesa em T de 'mötet', que é só consoante; aqui é a sílaba inteira, Ê FECHADO e LONGO, TÊÊ, com T seco de 'tatu' — nunca 'tchê'; de quebra, em inglês 'tea' soa igual à letra T)",
+      "historia": "A pulga vilã, de cartola e capa preta, fugiu do circo de pulgas e invadiu o café da estação. Sobe no balcão, bate no peito — IÁ! —, se anuncia VIL e solta a gargalhada de vilã: RRÁ! Depois ergue UMA patinha só, EN, e aponta o COPO de vidro fumegante — gigante pra ela — com um saquinho pendurado na borda e a etiqueta marcada TÊ. E mergulha de capa e tudo: até o vilão, no frio sueco, só quer uma xícara de chá.",
+      "cena": {
+        "descricao": "No balcão de madeira de um café, uma pulga vilã enorme de cartola e capa preta, em pé nas patas traseiras e gargalhando, ergue uma única patinha ao lado de um copo de vidro fumegante cheio de chá, com o saquinho pendurado na borda e a etiqueta amarela escrita TÊ.",
+        "partes": [
+          "balcão de madeira clara comprido",
+          "parede de azulejos brancos ao fundo",
+          "pires branco grande no balcão",
+          "copo de vidro alto e transparente sobre o pires, cheio de chá âmbar",
+          "três fiozinhos de vapor branco subindo do copo",
+          "saquinho de chá bege pendurado por um barbante na borda do copo",
+          "etiqueta quadrada amarela na ponta do barbante com TÊ escrito em preto, de chapeuzinho bem grande",
+          "corpo da pulga marrom-avermelhado, ovalado e brilhante, em pé nas patas traseiras compridas e dobradas",
+          "capa preta de forro vermelho caindo das costas",
+          "cartola preta pequena na cabeça",
+          "uma única patinha dianteira erguida bem alto",
+          "boca escancarada na gargalhada, com bigodinho preto enrolado nas pontas"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-fa-mer",
+      "elenco": "Hércules faminto no jantar sueco + clava de cana + panela de ferro espremida",
+      "ponte_sonora": "CA-NIÁ... FÔ... (espre)MÊR? (4 sílabas: ca-niá-fô-MÊÊR; a força vai TODA pro MÊR, onde a pergunta sobe; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag få menyn?' e 'Kan jag få lite vatten?', emendado — I de IOGA, nunca o J chiado de 'canja'; FÔ = o sopro de BOCHECHAS ESTUFADAS de 'Kan jag få menyn?' e 'Kan vi få notan, tack?': Ô FECHADO de 'avô', nunca 'fó', e sem R — com R vira 'får', e depois de 'kan jag' o verbo vem pelado; MÊR = o ESPREMER sem o 'espre': só o pedaço forte, que o português já fala certo — Ê FECHADO e com a força —, aqui ESTICADO, MÊÊR; o R do fim é justamente o que quase todo brasileiro engole ('espremê'): aqui ele FICA, BRANDO, de um toque só, do jeito que sai quando se emenda 'espremer a panela' — espreme-ra panela —, nunca o RR soprado; e não é o MÊ seco do MEDO de 'Vad jobbar du med?' e 'Jag håller med', que para no Ê sem R; nem o -mer fraquinho e sem força de 'kommer' (CÓ-mer): aqui o MÊR é a palavra inteira e leva a pancada)",
+      "historia": "Hércules acabou de devorar o jantar inteiro da sogra sueca — a panela de almôndegas, o purê, a geleia de lingon — e continua com fome de semideus. Ergue a clava, que na Suécia é um gomo gigante de CANA, e grita: IÁ! Estufa as bochechas e sopra dentro da panela vazia — FÔÔ — só pra conferir: nada, nem vapor. Então começa a ESPREMER: aperta a panela de ferro com as duas mãos até ela amassar feito latinha, e lá de dentro cai uma única almôndega. Ele empurra o prato pra sogra com olho de cachorro pidão: pode me dar mais?",
+      "cena": {
+        "descricao": "Numa mesa de jantar sueca, um Hércules musculoso de túnica grega, espremido num banquinho pequeno demais e de bochechas estufadas, amassa com as duas mãos uma panela de ferro preta enquanto uma única almôndega cai dela num prato branco vazio, com a clava de cana-de-açúcar encostada ao lado.",
+        "partes": [
+          "chão de tábuas de pinho claras",
+          "mesa de madeira com toalha xadrez azul e branca",
+          "prato branco vazio e raspado na mesa, na frente dele",
+          "uma almôndega marrom no ar, caindo da panela pro prato",
+          "banquinho de madeira pequeno demais debaixo dele",
+          "corpo do Hércules enorme e musculoso, pele bronzeada",
+          "túnica grega branca com faixa dourada na cintura",
+          "cabeça de barba e cabelo castanhos encaracolados com coroa de louros verde",
+          "bochechas redondas estufadas de ar, soprando",
+          "duas mãos enormes espremendo uma panela de ferro preta amassada no meio",
+          "clava feita de um gomo grosso de cana-de-açúcar verde-amarelada, encostada na mesa"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-torstig",
+      "elenco": "sucuri no rio seco + tigela de barro vazia + gota única",
+      "ponte_sonora": "IÁ! É... TÓRC(e)-TI(gela)! (4 sílabas: iá-é-TÖSH-ti; a força toda no TÓR; IÁ é o 'jag' de sempre, o MESMO de 'Jag är hungrig', 'Jag är trött' e 'Jag är mätt' — I de IOGA, nunca o J chiado de 'já'; É = 'är', aberto e curto; TÓRC(e) = o TORCE, a coisa que a sucuri faz melhor, cortado antes do -E: o português já diz 'TÓR-ce' com Ó ABERTO e a força no lugar certo — mantenha os lábios redondos do Ó e jogue a língua pra frente, pro É: é o ö curto, o mesmo do TRÖTT da treta de beicinho de 'Jag är trött', que lá se chega pelo outro lado; MAS não confunda as duas: em 'trött' (cansado) o R vem ANTES da vogal, TRE-ta; aqui vem DEPOIS, TÓR-ce; o R é o R CAIPIRA, de língua enrolada pra trás — e o S sai SEM desenrolar a língua: R e S se fundem num X chiado de 'xarope', que é exatamente o 'rs' sueco, o mesmo do FEIXE-THOR de 'Jag förstår'; nunca o RR soprado carioca, que dá 'tóh-se'; e sem o -E: nada de vogal entre o chiado e o T; TI(gela) = só o começo da TIGELA, colado e fraquinho, com T SECO de 'tatu' — nunca o 'tchi' com que a gente fala 'tigela' —; o -GELA não entra, e o G de 'törstig' é tão fraco que pode sumir: TÖSH-ti)",
+      "historia": "O rio secou e a sucuri, cobra-d'água que nunca passou um dia sem nadar, está esturricada no meio da lama rachada. Ela solta um sibilo rouco — IÁ! É... — e faz o que sabe fazer: se TORCE inteira, feito pano de chão, em espiral, por cima de uma TIGELA de barro vazia, pra tirar do próprio corpo qualquer resto de água. TÓRC... TI! Pinga uma gota. Uma só. Ela fica de língua pra fora, olhando a tigela quase seca: está morrendo de sede.",
+      "cena": {
+        "descricao": "No leito de um rio seco de lama rachada, debaixo de um sol enorme, uma sucuri verde-oliva de manchas pretas se torce em espiral apertada, feito pano de chão, em cima de uma tigela de barro vazia, de língua bifurcada caída pra fora, enquanto uma única gota azul pinga da ponta do rabo.",
+        "partes": [
+          "chão de lama marrom-clara rachada em placas",
+          "duas pedras cinzentas e um tronco seco ao fundo",
+          "sol amarelo grande no céu",
+          "tigela de barro alaranjada vazia, no centro",
+          "corpo grosso da sucuri verde-oliva com manchas pretas ovais, torcido em espiral apertada acima da tigela",
+          "cabeça larga da sucuri erguida de lado, olhos amarelos meio fechados",
+          "língua bifurcada vermelha caída pra fora da boca",
+          "ponta do rabo apontando pra baixo, sobre a tigela",
+          "uma única gota d'água azul pingando da ponta do rabo"
+        ]
+      }
+    },
+    {
+      "id": "vad-finns-det-till-efterratt",
+      "elenco": "rouxinol no fim do jantar de gala + cortina com dois FIM + letreiro ÉFTER com til de néon + mesa reta de cúpulas",
+      "ponte_sonora": "VÁ! FINS... DÊ TIL... ÉFTER-RÉT(a)? (7 sílabas: va-FÍNS-dê-til-ÉF-te-RÉT; força no FINS, a pancada principal no ÉF e um acento menor no RÉT; VÁ é o MESMO 'vad' de 'Vad synd!', 'Vad ska vi göra?' e 'Vad är klockan?' — um grito SEM R (com R vira 'var', onde) e sem D; FINS = o plural de FIM — as DUAS faixas FIM da cortina —, mas sem o nariz: o português diz 'fĩs', fanhoso, e o sueco fecha o N com a ponta da língua atrás dos dentes, FIN-S, I curto; o S é obrigatório: sem ele sobra 'fin', que em sueco é 'bonito'; DÊ = o 'det' de sempre, Ê fechado e sem T; TIL = o til (~) de 'Lycka till', 'Hur kommer jag till Storgatan?' e 'Vad är lösenordet till wifit?': I curto e L DE VERDADE, nunca 'tiu', e sem força; ÉFTER = o AFTER da balada, a festa de DEPOIS — que é exatamente o que 'efter' quer dizer —, só que o néon foi encomendado de um letreirista sueco e veio escrito ÉFTER: É ABERTO de 'pé', nunca o A de 'after': ÉF-ter, a força toda no ÉF, F e T colados sem vogal no meio (nunca 'éfi-ter'), e o -TER fraquinho; RÉT(a) = a RETA sem o -A, emendada no ÉFTER num fôlego só: o R do ÉFTER e o da RETA viram um R SÓ, de um toque, de 'caro' — nunca o RR soprado de 'rua', que é como a RETA começa sozinha —, É ABERTO e curto, e o T fecha seco, sem 'tchi': ÉF-te-RÉT; ao pé da letra, 'efterrätt' é o 'prato de depois')",
+      "historia": "No jantar de gala em Estocolmo, o rouxinol cantou a ária final e a cortina de veludo desce com um FIM bordado em cada metade — dois FINS. Os convidados já vão pegando os casacos. Mas o rouxinol, ave da madrugada, não aceita acabar assim: estufa o peito e grita VÁ! FINS?! DÊ... e voa até o fundo do salão, onde um TIL gigante de néon pisca em cima da porta do AFTER — que o letreirista sueco escreveu ÉFTER. De lá sai uma mesa comprida e RETA, até perder de vista, coberta de cúpulas prateadas fechadas. Ele pousa na ponta, abre a asa pra fileira de cúpulas e pergunta: e de sobremesa, o que tem?",
+      "cena": {
+        "descricao": "Num salão escuro, um rouxinol marrom de peito estufado e bico escancarado pousa na ponta de uma mesa estreita, comprida e perfeitamente reta, coberta de cúpulas prateadas fechadas, que sai de uma porta com o letreiro de néon ÉFTER e um til gigante aceso por cima, ao lado de uma cortina vermelha com FIM bordado em cada metade.",
+        "partes": [
+          "piso escuro de tábuas enceradas",
+          "parede azul-noite ao fundo com uma porta preta no centro",
+          "cortina de veludo vermelho fechada à esquerda, com a palavra FIM em dourado em cada metade",
+          "letreiro de néon rosa ÉFTER em cima da porta",
+          "til (~) gigante de néon azul aceso por cima do letreiro",
+          "mesa estreita e comprida, perfeitamente reta, de toalha branca, saindo da porta em direção à frente",
+          "fileira de cinco cúpulas prateadas fechadas em cima da mesa",
+          "corpo do rouxinol marrom-avermelhado, peito creme estufado, pousado na ponta da mesa",
+          "cabeça erguida com olho preto brilhante e bico fino escancarado",
+          "asa direita aberta apontando pra fileira de cúpulas",
+          "três anéis cinza do grito saindo do bico"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-fa-en-servett",
+      "elenco": "apicultor lambuzado de mel no quiosque de café + cana-cajado + fumigador + carimbo VETO",
+      "ponte_sonora": "CA-NIÁ, FÔ... EN... CER(a)-VÉT(o)! (6 sílabas: ca-niá-fô-en-ser-VÉT; a força toda no VÉT; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag få menyn?' e 'Kan jag få mer?', emendado — I de IOGA, nunca o J chiado de 'canja'; FÔ = o MESMO sopro de bochechas estufadas de 'Kan jag få menyn?', aqui o puf do fumigador: Ô FECHADO de 'avô', nunca 'fó', e sem R; EN = o 'en' (um) de sempre, o dedo erguido de 'Har du tid en stund?' e 'Får jag fråga en sak?': E curto, N de língua, sem o 'ẽ' nasal; CER(a) = a CERA de abelha sem o -A, fraquinha e rápida, com o R de um toque só que já gruda no V: ser-VÉT, nunca 'se-ra-vé'; VÉT(o) = o carimbo VETO sem o -O: o português já diz 'VÉ-to' com É ABERTO de 'pé' e a força no lugar certo — é só NÃO dizer o -O: o T fecha seco atrás dos dentes, sem 'tchi'; e não é o VÊT fechado e longo do sorVÊTe de 'Jag vet inte' ('vet', sei): aqui o É é aberto e curto)",
+      "historia": "O apicultor saiu direto da colmeia pro quiosque de café da feira — de macacão branco, chapéu de véu e luvas — e está lambuzado da cabeça aos pés: mel escorrendo da luva, pedaços de CERA grudados no peito. Ele estica a mão pro pote de guardanapos, mas a dona do quiosque é mais rápida e bate o carimbo bem na luva melada: VETO! — lambuzado assim, não encosta em nada. Ele finca no chão a cana que usa de cajado — IÁ! —, solta um puf do fumigador — FÔ! —, ergue UM dedo grudento, EN, e implora com o resto de dignidade: CERA... VETO... só um guardanapo, por favor!",
+      "cena": {
+        "descricao": "No balcão de um quiosque de café ao ar livre, um apicultor de macacão branco e chapéu de véu, com favos de cera grudados no peito, ergue uma luva escorrendo mel com um único dedo esticado e a palavra VETO carimbada em vermelho, enquanto o fumigador na outra mão solta um puf de fumaça e o pote de guardanapos fica na ponta mais distante do balcão.",
+        "partes": [
+          "chão de grama verde",
+          "balcão de madeira escura do quiosque, com toldo listrado amarelo e branco por cima",
+          "pote de guardanapos prateado cheio de guardanapos brancos, na ponta mais distante do balcão",
+          "carimbo de madeira grande de base vermelha em cima do balcão",
+          "corpo do apicultor de macacão branco folgado",
+          "chapéu de abas largas com véu de tela preta caindo até os ombros",
+          "luva amarela erguida com um único dedo esticado, escorrendo mel dourado e com VETO carimbado em vermelho",
+          "dois pedaços de favo de cera amarela hexagonal grudados no peito do macacão",
+          "fumigador de lata prateada com fole marrom na outra mão, soltando uma nuvem redonda de fumaça cinza",
+          "cana-de-açúcar verde-amarelada comprida, fincada no chão ao lado dele feito cajado",
+          "gotas de mel âmbar pingando da luva até o chão"
+        ]
+      }
+    }
+  ]
+}

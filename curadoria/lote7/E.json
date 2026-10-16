@@ -1,0 +1,154 @@
+{
+  "phrases": [
+    {
+      "id": "jag-ar-ledig-imorgon",
+      "sv": "Jag är ledig imorgon.",
+      "pt": "Estou de folga amanhã.",
+      "pronuncia": "iá é LÊÊ-di i-MÓR-ron ('jag' = iá, o G não soa; 'är' = É aberto e curto; 'ledig' com a força no LÊ — Ê FECHADO de 'você', LONGO — e o g do fim mudo na fala: sobra LÊÊ-di, com D de 'dado', nunca 'dji'; esse -di já gruda no i- de 'imorgon': lêê-di-i-MÓ-ron; 'imorgon' com a força no MÓ, Ó ABERTO de 'pó', R de um toque só, o g mudo e o -ron também de Ó aberto, com N de língua, sem nasalar)",
+      "contexto": "No trabalho, quando o chefe pergunta se você pode cobrir um turno ou ir numa reunião amanhã; com amigos, pra marcar um fika ou uma ida ao lago ('Jag är ledig imorgon, ska vi ses?'). 'Ledig' é o 'de folga/livre' de escala e de calendário.",
+      "porque": "'Ledig' é A palavra da folga na Suécia — 'ledig dag', 'föräldraledig' (licença-parental), 'tjänstledig' (licença do serviço). Trocando o fim, o molde serve pra qualquer dia: 'Jag är ledig på fredag', 'Jag är ledig hela veckan'."
+    },
+    {
+      "id": "vem-kan-hjalpa-mig",
+      "sv": "Vem kan hjälpa mig?",
+      "pt": "Quem pode me ajudar?",
+      "pronuncia": "VÉM kan IÉL-pa mêi? ('vem' com É aberto e curto e um M de verdade, lábios fechados — nunca o 'vẽi' nasal de 'ele vem'; 'kan' rapidinho e sem força, colado no 'vem': VÉM-kan; 'hjälpa' com o hj = I de IOGA, nunca RR, É aberto, L de verdade com a língua no céu da boca, força no IÉL e o -pa fraquinho; 'mig' = mêi, uma sílaba só)",
+      "contexto": "Quando você chega num balcão, numa recepção, num corredor de hospital ou numa loja grande (Clas Ohlson, Ikea, Bauhaus) e não sabe a quem se dirigir. No trabalho, no primeiro dia, ou no telefone com a central: 'Vem kan hjälpa mig med det här?'",
+      "porque": "É a pergunta de quem está perdido e ainda não sabe quem é a pessoa certa — mais aberta que 'Kan du hjälpa mig?', que já escolhe alguém. Com 'med ...' no fim, estica pra qualquer assunto: med skatten, med datorn, med bokningen."
+    },
+    {
+      "id": "jag-har-glomt-losenordet",
+      "sv": "Jag har glömt lösenordet.",
+      "pt": "Esqueci a senha.",
+      "pronuncia": "iá rár GLÖMT LÖÖ-se-nuur-det ('jag' = iá; 'har' com o h soprado e o R brando, que emenda no G — na fala rápida muito sueco engole esse R, mas mantenha: sem ele sobra 'ha'; 'glömt' numa sílaba só, com G e L colados, sem 'gue-' na frente: Ö CURTO — lábios em bico, língua de Ê —, M de lábios fechados e um T seco no fim, que é obrigatório: sem ele vira 'glöm', o imperativo 'esqueça!'; 'lösenordet' com a força no LÖÖ, Ö LONGO, uma segunda força no 'ord' = UUR, U fechado e longo, o rd virando um D de língua dobrada pra trás, e o -det fraquinho, que é o artigo: 'A senha')",
+      "contexto": "No trabalho, ligando ou escrevendo pro suporte de TI (IT-support/helpdesk) numa segunda-feira de manhã; no banco, na escola dos filhos, no wifi da biblioteca. O botão 'Glömt lösenordet?' aparece em praticamente toda tela de login sueca.",
+      "porque": "Senha esquecida é rotina, e com essa frase o helpdesk já sabe o que fazer. E 'Jag har glömt ...' serve pra qualquer esquecimento: nyckeln (a chave), plånboken (a carteira), hans namn (o nome dele)."
+    },
+    {
+      "id": "motet-ar-installt",
+      "sv": "Mötet är inställt.",
+      "pt": "A reunião foi cancelada.",
+      "pronuncia": "MÖÖ-tet é ÍN-stelt ('mötet' com a força no MÖ — Ö LONGO, lábios de Ô e língua de Ê —, o -te fraquinho de T duro, nunca 'tchi', e um T seco no fim, que é o artigo: 'A reunião'; 'är' = É aberto e curto, que na fala quase some; 'inställt' com a força no ÍN — I curto e N de língua, sem nasalar —, e o -stelt fraco, mas com É ABERTO, L de verdade (nunca 'téu') e T seco: ÍN-stelt, nunca 'ins-TÉLT')",
+      "contexto": "No trabalho: o aviso no Teams/Outlook, o colega na porta da sala vazia, o chefe no corredor. Também pra qualquer coisa marcada: 'Konserten är inställd', 'Lektionen är inställd', 'Tåget är inställt'.",
+      "porque": "Evita você ficar esperando sozinho numa sala vazia — e 'inställt/inställd' é a palavra do cancelamento na Suécia inteira: trem, voo, aula, consulta, show. É a mesma da carta 'Är tåget försenat eller inställt?'."
+    },
+    {
+      "id": "jag-slutar-klockan-fem",
+      "sv": "Jag slutar klockan fem.",
+      "pt": "Eu saio (do trabalho) às cinco.",
+      "pronuncia": "iá SLÜÜ-tar KLÓ-kan FÉM ('jag' = iá; 'slutar' com o S colado no L, sem 'is' na frente, e a força no SLU — o U sueco: lábios em bico, língua de I, LONGO —, o -tar fraquinho mas com R brando no fim: sem ele sobra 'sluta', o infinitivo; 'klockan' com a força no KLÓ, Ó ABERTO, e o -kan fraco; 'fem' com É aberto e curto e M de lábios fechados, sem nasalar)",
+      "contexto": "No trabalho, avisando o colega ou o chefe a que horas você vai embora; marcando algo depois do expediente ('Jag slutar klockan fem, ska vi ta en öl efter?'); explicando sua rotina pro pessoal da creche (förskola).",
+      "porque": "'Sluta' é o verbo de terminar o expediente (e também de parar com algo: 'Sluta!' = 'Para!'). Com 'klockan + número' você diz qualquer horário — e a Suécia leva a sério a hora de ir embora."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-ar-ledig-imorgon",
+      "elenco": "comissária de bordo de folga + escala de voo com o quadradinho vazio + máscara de dormir",
+      "ponte_sonora": "IÁ! É... LÊÊ: DI(a)... I MÓ RON(co)! (7 sílabas: iá-é-LÊÊ-di-i-MÓR-ron; força no LÊÊ e, maior, no MÓ; IÁ É = o 'jag är' de sempre — o MESMO de 'Jag är trött', 'Jag är mätt' e 'Jag är på semester': IÁ com I de IOGA, nunca o J chiado de 'já', e É aberto e curto; LÊÊ = o verbo LER, 'ela LÊ', exatamente como o português já diz — o MESMO LÊÊ da fada de 'Är det ledigt här?', que lê de BOQUINHA FECHADA: Ê FECHADO de 'você' e LONGO, é nele que cai a força; nunca o LÉÉR escancarado do palhaço de 'Jag lär mig svenska', nem o LÉ aberto e curto do picolé da bibliotecária de 'Jag är ledsen' (aquele é picoLÉ SEM, triste; este é LÊÊ-DI, o dia que se lê, de folga), nem o LÖÖ de bico do pombo de 'lösenordet'; DI(a) = o DIA que ela lê na escala, cortado no I: D de 'dado', NUNCA o 'dji' carioca/paulista — é o mesmo D duro do DIT' da fada — e sem força; o g de 'ledig' não soa, então LÊÊ-DI já é a palavra inteira (com o T da fada, 'ledigt', é outra forma); I = o 'e' brasileiro, que já sai I, colado no DI: lêê-di-i...; MÓ = o 'mó' da gíria, 'MÓ ronco' = um baita ronco: Ó ABERTO de 'pó' — o MESMO MÓ da pedra do moinho do camelo de 'God morgon!' e do ouriço IMÓRON de 'Ska vi säga imorgon klockan tre?' —, é a força principal; RON(co) = só o começo do RONCO, com R de UM toque só (de 'caro', jamais o RR de 'rua') e, aqui vai a única correção, Ó ABERTO de novo e N de ponta de língua, sem o 'rõ' nasal de 'ronco': MÓ-RON, as duas vogais iguais; I MÓ RON = 'imorgon', amanhã, com o g mudo)",
+      "historia": "No corredor do avião, o comandante pergunta se a comissária de bordo pode pegar o voo de amanhã. Ela solta um IÁ! É...? desconfiado, arranca a escala da prancheta e LÊ, de boquinha fechada e bem devagar — LÊÊ... DI(a)... — até o dedo parar no quadradinho de amanhã: VAZIO, sem voo nenhum. Pronto: ela baixa a máscara de dormir ali mesmo, em pé no corredor, e solta — I MÓ RONCO! — um ronco tão grande que as máscaras de oxigênio despencam do teto. Amanhã, nem pensar: ela está de folga.",
+      "cena": {
+        "descricao": "No corredor de um avião, uma comissária de bordo de uniforme vermelho dorme em pé com a máscara de dormir azul baixada sobre os olhos e a boca aberta num ronco, segurando a prancheta da escala com um quadradinho verde vazio, enquanto três máscaras de oxigênio amarelas balançam penduradas do teto.",
+        "partes": [
+          "piso do corredor do avião, carpete azul-marinho com uma faixa de luzinhas brancas no meio",
+          "duas poltronas azul-claras de cada lado do corredor, com encosto alto",
+          "teto curvo creme com os bagageiros fechados",
+          "três máscaras de oxigênio amarelas caídas do teto, balançando nos tubinhos transparentes",
+          "corpo da comissária de pé no corredor, tailleur vermelho-cereja com lenço branco amarrado no pescoço",
+          "cabeça com coque castanho e chapeuzinho redondo vermelho",
+          "máscara de dormir azul-clara baixada sobre os olhos",
+          "boca aberta num O de ronco, com três anéis brancos de ronco saindo",
+          "prancheta prateada na mão com a escala: grade de quadradinhos azuis e um quadradinho verde vazio destacado",
+          "placa curta 'DIA' no topo da prancheta"
+        ]
+      }
+    },
+    {
+      "id": "vem-kan-hjalpa-mig",
+      "elenco": "canário preso em cana + gaiola de cana-de-açúcar coberta por uma meia gigante furada",
+      "ponte_sonora": "VÉMMM! CAN(a)... IÉL-PA... M'ÊI! (5 sílabas: VÉM-kan-IÉL-pa-mêi; força no VÉM e, maior, no IÉL; VÉMMM = o 'VEM!' de chamar — o MESMO VÉM do ventríloquo de 'Hallå, vem pratar jag med?' e do chacal de 'Vem är ansvarig?' —, só que o canário não tem lábios: FECHA O BICO no fim e o M fica zumbindo lá dentro; É ABERTO de 'pé', curto, e um M de verdade — o 'vem!' brasileiro solto sai 'vẽi', nasal e sem M, e o sueco não reconhece 'quem'; CAN(a) = a CANA de 'Kan jag få en påse?' — a gaiola é de CANA, e ele está EM CANA, preso —, cortada no N: C + A + N, A aberto e N de língua, sem nasalar e sem força, colado no VÉM: VÉM-kan; IÉL-PA M'ÊI = o MESMO pedido de socorro do iodelador de 'Kan du hjälpa mig?' e do troll de 'Kan du hjälpa mig att bära?': o iodel da montanha, IÉL com I de IOGA — o h de 'hjälp' não soa, e com RR carioca vira outra coisa —, É aberto, L DE VERDADE com a língua no céu da boca (nunca 'iéu'), a força maior da frase; o -PA fraquinho, engolido; M'ÊI = a MEIA sem o -A — a ponta furada da meia comeu o fim —, uma sílaba só, nunca 'mêia')",
+      "historia": "Alguém cobriu a gaiola do canário pra noite — com uma MEIA gigante de lã listrada, enfiada por cima como capuz. Lá dentro, preso EM CANA numa gaiola de varetas de cana-de-açúcar, o canário chama de bico fechado: VÉMMM!, um zumbido que ninguém escuta. Então ele enfia a cabeça pelo furo na ponta da meia e solta o iodel da montanha a plenos pulmões: IÉL-PA... M'ÊI!, e a meia furada balança inteira. Quem é que vai ajudar esse coitado?",
+      "cena": {
+        "descricao": "Numa varanda, uma gaiola redonda de varetas de cana-de-açúcar pendurada num gancho está toda coberta por uma meia gigante listrada de vermelho e branco; pelo furo na ponta da meia sai a cabeça de um canário amarelo cantando de bico escancarado, com uma asinha acenando por outro furo e notas musicais subindo.",
+        "partes": [
+          "chão de varanda de lajotas terracota",
+          "haste de ferro preta em forma de gancho, presa numa base redonda",
+          "gaiola redonda de varetas verde-amareladas de cana-de-açúcar, com os nós marcados, pendurada no gancho",
+          "três gomos de cana cortados caídos no chão",
+          "meia gigante de lã listrada vermelha e branca enfiada sobre a gaiola como um capuz",
+          "furo redondo na ponta da meia, com fiapos de lã",
+          "cabeça do canário amarelo-ouro saindo pelo furo da meia",
+          "bico laranja escancarado no canto, olhinhos pretos arregalados",
+          "asinha amarela saindo por um segundo furo lateral, acenando",
+          "três notas musicais azuis subindo em zigue-zague"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-glomt-losenordet",
+      "elenco": "anta do escritório + globo de neve com a senha dentro + tela de login trancada",
+      "ponte_sonora": "IÁ, RRÁR! GLÔ(bo)... MMM-T! LÊ SEM ORDE(m)-T! (7 sílabas: iá-rrar-GLÖMT-LÖÖ-se-nuur-det; força no GLÖMT e, maior, no LÖÖ, com uma segunda subida no UUR; IÁ, RRÁR = o 'jag har' de sempre, a risada soprada — o MESMO de 'Jag har ett möte' e 'Jag har tappat min plånbok': IÁ com I de IOGA, RRÁR com o h soprado na frente e o R final BRANDO, que já escorrega pro G — sem esse R sobra 'ha'; GLÔ(bo) = o GLOBO de neve cortado antes do -bo, com G e L colados (sem 'gue-'), mas o Ô vai com o truque do ö que o baralho todo usa — os lábios ficam no bico do Ô e a LÍNGUA VAI PRA FRENTE, pro Ê, como no TRÖTT, no MÖÖ-te e no LÖÖ —, e CURTO, bem mais curto que o LÖÖ logo depois; MMM = o 'hmmm' de quem tenta lembrar, de lábios colados: é o M de 'glömt'; T = o toque seco da tromba no vidro do globo — e esse T é OBRIGATÓRIO: sem ele sobra 'glöm', que é 'esqueça!'; GLÔ-MMM-T sai numa sílaba só: GLÖMT; LÊ SEM ORDE(m)-T = o MESMO 'lösenordet' do pombo-correio de 'Vad är lösenordet till wifit?': a senha que se LÊ com as letras SEM ORDEM; a anta também lê de BICO — a tromba dela é um beiço esticado —, então LÊ sai com a língua no Ê e os lábios em bico de Ô, LONGO: LÖÖ, a força da palavra; SEM fecha num N de verdade, sem nasal, que gruda no 'ord': LÖÖ-se-NUUR; ORDE(m) = com a tromba em bico o Ó fecha em U, ÚUR, U FECHADO e LONGO, e o R derrete num D de língua dobrada pra trás; o -DEM vira -DET: sem nasal, E curto e T leve — é o artigo, 'A senha')",
+      "historia": "Segunda de manhã, a anta senta na frente do computador, a tela pede a senha — e ela solta uma risada nervosa: IÁ, RRÁR! Na sexta ela tinha guardado a senha num lugar seguríssimo: dentro do GLOBO de neve da mesa. Ela pega o GLÔ..., aperta os olhos e fica só no MMM... — e, sem querer, sacode: T!, a tromba bate no vidro, a neve sobe e as letrinhas da senha rodopiam lá dentro. Ela encosta a tromba esticada e LÊ, de bico, uma senha SEM ORDEM nenhuma. Anta que é anta: esqueceu a senha.",
+      "cena": {
+        "descricao": "Numa mesa de escritório, uma anta cinza-escura sentada numa cadeira giratória encosta a tromba esticada num globo de neve onde letrinhas coloridas rodopiam no meio da neve, ao lado de um monitor com um cadeado amarelo na tela e três pontos de interrogação flutuando sobre a cabeça dela.",
+        "partes": [
+          "piso de carpete cinza-claro de escritório",
+          "mesa de escritório branca, larga",
+          "monitor preto de tela azul com um cadeado amarelo grande no centro",
+          "teclado branco na frente do monitor",
+          "globo de neve de vidro grande sobre base redonda de madeira escura",
+          "flocos de neve brancos e três letrinhas soltas coloridas (um S vermelho, um 9 verde e um # azul) rodopiando dentro do globo",
+          "cadeira giratória preta",
+          "corpo da anta cinza-escuro, robusto, sentado na cadeira",
+          "cabeça da anta com a tromba curta esticada encostando no vidro do globo",
+          "orelhas arredondadas com borda branca e olhinhos apertados de quem tenta lembrar",
+          "três pontos de interrogação dourados flutuando sobre a cabeça"
+        ]
+      }
+    },
+    {
+      "id": "motet-ar-installt",
+      "elenco": "besouro-hércules da agenda + meteoro apagado na mesa em T + alavanca vermelha do disjuntor",
+      "ponte_sonora": "METE(oro)-T... É... ÍNS-TELT! (5 sílabas: MÖÖ-tet-é-ÍN-stelt; força no MÖÖ e, igual de forte, no ÍN; MÖÖ-TE-T = o METE(oro) de sempre — a reunião da cientista maluca de 'Jag har ett möte' e do touro de 'Kan vi ta det på mötet?' —, com a força no MÊ dito de BICO: língua de Ê, lábios de Ô, LONGO — nunca o MÉT aberto e curto da META do galo de 'Jag är mätt'; o -TE fraquinho, de T duro, nunca 'tchi'; e um T SECO no fim, que é o artigo colado: möte = UMA reunião, mötet = A reunião — a pista é a mesma mesa em T do touro; É = o 'är' de sempre, aberto e curto, que na fala quase some; ÍNS-TELT = o MESMO 'inställt' da lhama de 'Är tåget försenat eller inställt?': a alavanca vermelha do disjuntor puxada até o fim — ÍN é o zumbido da luz morrendo, com a FORÇA, I curto e N de ponta de língua, sem nasalar; S-TELT é o estalo da alavanca batendo embaixo: o S colado no T, É ABERTO mas fraco, L de verdade (nunca 'téu') e T seco; ÍN-stelt, jamais 'ins-TÉLT')",
+      "historia": "Na sala da mesa em T, o METEORO de sempre já chegou pra reunião e está na cabeceira, rachado de fogo. Mas o besouro-hércules que cuida da agenda acabou de ver o e-mail. Ele solta um É... de desânimo, voa até a parede, engancha o chifrão na alavanca vermelha do disjuntor — a mesma que a lhama puxou no trem cancelado — e desce com tudo: ÍÍÍNS... TELT! A lâmpada apaga, o fogo do meteoro morre num chiado e ele vira uma pedra cinza e fria, soltando fumacinha. A reunião foi cancelada.",
+      "cena": {
+        "descricao": "Numa sala de reunião escura, um besouro-hércules verde-oliva pendurado pelo chifre comprido puxa até embaixo uma alavanca vermelha de disjuntor na parede, enquanto na cabeceira da mesa em T um meteoro cinza que acabou de se apagar, com as últimas brasinhas morrendo nas rachaduras, solta três fiapos de fumaça sob uma lâmpada apagada.",
+        "partes": [
+          "carpete cinza-azulado de sala de reunião",
+          "parede ao fundo cinza-escura, de sala com a luz apagada",
+          "mesa branca em formato de T (duas caixas)",
+          "duas cadeiras cinza ao longo da perna do T",
+          "meteoro cinza-chumbo cheio de crateras, com três brasinhas laranja quase apagadas nas rachaduras, sentado na cadeira da cabeceira",
+          "três fiapos de fumaça cinza-clara subindo do meteoro (esferas em fila)",
+          "lâmpada pendurada apagada, cinza-fosca, acima da mesa",
+          "caixa de disjuntor cinza presa na parede",
+          "alavanca vermelha grande puxada até embaixo",
+          "corpo do besouro-hércules verde-oliva brilhante, com as asas translúcidas abertas",
+          "chifre preto comprido e curvo enganchado na alavanca, seis patinhas pretas agarradas na caixa"
+        ]
+      }
+    },
+    {
+      "id": "jag-slutar-klockan-fem",
+      "elenco": "buldogue inglês do chá das cinco + Big Ben na janela + fêmur molhado no chá",
+      "ponte_sonora": "IÁ! SLU(rp)-TAR(de)! CLÓ-CAN... FÉM(ur)! (6 sílabas: iá-SLÜÜ-tar-KLÓ-kan-FÉM; força no SLÜÜ, no KLÓ e no FÉM; IÁ = o 'jag' de sempre, I de IOGA, nunca J chiado; SLU(rp) = o SLURP de gibi, a lambida barulhenta do buldogue no chá, cortado antes do -RP: S e L colados, sem 'is' na frente (o mesmo S grudado do SKA e do SVÉN-ska), e o U já vem com a boca certa — o SLURP se faz de LÁBIOS EM BICO; só leve a língua pra frente, pro I, e estique: SLÜÜ, o U sueco, o mesmo Ü do DÜ de 'kan du' e do CÜL de 'Vad kul att höra!'; é aqui a força; TAR(de) = a TARDE do chá da tarde, sem o -de, fraquinho e colado no SLU: SLÜÜ-tar — mas com o R final BRANDO e audível: sem ele sobra 'sluta', o infinitivo; CLÓ-CAN = o MESMO 'klockan' do caranguejo de 'Vad är klockan?' — o estalo seco CLÓ-CAN, aqui as badaladas do Big Ben: força no CLÓ, Ó BEM ABERTO, e o -CAN fraco, A aberto e N sem nasal; FÉM(ur) = o MESMO FÊMUR do pirata de 'Jag har två barn' e do lutador de sumô de 'Jag kommer om fem minuter', cortado no M: É ABERTO (não o Ê fechado de 'fêmur' — abra a boca, FÉM) e lábios fechados no fim, sem nasalar)",
+      "historia": "Escritório em Londres, cinco da tarde: o buldogue inglês de chapéu-coco joga a caneta longe no meio da frase — IÁ! —, pega a xícara e dá um SLURP de língua inteira no chá da TARDE. Lá fora, pela janela, o Big Ben responde CLÓ-CAN... CLÓ-CAN..., cinco badaladas. E, em vez de biscoito, ele molha no chá um FÊMUR de osso branco do tamanho do braço dele. Às cinco em ponto ele larga o trabalho e não tem quem segure.",
+      "cena": {
+        "descricao": "Numa escrivaninha de madeira escura diante de uma janela com o Big Ben marcando cinco horas, um buldogue inglês branco e caramelo de chapéu-coco lambe de língua de fora uma xícara de chá fumegante, mergulhando nela um fêmur branco de desenho, com a caneta caída e os papéis abandonados ao lado.",
+        "partes": [
+          "piso de tábuas de madeira escura",
+          "janela grande ao fundo com céu laranja de fim de tarde",
+          "torre do Big Ben bege lá fora, com o mostrador branco e os ponteiros marcando cinco horas",
+          "três anéis dourados de badalada saindo do mostrador do relógio",
+          "escrivaninha de madeira escura com uma pilha de papéis e uma caneta preta caída",
+          "xícara de porcelana branca com friso azul sobre o pires, com três fiapos de vapor",
+          "corpo do buldogue inglês branco com manchas caramelo, atarracado, sentado numa cadeira",
+          "cabeça larga e enrugada, bochechas caídas e a mandíbula de baixo pra frente com dois dentinhos",
+          "chapéu-coco preto na cabeça",
+          "língua rosa comprida pra fora, lambendo a xícara",
+          "fêmur branco de desenho mergulhado de ponta na xícara, segurado pela pata"
+        ]
+      }
+    }
+  ]
+}

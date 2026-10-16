@@ -1,0 +1,153 @@
+{
+  "phrases": [
+    {
+      "id": "ska-vi-ga-pa-bio",
+      "sv": "Ska vi gå på bio?",
+      "pt": "Vamos ao cinema?",
+      "pronuncia": "ska vi GÔ pô BÍ-o ('ska' colado, sem 'is' na frente e sem força; 'vi' = VI, I limpo; 'gå' = GÔ, Ô FECHADO de 'avô' e longo — é o å longo — e SEM R: depois de 'ska' o verbo fica no infinitivo, com R vira 'går'; 'på' = PÔ, também Ô fechado, mas curtinho e sem força; 'bio' com a força no BÍ, I longo, e o -o curto e fechado, quase U: BÍ-u)",
+      "contexto": "Convite pra ir ao cinema — no Filmstaden ou num cinema de bairro. 'Bio' é o apelido de 'biograf', e 'gå på bio' é a expressão fixa (nunca 'gå till bio'). Na Suécia os filmes estrangeiros passam legendados em sueco, não dublados — só os infantis ganham dublagem.",
+      "porque": "É o convite clássico de encontro, de programa com amigos ou com as crianças no fim de semana. E o molde 'gå på ___' serve pra todo passeio: gå på konsert, gå på fest, gå på teater."
+    },
+    {
+      "id": "jag-gillar-att-promenera",
+      "sv": "Jag gillar att promenera.",
+      "pt": "Eu gosto de caminhar.",
+      "pronuncia": "iá IÍL-lar a pru-me-NÊÊ-ra ('jag' = iá; 'gillar' com o G soando I — nunca G duro, nunca o J chiado de 'Gil' —, I curto, L dobrado de verdade, com a ponta da língua no céu da boca, e o R brando do presente no fim, que já emenda no 'att': iíl-la-ra; 'att' encolhe num A; 'promenera' com a força no NÊÊ — Ê fechado e longo —, o 'pro' curtinho, quase 'pru', o 'me' leve e o -ra com R de um toque só)",
+      "contexto": "Conversa sobre hobbies: no fika do trabalho, num date, ou quando perguntam 'Vad gör du på fritiden?'. Sueco ama 'ta en promenad' — no bosque, em volta do lago, no inverno escuro; tem até 'promenadmöte', a reunião feita andando.",
+      "porque": "'Jag gillar att ___' é o jeito mais natural de dizer do que você gosta — é só trocar o verbo: laga mat, läsa, simma. E caminhar é praticamente o esporte nacional sueco: dizer isso abre convite pra próxima promenad."
+    },
+    {
+      "id": "vill-du-spela",
+      "sv": "Vill du spela?",
+      "pt": "Quer jogar?",
+      "pronuncia": "vil dü SPÊÊ-la ('vill' com I curto e L de verdade, nunca 'viu'; 'du' = DÜ, com bico de pato; 'spela' com a força no SPÊ — S colado no P, sem 'is' na frente, Ê FECHADO e LONGO — e o -la curtinho e fraco, SEM R: com R vira 'spelar', o presente)",
+      "contexto": "Chamar alguém pra um jogo: jogo de tabuleiro (sällskapsspel), cartas, videogame, futebol, pingue-pongue no parque — ou pra tocar um instrumento junto. Com criança pequena brincando de faz-de-conta o verbo é outro: 'Vill du leka?'.",
+      "porque": "Abre conversa com colegas, vizinhos e com os amiguinhos dos seus filhos sem precisar de muito sueco. E 'spela' cobre jogo, esporte e música: spela fotboll, spela kort, spela gitarr."
+    },
+    {
+      "id": "vilken-film-ska-vi-se",
+      "sv": "Vilken film ska vi se?",
+      "pt": "Que filme a gente vai ver?",
+      "pronuncia": "VÍL-ken FÍLM ska vi SÊÊ ('vilken' com a força no VIL, I curto e L de verdade, e o -ken fraco, E curto e N sem nasalizar; 'film' numa sílaba só, I curto, L de verdade — nunca 'fiu-mi' — e o M fechando a boca; 'ska vi' colados e sem força; 'se' = SÊÊ, Ê fechado e longo, com a força da frase, e sem S no fim)",
+      "contexto": "No sofá, rolando a Netflix ou o SVT Play, ou na frente do cartaz do Filmstaden. É 'vilken' porque 'film' é palavra de 'en' (en film); com palavra de 'ett' vira 'vilket' (vilket spel?).",
+      "porque": "Pergunta de todo fim de semana em casal ou em família. E o molde 'Vilken ___ ska vi ___?' resolve qualquer escolha: Vilken buss ska vi ta? Vilken dag ska vi ses?"
+    },
+    {
+      "id": "det-var-en-bra-film",
+      "sv": "Det var en bra film.",
+      "pt": "Foi um filme bom.",
+      "pronuncia": "dê vár en BRÁ FÍLM ('det' = dê; 'var' = VÁR, A longo e R brando, que emenda no 'en': va-ren — na fala corrida muita gente diz só 'va'; 'en' com E curto e N batido na língua, sem nasal; 'bra' = BRÁ, R de um toque e A longo; 'film' numa sílaba só, I curto, L de verdade, M fechando)",
+      "contexto": "Saindo do cinema, quando sobem os créditos no sofá, ou comentando um filme que alguém recomendou: 'Jag såg den — det var en bra film!'.",
+      "porque": "Dá a sua opinião sobre algo que já passou, e o 'det var' avalia qualquer coisa: Det var en bra kväll, Det var roligt, Det var gott. É resposta pronta pro 'Hur var filmen?' do colega na segunda-feira."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "ska-vi-ga-pa-bio",
+      "elenco": "albatroz cinéfilo de ingresso no bico + gota de manteiga da pipoca + rádio de ska",
+      "ponte_sonora": "SKA! VI... GÔ(ta)! PÔ! BI(c)O? (6 sílabas: ska-vi-gô-pô-BÍ-o; a força maior no BÍ e uma menor no GÔ; SKA = o MESMO SKA da bandinha jamaicana de 'Ska vi säga imorgon klockan tre?' e 'Vad ska vi göra?' — aqui é o rádio do albatroz tocando ska —, colado, sem 'is' na frente, curto e sem força; VI = o 'eu VI', o mesmo VI de 'Vi ses!', I limpo e sem força; GÔ(ta) = a GOTA cortada no Ô, o MESMO GÔ de 'Jag måste gå nu': Ô FECHADO de 'avô' e LONGO — é o å longo — e PARE AÍ: com o -TA vira 'gåta' (charada) e com R vira 'går', o presente; depois de 'ska' o verbo fica pelado; PÔ = o 'pô!' brasileiro, o MESMO PÔ de 'Jag är på väg' e 'Kan du skicka det på mejl?': Ô FECHADO, nunca 'pó', e aqui curtinho, sem força, quase engolido entre o GÔ e o BÍ; BI(c)O = o BICO do albatroz sem o C: a força no BÍ, I LONGO, e o -o curto e fechado, puxando pra U, do jeito que o brasileiro já fala o fim de 'bico' — BÍ-u, em DUAS batidas, nunca um 'biu' de uma sílaba só; e aqui o bico NÃO é o bico de pato das outras cartas: o I é limpo, de boca esticada, nunca Ü; 'bio' é o cinema)",
+      "historia": "Um albatroz de asas de três metros sai do mar decidido a ir ao cinema. Na calçada ele liga o rádio no SKA e dança no contratempo, batendo as asas — até que olha pra cima e grita 'eu VI!': a máquina de pipoca da marquise transbordou, e uma GOTA gorda de manteiga despenca e — PÔ! — acerta em cheio a ponta do BICO. Ele nem liga: lambe a manteiga, aperta os dois ingressos no bico e estica o pescoção pra você — vamos ao cinema?",
+      "cena": {
+        "descricao": "Na calçada de um cinema, um albatroz branco de asas enormes abertas num passo de dança, ao lado de um rádio laranja, segura dois ingressos vermelhos no bico comprido no instante em que uma gota gorda de manteiga amarela despenca da máquina de pipoca da marquise bem na ponta do bico.",
+        "partes": [
+          "calçada de lajotas cinza com um tapete vermelho curto até a porta",
+          "fachada do cinema azul-escura com porta dupla dourada",
+          "marquise vermelha com uma fileira de lâmpadas amarelas acesas na borda",
+          "máquina de pipoca vermelha com caixa de vidro em cima da marquise, inclinada pra frente",
+          "gota de manteiga amarela, grande e brilhante, caindo da máquina",
+          "corpo do albatroz branco, de dorso cinza, em pé na calçada",
+          "asas enormes cinza-escuras abertas pros lados num passo de dança",
+          "cabeça branca com uma sombra cinza sobre os olhos, olhando pra cima",
+          "bico comprido amarelo-rosado com a ponta em gancho, segurando dois ingressos vermelhos",
+          "rádio portátil laranja no chão, com dois alto-falantes redondos pretos",
+          "três notas musicais pretas saindo do rádio"
+        ]
+      }
+    },
+    {
+      "id": "jag-gillar-att-promenera",
+      "elenco": "codorna mineira de marcha atlética + colete PRO + casinha LAR + cestinha de pão de queijo",
+      "ponte_sonora": "IAÍ, LAR!... A PRO MINEIRA! (8 sílabas: ia-ÍL-lar-a-pru-me-NÊÊ-ra; a força maior no NÊÊ e uma menor no ÍL; IAÍ = o 'E aí?' de cumprimento, do jeito que todo brasileiro fala, numa tacada só: começa com o IÁ de sempre — o 'jag', I de IOGA, nunca J chiado, aqui sem força — e cai no Í, que é o gi- de 'gillar': o G antes de I soa I de ioga — deixe esse I escorregar entre o A e o Í, ia-iÍ, como no 'e aí' falado rápido; sem ele sobra 'illa' (mal) —, I CURTO, nunca G duro, nunca o J chiado de 'Gil'; LAR = o LAR da casinha, o MESMO LAR fraquinho do 'spelar' de 'Det spelar ingen roll': o L é de verdade, ponta da língua no céu da boca, e encosta no Í de antes — íl-lar, o L dobrado do sueco —, sem força, mas com o R BRANDO no fim, de 'caro', que gruda no 'att': la-ra; sem esse R sobra 'gilla', o infinitivo; A = o 'att' como se fala, encolhido num A só, como o A de A DRÍCA ('Vill du ha något att dricka?'); PRO = o 'pro' da fala ('vou PRO sítio'), curtinho e fechado, quase 'pru', R de um toque colado no P; MINEIRA = como todo brasileiro fala, sem o I depois do Ê — mi-NÊ-ra, igual 'feira' vira 'fêra', o mesmo truque da VIEIRA de 'Vad ska vi göra?': a força toda no NÊ, Ê FECHADO e LONGO; o MI é fraquinho e pode abrir pra 'mé'; o -RA fecha com R brando de 'caro', nunca RR, e nunca 'mi-NÊI-ra' de três sílabas cheias)",
+      "historia": "A codorna MINEIRA — chapéu de palha, cestinha de pão de queijo pendurada na asa e colete de atleta escrito PRO — tem asa, mas se recusa a voar: ela CAMINHA. Sai de madrugada em marcha atlética, rebolando quilômetros de trilha de terra só pelo gosto de andar, sem pressa de chegar. No fim da tarde ela para na porteira da casinha e grita: 'IAÍ, LAR!' — e a casinha escancara a porta e responde: 'Chegou A PRO MINEIRA!'. Voar, nunca: ela gosta mesmo é de caminhar.",
+      "cena": {
+        "descricao": "Numa trilha de terra que termina numa casinha com placa LAR, uma codorna gordinha de chapéu de palha, cestinha de pão de queijo na asa e colete de atleta escrito PRO chega rebolando em passo largo de marcha atlética, de bico aberto num grito, levantando poeira.",
+        "partes": [
+          "gramado verde com uma trilha de terra marrom serpenteando até o fundo",
+          "casinha branca de telhado vermelho com a porta aberta",
+          "placa de madeira escrita LAR pendurada acima da porta",
+          "porteirinha de madeira baixa na frente da casa",
+          "corpo redondo da codorna marrom pintadinho de branco",
+          "cabeça pequena com listras pretas e brancas e bico curto cinza aberto num grito",
+          "chapéu de palha amarelo de aba larga",
+          "colete branco de corrida com a palavra PRO em vermelho",
+          "cestinha de palha cheia de pães de queijo dourados pendurada na asa",
+          "pernas finas laranja em passo largo de marcha atlética",
+          "nuvenzinha de poeira bege atrás dos pés"
+        ]
+      }
+    },
+    {
+      "id": "vill-du-spela",
+      "elenco": "Cuca jogando dardos + maço de espetos de churrasco + alvo na árvore",
+      "ponte_sonora": "VIL DÜ... (e)SPÊ(to)... la? (4 sílabas: vil-dü-SPÊÊ-la; a força toda no SPÊÊ; VIL DÜ = o MESMO começo da bruxa de 'Vill du ha något att dricka?', da avestruz de 'Vill du ha kvittot?' e do boto de 'Vill du följa med?' — aqui é a Cuca, a VILÃ do Sítio —: VIL com I curto e L DE VERDADE, língua no céu da boca, nunca 'viu'; DÜ = o 'du' de CAN-DU, com BICO DE PATO — é a ponta do focinho dela apontada pra você; (e)SPÊ(to) = o ESPETO de churrasco sem o E da frente e sem o -TO: SPÊ, S colado no P — nunca 'is-pê', o sueco não põe vogal antes do S —, Ê FECHADO como o brasileiro já fala 'espêto', e LONGO; é o MESMO SPÊÊ do DESPEJO de 'Det spelar ingen roll', a mesma palavra; la = o 'lá' do espeto cravado LÁ no alvo, mas dito fraquinho e curto, como o -la de 'janela' — a força fica toda no SPÊ — e SEM R: com R vira 'spelar', o presente; depois de 'vill du' o verbo fica pelado)",
+      "historia": "A Cuca, a jacaroa VILÃ do Sítio, aparece no terreiro com aquele sorriso cheio de dentes e enfia o focinho comprido bem na sua cara. Você já ia correr, achando que ela vem pegar criança — mas ela só sacode um maço de ESPETOS de churrasco: é jogo de dardos. Ela arremessa o primeiro, que voa assobiando e crava LÁ no meio do alvo pendurado na árvore. Aí estende outro espeto pra você, com cara de quem quer companhia: quer jogar?",
+      "cena": {
+        "descricao": "Num terreiro de terra, a Cuca — jacaroa verde de cabeleira loira e vestido roxo de bruxa — estica o focinho cheio de dentes num sorriso e oferece um espeto de churrasco com uma mão, segurando um maço de espetos na outra, enquanto um espeto já está cravado no centro de um alvo pendurado numa árvore.",
+        "partes": [
+          "chão de terra batida marrom-claro",
+          "árvore de tronco marrom e copa verde redonda ao fundo",
+          "alvo redondo vermelho e branco pendurado no tronco",
+          "espeto prateado cravado no centro do alvo",
+          "corpo da Cuca: jacaroa verde em pé sobre as patas de trás, de vestido roxo de bruxa",
+          "cabeça de jacaré verde de focinho comprido, com a boca num sorriso cheio de dentes brancos",
+          "cabeleira loira presa num coque alto",
+          "braço esquerdo erguido segurando um maço de espetos prateados",
+          "braço direito estendido pra frente oferecendo um espeto",
+          "cauda verde de escamas grossas apoiada no chão"
+        ]
+      }
+    },
+    {
+      "id": "vilken-film-ska-vi-se",
+      "elenco": "peixe-palhaço crítico de cinema no aquário de rodinhas + pilha de latas de filme + copão de refrigerante",
+      "ponte_sonora": "VIL? QUEN?... FILM(e)! SKA... VI... SÊ(de)! (6 sílabas: VÍL-ken-FÍLM-ska-vi-SÊÊ; força no VIL, no FILM e, a maior, no SÊÊ; VIL-QUEN = o MESMO 'vilken' de 'Vilken dag är det idag?': VIL com I curto e L DE VERDADE, nunca 'viu', e QUEN = o QUEM? sem o 'ẽi' nasal do português — K duro, E curto, N batido na língua —, fraquinho e GRUDADO no VIL: VÍL-ken, uma palavra só; aqui é o peixe perguntando 'o VIL... QUEM é?'; QUEN é só o SOM — o 'quem' sueco é 'vem' — e o K logo depois do L é o que separa 'vilken' (qual) de 'vill' (quer); FILM(e) = o FILME sem o -E, numa sílaba só: FÍLM, I curto, L DE VERDADE com a língua no céu da boca — nunca o 'FIU-mi' do português — e o M fechando a boca no fim; SKA = o MESMO SKA da bandinha jamaicana de 'Ska vi säga imorgon klockan tre?' e 'Vad ska vi göra?', colado e sem força; VI = o 'eu VI', o mesmo de 'Vi ses!', curto e sem força; SÊ(de) = a SEDE cortada no SÊ: Ê FECHADO, LONGO e com a força da frase — e SEM S no fim: com S vira o SEIS de 'Vi ses!', outra frase)",
+      "historia": "No saguão do cinema, um peixe-palhaço passeia num aquário redondo de rodinhas e encosta o focinho numa pilha de latas de FILME. Pra escolher, ele só faz uma pergunta: 'O VIL... QUEM é?' — filme sem vilão caprichado ele nem olha. A vinheta toca SKA e ele requebra a nadadeira no contratempo, mas aí arregala os olhões — 'eu VI!' — pro copão de refrigerante no balcão e, com o aquário pela metade, bate uma SÊDE absurda de peixe. Ele vira os olhões pra você: e aí, que filme a gente vai ver?",
+      "cena": {
+        "descricao": "No saguão do cinema, um peixe-palhaço laranja de listras brancas, dentro de um aquário redondo meio vazio sobre um carrinho de rodinhas, encosta o focinho numa pilha de latas de filme prateadas e espia, de boca aberta, um copo gigante de refrigerante em cima do balcão.",
+        "partes": [
+          "piso do saguão em xadrez vermelho e preto",
+          "balcão vermelho de bomboniere ao fundo",
+          "copo gigante de refrigerante listrado de vermelho e branco, com canudo, em cima do balcão",
+          "carrinho de metal cinza com quatro rodinhas pretas",
+          "aquário redondo de vidro azul-claro sobre o carrinho, com água só até a metade",
+          "corpo do peixe-palhaço laranja com três faixas brancas contornadas de preto",
+          "nadadeiras laranja de bordas pretas, uma erguida como num passo de dança",
+          "olhos grandes e boca aberta numa pergunta",
+          "pilha de cinco latas redondas de filme prateadas encostada no aquário"
+        ]
+      }
+    },
+    {
+      "id": "det-var-en-bra-film",
+      "elenco": "equilibrista na fita do filme + vara de equilíbrio em brasa + dois projetores",
+      "ponte_sonora": "DÊ VÁR(a) EM BRÁ(sa)... FILM(e)! (5 sílabas: dê-vár-en-BRÁ-FÍLM; força no BRÁ e no FILM; DÊ = o 'det' de sempre, o DÊ de 'Det var jättegott, tack!' — o 'dê!' de 'me DÊ isso', Ê fechado, curto, sem T e nunca 'dji'; VÁR(a) = a VARA sem o -a, a MESMA VARA de 'Var bor du?' e de 'Hur var det i skolan?' — o 'var' de 'foi' tem o mesmo som do 'var' de 'onde' —: A longo e R BRANDO à caipira, que gruda no EM: va-ren; EM BRÁ(sa) = o MESMO 'en bra' da estrela-do-mar de 'Ha en bra dag!': EM = o EM de EM BRASA, mas ORAL — E curto e N batido na língua, nunca o 'ẽi' nasal —, e BRÁ = o BRÁ de BRASA, o mesmo 'bra' de 'Ha det bra' e 'Jag mår bra', R de um toque e A longo, cortando o -SA; FILM(e) = o MESMO FILME sem o -E de 'Vilken film ska vi se?': uma sílaba só, I curto, L DE VERDADE — nunca 'FIU-mi' — e o M fechando a boca)",
+      "historia": "Na sessão de gala, o filme acaba e a equilibrista pula da tela direto pra sala. Ela estala os dedos pro assistente: 'DÊ! VARA EM BRASA!' — e ele joga a vara de equilíbrio com as duas pontas pegando fogo. Aí atravessa a sala inteira andando por cima da própria fita do FILME, esticada entre os dois projetores como corda bamba, chovendo faíscas nas poltronas. Quando pisa do outro lado, o cinema inteiro levanta e aplaude: que filme bom.",
+      "cena": {
+        "descricao": "No alto de uma sala de cinema, uma equilibrista de collant turquesa caminha na ponta dos pés sobre uma fita de filme esticada como corda bamba entre dois projetores, segurando atravessada uma vara comprida com as duas pontas em brasa, que soltam faíscas sobre as poltronas vermelhas.",
+        "partes": [
+          "piso de carpete vinho",
+          "duas fileiras de poltronas vermelhas de cinema",
+          "dois projetores de cinema pretos no alto de postes, um de cada lado",
+          "fita de filme preta com furinhos brancos esticada de um projetor ao outro",
+          "corpo da equilibrista de collant turquesa brilhante, na ponta dos pés sobre a fita",
+          "sapatilhas brancas",
+          "cabeça com coque preto e um pequeno diadema dourado",
+          "braços abertos segurando a vara",
+          "vara de equilíbrio comprida marrom, atravessada na horizontal",
+          "duas pontas da vara em brasa, laranja-avermelhadas",
+          "faíscas amarelas caindo das pontas"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "stannar-bussen-har",
+      "sv": "Stannar bussen här?",
+      "pt": "O ônibus para aqui?",
+      "pronuncia": "STÁN-nar BÖS-sen RRÉR? ('stannar' com a força no STAN — S colado no T, sem 'is' na frente, A CURTO e aberto, sem o 'ã' nasal, e o N segurado um instante (é dobrado) —, e o -nar fraco com R brando no fim: é o R do presente, sem ele sobra 'stanna', o infinitivo; 'bussen' com U de bico puxando pra Ô, quase BÖS, SS esticado de cobra, e o -sen fraquinho, sem nasal: é 'buss' + o artigo -en, O ônibus; 'här' com h soprado, É bem aberto e longo e R brando; a pergunta começa pelo verbo e a voz sobe no HÄR)",
+      "contexto": "No ponto, perguntando a quem está esperando, ou ao motorista pela porta da frente — principalmente em ponto com várias linhas, em obra ou com ônibus substituto (ersättningsbuss), quando o ponto muda de lugar. A resposta: 'Ja, den stannar här' ou 'Nej, du måste gå till nästa hållplats'.",
+      "porque": "Em muito ponto sueco o ônibus só para se alguém fizer sinal, e em obra o ponto muda — essa pergunta evita ver o ônibus passar direto. E 'stannar' (para, fica) serve pra tudo: tåget stannar i Uppsala, jag stannar hemma."
+    },
+    {
+      "id": "ar-det-langt-harifran",
+      "sv": "Är det långt härifrån?",
+      "pt": "É longe daqui?",
+      "pronuncia": "é dê LÓNGT RRÉÉ-ri-frôn? ('är det' = é-dê, fraquinho, o T de 'det' mudo; 'långt' com Ó ABERTO e CURTO de 'só' — nunca o 'lõ' nasal de 'longo' —, NG no fundo da boca sem soltar 'gui', e T seco no fim: sem o T vira 'lång', comprido; 'härifrån' é 'här' + 'i' + 'från' colados numa palavra só: a força no HÄR — h soprado, É aberto e longo —, o -ri- fraquinho com R brando, e o -frôn com um acento menor, Ô FECHADO e N na língua, sem nasal)",
+      "contexto": "Pedindo direção na rua, na recepção do hotel, no ponto de ônibus ou combinando de ir a pé a algum lugar: 'Är det långt härifrån till stationen?'. A resposta típica: 'Nej, det är fem minuter att gå' ou 'Ja, ta bussen hellre'.",
+      "porque": "É a pergunta que decide se você vai a pé ou de ônibus. E 'härifrån' (daqui) tem o par 'därifrån' (de lá) — os dois aparecem o tempo todo quando um sueco explica um caminho."
+    },
+    {
+      "id": "jag-ska-av-har",
+      "sv": "Jag ska av här.",
+      "pt": "Vou descer aqui.",
+      "pronuncia": "iá ska ÁÁV rrér ('jag' = iá, o G não soa; 'ska' fraquinho, S colado no K, sem 'is'; 'av' é a palavra mais forte da frase: A LONGO e de boca bem aberta, lá do fundo, e V de verdade no fim — é a partícula de 'gå av' (descer), e partícula leva a força; 'här' com h soprado, É aberto e longo, R brando)",
+      "contexto": "No ônibus, no bonde ou no metrô lotado, pedindo passagem até a porta ('Ursäkta, jag ska av här'), ou avisando o motorista num ônibus regional ou noturno. Variante: 'Jag ska av vid nästa' (desço na próxima).",
+      "porque": "No horário de pico quem não avisa fica preso atrás de carrinho de bebê e mochila. E o par 'ska av' / 'ska på' (descer / subir) serve pra ônibus, trem, barco e avião."
+    },
+    {
+      "id": "var-ligger-stationen",
+      "sv": "Var ligger stationen?",
+      "pt": "Onde fica a estação?",
+      "pronuncia": "var LÍG-ger sta-RRÚÚ-nen? ('var' = onde, com R brando — sem ele vira 'vad', o quê; 'ligger' com I curto, G duro de 'gato' segurado um instante (é dobrado) e o -ger fraco com R brando, nunca 'lí-gui'; 'stationen' com o S colado no T, sem 'is', e a força toda no -tion-, que soa como o sopro do 'sj' — raspado, de lábios em bico — + U LONGO: sta-RRÚÚ-nen, nunca 'esta-ção' nem 'sta-tsi-ón'; o -nen fraco: é 'station' + o artigo -en, A estação)",
+      "contexto": "Ao chegar numa cidade nova, sair de um ônibus num lugar desconhecido ou pedir direção a alguém na rua: 'Ursäkta, var ligger stationen?'. Vale pra tågstationen, tunnelbanestationen, Centralstationen. A resposta: 'Den ligger rakt fram' ou 'runt hörnet'.",
+      "porque": "É o mesmo molde de 'Var ligger toaletten?': 'ligger' é o verbo que o sueco usa pra dizer onde um lugar fica — troque o fim e pergunte por qualquer coisa: var ligger apoteket, var ligger Systembolaget."
+    },
+    {
+      "id": "en-enkel-biljett-tack",
+      "sv": "En enkel biljett, tack.",
+      "pt": "Um bilhete só de ida, por favor.",
+      "pronuncia": "en ÉNG-kel bil-IÉT, TAK ('en' fraquinho, E curto e N na língua, sem nasal; 'enkel' com a força no EN — É aberto e curto, sem o 'ẽ' fanhoso do português, a língua já fechando no fundo antes do K (NG) — e o -kel fraco com L de verdade, nunca 'kéu'; 'biljett' com a força no JETT: bil-IÉT, o 'lj' sai como o LH de 'bilhete', mas com É ABERTO e T seco no fim, sem 'tchi'; 'tack' = TAK, A curto e K seco)",
+      "contexto": "No guichê ou no balcão do Pressbyrån, com o motorista de ônibus regional, ou na bilheteria do trem (SJ, Mälartåg). 'Enkel' é só de ida; o par é 'tur och retur' (ida e volta). Nos apps de transporte (SL, Västtrafik, Skånetrafiken) o botão se chama 'enkelbiljett'.",
+      "porque": "Mesmo comprando no app, 'enkel' e 'tur och retur' estão em toda tela de passagem. E 'enkel' também quer dizer 'simples': det är enkelt (é fácil)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "stannar-bussen-har",
+      "elenco": "ariranha na prainha do rio + ônibus atolado sem rodas + poste de ponto enrolado de hera",
+      "ponte_sonora": "(e)STÁ NA AR(eia)... BUS-SEM... RRÉR(a)? (5 sílabas: STÁN-nar-BÖS-sen-RRÉR; força no STÁN, no BÖS e no RRÉR, onde a voz sobe de pergunta; (e)STÁ NA AR(eia) = 'está na areia' dito num fôlego só e cortado logo depois do R: sem o E da frente — o S já sai colado no T, STÁ, nunca 'is-tá' —, A CURTO e aberto, e o 'na' e o 'ar' se fundem em NAR; o R é o de 'areia', de UM toque só, de 'caro' — é o R do presente: sem ele sobra 'stanna', o infinitivo; nada de nasal: STÁ-NAR, nunca 'stã-nar'; BUS-SEM = o MESMO 'bussen' do pavão de 'Jag har missat bussen': o -BUS de ÔNIBUS, curto, U de bico puxando pra Ô, quase BÖS, SS esticado de cobra, + SEM — aqui o ônibus SEM rodas —, mas SEM NASALAR: E curtinho, N batido na língua, fraco: é o '-en', O ônibus; RRÉR = a HERA sem o -a, a MESMA de 'Det gör ont här' e 'Är det ledigt här?': o H nada mudo, sopra leve como RR carioca, É bem aberto e longo, R brando no fim — se fechar o É em Ô vira 'hår', cabelo)",
+      "historia": "A ariranha espera o ônibus na prainha do rio, ao lado de um poste de ponto todo enrolado de HERA, sem saber se ele para ali mesmo. O ônibus vem a toda pela margem e — ESTÁ NA AREIA! — atola de vez: as rodas somem na areia fofa e ele vira um ÔNIBUS SEM rodas, de barriga no chão. A ariranha dá um pulo de alegria e aponta com a pata: perguntou se o ônibus para aqui? Parar, ele parou — colado na HERA, e daqui não sai mais.",
+      "cena": {
+        "descricao": "Numa prainha de rio, um ônibus vermelho afundado na areia até a metade das portas, sem nenhuma roda à vista, está parado colado num poste de ponto enrolado de hera, enquanto uma ariranha marrom em pé nas patas de trás aponta pra ele de boca aberta.",
+        "partes": [
+          "faixa de areia amarelo-clara em primeiro plano",
+          "faixa de água azul do rio ao fundo",
+          "ônibus vermelho curto afundado na areia até a metade das portas, sem rodas à vista",
+          "dois montes de areia levantados nas laterais do ônibus",
+          "porta dianteira de vidro do ônibus aberta",
+          "poste cinza de ponto com placa redonda azul no topo",
+          "hera verde-escura de folhas em coração enrolada no poste da base até a placa",
+          "corpo da ariranha marrom-chocolate, comprido, em pé nas patas de trás",
+          "mancha creme no peito da ariranha",
+          "cabeça arredondada de focinho bigodudo com a boca aberta",
+          "pata dianteira esticada apontando pro ônibus",
+          "rabo achatado apoiado na areia"
+        ]
+      }
+    },
+    {
+      "id": "ar-det-langt-harifran",
+      "elenco": "husky de trenó na saída da vila + trilha de neve em T longuíssimo + trouxa de fronha com pau de hera",
+      "ponte_sonora": "É DÊ LÓNG-T... RRÉ-RI-FRÔN(ha)? (6 sílabas: é-dê-LÓNGT-RRÉÉ-ri-frôn; força no LÓNG e no RRÉ, com um acento menor no FRÔN; É DÊ = o 'är det' de sempre, o MESMO de 'Är det ledigt här?' e 'Är det starkt?': a pergunta começa pelo verbo, É aberto e curto, DÊ fechado e fraco, o T de 'det' mudo; LÓNG-T = o MESMO LONG T da trilha do hamster de 'Hur långt är det?': o 'long' de 'long neck', Ó ABERTO e CURTO de 'só', nunca o 'lõ' nasal e fechado de 'longo', o NG no fundo da boca sem soltar 'gui', e o T DA TRILHA seco no fim, de 'tatu' — é ele que faz 'långt' (longe); sem ele sobra 'lång' (comprido), o pescoço da garça de 'Hur lång tid tar det?'; RRÉ-RI = a HERA de sempre, a mesma de 'Det gör ont här' e 'Jag har bott här i sju år', soprada leve, É aberto e longo, e o R brando dela emenda no I do pau espetado: RRÉ-RI, 'här' + 'i'; FRÔN(ha) = o MESMO I-FRÔN do ninja de 'Var kommer du ifrån?': a FRONHA sem o -nha, Ô FECHADO e sem nasal, N na língua — fronha com pau em I espetado é 'ifrån'; aqui o pau vem enrolado de hera: HERA + I + FRONHA = 'härifrån', daqui)",
+      "historia": "O husky resolveu partir de trenó e, antes de sair, arrancou um ramo de HERA do muro de casa e enrolou no pau que espetou em pé na trouxa — uma FRONHA estufada —, pra nunca esquecer de onde saiu. Na saída da vila, a trilha de neve à frente é um T LONGUÍSSIMO: a barra do T está ali, aos pés dele, e a perna some no horizonte. Ele arregala os olhos azuis, olha a trilha, olha a fronha de hera e gagueja: É DÊ... LONG T?! Antes do primeiro passo, ele precisa saber: é longe daqui?",
+      "cena": {
+        "descricao": "Na neve, um husky cinza e branco atrelado a um trenó de madeira para de olhos arregalados na barra de uma trilha em forma de T gigantesco, cuja perna se estica até o horizonte, enquanto no trenó uma fronha branca estufada tem um pau espetado em pé enrolado de hera.",
+        "partes": [
+          "chão de neve branca",
+          "trilha de neve batida azul-acinzentada em forma de T: a barra curta na frente e a perna longuíssima sumindo ao fundo",
+          "dois pinheiros verde-escuros ao lado da perna do T",
+          "trenó de madeira clara com esquis curvos",
+          "fronha branca estufada amarrada no trenó com corda marrom",
+          "pau marrom reto espetado em pé no meio da fronha",
+          "hera verde-escura enrolada no pau da base até o topo",
+          "corpo do husky cinza e branco atrelado ao trenó por um arreio vermelho",
+          "cabeça do husky com máscara cinza, olhos azuis arregalados e orelhas em pé",
+          "rabo peludo enrolado por cima das costas"
+        ]
+      }
+    },
+    {
+      "id": "jag-ska-av-har",
+      "elenco": "faisão saxofonista de ska + bonde azul + abrigo de ponto coberto de hera",
+      "ponte_sonora": "IÁ! SKA... ÁV(e)! RRÉR(a)! (4 batidas: iá-ska-ÁÁV-rrér; a força maior no ÁÁV e uma segunda no RRÉR; IÁ é o 'jag' de sempre — I de IOGA, nunca o J chiado de 'já'; SKA = o MESMO SKA da bandinha jamaicana de 'Ska vi säga imorgon klockan tre?' e 'Var ska jag byta?': S grudado no K, sem 'is' na frente, curto e fraco aqui; ÁV(e) = o 'AVE!' de susto — o 'Ave Maria!' de mineiro e nordestino, gritado por uma AVE — cortado antes do E: A LONGO e de boca bem aberta, lá do fundo, e o V de verdade no fim, os dentes no lábio: ÁÁV; é a partícula de 'gå av' (descer), e partícula leva a força — o ÁV é a pancada da frase; sem o V sobra 'a', nada; RRÉR = a HERA de sempre, a mesma de 'Det gör ont här' e 'Är det ledigt här?', sem o -a: h soprado leve, É aberto e longo, R brando)",
+      "historia": "No fundo do bonde, o faisão de chapéu pork pie toca SKA num saxofone dourado e dança no corredor — IÁ! SKA! —, tão animado que quase perde o ponto. Pela janela passa o abrigo do ponto dele, todo coberto de HERA. AVE MARIA! — ele grita, e lembra que é AVE: abre as asas, sai voando pela porta aberta com saxofone e tudo e pousa no teto de hera. Ele desce aqui — nem que seja voando.",
+      "cena": {
+        "descricao": "Na calçada, um faisão de cabeça verde-esmeralda e corpo cor de cobre, de chapéu pork pie e saxofone dourado na pata, plana de asas abertas saindo pela porta de um bonde azul rumo ao teto de um abrigo de ponto coberto de hera.",
+        "partes": [
+          "calçada de lajotas cinza",
+          "faixa de asfalto escuro com dois trilhos prateados",
+          "bonde azul e branco com a porta do meio aberta",
+          "abrigo de ponto de vidro com teto plano",
+          "hera verde-escura cobrindo o teto e descendo pelas colunas do abrigo",
+          "corpo do faisão cor de cobre em voo, saindo pela porta do bonde",
+          "asas abertas marrom-douradas com as pontas listradas",
+          "cabeça verde-esmeralda com máscara vermelha em volta do olho",
+          "cauda longuíssima listrada de marrom e bege",
+          "chapéu pork pie preto com fita branca",
+          "saxofone dourado curvo preso numa das patas"
+        ]
+      }
+    },
+    {
+      "id": "var-ligger-stationen",
+      "elenco": "anão mineiro perdido na cidade + vara com lanterna + placa RUA riscada",
+      "ponte_sonora": "VAR! LÍGUE-R... (e)STA RU(a)? NEM! (6 sílabas: var-LÍG-ger-sta-RRÚÚ-nen; força no LÍG e, a maior, no RRÚÚ; VAR = a VARA sem o -a, a MESMA de 'Var kan jag köpa biljett?', 'Var kommer du ifrån?' e 'Var bor du?': R brando e audível — sem ele sobra VÁ, que é 'vad' (o quê); LÍGUE-R = o MESMO LÍGUER de 'Var ligger toaletten?': o 'ligue!' de ligar, com I curto, G duro de 'gato' segurado um instante (é gg), e o -e do fim vira um -er fraquinho com R brando — nunca 'lí-gui'; aqui é a lanterna que LIGA na ponta da vara; (e)STA RU(a) = 'esta rua' dito à carioca, sem o E da frente (S colado no T: STA, nunca 'is-ta') e sem o A do fim: o RR de 'rua' é o sopro do 'sj' — FORTE e raspado, de lábios em bico, o mesmo de RRÜÜK ('sjuk') e RRÍCA ('skicka'), bem mais forte que o h leve da HERA —, e o U, que é o 'o' longo sueco, fica LONGO e leva a força toda: sta-RRÚÚ; nunca 'es-ta-ção' nem 'sta-tsi-ón'; NEM = o 'nem!' de quem desiste, mas SEM NASALAR, como o SEM de 'bussen': E curto, N batido na língua, fraco — é o artigo '-en', A estação)",
+      "historia": "O anão saiu da mina pra pegar o trem e se perdeu no breu da cidade. Bate a VARA no chão — VAR?! — e berra LIGUE! pra lanterna pendurada na ponta dela, que acende de uma vez. A luz cai na placa da esquina e ele lê, furioso: ESTA RUA? NEM! — beco sem saída, nem sombra de trilho. Ele só quer saber uma coisa: onde fica a estação?",
+      "cena": {
+        "descricao": "Num beco escuro de paralelepípedos, um anão atarracado de barba ruiva trançada e elmo de ferro ergue uma vara comprida com uma lanterna acesa pendurada na ponta, iluminando uma placa de rua azul escrita RUA e riscada por um X vermelho, e balança a cabeça.",
+        "partes": [
+          "chão de paralelepípedos cinza-escuros",
+          "muro de tijolos marrom ao fundo, fechando o beco",
+          "poste preto de placa de rua",
+          "placa de rua azul retangular com a palavra RUA em branco",
+          "X vermelho grande pintado por cima da placa",
+          "corpo do anão baixinho e atarracado, de túnica verde-musgo e cinto largo marrom",
+          "barba ruiva longa trançada até a cintura",
+          "elmo de ferro cinza arredondado",
+          "vara marrom comprida erguida numa das mãos",
+          "lanterna de ferro amarela acesa pendurada na ponta da vara, com halo de luz",
+          "botas pretas pesadas"
+        ]
+      }
+    },
+    {
+      "id": "en-enkel-biljett-tack",
+      "elenco": "piloto de avião no guichê do trem + moeda de níquel na ponta do dedo + bilhete amarelo gigante + picotador",
+      "ponte_sonora": "EN! ÉN-(ní)QUEL... BILHÉT(e)! TAC! (6 sílabas: en-ÉNG-kel-bil-IÉT-tak; força no ÉN, no IÉT e no TAC; EN = o 'en' (um) de sempre, o dedo erguido de 'Har du tid en stund?' e 'Får jag fråga en sak?': E curto, N na língua, sem o 'ẽ' nasal do português, fraquinho aqui; ÉN-(ní)QUEL = o MESMO dedo, agora com uma moeda de NÍQUEL equilibrada na ponta: o EN do dedo + o -QUEL do fim de 'níquel' (o NÍ fica de fora): a força no ÉN — É ABERTO e curto —, e a língua já fecha no fundo antes do K, como no 'bank' (NG), sem nasal; o -QUEL fraco e com L DE VERDADE, a língua no céu da boca — nunca o 'kéu' brasileiro de 'níquel'; dedo sem moeda é 'en' (um), dedo com moeda é 'enkel' (simples, só de ida); e nada de ÉT: 'biljett' é palavra de 'en'; BILHÉT(e) = o próprio BILHETE do português sem o -e — o mesmo bilhete amarelo gigante do pelicano de 'Var kan jag köpa biljett?': o LH de 'bilhete' é quase exatamente o 'lj' sueco, e a força no LHÉ já está no lugar certo, mas com É ABERTO de 'pé' e T SECO no fim, sem o 'tchi': bil-IÉT; TAC = o 'tack' de sempre, A curto e K seco — aqui, o estalo do picotador)",
+      "historia": "O piloto de avião, que passa a vida em voo de ida e volta, chega ao guichê da estação de trem decidido: dessa vez, só ida. Ergue UM dedo pro bilheteiro — EN! — e, pra não ter dúvida de que é só um, equilibra na ponta do mesmo dedo uma moeda de NÍQUEL: ÉN... QUEL. Da janelinha sai deslizando um BILHETE amarelo gigante, comprido feito pista de pouso, e o picotador fura com um TAC! Um bilhete só de ida, por favor — e obrigado.",
+      "cena": {
+        "descricao": "Diante de um guichê de madeira, um piloto de avião de quepe e uniforme azul-marinho ergue o dedo indicador com uma moeda prateada equilibrada na ponta, enquanto da janelinha desliza até o chão um bilhete amarelo gigante, furado por um picotador prateado.",
+        "partes": [
+          "piso de ladrilhos bege",
+          "guichê de madeira escura com uma janelinha de vidro",
+          "bilhete amarelo gigante saindo da janelinha e descendo até o chão, com um furo redondo",
+          "picotador prateado preso na ponta do bilhete",
+          "corpo do piloto em uniforme azul-marinho com listras douradas nos punhos",
+          "quepe azul-marinho com asas douradas na frente",
+          "cabeça de bigode grosso e óculos de aviador",
+          "braço erguido com o dedo indicador em pé",
+          "moeda prateada de níquel equilibrada de pé na ponta do dedo",
+          "mala de rodinhas preta ao lado do piloto"
+        ]
+      }
+    }
+  ]
+}

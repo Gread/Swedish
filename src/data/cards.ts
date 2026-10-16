@@ -212,6 +212,55 @@ import detArDinTur from '../cards/det-ar-din-tur'
 import jagArStoltOverDig from '../cards/jag-ar-stolt-over-dig'
 import hurGammalArDu from '../cards/hur-gammal-ar-du'
 
+// Lote 7 — saúde, compras, transporte, social, trabalho, emoções, casa, lazer, comida e Suécia
+import jagHarHuvudvark from '../cards/jag-har-huvudvark'
+import jagHarTandvark from '../cards/jag-har-tandvark'
+import jagHostarMycket from '../cards/jag-hostar-mycket'
+import jagBehoverVila from '../cards/jag-behover-vila'
+import harDuEnVarktablett from '../cards/har-du-en-varktablett'
+import harNiDenIEnAnnanFarg from '../cards/har-ni-den-i-en-annan-farg'
+import varArProvrummet from '../cards/var-ar-provrummet'
+import detArForDyrt from '../cards/det-ar-for-dyrt'
+import kanJagFaRabatt from '../cards/kan-jag-fa-rabatt'
+import jagTarDen from '../cards/jag-tar-den'
+import stannarBussenHar from '../cards/stannar-bussen-har'
+import arDetLangtHarifran from '../cards/ar-det-langt-harifran'
+import jagSkaAvHar from '../cards/jag-ska-av-har'
+import varLiggerStationen from '../cards/var-ligger-stationen'
+import enEnkelBiljettTack from '../cards/en-enkel-biljett-tack'
+import hurLangeHarDuBottHar from '../cards/hur-lange-har-du-bott-har'
+import vadGorDuPaFritiden from '../cards/vad-gor-du-pa-fritiden'
+import harDuSyskon from '../cards/har-du-syskon'
+import viBordeSesOftare from '../cards/vi-borde-ses-oftare'
+import halsaFamiljen from '../cards/halsa-familjen'
+import jagArLedigImorgon from '../cards/jag-ar-ledig-imorgon'
+import vemKanHjalpaMig from '../cards/vem-kan-hjalpa-mig'
+import jagHarGlomtLosenordet from '../cards/jag-har-glomt-losenordet'
+import motetArInstallt from '../cards/motet-ar-installt'
+import jagSlutarKlockanFem from '../cards/jag-slutar-klockan-fem'
+import jagArOrolig from '../cards/jag-ar-orolig'
+import detArOkej from '../cards/det-ar-okej'
+import jagArLedsen from '../cards/jag-ar-ledsen'
+import vadRoligt from '../cards/vad-roligt'
+import lugnDetOrdnarSig from '../cards/lugn-det-ordnar-sig'
+import detKnackarPaDorren from '../cards/det-knackar-pa-dorren'
+import kanDuStangaFonstret from '../cards/kan-du-stanga-fonstret'
+import skaViGaPaBio from '../cards/ska-vi-ga-pa-bio'
+import jagGillarAttPromenera from '../cards/jag-gillar-att-promenera'
+import villDuSpela from '../cards/vill-du-spela'
+import vilkenFilmSkaViSe from '../cards/vilken-film-ska-vi-se'
+import detVarEnBraFilm from '../cards/det-var-en-bra-film'
+import jagVillHaEnKoppTe from '../cards/jag-vill-ha-en-kopp-te'
+import kanJagFaMer from '../cards/kan-jag-fa-mer'
+import jagArTorstig from '../cards/jag-ar-torstig'
+import vadFinnsDetTillEfterratt from '../cards/vad-finns-det-till-efterratt'
+import kanJagFaEnServett from '../cards/kan-jag-fa-en-servett'
+import detSnoar from '../cards/det-snoar'
+import solenSkiner from '../cards/solen-skiner'
+import detBlaserMycket from '../cards/det-blaser-mycket'
+import taPaDigMossan from '../cards/ta-pa-dig-mossan'
+import viAkerTillLandet from '../cards/vi-aker-till-landet'
+
 export const cards: Card[] = [
   hejHurArLaget,
   tackSaMycket,
@@ -415,4 +464,51 @@ export const cards: Card[] = [
   detArDinTur,
   jagArStoltOverDig,
   hurGammalArDu,
+  jagHarHuvudvark,
+  jagHarTandvark,
+  jagHostarMycket,
+  jagBehoverVila,
+  harDuEnVarktablett,
+  harNiDenIEnAnnanFarg,
+  varArProvrummet,
+  detArForDyrt,
+  kanJagFaRabatt,
+  jagTarDen,
+  stannarBussenHar,
+  arDetLangtHarifran,
+  jagSkaAvHar,
+  varLiggerStationen,
+  enEnkelBiljettTack,
+  hurLangeHarDuBottHar,
+  vadGorDuPaFritiden,
+  harDuSyskon,
+  viBordeSesOftare,
+  halsaFamiljen,
+  jagArLedigImorgon,
+  vemKanHjalpaMig,
+  jagHarGlomtLosenordet,
+  motetArInstallt,
+  jagSlutarKlockanFem,
+  jagArOrolig,
+  detArOkej,
+  jagArLedsen,
+  vadRoligt,
+  lugnDetOrdnarSig,
+  detKnackarPaDorren,
+  kanDuStangaFonstret,
+  skaViGaPaBio,
+  jagGillarAttPromenera,
+  villDuSpela,
+  vilkenFilmSkaViSe,
+  detVarEnBraFilm,
+  jagVillHaEnKoppTe,
+  kanJagFaMer,
+  jagArTorstig,
+  vadFinnsDetTillEfterratt,
+  kanJagFaEnServett,
+  detSnoar,
+  solenSkiner,
+  detBlaserMycket,
+  taPaDigMossan,
+  viAkerTillLandet,
 ]
