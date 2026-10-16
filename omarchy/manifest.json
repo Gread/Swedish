@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gread.swedish",
+  "name": "Svenska",
+  "version": "0.1.0",
+  "author": "Gread",
+  "license": "MIT",
+  "description": "Practise Swedish from the bar: browse the cards, watch today's scene, review what is due",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Svenska",
+    "description": "Swedish phrase cards with memory scenes; reminds you hourly until you practise",
+    "category": "Info",
+    "aliases": [
+      "swedish",
+      "svenska",
+      "sueco",
+      "language"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "center"
+  }
+}

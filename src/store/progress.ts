@@ -1,5 +1,6 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
+import { isOmarchy, serverStorage } from '../omarchy/mode'
 
 export const MAX_LEVEL = 4
 
@@ -11,6 +12,8 @@ export interface CardProgress {
   nivelOpacidade: number
   ultimaRevisao: number | null
   streakCertos: number
+  /** Quando a cena foi montada pela última vez (ms). */
+  builtAt?: number | null
 }
 
 const fresh = (): CardProgress => ({
@@ -37,7 +40,9 @@ export const useProgress = create<ProgressState>()(
     (set, get) => ({
       cards: {},
       markBuilt: (id) =>
-        set((s) => ({ cards: { ...s.cards, [id]: { ...(s.cards[id] ?? fresh()), built: true } } })),
+        set((s) => ({
+          cards: { ...s.cards, [id]: { ...(s.cards[id] ?? fresh()), built: true, builtAt: Date.now() } },
+        })),
       answer: (id, correct) =>
         set((s) => {
           const p = s.cards[id] ?? fresh()
@@ -62,6 +67,11 @@ export const useProgress = create<ProgressState>()(
       },
       reset: () => set({ cards: {} }),
     }),
-    { name: 'swedish-progress' },
+    {
+      name: 'swedish-progress',
+      // Na extensão do Omarchy o progresso fica num arquivo (servidor local),
+      // onde o painel da barra e o lembrete de hora em hora também leem.
+      ...(isOmarchy ? { storage: createJSONStorage(() => serverStorage) } : {}),
+    },
   ),
 )

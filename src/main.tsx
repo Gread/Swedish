@@ -29,6 +29,10 @@ async function boot() {
   // ser montada: person() as usa de forma síncrona dentro de createScene().
   await loadBases()
   let root = await devRoute()
+  if (!root && new URLSearchParams(window.location.search).has('omarchy')) {
+    const { OmarchyApp } = await import('./omarchy/OmarchyApp')
+    root = <OmarchyApp />
+  }
   if (!root) {
     const { default: App } = await import('./App.tsx')
     root = <App />

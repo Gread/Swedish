@@ -1,0 +1,67 @@
+/* Janela da cena na extensão do Omarchy: as cores do tema atual (--om-*,
+   vindas de /api/theme) no lugar da paleta do app, e espaçamento de painel. */
+:root {
+  --om-background: #1a1b26;
+  --om-dark-background: #13141c;
+  --om-lighter-background: #24283b;
+  --om-foreground: #a9b1d6;
+  --om-dark-foreground: #565f89;
+  --om-bright-foreground: #c0caf5;
+  --om-accent: #7aa2f7;
+  --om-selection: #292e42;
+  --om-muted: #414868;
+  --om-green: #9ece6a;
+  --om-red: #f7768e;
+  --om-yellow: #e0af68;
+}
+
+body.omarchy {
+  font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace;
+  background: var(--om-background);
+  color: var(--om-foreground);
+  overflow: hidden;
+}
+body.omarchy #root,
+body.omarchy .app { min-height: 100vh; height: 100vh; }
+
+body.omarchy .view { padding: 14px 16px 10px; max-width: none; min-height: 0; }
+body.omarchy header h1 { font-size: 1.15rem; color: var(--om-bright-foreground); }
+body.omarchy .hint { color: var(--om-dark-foreground); font-size: 0.8rem; margin: 0.15rem 0 0.6rem; }
+body.omarchy .chip { background: var(--om-selection); color: var(--om-accent); border-radius: 4px; }
+
+body.omarchy .canvas-wrap { border-radius: 6px; border-color: var(--om-muted); min-height: 0; }
+body.omarchy .caption {
+  background: color-mix(in srgb, var(--om-dark-background) 90%, transparent);
+  border-color: var(--om-muted);
+  color: var(--om-bright-foreground);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+body.omarchy .progress-bar > div { background: var(--om-accent); }
+
+body.omarchy button {
+  background: transparent;
+  color: var(--om-foreground);
+  border: 1px solid color-mix(in srgb, var(--om-foreground) 25%, transparent);
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+}
+body.omarchy button:hover:not(:disabled) { background: color-mix(in srgb, var(--om-foreground) 10%, transparent); }
+body.omarchy button.primary { background: var(--om-accent); border-color: var(--om-accent); color: var(--om-background); }
+body.omarchy button.primary:hover:not(:disabled) { background: color-mix(in srgb, var(--om-accent) 85%, white); }
+body.omarchy button.ghost { color: var(--om-dark-foreground); border-color: var(--om-muted); }
+body.omarchy button.right { border-color: var(--om-green); color: var(--om-green); }
+body.omarchy button.wrong { border-color: var(--om-red); color: var(--om-red); }
+
+body.omarchy .controls { padding: 0.6rem 0 0.2rem; }
+/* resposta longa (pronúncia, ponte, história) rola em vez de espremer a cena */
+body.omarchy .reveal { padding: 0.5rem 0.2rem 0.2rem; gap: 0.4rem; max-height: 42vh; overflow-y: auto; }
+body.omarchy .answer .sv { color: var(--om-yellow); font-size: 1.35rem; }
+body.omarchy .answer .pron { color: var(--om-foreground); font-size: 0.85rem; text-align: center; }
+body.omarchy .answer .bridge { color: var(--om-accent); font-size: 0.85rem; text-align: center; }
+body.omarchy .story { color: var(--om-foreground); font-size: 0.85rem; }
+body.omarchy .feedback.certo { background: color-mix(in srgb, var(--om-green) 25%, var(--om-background)); color: var(--om-green); }
+body.omarchy .feedback.errado { background: color-mix(in srgb, var(--om-red) 25%, var(--om-background)); color: var(--om-red); }
+
+body.omarchy .omarchy-loading { display: grid; place-items: center; color: var(--om-dark-foreground); }

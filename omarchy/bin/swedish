@@ -1,0 +1,198 @@
+#!/bin/bash
+# Omarchy extension for the Swedish app.
+#
+# Usage: swedish open build <card-id>      watch/build one scene
+#        swedish open review <ids|due>     review these cards (comma separated)
+#        swedish close                     close the scene window
+#        swedish notify                    hourly reminder (systemd timer)
+#        swedish serve                     run the local server (systemd service)
+#        swedish build                     npm ci + build the app and cards.json
+#        swedish install                   build, link the plugin, install the
+#                                          services and the window rule
+#
+# The scene runs in its own Chromium app window (WebGL cannot run inside the
+# shell), docked under the bar like a panel. Set SWEDISH_WS to send it to that
+# workspace without switching to it (for testing).
+set -uo pipefail
+
+HERE="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+PLUGIN="$(dirname "$HERE")"
+REPO="$(dirname "$PLUGIN")"
+PORT="${SWEDISH_PORT:-47823}"
+URL="http://127.0.0.1:$PORT"
+STATE="${XDG_STATE_HOME:-$HOME/.local/state}/swedish"
+PROFILE="$STATE/chromium"
+CLASS="chrome-127.0.0.1__-Default"
+PLUGIN_ID="gread.swedish"
+# Reminder window (local hours, inclusive start, exclusive end).
+FROM_HOUR="${SWEDISH_FROM_HOUR:-9}"
+TO_HOUR="${SWEDISH_TO_HOUR:-22}"
+
+die() {
+  echo "swedish: $*" >&2
+  exit 1
+}
+
+server_up() {
+  curl -s -o /dev/null --max-time 1 "$URL/cards.json"
+}
+
+ensure_server() {
+  server_up && return 0
+  systemctl --user start swedish-server.service 2>/dev/null ||
+    setsid -f python3 "$PLUGIN/server.py" </dev/null >/dev/null 2>&1
+  for _ in $(seq 1 30); do
+    server_up && return 0
+    sleep 0.1
+  done
+  die "the local server did not start (is the app built? run: swedish build)"
+}
+
+scene_windows() {
+  hyprctl clients -j | jq -r --arg c "$CLASS" '.[] | select(.class == $c) | .address'
+}
+
+close_scene() {
+  local addr
+  for addr in $(scene_windows); do
+    hyprctl dispatch "hl.dsp.window.close({ window = \"address:$addr\" })" >/dev/null
+  done
+}
+
+# Under the bar, centred on the focused monitor, sized like a tall panel.
+place() {
+  local addr="$1" mon x y w h mx my mw mh top
+  mon=$(hyprctl monitors -j | jq -c '[.[] | select(.focused)][0]')
+  mx=$(jq -r .x <<<"$mon") my=$(jq -r .y <<<"$mon")
+  mw=$(jq -r "(.width / .scale) | floor" <<<"$mon") mh=$(jq -r "(.height / .scale) | floor" <<<"$mon")
+  top=$(jq -r '.reserved[1]' <<<"$mon")
+  w=$((mw < 900 ? mw - 24 : 780))
+  h=$((mh - top - 16))
+  ((h > 1080)) && h=1080
+  x=$((mx + (mw - w) / 2))
+  y=$((my + top + 8))
+  hyprctl dispatch "hl.dsp.window.float({ window = \"address:$addr\", action = \"enable\" })" >/dev/null
+  hyprctl dispatch "hl.dsp.window.resize({ window = \"address:$addr\", x = $w, y = $h })" >/dev/null
+  hyprctl dispatch "hl.dsp.window.move({ window = \"address:$addr\", x = $x, y = $y })" >/dev/null
+}
+
+open_scene() {
+  local mode="$1" what="$2" query addr ws
+  [[ $mode =~ ^(build|review)$ ]] || die "mode must be build or review"
+  [[ $what =~ ^[a-z0-9,-]+$ ]] || die "invalid card list"
+  ensure_server
+  close_scene
+  if [[ $mode == build ]]; then query="mode=build&card=$what"; else query="mode=review&cards=$what"; fi
+  mkdir -p "$PROFILE"
+  setsid -f chromium --user-data-dir="$PROFILE" --no-first-run --no-default-browser-check \
+    --hide-crash-restore-bubble --app="$URL/?omarchy&$query" </dev/null >/dev/null 2>&1
+  for _ in $(seq 1 100); do
+    addr=$(scene_windows | head -1)
+    [[ -n $addr ]] && break
+    sleep 0.1
+  done
+  [[ -n ${addr:-} ]] || die "the scene window did not open"
+  place "$addr"
+  ws="${SWEDISH_WS:-}"
+  if [[ -n $ws ]]; then
+    hyprctl dispatch "hl.dsp.window.move({ window = \"address:$addr\", workspace = \"$ws\", follow = false })" >/dev/null
+  else
+    hyprctl dispatch "hl.dsp.focus({ window = \"address:$addr\" })" >/dev/null
+  fi
+}
+
+# Practised today: a card built or reviewed since local midnight.
+practised_today() {
+  local midnight
+  midnight=$(($(date -d 'today 00:00' +%s) * 1000))
+  jq -e --argjson m "$midnight" \
+    '[.state.cards[]? | ((.builtAt // 0), (.ultimaRevisao // 0))] | any(. >= $m)' \
+    "$STATE/progress.json" >/dev/null 2>&1
+}
+
+notify() {
+  local hour
+  hour=$((10#$(date +%H)))
+  ((hour >= FROM_HOUR && hour < TO_HOUR)) || return 0
+  practised_today && return 0
+  # Wait for the click in the background, so the timer's run ends at once.
+  setsid -f bash -c '
+    action=$(notify-send -a "Svenska" -i preferences-desktop-locale --wait \
+      --action=open=Praticar "Svenska 🇸🇪" "Você ainda não fez nenhuma carta hoje.")
+    [[ $action == open ]] && omarchy-shell '"$PLUGIN_ID"' open
+  ' </dev/null >/dev/null 2>&1
+}
+
+build() {
+  cd "$REPO" || exit 1
+  npm ci --no-audit --no-fund && npm run build:omarchy
+}
+
+install_rule() {
+  local lua="$HOME/.config/hypr/hyprland.lua" marker="-- swedish scene window (omarchy/bin/swedish install)"
+  [[ -f $lua ]] || return 0
+  grep -qF -- "$marker" "$lua" && return 0
+  cat >>"$lua" <<EOF
+
+$marker
+-- The Swedish app's scene window: floating and opaque, docked under the bar.
+o.window("chrome-127\\\\.0\\\\.0\\\\.1__-Default", { float = true, tag = "-default-opacity", opacity = "1 1" })
+EOF
+  hyprctl reload >/dev/null 2>&1
+}
+
+install() {
+  local units="$HOME/.config/systemd/user" plugins="$HOME/.config/omarchy/plugins"
+  [[ -f $REPO/dist/index.html && -f $REPO/dist/cards.json ]] || build || die "build failed"
+  mkdir -p "$plugins" "$units" "$HOME/.local/bin"
+  ln -sfn "$PLUGIN" "$plugins/$PLUGIN_ID"
+  mkdir -p "$STATE"
+  ln -sfn "$REPO/dist/cards.json" "$STATE/cards.json"
+  ln -sfn "$HERE/swedish" "$HOME/.local/bin/swedish"
+
+  cat >"$units/swedish-server.service" <<EOF
+[Unit]
+Description=Swedish app local server (Omarchy extension)
+
+[Service]
+ExecStart=/usr/bin/python3 $PLUGIN/server.py
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+EOF
+  cat >"$units/swedish-reminder.service" <<EOF
+[Unit]
+Description=Remind to practise Swedish if no card was done today
+
+[Service]
+Type=oneshot
+ExecStart=$HERE/swedish notify
+EOF
+  cat >"$units/swedish-reminder.timer" <<EOF
+[Unit]
+Description=Hourly Swedish practice reminder
+
+[Timer]
+OnCalendar=*-*-* *:00:00
+Persistent=false
+
+[Install]
+WantedBy=timers.target
+EOF
+  systemctl --user daemon-reload
+  systemctl --user enable --now swedish-server.service swedish-reminder.timer
+  install_rule
+  omarchy plugin enable "$PLUGIN_ID" >/dev/null 2>&1 || true
+  echo "installed: plugin $PLUGIN_ID, swedish-server.service, swedish-reminder.timer"
+}
+
+case "${1:-}" in
+  open) open_scene "${2:-}" "${3:-}" ;;
+  close) close_scene ;;
+  notify) notify ;;
+  serve) exec python3 "$PLUGIN/server.py" ;;
+  build) build ;;
+  install) install ;;
+  *) sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//' >&2; exit 2 ;;
+esac
