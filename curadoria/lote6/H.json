@@ -1,0 +1,156 @@
+{
+  "phrases": [
+    {
+      "id": "jag-har-mycket-att-gora",
+      "sv": "Jag har mycket att göra.",
+      "pt": "Tenho muita coisa pra fazer.",
+      "pronuncia": "iá rrar MÜK-ke a IÖÖ-ra ('jag' = iá; 'har' com h soprado e R brando, rapidinho e sem força; 'mycket' com Ü curto — i com bico —, K dobrado e o T do fim mudo na fala: MÜK-ke; 'att' antes de verbo encolhe num 'a' rápido (muito sueco diz 'ó', igual ao 'och': 'mycke ó göra' — as duas formas passam); 'göra' começa com I de ioga (nunca G duro), Ö longo — língua de Ê, lábios em bico, um tiquinho aberto antes do R — e R de um toque só; força no MÜK e no IÖ)",
+      "contexto": "No trabalho quando alguém pede mais uma coisa ('Jag har mycket att göra just nu'), pra recusar o after-work sem ofender, pra explicar por que o e-mail ainda não foi respondido; em casa, na semana da mudança ou na correria antes do Natal.",
+      "porque": "É o 'tô atolado' educado do sueco: recusa sem precisar dizer não. E o molde 'mycket att + verbo' serve pra tudo: 'mycket att läsa', 'mycket att lära sig'."
+    },
+    {
+      "id": "jag-ar-pa-semester",
+      "sv": "Jag är på semester.",
+      "pt": "Estou de férias.",
+      "pronuncia": "iá é pô se-MÉS-ter ('jag' = iá; 'är' = é, curtinho; 'på' = pô, Ô fechado e sem força; 'semester' com a força no MÉS, É aberto e S comprido; o 'se-' é rapidinho e o '-ter' é fraco, com R brando no fim — e é -TER, não '-tre': não é 'semestre')",
+      "contexto": "Na resposta automática do e-mail em julho, no telefone quando o trabalho liga, explicando pro vizinho por que o carro some por três semanas. Em julho a Suécia para, e 'Hon är på semester' é a resposta pra metade das perguntas.",
+      "porque": "Férias são sagradas na Suécia (cinco semanas por lei, quatro seguidas no verão). E 'semester' é falso amigo: não é semestre, é férias — o mesmo de 'ta ut semester'."
+    },
+    {
+      "id": "vem-ar-ansvarig",
+      "sv": "Vem är ansvarig?",
+      "pt": "Quem é o responsável?",
+      "pronuncia": "VÉM é ÁN-svaa-ri? ('vem' com É aberto e curto e M comprido, de lábios fechados — nunca o 'vẽi' nasal de 'ele vem'; na fala ele emenda no 'är': VÉM-mé; 'ansvarig' com a força no ÁN — A aberto e N de língua, sem nasalar —, o S grudado no V, VA longo com uma segunda subida, R de um toque só, e o -g do fim fraquinho ou mudo)",
+      "contexto": "No trabalho ('Vem är ansvarig för projektet?'), numa loja ou obra quando algo dá errado, na escola ou na förskola pra saber com quem falar, ligando pra uma empresa. Em placas, avisos e e-mails aparece 'Ansvarig:' seguido de um nome.",
+      "porque": "Na Suécia tudo tem um responsável nomeado — até o café do escritório tem 'fikaansvarig' —, e achar essa pessoa é meio caminho pra resolver qualquer coisa. 'Ansvar' é primo do inglês 'answer': o responsável é quem responde."
+    },
+    {
+      "id": "jag-ar-sjukskriven",
+      "sv": "Jag är sjukskriven.",
+      "pt": "Estou afastado por doença (de licença médica).",
+      "pronuncia": "iá é RRÜÜK-skrii-ven ('jag' = iá; 'är' = é; 'sjuk' com o sopro do 'sj' — língua alta, lábios em bico, Ü longo, K seco — e a força principal; 'skriven' gruda direto, o S colado no K sem 'is' no meio, I longo com uma segunda força, e o '-ven' fraquinho com N de verdade)",
+      "contexto": "Pro chefe, pro RH, pra Försäkringskassan, pros colegas que perguntam por que você sumiu. 'Sjuk' é estar doente; 'sjukskriven' é estar oficialmente afastado com atestado médico (läkarintyg), em geral a partir do 8º dia de doença — às vezes por semanas, ou só em meio período ('sjukskriven på halvtid').",
+      "porque": "É a palavra do sistema: chefe, RH e Försäkringskassan vão perguntar 'Är du sjukskriven?'. E completa o 'Jag är sjuk idag': doente hoje é uma coisa, afastado com atestado é outra."
+    },
+    {
+      "id": "kan-vi-ta-det-pa-motet",
+      "sv": "Kan vi ta det på mötet?",
+      "pt": "Podemos tratar disso na reunião?",
+      "pronuncia": "ka vi TÁ dê pô MÖÖ-tet? ('kan vi' emenda e o N quase some: ka-vi, sem força; 'ta' com A longo e aberto, com força; 'det' = dê; 'på' = pô, Ô fechado e fraco; 'mötet' com a força no MÖ, Ö longo e fechado — língua de Ê, lábios de Ô em bico —, e T seco no fim, sem 'tchi': o -t é o artigo, 'A reunião')",
+      "contexto": "Quando alguém puxa um assunto grande no corredor, na fila do café ou no chat, e você quer discutir com o grupo todo; pra adiar sem dizer não. Primo de 'Kan vi skjuta på det?' (dá pra adiar?).",
+      "porque": "Decisão sueca se toma em grupo, e quase tudo vira pauta de möte. É a frase que te salva de decidir sozinho no corredor — educada, curta e ouvida toda semana em qualquer escritório."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-har-mycket-att-gora",
+      "elenco": "alfaiate do Nobel + máquina de costura de manivela IÔRA",
+      "ponte_sonora": "IÁ, RRÁR! MÜ-QUE... A IÔ-RA! (7 batidas: iá-rrar-MÜK-ke-a-IÖÖ-ra; tônicas no MÜ e, mais forte, no IÔ; IÁ é o 'jag' de sempre, aqui o grito de guerra do alfaiate arregaçando a manga — I de IOGA, nunca J chiado; RRÁR = a risada soprada, o MESMO RRÁR de 'Jag har ont i magen', 'Jag har ett möte' e 'Jag har tappat min plånbok': h soprado leve, A longo e R BRANDO no fim, que encosta direto no M — sem esse R sobra 'ha', outro verbo; aqui ele passa rapidinho, sem força; MÜ-QUE = o MUQUE de 'Tack så mycket', dito no beijinho de BICO que o alfaiate dá no próprio braço: língua de I e lábios de U, que é o y sueco; Ü CURTO, o K segurado um instante (é dobrado) e o -QUE fraquinho; o T de 'mycket' não aparece, igual na fala sueca; nunca 'MÚ-qui' de boca aberta; A = o 'att', só um 'a' rápido e sem força, colado no IÔ; IÔ-RA = o MESMO IÔRA de 'Jag måste göra en felanmälan' — o 'göra' de sempre — e o rangido iiiÖR da manivela de 'Det gör ont här' e 'Vad gör du i helgen?', agora com o -A do infinitivo: I de IOGA (nunca G duro nem J chiado), Ö LONGO com língua de Ê e lábios em bico, um tiquinho aberto por causa do R, e RA com R de um toque só, de 'cara'; sem o -A sobra 'gör' (faz), e depois de 'att' tem que vir o infinitivo)",
+      "historia": "Dezembro em Estocolmo, véspera do banquete do Nobel, e o alfaiate tem uma montanha de casacas pretas pra entregar até amanhã. Ele arregaça a manga com um grito de guerra, IÁ!, e solta a risada soprada de quem já surtou: RRÁR! Gira a manivela da velha máquina de costura tão depressa que o braço incha num MUQUE do tamanho de um melão — e ainda tasca um beijinho de bico no próprio muque: MÜ-QUE! A cada volta a máquina, que no ateliê todo mundo chama de IÔRA, range — a IÔ-RA, a IÔ-RA — e a montanha de casacas não baixa um centímetro: tenho muita coisa pra fazer.",
+      "cena": {
+        "descricao": "Num ateliê de alfaiate, um alfaiate baixinho de colete e fita métrica no pescoço gira a manivela dourada de uma máquina de costura antiga com um braço de muque gigante, ao lado de uma pilha de casacas pretas mais alta que ele.",
+        "partes": [
+          "piso de tábuas de madeira cor de mel",
+          "pilha altíssima e meio torta de casacas pretas dobradas (blocos pretos empilhados), mais alta que o alfaiate",
+          "manequim de costura creme num pé de madeira, vestindo meia casaca alinhavada",
+          "mesa de costura de madeira escura",
+          "máquina de costura antiga preta com frisos dourados em cima da mesa",
+          "roda de manivela dourada na lateral da máquina, com cabo vermelho",
+          "três arcos amarelos emissivos saindo da manivela (o rangido IÔ-RA)",
+          "corpo do alfaiate baixinho e redondo, camisa branca e colete cinza",
+          "cabeça calva com bigode preto em guidão e óculos redondos na ponta do nariz",
+          "fita métrica amarela pendurada no pescoço",
+          "braço direito de manga arregaçada com um muque gigante (esfera cor de pele), a mão na manivela"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-pa-semester",
+      "elenco": "carneiro de férias + Ester de boia pulando a cerca",
+      "ponte_sonora": "IÁÁ... É, PÔ... CE-MÉS-TER! (6 batidas: iá-é-pô-se-MÉS-ter; a força TODA no MÉS; IÁ É é o 'jag är' de sempre — o MESMO de 'Jag är trött', 'Jag är klar' e 'Jag är på väg' —, aqui o bocejo curtinho do carneiro: I de IOGA, nunca J chiado, e o É aberto e curto do 'är'; PÔ = o 'pô' brasileiro de boca redonda, Ô FECHADO, nunca 'pó' — o MESMO 'på' de 'Jag är på väg' (IÁ! É... PÔ, NAVEGA!) e de 'GRÁTIS, PÔ!' —, e aqui SEM força: 'É, PÔ...' sai num suspiro só; CE-MÉS-TER = as CEM ÉSTER de boia de 'Kan jag ta ut semester vecka 30?', mas EMENDADAS: o M do CEM passa pra Ester e os lábios FECHAM de verdade — o brasileiro tende a dizer 'sẽi-ÉS-ter', nasal e sem M, e aí o 'semester' perde o M; CE rapidinho e sem nasal, MÉS com o É ABERTO de 'Ester' e o S comprido, TER fraco com R brando; e é -TER, como em ÉSTER — nunca o '-tre' de 'semestre', que é o falso amigo)",
+      "historia": "Primeiro dia das férias de julho: o carneiro, que passou o ano inteiro sendo contado por gente com insônia, finalmente estende a toalha na praia, debaixo do guarda-sol. Boceja um IÁÁ curtinho, se espreguiça e suspira, satisfeito: É, PÔ... Só que carneiro não conta carneiro pra dormir: conta ESTER — uma Ester de boia e óculos escuros pula a cerquinha, depois outra, depois outra. 'Noventa e oito, noventa e nove...' — e na centésima ele apaga, emendando tudo num ronco só: CE-MÉSTER! Estou de férias.",
+      "cena": {
+        "descricao": "Numa praia, um carneiro de lã branca dorme de barriga pra cima numa toalha debaixo de um guarda-sol, enquanto uma Ester de maiô coral, boia e óculos escuros pula uma cerquinha branca ao lado de uma placa com o número 100.",
+        "partes": [
+          "chão de areia bege (disco largo)",
+          "faixa de mar azul-turquesa ao fundo",
+          "coqueiro de tronco marrom curvo com tufo de folhas verdes",
+          "guarda-sol listrado laranja e branco fincado na areia",
+          "toalha de praia retangular azul estendida na sombra",
+          "corpo do carneiro deitado de barriga pra cima, lã branca fofa (esferas agrupadas) e patinhas cinza-escuras pro alto",
+          "cabeça cinza-escura de olhos fechados, com chifres grossos enrolados em espiral, cor de areia",
+          "três letras Z azul-claras flutuando acima do focinho",
+          "cerquinha branca de três ripas fincada na areia, ao pé da toalha",
+          "Ester em pleno salto sobre a cerca: maiô coral, braços pra cima e óculos escuros",
+          "boia laranja-e-branca na cintura dela",
+          "placa de madeira em pé com o número '100'"
+        ]
+      }
+    },
+    {
+      "id": "vem-ar-ansvarig",
+      "elenco": "chacal sem-teto + avião da VARIG estacionado na toca",
+      "ponte_sonora": "VÉMMM?! É... ÁNNN-S-VÁRIG?! (5 batidas: VÉM-é-ÁN-sva-ri; força no VÉM e, a maior de todas, no ÁN; o VÁ ganha uma segunda subida, menor; VÉMMM = o 'VEM!' de chamar o culpado, o MESMO VÉM de 'Hallå, vem pratar jag med?', só que de BOCA FECHADA pelo osso: É ABERTO e curto, e um M DE VERDADE no fim, lábios colados e zumbindo — é isso que faz o 'vem' sueco (quem); o 'vem!' brasileiro solto sai 'vẽi', nasal e sem M, e o sueco não reconhece; na fala o M ainda escorrega pro É seguinte: VÉM-mé; É = o 'är' de sempre, o mesmo É de 'Jag är' — aberto e curto; ÁNNN-S = o choro do chacal: o 'ããann' de choramingar que todo brasileiro conhece, fechado numa fungada seca — mas ORAL: A ABERTO de 'pá' e um N de verdade, a ponta da língua grudada no céu da boca (o mesmo A oral com N de língua do ÁN-NAN de 'Har ni den i en annan storlek?'), nada do 'ã' solto de 'lã'; é aqui a pancada principal da palavra; o S é a fungada, um sopro SEM voz que FECHA a sílaba do ÁN, como o S de 'trans-' em 'transporte' — por isso não abre vogal nenhuma: ÁNS-VÁ, nunca 'ã... is-VÁ' nem 'ã-su-VÁ'; e sem pausa entre o S e o V; VÁRIG = a VARIG, a velha companhia aérea brasileira, dita como o Brasil sempre disse, VÁ-rig: A LONGO e R de um toque só, de 'caro'; o G do fim é fraquinho ou mudo, como o -ig de TRÊV-LI ('trevlig') e de RRÚNG-ri ('hungrig') — nunca 'VÁ-ri-gui'; choro + VARIG fazem UMA palavra: ÁN-sva-ri, 'ansvarig' (responsável))",
+      "historia": "Depois de um dia inteiro garimpando o deserto, o chacal volta pra toca com o melhor osso da semana atravessado na boca — e encontra um avião estacionado bem em cima dela, com a roda enfiada no buraco. Ele exige que o culpado apareça, VEM!, mas com o osso entre os dentes só sai VÉMMM?! No É a bocarra escancara e o osso despenca na areia; ele cai num choro de cortar o coração, um ganido que termina numa fungada, ÁNNN-S!, e só então lê na fuselagem azul e branca, bem em cima da toca: VARIG. Quem é o responsável por isso aqui?",
+      "cena": {
+        "descricao": "Nas dunas do deserto, um chacal dourado de orelhas enormes, de bocarra escancarada e com um osso caindo no ar, encara o nariz de um avião branco de faixa azul com 'VARIG' na fuselagem, cuja roda afundou na entrada da toca dele.",
+        "partes": [
+          "chão de dunas de areia laranja-clara (disco largo com ondulações)",
+          "toca do chacal: buraco escuro na duna com borda de areia amassada",
+          "três ossos brancos de desenho espalhados em volta da toca",
+          "trem de pouso: roda preta grossa com haste prateada, afundada na boca da toca",
+          "nariz de avião branco (cilindro + cone) com faixa azul-marinho e janelinhas pretas da cabine",
+          "letreiro 'VARIG' azul na lateral da fuselagem",
+          "corpo do chacal castanho-dourado em pé nas quatro patas, de frente pro avião",
+          "manto preto-acinzentado nas costas (o dorso do chacal)",
+          "cabeça de focinho fino com orelhas enormes e pontudas e a bocarra escancarada",
+          "osso branco de desenho caindo da boca, em pleno ar",
+          "rabo peludo de ponta preta, caído entre as patas"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-sjukskriven",
+      "elenco": "lobisomem gripado + atestado arranhado + venda nos olhos",
+      "ponte_sonora": "IÁÁ... É... RRÜÜK-SKRÍÍ-VEN(da)! (5 batidas: iá-é-RRÜÜK-skrii-ven; força principal no RRÜÜK e uma segunda no SKRÍÍ; IÁ É é o 'jag är' de sempre — aqui o uivo que falha: I de IOGA, nunca J chiado, e o É aberto e curto do 'är', o mesmo de 'Jag är trött' e 'Jag är sjuk idag'; RRÜÜK = o MESMO RRÜÜK do pirata de 'Jag är sjuk idag': o assoar do nariz, o 'sj' soprado com a língua alta e os lábios em BICO, Ü LONGO e K seco — nunca 'chuque', nem o chiado CHÜLD da minhoca de 'Jag är förkyld' (lá é resfriado; aqui é doente); SKRÍÍ = o arranhão da garra no papel — e o 'skri' de 'skriva', escrever: o atestado é ESCRITO; o S sai grudado no K do RRÜÜK, SEM 'is' no meio (RRÜÜK-SKRÍÍ, nunca 'rrük-is-crí'), R de um toque só e I LONGO; VEN = a VENDA cortada antes do -DA: fraquinho e sem força, com a ponta da língua já no céu da boca, que é o N — sem ele sobra 'skrive', que não existe; tudo numa palavra só: 'sjukskriven', afastado por doença)",
+      "historia": "Noite de lua cheia é expediente de lobisomem, mas hoje ele chegou à clareira gripado, de cobertor nas costas e arrastando a própria poltrona. Joga a cabeça pra trás pra uivar, IÁÁ..., e o uivo morre num É rouco. Assoa o focinho num lenço do tamanho de um lençol, RRÜÜK!, assina o próprio atestado com a garra, que risca o papel num SKRÍÍÍ!, e amarra uma VENDA nos olhos pra lua não pegar ele de jeito. Estou de licença médica.",
+      "cena": {
+        "descricao": "Numa clareira de floresta sob uma lua cheia enorme, um lobisomem gripado, enrolado num cobertor xadrez numa poltrona velha, com uma venda roxa nos olhos e um lenço gigante no focinho, ergue na garra um atestado riscado por três arranhões.",
+        "partes": [
+          "chão de clareira de grama verde-escura (disco largo)",
+          "três pinheiros escuros ao fundo (cones verde-noite)",
+          "lua cheia enorme amarelo-pálida emissiva atrás dos pinheiros",
+          "poltrona velha cor de vinho no meio da clareira",
+          "corpo do lobisomem peludo cinza-chumbo sentado na poltrona, enrolado num cobertor xadrez vermelho",
+          "cabeça de lobo com orelhas pontudas e focinho comprido de nariz vermelho inchado",
+          "venda roxa amarrada sobre os olhos",
+          "lenço branco gigante inflado saindo do focinho (cone branco)",
+          "pata erguida com garras compridas cor de osso",
+          "atestado: folha branca com cruz vermelha e três riscos de garra"
+        ]
+      }
+    },
+    {
+      "id": "kan-vi-ta-det-pa-motet",
+      "elenco": "touro nelore sueco + pepino gigante + meteoro na mesa em T",
+      "ponte_sonora": "CA-VI... TÁ, DÊ, PÔ... MÖÖ-TE-T? (7 batidas: ka-vi-TÁ-dê-pô-MÖÖ-tet; força no TÁ e, a maior, no MÖÖ; CA-VI é o MESMO 'kan vi' de 'Kan vi få notan, tack?' e 'Kan vi dela på notan?': CAVE lido à brasileira, KÁ-vi — aqui é o casco do touro CAVANDO o carpete; rápido e sem força, e o N de 'kan' some na fala, igual em sueco; TÁ = o 'ta' de sempre, o mesmo TÁ? DÊ! do canguru de 'Kan du ta det en gång till?': A ABERTO e longo, com força — é o verbo 'pegar'; DÊ, PÔ = o MESMO 'det på' da pata rica de 'Kan du skicka det på mejl?': DÊ fechado = 'det', PÔ de boca redonda, Ô FECHADO = 'på', nunca 'pó'; os dois rapidinhos e SEM força — aqui 'på' é só 'na', não é partícula de verbo; 'TÁ, DÊ, PÔ!' sai num resmungo só, o 'tá, me dá isso, pô!' do touro; MÖÖ-TE-T = o METE(oro) de 'Jag har ett möte' — a reunião de sempre —, com a força no MÊ dito de BICO, o beijinho da cientista: língua de Ê, lábios de Ô, LONGO — nunca o MÉT aberto e curto da META do galo de 'Jag är mätt', que é 'satisfeito'; o -TE fraquinho, de T duro, nunca 'tchi'; e um T SECO no fim, que é o artigo sueco colado, como o N de IÁK-KAN: möte = UMA reunião, mötet = A reunião (a de terça, a de sempre); a pista é a mesa da sala, que é em T; sem esse T fica 'på möte', que soa errado)",
+      "historia": "No corredor, um colega empurra pra cima do touro nelore um PEPINO gigante — o pepino da semana. O touro raspa o casco no carpete, CAVANDO um sulco — CA-VI, CA-VI —, pronto pra investir. Mas é um touro sueco: respira fundo, resmunga TÁ, DÊ, PÔ!, abocanha o pepino e marcha pra sala de reunião, onde o METEORO de 'Jag har ett möte' já espera na cabeceira da mesa em T. Ele deposita o problema bem na perna do T, diante do convidado de sempre: MÖÖ-TE-T. Isso a gente resolve na reunião.",
+      "cena": {
+        "descricao": "Na porta de uma sala de reunião, um touro nelore branco de corcova, com um pepino gigante atravessado na boca, ainda raspa o carpete com o casco, enquanto lá dentro um meteoro em brasa espera sentado na cabeceira de uma mesa em forma de T.",
+        "partes": [
+          "carpete cinza-azulado de escritório com um sulco cavado e uma nuvenzinha de poeira bege (esferas)",
+          "batente de porta de madeira aberto, separando o corredor da sala",
+          "mesa branca em formato de T (duas caixas)",
+          "três cadeiras cinza ao longo da perna do T",
+          "meteoro cinza-carvão cheio de crateras, com rachaduras laranja brilhando, sentado na cadeira da cabeceira",
+          "cauda de fogo laranja-amarela (cone) subindo do meteoro",
+          "corpo do touro nelore branco-acinzentado, com corcova alta no cangote e barbela pendurada",
+          "cabeça baixa com chifres curtos e grossos, cinza-escuros",
+          "pepino gigante verde-escuro atravessado na boca",
+          "casco dianteiro erguido, raspando o carpete",
+          "crachá azul de funcionário pendurado no pescoço por um cordão vermelho"
+        ]
+      }
+    }
+  ]
+}

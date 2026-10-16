@@ -1,0 +1,152 @@
+{
+  "phrases": [
+    {
+      "id": "jag-behover-ett-bankid",
+      "sv": "Jag behöver ett BankID.",
+      "pt": "Preciso de um BankID.",
+      "pronuncia": "iá be-RRÖÖ-ver et BÁNK-i-dê ('jag' = iá, o G não soa; 'behöver' com o 'be-' fraquinho, o h soprado e a força no HÖ — Ö LONGO, lábios de Ô com língua de Ê —, e o -ver fraco mas com R brando: sem ele vira 'behöva', o infinitivo; 'ett' = ÉT, É aberto e curto, T seco, que já emenda no R de 'behöver': be-RRÖ-ve-RÉT; 'BankID' com a força no BANK — A curto e aberto, sem o 'ã' fanhoso do português, a língua fechando no fundo da boca (NG) e o K seco — e o 'ID' soletrado, i-DÊ, com Ê fechado e um acento menor no fim)",
+      "contexto": "No banco (Swedbank, Handelsbanken, SEB, Nordea), ao abrir conta ou pedir o BankID no celular — normalmente com personnummer e documento com foto (ID-kort ou passaporte). Também quando um site como 1177, Skatteverket ou Försäkringskassan só deixa entrar 'med BankID' e você ainda não tem.",
+      "porque": "Sem BankID quase nada funciona na Suécia: Swish, banco pela internet, 1177, declaração de imposto, até contrato de aluguel. E o molde 'Jag behöver ett/en ___' serve pra qualquer pedido no balcão: ett kvitto, en tolk (um intérprete), en ny tid."
+    },
+    {
+      "id": "hur-lang-tid-tar-det",
+      "sv": "Hur lång tid tar det?",
+      "pt": "Quanto tempo demora?",
+      "pronuncia": "rrür lóng TÍÍD tar dê? ('hur' com h soprado, Ü de bico — lábios de U, língua de I — e o R brando quase sumindo antes do L; 'lång' com Ó ABERTO e CURTO de 'só' — nunca o 'lõ' nasal de 'longo' — e o NG no fundo da boca, sem 'gui'; 'tid' com T seco de 'tatu' (nunca 'tchi'), I LONGO e D leve; a força da pergunta fica no LÓNG e no TÍD; 'tar det' sai num bloco só e fraco: o R de 'tar' enrola a língua pra trás e se funde no D — é o 'rd' sueco, um 'ta-dê' de língua dobrada —, e 'det' = dê, sem T)",
+      "contexto": "No servicekontor do Skatteverket, no Migrationsverket, na polícia (passaporte), no banco ou na oficina: quanto tempo leva o processo, o atendimento ou o conserto. A resposta costuma vir no mesmo molde: 'Det tar ungefär två veckor' (leva umas duas semanas).",
+      "porque": "Na burocracia sueca tudo tem prazo de processamento (handläggningstid), e essa pergunta te poupa de ligar dez vezes. E 'det tar…' serve pra tudo: det tar en timme, det tar tid (leva tempo)."
+    },
+    {
+      "id": "vilka-papper-behover-jag",
+      "sv": "Vilka papper behöver jag?",
+      "pt": "De quais papéis eu preciso?",
+      "pronuncia": "VÍL-ka PÁP-per be-RRÖÖ-ver iá? ('vilka' com a força no VIL, I curto e L de verdade — língua no céu da boca, nunca 'viu' —, K duro e o -ka fraquinho; 'papper' com a força no PAP, A curto, o P segurado um instante (é dobrado) e o -per fraco com R brando — sem esse R vira 'pappa', pai; 'behöver jag' = be-RRÖÖ-ver-iá: o mesmo 'behöver' de 'Jag behöver ett BankID', com o 'jag' depois do verbo porque é pergunta, fraquinho no fim)",
+      "contexto": "Antes de ir ao Skatteverket (personnummer, ID-kort, mudança de endereço), ao Migrationsverket, ao banco ou à matrícula da escola — por telefone ou no balcão, pra não chegar faltando documento. A resposta costuma vir em lista: pass, personbevis, anställningsavtal (contrato de trabalho)…",
+      "porque": "Na Suécia, quem chega sem o papel certo volta pra casa — perguntar antes economiza a viagem. 'Papper' é o jeito do dia a dia (e não muda no plural: ett papper, två papper); no formulário oficial você vai ler 'handlingar'."
+    },
+    {
+      "id": "kan-jag-boka-tid-pa-natet",
+      "sv": "Kan jag boka tid på nätet?",
+      "pt": "Posso marcar horário pela internet?",
+      "pronuncia": "ka-niá BÚÚ-ka TÍÍD pô NÉÉ-tet? ('kan jag' = ka-niá, o G mudo; 'boka' com U FECHADO e longo — o 'o' longo sueco, nunca o Ô de 'boca' — e o -ka fraco; 'tid' com T seco, I longo e D leve; 'på' = PÔ fechado e sem força; 'nätet' com a força no NÄ — É bem aberto e LONGO — e o -tet fraco, T duro nas duas pontas: é 'nät' (rede, internet) + o artigo '-et' colado no fim; a frase sobe no TÍD e no NÄ)",
+      "contexto": "Ao telefone ou no balcão da vårdcentral, do Skatteverket, da polícia (passaporte), do Migrationsverket, do dentista ou do cabeleireiro — quase tudo na Suécia tem 'boka tid' online, muitas vezes com BankID. A resposta comum: 'Ja, du kan boka via vår webbplats' ou 'i appen'.",
+      "porque": "Marcar pela internet evita a fila do telefone e a conversa difícil em sueco. E 'på nätet' (na internet) serve pra tudo: betala på nätet, beställa på nätet (encomendar), läsa på nätet."
+    },
+    {
+      "id": "jag-har-fatt-ett-brev-fran-skatteverket",
+      "sv": "Jag har fått ett brev från Skatteverket.",
+      "pt": "Recebi uma carta do Skatteverket.",
+      "pronuncia": "iá rrar FÓT et BRÊÊV frôn SKÁT-te-vär-ket ('jag' = iá; 'har' com h soprado e R brando — na fala vem fraquinho, mas o R fica: é ele que faz o presente; 'fått' com Ó ABERTO e CURTO de 'pó' e T seco — é o particípio de 'få', receber —, já emendado no 'ett': fó-TÉT; 'brev' com Ê FECHADO e LONGO de 'você' e V de verdade no fim, a palavra mais forte da frase; 'från' = FRÔN, Ô fechado, N na língua, sem nasal; 'Skatteverket' com a força no SKAT — S colado no K, sem 'is' na frente, A curto e T segurado —, o -te fraquinho, um acento menor no VÄR, com o Ä bem aberto, quase A, e o -ket fraco com T no fim)",
+      "contexto": "Contando no trabalho, pro parceiro ou pra um amigo sueco quando chega aquele envelope — ou ao ligar pro próprio Skatteverket, que na Suécia é a Receita e o cartório ao mesmo tempo (imposto, personnummer, endereço, ID-kort). Hoje a carta também pode chegar no Kivra, a caixa de correio digital.",
+      "porque": "Carta do Skatteverket ninguém ignora, e essa frase abre a conversa pra pedir ajuda: 'Kan du hjälpa mig att förstå det?'. E 'Jag har fått…' (recebi…) serve pra muita coisa: fått jobbet, fått svar, fått en räkning (uma conta)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-behover-ett-bankid",
+      "elenco": "orangotango sem conta + letreiro BANCO sem o O + letras I e D de néon",
+      "ponte_sonora": "IÁ! BERRÔ: VER! ÉT(a)! BANC(o)... I-DÊ! (8 sílabas: iá-be-RRÖÖ-ver-ét-BANK-i-dê; força no RRÖ e, maior, no BANK, com um acento menor no DÊ; IÁ é o 'jag' de sempre, I de IOGA, nunca o J chiado de 'já'; BERRÔ: VER! = BERROU 'VER!' num fôlego só, o MESMO be-RRÖ-ver de 'Det är akut, jag behöver komma in idag' e do ciclope de 'Jag behöver träffa en läkare': o BE fraquinho, o RR soprado leve (é o h) e a força no RRÔ — sem o U do 'ou' e de BICO: lábios de Ô com língua de Ê, longo, o truque do TRÖTT e do MÖÖ-te; o VER vem grudado e sem força, mas com o R brando no fim, que já escorrega pro ÉT: ve-RÉT — sem esse R sobra 'behöva', o infinitivo; ÉT = o ÉTA! de espanto com o A engolido, o MESMO ÉT do ÉTER de 'Jag har ett möte' e do burro de 'Ett bord för två': É ABERTO de 'pé', curto, T seco, nunca 'étchi' — e é ÉT, não o EN do dedinho, porque 'BankID' é palavra de 'ett'; BANC(o) = o letreiro BANCO sem o O que caiu: a força toda no BAN, A ABERTO de 'cá', sem o 'ã' fanhoso de 'banco' — a língua só fecha lá no fundo, no NG de 'bang' — e o C estala seco: BANK; I-DÊ = as duas letras de néon penduradas no lugar do O, lidas com o nome que elas têm no alfabeto português: I + DÊ — e é exatamente assim que o sueco soletra 'ID': i-DÊ, com Ê FECHADO e longo, nunca o 'ái-dí' do inglês)",
+      "historia": "Na agência, a moça do caixa avisa: sem BankID, o orangotango não pode nem VER o próprio saldo. Ele bate no peito — IÁ! — e BERROU: VER!, tão alto que o O do letreiro BANCO, lá na fachada, despenca e se espatifa na calçada: ÉTA! Aí ele tem uma ideia: escala a fachada com aqueles braços compridíssimos e pendura, no buraco do O, duas letras de néon azul — um I e um D. BANC... I-DÊ: se sem BankID nada anda na Suécia, ele mesmo monta o dele — porque ele precisa de um BankID.",
+      "cena": {
+        "descricao": "Na fachada de pedra de um banco, um orangotango laranja de boca escancarada num berro, pendurado por um braço comprido no letreiro dourado BANC, encaixa um D de néon azul ao lado de um I já aceso, enquanto o O dourado jaz rachado na calçada.",
+        "partes": [
+          "calçada de lajotas cinza-claras",
+          "fachada de pedra bege com porta de vidro escura no centro",
+          "letreiro de letras douradas grossas BANC acima da porta, com um espaço vazio no fim",
+          "letra O dourada rachada ao meio, caída na calçada",
+          "letra I de néon azul aceso, já pendurada logo depois do C",
+          "corpo do orangotango laranja-ferrugem, de pelo comprido, pendurado de lado na fachada",
+          "braço esquerdo comprido agarrado à barra do letreiro",
+          "braço direito esticado encaixando uma letra D de néon azul ao lado do I",
+          "cabeça larga com as bochechas achatadas cinza-escuras e a boca escancarada no berro",
+          "três anéis cinza de berro saindo da boca"
+        ]
+      }
+    },
+    {
+      "id": "hur-lang-tid-tar-det",
+      "elenco": "garça na fila + bandeira quadriculada de parTÍDa + pôr do sol na janela",
+      "ponte_sonora": "RRÜR?! LÓNG... (par)TÍD... TAR-DÊ? (5 sílabas: rrür-LÓNG-TÍÍD-tar-dê; força no LÓNG e no TÍD, e o TAR-DÊ sai junto e fraquinho; RRÜR é o 'hur' de sempre — o MESMO de 'Hur kommer jag till Storgatan?', 'Hur bokar man tvättstugan?' e 'Hur långt är det?' —, aqui o bufo que sai pelo BICO da garça: RR soprado leve (é o h), Ü DE BICO — lábios de U, língua de I, nunca o U chapado de 'urso' — e o R brando do fim quase some, derretendo no L; LÓNG = o pescoço LONGUÍSSIMO, o MESMO LONG da Sâmara de 'Kan du prata lite långsammare?', dito como o 'long' de 'long neck': Ó ABERTO e CURTO de 'só', nunca o 'lõ' nasal e fechado de 'longo', e o NG no fundo da boca, sem soltar 'gui'; e aqui o LONG vem SEM T colado: o T que soa logo depois já é o começo do TÍD — LONG-T, com o T grudado, é a trilha do hamster de 'Hur långt är det?' (longe); pescoço LONG + parTÍD é TEMPO; TÍD = o parTÍD(a) da bandeira quadriculada, a MESMA ponte de 'Har du tid en stund?', 'Smaklig måltid' e 'Jag skulle vilja boka en tid': só o pedaço forte, T SECO de 'tatu' (nunca 'tchi'), I LONGO e D leve; TAR-DÊ = a TARDE do pôr do sol, mas dita do jeito que o sueco emenda 'tar det': o TAR com o R CAIPIRA de 'porta', a língua enrolada pra trás que cai direto no D — é o 'rd' sueco, o mesmo do BÚR'D de 'Ett bord för två' —, e o DÊ com D DURO e Ê FECHADO, o DÊ do 'det' de sempre: pense em 'tar' + 'dê', duas pecinhas coladas, e não na palavra 'tarde' do dia a dia, que no Rio e em São Paulo sai 'TÁH-dji', soprando o R e chiando o D; o R não pode sumir — sem ele sobra 'ta det', que é 'pega isso!' —, mas o TARDE inteiro vem fraco: a pergunta já gastou a força no LÓNG TÍD)",
+      "historia": "A garça pegou senha às oito da manhã no Skatteverket e, às quatro da tarde, o painel continua parado no número 1. Ela solta um bufo pelo bico — RRÜR?! — e estica o pescoço LONG, LONGUÍSSIMO, por cima dos postes da fila inteira, até a linha de largada lá na frente: a bandeira quadriculada da parTÍDa continua erguida, o atendimento nem largou! Devagar, ela recolhe o pescoço e olha pela janela: o sol está se pondo, já é TARDE. E ela só quer saber uma coisa: quanto tempo, afinal, isso vai demorar?",
+      "cena": {
+        "descricao": "Numa sala de espera, uma garça branca em pé numa perna só estica o pescoço longuíssimo, quase na horizontal, por cima dos postes de fila até uma linha de largada pintada no chão, onde uma bandeira quadriculada continua erguida, enquanto pela janela o sol laranja se põe.",
+        "partes": [
+          "piso de linóleo cinza-azulado",
+          "parede creme ao fundo com uma janela larga mostrando um sol laranja meio afundado no horizonte",
+          "painel de senha preto na parede com o número 001 em vermelho",
+          "três postes de fila prateados ligados por fita vermelha em zigue-zague",
+          "linha de largada quadriculada preta e branca pintada no chão, na frente da fila",
+          "bandeira quadriculada preta e branca erguida num mastro fincado ao lado da linha",
+          "corpo da garça branca, esguio, em pé numa perna amarela comprida",
+          "a outra perna dobrada e erguida, segurando um papelzinho de senha",
+          "pescoço branco longuíssimo esticado quase na horizontal por cima dos postes, até a bandeira",
+          "cabeça da garça com bico amarelo comprido entreaberto e dois anéis cinza do bufo saindo dele"
+        ]
+      }
+    },
+    {
+      "id": "vilka-papper-behover-jag",
+      "elenco": "peru soterrado no guichê + montanha de formulários + pá vermelha",
+      "ponte_sonora": "VIL CA(nalha)... PÁ! PER(u)... BERRÔ: VER, IÁ? (8 sílabas: VÍL-ka-PÁP-per-be-RRÖÖ-ver-iá; força no VIL, no PÁ e no RRÔ; VIL = o VILÃO, o MESMO VIL da doninha de 'Vilket spår går tåget från?' (VIL QUE): I CURTO e L DE VERDADE, ponta da língua no céu da boca, nunca 'viu' — e, como lá, com um K logo atrás: é o K que separa 'vilka'/'vilket' (quais/qual) do 'vill' (quer) da bruxa vil e do VÍL-SE (perdido) do gótico de 'Jag har gått vilse'; CA = o xingamento que a pilha de papel cortou — 'VIL CA...nalha!' —: só o CA, K duro e SEM força, fraquinho do jeito que ele já é dentro de 'caNAlha'; PÁ = a PÁ do peru, com toda a força, A aberto e curto — nunca o PÔ fechado de 'på' —, e o P segurado um instante antes do próximo: é o P dobrado de 'papper'; PER(u) = o PERU sem o U, fraquinho, E curto e R brando no fim — é o -per de 'papper', e o R não cai: sem ele sobra 'pappa', que é PAI; BERRÔ: VER = BERROU 'VER!', o MESMO 'behöver' de 'Jag behöver ett BankID', de 'Det är akut' e do ciclope de 'Jag behöver träffa en läkare': BE fraquinho, RR soprado leve (é o h), força no RRÔ de BICO — lábios de Ô com língua de Ê, longo, sem o U do 'ou' —, e o VER fraco, com o R brando; IÁ = o 'jag' de sempre, I de IOGA, nunca J chiado, e fraquinho no fim: na pergunta ele vem DEPOIS do verbo)",
+      "historia": "No guichê do Skatteverket, o peru pergunta quais papéis precisa trazer, e pela janelinha alguém responde com uma avalanche: formulário em cima de formulário, até soterrá-lo. Ele estufa o papo vermelho e começa a xingar — VIL CA...! —, mas um bloco de papel despenca no bico e corta o 'canalha' no meio. Então agarra uma PÁ e cava — PÁ! PÁ! —, até o PERU pôr a cabeça pra fora. Aí BERROU pra janelinha: VER! IÁ? Ele quer VER, numa lista, de quais papéis precisa.",
+      "cena": {
+        "descricao": "Diante do guichê do Skatteverket, um peru bronzeado de papo vermelho estufado emerge até o peito de uma montanha de formulários brancos, com uma pá vermelha erguida na asa e o bico escancarado num berro para a janelinha.",
+        "partes": [
+          "piso de linóleo bege",
+          "parede de guichê de madeira clara com uma janelinha de vidro e a fenda de passar papel",
+          "montanha de formulários brancos (cone largo de folhas empilhadas) em frente ao guichê",
+          "quatro folhas brancas soltas voando no ar acima da montanha",
+          "corpo do peru marrom-bronze saindo da montanha até o peito",
+          "cauda em leque aberto atrás, listrada de marrom e creme",
+          "cabeça azulada e pelada com o papo e a carúncula vermelho-vivo estufados",
+          "bico amarelo escancarado no berro, virado pra janelinha",
+          "asa erguida segurando uma pá de cabo de madeira e lâmina vermelha, com folhas espetadas nela",
+          "três anéis cinza de berro saindo do bico em direção à janelinha"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-boka-tid-pa-natet",
+      "elenco": "bobo da corte artilheiro + cetro de cana + gol em forma de boca gigante",
+      "ponte_sonora": "CA-NIÁ! BÚCA... (par)TÍD... PÔ, NÉ-TET? (8 sílabas: ka-niá-BÚÚ-ka-TÍÍD-pô-NÉÉ-tet; força no BÚ, no TÍD e no NÉ, a maior no TÍD; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag betala med kort?' e 'Kan jag byta den här?', emendado — I de IOGA, nunca o J chiado de 'canja'; BÚCA = a BOCA dita à caipira, 'BÚ-ca', a MESMA de 'Jag skulle vilja boka en tid' e o BÚ de 'Hur bokar man tvättstugan?': U FECHADO e LONGO — é o 'o' longo sueco —, nunca o Ô do 'bôca' português, que puxa pra outra vogal; o -ca fraquinho, K duro; TÍD = o parTÍD(a) — aqui, a própria partida de futebol —, a MESMA ponte de 'tid' de 'Har du tid en stund?' e 'Hur lång tid tar det?': T SECO de 'tatu', nunca 'tchi', I LONGO e D leve; PÔ = o 'pô!' brasileiro, Ô FECHADO, o mesmo 'på' de 'Grattis på födelsedagen' e 'Kan du skicka det på mejl?', sem força; NÉ-TET = a NET + o ECO dela: NET é a rede do gol e a internet ao mesmo tempo ('caiu a net') — no sueco também, 'nät' é rede de gol, de pesca e a internet —, com NÉ de É bem ABERTO e LONGO, como o 'né?' esticado de quem duvida, e T DURO, sem o 'tchi' que o português gruda no fim; o -tet é o ECO que a garganta gigante devolve, mais fraco — 'NET... et!' —: É aberto curtinho e T seco, colado no T da NET, NÉÉ-tet, duas sílabas com a força só no NÉ; esse -ET é o artigo 'a' colado DEPOIS da palavra, a mesma vogal e o mesmo T do ÉT de 'ett': 'ett nät' é UMA rede, 'nätet' é A rede — sem o eco sobra 'nät', e 'på nät' não se diz; e nunca o 'é-TÊ' do extraterrestre; e não é a rede de dormir da lebre de 'Kanske senare', que só empresta o sopro RRE: aqui a palavra é NET)",
+      "historia": "Último segundo da final no pátio do castelo: o bobo da corte, sem chuteira, ergue o cetro de CANA feito taco de hóquei e grita CA-NIÁ!, e o gol do rei é uma BÚCA gigante — uma boca de lábios vermelhos escancarada no meio do gramado. Ele rebate antes do apito que encerra a parTÍDa, a bola some pela boca e estufa a NET lá no fundo da garganta — PÔ, NET! —, e a garganta gigante devolve o eco, mais fraquinho: ...et! Em português, marcar gol e marcar horário é o mesmo verbo — e o bobo, ofegante, pergunta ao rei se a audiência dele também dá pra marcar assim: pela net.",
+      "cena": {
+        "descricao": "No gramado de um pátio de castelo, um bobo da corte de chapéu de guizos acaba de rebater a bola com um cetro de cana-de-açúcar, e a bola afunda na net branca esticada dentro de um gol em forma de boca gigante de lábios vermelhos, que devolve dois anéis de eco.",
+        "partes": [
+          "gramado verde do pátio com uma linha branca de grande área",
+          "muralha de pedra cinza ao fundo com uma bandeirola vermelha no alto",
+          "gol em forma de boca gigante: lábios vermelhos carnudos abertos em arco, de pé no gramado",
+          "net branca quadriculada esticada no fundo da boca, estufada pra trás",
+          "bola de futebol branca e preta afundada na net",
+          "corpo do bobo da corte com roupa de losangos vermelhos e amarelos, inclinado no fim do golpe",
+          "chapéu de bobo de três pontas moles (vermelha, amarela e verde) com guizos dourados nas pontas",
+          "sapatos de bico enrolado pra cima",
+          "cetro de cana-de-açúcar verde com nós, erguido no fim do movimento, com uma cabecinha de bobo na ponta",
+          "três linhas de movimento brancas entre o bobo e a bola",
+          "dois anéis de eco cinza-claros saindo da boca-gol, o segundo menor e mais apagado"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-fatt-ett-brev-fran-skatteverket",
+      "elenco": "cangaceiro taxado + fronha do saque com cascata de moedas + foto e carta breve",
+      "ponte_sonora": "IÁ, RRÁR! FÓT(o)-ÉT(a)! BRÊV(e)... FRÔN(ha)... (ca)SCÁTA... VER QUE T(esouro)! (10 sílabas: iá-rrar-FÓT-et-BRÊÊV-frôn-SKÁT-te-vär-ket; força no FÓT, no BRÊÊV e, maior, no SKÁT, com um acento menor no VÄR; IÁ, RRÁR = o 'jag har' de sempre, a gargalhada soprada da hiena de 'Jag har tappat min plånbok' e do pavão de 'Jag har missat bussen': I de IOGA, h soprado, A longo e R BRANDO no fim — sem ele sobra 'ha', outro verbo; FÓT(o) = a FOTO sem o -o: Ó ABERTO e CURTO de 'pó' e T seco — é o 'fått' (recebido); com o Ô fechado e sem T vira o FÔ de 'Kan jag få en påse?', o infinitivo; o T já emenda no ÉT: fó-TÉT; ÉT(a) = o ÉTA! de espanto com o A engolido, o MESMO ÉT do ÉTER de 'Jag har ett möte' e de 'Jag behöver ett BankID': É aberto, curto, T seco; BRÊV(e) = a carta BREVE, de uma linha só, sem o -e e com Ê FECHADO de 'você', e LONGO: o português abre ('em BRÉ-vi'), o sueco fecha a boca, BRÊÊV; o V do fim é de verdade, dente no lábio; FRÔN(ha) = a FRONHA sem o -nha, o MESMO FRÔN de 'Jag kommer från Brasilien' e 'Vilket spår går tåget från?': Ô FECHADO e N batido na língua, sem a nasal de 'fronha'; (ca)SCÁTA = a CASCATA de moedas sem o CA da frente: o S gruda direto no K — nada de 'is-cá' —, força no SKÁ, A curto, o T segurado um instante, e o -a do fim já sai fraquinho como o -e sueco: SKÁT-te; o truque pra não nascer um 'is' na frente: diga 'cascata' com o primeiro CA só na boca, sem voz, e solte a voz no SCÁ; é o 'skatt', que em sueco é IMPOSTO e TESOURO ao mesmo tempo; VER QUE T(esouro) = a linha única da carta, 'queremos VER QUE TESOURO é esse' — e 'skatt' é justamente tesouro: o VER com É bem aberto, quase VÁR (é o ä antes de R, o mesmo É escancarado do RRÉR de 'här'), com o acento menor, o QUE fraquinho e com E mesmo — KET, nunca 'ki' —, e do TESOURO só o T, seco, sem vogal depois: VÄR-ket; não é o VER do berro de 'behöver' (BERRÔ: VER), que vem depois do BERRÔ e sem força)",
+      "historia": "Na caatinga, o cangaceiro solta a gargalhada — IÁ, RRÁR! — e rasga o envelope achando que é fã pedindo FOTO. E cai uma FOTO mesmo — ÉTA! —, presa a uma carta BREVE, de uma linha só. Na foto, tirada lá de cima, está a FRONHA do último saque dele, despejando uma CASCATA de moedas de ouro, e a linha da carta diz: 'Queremos VER QUE TESOURO é esse.' Chegou carta do Skatteverket — em sueco, 'skatt' é tesouro e também imposto.",
+      "cena": {
+        "descricao": "Na caatinga, um cangaceiro de chapéu de couro em meia-lua, boca aberta de espanto, segura numa mão uma carta curtinha e na outra uma foto, enquanto a seus pés uma fronha estufada despeja uma cascata de moedas de ouro.",
+        "partes": [
+          "chão de terra rachada bege-alaranjada",
+          "mandacaru verde de três braços ao fundo",
+          "fronha branca estufada caída no chão, de boca aberta",
+          "cascata de moedas douradas (discos) escorrendo da boca da fronha em arco até o chão",
+          "corpo do cangaceiro de gibão de couro marrom com duas cartucheiras cruzadas no peito",
+          "chapéu de couro marrom em meia-lua, de aba virada pra cima com uma estrela dourada",
+          "rosto de bigode preto e boca aberta de espanto",
+          "mão esquerda erguida segurando uma carta branca pequena com uma única linha escrita",
+          "mão direita segurando uma foto quadrada de moldura branca",
+          "envelope azul rasgado caído no chão"
+        ]
+      }
+    }
+  ]
+}
