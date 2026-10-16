@@ -23,23 +23,42 @@ export function groupStarts(scene: CardScene): { group: string; at: number }[] {
 
 /**
  * Pontos de pausa do modo passo a passo: fins dos blocos contínuos de
- * animação (nenhuma peça fica congelada no meio de um movimento).
+ * animação (nenhuma peça fica congelada no meio de um movimento) e, dentro de
+ * um bloco, o instante logo antes de cada legenda nova — senão a legenda
+ * anterior sumia antes de dar tempo de ler.
  */
 export function stepTargets(scene: CardScene): number[] {
   const intervals = scene.build
     .map((s) => [s.at, s.at + s.dur] as const)
     .sort((a, b) => a[0] - b[0])
-  const targets: number[] = []
+  const blockEnds: number[] = []
   let end = -1
   for (const [a, b] of intervals) {
     if (a > end + 1e-6) {
-      if (end >= 0) targets.push(end)
+      if (end >= 0) blockEnds.push(end)
       end = b
     } else {
       end = Math.max(end, b)
     }
   }
-  if (end >= 0) targets.push(end)
+  if (end >= 0) blockEnds.push(end)
+
+  const captionStarts = [...new Set(scene.build.filter((s) => s.caption).map((s) => s.at))].sort(
+    (a, b) => a - b,
+  )
+  const targets: number[] = []
+  let from = 0
+  for (const blockEnd of blockEnds) {
+    // A primeira legenda do trecho aparece com o clique; as seguintes ganham
+    // uma pausa logo antes de aparecer (captionAt mostra a legenda em t >= at).
+    const inside = captionStarts.filter((at) => at >= from - 1e-6 && at < blockEnd - 1e-6)
+    for (const at of inside.slice(1)) {
+      const stop = at - 1e-3
+      if (stop > Math.max(from, targets.at(-1) ?? 0) + 1e-3) targets.push(stop)
+    }
+    targets.push(blockEnd)
+    from = blockEnd
+  }
   return targets
 }
 
