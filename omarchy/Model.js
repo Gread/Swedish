@@ -14,6 +14,16 @@ function parseCards(text) {
   }
 }
 
+// Labels for the decks: { temas: { code: name }, niveis: { 1: name } }.
+function parseLabels(text) {
+  try {
+    var data = JSON.parse(text)
+    return { temas: data.temas || {}, niveis: data.niveis || {} }
+  } catch (e) {
+    return { temas: {}, niveis: {} }
+  }
+}
+
 // The app's persisted zustand store: { state: { cards: { id: progress } } }.
 function parseProgress(text) {
   try {
@@ -135,4 +145,65 @@ function counts(cards, progress, now) {
     if (s === "learned") learned++
   }
   return { total: cards.length, built: built, due: due, learned: learned }
+}
+
+// ---- Decks: lote, tema and nível. The saved choice lists what is switched
+// OFF, so a deck that appears later (a new batch or theme) starts enabled.
+
+function parseDecks(text) {
+  var off = { lote: [], tema: [], nivel: [] }
+  try {
+    var data = JSON.parse(text)
+    for (var k in off) if (data && data.off && data.off[k] instanceof Array) off[k] = data.off[k]
+  } catch (e) {}
+  return off
+}
+
+function isActive(card, off) {
+  return off.lote.indexOf(card.lote) === -1
+    && off.tema.indexOf(card.tema) === -1
+    && off.nivel.indexOf(card.nivel) === -1
+}
+
+function activeCards(cards, off) {
+  var out = []
+  for (var i = 0; i < cards.length; i++) if (isActive(cards[i], off)) out.push(cards[i])
+  return out
+}
+
+// Ids of the cards to review now, comma separated (for bin/swedish).
+function dueIds(cards, progress, now) {
+  var ids = []
+  for (var i = 0; i < cards.length; i++) {
+    if (isDue(progressOf(progress, cards[i].id), now)) ids.push(cards[i].id)
+  }
+  return ids.join(",")
+}
+
+// The decks of one kind with their card counts, in display order.
+function deckList(cards, kind, labels) {
+  var counts = {}, order = []
+  for (var i = 0; i < cards.length; i++) {
+    var v = cards[i][kind]
+    if (v === undefined) continue
+    if (!(v in counts)) { counts[v] = 0; order.push(v) }
+    counts[v]++
+  }
+  if (kind !== "tema") order.sort(function(a, b) { return a - b })
+  else if (labels) {
+    var known = Object.keys(labels)
+    order.sort(function(a, b) { return known.indexOf(a) - known.indexOf(b) })
+  }
+  return order.map(function(v) {
+    var label = kind === "lote" ? "Lote " + v : (labels && labels[v]) || String(v)
+    return { kind: kind, value: v, label: label, count: counts[v] }
+  })
+}
+
+function toggled(off, kind, value) {
+  var copy = { lote: off.lote.slice(), tema: off.tema.slice(), nivel: off.nivel.slice() }
+  var list = copy[kind], at = list.indexOf(value)
+  if (at === -1) list.push(value)
+  else list.splice(at, 1)
+  return copy
 }

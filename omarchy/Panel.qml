@@ -31,6 +31,11 @@ Panel {
   readonly property real gap: Style.space(6)
 
   property var cards: []
+  property var labels: ({ temas: {}, niveis: {} })
+  // Decks switched off (Model.parseDecks), saved in decks.json.
+  property var off: ({ lote: [], tema: [], nivel: [] })
+  property bool showDecks: false
+  readonly property var active: Model.activeCards(root.cards, root.off)
   property var progress: ({})
   property var days: []
   // Re-evaluated every minute so "today" rolls over at midnight.
@@ -39,11 +44,11 @@ Panel {
   property string filter: "all"
   property string query: ""
 
-  readonly property var sceneOfTheDay: Model.sceneOfTheDay(root.cards, root.progress)
-  readonly property var stats: Model.counts(root.cards, root.progress, root.now)
+  readonly property var sceneOfTheDay: Model.sceneOfTheDay(root.active, root.progress)
+  readonly property var stats: Model.counts(root.active, root.progress, root.now)
   readonly property bool doneToday: Model.practisedToday(root.progress, root.now)
   readonly property int streak: Model.streak(root.days, root.now)
-  readonly property var shown: Model.visibleCards(root.cards, root.progress, root.filter, root.query, root.now)
+  readonly property var shown: Model.visibleCards(root.active, root.progress, root.filter, root.query, root.now)
 
   readonly property string tooltip: root.cards.length === 0 ? "Svenska"
     : "Svenska · " + (root.doneToday ? "feito hoje ✓" : "nenhuma carta hoje")
@@ -54,7 +59,29 @@ Panel {
     watchChanges: true
     printErrors: false
     onFileChanged: reload()
-    onLoaded: root.cards = Model.parseCards(text())
+    onLoaded: {
+      root.cards = Model.parseCards(text())
+      root.labels = Model.parseLabels(text())
+    }
+  }
+
+  FileView {
+    id: decksFile
+    path: root.stateDir + "/decks.json"
+    watchChanges: true
+    printErrors: false
+    onFileChanged: reload()
+    onLoaded: root.off = Model.parseDecks(text())
+  }
+
+  function toggleDeck(kind, value) {
+    root.off = Model.toggled(root.off, kind, value)
+    decksFile.setText(JSON.stringify({ off: root.off }))
+  }
+
+  function allDecks() {
+    root.off = { lote: [], tema: [], nivel: [] }
+    decksFile.setText(JSON.stringify({ off: root.off }))
   }
 
   FileView {
@@ -214,7 +241,9 @@ Panel {
             spacing: Style.space(6)
 
             Text {
-              text: root.sceneOfTheDay ? "CENA DO DIA · " + root.sceneOfTheDay.contexto.split(":")[0] : "TODAS AS CENAS MONTADAS 🎉"
+              text: root.sceneOfTheDay
+                ? "CENA DO DIA · " + (root.labels.temas[root.sceneOfTheDay.tema] || "") + " · " + (root.labels.niveis[root.sceneOfTheDay.nivel] || "")
+                : root.active.length === 0 ? "NENHUMA CARTA ATIVA" : "TODAS AS CENAS DESTES DECKS MONTADAS 🎉"
               color: root.dim
               font.family: root.fontFamily
               font.pixelSize: Style.font.caption
@@ -248,8 +277,94 @@ Panel {
                 icon: "󰑓"
                 label: root.stats.due > 0 ? "Revisar (" + root.stats.due + ")" : "Nada para revisar"
                 available: root.stats.due > 0
-                onClicked: root.openScene("review", "due")
+                onClicked: root.openScene("review", Model.dueIds(root.active, root.progress, root.now))
               }
+            }
+          }
+        }
+
+        // ---- Decks: which cards are in play
+        Btn {
+          visible: root.cards.length > 0
+          width: root.innerWidth
+          icon: root.showDecks ? "󰅖" : "󰉋"
+          label: root.showDecks ? "Fechar decks"
+            : "Decks · " + root.active.length + " de " + root.cards.length + " cartas ativas"
+          active: root.showDecks
+          onClicked: root.showDecks = !root.showDecks
+        }
+
+        Column {
+          visible: root.showDecks && root.cards.length > 0
+          width: root.innerWidth
+          spacing: Style.space(8)
+
+          Repeater {
+            model: [
+              { kind: "nivel", title: "NÍVEL" },
+              { kind: "lote", title: "LOTE" },
+              { kind: "tema", title: "TEMA" }
+            ]
+
+            Column {
+              id: group
+              required property var modelData
+              width: root.innerWidth
+              spacing: Style.space(4)
+
+              Text {
+                text: group.modelData.title
+                color: root.dim
+                font.family: root.fontFamily
+                font.pixelSize: Style.font.caption
+              }
+
+              Flow {
+                width: root.innerWidth
+                spacing: Style.space(4)
+
+                Repeater {
+                  model: Model.deckList(root.cards, group.modelData.kind,
+                    group.modelData.kind === "tema" ? root.labels.temas
+                    : group.modelData.kind === "nivel" ? root.labels.niveis : null)
+
+                  Btn {
+                    required property var modelData
+                    width: deckLabel.implicitWidth + Style.space(18)
+                    height: Style.space(28)
+                    label: modelData.label + " · " + modelData.count
+                    active: root.off[modelData.kind].indexOf(modelData.value) === -1
+                    onClicked: root.toggleDeck(modelData.kind, modelData.value)
+
+                    TextMetrics {
+                      id: deckLabel
+                      font.family: root.fontFamily
+                      font.pixelSize: Style.font.bodySmall
+                      text: modelData.label + " · " + modelData.count
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          Row {
+            spacing: root.gap
+            Btn {
+              width: (root.innerWidth - root.gap) / 2
+              icon: "󰒆"
+              label: "Ativar todos"
+              onClicked: root.allDecks()
+            }
+            Text {
+              width: (root.innerWidth - root.gap) / 2
+              anchors.verticalCenter: parent.verticalCenter
+              text: root.active.length === 0 ? "Nenhuma carta: ligue algum deck."
+                : "Uma carta entra se o nível, o lote e o tema dela estiverem ligados."
+              color: root.active.length === 0 ? Color.urgent : root.dim
+              font.family: root.fontFamily
+              font.pixelSize: Style.font.caption
+              wrapMode: Text.WordWrap
             }
           }
         }
@@ -257,7 +372,7 @@ Panel {
         // ---- Search and filters
         TextField {
           id: search
-          visible: root.cards.length > 0
+          visible: root.cards.length > 0 && !root.showDecks
           width: root.innerWidth
           placeholderText: "Buscar em português ou sueco…"
           foreground: root.fg
@@ -271,7 +386,7 @@ Panel {
         }
 
         Row {
-          visible: root.cards.length > 0
+          visible: root.cards.length > 0 && !root.showDecks
           spacing: root.gap
           Repeater {
             model: [
@@ -296,7 +411,7 @@ Panel {
         // ---- Cards
         ListView {
           id: list
-          visible: root.cards.length > 0
+          visible: root.cards.length > 0 && !root.showDecks
           width: root.innerWidth
           height: Math.min(Math.max(contentHeight, Style.space(40)), Style.space(380))
           clip: true
@@ -383,7 +498,7 @@ Panel {
         }
 
         Text {
-          visible: root.cards.length > 0
+          visible: root.cards.length > 0 && !root.showDecks
           width: root.innerWidth
           text: root.shown.length === 0 ? "Nenhuma carta neste filtro."
             : "↑↓ escolhe · Enter abre · Esc fecha · cartas novas montam a cena, as outras abrem a revisão"
