@@ -1,0 +1,156 @@
+{
+  "phrases": [
+    {
+      "id": "det-knackar-pa-dorren",
+      "sv": "Det knackar på dörren.",
+      "pt": "Estão batendo na porta.",
+      "pronuncia": "dê KNÁK-kar pô DÖR-ren ('det' = dê, sem T; 'knackar' com o K E o N pronunciados e grudados — K-NÁK, sem vogal entre eles (nada de 'ki-nák', nem o K mudo do inglês 'knock') —, A curto e aberto, o CK segurado um instante e o -kar fraco com R brando: sem esse R vira 'knacka', o infinitivo; 'på' = pô, Ô fechado e sem força; 'dörren' com a força no DÖR — Ö CURTO e aberto antes de R, boca redonda de Ó com a língua pra frente, como pra dizer É — e o RR dobrado, um R de toque mais comprido (ou tremido na ponta da língua), nunca o RR carioca de garganta; com o Ö esticado e o R curto sai 'dör', morre; o -en fraco, N na língua e sem nasal: é o artigo, 'A porta')",
+      "contexto": "Em casa, avisando quem está no banho, na cozinha ou de fone que tem alguém na porta: o vizinho, o entregador do PostNord ou do Instabox, alguém da bostadsrättsförening. Se for a campainha, o molde é o mesmo: 'Det ringer på dörren'. Quem estiver mais perto responde: 'Jag öppnar!' (eu abro).",
+      "porque": "É o 'det' sem dono do sueco — det knackar, det ringer, det regnar —, o jeito de dizer que algo acontece sem saber quem faz. Aprendendo esse molde, você destrava várias frases do dia a dia."
+    },
+    {
+      "id": "kan-du-stanga-fonstret",
+      "sv": "Kan du stänga fönstret?",
+      "pt": "Você pode fechar a janela?",
+      "pronuncia": "kan-dü STÉNG-a FÖNS-tret? ('kan du' = kan-dü, sem o 'ã' nasal e com o DU de bico, lábios de U e língua de I; 'stänga' com o S colado no T, sem 'is' na frente, É ABERTO e curto, NG no fundo da boca sem estalar o G, e o -a fraquinho — é o verbo pelado depois de 'kan du'; com -er seria 'stänger', 'fecha'; 'fönstret' com a força no FÖN — Ö curto, lábios redondos com a língua pra frente —, N na língua sem nasal, e o -stret num bloco só: S, T e R grudados, R de um toque, E curto e T seco no fim; é 'fönster' (janela) com o artigo '-et' colado e o E do meio engolido)",
+      "contexto": "Em casa, no escritório, no ônibus ou no trem quando entra o vento gelado — ou, no verão, mosquito. Os suecos adoram 'vädra' (arejar) com a janela escancarada até no inverno, e essa é a frase pra negociar sem brigar. Se quiser o contrário: 'Kan du öppna fönstret?'.",
+      "porque": "Junta o pedido educado de sempre ('Kan du…?') com 'stänga', fechar, que serve pra porta, loja e conta: stäng dörren!, när stänger ni? E 'fönstret' ensina como o artigo neutro gruda no fim da palavra."
+    },
+    {
+      "id": "det-ar-for-varmt-har",
+      "sv": "Det är för varmt här.",
+      "pt": "Está quente demais aqui.",
+      "pronuncia": "dê é FÖÖR VÁRMT rrér ('det är' = dê é, o T de 'det' mudo e o R de 'är' quase sumindo; 'för' aqui é 'demais' e leva FORÇA: Ö de bico, lábios de Ô com língua de Ê, um pouco esticado, e o R num toque leve antes do V; 'varmt' numa sílaba só: A curto e aberto, R brando, M de lábios fechados e T seco — o T é obrigatório depois de 'det är' (sem ele sobra 'varm'); 'här' = rrér, h soprado leve de RR carioca, É aberto e R brando)",
+      "contexto": "Na bastu (sauna), no escritório com o aquecimento no talo, no ônibus ou trem lotado no verão, no apartamento com o element (aquecedor) que não desliga. Os suecos começam a reclamar do calor assim que passa de 25 graus — e dentro de casa é comum emendar 'här inne' (aqui dentro).",
+      "porque": "'För' + adjetivo é o 'demais' do sueco, e o T de 'varmT' é o mesmo de 'det är kallt'. Com o molde você faz na hora: det är för kallt, det är för dyrt, det är för sent."
+    },
+    {
+      "id": "slack-lampan",
+      "sv": "Släck lampan!",
+      "pt": "Apaga a luz!",
+      "pronuncia": "SLÉK LÁM-pan! ('släck' numa sílaba só: S colado no L, sem 'is' na frente, É ABERTO e curto de 'pé' e K seco — sem NG, que viraria 'slänger', jogar fora; 'lampan' com a força no LAM — A aberto de 'lá', sem o 'ã' fanhoso de 'lâmpada', M de lábios fechados — e o -pan fraco, N na língua e sem nasal: é o artigo, 'A lâmpada'; a ordem sai seca e curta, as duas sílabas fortes batendo: SLÉK! LÁM-pan!)",
+      "contexto": "Em casa na hora de dormir, saindo de um cômodo, com as crianças ('Släck lampan nu!') ou com o parceiro que lê até tarde. Na Suécia, apagar a luz de quem sai do cômodo é quase regra moral — e 'släcka' também é apagar vela, fogo e cigarro.",
+      "porque": "Pra luz o verbo é 'släcka', não 'stänga': quem diz 'stäng lampan' entrega que é estrangeiro. O oposto é 'tänd lampan' (acende a luz). E 'lampan' mostra o artigo colado: lampa = uma lâmpada, lampan = a lâmpada."
+    },
+    {
+      "id": "var-ar-nyckeln",
+      "sv": "Var är nyckeln?",
+      "pt": "Cadê a chave?",
+      "pronuncia": "var é NÜK-keln? (saindo va-ré-NÜK-keln; 'var' = onde, A longo e R brando que escorrega no 'är' — sem o R vira 'vad', o quê; 'är' = é, aberto e curto; 'nyckeln' com a força no NY — Ü CURTO de bico, lábios de U e língua de I —, CK dobrado e seco, e o -eln fraquinho: E quase mudo, L DE VERDADE (língua no céu da boca, nunca 'u') e o N logo em seguida, sem a língua sair do lugar; o N é o artigo: nyckel = uma chave, nyckeln = a chave)",
+      "contexto": "Saindo de casa atrasado, na hora de abrir a tvättstugan ou o förråd (depósito) do prédio, entregando o apartamento, no trabalho ('Var är nyckeln till förrådet?') — e na versão clássica de casal à porta: 'Var är nyckeln? Har du den?'.",
+      "porque": "'Var är…?' é o molde universal de procurar coisas (var är kassan, var är toaletten), e 'nyckeln' fixa o artigo colado no fim. Combina com a carta 'Jag har låst mig ute'."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "det-knackar-pa-dorren",
+      "elenco": "fantasma de lençol + porta de carvalho à prova de fantasma + galo na testa",
+      "ponte_sonora": "DÊ... C'NÁC-CAR(a)! PÔ, DOR EN(orme)... (6 sílabas: dê-KNÁK-kar-pô-DÖR-ren; força no C'NÁC e no DOR; DÊ = o 'det' de sempre, o MESMO DÊ de 'Det regnar igen' e 'Det läcker vatten': Ê FECHADO e sem T — e aqui ninguém aparece: quem bate é o 'det', o 'alguém' sem nome do sueco; C'NÁC = o estalo da CARA do fantasma contra a porta de carvalho, e é exatamente como o sueco escreve batida na porta ('knack knack'): K e N GRUDADOS, sem vogal no meio — nada de 'ki-NÁC', e nada de 'CA-NÁC', que puxa a CANA de 'kan' —, o K só trava a garganta e já solta no N; A curto e aberto de 'já', e o K seco e segurado um instante (é o 'ck' dobrado); CAR(a) = a CARA que bateu, sem o -A: fraquinha e colada, C'NÁC-car, com o R brando de 'cara', um toque de língua, nunca RR — é o R do presente, OBRIGATÓRIO: sem ele sobra 'knacka', o infinitivo; PÔ = o 'pô!' brasileiro, Ô fechado, o MESMO 'på' de 'DÊ, PÔ!' ('Kan du skicka det på mejl?') e 'TÁ, PÔ!' ('Ta på dig jackan!'), aqui fraquinho; DOR EN(orme) = 'dor enorme' gemido de uma vez e cortado no N, porque o fantasma desmaia antes do -ORME: dô-REN... — a força no DOR, mas com a boca MAIS ABERTA que no 'dor' português: lábios redondos de Ó e a língua pra frente, como se fosse dizer É — é o ö aberto que o sueco usa antes de R —, e CURTO: com o Ö esticado sai 'dör', morre; o R, que em 'dor enorme' já cai entre vogais e sai de um toque só, aqui é DOBRADO: segure um pouco mais ou deixe tremer na ponta da língua, nunca o RR soprado de garganta; o EN é fraquinho, E curto e N batido na língua, sem o 'ẽ' nasal — é o artigo colado: 'dörr' é uma porta, 'dörren' é A porta, o mesmo -EN do PEN de 'Tack för hjälpen')",
+      "historia": "Meia-noite no corredor do prédio. O FANTASMA de lençol, que há duzentos anos atravessa qualquer parede, desliza até o apartamento pra entrar como sempre — mas o síndico trocou a porta por uma de carvalho maciço: C'NÁC! Ele dá de CARA na madeira, e o estalo é exatamente o 'knack' com que os suecos escrevem uma batida. Ele recua com a mão na testa, um galo vermelho brotando, geme 'PÔ... DOR EN...' e desmaia antes do -ORME, escorrendo pelo capacho. Lá dentro, do sofá, você ouve a pancada e avisa: tem alguém batendo na porta — e, quando abrir, não vai ter ninguém.",
+      "cena": {
+        "descricao": "No corredor escuro de um prédio, um fantasma de lençol branco está colado de cara numa porta de carvalho maciça, a testa amassada contra a madeira e um galo vermelho brotando, com estrelinhas amarelas girando acima da cabeça e arcos de impacto saindo do ponto da batida.",
+        "partes": [
+          "piso de tábuas cinza-escuras do corredor (chão)",
+          "parede azul-acinzentada do corredor com rodapé branco",
+          "porta de carvalho maciça marrom-escura, com batente branco",
+          "maçaneta dourada e olho mágico redondo prateado na porta",
+          "capacho vermelho retangular na frente da porta",
+          "corpo do fantasma: lençol branco grande em forma de sino, com a barra ondulada flutuando acima do chão",
+          "cabeça do fantasma com dois olhos ovais pretos e boca aberta em O, encostada de cara na porta",
+          "braço de lençol do fantasma dobrado, com a ponta apoiada na testa",
+          "galo vermelho redondo na testa do fantasma",
+          "anel de estrelinhas amarelas girando acima da cabeça",
+          "três arcos brancos de impacto saindo do ponto da batida na madeira",
+          "arandela de parede com luz amarelada fraca"
+        ]
+      }
+    },
+    {
+      "id": "kan-du-stanga-fonstret",
+      "elenco": "sambista de plumas no inverno sueco + janela-monstro de dentes de gelo",
+      "ponte_sonora": "CAN-DU... STÉNG-A... FFF-ÔNSTR... ÉT(a)? (6 sílabas: kan-dü-STÉNG-a-FÖNS-tret; força no STÉNG e no FÖNS; CAN-DU = o 'kan du' de sempre — C+A+N como em 'cana', sem o glide de 'quando', e o DU com BICO DE PATO (Ü), o MESMO de 'Kan du hjälpa mig?' e 'Kan du ringa tillbaka?'; STÉNG = o MESMO estrondo de FECHAR de 'När stänger ni?' — lá a porta de aço da loja, aqui a janela batendo: o SSS gruda direto no TÉNG, numa sílaba só, sem 'is' na frente, É ABERTO e CURTO, e o NG fica no fundo da boca, sem estalar o G (nada de 'stén-gui'); A = o tremidinho fraco do vidro depois da pancada: é o -a do verbo pelado depois de 'kan du' — com o -ER de 'stänger' vira 'fecha', e sem nada vira a ordem 'stäng!'; FFF-ÔNSTR = o MONSTRO da janela soprando o bafo gelado FFFFF por cima do próprio M: o sopro engole o M e sobra F-ÔNSTR, com a força no FÔN e a boca redonda de Ô com a língua pra frente, quase É — é o ö sueco; o N fica na língua, sem o 'õ' nasal de 'monstro' (a ponta da língua encosta atrás dos dentes antes do S), e o STR sai grudado, como o brasileiro já fala em 'monSTRo', com R de um toque só; o -O de 'monstro' NÃO vem: no lugar dele entra ÉT(a) = o 'ÉTA!' de alívio da sambista com o A engolido, o MESMO ÉT do ÉTA!/ÉTER de 'ett' ('Jag har ett möte', 'Ett bord för två'): É aberto, curto e T seco, colado no R — FÖNS-trét; é o artigo neutro grudado no fim: 'fönster' (janela) + '-et' = 'fönstret', A janela, e o E do meio de 'fönster' some)",
+      "historia": "Fevereiro, quinze graus abaixo de zero, e a SAMBISTA ensaia na sala de fantasia completa: paetê, salto e um costeiro de plumas de dois metros. Alguém deixou a janela escancarada, e ela virou a bocarra de um MONSTRO de gelo — pingentes de dentes, cortina de língua — soprando um bafo gelado FFFFF... ÔNSTR! direto nas plumas, que congelam espetadas. Ela não alcança o trinco, porque o costeiro entala no batente, e grita pra você batendo os dentes: 'CAN-DU... STÉNG-A?' Você empurra, a janela bate com o estrondo da porta de aço — STÉNG! —, e a sambista solta um 'ÉTA!' de alívio: pode fechar a janela?",
+      "cena": {
+        "descricao": "Numa sala com neve entrando, uma sambista de paetê dourado e costeiro gigante de plumas, de lábios roxos e braços cruzados de frio, está diante de uma janela escancarada que virou a bocarra de um monstro, com pingentes de gelo de dentes, a cortina vermelha esvoaçando feito língua e faixas de vento gelado saindo dela.",
+        "partes": [
+          "piso de tacos de madeira com um montinho de neve branca embaixo da janela (chão)",
+          "parede bege da sala",
+          "janela de moldura branca escancarada, com as duas folhas de vidro abertas para fora",
+          "fileira de pingentes de gelo azul-claros pendurados no alto da janela, como dentes",
+          "dois olhos redondos de gelo azul grudados acima da moldura",
+          "cortina vermelha esvoaçando para dentro da sala como uma língua",
+          "faixas onduladas azul-claras de vento gelado saindo da janela, com flocos de neve",
+          "corpo da sambista de biquíni de paetê dourado e sandálias de salto, de braços cruzados e joelhos tremendo",
+          "cabeça da sambista com coroa de pedrarias, lábios roxos e dentes à mostra batendo",
+          "costeiro gigante de plumas rosa e amarelas nas costas, com as pontas congeladas de branco",
+          "pandeiro caído no chão, coberto de geada"
+        ]
+      }
+    },
+    {
+      "id": "det-ar-for-varmt-har",
+      "elenco": "galinha-d'angola na sauna + telão do VAR + cuia de mate fervendo + hera murcha",
+      "ponte_sonora": "DÊ É... FÖÖR! VAR-M(a)T(e)... RRÉR! (5 batidas: dê-é-FÖÖR-VÁRMT-RRÉR; força no FÖÖR, no VÁRMT e no RRÉR; DÊ É = o 'det är' de sempre, de 'Det är kallt i lägenheten' e 'Det är för dyrt': Ê fechado e sem T, É aberto e curto; FÖÖR = o sopro de BICO, o MESMO FÖ de 'Ett bord för två', 'Tack för hjälpen' e 'Det är för dyrt' — aqui é o bico da galinha soprando o bafo da sauna: lábios de Ô com língua de Ê, nunca o FÔ de bochecha estufada de 'få'; mas este 'för' é o 'demais' e leva FORÇA, então sai mais esticado e com o R aparecendo num toque leve antes do V; VAR = o VAR do futebol, do jeito que todo brasileiro fala: A aberto e R BRANDO de um toque no fim (nunca o 'váh' aspirado) — não é a VARA de 'var' (onde): aqui é o telão; M(a)T(e) = o MATE da cuia, mas o calor evapora as vogais e só sobram o M e o T, grudados no VAR: VÁRMT, UMA sílaba só — M de lábios fechados e T seco, sem 'tchi'; esse T é o do neutro, OBRIGATÓRIO depois de 'det är', o MESMO T do CÁLT de 'Det är kallt i lägenheten' (sem ele sobra 'varm'); não confunda com o eletricista de 'Det är för dyrt': mesmo DÊ É FÖ, mas lá ele fica DURO, aqui é VAR + MATE; RRÉR = a HERA sem o -a, com o h soprado leve de RR carioca, o MESMO RRÉR de 'Det gör ont här' e 'Är det ledigt här?': É aberto e R brando)",
+      "historia": "Primeira vez numa bastu sueca, e a GALINHA-D'ANGOLA — bicho da savana, achou que ia tirar de letra — sobe pro banco mais alto, onde faz noventa graus. Alguém joga uma concha d'água nas pedras, o bafo sobe, e ela sopra pelo bico: FÖÖÖR! Na parede, um telão de futebol — nessa sauna tem VAR — revisa o termômetro em câmera lenta, e o chimarrão que ela trouxe ferve tanto que o MATE evapora até sobrar só M e T: VAR... M'T! A HERA pendurada na madeira murcha, as bolinhas brancas das penas começam a escorrer, e ela solta o 'tô fraca, tô fraca' de sempre: está quente demais aqui.",
+      "cena": {
+        "descricao": "Dentro de uma sauna de madeira cor de mel, uma galinha-d'angola cinza de bolinhas brancas, sentada no banco mais alto, sopra pelo bico e pinga suor ao lado de uma cuia de chimarrão que ferve, enquanto na parede um telão com a palavra VAR mostra um termômetro no vermelho e um ramo de hera murcha pende da madeira.",
+        "partes": [
+          "piso de ripas de madeira clara da sauna (chão)",
+          "paredes de tábuas de pinho cor de mel",
+          "banco de madeira em dois degraus",
+          "aquecedor de metal preto com pedras cinza em cima, soltando vapor branco",
+          "corpo redondo da galinha-d'angola, cinza-chumbo com bolinhas brancas, sentada no degrau de cima",
+          "cabeça da galinha-d'angola: azul-clara e pelada, com capacete ósseo marrom, barbelas vermelhas e bico amarelo em bico, soprando",
+          "gotas de suor azul-claras voando da cabeça",
+          "cuia de chimarrão marrom com bomba prateada, borbulhando e soltando vapor",
+          "telão preto na parede com a palavra VAR em branco",
+          "termômetro de sauna redondo com o ponteiro no vermelho, ao lado do telão",
+          "ramo de hera verde murcha pendurado na parede de madeira"
+        ]
+      }
+    },
+    {
+      "id": "slack-lampan",
+      "elenco": "leão-marinho de circo na hora de dormir + lâmpada gigante no focinho + interruptor encharcado",
+      "ponte_sonora": "SLÉK! LÂMPA(da)-NNN! (3 sílabas: SLÉK-LÁM-pan; força no SLÉK e no LÁM — é ordem, sai seco; SLÉK = o tapa ENCHARCADO da nadadeira do leão-marinho no interruptor — o barulho é esse, SLÉK: S colado no L, sem o 'is' que o brasileiro põe antes de S (nada de 'is-LÉK'), É ABERTO e CURTO de 'pé' e K seco no fim, que já trava a língua antes do L seguinte; não confunda com o SLÉNGUER do guaxinim de 'Var slänger man kartong?': lá tem NG e é jogar fora; aqui é K seco e é apagar; LÂMPA(da) = a própria LÂMPADA — o sueco é quase igual —, mas ela apaga antes de terminar o nome e o DA não vem; o A do LAM é ABERTO de 'lá', SEM o 'ã' fanhoso de 'lâmpada' — os lábios fecham no M logo depois do A —, e o -PA fraquinho; NNN = o ronco do leão-marinho, que dorme na hora: no lugar do DA entra um N batido na língua, sem nasal — LÁM-pan; esse N é o artigo colado: 'lampa' é uma lâmpada, 'lampan' é A lâmpada, o mesmo N de IÁK-KAN ('Ta på dig jackan!') e MOÇA-N ('Ta på dig mössan!'))",
+      "historia": "Hora de dormir, e o LEÃO-MARINHO aposentado do circo que divide o apartamento com você não larga a mania: deita equilibrando no focinho uma LÂMPADA acesa do tamanho de uma melancia. Você não aguenta mais a claridade e berra da cama: 'Apaga isso!' Ele estica a nadadeira encharcada e dá um tapa no interruptor — SLÉK! —, tão molhado que respinga água na parede inteira. A LÂMPA... apaga antes de terminar o nome, e ele já ronca NNNN no escuro com ela ainda equilibrada no nariz: apaga a luz!",
+      "cena": {
+        "descricao": "Num quarto escuro de apartamento, um leão-marinho marrom brilhante, sentado sobre a cauda de olhos fechados, equilibra no focinho uma lâmpada gigante recém-apagada enquanto dá um tapa com a nadadeira molhada num interruptor branco na parede, espirrando gotas d'água.",
+        "partes": [
+          "piso de madeira clara do quarto (chão)",
+          "parede azul-noite com rodapé branco",
+          "cama baixa com edredom branco e travesseiro, ao fundo",
+          "corpo do leão-marinho marrom-chocolate brilhante, sentado sobre a cauda, de peito erguido",
+          "cabeça do leão-marinho com focinho comprido, bigodes brancos e olhos fechados de sono",
+          "nadadeira dianteira estendida, batendo no interruptor",
+          "interruptor branco quadrado na parede, com a tecla abaixada",
+          "gotas d'água azul-claras espirrando do ponto do tapa",
+          "lâmpada gigante de vidro cinza-claro, apagada, com base de rosca prateada, equilibrada na ponta do focinho",
+          "fiozinho de fumaça cinza saindo do topo da lâmpada",
+          "balde vermelho de circo com dois peixes prateados, ao lado da cama"
+        ]
+      }
+    },
+    {
+      "id": "var-ar-nyckeln",
+      "elenco": "professor distraído + ponteiro-vara + lenço na nuca com a chave pendurada",
+      "ponte_sonora": "VAR É... NÜCA-L'N? (4 sílabas: var-é-NÜK-keln, saindo va-ré-NÜK-keln; força no NÜ; VAR = a VARA sem o -a — aqui o PONTEIRO de madeira do professor, que é uma vara —, a MESMA VARA de 'Var är kassan?', 'Var bor du?' e 'Var är provrummet?': R BRANDO e AUDÍVEL, que já escorrega no É, va-RÉ; sem ele sobra VÁ É, que é 'vad är' (o que é?); É = 'är', aberto e curto, o mesmo de 'Det är' e 'Jag är'; NÜCA = a NUCA que o professor coça, dita de BICO DE PATO: lábios de U empurrados pra frente e a língua parada no I — o MESMO Ü do DÜ de 'kan du' e do BI(R)ÚTA de 'byta' —, aqui CURTO e com toda a força; com o U chapado de 'nuca' o sueco não reconhece; o C é um K seco e segurado um instante (é o 'ck' dobrado), e o -A da nuca vira um 'ê' quase mudo; L'N = o LENço sem o E e sem o -ÇO: só L e N colados no fim — L DE VERDADE, a ponta da língua grudada no céu da boca (nunca o 'u' de 'Brasiu'), e o N sai sem a língua sair do lugar: NÜK-k'ln; esse N é o artigo: 'nyckel' é uma chave, 'nyckeln' é A chave)",
+      "historia": "Oito da manhã, aula às oito e meia, e o PROFESSOR distraído virou a casa do avesso atrás da chave. Com o PONTEIRO de madeira — a vara que ele nunca larga — cutuca o sofá, o vaso, a geladeira: 'VAR É...? VAR É...?' Nervoso, faz o biquinho de pato de quando pensa e coça a NUCA... e os dedos esbarram num nó: o LENÇO amarrado no pescoço, com a chave pendurada nas costas desde ontem à noite. NUCA... L'N! Onde está a chave? Sempre esteve na nuca dele.",
+      "cena": {
+        "descricao": "Numa sala revirada, um professor de óculos redondos e paletó com cotoveleiras, de biquinho pensativo, aponta um ponteiro de madeira para o sofá desmontado enquanto a outra mão coça a nuca, onde um lenço vermelho de bolinhas está amarrado com uma chave dourada gigante pendurada nas costas.",
+        "partes": [
+          "tapete verde-musgo da sala (chão)",
+          "sofá marrom com as almofadas jogadas no chão",
+          "vasinho de planta tombado, com terra derramada",
+          "corpo do professor de paletó marrom com cotoveleiras de couro e calça cinza",
+          "cabeça do professor careca no topo, com tufos brancos dos lados, óculos redondos e boca em biquinho",
+          "braço estendido segurando um ponteiro de madeira comprido apontado para o sofá",
+          "outra mão erguida coçando a nuca",
+          "lenço vermelho de bolinhas brancas amarrado na nuca",
+          "chave dourada gigante pendurada no nó do lenço, nas costas do professor",
+          "quadro-negro pequeno na parede com um ponto de interrogação de giz"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "phrases": [
+    {
+      "id": "jag-ar-matt",
+      "sv": "Jag är mätt.",
+      "pt": "Estou satisfeito.",
+      "pronuncia": "iá é MÉT ('jag' = iá, o -g não soa; 'är' = é, aberto e curto; 'mätt' com a força toda, É ABERTO de 'pé' e CURTO, e o TT seco no fim — a língua bate atrás dos dentes e para, sem soltar 'tchi'; nunca MÁÁT, com A longo, que é 'mat', comida)",
+      "contexto": "À mesa, quando o anfitrião ou a sogra oferece mais uma rodada — 'Vill du ha mer?', 'Ta lite till!' — ou no almoço do trabalho, empurrando o prato. Costuma vir colado num 'Tack, det var jättegott!'.",
+      "porque": "É o jeito educado de recusar mais comida sem parecer que não gostou — sueco não insiste, então uma frase resolve. E fecha o par com 'Jag är hungrig': fome na chegada, 'mätt' na saída."
+    },
+    {
+      "id": "kan-jag-smaka",
+      "sv": "Kan jag smaka?",
+      "pt": "Posso provar?",
+      "pronuncia": "kan iá SMÁÁ-ka? ('kan jag' = ka-niá, o -g não soa; 'smaka' com o S colado direto no M — nada de 'is' na frente —, A LONGO e toda a força no SMÁ, e o -ka fraquinho, K duro; com A curto vira 'smacka', estalar os beiços)",
+      "contexto": "No balcão de queijos e frios do mercado (ostdisken, chark), na feira de Natal (julmarknad) cheia de amostras, ou quando alguém na mesa serve uma coisa que você nunca viu — sill, kalops, prinskorv. A resposta costuma vir com o garfinho: 'Ja, smaka på!' (prova aí!).",
+      "porque": "Abre a porta da comida sueca sem compromisso: prova antes de pedir ou de levar um queijo inteiro. 'Smaka' é provar — a mesma raiz de 'smakprov' (a plaquinha de amostra grátis no mercado) e de 'Smaklig måltid'."
+    },
+    {
+      "id": "har-ni-nagot-vegetariskt",
+      "sv": "Har ni något vegetariskt?",
+      "pt": "Vocês têm alguma coisa vegetariana?",
+      "pronuncia": "rrar ni nôt ve-ge-TÁÁ-riskt? ('har' com h soprado e R brando; 'ni' = vocês, I limpo e sem força; 'något' na fala vira 'nåt' = NÔT, Ô fechado e sem força; 'vegetariskt' com G DURO de 'gato' — nunca o J de 'vegetariano' —, as duas primeiras sílabas leves e rápidas, a força no TÁ com A longo, R de um toque só, e o -skt final seco, sem vogal: o -t é obrigatório depois de 'något')",
+      "contexto": "No restaurante, no balcão do almoço do dia (dagens lunch), na cantina do trabalho ou numa festa com bufê. Muito cardápio de almoço sueco já traz uma linha fixa 'Dagens vegetariska' — mas nem sempre está à vista.",
+      "porque": "Resolve o almoço de quem não come carne — ou de quem só quer variar — sem decifrar o cardápio inteiro. E o molde 'Har ni något ___?' serve pra tudo: 'något glutenfritt', 'något laktosfritt', 'något receptfritt' (na farmácia)."
+    },
+    {
+      "id": "utan-lok-tack",
+      "sv": "Utan lök, tack.",
+      "pt": "Sem cebola, por favor.",
+      "pronuncia": "ÜÜ-tan LÖÖK, tak ('utan' com a força no U, que é de BICO — lábios de U e língua de I — e longo, e o -tan fraquinho, N de língua sem nasalizar; 'lök' com ö LONGO — lábios em bico e língua de Ê — e K seco, levando a força maior; 'tack' com A curto e K seco)",
+      "contexto": "Na barraquinha de cachorro-quente (korvkiosk), na hamburgueria, no balcão do kebab ou no pedido do restaurante. Na korvkiosk o atendente costuma perguntar 'Med lök?' — e ali a cebola vem de dois jeitos: 'rostad lök' (frita e crocante) e 'råhackad lök' (crua e picadinha).",
+      "porque": "'Utan ___, tack' é o molde pra tirar qualquer coisa do pedido — utan ost, utan socker, utan is —, curto e educado. E 'utan' (sem) é palavra de todo dia: 'kaffe utan mjölk', 'utan kvitto'."
+    },
+    {
+      "id": "ar-det-starkt",
+      "sv": "Är det starkt?",
+      "pt": "É apimentado?",
+      "pronuncia": "é dê STÁRKT? ('är' = é, aberto e curto; 'det' = dê, o T não soa; 'starkt' numa sílaba só, com o S grudado no T — nada de 'is' —, A curto, R de um toque só (de 'caro', nunca o R aspirado carioca) e K e T secos colados no fim, sem vogal: nunca 'is-TÁR-ki-tchi')",
+      "contexto": "Antes de pedir no tailandês, no indiano ou no mexicano, diante de um molho desconhecido, ou quando alguém oferece um prato caseiro. Em sueco, comida 'stark' é apimentada; o contrário é 'mild'. Respostas comuns: 'Lite starkt' (um pouco) ou 'Nej, det är milt'.",
+      "porque": "Evita a surpresa de um curry pegando fogo. E 'stark' é 'forte' em geral: starkt kaffe (café forte), en stark person — então a mesma pergunta serve pro café e pra bebida."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-ar-matt",
+      "elenco": "galo comilão de pés pro ar + trilha de milho + faixa META",
+      "ponte_sonora": "IÁ! É MÉT(a)! (3 batidas: iá-é-MÉT; a força toda no MÉT; IÁ é o 'jag' de sempre — o MESMO de 'Jag är trött', 'Jag är hungrig' e 'Jag är klar' —, aqui o canto de vitória do galo no lugar do cocoricó: I de IOGA, nunca o J chiado de 'já'; É = 'är', aberto e curto, o mesmo de 'Jag är sjuk' e 'Jag är på väg'; MÉT = a META sem o -A, que a barriga do galo arrancou da faixa: o português já fala 'MÉ-ta' com o É ABERTO de 'pé' e a força no lugar certo — é só NÃO dizer o -A: o É sai CURTO e a língua bate atrás dos dentes e para, T seco, nunca 'MÉ-tchi'; com o -A de volta vira 'mätta' (saciar), outra palavra; e nada de A no lugar do É: MÁÁT, de A longo, é 'mat', a COMIDA — o galo acabou com a comida, não virou ela; e SEM bico: de bico vira o TRÖTT da treta do cowboy ('Jag är trött', cansado) ou o MÖÖ-te do meteoro ('möte', reunião) — aqui a boca escancara no canto de vitória)",
+      "historia": "No concurso de comilança do terreiro, a META é bicar até o último grão de uma trilha de milho que atravessa a mesa comprida. O galo dispara bicando e, a cada grão, a barriga pesa mais — no último, pesa tanto que ele tomba de costas e cruza a linha de chegada escorregando de pés pro ar. A faixa amarela escrita META arrebenta em cima da barriga dele, e a letra A, arrancada, sai rolando pelo chão. Deitado de costas, sem conseguir nem se levantar, ele solta o canto de vitória no lugar do cocoricó: IÁ! É MÉT! Bateu a meta — de barriga cheia, não cabe mais nada.",
+      "cena": {
+        "descricao": "Na ponta de uma mesa comprida de madeira num terreiro, um galo ruivo de crista vermelha alta está deitado de costas, de pés pro ar e barriga redonda pra cima, cantando de bico aberto, com a faixa amarela rompida — onde se lê MET — caída sobre a barriga, enquanto a letra A vermelha rola no chão e atrás dele a trilha de milho ficou quase vazia.",
+        "partes": [
+          "piso de terra batida marrom-claro do terreiro",
+          "mesa comprida de tábuas de madeira clara",
+          "trilha de grãos de milho amarelos sobre a mesa, só uns grãos esparsos atrás do galo (esferinhas)",
+          "dois postinhos brancos na ponta da mesa, um de cada lado",
+          "faixa amarela rompida, uma ponta pendurada em cada postinho e o meio caído sobre a barriga do galo, com as letras MET em vermelho",
+          "letra A vermelha grande caída no chão ao pé da mesa",
+          "corpo do galo ruivo-alaranjado deitado de costas sobre a mesa, barriga redonda creme virada pra cima",
+          "duas pernas amarelas finas esticadas pro alto, com os dedos abertos",
+          "cabeça virada de lado com crista vermelha alta e serrilhada, barbelinha vermelha e bico amarelo bem aberto",
+          "cauda em foice de penas compridas verde-escuras e pretas brilhantes, arqueada pro lado da mesa",
+          "três anéis amarelos de som saindo do bico aberto (o IÁ!)"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-smaka",
+      "elenco": "gafanhoto-do-deserto educado + cana-de-açúcar + maca de queijo coalho chiando",
+      "ponte_sonora": "CA-NIÁ... SSS-MÁÁ-CA? (4 sílabas: ca-niá-SMÁÁ-ka; a força toda no SMÁ; CA-NIÁ é a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag betala med kort?', 'Kan jag byta den här?' e 'Kan jag få menyn?', emendado — I de IOGA, nunca o J chiado de 'canja'; SSS = o chiado do queijo coalho na chapa, S de cobra GRUDADO direto no M, sem vogal nenhuma no meio — o brasileiro tende a enfiar um 'is' antes de S + consoante ('is-maca'), e aqui o chiado já desemboca na MACA; MÁÁ-CA = a MACA de hospital, que o português já fala com a força no MÁ e o A aberto — só ESTIQUE o MÁ, A LONGO: com A curto vira 'smacka', que é estalar os beiços, outra palavra; CA fraquinho, K duro de 'casa'; termina em -A, o infinitivo que vem depois de 'kan jag' — nunca 'smakar'; e não é o SMÁÁC do beijo de chef da baleia de 'Smaklig måltid', que para seco no K: aqui o MÁÁ escorrega pro -CA)",
+      "historia": "No corredor da feira, alguém estacionou uma MACA de hospital com uma chapa de ferro em brasa em cima — e nela fatias de queijo coalho dourando e chiando: SSSS... O gafanhoto-do-deserto, praga famosa de canavial, chega pulando com uma CANA-de-açúcar já mordiscada no ombro, feito lança, e solta o grito de guerra: CA-NIÁ! Mas hoje ele está educado: antes de devorar a maca inteira, se debruça na beirada, fareja o chiado com as antenas tremendo e pergunta, esticando o A de tanta vontade: SSS-MÁÁÁ-CA? — Posso provar?",
+      "cena": {
+        "descricao": "Num corredor de feira, um gafanhoto-do-deserto enorme, amarelo-palha de manchas marrons, de pé nas patas traseiras e com uma cana-de-açúcar apoiada no ombro, se debruça de antenas esticadas sobre uma maca de hospital onde fatias de queijo coalho chiam numa chapa de ferro preta, soltando fios de vapor.",
+        "partes": [
+          "piso de lajotas cinza-claras da feira",
+          "caixote de madeira com laranjas ao fundo",
+          "maca de hospital: colchão branco sobre estrutura cromada com quatro rodinhas pretas",
+          "chapa de ferro preta retangular sobre o colchão da maca",
+          "quatro fatias de queijo coalho amarelo-douradas com marcas de grelha marrons",
+          "quatro fios de vapor branco subindo da chapa (cones finos ondulados) — o SSS",
+          "corpo do gafanhoto amarelo-palha com manchas marrons, comprido, de pé nas patas traseiras e inclinado sobre a maca",
+          "duas patas traseiras enormes dobradas em zigue-zague, marrom-ocre com listras pretas",
+          "cabeça com olhões castanhos e duas antenas compridas esticadas para a chapa",
+          "asas marrom-claras pintadas, dobradas nas costas",
+          "cana-de-açúcar verde com nós marrons e tufo de folhas na ponta, apoiada no ombro, com marcas de mordida"
+        ]
+      }
+    },
+    {
+      "id": "har-ni-nagot-vegetariskt",
+      "elenco": "curupira no rodízio + bisnaga de arnica + quadro de giz com VEGANO riscado",
+      "ponte_sonora": "RRÁR-NI... NÔT... VÊ-GA... TÁÁ-RISC-T?! (7 sílabas: rrar-ni-nôt-ve-ge-TÁÁ-riskt; a força toda no TÁÁ; RRÁR-NI = a ÁRNICA sem o -ca, o MESMO de 'Har ni något receptfritt mot det här?' e 'Har ni den i en annan storlek?' — h SOPRADO na frente, como RR carioca leve, A longo e R brando colado no NI; NÔT = o 'nåt' de 'något', o MESMO da farmácia e da bruxa de 'Vill du ha något att dricka?': Ô BEM FECHADO de 'avô', curto e sem força — com bico de ö vira 'nöt', noz; VÊ-GA = o VEGANO cortado antes do -NO, e com o G DURO de 'gato' — é exatamente o G que o sueco usa aqui; a armadilha é o 'vegetariano' português, com J; no vegano a força caía no GA, aqui NÃO: as duas sílabas correm fraquinhas, e o GA sai apagado, quase GUE; TÁÁ-RISC = o 'TÁ RISCADO!' indignado do curupira dito como UMA palavra só, sem respiro entre o TÁ e o RISC: assim o R cai ENTRE vogais e sai brando, um toque só, de 'caro' — separado ('tá... riscado') ele estoura no RR de 'rua', que aqui o sueco não tem; o TÁÁ vem esticado e com TODA a força da frase — é aí que o sueco bate, vege-TÁÁ-riskt, nunca 'vegeta-RÍS'; do RISCADO só fica o RISC, fraquinho: I curto, S de cobra e K seco; T = o giz que para seco no fim do risco: é o -t do neutro, obrigatório depois de 'något' (o mesmo -T de 'Det är kallt'); nada de vogal no fim — nunca 'ris-ki-tchi')",
+      "historia": "Arrastaram o curupira, guardião dos bichos da mata, pra um rodízio. Com os pés virados pra trás, ele tropeça logo na porta, rala a canela e entra esfregando ÁRNICA, bufando de dor: RRÁR-NI! Na mesa pousa um leitão assado de maçã na boca — vizinho dele lá do mato. Desesperado, ele procura no quadro de giz a ÚNICA opção sem bicho, o prato VEGANO — e ela TÁ RISCADA, com um traço de giz bem no meio! O cabelo de fogo sobe meio metro e ele aponta o quadro, indignado, num fôlego só: RRÁR-NI... NÔT... VÊ-GA... TÁÁÁ-RISC-T?! Vocês têm alguma coisa vegetariana?",
+      "cena": {
+        "descricao": "Num rodízio, um curupira de cabelo em chamas e pés virados para trás aponta, indignado, para um quadro de giz num cavalete onde a palavra VEGANO está cortada por um traço branco, segurando na outra mão uma bisnaga de arnica, ao lado de uma mesa onde um leitão assado de maçã na boca espera numa travessa.",
+        "partes": [
+          "piso de tábuas de madeira escura do restaurante",
+          "mesa quadrada com toalha vermelha",
+          "travessa oval prateada sobre a mesa",
+          "leitão assado marrom-dourado deitado na travessa, com uma maçã vermelha na boca",
+          "cavalete de madeira clara segurando um quadro-negro",
+          "quadro-negro com a palavra VEGANO em giz branco, cortada por um traço branco grosso",
+          "corpo do curupira menino de pele verde-musgo, com tanga de folhas verdes",
+          "cabeleira vermelho-alaranjada em forma de labareda, subindo alta",
+          "pés virados para trás, dedos apontando para o lado oposto ao do rosto",
+          "braço esticado com o dedo apontando o quadro",
+          "bisnaga de arnica amarela de tampa verde na outra mão, e uma mancha roxa na canela"
+        ]
+      }
+    },
+    {
+      "id": "utan-lok-tack",
+      "elenco": "cantora de ópera antes da estreia + cachorro-quente soterrado de cebola + binóculo de ópera + plaquinha LÖK",
+      "ponte_sonora": "UI! TAN(ta)... LEU-K!... TAC! (4 sílabas: ÜÜ-tan-LÖÖK-tak; força no ÜÜ e, maior, no LÖÖK; UI = o 'UI!' da cebola ardendo nos olhos, mas FUNDIDO numa vogal só: lábios no bico do U e a língua parada no I ao mesmo tempo — é o Ü, o 'u' sueco de DÜ ('du') e do ÜTE de 'Jag har låst mig ute', o mesmo truque da BI(R)ÚTA de 'Kan jag byta den här?'; LONGO, é a nota aguda da cantora — nunca 'u-í' em dois pedaços, nunca o U chapado de 'uva'; TAN = o TANTA cortado: A curto, N batido na ponta da língua, SEM o 'tã' nasal, e fraquinho — ÜÜ-tan é uma palavra só, 'utan' (sem); LEU = ela LEU a placa — e cantora de ópera lê como canta, de BOCA REDONDA: a língua parada no Ê e os lábios em bico AO MESMO TEMPO, numa vogal só — é o ö, irmão do Ü (o UI dá Ü, o LEU dá Ö), o MESMO LÖÖ do pombo de 'Vad är lösenordet till wifit?', que também lê de bico; LONGO e com a força maior da frase; nunca 'lê-u' em dois pedaços; e não é a fada de 'Är det ledigt här?', que lê de boquinha FECHADA, sem bico, e sai 'le-': sem o bico aqui sai LÊK, 'lek' (brincadeira), o LÊK do leque STOR de 'storlek'; os dois pinguinhos do Ö da placa são os lábios em bico; K = a última letra da placa, seca, sem vogal: LÖÖK, uma sílaba só; TAC = o 'tack' de sempre, A curto e K seco — aqui, o estalo do binóculo de ópera fechando)",
+      "historia": "Dez minutos antes da estreia, a cantora de ópera, já de vestido de gala, para na barraquinha de cachorro-quente da calçada — e o vendedor soterra o pão dela numa montanha de cebola crua. O cheiro sobe direto pros olhos e ela solta o agudo mais alto da carreira, de bico: UIII... TANTA! Com os olhos escorrendo, mira o binóculo de ópera na plaquinha da barraca, onde, embaixo do desenho de uma cebola, há uma palavra só, LÖK. Ela LEU — e cantora de ópera lê como canta, de boca redonda, em bico: LEU-K! Fecha o binóculo num estalo — TAC! — e empurra o pão de volta: hoje à noite tem dueto de beijo. Sem cebola, obrigada.",
+      "cena": {
+        "descricao": "Numa calçada, uma cantora de ópera de vestido de gala vinho, com lágrimas escorrendo e a boca redonda em bico soltando anéis de som, mira pelo binóculo de ópera dourado a plaquinha da barraca — o desenho de uma cebola e, embaixo, a palavra LÖK —, enquanto com a outra mão empurra um cachorro-quente gigante soterrado de cebola picada.",
+        "partes": [
+          "calçada de pedras cinza-claras",
+          "balcão da barraquinha de cachorro-quente, de madeira amarela",
+          "plaquinha branca em pé no balcão com o desenho de uma cebola roxa e, embaixo, a palavra LÖK em letras pretas, com os dois pinguinhos do Ö bem grandes (esferinhas)",
+          "cachorro-quente gigante sobre o balcão: pão bege comprido e salsicha vermelha",
+          "montanha de cebola picada (cubinhos brancos) cobrindo o pão",
+          "corpo da cantora robusta em vestido de gala vinho em forma de sino",
+          "cabeça com coque alto castanho e tiara dourada",
+          "boca em bico redondo com três anéis cor-de-rosa de som saindo",
+          "duas lágrimas azul-claras escorrendo pelas bochechas",
+          "binóculo de ópera dourado com cabinho, erguido diante dos olhos",
+          "mão de luva branca comprida empurrando o pão"
+        ]
+      }
+    },
+    {
+      "id": "ar-det-starkt",
+      "elenco": "babuíno medroso + arca do tesouro cheia de pimentas em brasa",
+      "ponte_sonora": "É DÊS-TÁRC(a)-T? (= 'É D'ESTA ARCA?' dito num fôlego só, com a tampa batendo no fim; 3 batidas: é-dê-STÁRKT; a força toda no TÁR; É DÊ = o 'är det' de sempre — o MESMO de 'Är det ledigt här?' e 'Är det till höger eller till vänster?': a pergunta começa pelo verbo, É aberto e curto, DÊ fechado e fraco, o T de 'det' mudo — o 'desta' do português tem É aberto e a força no DÉS: aqui ele fecha, apaga, e a força pula inteira pro TÁR; é D'ESTA, com T — nunca 'dessa', que engole o T; o S de 'desta' é o S de 'starkt', que já sai colado no DÊ, por isso nunca aparece o 'is' antes do ST; TÁRC = 'esta ARCA' emendado: o A de 'esta' some dentro da ARCA (des-TÁR-ca, nunca 'dés-ta-ár-ca' em quatro pedaços), a força no TÁR com A curto e aberto, e o R é de UM toque só, de 'caro' — nunca o R aspirado carioca de 'ARca', que soa 'stahk'; é a ARCA do tesouro, e o R fica — não confunda com a TIL-BARCA de 'tillbaka', em que o R some; C = K seco, e o -A da arca NÃO sai: a tampa bate antes — com o -A vira 'starka', outra forma da palavra; T = a batida seca da tampa: é o -t do neutro, obrigatório depois de 'det' — STÁRKT, uma sílaba só, K e T colados, sem vogal)",
+      "historia": "Na feira de especiarias, o babuíno recebe um prato de ensopado vermelho-vivo. Bem do lado, uma arca do tesouro de madeira transborda de pimentas que brilham feito brasa e solta fumaça pela fresta da tampa. Ele sua frio — o traseiro vermelho de nascença já parece até mais quente. Com a mão tremendo, segura o prato e se vira pra arca fumegante — É D'ESTA ARCA? —, mas de puro medo bate a tampa antes de terminar a palavra: TÁRC... T! Isso aqui é apimentado?",
+      "cena": {
+        "descricao": "Numa feira de especiarias, um babuíno de olhos arregalados e testa suada segura um prato fumegante de ensopado vermelho e, com a outra mão, bate a tampa de uma arca do tesouro de madeira de onde escapam pimentas vermelhas incandescentes e fumaça.",
+        "partes": [
+          "chão de terra batida alaranjada da feira",
+          "dois sacos de juta abertos ao fundo, com montinhos de especiarias amarela e marrom",
+          "arca do tesouro de madeira marrom com cintas e fecho dourados, tampa quase fechada",
+          "pimentas vermelhas incandescentes (cones curvos emissivos) escapando pela fresta da tampa",
+          "três fios de fumaça cinza saindo da arca",
+          "corpo do babuíno marrom-acinzentado agachado, de ombros largos e traseiro vermelho",
+          "cabeça de focinho comprido, olhos arregalados e juba de pelos claros",
+          "mão esquerda espalmada batendo em cima da tampa da arca",
+          "prato fundo branco na mão direita com ensopado vermelho",
+          "dois fios de vapor saindo do prato",
+          "duas gotas de suor azul-claro voando da testa"
+        ]
+      }
+    }
+  ]
+}

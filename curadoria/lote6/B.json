@@ -1,0 +1,158 @@
+{
+  "phrases": [
+    {
+      "id": "halla-vem-pratar-jag-med",
+      "sv": "Hallå, vem pratar jag med?",
+      "pt": "Alô, com quem eu estou falando?",
+      "pronuncia": "ha-LÔÔ, VÉM PRÁ-tar-ia MÊÊ? ('hallå' com h soprado e a força no LÔ, Ô FECHADO e longo — é o å longo —, e o 'ha' curtinho; 'vem' com É aberto e curto e o M demorado, de lábios fechados, sem o 'vẽi' nasal do português; 'pratar' com força no PRÁ, A longo, e o -tar fraquinho, com R de um toque só que já gruda no 'jag' = ia, sem força: PRÁ-ta-ria; 'med' no fim = MÊ, Ê FECHADO e longo, o D não soa na fala — e ele leva força: a pergunta termina nele)",
+      "contexto": "Quando atendem sem se identificar, quando a ligação foi transferida pra outra pessoa (empresa, vårdcentral, Försäkringskassan) ou quando aparece um número desconhecido. Muito sueco atende só com 'Hallå?' ou com o próprio nome; e quem liga costuma se apresentar com 'Hej, det är ... som ringer'.",
+      "porque": "Ligação com voz desconhecida é rotina — vendedor, operadora, recepção — e essa pergunta educada evita conversar às cegas. E o 'Hallå?' sozinho já serve pra testar se a linha caiu: 'Hallå? Hallå?'."
+    },
+    {
+      "id": "kan-du-ringa-tillbaka",
+      "sv": "Kan du ringa tillbaka?",
+      "pt": "Você pode me ligar de volta?",
+      "pronuncia": "kan dü ríng-a til-BÁÁ-ka? ('kan du' com A curto e o 'du' de bico — Ü; 'ringa' com R de um toque só, I curto, o NG só no nariz — o G não estala — e o -a fraquinho, tudo leve e rápido: em verbo com partícula a força vai toda pra partícula, ringa tillBAKA; 'tillbaka' com o 'till' fraquinho, L de verdade, e a força no BÁ, A longo; o -ka fraco)",
+      "contexto": "Quando o telefone toca numa hora ruim — no ônibus, numa reunião, com criança no colo — ou quando a ligação está péssima e você quer que a pessoa ligue de novo. Costuma vir com o quando: 'Kan du ringa tillbaka om tio minuter?' (daqui a dez minutos?) ou '... senare?' (mais tarde?).",
+      "porque": "Resolve qualquer ligação em hora errada sem trocar pro inglês nem desligar na cara. E fecha o par com o que você já sabe: 'Jag ringer dig senare' (eu te ligo mais tarde) / 'Kan du ringa tillbaka?' (pode me ligar de volta?)."
+    },
+    {
+      "id": "jag-hor-dig-inte",
+      "sv": "Jag hör dig inte.",
+      "pt": "Não estou te ouvindo.",
+      "pronuncia": "iá RRÖÖ(r)-dêi ÍN-te ('jag' = iá; 'hör' com h soprado e ö LONGO — boca de Ó redonda, em bico, com a língua empurrada pra frente; antes de R ele abre um pouquinho — e o R se derrete no D seguinte, língua dobrada pra trás: 'hör dig' sai quase 'rröö-dêi'; 'dig' = dêi, fraquinho; 'inte' com a força no ÍN, I curto e T seco, nunca 'íntchi')",
+      "contexto": "Ligação falhando — trem entrando no túnel, metrô, vento no celular — ou reunião no Teams com o áudio cortando. Quase sempre vem em dupla com o 'Hallå?': 'Hallå? Jag hör dig inte!'; e a pergunta irmã é 'Hör du mig?' (você está me ouvindo?).",
+      "porque": "Salva qualquer ligação ou videochamada que está falhando, e você avisa na hora em vez de fingir que entendeu. 'Hör' é o mesmo verbo de 'Vad kul att höra!' e 'Vi hörs!'."
+    },
+    {
+      "id": "kan-jag-lamna-ett-meddelande",
+      "sv": "Kan jag lämna ett meddelande?",
+      "pt": "Posso deixar um recado?",
+      "pronuncia": "ka-niá LÉM-na ét MÊÊ-de-lan-de? ('kan jag' = ka-niá, o -g não soa; 'lämna' com É curto e aberto, M e N colados, sem vogal no meio, e com a força no LÉM — aqui não tem partícula, então o verbo leva a pancada; 'ett' = ét, curtinho e fraco, T seco; 'meddelande' com a força no MÊ, Ê FECHADO e longo, um segundo apoio no 'de' (também Ê fechado) e o -lande corrido: A curto e oral, N de língua, D duro e -e fraquinho — nunca 'lãn-dji')",
+      "contexto": "Quando a pessoa que você procura não está: na recepção da empresa, no consultório, na escola ou na creche dos filhos. Quem atende também pode oferecer: 'Vill du lämna ett meddelande?'. Na caixa postal (röstbrevlåda) a gravação manda 'lämna ett meddelande efter tonen' — depois do sinal.",
+      "porque": "Evita desligar no vácuo e ter que ligar de novo: o recado fica e te ligam de volta. E 'meddelande' (recado, mensagem, aviso) aparece em todo lugar — SMS, app do banco, aviso no elevador do prédio."
+    },
+    {
+      "id": "jag-ringer-angaende-min-bokning",
+      "sv": "Jag ringer angående min bokning.",
+      "pt": "Estou ligando por causa da minha reserva.",
+      "pronuncia": "iá RÍNG-er ÁN-gô-en-de min BÚÚK-ning ('jag ringer' = iá RÍNG-er, como em 'Jag ringer dig senare': R de um toque só, NG no nariz sem estalar o G, -er fraquinho; 'angående' com a força no ÁN — A curto, N de língua, e aqui o G ESTALA, porque são duas partes, an + gå — e um segundo pico LONGO no GÔ, Ô fechado (é o å longo); o -ende corre fraquinho, D duro, nunca 'dji'; 'min' curto, N de língua, sem nasal; 'bokning' com a força no BÚÚ, U fechado e longo, K seco grudado no N, e o -ning com NG só no nariz)",
+      "contexto": "Logo no começo da ligação pra hotel, restaurante, cabeleireiro, vårdcentral, oficina ou companhia aérea — pra mudar, confirmar ou cancelar uma reserva ou hora marcada. Vem depois do 'Hej, jag heter ...' e antes do número da reserva (bokningsnumret).",
+      "porque": "É a frase que diz o motivo da ligação, e quem atende já sabe o que abrir no sistema. 'Angående' (a respeito de) serve pra qualquer assunto, falado ou escrito: 'angående fakturan', 'angående mötet' — está em todo assunto de e-mail sueco."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "halla-vem-pratar-jag-med",
+      "elenco": "ventríloquo apavorado + boneco de prata que atende sozinho",
+      "ponte_sonora": "RRA-LÔ! VÉM... PRÁTA(r)-IA... MÊ(do)? (7 sílabas: ha-LÔÔ-vém-PRÁ-tar-ia-MÊÊ; força no LÔ, no VÉM e no MÊ, com o PRÁ num segundo plano; RRA-LÔ = o ALÔ do telefone, que o brasileiro já fala igualzinho ao sueco — força no LÔ, Ô FECHADO —, só que com um SOPRO na frente: o RR leve, de h carioca, é o h de 'hallå'; e estique o Ô: LÔÔ; VÉM = o 'vem!' de chamar com a mão, mas com o É ABERTO de 'pé' e a boca FECHANDO no M — nada do 'vẽi' nasal do português; o M já cola no P seguinte, então os lábios ficam fechados de um pro outro: VÉM-PRÁ; PRÁTA = a PRATA do boneco, o MESMO âncora de 'pratar' da barra de PRATA ÍNTEgra de 'Jag pratar inte så bra svenska': força no PRÁ, A longo — só que AQUI vem com o R, de um toque só, de 'caro', que gruda no IA: PRÁ-ta-ria, igual ao FÔ(r)-IA de 'Ursäkta, får jag komma förbi?'; sem esse R sobra 'prata', o infinitivo; IA = o 'jag' de sempre, I de IOGA, nunca J chiado — aqui fraquinho, sem força, é a risadinha de lata; MÊ(do) = o MEDO do ventríloquo sem o -DO, o MESMO MÊ de 'Vad jobbar du med?' e 'Kan jag betala med kort?': Ê FECHADO, LONGO e com força, porque a pergunta termina nele — e o D não soa)",
+      "historia": "O telefone do camarim toca e quem atende é o boneco de PRATA — sozinho, sentado no banquinho, de fone na orelha de lata: RRA-LÔ!, um alô soprado que sai da boca articulada. Do outro lado do camarim, o ventríloquo fica de cabelo em pé de MEDO: as mãos dele estão vazias e a boca dele, fechada. Ele estica a mão trêmula e chama: VEM... vem cá! — e o boneco de PRATA vira a cabeça pra ele, com um rangido de um toque só, r, e ri no fone: ia, ia. Você, na linha, ouvindo o alô soprado, o 'vem' tremido e a risadinha de lata, faz a única pergunta possível: VÉM... PRÁTA-r'IA... MÊ? — com quem eu estou falando?",
+      "cena": {
+        "descricao": "Num camarim de teatro, um boneco de ventríloquo prateado, sentado sozinho num banquinho, segura um fone de telefone antigo na orelha, de boca articulada aberta soltando uma nuvenzinha de sopro, enquanto o ventríloquo de smoking, de cabelo em pé e olhos arregalados de medo, estica a mão chamando-o com o dedo.",
+        "partes": [
+          "piso de tábuas escuras do camarim",
+          "cortina de veludo vermelho ao fundo",
+          "mesinha redonda de madeira com a base de um telefone antigo preto de disco",
+          "banquinho alto de madeira",
+          "corpo do boneco de ventríloquo prateado e brilhante, sentado no banquinho, de gravata-borboleta vermelha",
+          "cabeça grande do boneco, prateada, com a mandíbula articulada aberta e olhos pintados arregalados",
+          "fone preto encostado na orelha do boneco, com fio espiral preto descendo até a base na mesinha",
+          "nuvenzinha branca de sopro saindo da boca do boneco",
+          "corpo do ventríloquo de smoking preto e camisa branca, recuado e encolhido",
+          "cabeça do ventríloquo com o cabelo preto espetado pra cima, olhos arregalados e boca fechada numa linha",
+          "braço esticado com a mão chamando, dedo indicador dobrado (vem cá)",
+          "três gotinhas azuis de suor saltando da testa do ventríloquo"
+        ]
+      }
+    },
+    {
+      "id": "kan-du-ringa-tillbaka",
+      "elenco": "guepardo atrasado + sino de chamar a barca + til-barca",
+      "ponte_sonora": "CAN-DU... RING A TIL-BÁ(r)CA? (7 sílabas: kan-dü-ríng-a-til-BÁÁ-ka; a força vai TODA pro BÁ — em verbo com partícula a pancada cai na partícula, ringa tillBAKA, como 'lämna tillBAKA' e 'ta MED' — e o RING A corre leve; CAN-DU é o 'kan du' de sempre — C+A+N como em 'cana', sem o glide de 'quando', e o DU com BICO DE PATO (Ü); RING = o MESMO RING do RINGUE de 'Jag ringer dig senare' e do sino de 'Ring 112!', cortado no NG: o NG fica no nariz, como no inglês 'ring', SEM estalar o G e sem 'gue'; emende DU-RING num fôlego só — 'dü-ring' — pro R sair de um toque só (ou tremido na ponta da língua), nunca o RR soprado de garganta, que vira 'hing'; A = o 'a' de 'A til-barca', fraquinho e colado no RING: é ele que dá o -a de 'ringa', o verbo pelado depois de 'kan du' — com -ER seria 'ringer', 'eu ligo'; TIL-BÁ(r)CA = a MESMA barca torta, curvada feito um til, de 'Jag vill lämna tillbaka den här': TIL fraquinho, com L de verdade (nunca 'tiu'), e BÁ(r)CA sem o R, A LONGO e com toda a força — com o R vira 'barka', descascar árvore; e a barca curvada é o próprio 'de volta': o til faz a curva e retorna)",
+      "historia": "O guepardo, o bicho mais rápido do mundo, chega à margem do rio um segundo atrasado: a TIL-BARCA — a barca de madeira torta, curvada feito um til — já vai no meio da água. Ele desaba na areia de língua de fora, sem fôlego nem pra levantar a pata, e chicoteia com o rabo o sino de chamar a barca: RING!... RING! Ofegante, grita pro rio como quem fala ao telefone: CAN-DU... RING A TIL-BARCA?! E a barca faz a curva do til e vem de volta. Em sueco, pedir pra alguém ligar de volta é isso: tocar de novo pra que volte.",
+      "cena": {
+        "descricao": "Ao meio-dia, na margem de areia de um rio da savana, um guepardo exausto, deitado de língua de fora, chicoteia com o rabo um sino de bronze pendurado num poste, enquanto no meio do rio uma barca de madeira curvada em forma de til faz a curva de volta.",
+        "partes": [
+          "água de rio azul-esverdeada (plano liso)",
+          "faixa de margem de areia dourada em primeiro plano",
+          "poste de madeira escura fincado na areia, com braço horizontal",
+          "sino de bronze dourado pendurado no braço do poste, inclinado no balanço",
+          "três arcos amarelos de som saindo do sino",
+          "corpo do guepardo amarelo-dourado de pintas pretas, deitado de barriga na areia, esguio e de patas compridas",
+          "cabeça do guepardo com as duas listras pretas de lágrima no focinho, boca aberta e língua rosa pendurada",
+          "rabo comprido pintado, com anéis pretos e ponta branca, erguido em chicote batendo no sino",
+          "três gotinhas azuis de suor sobre a cabeça",
+          "barca de madeira marrom comprida, sem vela, curvada em forma de til (~), no meio do rio",
+          "esteira branca em arco atrás da barca, mostrando a curva de volta"
+        ]
+      }
+    },
+    {
+      "id": "jag-hor-dig-inte",
+      "elenco": "gárgula de catedral no temporal + orelha de pedra maciça",
+      "ponte_sonora": "IÁ... RRÖR! DÊI... ÍNTE(gra)! (5 sílabas: iá-RRÖÖ-dêi-ÍN-te; força no RRÖ e no ÍN; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado — com uma pausinha antes do RRÖR, pro sopro sair inteiro; RRÖR = o fim de HORROR, o berro da gárgula, que é também o gargarejo da chuva na garganta de pedra: o RR é o h soprado de 'hör', LEVE, de garganta aberta; a vogal é o MESMO RRÖ de AT-RRÖ-RA ('Vad kul att höra!') e de RRÖX ('Vi hörs!'), LONGO: boca de Ó redonda, em BICO, com a língua empurrada pra frente — antes de R ele abre um pouquinho, quase um É de bico; com o Ô fechado do 'horror' português sai 'hår', que é CABELO; o R do fim é BRANDO, de um toque só, e se derrete no D seguinte, língua dobrada pra trás: RRÖ-dêi, quase sem R — mas sem ele sobra 'hö', que é FENO; DÊI = o 'dig' de sempre, o mesmo DÊI de 'Jag ringer dig senare' e 'Jag saknar dig' — aqui é o DEI do tapa na orelha — 'DEI tapa!' —: UMA sílaba só, fraquinha, nunca 'de-i'; ÍNTE(gra) = o MESMO âncora de 'inte' da PRATA ÍNTEgra de 'Jag pratar inte så bra svenska' e do sorvete ÍNTEgro de 'Jag vet inte': força no ÍN, I curto, T seco de 'tatu', nunca 'íntchi', e corta o '-gra')",
+      "historia": "No alto da catedral, em pleno temporal, a gárgula de pedra atende o telefone do campanário. Ela é calha: a chuva entra pela nuca e sai gargarejando pela boca — RRÖÖR, RRÖÖR —, e a voz do outro lado se afoga no barulho. Que HORROR! Ela inclina a cabeça e bate na orelha, como quem tira água do ouvido depois da piscina — mas a orelha é de pedra ÍNTEGRA, maciça, sem furo nenhum: não sai água e não entra voz. Ela berra no fone: IÁ... RRÖR!... DEI tapa... ÍNTEgra! — não estou te ouvindo.",
+      "cena": {
+        "descricao": "No parapeito de pedra de uma catedral sob a chuva, uma gárgula cinza de asas de morcego, de boca escancarada de horror jorrando um fio d'água, aperta um fone de telefone antigo contra a orelha de pedra maciça enquanto dá um tapa nela com a outra pata; os anéis de som batem na orelha e ricocheteiam.",
+        "partes": [
+          "parapeito de pedra cinza-escura da catedral (bloco comprido)",
+          "pináculo gótico de pedra ao fundo, com ponta em cone",
+          "base de telefone antigo preta apoiada no parapeito, com fio espiral subindo até o fone",
+          "corpo da gárgula cinza-pedra agachado na beira do parapeito",
+          "duas asas de morcego de pedra abertas atrás das costas",
+          "cabeça da gárgula com dois chifres curtos, olhos esbugalhados e boca escancarada de horror",
+          "fio d'água azul-claro (cilindro) jorrando da boca pra baixo",
+          "orelha grande e pontuda de pedra maciça, sem furo nenhum",
+          "pata segurando o fone preto encostado na orelha",
+          "outra pata espalmada no meio do tapa, colada na orelha",
+          "três anéis cinza de som batendo na orelha e voltando pra fora",
+          "quatro gotas de chuva azuis caindo em diagonal"
+        ]
+      }
+    },
+    {
+      "id": "kan-jag-lamna-ett-meddelande",
+      "elenco": "enguia-secretária elétrica no aquário + garrafinha de éter + cana",
+      "ponte_sonora": "CA-NIÁ, LÉM(e)-NA ÉT(er)... MÊ(do) DÊ-LA-NDE? (9 sílabas: ca-niá-LÉM-na-et-MÊÊ-de-lan-de; força no LÉM e no MÊ, com um segundo apoio no DÊ; CA-NIÁ = a CANA + IÁ de 'Kan jag få en påse?', 'Kan jag betala med kort?' e 'Kan jag byta den här?' — emendado, I de IOGA, nunca o J chiado de 'canja'; LÉM(e)-NA = o MESMO LEME de 'Jag vill lämna tillbaka den här': LEME sem o -e, com o É aberto quase de 'pé' e o M de lábios fechados soltando direto no NA — LÉM-na, nunca 'lê-mi-na'; sem o M, com Ô, vira o LÔ-NA da lona, 'låna' (pegar emprestado); lá o LEME corria leve por causa do 'tillBAKA', aqui, sem partícula, ele leva a força; ÉT(er) = o ÉTER sem o -ER, o MESMO ÉT de 'Jag har ett möte' e dos cilindros de 'Ring 112!': É aberto, curtinho e sem força, T seco, nunca 'étchi'; MÊ(do) DÊ-LA-NDE = 'meddelande' montado com duas âncoras que você já tem: o MÊ do MEDO ('med', de 'Vad jobbar du med?') e o DÊ-LA da onça de 'Kan vi dela på notan?' — e é literal: med-dela é 'dividir COM', avisar; o MÊ com Ê FECHADO, LONGO e a força principal, o D do MEDO cai; o DÊ também FECHADO, de 'você' — nunca o 'déla' aberto do português —, com um apoio menor; o -NDE é o ANDE! do empurrão, colado no LA sem vogal a mais: DÊ-LAN-de, como o '-ndo' do português (dividiNDO), mas com o A oral, N só de ponta de língua, D duro e -E fraquinho, nunca 'lãn-dji'; com o -NDE solto, sobra 'meddela', o verbo avisar)",
+      "historia": "Na recepção do escritório, quem anota os recados é a secretária ELÉTRICA: uma enguia que mora num aquário em cima do balcão, enrolada no LEME de enfeite, com o fio do telefone mergulhado na água. Ninguém atende, é a vez do recado — mas todo mundo tem MEDO DELA: encostou, levou choque. Então você enrola o bilhete dentro de uma garrafinha de ÉTER e empurra pra dentro do aquário com a ponta de uma CANA comprida, que cana não dá choque: CA-NIÁ... LEME-NA... ÉT... MEDO DELA... ANDE! A enguia abocanha a garrafa, acende inteira de azul — BIP! — e o recado está deixado.",
+      "cena": {
+        "descricao": "Num balcão de recepção, dentro de um aquário cilíndrico alto, uma enguia elétrica enrolada num leme de enfeite brilha azul e abocanha uma garrafinha de vidro com rótulo ÉT e um bilhete enrolado, empurrada pra dentro d'água pela ponta de uma cana-de-açúcar comprida; ao lado do aquário, um telefone antigo tem o fio mergulhado na água.",
+        "partes": [
+          "balcão de recepção de madeira clara com tampo cinza",
+          "aquário cilíndrico alto de vidro azulado translúcido (tubo largo de tampa aberta) em cima do balcão",
+          "fundo de cascalho bege com duas plantinhas verdes de aquário",
+          "leme de navio de madeira marrom (roda com oito raios) em pé no cascalho, como enfeite",
+          "corpo comprido da enguia elétrica, cinza-oliva escuro com barriga laranja, enrolado nos raios do leme",
+          "cabeça da enguia de boca aberta, com olhinhos pequenos",
+          "três faíscas azul-elétricas em zigue-zague saindo do corpo da enguia",
+          "garrafinha de vidro verde-clara com rótulo branco escrito ÉT e um bilhete enrolado dentro, entrando na boca da enguia",
+          "cana-de-açúcar comprida, roxo-esverdeada com nós, entrando em diagonal pela borda do aquário até a garrafa",
+          "telefone antigo preto em cima do balcão, ao lado do aquário",
+          "fio espiral preto do telefone mergulhando na água do aquário"
+        ]
+      }
+    },
+    {
+      "id": "jag-ringer-angaende-min-bokning",
+      "elenco": "lêmure de tango no ringue + livro de reservas vazio",
+      "ponte_sonora": "IÁ-RÍNGUER... (T)ÁNGO-(AT)ENDE!... MIN BÚK-NING! (10 sílabas: iá-RÍNG-er-ÁN-gô-en-de-min-BÚÚK-ning; força no RÍNG, no ÁN e no BÚÚ; IÁ-RÍNGUER é o MESMO 'jag ringer' da freira de 'Jag ringer dig senare': emende IÁ + RINGUE num fôlego só, 'iaríngue', pro R sair de um toque só — com RR soprado vira um h e outra palavra —; do RINGUE fica só o NG no nariz, SEM estalar o G e sem 'gui', e cola um -er fraquinho de R BRANDO: RÍNG-er; (T)ÁNGO-(AT)ENDE = os dois berros da espera, TANGO e ATENDE, com UMA regra só: o sinal picotado come a CABEÇA das duas palavras — sai o T do TANGO, sai o AT do ATENDE, e o que sobra emenda numa palavra de quatro sílabas, ÁN-gô-en-de; a força fica no ÁN, como no próprio 'TANgo' (A curto, N de língua, sem o 'tã' fanhoso), e aqui o G ESTALA, como no tango — 'angå' são duas partes, an + gå; o GÔ é um segundo pico: Ô FECHADO de 'avô' e LONGO, nunca o 'gu' com que o português fecha 'tango' — é o å LONGO, o mesmo GÔ da GOTA de 'Jag måste gå nu': 'angå' é 'gå' com 'an' na frente; o EN-DE corre fraquinho, porque a força do 'aTENde' foi embora junto com o AT: N de língua sem nasalizar, D duro e E fraco, nunca 'dji'; MIN = a MINHA cortada no N, a mesma de 'Jag har tappat min plånbok': I curto e N DE VERDADE, sem o 'mĩ' nasal, sem força; BÚK = o BOOK, o livro de reservas — o mesmo 'bok' do BUUK de 'Jag har tappat min plånbok': U FECHADO e LONGO, toda a força, e K seco grudado no N, sem vogal no meio; NING = o NINGUÉM da página vazia, cortado antes do -uém e sem força: I curto e NG só no nariz, como no fim do RING; junto, BÚK-NING é o 'booking' do Booking.com com um N a mais — BÚK-ning, nunca 'BÚ-king' nem 'bú-ki-ning')",
+      "historia": "O lêmure — dançarino nato, que em Madagascar já anda saltitando de lado — reservou o RINGUE do clube pra ensaiar TANGO. Chega de rosa na boca e encontra o livro de reservas aberto no meio do ringue: na linha dele, NINGUÉM. Ele liga pra recepção — IÁ, aqui do RINGUE! — e cai na musiquinha de espera: um TANGO que não acaba nunca. Furioso, dança sozinho e berra no celular por cima da música: TANGO não! ATENDE! — mas o sinal picota e come a cabeça das duas palavras, e do outro lado só chega ...ÁNGO-ENDE! Quando enfim atendem, ele bate o pé no livro: MINHA... BOOK... NINGUÉM?! — estou ligando por causa da minha reserva.",
+      "cena": {
+        "descricao": "No meio de um ringue de boxe, um lêmure-de-cauda-anelada com uma rosa vermelha atravessada na boca faz pose de tango, um braço erguido em arco e o outro apertando um celular na orelha, de onde saem notas musicais, enquanto aos pés dele um livro de reservas gigante aberto mostra a página sem nenhum nome.",
+        "partes": [
+          "tablado do ringue azul (caixa larga e baixa)",
+          "quatro postes de canto vermelhos",
+          "cordas brancas em volta (cilindros finos)",
+          "livro de reservas gigante aberto no chão do ringue, capa vinho e páginas creme com linhas cinza finas, sem nenhum nome",
+          "corpo do lêmure cinza-claro de peito branco, em pé nas patas traseiras numa pose de tango",
+          "cauda comprida erguida em S, com anéis pretos e brancos",
+          "cabeça do lêmure com máscara preta em volta de grandes olhos laranja e focinho preto",
+          "rosa vermelha de cabo verde atravessada na boca",
+          "braço erguido em arco por cima da cabeça, pose de tango",
+          "celular preto apertado contra a orelha pela outra mão",
+          "três notas musicais douradas saindo do celular"
+        ]
+      }
+    }
+  ]
+}

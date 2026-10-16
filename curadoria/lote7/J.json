@@ -1,0 +1,149 @@
+{
+  "phrases": [
+    {
+      "id": "det-snoar",
+      "sv": "Det snöar!",
+      "pt": "Está nevando!",
+      "pronuncia": "dê SNÖÖ-ar! ('det' = dê, o T não soa; 'snöar' com o S colado direto no N — nada do 'is' que o brasileiro põe antes de S + consoante —, Ö LONGO e fechado: lábios em bico de Ô com a língua lá na frente, no lugar do Ê, bem esticado; o -ar fraquinho, A curto e R de um toque só, que é o presente — sem ele sobra 'snöa', o infinitivo; a força toda no SNÖ)",
+      "contexto": "A primeira neve do ano, em outubro ou novembro: alguém olha pela janela do escritório, da pré-escola ou do ônibus e anuncia 'Det snöar!', e as crianças correm pra fora. Também serve de desculpa no grupo do trabalho: com neve, o trem e o trânsito param.",
+      "porque": "Falar do tempo é o esporte nacional sueco, e esse é o molde de todo clima: 'Det + verbo' (det regnar, det snöar, det blåser). Sem o 'det' na frente a frase não existe em sueco."
+    },
+    {
+      "id": "solen-skiner",
+      "sv": "Solen skiner.",
+      "pt": "O sol está brilhando.",
+      "pronuncia": "SÚÚ-len RRÍÍ-ner ('sol' se escreve igual ao nosso, mas o O longo sueco soa U: SÚÚL, nunca 'sól'; o -en é o artigo colado no fim, 'O sol', fraquinho, oral e com o N na ponta da língua; 'skiner' NÃO tem som de 'sk': o 'sk' antes de I vira o sopro do 'sj' — um RR soprado, forte e raspado, com os lábios em bico —, I LONGO, e o -ner fraquinho com R brando no fim, que é o presente; força no SÚ e no RRÍ)",
+      "contexto": "No primeiro sábado de sol de abril ou maio, quando a Suécia inteira corre pro parque, pra varanda ou pro banco da praça de olhos fechados e cara pro céu. Também ao abrir a persiana de manhã, e em mensagem pra combinar: 'Solen skiner, ska vi ut?'",
+      "porque": "Depois de meses de escuro, sol é notícia, e o sueco comenta sempre. E 'solen' ensina o artigo que gruda no fim da palavra: sol = sol, solen = o sol, igual a jacka/jackan."
+    },
+    {
+      "id": "det-blaser-mycket",
+      "sv": "Det blåser mycket.",
+      "pt": "Está ventando muito.",
+      "pronuncia": "dê BLÔÔ-ser MÜK-ke ('det' = dê, sem T; 'blåser' com a força no BLÔ, Ô FECHADO e longo — é o å longo —, e o -ser fraquinho com R brando no fim: é o presente (o infinitivo é 'blåsa'); 'mycket' = MÜK-ke, Ü curto — i com bico —, K dobrado e o T mudo, como na fala; força no BLÔ e no MÜK)",
+      "contexto": "No ponto de ônibus de Göteborg, pedalando contra o vento numa ponte, na costa ou num lago congelado. É também como a previsão da SVT e do SMHI fala ('det blåser kraftigt' = venta forte), e a desculpa de quem chega descabelado no trabalho.",
+      "porque": "Vento é o que torna o frio sueco cruel, e se fala dele quase todo dia. E é o mesmo molde do 'Det snöar' e do 'Det regnar igen': 'det' + o verbo no presente, em -ar ou -er."
+    },
+    {
+      "id": "ta-pa-dig-mossan",
+      "sv": "Ta på dig mössan!",
+      "pt": "Põe a touca!",
+      "pronuncia": "ta PÔ dêi MÖS-san! ('ta på' é verbo com partícula e a força cai no PÔ: Ô fechado e longo; 'dig' na fala = dêi, uma sílaba só; 'mössan' com Ö CURTO — lábios em bico de Ô com a língua de Ê —, o S dobrado, segurado um instante, e o -an do artigo: 'mössa' é touca, 'mössan' é A touca; força no PÔ e no MÖ)",
+      "contexto": "Frase de pai e mãe na porta de casa ou da förskola, de outubro a abril; os pedagogos repetem no pátio antes de liberar as crianças pra neve. E de pais pra adolescente que sai de cabeça descoberta a menos dez.",
+      "porque": "É o mesmo molde do 'Ta på dig jackan!': só troque a peça — vantarna (as luvas), halsduken (o cachecol), skorna (os sapatos). Com filho pequeno na Suécia, você diz isso todo santo dia do inverno."
+    },
+    {
+      "id": "vi-aker-till-landet",
+      "sv": "Vi åker till landet.",
+      "pt": "Vamos pro campo (pro interior).",
+      "pronuncia": "vi ÔÔ-ker til LÁN-det ('vi' com I limpo; 'åker' com Ô FECHADO e longo — å longo —, K seco e o -er fraquinho com R brando, que é o presente (o infinitivo é 'åka'); 'till' com T duro, nunca 'tchil', e L de língua; 'landet' com a força no LAN, A curto e ABERTO, sem o 'ã' fanhoso do português, D duro de 'dado' e o -et fraquinho, quase engolido — é o artigo: 'land' é campo/país, 'landet' é O campo)",
+      "contexto": "Na sexta-feira de verão, quando meio Estocolmo sai de carro ou de trem pra sommarstuga, a casinha de campo da família; ou no Midsommar. 'Landet' é o interior, a roça, por oposição à cidade (e também quer dizer 'o país').",
+      "porque": "'Åka' é O verbo de ir de transporte — carro, trem, ônibus, bicicleta, até esqui —, enquanto 'gå' é a pé. Brasileiro usa 'går' pra tudo e soa estranho; 'Vi åker till ___' resolve qualquer viagem."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "det-snoar",
+      "elenco": "lemingue snowboarder + prancha de snowboard voando + flocos de neve gigantes",
+      "ponte_sonora": "DÊ! SNOW... AR! (3 sílabas: dê-SNÖÖ-ar; a força toda no SNÖ; DÊ = o 'det' de sempre, o MESMO DÊ de 'Det regnar igen' e 'Det gör inget': Ê FECHADO e sem T — e aqui ele serve de apoio pro S: diga DÊS-NÔ num fôlego só, o S grudado no DÊ, porque o brasileiro tende a enfiar um 'is' antes de S + consoante ('dê is-nô'), e em sueco não há vogal nenhuma entre o S e o N; SNOW = o 'snow' de SNOWBOARD — e é a mesma palavra: snö é neve, prima do inglês snow —, mas SEM o U do fim do inglês (nada de 'snôu'): Ô FECHADO e LONGO, esticado, com os lábios no bico do Ô e a língua empurrada pra frente, no lugar do Ê — é o ö fechado, o mesmo be-RRÖ-ver de 'Jag behöver ett BankID'; AR = o AR onde a prancha voa: A curto e um R de UM toque só, de 'caro' — nunca o 'ah' carioca de fim de palavra —, fraquinho mas OBRIGATÓRIO: é o -ar do presente, o mesmo do NAR(iz) de 'Det regnar igen'; sem ele sobra 'snöa', o infinitivo)",
+      "historia": "Fim de outubro e nada de neve: o lemingue sobe no penhasco com a prancha de snowboard debaixo do braço, olha pro céu cinza e implora de patinhas juntas: 'DÊ!'. O céu dá — e dá demais: flocos do tamanho de pizzas despencam todos de uma vez. O lemingue salta do penhasco e a prancha de SNOW voa no AR, girando entre os flocos gigantes, enquanto ele berra de felicidade. SNOW no AR: está nevando!",
+      "cena": {
+        "descricao": "Acima de um penhasco coberto de neve, um lemingue gorducho de barriga laranja e costas pretas voa de boca aberta em cima de uma prancha de snowboard turquesa, entre flocos de neve gigantes que caem de uma nuvem cinza.",
+        "partes": [
+          "chão de neve branca formando um penhasco arredondado à esquerda",
+          "pinheiro verde-escuro de ponta nevada na beira do penhasco",
+          "nuvem cinza-chumbo fofa no alto da cena",
+          "rastro curvo de neve espirrada saindo da beira do penhasco até a prancha",
+          "prancha de snowboard turquesa com uma faixa amarela, inclinada no ar",
+          "corpo gorducho e redondo do lemingue, laranja-dourado na barriga e nos lados",
+          "manta de pelo preto nas costas e no alto da cabeça do lemingue",
+          "patinhas curtas abertas como asas, com garrinhas rosadas",
+          "cabeça redonda de orelhinhas miúdas e boca aberta num grito de alegria, com os dois dentinhos da frente",
+          "três flocos de neve gigantes, brancos e de seis pontas, caindo ao redor"
+        ]
+      }
+    },
+    {
+      "id": "solen-skiner",
+      "elenco": "Santa Lucia emburrada + placa SUL + sol gigante gargalhando",
+      "ponte_sonora": "SUL-EN... RRÍÍ, NÉ-R?! (4 sílabas: SÚÚ-len-RRÍÍ-ner; força no SÚ e no RRÍ; SUL = a placa SUL — e o 'sol' sueco se escreve igual ao nosso, mas soa SUL: U FECHADO e LONGO, nunca o 'sól' aberto; o L NÃO vira U como no 'sul' brasileiro ('suw'): ele gruda no EN seguinte, como em 'mal-entendido' — SÚ-len; EN = o 'en' de sempre, o dedinho erguido de 'Har du tid en stund?' e do ciclope de 'Jag behöver träffa en läkare': curto, ORAL, N na ponta da língua, sem o 'ẽ' fanhoso — e é o mesmo som do artigo grudado no fim, que aqui quer dizer 'O': sol = sol, solen = o sol; RRÍÍ = a gargalhada do sol, o RI soprado: o 'sk' antes de I não soa 'sk', vira o sopro do 'sj', o MESMO de RRÍCA ('skicka') e RRÜÜK ('sjuk') — FORTE e raspado, com os lábios já em bico —, e o I bem LONGO; com o h leve e o I curto vira 'hinner' (dá tempo), o RRÍNER do pinguim goleiro; NÉ-R = o 'Ri, né?!' emburrado da Lucia, sem força, com o É curto e um R brando no fim, de um toque só: é o -er do presente — sem ele não há presente (o infinitivo é 'skina'))",
+      "historia": "Dezembro, três da tarde, breu total: Santa Lucia desfila de camisola branca e coroa de velas, a única luz da cidade, toda importante. Ela vê a placa SUL e ergue o dedinho — EN — pra mostrar o caminho, e de lá, do sul, sobe um sol enorme, gargalhando um RRÍÍÍ tão forte e brilhando tanto que as velas da coroa dela parecem palitos de fósforo. Lucia cruza os braços, emburrada: 'RI, NÉ?!'. Não adianta: o sol está brilhando.",
+      "cena": {
+        "descricao": "Numa rua nevada, Santa Lucia de camisola branca e coroa de velas, emburrada, aponta com o dedinho para uma placa de seta SUL, enquanto atrás das casinhas sobe um sol amarelo gigante gargalhando de boca escancarada.",
+        "partes": [
+          "chão de neve azulada de rua",
+          "fileira de três casinhas vermelhas de telhado nevado ao fundo",
+          "sol gigante amarelo-ouro de raios triangulares, olhos apertados e boca escancarada de gargalhada, subindo atrás das casinhas",
+          "poste de madeira com placa em forma de seta escrita SUL, apontando para o sol",
+          "corpo de Santa Lucia: camisola branca longa até o chão",
+          "faixa vermelha larga amarrada na cintura",
+          "cabeça de cabelo loiro comprido e cara emburrada, de bochechas infladas",
+          "coroa verde de folhas com quatro velas brancas de chama miudinha",
+          "braço direito erguido com só o dedinho levantado, apontando a placa",
+          "braço esquerdo dobrado na frente do corpo, cruzado de birra"
+        ]
+      }
+    },
+    {
+      "id": "det-blaser-mycket",
+      "elenco": "pescador no gelo + van Doblô arrastada pelo vento + muque gigante",
+      "ponte_sonora": "DÊ! (do)BLÔ... SÉR(io)?! MÜ-QUE! (5 sílabas: dê-BLÔÔ-ser-MÜK-ke; força no BLÔ e no MÜ; DÊ = o 'det' de sempre, o MESMO DÊ de 'Det snöar!' e 'Det regnar igen' — aqui o 'DÊ cá!' que o pescador berra e o vento corta logo no DÊ: Ê FECHADO e sem T; BLÔ = a van DOBLÔ, que o Brasil já fala com a força no BLÔ e o Ô FECHADO — a ventania arranca o DO, e quem entra no lugar é o DÊ: dê-BLÔ, colado; estique o Ô: é o å LONGO, o mesmo PÔ fechado de 'Ta på dig' e o SÔ de 'Tack så mycket'; de Ó aberto e curto sai outra palavra ('blossa', chamejar); SÉR = o 'SÉRIO?!' indignado, cortado no R e emendado no BLÔ numa palavra só (BLÔ-ser): o É curtinho e SEM força e o R de um toque só, de 'caro' — esse R é o presente: sem ele não há presente — o infinitivo é 'blåsa'; MÜ-QUE = o MUQUE de 'Tack så mycket' e do alfaiate de 'Jag har mycket att göra', com BICO: língua de I e lábios de U, Ü curto, o K segurado um instante (é dobrado) e o -QUE fraquinho, sem o T — nunca 'MÚ-qui' de boca aberta)",
+      "historia": "No meio do lago congelado, o pescador no gelo estacionou a van Doblô do lado do buraco de pesca. Vem uma rajada tão forte que a van sai deslizando pelo gelo feito barco a vela. Ele berra 'DÊ cá a minha DOBLÔ! SÉRIO?!', mas a ventania arranca pedaços das palavras da boca dele, e o que se ouve é só 'DÊ... BLÔ... SÉR!'. Aí ele segura a van pelo para-choque só no MUQUE, o bíceps inchado rasgando a manga do casaco, enquanto o balde de peixes sai rolando. Está ventando muito.",
+      "cena": {
+        "descricao": "Num lago congelado, um pescador barbudo de casaco laranja, inclinado pra trás com o bíceps gigante rasgando a manga, segura pelo para-choque uma van branca quadradona que o vento arrasta pelo gelo, enquanto um balde rola soltando peixes.",
+        "partes": [
+          "superfície lisa de lago congelado azul-claro",
+          "buraco redondo escuro no gelo com um banquinho de madeira ao lado",
+          "van branca alta e quadradona, de janelas escuras, inclinada de lado como se deslizasse",
+          "três faixas curvas de vento cinza-claro passando atrás da van",
+          "corpo do pescador: casaco acolchoado laranja e calça de neve azul-marinho, inclinado pra trás",
+          "botas pretas grossas fincadas no gelo, com dois riscos de arrasto atrás",
+          "braço direito com a manga rasgada e o bíceps enorme saltado, agarrando o para-choque da van",
+          "cabeça de barba ruiva e boca aberta num berro",
+          "balde de metal virado rolando no gelo, com três peixinhos prateados escapando"
+        ]
+      }
+    },
+    {
+      "id": "ta-pa-dig-mossan",
+      "elenco": "boneco de neve teimoso + touca-moça de tranças loiras + varal",
+      "ponte_sonora": "TÁ, PÔ! DÊI... MOÇA-N! (5 batidas: tá-PÔ-dêi-MÖS-san; tônicas no PÔ e no MÖ; TÁ, PÔ! DÊI = o MESMO 'ta på dig' do quati de 'Ta på dig jackan!': TÁ com A aberto e longo, PÔ com Ô FECHADO e a força (é verbo com partícula: ta PÅ), o resmungo inteiro de uma vez, e DÊI = o 'DEI!' satisfeito de quem acabou de fazer o serviço em você, UMA sílaba só, o 'dej' da fala; MOÇA-N = a touca-MOÇA de tranças, com o N do artigo colado no fim, igual ao N da JACA de IÁK-KAN ('jackan'): mössa = touca, mössan = A touca; a força fica no MÔ, como em 'moça' — nunca 'mo-SSÃ' —, e o N é de ponta de língua, sem nasal; o Ô é CURTO e leva o bico do Ô com a língua de Ê, o mesmo ö de 'snö', só que curtinho — sem a língua de Ê sai 'mossan', que é O MUSGO; o SS é dobrado: segure o S um instante antes de soltar o -an, MÖS-san)",
+      "historia": "Menos vinte em Kiruna, e o boneco de neve, todo metido, se recusa a pôr touca: 'boneco de neve não sente frio!'. Aí a MOÇA de tricô — uma touca vermelha com pompom e duas tranças loiras de lã — pula do varal e se enterra na cabeça dele até a beira dos olhos de carvão. 'TÁ, PÔ!', resmunga ele, de bico; 'DÊI!', diz ela, satisfeita, balançando as tranças. Na Suécia, até boneco de neve ouve: põe a touca!",
+      "cena": {
+        "descricao": "Num quintal nevado, um boneco de neve de nariz de cenoura e boca de carvão em bico emburrado ergue um braço de galho em protesto enquanto uma touca vermelha de tricô, com pompom e duas tranças loiras, pula do varal e se encaixa na cabeça dele.",
+        "partes": [
+          "chão de neve branca de quintal",
+          "varal de corda entre dois postes de madeira, com dois prendedores vazios",
+          "bola grande de neve da base do boneco",
+          "bola média de neve do tronco com três botões de carvão preto",
+          "bola menor da cabeça com olhos de carvão e boca de carvão em bico emburrado",
+          "nariz comprido de cenoura laranja",
+          "dois braços de galho marrom, um deles erguido em protesto",
+          "touca de tricô vermelha com listras brancas e pompom branco, encaixando no alto da cabeça",
+          "duas tranças loiras grossas de lã penduradas dos lados da touca, com lacinhos azuis na ponta"
+        ]
+      }
+    },
+    {
+      "id": "vi-aker-till-landet",
+      "elenco": "cavalinho de Dalarna oferecendo carona + sela vazia + placa TILÂNDIA",
+      "ponte_sonora": "VI! ÔÔ, QUER?... TILÂND(ia)-ET! (6 sílabas: vi-ÔÔ-ker-til-LÁN-det; força no ÔÔ e, maior, no LÁN; VI = o 'eu VI' do português, o MESMO VI de 'Vi ses!' (VI SEIS) e 'Vi hörs!': I limpo e longo; ÔÔ, QUER? = o convite do cavalinho oferecendo o lombo: o 'ôô' de chamar cavalo, Ô FECHADO e LONGO — é o å longo, o mesmo PÔ fechado de 'Ta på dig' —, e o QUER emendado e mais fraco, num fôlego só, com K seco e R de um toque só: ÔÔ-ker — o mesmo -QUER do 'TÜ QUER?!' de 'tycker' e do 'MULÉ, QUER?' de 'läcker'; esse R é o presente: sem ele não há presente (o infinitivo é 'åka'); e nada do 'ôa' de parar cavalo: é ÔÔ puro; TIL = o MESMO TIL (~) do gongo de 'Kan du ta det en gång till?' e da Dona Caracol de 'Lycka till!': T duro, nunca 'tchil', e L de língua no céu da boca — e ele já vem de graça no começo da placa; LÂND = o meio da placa TILÂNDIA, a cidadezinha de interior — as '-lândias' do Brasil são justamente roça: a força no LAN, mas SEM o 'ã' fanhoso: A ABERTO e curto de 'lá', a língua só encosta no N; e o D DURO, de 'dado' — nunca 'djia'; ET = no lugar do -IA — na placa o IA está riscado e alguém pintou ET por cima —, um -et fraquinho, E curto e T leve, quase engolido (muito sueco nem solta o T): é o artigo colado, land = campo, landet = O campo; LÁN-det, nunca 'lan-DÊT')",
+      "historia": "Sexta-feira de julho, Estocolmo fervendo: 'VI!', relincha o cavalinho de Dalarna, vermelho e pintado de flores, que viu você derretendo no ponto de ônibus. Ele encosta, vira a cabeça e oferece a sela vazia no lombo: 'ÔÔ, QUER?'. Você monta, e ele dispara pela estrada de terra no meio dos campos amarelos até frear debaixo de uma placa de madeira: TILÂNDIA, a cidadezinha com casinha vermelha e lago — só que o IA está riscado e, por cima, pintaram um ET torto: TILÂND-ET. Vocês vão pro campo.",
+      "cena": {
+        "descricao": "Numa estrada de terra entre campos amarelos, um cavalinho de Dalarna vermelho pintado de flores, com uma sela azul vazia no lombo, vira a cabeça pra trás chamando, parado junto de uma placa de madeira TILÂNDIA, com uma casinha vermelha e um lago ao fundo.",
+        "partes": [
+          "estrada de terra bege atravessando a cena",
+          "campos verde-amarelados dos dois lados da estrada",
+          "casinha vermelha de cantos e janelas brancas ao fundo, à direita",
+          "lago azul pequeno atrás da casinha",
+          "poste com placa de madeira retangular escrita TILÂNDIA, na beira da estrada, com o IA riscado em vermelho e ET pintado à mão em cima",
+          "corpo do cavalinho de Dalarna: madeira vermelha lisa, formas retas e estilizadas, pernas num bloco só",
+          "pinturas de flores e arabescos brancos, amarelos e verdes no pescoço e no lombo",
+          "crina pintada de preto e rédea branca",
+          "sela azul vazia de bordas douradas no lombo",
+          "cabeça do cavalinho virada pra trás, olho pintado e boca aberta chamando"
+        ]
+      }
+    }
+  ]
+}

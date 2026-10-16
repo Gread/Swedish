@@ -1,0 +1,155 @@
+{
+  "phrases": [
+    {
+      "id": "jag-har-huvudvark",
+      "sv": "Jag har huvudvärk.",
+      "pt": "Estou com dor de cabeça.",
+      "pronuncia": "iá rrar RRÜÜ-vud-värk ('jag' = iá, o G não soa; 'har' com h soprado e R brando — na fala vem fraquinho, mas o R fica: é ele que faz o presente; 'huvudvärk' é UMA palavra só, com a força no HU: h soprado leve, Ü LONGO de bico — lábios de U, língua de I —, o -vud curto e fraco, U de bico puxando pra Ô e D leve; um acento menor no VÄRK, com o Ä bem aberto antes do R, quase A, e o K seco no fim)",
+      "contexto": "No trabalho, em casa ou com amigos — pra recusar um programa, pedir silêncio ou sair mais cedo —, na farmácia (apotek) ou ao telefone com o 1177 descrevendo o que sente.",
+      "porque": "É a queixa mais comum do dia a dia. E o molde '___värk' serve pra outras dores: tandvärk (dente), ryggvärk (costas); a alternativa igualmente comum é 'Jag har ont i huvudet', no mesmo molde de 'Jag har ont i magen'."
+    },
+    {
+      "id": "jag-har-tandvark",
+      "sv": "Jag har tandvärk.",
+      "pt": "Estou com dor de dente.",
+      "pronuncia": "iá rrar TÁND-värk ('jag' = iá; 'har' com h soprado e R brando, fraquinho mas presente; 'tandvärk' é UMA palavra só, com a força no TAND: A curto, ABERTO e ORAL — nada do 'tã' nasal do português —, N batido na ponta da língua e D leve fechando a sílaba; um acento menor no VÄRK, Ä bem aberto antes do R, quase A, e K seco no fim)",
+      "contexto": "Ao telefone com a Folktandvården ou um dentista particular, pedindo hora de emergência ('en akut tid'); na farmácia; ou explicando no trabalho por que você vai sair e está com a bochecha inchada.",
+      "porque": "Dentista na Suécia tem fila e é caro, e essa frase dita no telefone é o que te põe na lista de urgência. E 'tand' (dente) está em tudo: tandläkare (dentista), tandborste (escova de dente), Folktandvården."
+    },
+    {
+      "id": "jag-hostar-mycket",
+      "sv": "Jag hostar mycket.",
+      "pt": "Estou tossindo muito.",
+      "pronuncia": "iá RRÔS-tar MÜK-ke ('jag' = iá; 'hostar' com h soprado leve e a força no HOS — O CURTO e FECHADO, puxando pra U —, S de cobra, e o -tar fraco mas com R brando no fim: sem ele vira 'hosta', o infinitivo; 'mycket' = MÜK-ke, Ü curto de bico, o K segurado um instante e o -ke fraquinho; o T não soa)",
+      "contexto": "Na vårdcentral ou ao telefone com o 1177 descrevendo sintomas, no trabalho avisando que vai ficar em casa, ou se desculpando no ônibus, na reunião ou no cinema depois de um acesso de tosse.",
+      "porque": "Tosse é o sintoma número um do inverno sueco, e uma das primeiras perguntas da enfermeira é 'Hostar du?'. E 'mycket' depois do verbo serve pra tudo: jag jobbar mycket, jag sover mycket, jag tränar mycket."
+    },
+    {
+      "id": "jag-behover-vila",
+      "sv": "Jag behöver vila.",
+      "pt": "Preciso descansar.",
+      "pronuncia": "iá be-RRÖÖ-ver VÍÍ-la ('jag' = iá; 'behöver' com o be- fraquinho, o h soprado e a força no HÖ — Ö LONGO, lábios de Ô com língua de Ê —, e o -ver fraco mas com R brando, que encosta no V seguinte; 'vila' com a força no VI, I LONGO, L de verdade e o -la fraquinho: o 'vila' do português já soa quase igual)",
+      "contexto": "Em casa com o parceiro, no trabalho (pedindo uma pausa ou explicando um dia de folga) ou no médico — 'Du behöver vila' é provavelmente o que o médico sueco mais receita.",
+      "porque": "O conselho padrão da vårdcentral pra gripe, resfriado e cansaço é 'vila och dricka mycket vatten' (descansar e beber bastante água). E 'behöver' + verbo serve pra qualquer necessidade: jag behöver sova, jag behöver äta, jag behöver gå hem."
+    },
+    {
+      "id": "har-du-en-varktablett",
+      "sv": "Har du en värktablett?",
+      "pt": "Você tem um comprimido pra dor?",
+      "pronuncia": "rrar dü en VÄRK-ta-blètt? ('har du' sai num bloco: h soprado, A longo e o R brando derretendo no D — rrá-dü —, com o Ü de bico; 'en' curto, oral, N na ponta da língua; 'värktablett' é UMA palavra só, com a força no VÄRK — Ä bem aberto antes do R, quase A, e K seco — e um acento menor no BLETT, É aberto e curto, com o T segurado; o 'ta' do meio sai fraquinho)",
+      "contexto": "Pedindo a um colega, amigo ou parceiro quando bate a dor de cabeça; muita gente na Suécia carrega analgésico na bolsa. Na farmácia (e até no supermercado) os nomes que você vai ouvir são Alvedon (paracetamol) e Ipren (ibuprofeno).",
+      "porque": "É o remédio mais pedido do dia a dia. E 'Har du en ___?' serve pra pedir qualquer coisa emprestada: en penna (caneta), en laddare (carregador), en näsduk (lenço)."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "jag-har-huvudvark",
+      "elenco": "Medusa com dor de cabeça + boneco de vudu espetado de alfinetes + óculos escuros",
+      "ponte_sonora": "IÁ, RRÁR... RRÜÜ-VUD(u)... VER QUE! (5 sílabas: iá-rrar-RRÜÜ-vud-värk; força principal no RRÜÜ e um acento menor no VÉRK; IÁ, RRÁR = o 'jag har' de sempre — o MESMO de 'Jag har ont i magen', 'Jag har missat bussen' e 'Jag har gått vilse': I de IOGA, nunca J chiado, h soprado leve, A longo e R BRANDO no fim, AUDÍVEL — sem ele sobra 'ha', outro verbo; RRÜÜ = o gemido de bico da Medusa, o MESMO sopro LEVE do RRÜR de 'Hur...?', só que SEM o R no fim (com R vira 'hur', como): h soprado de leve, lábios em BICO de U com a língua no I — o Ü — e LONGO; nada do sopro forte e raspado do RRÜÜK de 'sjuk', que é outra palavra; VUD(u) = o boneco de VUDU sem o último U: VUD curto e FRACO, U de bico puxando pra Ô, D leve — a força NÃO vai pro fim como em 'vu-DU': ela já ficou toda no RRÜÜ; RRÜÜ-VUD num fôlego só é 'huvud', cabeça; VER QUE = o 'quero VER QUE...' da Medusa arrancando os óculos, cortado pelo estalo da pedra: VÉR com É ABERTO de 'pé' (antes de R o ä sueco abre, quase A) e R brando, e do QUE só sobra o K seco, sem 'ki' no fim; é o MESMO 'verk' de 'Skatteverket' (VER QUE T(esouro)) e o VÉR de 'hantverkaren' — aqui é 'värk', DOR, a mesma ponte de 'Jag har tandvärk' e 'Har du en värktablett?')",
+      "historia": "No templo em ruínas, Medusa acorda com a cabeça latejando e solta uma gargalhada nervosa, soprada: IÁ, RRÁR! Logo vem um gemido de bico — RRÜÜÜ... — e ela descobre o culpado em cima do altar: um boneco de VUDU com a cara dela, e duas cobras do próprio cabelo dela se esticando até ele pra espetar mais alfinetes na cabeça do boneco. A cada alfinete, a cabeça dela lateja mais forte. Furiosa, ela arranca os óculos escuros — 'Quero VER QUE...' — e o olhar transforma o boneco em pedra com um estalo seco que corta a frase no K. Tarde demais: os alfinetes já estão lá, e a cabeça dói — estou com dor de cabeça.",
+      "cena": {
+        "descricao": "Num templo grego em ruínas, a Medusa de pele verde-clara, de óculos escuros arrancados na mão erguida e olhos amarelos brilhando, encara um boneco de vudu de pano com a cara dela, a cabeça espetada de alfinetes e os pés já virando pedra, enquanto duas cobras do próprio cabelo dela se esticam até o boneco com mais alfinetes na boca.",
+        "partes": [
+          "piso de mármore branco rachado",
+          "duas colunas gregas brancas quebradas ao fundo",
+          "altar de pedra cinza retangular no centro",
+          "boneco de vudu de pano bege em pé no altar, cabeça grande e redonda com olhos de botão pretos e boca costurada, os pés já cinza de pedra",
+          "cinco alfinetes de cabeça vermelha espetados no topo da cabeça do boneco",
+          "corpo da Medusa de túnica grega roxa, pele verde-clara, em pé ao lado do altar",
+          "cabeça da Medusa de testa franzida de dor, olhos amarelos arregalados e brilhando",
+          "cabelo de oito cobras verdes curtas enroscadas, de olhinhos vermelhos",
+          "duas cobras compridas saindo do cabelo e esticadas até o boneco, cada uma com um alfinete vermelho na boca",
+          "óculos escuros pretos na mão erguida",
+          "três raios amarelos em zigue-zague latejando em volta da cabeça da Medusa"
+        ]
+      }
+    },
+    {
+      "id": "jag-har-tandvark",
+      "elenco": "encanador que faz o próprio canal + chave de grifo vermelha + câmera de inspeção de cano",
+      "ponte_sonora": "IÁ, RRÁR! (aper)TÁND(o)... VER QUE! (4 sílabas: iá-rrar-TÁND-värk; força principal no TÁND e um acento menor no VÉRK; IÁ, RRÁR = o 'jag har' de sempre — o MESMO de 'Jag har ont i magen' e 'Jag har huvudvärk': I de IOGA, nunca J chiado, h soprado leve, A longo e R BRANDO no fim — sem ele sobra 'ha', outro verbo; (aper)TÁND(o) = o APERTANDO da chave de grifo — só o pedaço forte, como o parTÍD(a) de 'tid': corte o APER da frente e o -O do fim e sobra TÁND, numa sílaba só; o A é ORAL, ABERTO e CURTO, de 'pá' — nada do 'tã' nasal do português —, com o N batido na ponta da língua e o D leve fechando seco; com T no lugar do D vira 'tant', que é TIA; e é o dente no SINGULAR, com A — no plural o A vira É: 'tänderna' é o TÉN-DER-NA do tubarão de 'Har du borstat tänderna?'; VER QUE = o MESMO 'värk' de 'Jag har huvudvärk' e 'Har du en värktablett?' — o 'VER QUE estrago' do encanador olhando pela câmera: VÉR com É ABERTO de 'pé' e R brando, e do QUE só o K seco, sem 'ki' no fim)",
+      "historia": "O dente de trás do encanador está bambo, balançando feito porca frouxa de sifão. Ele solta a risada nervosa de quem resolve tudo sozinho — IÁ, RRÁR! —, enfia a chave de grifo vermelha na boca e vai APERTANDO o dente como se fosse um cano pingando, com toda a força no TAN: aperTÁNDo, aperTÁNDo... A cada volta, uma pontada, e a bochecha incha feito uma bola. Aí ele faz o que faz em todo cano entupido: enfia a câmera de inspeção na própria boca pra VER QUE estrago fez — e o monitor em cima da caixa de ferramentas mostra um dente vermelho, latejando. Estou com dor de dente.",
+      "cena": {
+        "descricao": "Num porão de tijolos cheio de canos, um encanador de macacão laranja e bochecha inchada aperta com uma chave de grifo vermelha um dente da própria boca escancarada, enquanto o cabo preto de uma câmera de inspeção sai da boca até um monitor em cima de uma caixa de ferramentas, que mostra um dente vermelho.",
+        "partes": [
+          "piso de cimento cinza",
+          "parede de tijolos vermelho-escuros com dois canos de cobre em L, um deles pingando três gotas azuis",
+          "caixa de ferramentas de metal verde-escura no chão",
+          "monitor preto pequeno em cima da caixa de ferramentas, com a tela mostrando um dente vermelho",
+          "corpo do encanador de macacão laranja com bolsos e cinto de ferramentas marrom",
+          "boné amarelo",
+          "cabeça redonda de barba rala castanha, com a bochecha esquerda inchada, rosada e redonda como uma bola",
+          "boca escancarada com dentes brancos grandes",
+          "chave de grifo vermelha enfiada na boca, mordendo um dente",
+          "cabo preto da câmera de inspeção saindo do canto da boca até o monitor, com uma luzinha branca na ponta",
+          "quatro estrelinhas amarelas de dor saltando da bochecha"
+        ]
+      }
+    },
+    {
+      "id": "jag-hostar-mycket",
+      "elenco": "condor dos Andes de rosto careca estufado + muque de tanto tossir",
+      "ponte_sonora": "IÁ! RRÔST(o)-AR... MÜ-QUE! (5 sílabas: iá-RRÔS-tar-MÜK-ke; força no RRÔS e no MÜ; IÁ = o 'jag' de sempre, I de IOGA, nunca J chiado — aqui o grito entre uma tossida e outra; RRÔST(o)-AR = o ROSTO careca do condor estufado de AR, num fôlego só e sem o -O: ROST-AR; o R de começo é o soprado carioca LEVE — é o h de 'hosta' —, sem raspar a garganta; o Ô é CURTO e FECHADO, puxando pra U (é o o curto sueco), nunca o Ó aberto de 'rosa'; S de cobra, nunca o 'sh' carioca de 'rôshto'; a força fica no RRÔS e o -TAR sai fraquinho, mas com o R BRANDO no fim, AUDÍVEL: é ele que faz o presente, 'hostar' (tusso) — sem ele sobra 'hosta', o infinitivo; MÜ-QUE = o MUQUE de 'Tack så mycket' (TAC, SÔ MUQUE) e de 'Jag har mycket att göra' — aqui o muque que nasceu na asa de tanto tossir, apontado com o BICO: Ü CURTO de bico, língua de I e lábios de U, o K segurado um instante (é dobrado) e o -QUE fraquinho; o T de 'mycket' não aparece, igual na fala sueca; nunca 'MÚ-qui' de boca aberta)",
+      "historia": "No pico mais alto dos Andes, onde o AR é tão fino que quase acaba, o condor não para de tossir. Entre uma tossida e outra ele grita IÁ!, e cada tosse enche o ROSTO careca dele de AR, que estufa vermelho feito balão — ROST-AR! ROST-AR! — e escapa pelo bico numa nuvem branca. Tossiu tanto, o dia inteiro, que a tosse virou musculação: a asa, sacudida a cada tossida, saltou num MUQUE enorme debaixo das penas. Ele ergue a asa em pose de fisiculturista e aponta o bico pro muque: é de tanto tossir — estou tossindo muito.",
+      "cena": {
+        "descricao": "No topo de uma montanha nevada, um condor preto de colar branco tosse com o rosto careca vermelho estufado como um balão e uma nuvem de ar saindo do bico, enquanto ergue uma asa dobrada em pose de fisiculturista mostrando um muque enorme.",
+        "partes": [
+          "pico de montanha cinza-escuro com o topo coberto de neve branca",
+          "três pedras cinza menores com neve em volta do pico",
+          "corpo do condor preto, grande e de penas lisas, empoleirado no topo",
+          "colar de penas brancas fofas em volta do pescoço",
+          "cabeça careca vermelho-rosada, estufada e redonda como um balão",
+          "bico curvo cinza-escuro aberto no meio da tosse",
+          "nuvem de ar branca em três bolas saindo do bico",
+          "asa direita preta dobrada e erguida em pose de fisiculturista",
+          "muque redondo e enorme saltando debaixo das penas da asa erguida",
+          "cachecol andino listrado de vermelho, amarelo e verde no pescoço",
+          "três gotinhas azuis de suor voando da cabeça"
+        ]
+      }
+    },
+    {
+      "id": "jag-behover-vila",
+      "elenco": "peixe-boi exausto + vila de pescadores feita de colchão",
+      "ponte_sonora": "IÁ! BERRÔ: VER... VILA! (6 sílabas: iá-be-RRÖÖ-ver-VÍÍ-la; força no RRÖ e, maior, no VÍ; IÁ = o 'jag' de sempre, I de IOGA, nunca o J chiado de 'já'; BERRÔ: VER = BERROU 'VER...' num fôlego só, o MESMO be-RRÖ-ver de 'Jag behöver träffa en läkare', 'Jag behöver ett BankID' e 'Det är akut, jag behöver komma in idag': o BE fraquinho, o RR soprado LEVE (é o h) e a força no RRÔ — sem o U do 'ou' e de BICO: lábios de Ô com língua de Ê, longo, o truque do TRÖTT e do MÖÖ-te; o VER vem grudado e sem força, mas com o R BRANDO no fim, que encosta no V da VILA: ve-r-VÍ — sem esse R sobra 'behöva', o infinitivo; VILA = a VILA de pescadores, do jeito que o português já fala: força no VÍ, I LONGO e esticado, L DE VERDADE (língua no céu da boca) e o -la fraquinho; é o infinitivo 'vila', descansar, que vem depois de 'behöver' — e nunca o VIL curto, de L no fim, de 'Vill du...?' (quer): aqui o I é comprido e a palavra termina em A)",
+      "historia": "O dia inteiro o peixe-boi empurrou com o focinho os barcos encalhados da vila de pescadores, e agora se arrasta pra areia, mole como um saco de feijão. Solta um IÁ! de exausto e BERROU: 'VER...' — sem fôlego pra terminar a frase, só arregala o olho pra VILA na frente dele. Ali mesmo ele desaba de barriga pra cima em cima dos telhados das três casinhas da VILA, que estalam e afundam feito colchão de molas. Ajeita um travesseiro listrado debaixo da cabeça e ronca: preciso descansar.",
+      "cena": {
+        "descricao": "Numa praia, um peixe-boi cinza enorme dorme esparramado de barriga pra cima por cima dos telhados amassados de três casinhas coloridas de uma vila de pescadores, de olhos fechados e com um travesseiro listrado debaixo da cabeça, ao lado de uma placa de madeira escrita VILA.",
+        "partes": [
+          "faixa de areia bege",
+          "faixa de mar azul-turquesa ao fundo",
+          "três casinhas pequenas lado a lado — rosa, amarela e azul — com telhados triangulares vermelhos afundados no meio",
+          "placa de madeira fincada na areia escrita VILA",
+          "barquinho de madeira branco e azul encalhado na areia",
+          "corpo do peixe-boi cinza, roliço e enorme, deitado de barriga pra cima por cima dos três telhados",
+          "cauda arredondada em forma de remo pendendo pra fora da última casinha",
+          "duas nadadeiras curtas cruzadas sobre a barriga",
+          "cabeça de focinho largo e bigodudo, com os olhos fechados",
+          "travesseiro listrado de azul e branco debaixo da cabeça",
+          "três letras Z brancas flutuando acima do focinho"
+        ]
+      }
+    },
+    {
+      "id": "har-du-en-varktablett",
+      "elenco": "ema manca na trilha do cerrado + sua mochila aberta + cartela gigante de tabletes",
+      "ponte_sonora": "RRÁR-DÜ... EN... VER QUE TA-BLÉT(e)? (6 sílabas: rrar-dü-en-VÉRK-ta-blett; força maior no VÉRK e um apoio no BLÉT; RRÁR-DÜ = o 'har du' de sempre, o MESMO de 'Har du tid en stund?' e 'Har du lust att ses?': o rugidinho soprado (h), A longo e o R BRANDO derretendo direto no D, rrá-dü — sem esse R sobra 'ha', outro verbo; DÜ com BICO DE PATO, o 'du' de CAN-DU — aqui é o bico da ema apontando pra você; EN = 'um', o MESMO dedinho erguido de 'Har du tid en stund?' e 'Jag behöver träffa en läkare' — aqui UM dedo do pé da ema —, curto, oral, N na ponta da língua; nunca ÉT, que é o 'ett'; VER QUE = o MESMO 'värk' (dor) de 'Jag har huvudvärk' e 'Jag har tandvärk': VÉR com É ABERTO de 'pé', R brando, e do QUE só o K seco, sem 'ki' — e a força maior da palavra cai AQUI, no VÉRK; TA-BLÉT(e) = o TABLETE sem o -e final: o TA fraquinho e o BLÉT com o É aberto que o português já faz (ta-BLÉ-te), curto, com o T segurado fechando seco — nunca 'ta-BLÉ-tchi'; tudo emendado é UMA palavra só: VÉRK-ta-blett)",
+      "historia": "Você está numa trilha do cerrado quando a ema — a corredora mais rápida do campo — chega mancando, de perna enfaixada depois de tropeçar num cupinzeiro. Para do seu lado, solta um rugidinho soprado — RRÁR! — e aponta o bico bem pra você: DÜ? Ergue UM dedo do pé, EN, e mergulha o pescoço compridíssimo na sua mochila aberta no chão pra VER QUE TABLETE você tem lá dentro. Sai de lá com uma cartela gigante de comprimidos no bico e engole tudo de uma vez, com papel prateado e tudo: você tem um comprimido pra dor?",
+      "cena": {
+        "descricao": "Numa trilha de terra vermelha do cerrado, uma ema cinza de perna enfaixada e um dos dedos do pé erguido curva o pescoço comprido pra baixo até uma mochila de trilha aberta no chão e puxa dela, com o bico, uma cartela gigante prateada de comprimidos brancos.",
+        "partes": [
+          "chão de terra vermelha do cerrado",
+          "cupinzeiro de terra marrom em forma de torre ao fundo",
+          "arvorezinha de tronco retorcido e copa verde-escura ao fundo",
+          "mochila de trilha azul aberta no chão, com a aba virada pra trás",
+          "cartela gigante prateada com seis comprimidos brancos redondos, meio pra fora da mochila, presa no bico da ema",
+          "corpo da ema cinza-amarronzado, de penas fofas e desgrenhadas",
+          "perna esquerda comprida e acinzentada enfaixada com atadura branca",
+          "perna direita apoiada no chão, com um dos três dedos do pé erguido",
+          "pescoço comprido e fino curvado pra baixo até a mochila",
+          "cabeça pequena com bico achatado amarelado e olho grande e arregalado"
+        ]
+      }
+    }
+  ]
+}

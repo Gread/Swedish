@@ -1,0 +1,158 @@
+{
+  "phrases": [
+    {
+      "id": "middagen-ar-klar",
+      "sv": "Middagen är klar!",
+      "pt": "O jantar está pronto!",
+      "pronuncia": "MÍD-dan é KLÁÁR! (na fala, 'middagen' encolhe pra 'middan', como 'födelsedagen' vira 'födelsedan' — com calma também se ouve MÍD-da-guen; força no MID, I curto e D dobrado, segurado um instante; o -an fraquinho, N na língua e sem nasal; 'är' = É aberto e curto; 'klar' com A LONGO e o R do fim brando, mas audível)",
+      "contexto": "O grito da cozinha pra casa inteira, lá pelas cinco e meia, seis da tarde — o jantar sueco é cedo. Você também vai ouvir 'Maten är klar!' (a comida está pronta) e 'Kom och ät!' (venham comer).",
+      "porque": "'Middag' é a refeição quente do fim da tarde, a hora da família junta à mesa. E é o mesmo 'klar' de 'Jag är klar': troque o sujeito e a frase continua valendo — 'Maten är klar', 'Läxan är klar' (a lição de casa está feita)."
+    },
+    {
+      "id": "stada-ditt-rum",
+      "sv": "Städa ditt rum!",
+      "pt": "Arrume o seu quarto!",
+      "pronuncia": "STÉÉ-da dit RÖMM! ('städa' com a força no STÉ: o S colado no T, sem 'is' na frente, É bem aberto e LONGO, e o -da fraquinho; 'ditt' curtinho, D de 'dado' e T seco; 'rum' com R de um toque só, de língua — nunca o RR de garganta —, vogal curta de bico, entre U e Ô, a mesma de 'buss', e M demorado, de lábios fechados)",
+      "contexto": "Pai e mãe pro filho, da pré-escola à adolescência, muitas vezes no 'städdag' (dia de faxina) do fim de semana. A cobrança seguinte é 'Har du städat ditt rum?' (Você arrumou o seu quarto?).",
+      "porque": "'Städa' é arrumar e limpar ao mesmo tempo, e aparece em todo canto: 'städa köket' (limpar a cozinha), 'städdag', 'städare' (faxineiro). E o 'ditt' ensina a regra do 'seu': com palavra ETT ('ett rum') é 'ditt'; com palavra EN é 'din' ('din jacka')."
+    },
+    {
+      "id": "det-ar-din-tur",
+      "sv": "Det är din tur.",
+      "pt": "É a sua vez.",
+      "pronuncia": "dê é din TÜÜR ('det är' na fala vira 'dê é'; 'din' curtinho, N na ponta da língua, sem nasal; 'tur' com Ü de bico — lábios de U e língua de I —, LONGO e com a força, e R brando no fim)",
+      "contexto": "Em jogo de tabuleiro, videogame, fila do escorregador e revezamento de tarefas em casa ('Det är din tur att diska' — é a sua vez de lavar a louça). E no balcão com senha, quando chamam o próximo.",
+      "porque": "Revezar é regra sagrada na criação sueca, e essa frase encerra briga de criança na hora. E 'tur' também é SORTE: 'Vilken tur!' (que sorte!), 'otur' (azar) — e volta em 'tur och retur', ida e volta."
+    },
+    {
+      "id": "jag-ar-stolt-over-dig",
+      "sv": "Jag är stolt över dig.",
+      "pt": "Tenho orgulho de você.",
+      "pronuncia": "iá é STÓLT ÖÖ-ver dêi ('jag' = iá e 'är' = é; 'stolt' com Ó ABERTO e curto, L de verdade, língua no céu da boca, e T seco no fim; 'över' com Ö LONGO — lábios em bico de Ô e língua no Ê —, a força nele, e o -ver fraquinho com R brando; 'dig' na fala é 'dej' = DÊI)",
+      "contexto": "Pai e mãe pro filho depois da apresentação da escola, do primeiro gol, da aula de natação; e entre adultos — pro parceiro que conseguiu o emprego, pro amigo que passou na prova de sueco.",
+      "porque": "Elogio sueco costuma ser contido, então quando sai um 'jag är stolt över dig' ele pesa. E 'över' é palavra de todo dia: 'glad över' (feliz com), 'över bron' (por cima da ponte), 'kvart över tre' (três e quinze)."
+    },
+    {
+      "id": "hur-gammal-ar-du",
+      "sv": "Hur gammal är du?",
+      "pt": "Quantos anos você tem?",
+      "pronuncia": "rrür GÁM-mal é dü? ('hur' com h soprado, Ü de bico e R brando que quase some antes do G; 'gammal' com a força no GAM, A curto e aberto, sem nasal, M dobrado e L de verdade no fim; 'är du' = é dü, com Ü de bico)",
+      "contexto": "A pergunta que todo adulto faz pra criança — no parquinho, na festa de aniversário, no dentista — e que as crianças devolvem sem cerimônia. A resposta: 'Jag är fem (år)', tenho cinco (anos).",
+      "porque": "Com ela você puxa conversa com qualquer criança sueca e treina os números. Repare: em sueco a idade não se 'tem', se 'é' — 'jag är fem', 'eu sou cinco'. E 'gammal' (velho) é o 'gamla' de Gamla stan, a cidade velha de Estocolmo."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "middagen-ar-klar",
+      "elenco": "falcão-peregrino cozinheiro + frigideira com ovo frito gigante",
+      "ponte_sonora": "(co)MIDA, NÉ? CLÁR(a)! (4 sílabas: MÍD-da-ne-KLÁÁR; força no MÍD e, maior, no CLÁ; MIDA = a COMIDA sem o CO, que ficou pra trás no mergulho: o português já põe a força no MI (co-MI-da), então é só arrancar o CO e a palavra começa na sílaba forte; I CURTO e o D segurado um instante (é 'dd', dobrado), D de 'dado', nunca 'dji'; o -da fraquinho; NÉ = o 'né?' que todo brasileiro gruda no fim da frase, colado no MIDA sem pausa — e ele vale por dois: o N é o artigo colado no fim do jantar (middag = jantar, middan = O jantar, o mesmo N de IS-KÚÚ-LAN e IÁK-KAN), e o É é o 'är', aberto e curto, o mesmo de 'Jag är klar'; mas sai FRACO, só a cola entre as duas palavras (o português dá força ao 'né'; aqui não): MÍD-da-ne-KLÁR; é 'middan' porque na fala 'middagen' encolhe, como 'födelsedagen' vira 'födelsedan' (o SEDÁN da zebra); CLÁR(a) = a MESMA CLARA sem o -A do maestro de 'Jag är klar' — lá, clara em neve; aqui, a clara do ovo frito que ficou branquinha, pronta —: A LONGO e de boca bem aberta, e o R do fim BRANDO, um toque de língua, mas AUDÍVEL — sem ele sobra 'kla'; com o -A de volta vira 'klara', a CLARA inteira de 'Kan du förklara?')",
+      "historia": "Na casa do FALCÃO-peregrino, o bicho mais rápido do mundo, o jantar é um ovo frito do tamanho de uma pizza, e ele só tira do fogo quando a CLARA fica branquinha — pronta. Pra não esfriar, agarra a frigideira com as garras e leva até a mesa num mergulho de 390 km/h, berrando pros filhotes: 'COMIDA, NÉ? CLARA!' Só que ele voa mais rápido que a própria voz: o CO ficou lá atrás, no fogão, e o -A ainda vem chegando pelo corredor. Na mesa, os filhotes de babador só ouvem 'MIDA, NÉ? CLAR!' — o jantar está pronto.",
+      "cena": {
+        "descricao": "Na sala de jantar, um falcão-peregrino em pleno mergulho, de asas dobradas pra trás e rastros de velocidade, crava no centro da mesa uma frigideira preta com um ovo frito gigante de clara branquinha, diante de dois filhotes de falcão fofos de babador sentados em cadeirões, enquanto um balãozinho com 'CO' fica pra trás no fundo da sala.",
+        "partes": [
+          "piso de tacos de madeira clara (chão)",
+          "mesa de jantar redonda com toalha xadrez vermelha e branca",
+          "dois cadeirões de bebê brancos lado a lado, do outro lado da mesa",
+          "dois filhotes de falcão de penugem branca fofa (esferas), bico amarelinho aberto e babador azul",
+          "corpo do falcão-peregrino inclinado em mergulho: dorso cinza-azulado e peito creme com listrinhas pretas",
+          "cabeça com capuz preto, faixa preta descendo do olho como um bigode, anel amarelo em volta do olho e bico curvo cinza de base amarela",
+          "asas cinza-azuladas pontudas, dobradas pra trás em V",
+          "pés amarelos de garras pretas agarrando o cabo da frigideira",
+          "frigideira preta (disco raso + cabo) cravada no centro da mesa",
+          "ovo frito gigante: clara branca (disco achatado de borda ondulada) e gema amarela (meia-esfera)",
+          "três rastros de velocidade brancos (cilindros finos) atrás do falcão",
+          "balãozinho de fala branco escrito CO, ficando pra trás no fundo da sala"
+        ]
+      }
+    },
+    {
+      "id": "stada-ditt-rum",
+      "elenco": "mãe vombate de pulverizador ESTÉRIL + filhote emburrado de tromba",
+      "ponte_sonora": "(e)STÉ(ril)... DÁ DE TROM(ba)! (4 sílabas: STÉÉ-da-dit-RÖMM; força no STÉ e no TROM; (e)STÉ = o ESTÉRIL do pulverizador, cortado no tombo: o -RIL fica entalado e o E da frente também cai — S grudado direto no T, sem o 'is' que o brasileiro põe antes de S, como o (e)STÁ de 'Hur stavar man det?'; o É é BEM ABERTO e LONGO, o É de 'pé' esticado — é o ä longo, o mesmo do VÉÉG de 'Jag är på väg' e do LÉÉR de 'Jag lär mig svenska' —, e é nele a força; nunca o Ê fechado de 'este'; DÁ = o 'dá' do tombo, mas SEM PAUSA antes e mais fraco que o STÉ, só um eco grudado nele: STÉ-da é UMA palavra só, 'städa', e o imperativo é igual ao infinitivo, sem R nenhum; DE TROM(ba) = o 'ditt rum' inteiro, numa tacada: o DE é um DI curtinho, D de 'dado' — nunca o 'dji' —, e o T da TROMBA é o T de 'ditt' (dit-RÖMM), por isso o R vem colado no T e sai de um toque só, de língua, como em 'trombar' — nunca o RR de garganta de 'rua', que em sueco é H; o TROM sai ORAL, curto e de bico: o Ô fechado da tromba puxando pra U — a mesma vogal do BUS de 'buss' e do STUND de 'en stund', só que vista do outro lado: lá o U puxa pra Ô, aqui o Ô puxa pra U —; nunca um Ó aberto, de 'pó': com ele sai 'rom', que em sueco é o rum de beber e a ova de peixe; o M fecha os lábios de verdade e demora: RÖMM; o -BA fica amassado na meia; ATENÇÃO ao par: não é o DIN do turbante de 'Det är din tur' — 'rum' é palavra ETT, e aí o 'seu' vira 'ditt', com T, o T que abre a TROMBA; e de quebra 'rum' é o ROOM do inglês: quarto)",
+      "historia": "O quarto do filhote de VOMBATE virou um lixão: meia, casca de banana, carrinho, roupa por cima de roupa. A mãe vombate chega de luvas amarelas, óculos de proteção e um pulverizador nas costas e anuncia da porta: 'Este quarto vai ficar ESTÉ—', mas pisa num carrinho, voa e DÁ DE TROMBA no monte de roupa suja, com o traseiro quadrado de vombate apontado pro teto: o -RIL fica entalado e o -BA sai amassado numa meia. Na cama, o filhote também está DE TROMBA, emburrado de braço cruzado. Ela ergue a luva do meio da roupa, aponta pra ele e decreta, sem fôlego nem pra pausa: 'STÉ-DA DE TROM!' — arrume o seu quarto!",
+      "cena": {
+        "descricao": "No quarto bagunçado de criança, uma vombate de luvas amarelas, óculos de proteção e pulverizador escrito ESTÉRIL nas costas está caída de cara num monte de roupa suja, com o traseiro quadrado pro alto e uma pata erguida apontando o filhote emburrado, de braços cruzados, sentado na cama.",
+        "partes": [
+          "piso de tábuas de madeira clara do quarto (chão)",
+          "cama de solteiro azul com lençol amarrotado",
+          "monte grande de roupa suja colorida no meio do quarto (esferas e caixas achatadas amontoadas)",
+          "carrinho de brinquedo vermelho virado de rodas pra cima",
+          "duas meias listradas e uma casca de banana amarela espalhadas no chão",
+          "corpo da mãe vombate marrom-acinzentado e atarracado, caído de cara no monte, com o traseiro quadrado pro alto",
+          "cabeça larga da vombate, de focinho achatado preto e orelhinhas redondas, com a cara enfiada de lado no monte (de tromba) e um olho aparecendo",
+          "patinhas traseiras curtas pro ar e rabinho mínimo",
+          "óculos de proteção transparentes tortos na cabeça e luvas de borracha amarelas",
+          "tanque pulverizador verde nas costas, com mangueira preta e plaquinha branca escrita ESTÉRIL",
+          "pata dianteira de luva amarela erguida do meio da roupa, apontando o filhote",
+          "filhote de vombate sentado na cama, de braços cruzados e beiço pra fora (de tromba)"
+        ]
+      }
+    },
+    {
+      "id": "det-ar-din-tur",
+      "elenco": "baiana do acarajé + turbante da vez + tacho de dendê",
+      "ponte_sonora": "DÊ É... DIN! TÜR(bante)! (4 sílabas: dê-é-din-TÜÜR; a força TODA no TÜÜR; DÊ É = o 'det är' de sempre, de 'Det är lugnt' e 'Det är kallt i lägenheten': DÊ FECHADO e sem T, É aberto e curto; DIN = o 'plim' de encaixe, o MESMO DIN de 'Kan jag låna din laddare?' — lá o plugue encaixando no celular, aqui o turbante encaixando na cabeça —: I curto, N na ponta da língua, sem o 'dĩ' nasal, e sem força; TÜR = o TURBANTE cortado no R, mas dito de BICO DE PATO — lábios de U empurrados pra frente e língua parada no I, o mesmo Ü de DÜ e do NÜ(vem) de 'Jag måste gå nu' —, LONGO e com toda a força (no turbante o TUR é fraco; aqui é ele que manda); o R do fim é BRANDO, um toque de língua, nunca o RR carioca; sem o bico sai um 'tur' de U chapado que o sueco não reconhece — e não confunda com o STÚR de 'stor' (Storgatan), que é U de urso, sem bico; o TUR do turbante é também o TUR de TURNO: 'tur' é a vez)",
+      "historia": "Sábado é dia de acarajé na casa da BAIANA, e a regra da família é sagrada: quem frita é quem está de TURBANTE. Ela solta o último bolinho no tacho de dendê fervendo, arranca o turbante branco gigante da própria cabeça e enterra na cabeça do filho de oito anos, que some lá dentro até o nariz — DIN! —, encaixou feito tampa de panela. Ela põe a escumadeira na mão dele, aponta o tacho e anuncia: 'DÊ É DIN TÜR!' — o turbante passou, agora a vez é sua.",
+      "cena": {
+        "descricao": "Numa cozinha de ladrilhos, uma baiana de saia rodada branca e colares de contas termina de enterrar o próprio turbante branco gigante na cabeça do filho pequeno, que segura uma escumadeira diante de um tacho de dendê fervendo, com um anel de luz dourada brilhando em volta do turbante.",
+        "partes": [
+          "piso de ladrilho hidráulico amarelo e azul (chão)",
+          "fogareiro preto com um tacho de cobre cheio de dendê laranja-vivo",
+          "bolhas amarelas fervendo na superfície do dendê (esferinhas)",
+          "tabuleiro de madeira com cinco acarajés dourados (esferas achatadas)",
+          "corpo da baiana de bata de renda branca e saia rodada branca enorme (cone largo)",
+          "colares de contas vermelhas, amarelas e verdes no pescoço",
+          "cabeça da baiana sem turbante, cabelo preto preso em coque e sorriso largo",
+          "braços dela abaixados sobre o menino, terminando de encaixar o turbante",
+          "menino de camiseta laranja com um turbante branco gigante enterrado na cabeça até o nariz",
+          "escumadeira prateada na mão do menino, apontada pro tacho",
+          "anel de luz dourada emissiva em volta do turbante (o DIN)"
+        ]
+      }
+    },
+    {
+      "id": "jag-ar-stolt-over-dig",
+      "elenco": "mãe leopardo OVER + pistola de confete + filhote na formatura do ABC",
+      "ponte_sonora": "IÁ É (pi)STÓL-T... ÖVER... DÊI! (6 sílabas: iá-é-STÓLT-ÖÖ-ver-dêi; força no STÓLT e no ÖÖ; IÁ É = o 'jag är' de sempre, o MESMO de 'Jag är trött' e 'Jag är klar': I de IOGA, nunca J chiado, e É aberto e curto; STÓL-T = a PISTOLA de confete sem o PI e com o -A trocado pelo T seco do disparo: arrancando o PI, o 'is' que o brasileiro põe antes do S vai junto, e o S gruda direto no T; Ó ABERTO e CURTO, o mesmo da própria 'pistÓla' e do CÓ de 'kommer'; L DE VERDADE, ponta da língua no céu da boca — nunca 'stóu' —, e o T sem vogal depois, o estalo seco do CLÁR-T de 'Självklart!'; o T é obrigatório, é ele que fecha 'stolt'; e não é a gíria 'tá pistola' (bravo): a pistola é de confete, e ela está é OVER de orgulho; ÖVER = o OVER que o Brasil já usa ('game over', 'que mãe OVER!') — e em sueco é a mesma palavra: över = por cima, acima; só tire o 'ou' deslizado do 'ÔU-ver': lábios em bico de Ô e língua parada no Ê, LONGO — o mesmo truque do FÖÖ de 'födelsedagen' e do MÖÖ-te de 'Jag har ett möte' —, e é nele a força; o -ver fraquinho com R brando; DÊI = o 'dig' de sempre, irmão do M'ÊI de 'mig', uma sílaba só e fraca, o mesmo de 'Jag saknar dig' e 'Jag älskar dig')",
+      "historia": "Formatura do ABC na escolinha: o filhote de LEOPARDO, de beca e capelo torto, pega o diploma. Na plateia, a mãe leopardo é a mais OVER do auditório: dispara uma PISTOLA de confete — STÓL-T! —, salta da cadeira direto pro palco e, como no desenho animado, ergue o filhote OVER a própria cabeça, lá no alto, pra escola inteira ver. No meio da chuva de confete, de peito estufado, ela ruge: 'IÁ É STÓLT ÖVER DÊI!' — tenho orgulho de você.",
+      "cena": {
+        "descricao": "No palco da escolinha, uma mãe leopardo de colar de pérolas, em pé nas patas traseiras e de peito estufado, ergue acima da cabeça o filhote de beca azul e capelo, com o diploma na pata, enquanto a outra pata dispara uma pistola de confete dourada e confetes coloridos chovem sobre os dois.",
+        "partes": [
+          "tablado de madeira do palco (chão)",
+          "cortinas de veludo vermelho nas laterais",
+          "faixa amarela no fundo escrita ABC",
+          "corpo da mãe leopardo dourado com rosetas pretas, em pé nas patas traseiras, de peito estufado",
+          "cabeça da leopardo de boca aberta no rugido, bigodes brancos e olhos verdes",
+          "colar de pérolas brancas no pescoço",
+          "rabo comprido pintado, curvado pra cima",
+          "braço direito esticado pro alto segurando o filhote acima da cabeça",
+          "filhote de leopardo de beca azul-marinho e capelo preto de pendão amarelo, com um diploma enrolado de fita vermelha na pata",
+          "pistola de confete dourada na pata esquerda, apontada pro alto",
+          "chuva de confetes no ar (quadradinhos vermelhos, azuis, amarelos e verdes)"
+        ]
+      }
+    },
+    {
+      "id": "hur-gammal-ar-du",
+      "elenco": "duende ancião + caravela GAMA encalhada no bolo + aniversariante de cinco anos",
+      "ponte_sonora": "RRÜR! GÁMA-L... É DÜ? (5 sílabas: rrür-GÁM-mal-é-dü; força no GÁM; RRÜR = o 'hur' de sempre — o MESMO de 'Hur mår du?', 'Hur långt är det?' e 'Hur var det i skolan?': h soprado como RR carioca leve, Ü DE BICO (lábios de U, língua de I, nunca o U chapado de 'urso') e R BRANDO no fim, que quase some antes do G — aqui é o pigarro de quinhentos anos do duende; GÁMA-L = o GAMA de VASCO DA GAMA, que o duende jura ter acompanhado — está pintado no casco da caravela —, com um L de verdade colado no fim: força no GÁ, A CURTO e ABERTO, de 'gato', SEM o 'gã' nasal que o português põe antes de M; o M é demorado (é 'mm', dobrado); o -A do fim vira um 'a' fraquinho e a palavra fecha num L DE PONTA DE LÍNGUA, grudada no céu da boca — a barba do duende, que bate no chão e dobra em L —, nunca o 'GÁ-mau' com o L virando U; esse L já escorrega no É seguinte: GÁM-ma-lé; sem o L sobra 'gamma', que não é nada; É DÜ = o 'är du' de sempre: É aberto e curto e DÜ com BICO DE PATO, o 'du' de CAN-DU, apontado pra criança)",
+      "historia": "Festa de cinco anos da caçula: no meio do parabéns, uma caravela de brinquedo atravessa a mesa e encalha no bolo. Dela desembarca o DUENDE da família, que jura ter navegado com Vasco da GAMA — o nome ainda está pintado no casco. Ele limpa um pigarro de quinhentos anos, RRÜR, arrasta pela toalha a barba — tão comprida que despenca da mesa e dobra em L no chão — e aponta a bengala pra aniversariante, de bico esticado: 'RRÜR... GÁMA-L... É DÜ?' A menina ergue a vela de número 5, e o duende, que perdeu a conta da própria idade lá pelos anos 1500, fica de queixo caído: quantos anos você tem?",
+      "cena": {
+        "descricao": "Numa mesa de aniversário, um duende ancião de pele verde-oliva enrugada, orelhas pontudas, capuz de folhas e barba branca tão comprida que desce até o chão e dobra em L aponta a bengala torta para a aniversariante, que ergue uma vela de número 5, ao lado de uma caravelinha escrita GAMA encalhada no bolo.",
+        "partes": [
+          "piso de cerâmica bege da sala (chão)",
+          "mesa de festa retangular com toalha rosa",
+          "bolo redondo de chantilly branco com morangos vermelhos (esferinhas) em cima",
+          "caravelinha de madeira encalhada no bolo, com vela branca de cruz vermelha e GAMA pintado no casco",
+          "corpo do duende em pé sobre a mesa, encurvado, de túnica verde-musgo com cinto de corda",
+          "cabeça do duende de pele verde-oliva enrugada feito casca de árvore, orelhas pontudas enormes, nariz comprido e fino, sobrancelhas brancas enormes e capuz pontudo de folhas verdes",
+          "barba branca comprida que desce pela borda da mesa até o chão e dobra em L no piso",
+          "bengala de galho torto marrom estendida, apontando a menina",
+          "menina aniversariante de vestido amarelo e chapeuzinho de festa em cone listrado",
+          "vela azul em forma de número 5 erguida na mão da menina, com chama laranja",
+          "três balões coloridos amarrados no encosto de uma cadeira (esferas + fios)"
+        ]
+      }
+    }
+  ]
+}

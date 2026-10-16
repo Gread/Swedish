@@ -1,0 +1,156 @@
+{
+  "phrases": [
+    {
+      "id": "det-regnar-igen",
+      "sv": "Det regnar igen.",
+      "pt": "Está chovendo de novo.",
+      "pronuncia": "dê RÉNG-nar i-IÉN ('det' = dê, o T não soa; 'regnar' com a força no RÉNG: R de UM toque só, o de 'caro' — nunca o RR de garganta, que em sueco soa como h —, É aberto e CURTO, e o 'gn' sai NG + N: a língua fecha no fundo da boca como no inglês 'sing', o G não estala e solta direto no N, sem vogal no meio (nada de 'ré-gui-nar'); o -ar fraquinho, com R brando, que já emenda no 'igen': réng-na-ri-IÉN; 'igen' com o G soando I — i-IÉN —, a força no IÉN, É aberto e curto e N batido na língua, sem nasalizar)",
+      "contexto": "O comentário-padrão olhando pela janela de manhã, no ponto de ônibus ou na fika do trabalho — principalmente no outono, quando chove dia sim, dia também. Costuma vir com um suspiro e um 'Typiskt!' (típico!).",
+      "porque": "Reclamar do tempo é o small talk oficial da Suécia, e a chuva é o assunto número um. E 'igen' (de novo) serve pra tudo: 'Hej igen!' (oi de novo!), 'Kan du säga det igen?' (pode repetir?)."
+    },
+    {
+      "id": "det-ar-sa-morkt-pa-vintern",
+      "sv": "Det är så mörkt på vintern.",
+      "pt": "É tão escuro no inverno.",
+      "pronuncia": "dê é SÔ MÖRKT pô VÍN-tern ('det är' na fala vira 'dê é'; 'så' com Ô FECHADO e longo, e com força, porque é o 'tão'; 'mörkt' numa sílaba só: Ö ABERTO e curto — boca redonda de Ó com a língua empurrada pra frente —, R de um toque só e K e T secos colados no fim; 'på' = pô, fraquinho; 'vintern' com a força no VIN, I curto, T duro (nunca 'tchi') e o -ern fraco: o R se funde no N, que sai de língua enrolada pra trás, como um R caipira encostando no N)",
+      "contexto": "Conversa de novembro a fevereiro — no trabalho, com vizinhos, com quem acabou de chegar ao país. Em Estocolmo, no fim de dezembro, o sol se põe antes das três da tarde; no extremo norte ele nem nasce. Costuma vir junto: 'Man blir så trött' (a gente fica tão cansado).",
+      "porque": "Reclamar do 'mörker' (a escuridão) é jeito garantido de puxar conversa e criar empatia com sueco. E o molde 'Det är så ___!' serve pra tudo: så kallt (tão frio), så vackert (tão bonito), så gott (tão gostoso)."
+    },
+    {
+      "id": "vilken-dag-ar-det-idag",
+      "sv": "Vilken dag är det idag?",
+      "pt": "Que dia é hoje?",
+      "pronuncia": "VÍL-ken DÁÁG é dê i-DÁÁG? ('vilken' com a força no VIL, I curto e L DE VERDADE, ponta da língua no céu da boca — nunca 'viu' —, K duro e o -ken fraquinho, com N de língua; 'dag' com A LONGO e G duro e seco no fim (na fala rápida o G costuma sumir: 'da'); 'är det' invertido na pergunta: 'é dê', curtinho; 'idag' = i-DÁÁG, com a força no DÁ; as batidas fortes são VIL, DAG e o DAG de 'idag')",
+      "contexto": "Quando você perde a conta dos dias: na volta das férias, depois do feriadão de jul e nyår, depois de uma semana de cama. Pra perguntar a DATA, o sueco diz 'Vilket datum är det idag?' — 'datum' é palavra 'ett', por isso 'vilket' em vez de 'vilken'.",
+      "porque": "'Idag' (hoje) aparece em toda conversa, e o molde 'Vilken ___?' (qual ___?) abre perguntas pra tudo: vilken buss? (qual ônibus?), vilken färg? (qual cor?), vilken tid? (que horário?)."
+    },
+    {
+      "id": "hur-dags-borjar-det",
+      "sv": "Hur dags börjar det?",
+      "pt": "A que horas começa?",
+      "pronuncia": "rrü DÁKS BÖR-iar dê? ('hur' com h soprado tipo RR carioca e Ü de bico — na fala o -r quase some antes do D: 'hu dags'; 'dags' = DÁKS, uma sílaba só, A CURTO e o G virando K colado no S; 'börjar' com a força no BÖR: Ö ABERTO e curto — boca redonda de Ó com a língua pra frente —, R de um toque só, e o 'j' = I deslizado: BÖR-iar; o R final é brando e se funde no D de 'det', que sai de língua enrolada, como o R caipira encostando no D; 'det' = dê; forças no DAGS e no BÖR)",
+      "contexto": "Pra saber o horário de qualquer coisa: o filme, o jogo, a festa, a reunião, a aula da SFI, o culto, o casamento. 'Hur dags' é o 'a que horas' do dia a dia, mais falado que 'vilken tid'; 'När börjar det?' (quando começa?) também serve.",
+      "porque": "Encaixa com qualquer verbo: 'Hur dags slutar det?' (a que horas termina?), 'Hur dags kommer du?' (a que horas você chega?). E 'börjar' (começa) é de todo dia: skolan börjar, jobbet börjar, filmen börjar."
+    },
+    {
+      "id": "vi-har-gott-om-tid",
+      "sv": "Vi har gott om tid.",
+      "pt": "Temos tempo de sobra.",
+      "pronuncia": "vi rrár GÓT om TIID ('vi' com I limpo e longo; 'har' com h soprado tipo RR carioca, A longo e R brando — na fala rápida muito sueco engole esse R ('vi ha'), mas fale; 'gott' com G duro de 'gato', Ó ABERTO e CURTO e T seco, que já emenda no 'om': GÓ-tom; 'om' com Ó aberto curtinho e M de lábios fechados, sem força; 'tid' com T seco (nunca 'tchi'), I LONGO e D leve; a força cai no GOTT e no TID)",
+      "contexto": "Pra acalmar alguém apressado — no aeroporto, na estação, saindo pra um compromisso: 'Lugn, vi har gott om tid' (calma, temos tempo de sobra). Também ao planejar: 'Vi har gott om tid innan tåget går' (temos bastante tempo antes de o trem sair).",
+      "porque": "'Gott om' (de sobra) serve pra muita coisa: gott om plats (lugar de sobra), gott om mat (comida de sobra). E acalmar o outro sem pressa é muito sueco — essa frase é o 'relaxa' educado."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "det-regnar-igen",
+      "elenco": "alpinista ensopado + Monte Fuji de merengue + moedinha furada de iene",
+      "ponte_sonora": "DÊ... (me)RÉNG(ue)-NAR(iz)... I-IÉN(e)! (5 sílabas: dê-RÉNG-nar-i-IÉN; força no RÉNG e no IÉN; DÊ = o 'det' de sempre, de 'Det beror på' e 'Det är lugnt': Ê FECHADO e sem T — e COLADO no RÉNG, dê-RÉNG num fôlego só, pra o R cair entre vogais e sair BRANDO, um toque só de língua, como em 'caro': depois de pausa o brasileiro solta o RR de garganta, que em sueco soa como h; RÉNG = o MERENGUE sem o ME- e sem o -UE: o R é o mesmo toque de língua de 'meRENgue'; o E abre no É de 'pé' e fica CURTO (o português fecha e anasala, 'merẽgue'); e o G NÃO estala: a língua sobe no fundo da boca e fica ali, o NG de 'sing', o mesmo do STÉNG de 'När stänger ni?' e do LÓNG de 'Hur långt är det?' — nada de 'RÉN-gui'; esse NG é obrigatório: sem ele sobra 'renar', que é 'limpa' (e também 'renas', os bichos); NAR = o NAR(iz) dos verbos, o MESMO de SÁC-NAR(iz) em 'Jag saknar dig' e MÊU-NAR(iz) em 'Jag förstår vad du menar': sai DIRETO do NG, sem vogal no meio (RÉNG-nar, nunca 'ré-gui-nar'), fraquinho, com o R de um toque só — e esse R TEM que soar, porque sem ele sobra 'regna', o infinitivo; ele já escorrega pro I seguinte: réng-na-ri-IÉN; I-IÉN = o IENE, a moeda do Japão, que o português já fala com a força no lugar certo: i-Ê-ne — é exatamente o 'igen', em que o G vira esse I deslizado (nunca 'i-GUÉN', nunca o J chiado de 'i-JÊN'); só corte o -e final, fechando no N com a ponta da língua atrás dos dentes, e abra o Ê no É de 'pé', sem nasalizar: i-IÉN)",
+      "historia": "Pela terceira vez no mês, o alpinista chega ao cume do Monte Fuji, e lá em cima a neve é MERENGUE: picos branquinhos de suspiro, crocantes por fora. Contando com sol, ele tinha besuntado o NARIZ de protetor solar branco — e plic: a primeira gota cai bem na ponta do NARIZ, e o creme começa a escorrer pela cara. Desesperado, ele corre até o portãozinho vermelho do santuário e joga na caixa de oferendas uma moedinha furada de IENE, pedindo sol — mas o céu desaba, o merengue amolece e escorre encosta abaixo em fios brancos, levando o alpinista junto, escorregando de bunda. Lá embaixo, ensopado, ele berra pro céu: DÊ... RÉNG-NAR... I-IÉN?! Está chovendo de novo.",
+      "cena": {
+        "descricao": "No cume de um Monte Fuji coberto de merengue que escorre na chuva, um alpinista de jaqueta laranja, com o narigão besuntado de protetor solar branco escorrendo, joga uma moedinha prateada furada de iene na caixa de oferendas de um portãozinho vermelho, debaixo de um céu fechado de nuvens cinza que despeja chuva.",
+        "partes": [
+          "cone largo da montanha, marrom-acinzentado, servindo de chão",
+          "cobertura de merengue branco-creme no topo, em picos torcidos (cones em espiral), com três fios brancos escorrendo encosta abaixo",
+          "portãozinho torii vermelho no cume: dois postes e duas vigas, a de cima preta e curvada nas pontas",
+          "caixa de oferendas de madeira marrom com grade no tampo, ao pé do portão",
+          "teto de nuvens cinza-chumbo tampando o céu de ponta a ponta (esferas achatadas agrupadas numa faixa larga)",
+          "gotas de chuva azul-claras alongadas caindo da nuvem",
+          "corpo do alpinista de jaqueta laranja e calça azul-marinho, com as botas pretas afundadas no merengue",
+          "cabeça do alpinista com gorro vermelho e óculos de neve levantados na testa",
+          "narigão comprido besuntado de protetor solar branco, com dois fios do creme escorrendo pela bochecha",
+          "picareta de gelo cinza fincada no merengue",
+          "moedinha prateada de iene com um furo redondo no meio, no ar entre a mão dele e a caixa de oferendas"
+        ]
+      }
+    },
+    {
+      "id": "det-ar-sa-morkt-pa-vintern",
+      "elenco": "vaga-lume mineiro + orca que engoliu o sol + painel de rua marcando −20°",
+      "ponte_sonora": "DÊ É, SÔ... (u)M'ÓRC—T! PÔ, VÍN-TERN! (7 sílabas: dê-é-SÔ-MÖRKT-pô-VÍN-tern; força no SÔ, no MÖRKT e no VIN; DÊ É = o 'det är' de sempre, de 'Det är kallt i lägenheten' e 'Det är fel pris': Ê fechado e sem T, É aberto e curto; SÔ = o 'sô' mineiro de 'Tack så mycket' e do pica-pau de 'Jag är så glad' (É, SÔ... GLÁÁD): Ô FECHADO, esticado e com força, porque é o 'tão' — nunca o 'só' aberto; (u)M'ÓRC = UMA ORCA dita de uma vez, do jeito que o português já emenda ('umórca'), e cortada pelo estalo da bocarra: o U de 'uma' NÃO soa — só o M fica, e gruda direto no ÓR como se fosse o fim do SÔ: sô-M'ÓRC, UMA sílaba só, nunca 'sô-u-mórc' (uma sílaba a mais) nem 'u-ma-ór-ca'; e o M não cai junto com o U: é a primeira letra de 'mörkt'; o Ó aberto e forte de ORCA já está quase certo: mantenha a boca redonda de Ó e empurre a língua pra frente, como pra dizer É — esse é o ö sueco aberto (de boca esticada, sem o bico, vira 'märkt', 'notado'); R de um toque só e K seco; não confunda com o SÔ MÜQUE de 'Tack så mycket': lá é Ü de bico e não tem R, aqui é ÖR aberto + K + T; T = o estalo seco da bocarra fechando, que engole o -A da orca: é o T do neutro, obrigatório depois de 'det är' (o mesmo T do CÁLT de 'Det är kallt i lägenheten'), colado no K: MÖRKT; sem o T sobra 'mörk', e sem o K sobra 'mört', que é um peixe; PÔ = o 'pô!' brasileiro, Ô FECHADO, o mesmo 'på' de 'Grattis på födelsedagen' e 'Det beror på', aqui fraquinho; VÍN-TERN = VINTE, com a força no VIN, N de língua e T DURO de 'tatu' — nunca o 'vin-tchi' do português —, trocando o -te por -TERN: E curto e um R caipira, de língua enrolada pra trás, que já encosta no N; é o rn sueco, que soa como um N de língua enrolada — o mesmo rn do BÁR'N de 'Jag har två barn': VÍN-tern)",
+      "historia": "Dezembro no norte da Suécia: às duas da tarde, uma ORCA salta do mar escuro e abocanha o sol inteiro, feito bola de praia. A cidade apaga, e o vaga-lume mineiro que veio passar o inverno acende o traseiro no máximo e tenta acalmar a vizinhança: 'DÊ É, SÔ... (u)M'ÓRC—' — na pressa ele engole o U do 'uma', e a bocarra da orca fecha com um estalo seco, T!, que engole o fim da palavra. Ele olha o painel da farmácia, que marca VINTE abaixo de zero, e suspira com o R enrolado de mineiro: 'PÔ, VÍN-TERN...' Até março vai ser assim: no inverno é tão escuro que o único poste aceso da cidade é o traseiro dele.",
+      "cena": {
+        "descricao": "Numa tarde preta de dezembro, na beira de um mar escuro, um vaga-lume gigante de traseiro aceso ilumina um círculo de neve, enquanto ao fundo uma orca salta da água com o sol laranja preso entre os dentes e um painel digital de rua marca −20°.",
+        "partes": [
+          "chão de neve branco-azulada (disco largo) na beira do mar",
+          "mar azul-petróleo quase preto (plano) ao fundo",
+          "poste de rua cinza-escuro com a lâmpada apagada",
+          "painel digital de rua preto, preso num poste, com −20° em números vermelhos",
+          "orca preta de barriga e mancha do olho brancas, saltando da água em arco",
+          "sol laranja-dourado brilhante (esfera luminosa) preso entre os dentes da orca",
+          "dois anéis cinza de estalo saindo da bocarra da orca",
+          "corpo do vaga-lume marrom-escuro e gordinho, em pé sobre as patinhas de trás",
+          "traseiro do vaga-lume amarelo-esverdeado brilhante (esfera luminosa grande)",
+          "asas transparentes abertas e duas antenas compridas",
+          "círculo de luz amarelada no chão em volta do vaga-lume (disco translúcido)"
+        ]
+      }
+    },
+    {
+      "id": "vilken-dag-ar-det-idag",
+      "elenco": "princesa que dormiu cem anos + roca vil + folhinha de parede",
+      "ponte_sonora": "VIL-QUEN DÁÁG... É DÊ, I-DÁÁG? (7 sílabas: VÍL-ken-DÁÁG-é-dê-i-DÁÁG; força no VIL, no primeiro DÁG e, maior, no último; VIL = o VIL de sempre, da doninha de 'Vilket spår går tåget från?' e do VILão de 'Vilket väder, va?': I CURTO e L DE VERDADE, a ponta da língua no céu da boca — nunca 'viu'; aqui é a roca VIL que pôs a princesa pra dormir; QUEN = o QUEM? da princesa tonta, mas sem o 'ẽi' nasal do português: K duro, E curto e N batido na língua, fraquinho e GRUDADO no VIL — VÍL-ken, uma palavra só, com a força no VIL; QUEN é só o SOM — o 'quem?' sueco é 'vem', o VÉM do ventríloquo de 'Hallå, vem pratar jag med?'; é o 'vilket' (VIL-QUE-t) com N no lugar do T, e o K logo depois do L é o que separa 'vilken' (qual) de 'vill' (quer); DÁÁG = o MESMO DÁG de 'Ha en bra dag!' (a brasa D'ÁGUA cortada no G) e de todos os 'idag': A LONGO e G duro de 'gato' fechando seco — nunca 'DÁ-gui'; aqui cada folha de calendário arrancada é um dia, um DÁG; É DÊ = o 'är det' da pergunta, de trás pra frente do 'DÊ É' das afirmações — o mesmo par de 'Är det ledigt här?': É aberto e curto, DÊ fechado e sem T, os dois fraquinhos; I-DÁÁG = o 'idag' de sempre, de 'Jag är sjuk idag' e 'Det är akut... idag': I fraquinho e o mesmo DÁÁG com a força toda — é a folha de HOJE, a mesma que despenca do calendário em 'Det är jag som hämtar på förskolan idag')",
+      "historia": "Cem anos depois de espetar o dedo na roca, a princesa acorda num pulo, com as tranças arrastando no chão e o quarto tomado de roseiras. Do lado da cama, a roca VIL que a pôs pra dormir ainda gira sozinha, e a princesa, tonta, nem lembra QUEM é: 'VIL... QUEN?' Corre até a folhinha da parede, parada num dia de cem anos atrás, e começa a arrancar as folhas uma por uma — cada folha, um dia: DÁÁG! DÁÁG! DÁÁG! No meio da nevasca de papel, ofegante, ela procura a folha de hoje: 'É DÊ... I-DÁÁG?' — que dia é hoje?",
+      "cena": {
+        "descricao": "Num quarto de torre de paredes cor-de-rosa tomadas por roseiras, uma princesa recém-acordada, de tranças loiras arrastando no chão, arranca folhas de uma folhinha de parede que voam pelo ar, enquanto ao lado da cama uma roca de fiar preta e roxa, de fuso afiado, ainda gira.",
+        "partes": [
+          "piso de tábuas de madeira escura",
+          "parede cor-de-rosa ao fundo, com ramos verdes de roseira cheios de espinhos e três rosas vermelhas",
+          "cama de dossel de madeira com colcha rosa amarrotada",
+          "roca de fiar preta e roxa (roda grande, pedestal e fuso pontudo) ao lado da cama",
+          "gotinha vermelha na ponta afiada do fuso",
+          "bloco grande de folhinha amarelada pregado na parede",
+          "seis folhas de calendário soltas voando no ar (placas finas brancas e amareladas)",
+          "monte de folhas arrancadas no chão",
+          "corpo da princesa em pé, de vestido azul-claro, com um braço esticado arrancando uma folha",
+          "cabeça com coroinha dourada e tranças loiras compridíssimas arrastando no chão",
+          "boca aberta de espanto e olhos arregalados de sono"
+        ]
+      }
+    },
+    {
+      "id": "hur-dags-borjar-det",
+      "elenco": "peixe-baiacu noivo, inflado de nervoso no altar + relógio gigante da capela",
+      "ponte_sonora": "RRÜR! DÁKS! BÓR—iar... DÊ? (5 sílabas: rrü-DÁKS-BÖR-iar-dê; força no DÁKS e no BÖR; RRÜR = o 'hur' de sempre, o MESMO de 'Hur kommer jag till Storgatan?', 'Hur långt är det?' e 'Hur stavar man det?' — aqui é o ronco comprido de bico do baiacu se enchendo de ar: RR soprado de carioca (é o h), lábios em BICO de U com a língua no I (o Ü, nunca o U chapado de 'urso') e o R final brando, que quase some antes do D: rrü-DÁKS; DÁKS = o MESMO DÁKS de 'Dags att sova!' (lá, o livro de historinha fechando de uma vez; aqui, o ponteiro do relógio gigante da capela pulando mais um minuto): D de 'dado', A CURTO e aberto, K e S colados no fim, sem vogal no meio — nunca 'DÁ-kis'; é parente do DÁG de 'idag', mas sem o S sobra 'dag' (dia) e some o 'a que horas'; BÓR = o BORA! brasileiro (vamos começar!) cortado no R: Ó aberto e com força — mantenha a boca redonda de Ó e empurre a língua pra frente, como pra dizer É: é o ö sueco aberto, o mesmo ÖR do (u)M'ÓRC de 'Det är så mörkt på vintern' — e R de UM toque só, o de 'caro'; -iar = o ar escapando pelo bico do baiacu no lugar do -A do BORA: um I curtinho e deslizado, colado no R (como o -ria de 'GLÓ-ria'), e depois o próprio AR, com R brando no fim — BÓR-iar, DUAS sílabas, a força sempre no BÓR, nunca 'bo-ri-AR'; o R do meio é de um toque só (na fala solta muito sueco quase o engole: 'böjjar'), mas fale; o do FIM é obrigatório: sem ele sobra 'börja', o infinitivo; esse R final derrete no D seguinte, como o R caipira encostando no D: BÖR-ia(r)-DÊ; DÊ = o 'det' de sempre, Ê fechado, sem T)",
+      "historia": "Dia do casamento do peixe-baiacu — e ele, de tão nervoso, chegou à capela duas horas antes. Baiacu nervoso incha: num ronco comprido de bico, RRÜÜR!, ele vira uma bola de espinhos no degrau do altar, com a gravata-borboleta esticada a ponto de estourar. Os bancos estão vazios, nada de noiva, nada de padre, e o relógio gigante da parede pula mais um minuto: DÁKS! Vermelho de segurar o ar, ele tenta gritar 'BORA!', mas o ar escapa pelo bico num guincho: BÓR—iar... DÊ? A que horas começa esse casamento?",
+      "cena": {
+        "descricao": "No altar de uma capelinha vazia, um baiacu noivo inflado feito bola, cheio de espinhos, de gravata-borboleta esticada e bochechas vermelhas, solta um fiozinho de ar pelo bico enquanto, na parede atrás dele, o relógio gigante acaba de pular mais um minuto acima de um arco de flores.",
+        "partes": [
+          "piso de tábuas claras com um tapete vermelho comprido no meio do corredor",
+          "duas fileiras de bancos de madeira vazios, uma de cada lado do tapete",
+          "degrau branco do altar (caixa larga e baixa) no fim do tapete",
+          "arco de flores brancas e cor-de-rosa sobre o altar (toro + esferas)",
+          "relógio redondo branco gigante de ponteiros pretos na parede do fundo, acima do arco",
+          "três anéis cinza de estalo saindo do ponteiro do relógio",
+          "corpo do baiacu: esfera grande bege-amarelada com pintas marrons, pousada no degrau do altar",
+          "espinhos cônicos bege espetados pra fora por todo o corpo",
+          "gravata-borboleta preta logo abaixo da boca, esticada a ponto de estourar",
+          "duas nadadeirinhas laterais amarelas abanando",
+          "boquinha em bico, olhos esbugalhados e bochechas vermelhas",
+          "fiozinho de ar saindo do bico (três tracinhos brancos)"
+        ]
+      }
+    },
+    {
+      "id": "vi-har-gott-om-tid",
+      "elenco": "surfista zen no portão de embarque + painel de PARTIDA + tigela de açaí",
+      "ponte_sonora": "VI... RRÁR! GÓT... ÓMMM... (par)TÍID! (5 sílabas: vi-rrár-GÓT-om-TIID; força no GÓT e no TIID; VI = o 'eu VI' do português, o MESMO VI de 'Vi ses!' (VI SEIS) e 'Vi hörs!': I limpo e longo; RRÁR = o MESMO RRÁR de 'Jag har ont i magen' e 'Har du tid en stund?': a risada soprada, h como RR carioca leve, A longo e R final BRANDO e audível — sem ele sobra 'ha', outro verbo; GÓT = o MESMO GÓT de 'Sov gott!' e 'Det var jättegott': o começo de GÓSTOSO, com G duro de 'gato', Ó ABERTO e CURTO, e um T seco no lugar do resto — nunca 'GÓ-tchi'; esse T já emenda no mantra: GÓ-tóm; ÓM = o MESMO ÓM do lutador de sumô de 'Jag kommer om fem minuter': Ó aberto curtinho, igual ao do GÓT, e os LÁBIOS FECHANDO no M — nunca o 'ũ' nasal de 'um'; o zumbido do M pode durar, mas a vogal fica curta e sem força; TIID = o parTÍD(a) de 'Jag skulle vilja boka en tid', 'Har du tid en stund?' e 'Smaklig måltid', a mesma ponte de 'tid': só o pedaço forte — T SECO de 'tatu', nunca 'tchi', I LONGO e D leve)",
+      "historia": "O voo pro Havaí só sai às dez da noite, e ainda é meio-dia. O surfista olha o painel do portão de embarque — VI! —, solta uma risada soprada, RRÁR!, e desiste da pressa: deita a prancha no carpete do saguão, abre uma tigela de açaí GÓSTOSO — GÓT! —, cruza as pernas em cima da prancha e entoa o mantra: ÓMMM... O painel da parTÍDa nem pisca. Calma: temos tempo de sobra.",
+      "cena": {
+        "descricao": "No saguão de um portão de embarque, um surfista de cabelo descolorido medita de pernas cruzadas sobre a prancha estendida no carpete, de olhos fechados e com uma tigela de açaí no colo, diante de um painel azul escrito PARTIDA e de uma fileira de cadeiras vazias.",
+        "partes": [
+          "carpete azul-acinzentado do saguão",
+          "janelão de vidro ao fundo mostrando céu azul com duas nuvens",
+          "fileira de três cadeiras de espera cinza, vazias",
+          "painel azul pendurado, escrito PARTIDA",
+          "mochila de viagem verde cheia de adesivos, encostada nas cadeiras",
+          "prancha de surf amarela com faixa vermelha, deitada no carpete",
+          "corpo do surfista de bermuda florida azul e regata branca, sentado de pernas cruzadas sobre a prancha",
+          "cabeça com cabelo loiro descolorido arrepiado, olhos fechados e sorriso tranquilo",
+          "tigela de açaí roxo com rodelas de banana, no colo",
+          "três anéis dourados de som (o ÓMMM) saindo da boca"
+        ]
+      }
+    }
+  ]
+}

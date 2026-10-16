@@ -160,6 +160,110 @@ import haEnBraDag from '../cards/ha-en-bra-dag'
 import sjalvklart from '../cards/sjalvklart'
 import varForsiktig from '../cards/var-forsiktig'
 
+// Lote 6 — burocracia, telefone, convites, reações, tempo, comida, casa, trabalho, ajuda e família
+import jagBehoverEttBankid from '../cards/jag-behover-ett-bankid'
+import hurLangTidTarDet from '../cards/hur-lang-tid-tar-det'
+import vilkaPapperBehoverJag from '../cards/vilka-papper-behover-jag'
+import kanJagBokaTidPaNatet from '../cards/kan-jag-boka-tid-pa-natet'
+import jagHarFattEttBrevFranSkatteverket from '../cards/jag-har-fatt-ett-brev-fran-skatteverket'
+import hallaVemPratarJagMed from '../cards/halla-vem-pratar-jag-med'
+import kanDuRingaTillbaka from '../cards/kan-du-ringa-tillbaka'
+import jagHorDigInte from '../cards/jag-hor-dig-inte'
+import kanJagLamnaEttMeddelande from '../cards/kan-jag-lamna-ett-meddelande'
+import jagRingerAngaendeMinBokning from '../cards/jag-ringer-angaende-min-bokning'
+import villDuFoljaMed from '../cards/vill-du-folja-med'
+import harDuLustAttSes from '../cards/har-du-lust-att-ses'
+import vadSkaViGora from '../cards/vad-ska-vi-gora'
+import tyvarrKanJagInte from '../cards/tyvarr-kan-jag-inte'
+import detLaterKul from '../cards/det-later-kul'
+import vadSynd from '../cards/vad-synd'
+import jasa from '../cards/jasa'
+import jagHallerMed from '../cards/jag-haller-med'
+import detGorInget from '../cards/det-gor-inget'
+import kanskeSenare from '../cards/kanske-senare'
+import detRegnarIgen from '../cards/det-regnar-igen'
+import detArSaMorktPaVintern from '../cards/det-ar-sa-morkt-pa-vintern'
+import vilkenDagArDetIdag from '../cards/vilken-dag-ar-det-idag'
+import hurDagsBorjarDet from '../cards/hur-dags-borjar-det'
+import viHarGottOmTid from '../cards/vi-har-gott-om-tid'
+import jagArMatt from '../cards/jag-ar-matt'
+import kanJagSmaka from '../cards/kan-jag-smaka'
+import harNiNagotVegetariskt from '../cards/har-ni-nagot-vegetariskt'
+import utanLokTack from '../cards/utan-lok-tack'
+import arDetStarkt from '../cards/ar-det-starkt'
+import kanDuHjalpaMigAttBara from '../cards/kan-du-hjalpa-mig-att-bara'
+import tvattmaskinenArTrasig from '../cards/tvattmaskinen-ar-trasig'
+import narKommerHantverkaren from '../cards/nar-kommer-hantverkaren'
+import jagFlyttarNastaManad from '../cards/jag-flyttar-nasta-manad'
+import detLackerVatten from '../cards/det-lacker-vatten'
+import jagHarMycketAttGora from '../cards/jag-har-mycket-att-gora'
+import jagArPaSemester from '../cards/jag-ar-pa-semester'
+import vemArAnsvarig from '../cards/vem-ar-ansvarig'
+import jagArSjukskriven from '../cards/jag-ar-sjukskriven'
+import kanViTaDetPaMotet from '../cards/kan-vi-ta-det-pa-motet'
+import jagHarGattVilse from '../cards/jag-har-gatt-vilse'
+import kanDuVisaMigPaKartan from '../cards/kan-du-visa-mig-pa-kartan'
+import farJagFragaEnSak from '../cards/far-jag-fraga-en-sak'
+import garDetBra from '../cards/gar-det-bra'
+import ringPolisen from '../cards/ring-polisen'
+import middagenArKlar from '../cards/middagen-ar-klar'
+import stadaDittRum from '../cards/stada-ditt-rum'
+import detArDinTur from '../cards/det-ar-din-tur'
+import jagArStoltOverDig from '../cards/jag-ar-stolt-over-dig'
+import hurGammalArDu from '../cards/hur-gammal-ar-du'
+
+// Lote 7 — saúde, compras, transporte, social, trabalho, emoções, casa, lazer, comida e Suécia
+import jagHarHuvudvark from '../cards/jag-har-huvudvark'
+import jagHarTandvark from '../cards/jag-har-tandvark'
+import jagHostarMycket from '../cards/jag-hostar-mycket'
+import jagBehoverVila from '../cards/jag-behover-vila'
+import harDuEnVarktablett from '../cards/har-du-en-varktablett'
+import harNiDenIEnAnnanFarg from '../cards/har-ni-den-i-en-annan-farg'
+import varArProvrummet from '../cards/var-ar-provrummet'
+import detArForDyrt from '../cards/det-ar-for-dyrt'
+import kanJagFaRabatt from '../cards/kan-jag-fa-rabatt'
+import jagTarDen from '../cards/jag-tar-den'
+import stannarBussenHar from '../cards/stannar-bussen-har'
+import arDetLangtHarifran from '../cards/ar-det-langt-harifran'
+import jagSkaAvHar from '../cards/jag-ska-av-har'
+import varLiggerStationen from '../cards/var-ligger-stationen'
+import enEnkelBiljettTack from '../cards/en-enkel-biljett-tack'
+import hurLangeHarDuBottHar from '../cards/hur-lange-har-du-bott-har'
+import vadGorDuPaFritiden from '../cards/vad-gor-du-pa-fritiden'
+import harDuSyskon from '../cards/har-du-syskon'
+import viBordeSesOftare from '../cards/vi-borde-ses-oftare'
+import halsaFamiljen from '../cards/halsa-familjen'
+import jagArLedigImorgon from '../cards/jag-ar-ledig-imorgon'
+import vemKanHjalpaMig from '../cards/vem-kan-hjalpa-mig'
+import jagHarGlomtLosenordet from '../cards/jag-har-glomt-losenordet'
+import motetArInstallt from '../cards/motet-ar-installt'
+import jagSlutarKlockanFem from '../cards/jag-slutar-klockan-fem'
+import jagArOrolig from '../cards/jag-ar-orolig'
+import detArOkej from '../cards/det-ar-okej'
+import jagArLedsen from '../cards/jag-ar-ledsen'
+import vadRoligt from '../cards/vad-roligt'
+import lugnDetOrdnarSig from '../cards/lugn-det-ordnar-sig'
+import detKnackarPaDorren from '../cards/det-knackar-pa-dorren'
+import kanDuStangaFonstret from '../cards/kan-du-stanga-fonstret'
+import detArForVarmtHar from '../cards/det-ar-for-varmt-har'
+import slackLampan from '../cards/slack-lampan'
+import varArNyckeln from '../cards/var-ar-nyckeln'
+import skaViGaPaBio from '../cards/ska-vi-ga-pa-bio'
+import jagGillarAttPromenera from '../cards/jag-gillar-att-promenera'
+import villDuSpela from '../cards/vill-du-spela'
+import vilkenFilmSkaViSe from '../cards/vilken-film-ska-vi-se'
+import detVarEnBraFilm from '../cards/det-var-en-bra-film'
+import jagVillHaEnKoppTe from '../cards/jag-vill-ha-en-kopp-te'
+import kanJagFaMer from '../cards/kan-jag-fa-mer'
+import jagArTorstig from '../cards/jag-ar-torstig'
+import vadFinnsDetTillEfterratt from '../cards/vad-finns-det-till-efterratt'
+import kanJagFaEnServett from '../cards/kan-jag-fa-en-servett'
+import detSnoar from '../cards/det-snoar'
+import solenSkiner from '../cards/solen-skiner'
+import detBlaserMycket from '../cards/det-blaser-mycket'
+import taPaDigMossan from '../cards/ta-pa-dig-mossan'
+import viAkerTillLandet from '../cards/vi-aker-till-landet'
+
 export const cards: Card[] = [
   hejHurArLaget,
   tackSaMycket,
@@ -313,4 +417,104 @@ export const cards: Card[] = [
   haEnBraDag,
   sjalvklart,
   varForsiktig,
+  jagBehoverEttBankid,
+  hurLangTidTarDet,
+  vilkaPapperBehoverJag,
+  kanJagBokaTidPaNatet,
+  jagHarFattEttBrevFranSkatteverket,
+  hallaVemPratarJagMed,
+  kanDuRingaTillbaka,
+  jagHorDigInte,
+  kanJagLamnaEttMeddelande,
+  jagRingerAngaendeMinBokning,
+  villDuFoljaMed,
+  harDuLustAttSes,
+  vadSkaViGora,
+  tyvarrKanJagInte,
+  detLaterKul,
+  vadSynd,
+  jasa,
+  jagHallerMed,
+  detGorInget,
+  kanskeSenare,
+  detRegnarIgen,
+  detArSaMorktPaVintern,
+  vilkenDagArDetIdag,
+  hurDagsBorjarDet,
+  viHarGottOmTid,
+  jagArMatt,
+  kanJagSmaka,
+  harNiNagotVegetariskt,
+  utanLokTack,
+  arDetStarkt,
+  kanDuHjalpaMigAttBara,
+  tvattmaskinenArTrasig,
+  narKommerHantverkaren,
+  jagFlyttarNastaManad,
+  detLackerVatten,
+  jagHarMycketAttGora,
+  jagArPaSemester,
+  vemArAnsvarig,
+  jagArSjukskriven,
+  kanViTaDetPaMotet,
+  jagHarGattVilse,
+  kanDuVisaMigPaKartan,
+  farJagFragaEnSak,
+  garDetBra,
+  ringPolisen,
+  middagenArKlar,
+  stadaDittRum,
+  detArDinTur,
+  jagArStoltOverDig,
+  hurGammalArDu,
+  jagHarHuvudvark,
+  jagHarTandvark,
+  jagHostarMycket,
+  jagBehoverVila,
+  harDuEnVarktablett,
+  harNiDenIEnAnnanFarg,
+  varArProvrummet,
+  detArForDyrt,
+  kanJagFaRabatt,
+  jagTarDen,
+  stannarBussenHar,
+  arDetLangtHarifran,
+  jagSkaAvHar,
+  varLiggerStationen,
+  enEnkelBiljettTack,
+  hurLangeHarDuBottHar,
+  vadGorDuPaFritiden,
+  harDuSyskon,
+  viBordeSesOftare,
+  halsaFamiljen,
+  jagArLedigImorgon,
+  vemKanHjalpaMig,
+  jagHarGlomtLosenordet,
+  motetArInstallt,
+  jagSlutarKlockanFem,
+  jagArOrolig,
+  detArOkej,
+  jagArLedsen,
+  vadRoligt,
+  lugnDetOrdnarSig,
+  detKnackarPaDorren,
+  kanDuStangaFonstret,
+  detArForVarmtHar,
+  slackLampan,
+  varArNyckeln,
+  skaViGaPaBio,
+  jagGillarAttPromenera,
+  villDuSpela,
+  vilkenFilmSkaViSe,
+  detVarEnBraFilm,
+  jagVillHaEnKoppTe,
+  kanJagFaMer,
+  jagArTorstig,
+  vadFinnsDetTillEfterratt,
+  kanJagFaEnServett,
+  detSnoar,
+  solenSkiner,
+  detBlaserMycket,
+  taPaDigMossan,
+  viAkerTillLandet,
 ]

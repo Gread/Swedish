@@ -1,0 +1,157 @@
+{
+  "phrases": [
+    {
+      "id": "vad-synd",
+      "sv": "Vad synd!",
+      "pt": "Poxa, que pena!",
+      "pronuncia": "va SÜND ('vad' na fala vira só 'va': sem D e sem R — com R vira 'var', onde; 'synd' com Ü CURTO — lábios em bico de U e língua na posição do I —, a força toda nele, N de língua sem nasalizar e um D leve no fim, sem 'dji')",
+      "contexto": "Quando alguém conta que não vai poder ir à festa, que o show esgotou, que o restaurante fechou, que a chuva estragou o passeio: é o lamento educado de qualquer plano que não deu certo. Por mensagem também: 'Vad synd! Nästa gång då.'",
+      "porque": "É a reação automática à pequena decepção dos outros e serve pra mil situações. Não confunda com 'Åh, vad tråkigt!' ('Ah, que pena!'), que vai pra notícia triste de verdade (doença, demissão): 'Vad synd!' é o 'poxa, que pena' do plano furado, mais leve, no mesmo molde de 'Vad kul!'. E 'synd', ao pé da letra, é 'pecado': 'que pecado!'."
+    },
+    {
+      "id": "jasa",
+      "sv": "Jaså?",
+      "pt": "É mesmo? / Ah, é?",
+      "pronuncia": "iá-SÔÔ? ('ja' curtinho e fraco, UMA sílaba só, com I de IOGA — nunca o J chiado de 'já'; 'så' com Ô FECHADO de 'avô', LONGO, e a força cai nele; a voz sobe no fim, de pergunta — dito descendo e arrastado, soa desconfiado)",
+      "contexto": "Quando o colega conta uma novidade no fika ('Vi har köpt hus i Uppsala'), quando alguém dá uma informação que você não esperava ('Affären har stängt'). É o 'ah, é?' de quem está ouvindo e quer que o outro continue.",
+      "porque": "Sueco fala pouco, e quem ouve responde com sinais curtinhos: 'Jaså?', 'Jaha', 'Mm'. Com 'Jaså?' você mostra interesse sem precisar montar pergunta nenhuma: a conversa continua em sueco e o outro conta o resto."
+    },
+    {
+      "id": "jag-haller-med",
+      "sv": "Jag håller med.",
+      "pt": "Concordo.",
+      "pronuncia": "iá rról-ler MÊÊ ('jag' = iá; 'håller' quase sem força, com h soprado e Ó ABERTO e curto — å curto —, L dobrado e um -er fraquinho de R brando; 'med' = MÊÊ, Ê fechado e longo, o D não soa — e é nele que cai a força: em verbo com partícula a pancada vai na partícula, hålla MED)",
+      "contexto": "Na reunião, quando alguém resume exatamente o que você pensa; no fika, concordando com a reclamação do tempo. Com uma pessoa específica: 'Jag håller med dig.'",
+      "porque": "É o par exato de 'Jag håller inte riktigt med' e, numa cultura de consenso como a sueca, uma das frases que mais circulam em reunião. Concordar em voz alta, e não só balançando a cabeça, é o jeito mais barato de entrar na conversa."
+    },
+    {
+      "id": "det-gor-inget",
+      "sv": "Det gör inget.",
+      "pt": "Não faz mal.",
+      "pronuncia": "dê iör ÍNG-et ('det' = dê, sem T; 'gör' começa com I de ioga + ö: IÖR, lábios de Ô e língua de Ê, R brando; 'inget' com a força no ÍNG, I curto e NG no nariz sem estalar o G — o fim de 'ping' —, e um -et curtinho que fecha num T seco; com -EN no lugar do -ET vira 'ingen', a forma errada aqui)",
+      "contexto": "Quando alguém pede desculpa por algo pequeno: esbarrou em você no tunnelbana, chegou dois minutos atrasado, derrubou sua caneta, ligou na hora errada. 'Förlåt!' — 'Det gör inget!'",
+      "porque": "É a resposta-padrão ao 'förlåt' e ao 'ursäkta', e fecha o par com 'Det gör ont' (dói): 'göra ont' é fazer dor, 'göra inget' é não fazer nada. Não confunda com 'Det spelar ingen roll' (tanto faz): este aqui é perdão dado."
+    },
+    {
+      "id": "kanske-senare",
+      "sv": "Kanske senare.",
+      "pt": "Talvez mais tarde.",
+      "pronuncia": "KÁN-rre SÊÊ-na-re ('kanske' com A curto, N comprido e a força no KÁN; o 'sk' antes de E vira o sopro do sj — um h raspado, de lábios em bico, como em 'sjuk' —, e o -e fica curtinho; 'senare' com Ê FECHADO e longo e a força no SÊ, e um -re fraquinho de R brando que não pode cair)",
+      "contexto": "Quando oferecem mais café no fika, chamam pro after-work ou pra uma caminhada e você ainda não sabe; quando o vendedor pergunta se quer ajuda. É o 'não' educado que deixa a porta aberta.",
+      "porque": "Sueco evita o 'nej' seco, e 'Kanske senare' é a recusa mais macia que existe. E 'kanske' (talvez) sozinho é uma das palavras mais usadas da língua: literalmente 'kan ske', 'pode acontecer'."
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "vad-synd",
+      "elenco": "corvo síndico do prédio + monte de penas pretas",
+      "ponte_sonora": "VÁ, SÜND! (2 batidas: va-SÜND; a força cai toda no SÜND; VÁ é o MESMO 'vad' de 'VÁ, CÜL!', 'VÁ, ASSADO?!' e 'ÓI! VÁ... CÁLT!' — aqui é o grasnado rouco do corvo: curto, SEM R (com R vira 'var', onde) e sem D; SÜND = o SÍNDICO cortado no D e dito DE BICO: corvo não tem lábio, só bico, e tudo o que ele fala sai em bico — a língua fica parada no I de SÍN e o bico empurra os lábios pra frente, e isso é o Ü, o mesmo truque do CHÜLD ('o Chile dito de bico') de 'Jag är förkyld' e do TÜ de 'tycker'; CURTO, nada de 'süünd' esticado; o N é de língua, sem o 'in' nasal do português; e o D fecha seco, a língua batendo atrás dos dentes, sem o '-ico' e sem 'dji': SÜND, uma sílaba só; sem o bico, com U chapado, sai 'sund', que é 'saudável')",
+      "historia": "O corvo é o SÍNDICO do prédio — crachá no peito, prancheta debaixo da asa — e síndico passa o dia ouvindo notícia ruim: 'Choveu, a festa do salão foi cancelada.' 'Desculpa, não vou poder ir.' 'O elevador quebrou de novo.' Pra cada uma ele tem o mesmo bordão: solta um VÁ! rouco de corvo e completa com o próprio cargo, SÍND! — só que, saindo de um bico, o I sai de bico também: SÜND! E a cada VÁ, SÜND! ele arranca uma PENA do peito e entrega de consolo. No fim do dia o síndico está pelado, de crachá e prancheta, em cima de um monte de penas pretas, no salão de festas vazio: poxa, que pena!",
+      "cena": {
+        "descricao": "No salão de festas vazio do prédio, ao lado da mesa posta que ninguém usou e de um varal de bandeirinhas murchas, um corvo preto de crachá de síndico e prancheta debaixo da asa, já meio depenado, arranca uma pena do peito com o bico enquanto outras penas pretas caem em volta e se amontoam no chão.",
+        "partes": [
+          "piso de lajota bege do salão de festas (disco largo)",
+          "mesa comprida com toalha xadrez vermelha e branca e uma bandeja de brigadeiros intocados",
+          "pilha de cadeiras de plástico brancas empilhadas ao lado da mesa",
+          "varal de bandeirinhas coloridas murchas entre dois postes finos",
+          "monte de penas pretas brilhantes no chão (cones achatados)",
+          "corpo grande do corvo preto-azulado brilhante, meio depenado, com manchas de pele rosada no peito",
+          "cabeça emplumada do corvo de olhos tristes e bico preto grosso segurando uma pena recém-arrancada",
+          "crachá branco retangular no peito com a palavra SÍNDICO",
+          "prancheta marrom presa debaixo de uma asa",
+          "três penas pretas caindo no ar, inclinadas",
+          "pilha de bilhetinhos brancos dobrados aos pés do corvo"
+        ]
+      }
+    },
+    {
+      "id": "jasa",
+      "elenco": "esqueleto mineiro na sala de espera do posto de saúde",
+      "ponte_sonora": "iá, SÔ? (2 sílabas: iá-SÔÔ; a força toda no SÔ; é o 'uai, sô?' do mineiro que acabou de ouvir uma novidade, só que começando em IÁ; iá = o 'ja' (sim) do sueco, UMA sílaba só, curtinha, SEM força e colada no SÔ — I de IOGA, nunca o J chiado de 'já', e nunca o 'Í-a' de 'ele ia', que racha em duas sílabas e puxa a força pro I; é o mesmo IÁ de 'Ja, precis!', aqui sem a pancada; SÔ = o 'sô' mineiro, o MESMO 'så' de 'Tack så mycket' (TAC, SÔ MUQUE) e do ÓK, SÔ! da capivara mineira de 'Ja, precis! Det tycker jag också': Ô FECHADO de 'avô', LONGO, com a voz subindo de pergunta; nunca o Ó aberto de 'só' — na história o queixo do esqueleto só despenca DEPOIS do SÔ; tudo num fôlego, iá-SÔÔ, como uma palavra só)",
+      "historia": "O esqueleto mineiro chegou ao posto de saúde com dor nas costas, tirou a senha 4817 e sentou pra esperar, de chapéu de palha e com um pão de queijo na mão. Esperou tanto que virou esqueleto: as teias se esticaram entre as costelas e o pão de queijo virou pedra. Hoje, enfim, o painel apita o número dele e a enfermeira anuncia, toda animada: 'O senhor está ótimo! Os ossos estão perfeitos!' O esqueleto inclina a caveira, surpreso e meio desconfiado — iá, SÔ? — e o queixo despenca no colo. É mesmo?",
+      "cena": {
+        "descricao": "Na sala de espera de um posto de saúde, um esqueleto de chapéu de palha, sentado numa cadeira de plástico com um pão de queijo de pedra na mão e teias entre as costelas, inclina a caveira para o painel de senhas que acaba de acender, enquanto a mandíbula despenca no colo.",
+        "partes": [
+          "piso de linóleo verde-água (disco largo)",
+          "fileira de três cadeiras de plástico laranja presas numa barra de metal cinza",
+          "painel de senhas preto (caixa) num poste, com o número 4817 aceso em vermelho",
+          "vaso com uma planta murcha e amarelada no canto",
+          "esqueleto branco-marfim sentado: coluna, costelas, ossos de braços e pernas (cilindros finos e esferas nas juntas)",
+          "caveira inclinada de lado, com órbitas pretas e a fileira de dentes de cima",
+          "mandíbula solta caindo no colo",
+          "chapéu de palha amarelo-claro de aba larga, torto na caveira",
+          "pão de queijo cinza-pedra (esfera achatada) na mão de osso",
+          "teias de aranha brancas e finas entre as costelas e entre a cadeira e o chão",
+          "papelzinho de senha branco caído aos pés"
+        ]
+      }
+    },
+    {
+      "id": "jag-haller-med",
+      "elenco": "gnu de patins + tenista na rampa do MEDO",
+      "ponte_sonora": "IÁ, RRÓLER... MÊÊ(do)! (4 sílabas: iá-rról-ler-MÊÊ; a pancada cai no MÊÊ, o RRÓ leva só um apoio leve; IÁ é o 'jag' de sempre, I de IOGA, nunca J chiado; RRÓLER = os patins ROLLER, o MESMO âncora de 'Jag håller inte riktigt med': RR soprado de h carioca — com R de língua sai 'roller', que em sueco é 'papéis (de teatro)' —, Ó ABERTO e curto, de 'rola', nunca 'rôler'; L comprido de língua e um -er fraco, de R brando; MÊÊ(do) = o MEDO que o gnu berra e cujo -DO o vento da descida arranca, o MESMO MÊ de 'Vad jobbar du med?' e 'Kan jag betala med kort?': Ê FECHADO e LONGO, e o D não soa; e AQUI ele leva a força — em verbo com partícula a pancada vai na partícula: hålla MED; ATENÇÃO ao par: em 'Jag håller inte riktigt med' o texugo desliza SOZINHO pra TRÁS, emperra no ÍNTE-RÍKTIT e ergue um MÊ minúsculo numa plaquinha do tamanho de um grão de arroz; aqui não tem 'inte' nem 'riktigt' no meio: o gnu rola pra FRENTE, de mão DADA — 'hålla' é segurar: eu seguro junto —, e o MÊÊ sai berrado, enorme, embaixo de uma placa de MEDO do tamanho de um outdoor: discordar encolhe o MÊ, concordar faz ele crescer)",
+      "historia": "Parque de patinação: no alto da rampa mais íngreme, uma placa vermelha avisa só MEDO. A tenista, de patins e viseira, espia lá embaixo e dá a opinião dela: 'Isso dá medo.' Do lado, o gnu — bicho de manada, que concorda com tudo o que o grupo diz — desta vez concorda de verdade: treme da barbicha ao rabo, agarra a mão dela com o casco e solta o grito de guerra, IÁ! Os ROLLER começam a rolar — RRÓLER, RRÓLER — e ele berra a opinião dela de volta, MÊÊÊ...!, com o -DO arrancado pelo vento. Nada de deslizar sozinho pra trás, como o texugo que discorda na reunião: os dois despencam juntos pra FRENTE, de mãos dadas, balançando a cabeça que sim, com a mesmíssima cara — concordo plenamente.",
+      "cena": {
+        "descricao": "Na borda de uma rampa gigante de patinação, ao lado de uma placa vermelha enorme escrita MEDO, um gnu em pé nas patas traseiras, de patins vermelhos, agarra com o casco a mão de uma tenista de patins e os dois tombam juntos para a frente, rampa abaixo, de olhos arregalados e a mesmíssima cara de pavor.",
+        "partes": [
+          "chão de concreto cinza-claro de pista de patinação (disco largo)",
+          "rampa curva gigante azul-celeste descendo para a frente (meio half-pipe)",
+          "borda metálica prateada no topo da rampa (cilindro)",
+          "placa vermelha ENORME, tipo outdoor, num poste com a palavra MEDO em branco",
+          "corpo do gnu cinza-azulado, de ombros altos e quadril baixo, em pé nas patas traseiras e inclinado pra frente",
+          "cabeça comprida do gnu de focinho largo, barbicha preta e crina preta espetada, olhos arregalados",
+          "chifres pretos curvos, abrindo para os lados e virando para cima",
+          "par de patins de rodinha vermelhos (caixinhas com rodinhas amarelas) nas patas traseiras do gnu",
+          "tenista ao lado: viseira branca, regata e saia brancas, rabo de cavalo castanho, também de patins de rodinha",
+          "casco do gnu e mão da tenista agarrados no meio dos dois",
+          "três gotas de suor azuis voando da cabeça do gnu"
+        ]
+      }
+    },
+    {
+      "id": "det-gor-inget",
+      "elenco": "cavaleiro medieval de armadura enferrujada + escorpião arrependido",
+      "ponte_sonora": "DÊ... iiiÖR... ÍNG-et! (4 sílabas: dê-iör-ÍNG-et; a força cai no ÍNG; DÊ = o 'det' de sempre, Ê FECHADO e sem T, o mesmo DÊ! de 'Det gör ont här'; iiiÖR = o RANGIDO enferrujado, o MESMO da manivela da marmota de 'Det gör ont här' e da cegonha de 'Vad gör du i helgen?' — aqui é a armadura do cavaleiro que range quando ele se curva: I de IOGA (nunca G duro nem J chiado), boca de Ô com língua de Ê e R BRANDO no fim; se o I virar RR sai 'hör' (ouve), se virar K sai 'kör' (dirige); ÍNG = a ÍNGUA de 'Ingen fara', 'Ingen orsak' e 'Det spelar ingen roll', cortada no NG: I curto, NG no nariz como no fim de 'ping', G sem estalo; e AQUI muda o rabo: no lugar do -EN de 'ingen' entra um -et curtinho e fraco que fecha num T SECO — o T prateado que o ferrão riscou na canela, bem onde a ÍNGUA NÃO brotou, e os dois tapinhas secos em cima dele —, sem 'tchi'; a ÍNGUA ficou no escorpião, na lata só sobrou o T: ÍNG-eT, nunca ÍNG-eN; é o T do 'nada' neutro, o mesmo T que transforma 'en' em 'ett': 'nada' sozinho é sempre inget, com T — 'Det gör ingen' não existe)",
+      "historia": "Na trilha da floresta, o cavaleiro medieval pisa sem querer no rabo de um escorpião do tamanho de um cachorro, e o escorpião revida: crava o ferrão com tudo na canela dele. Só que a canela é de lata — o ferrão entorta, escorrega e risca na ferrugem um T prateado e brilhante, e quem incha é a ponta do rabo do próprio escorpião, numa ÍNGUA roxa latejando. Morto de vergonha, o bicho junta as pinças e pede perdão. O cavaleiro levanta a viseira — DÊ... —, se curva pra conferir a canela e a armadura enferrujada range, o mesmo rangido da manivela: iiiÖR. Do lado de cá, nada de ÍNGUA: no lugar dela só ficou o T riscado na lata. Ele dá dois tapinhas secos bem em cima do T — T! T! — e responde: ÍNG-et! Não fez nada: não faz mal.",
+      "cena": {
+        "descricao": "Numa trilha de terra, um cavaleiro de armadura prateada enferrujada, curvado e de viseira aberta, dá tapinhas num T prateado e brilhante riscado na ferrugem da própria canela de lata, onde o ferrão de um escorpião negro gigante acaba de entortar; a ponta do rabo do escorpião incha numa íngua roxa e ele se encolhe de vergonha, de pinças juntas.",
+        "partes": [
+          "trilha de terra batida marrom-clara (disco largo)",
+          "duas pedras cinza arredondadas na beira da trilha",
+          "corpo do cavaleiro em armadura prateada com manchas de ferrugem laranja nas juntas, curvado pra frente",
+          "elmo prateado com a viseira levantada e penacho vermelho",
+          "luva de ferro dando tapinha em cima do T",
+          "canela de lata grande, em primeiro plano, com um T prateado e brilhante riscado na ferrugem no lugar da ferroada (duas barras finas em relevo)",
+          "flocos de ferrugem laranja soltando-se dos joelhos e cotovelos (o rangido)",
+          "escorpião preto-brilhante do tamanho de um cachorro, encolhido no chão",
+          "duas pinças juntas na frente da cara, como quem pede perdão",
+          "rabo erguido em arco com o ferrão entortado em ângulo",
+          "íngua roxa inchada e brilhante (esfera) na ponta do rabo, junto do ferrão torto",
+          "duas lagriminhas azuis nos olhos do escorpião"
+        ]
+      }
+    },
+    {
+      "id": "kanske-senare",
+      "elenco": "lebre na rede entre duas canas + volante da Mega-Sena",
+      "ponte_sonora": "CÁN-rre... SÊNA-re! (5 sílabas: KÁN-rre-SÊÊ-na-re; tônicas em CÁN e SÊÊ; CÁN = a CANA sem o -A, o MESMO 'kan' de 'Kan jag få en påse?', 'Kan du hjälpa mig?' e 'Kan jag låna din laddare?' — C+A+N, A curto e N de língua bem segurado, sem o glide de 'quando' —, e não é coincidência: 'kanske' é 'kan ske', 'pode acontecer'; rre = a REDE sem o -DE, dita à carioca: o R de começo de palavra já sai soprado, e esse sopro é o 'sk' antes de E — o mesmo sopro de RRÜÜK ('sjuk'), RRÍCA ('skicka') e RRÉLV ('själv'), raspado e de lábios em bico, mais forte que o h leve de RRÁR ('har'); FRACO e curto, colado no CÁN: CÁN-rre é uma palavra só, nunca 'ca-na-RRÊ' com força no fim; da REDE vem SÓ o sopro, nunca a força do RÊ — leia CÁNRRE como uma paroxítona do português, no balanço de 'TÓRRE': pancada no primeiro pedaço e o -rre caído, curtinho, com o E quase engolido; com R de língua ('canre') ou com S-K ('cansque') o sueco entende, mas a fala de Estocolmo sopra; SÊNA-re = a MEGA-SENA de 'Jag ringer dig senare', o MESMO âncora da freira boxeadora: Ê FECHADO, LONGO e com a força, e um -re fraquinho de R brando — que não cai (sem ele sobra 'sena', 'atrasados') e não leva acento: nunca 'se-na-RÉ')",
+      "historia": "Dia da grande corrida da floresta, e a lebre, favorita disparada, está... deitada. Amarrou uma REDE entre duas CANAS-de-açúcar gigantes na beira da pista, tirou o tênis de corrida, chupa um gomo de cana e preenche com toda a calma um volante da Mega-SENA. O apito soa, os outros disparam, alguém grita 'Não vai correr?!' — e ela nem levanta a orelha: bate com força na CANA — CÁN! —, deixa a REDE dar só um balancinho preguiçoso, quase nada — rre — e ergue o volante da SENA: CÁN-rre... SÊNA-re. Pra que correr agora, se ela vai ficar rica na Mega-Sena? Talvez mais tarde.",
+      "cena": {
+        "descricao": "À beira de uma pista de corrida, uma lebre marrom de orelhas compridíssimas balança numa rede listrada amarrada entre duas canas-de-açúcar gigantes, com um gomo de cana no canto da boca e um volante verde da Mega-Sena erguido na pata, os tênis de corrida largados no chão embaixo dela.",
+        "partes": [
+          "gramado verde (disco largo)",
+          "faixa de pista de corrida de terra laranja atravessando o fundo, com duas linhas brancas",
+          "pórtico de largada ao fundo: dois postes brancos e uma faixa vermelha no alto",
+          "duas canas-de-açúcar gigantes verde-amareladas, com gomos (cilindros segmentados) e folhas compridas no topo, fincadas no chão",
+          "rede listrada de laranja, amarelo e verde pendurada entre as duas canas",
+          "corpo da lebre marrom-dourado e esguio, deitado de barriga pra cima na rede, pernas traseiras compridas cruzadas",
+          "cabeça da lebre de olhos semicerrados de preguiça e orelhas compridíssimas de ponta preta caindo pra fora da rede",
+          "gomo curto de cana-de-açúcar no canto da boca",
+          "volante da Mega-Sena verde-claro (placa fina com grade de quadradinhos) erguido numa pata dianteira",
+          "lápis amarelo atrás de uma orelha",
+          "par de tênis de corrida vermelhos largados no chão embaixo da rede"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+ "phrases": [
+  {
+   "id": "hur-lange-har-du-bott-har",
+   "sv": "Hur länge har du bott här?",
+   "pt": "Há quanto tempo você mora aqui?",
+   "pronuncia": "rrür LÉNG-e rrar-dü BÓT RRÉÉR? ('hur' = rrür, h soprado e U de BICO, e o R quase some antes do L; 'länge' com É ABERTO e curto, o NG no fundo da boca sem estalar o G — nunca 'LÉN-gue' — e um -e fraquinho no fim; 'har du' emenda em rrar-dü, o R brando grudando no D; 'bott' = BÓT, Ó aberto e curto, T segurado — com ô fechado e longo vira 'båt', barco; 'här' = RRÉR, É bem aberto e longo, e é nele que cai a força da frase)",
+   "contexto": "Papo de fika, festa de vizinhos, primeiro dia num emprego novo, aula de SFI: é a pergunta clássica pra quem tem sotaque — e também a que você faz a um colega que veio de Göteborg ou ao vizinho novo do prédio. A resposta você já tem: 'Jag har bott här i sju år'.",
+   "porque": "É o par exato de 'Jag har bott här i sju år': você vai ouvir essa pergunta a vida toda na Suécia. E o 'Hur länge...?' serve pra qualquer duração: 'Hur länge stannar du?' (quanto tempo você fica?), 'Hur länge har ni öppet?' (até quando vocês ficam abertos?)."
+  },
+  {
+   "id": "vad-gor-du-pa-fritiden",
+   "sv": "Vad gör du på fritiden?",
+   "pt": "O que você faz no tempo livre?",
+   "pronuncia": "va iör-dü pô FRII-tii-den? ('vad' = VÁ, sem D; 'gör' = iör, o G vira I de ioga, boca de Ô com língua de Ê, e o R emenda direto no 'du'; 'du' com bico; 'på' = pô, curto e fraco; 'fritiden' com a força no FRII — R de um toque, I longo — e um acento menor no TII, com T seco, nunca 'tchi'; o -den fraquinho, E aberto: FRII-tii-den)",
+   "contexto": "Fika com colegas, encontro, conversa com vizinho, a primeira roda de conversa no SFI: o sueco leva a 'fritid' a sério (esporte, clube, associação, coral, a stuga) e essa é a pergunta padrão pra conhecer alguém fora do trabalho.",
+   "porque": "Puxa assunto e abre convite: quem conta que faz trilha, futebol ou coral pode te chamar junto. A resposta vem no mesmo molde, com o verbo logo depois: 'På fritiden spelar jag fotboll / tränar jag / läser jag'."
+  },
+  {
+   "id": "har-du-syskon",
+   "sv": "Har du syskon?",
+   "pt": "Você tem irmãos?",
+   "pronuncia": "rrar-dü SÜS-kon? ('har du' emendado, o R brando grudando no D; 'syskon' com a força no SYS: Ü de BICO — lábios de U e língua de I ao mesmo tempo, CURTO — e S de cobra, nunca o 'sh' carioca; o 'kon' sai mais leve, com Ó aberto e curto e sem nasal)",
+   "contexto": "Conversa de quem está se conhecendo: colega novo, encontro, pais no parquinho, a professora perguntando à criança na förskola. 'Syskon' é a palavra que junta irmãos e irmãs sem gênero — e aparece em todo formulário de escola e da Försäkringskassan.",
+   "porque": "Não tem equivalente exato em português, então vale aprender pronta. A resposta: 'Ja, jag har en bror och två systrar' ou 'Nej, jag är enda barnet' (sou filho único)."
+  },
+  {
+   "id": "vi-borde-ses-oftare",
+   "sv": "Vi borde ses oftare.",
+   "pt": "A gente devia se ver mais vezes.",
+   "pronuncia": "vi BUU-de sês ÓF-ta-re ('vi' com I limpo; 'borde' = BUU-de: o 'o' longo soa U fechado, o R quase some dentro do D, que sai com a ponta da língua enrolada pra trás, e o -e é fraquinho; 'ses' = SÊS, Ê fechado e longo, S de cobra, nunca Z; 'oftare' com a força no ÓF, Ó ABERTO e curto, e o -ta-re fraquinho, R de um toque só)",
+   "contexto": "No fim de um encontro casual com um conhecido no mercado, depois de uma fika boa, ou ao reencontrar um amigo que você não vê há meses. É a despedida calorosa dos suecos — às vezes é só gentileza, às vezes vira convite de verdade.",
+   "porque": "Mostra que você quer manter a amizade — e na Suécia, onde amizade demora a sair, quem toma a iniciativa ganha. O 'Vi borde...' (a gente devia...) serve pra qualquer proposta leve: 'Vi borde äta lunch någon gång'."
+  },
+  {
+   "id": "halsa-familjen",
+   "sv": "Hälsa familjen!",
+   "pt": "Manda lembranças pra família!",
+   "pronuncia": "RRÉL-sa fa-MIL-ien! ('hälsa' com o h soprado, É ABERTO e curto e L de ponta de língua — nunca 'RRÉU-sa', com o L virando U —, S de cobra e -a fraquinho; 'familjen' com a força no MIL, I curto, e o -jen = ien, com I de ioga: fa-MIL-ien, três sílabas)",
+   "contexto": "Na despedida de um amigo, colega ou vizinho que tem família, no fim de uma ligação, antes das férias ou do Natal. A resposta típica é 'Tack, det ska jag göra!' (obrigado, pode deixar!).",
+   "porque": "Curtinha e calorosa, fecha qualquer conversa com elegância. E o 'Hälsa ___!' funciona com qualquer nome: 'Hälsa Anna!', 'Hälsa barnen!' (lembranças pras crianças)."
+  }
+ ],
+ "mnemonics": [
+  {
+   "id": "hur-lange-har-du-bott-har",
+   "elenco": "camundongo bisbilhoteiro + bota coberta de hera + rolo de papel da LENGA-LENGA",
+   "ponte_sonora": "RRÜR? LÉNG(a)-e... RRÁR-DÜ... BÓT'... RRÉR? (7 sílabas: rrür-LÉNG-e-rrar-dü-BÓT-RRÉR; força no LÉNG, no BÓT e, a maior, no RRÉR; RRÜR = o 'hur' de sempre — o MESMO de 'Hur mår du?', 'Hur långt är det?' e 'Hur gammal är du?' —, aqui o bufo de focinho do camundongo na porta da bota: RR soprado leve (é o h), Ü DE BICO — lábios de U, língua de I, nunca o U chapado de 'urso' — e o R brando que quase some antes do L; LÉNG(a)-e = a LENGA-LENGA, a conversa comprida que não acaba nunca, dita UMA vez só e com o -A trocado por um -e fraquinho: LÉNG-e; É ABERTO de 'pé' e curto, SEM o 'lẽ' nasal do português; a língua fecha lá no fundo, no NG de 'ping', e o G NÃO estala — nada de 'LÉN-gue' —: é o mesmo NG do LÓNG de 'Hur långt är det?' e 'Hur lång tid tar det?', mas com OUTRA vogal: o LONG de Ó é comprido/longe; a LENGA de É é o HÁ QUANTO TEMPO; RRÁR-DÜ = o 'har du' de sempre, o MESMO de 'Har du tid en stund?' e 'Har du lust att ses?': a risadinha soprada, h leve, A longo e R BRANDO que derrete direto no D (rrá-dü) — sem ele sobra 'ha', outro verbo; DÜ com BICO, o dedinho apontado pra quem mora ali; BÓT' = a BOTA sem o -a, a MESMA bota de 'Jag har bott här i sju år': Ó ABERTO e CURTO, com o T segurado um instante (tt) — com ô fechado e longo vira 'båt' (barco); RRÉR = a HERA sem o -a, a MESMA hera que brotou daquela bota e o 'här' de 'Det gör ont här': h soprado, É bem aberto e longo, R brando no fim — se fechar em Ô vira 'hår' (cabelo))",
+   "historia": "Um camundongo marrom-caramelo, novo no bairro, encontra no fundo do jardim uma BOTA velha tão tomada de HERA que já virou casa. Ele bufa pelo focinho na porta — RRÜR? — e do cano da bota sai, sozinha, a ponta de um rolo de papel: é a LENGA-LENGA do morador. O camundongo puxa, puxa, puxa, e o papel não acaba nunca, esparramando LENGA... LENGA... pela grama inteira. Ele solta uma risadinha soprada, RRÁR!, aponta o dedinho pro morador lá dentro — DÜ? —, bate na BOTA, puxa uma folha da HERA e faz a pergunta que aquele rolo sem fim já respondeu: há quanto tempo você mora aqui?",
+   "cena": {
+    "descricao": "No fundo de um jardim, um camundongo marrom-caramelo puxa com uma mão uma tira de papel interminável que sai do cano de uma bota marrom gigante coberta de hera e aponta pra bota com a outra, enquanto a tira escrita LENGA se esparrama em zigue-zague pela grama.",
+    "partes": [
+     "gramado verde de jardim",
+     "bota de couro marrom gigante, do tamanho de uma casinha, em pé com o cano pra cima",
+     "hera verde-escura subindo pelo couro e cobrindo quase todo o cano da bota",
+     "janelinha redonda com luz amarela no bico da bota",
+     "rolo de papel branco grosso apoiado na boca do cano",
+     "tira de papel branca comprida descendo do rolo e se esparramando pela grama em zigue-zague, com a palavra LENGA em letras pretas",
+     "corpo do camundongo marrom-caramelo em pé, de barriguinha creme e rabo fino rosado",
+     "cabeça com orelhas redondas enormes rosadas, focinho pontudo e bigodes compridos",
+     "braço esquerdo puxando a ponta da tira de papel",
+     "braço direito esticado apontando pro cano da bota"
+    ]
+   }
+  },
+  {
+   "id": "vad-gor-du-pa-fritiden",
+   "elenco": "capoeirista sem roda + berimbau rangendo + bandeira quadriculada de parTIDA com plaquinha FREE",
+   "ponte_sonora": "VÁ! IÖR-DÜ... PÔ! FREE... (par)TÍD-EN? (7 sílabas: va-iör-dü-pô-FRII-tii-den; a força cai no FRII, com um acento menor no TII; VÁ = o MESMO 'vad' de 'Vad gör du i helgen?' e 'Vad ska vi göra?' — o grito SEM R e sem D: com R vira 'var' (onde), que nas cartas é sempre a VARA; IÖR = o RANGIDO do 'gör', o mesmo da manivela de 'Det gör ont här' e da armadura de 'Det gör inget' — aqui é o arame do berimbau esticado demais: I de IOGA (nunca G duro nem J chiado), boca de Ô com língua de Ê, e o R brando que derrete direto no DÜ: IÖR-DÜ num fôlego só, a MESMA emenda de 'Vad gör du i helgen?'; DÜ com BICO de pato; PÔ = o PÔ! de 'Vad heter det på svenska?' e 'Jag är på väg': boca redonda, Ô fechado, curto e sem força — nunca 'pó'; FREE = o 'free' que todo brasileiro já fala ('entrada free', 'free shop'): R de UM toque só, o de 'cara' — nunca o RR raspado —, e I LONGO; e é tradução literal: 'fri' é LIVRE; (par)TÍD = o parTÍD(a) da bandeira quadriculada, a MESMA ponte de 'tid' em 'Har du tid en stund?', 'Vi har gott om tid' e 'Hur lång tid tar det?': só o pedaço forte, T SECO de 'tatu' — nunca o 'tchi' que o português do Brasil faz sozinho antes de I — e I longo; -EN = o artigo colado no FIM, como o -EN de 'helgen' e o -AN de 'skolan': fritid = tempo livre, fritiden = O tempo livre; o D já gruda nele: TII-den, E aberto e fraco, N de ponta de língua, sem nasal; FREE + parTÍD é uma palavra só, fri+tid, e a força principal fica no FREE)",
+   "historia": "Domingo no parque, um capoeirista monta a roda sozinho: finca no gramado uma BANDEIRA quadriculada de parTIDA e pendura nela uma plaquinha: FREE. Os suecos passam reto. Ele solta um VÁ! de desafio, estica o arame do berimbau até ranger — iiiÖR! — e aponta o berimbau pro primeiro sueco que passa: DÜ? O sueco nem olha. PÔ! Aí ele dá um aú por cima da bandeira, cai de pé na frente do sueco e manda a pergunta que abre qualquer amizade aqui: o que você faz no tempo livre?",
+   "cena": {
+    "descricao": "Num gramado de parque, um capoeirista de abadá branco, em ginga e de boca aberta no grito, aponta pra frente um berimbau de arame rangendo, ao lado de um mastro com bandeira quadriculada de partida e uma plaquinha amarela FREE.",
+    "partes": [
+     "gramado verde de parque",
+     "círculo de terra batida bege no gramado (a roda vazia)",
+     "mastro fino de madeira fincado na beira do círculo",
+     "bandeira quadriculada preta e branca no alto do mastro",
+     "plaquinha amarela pendurada no meio do mastro com a palavra FREE em preto",
+     "corpo do capoeirista de calça e camiseta brancas, em ginga, joelhos dobrados e pernas afastadas",
+     "cordão amarelo e verde amarrado na cintura",
+     "cabeça de cabelo preto curto, boca aberta no grito",
+     "berimbau: vara de madeira curvada com arame prateado esticado e cabaça laranja na base, apontado pra frente",
+     "três riscos amarelos de rangido saindo do arame"
+    ]
+   }
+  },
+  {
+   "id": "har-du-syskon",
+   "elenco": "poodle convencido + cones de trânsito com irmãos escondidos",
+   "ponte_sonora": "RRÁR-DÜ... SÜS(to)! CÓN(e)? (4 sílabas: rrar-dü-SÜS-kon; força no SÜS, com o CÓN mais leve logo atrás; RRÁR-DÜ = o 'har du' de sempre — o MESMO de 'Har du tid en stund?', 'Har du lust att ses?' e 'Har du borstat tänderna?' —, aqui o latido rouco do poodle: h soprado, A longo e R BRANDO que derrete direto no D (rrá-dü) — sem ele sobra 'ha'; DÜ com BICO de pato, a pata apontada pro cone; SÜS(to) = o SUSTO sem o -TO, mas com a vogal do 'y' sueco: lábios em BICO de U e língua parada no I ao MESMO tempo — o mesmo Ü do BÜÜ de 'byta' e do LÜ de 'lycka', e CURTO como no LÜ; os dois S são de cobra, sibilantes: nada do 'sush' carioca, nada de Z; com o U chapado de 'susto' sai 'suskon', que não existe; CÓN(e) = o CONE de trânsito sem o -e, emendado direto no S, sem pausa: SÜS-kon; Ó ABERTO de 'só', curto, e N de ponta de língua — nem o 'cô' fechado de 'cone' nem o 'cõ' nasal de 'conde')",
+   "historia": "Um poodle branco, tosado de pompons, desfila pela calçada achando que é único no mundo. Um cone laranja de trânsito ao lado dele se mexe sozinho: ele late rouco — RRÁR! —, aponta a pata — DÜ? — e o cone dá um pulo. SUSTO! O poodle levanta o CONE com o focinho e embaixo encontra um poodle idêntico, de pompons iguaizinhos; no cone seguinte, mais um focinho branco. Cada cone esconde um irmão — e ele, que se achava filho único, descobre que tem irmãos.",
+   "cena": {
+    "descricao": "Numa calçada, um poodle branco de pompons, com três gotas de susto saltando da cabeça, ergue com o focinho um cone laranja de trânsito e revela embaixo um poodle filhote idêntico, enquanto outro focinho branco espia por baixo de um segundo cone.",
+    "partes": [
+     "calçada de lajotas cinza",
+     "meio-fio cinza-escuro na borda da calçada",
+     "cone de trânsito laranja com faixa branca, inclinado no ar, erguido pelo focinho",
+     "segundo cone laranja de faixa branca, em pé no chão, com um focinho branco espiando por baixo",
+     "corpo do poodle branco com pompons redondos no peito, nas patas e na ponta do rabo",
+     "cabeça com topete redondo, orelhas compridas de pompom e focinho afilado erguendo o cone",
+     "coleira vermelha",
+     "pata dianteira esticada apontando pro segundo cone",
+     "poodle filhote branco idêntico sentado onde estava o cone, de olhos arregalados",
+     "três gotas azuis de susto saltando acima da cabeça do poodle"
+    ]
+   }
+  },
+  {
+   "id": "vi-borde-ses-oftare",
+   "elenco": "marinheiro saudoso + apito do navio + chaminé com o 6 + telégrafo de máquina OFF/RÉ",
+   "ponte_sonora": "VI... BUUU-DE SEIS... OFF! TÁ, RÉ! (7 sílabas: vi-BUU-de-SÊS-ÓF-ta-re; força no BUU, no SÊS e no ÓF; VI = o 'eu VI' de sempre, o MESMO VI de 'Vi ses!', 'Vi hörs!' e 'Vi har gott om tid': I limpo, curto e sem força; BUUU = o apito grave do navio: U FECHADO e LONGO de 'urso', SEM bico — com bico vira o Ü de 'du' —; é o 'o' longo sueco, o mesmo U de BUR ('Var bor du?') e do BÚR'D de 'Ett bord för två'; o R de 'borde' quase não aparece: no fim do BUUU a ponta da língua só enrola um pouco pra trás e cai direto no D — é o 'rd' sueco; DE = o 'de' de 'DE SEIS em seis meses', mas com D DURO de 'dado' — nunca o 'dji' do português — e o E fraquinho: BUU-de; SEIS = o MESMO SEIS de 'Vi ses!' e 'Har du lust att ses?', sem o I: SÊS, Ê FECHADO e longo, S de cobra, nunca Z; OFF = o OFF do botão (e do '50% OFF' da vitrine): Ó ABERTO de 'só', CURTO, F bem soprado — é nele que cai a força da palavra; TÁ, RÉ = as duas ordens do marinheiro pro motor, ditas de raspão, fraquinhas e coladas no OFF numa palavra só: ÓF-ta-re, R de UM toque (o de 'caRA', preso entre vogais) — CUIDADO: 'RÉ' sozinho, em português, sai 'HÉ' soprado, e aqui NÃO tem sopro nenhum — e o -E curto e apagado — nunca 'ta-RÉ' com força no fim; sem o -RE sobra 'ofta' (com frequência), e some o MAIS vezes)",
+   "historia": "Um marinheiro passa pelo porto do melhor amigo uma vez a cada seis meses — e só buzina. Hoje ele VIU o amigo acenando no cais, puxou a corda do apito — BUUU! — e caiu a ficha: um BUUU DE SEIS em SEIS meses é muito pouco. Ele bate a alavanca do motor em OFF e, logo depois, em RÉ: TÁ, RÉ! O navio volta de ré, apitando, até encostar no cais — a gente devia se ver mais vezes.",
+   "cena": {
+    "descricao": "No convés de um rebocador vermelho com um 6 branco pintado na chaminé, um marinheiro de quepe branco puxa a corda do apito, que solta anéis de som, e com a outra mão empurra pra RÉ a alavanca de um telégrafo de máquina dourado, de frente pro cais de madeira.",
+    "partes": [
+     "água azul-escura do porto (plano liso)",
+     "cais de madeira marrom com um poste de amarração preto",
+     "casco do rebocador vermelho com faixa branca",
+     "chaminé amarela com um 6 branco gigante pintado",
+     "apito dourado no alto da chaminé soltando três anéis cinza de som",
+     "corda bege descendo do apito",
+     "corpo do marinheiro de uniforme branco com gola azul-marinho e lenço vermelho",
+     "cabeça com quepe branco redondo de marinheiro e boca aberta",
+     "braço erguido puxando a corda do apito",
+     "telégrafo de máquina: pedestal dourado com mostrador redondo dividido em OFF (metade cinza) e RÉ (metade vermelha)",
+     "outro braço empurrando a alavanca do telégrafo pro lado RÉ"
+    ]
+   }
+  },
+  {
+   "id": "halsa-familjen",
+   "elenco": "papagaio-mensageiro + caixa de correio ELSA + casinha vermelha da família",
+   "ponte_sonora": "RRÉLSA! FAMÍLI-EN! (5 sílabas: RRÉL-sa-fa-MIL-ien; força no RRÉL e no MIL; RRÉLSA = o nome ELSA — nome de vovó sueca, escrito na caixa de correio — berrado com o h soprado e rouco de papagaio na frente: RR leve de carioca (é o h de 'hälsa'), É ABERTO de 'pé' e curto; o L é de PONTA DE LÍNGUA, grudada atrás dos dentes como em 'lá' — nunca o 'ÉU-sa' do português, com o L virando U —; o S é de cobra, nunca Z, e o -a do fim fraquinho; é o mesmo RRÉL soprado do RRÉLI de 'Trevlig helg!', mas aqui vem o SA; FAMÍLI-EN = a FAMÍLIA do português com o -A trocado por -EN, o artigo sueco colado no FIM (como o -EN de 'helgen' e o -AN de 'skolan'): familj = família, familjen = A família; a força fica no MÍL, com I CURTO, e o LI-EN sai numa sílaba só, com I de ioga: fa-MÍL-ien — três sílabas, nunca 'fa-mi-li-ÊN' com quatro)",
+   "historia": "Na despedida, você pede ao amigo: manda um abraço pra família! O papagaio dele leva o recado ao pé da letra: voa até a casinha vermelha da família, pousa na caixa de correio onde está escrito ELSA, o nome da dona da casa, e berra, rouco e soprado: RRRÉLSA! Depois estufa o peito verde e grita no sueco de papagaio, com o -EN colado no fim: FAMÍLI-EN! Na janela, o porta-retrato da família balança — recado entregue: lembranças à família.",
+   "cena": {
+    "descricao": "Diante de uma casinha sueca vermelha de janela branca, um papagaio verde de peito estufado e asas abertas berra de bico escancarado, pousado numa caixa de correio azul escrita ELSA, com o porta-retrato da família aparecendo na janela.",
+    "partes": [
+     "gramado verde",
+     "casinha de madeira vermelho-escura com quinas brancas e telhado cinza",
+     "janela branca com um porta-retrato dentro mostrando quatro rostinhos redondos (pai, mãe e duas crianças)",
+     "poste de madeira com caixa de correio azul de tampa arredondada",
+     "plaquinha branca na caixa de correio com a palavra ELSA",
+     "corpo do papagaio verde, de peito estufado, pousado em cima da caixa de correio",
+     "cabeça com testa amarela e bico curvo cinza escancarado",
+     "asas abertas com pontas azuis e vermelhas",
+     "rabo comprido verde e azul",
+     "três anéis amarelos de grito saindo do bico"
+    ]
+   }
+  }
+ ]
+}
