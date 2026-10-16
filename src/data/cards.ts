@@ -245,6 +245,9 @@ import vadRoligt from '../cards/vad-roligt'
 import lugnDetOrdnarSig from '../cards/lugn-det-ordnar-sig'
 import detKnackarPaDorren from '../cards/det-knackar-pa-dorren'
 import kanDuStangaFonstret from '../cards/kan-du-stanga-fonstret'
+import detArForVarmtHar from '../cards/det-ar-for-varmt-har'
+import slackLampan from '../cards/slack-lampan'
+import varArNyckeln from '../cards/var-ar-nyckeln'
 import skaViGaPaBio from '../cards/ska-vi-ga-pa-bio'
 import jagGillarAttPromenera from '../cards/jag-gillar-att-promenera'
 import villDuSpela from '../cards/vill-du-spela'
@@ -496,6 +499,9 @@ export const cards: Card[] = [
   lugnDetOrdnarSig,
   detKnackarPaDorren,
   kanDuStangaFonstret,
+  detArForVarmtHar,
+  slackLampan,
+  varArNyckeln,
   skaViGaPaBio,
   jagGillarAttPromenera,
   villDuSpela,
