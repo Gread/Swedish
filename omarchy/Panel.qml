@@ -330,7 +330,7 @@ Panel {
 
                   Btn {
                     required property var modelData
-                    width: deckLabel.implicitWidth + Style.space(18)
+                    width: deckLabel.advanceWidth + Style.space(18)
                     height: Style.space(28)
                     label: modelData.label + " · " + modelData.count
                     active: root.off[modelData.kind].indexOf(modelData.value) === -1
