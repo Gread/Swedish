@@ -20,6 +20,9 @@ export function BuildView({ card, onDone }: { card: Card; onDone: () => void }) 
 
   const finished = progress >= duration - 1e-3
   const nextStep = targets.find((t) => t > target + 1e-3)
+  // Enquanto o passo atual ainda anima, "Próximo passo" esperaria a partir do
+  // destino dele: um segundo clique (ou um clique duplo) pularia um passo.
+  const animating = progress < target - 1e-3
 
   const conclude = () => {
     markBuilt(card.meta.id)
@@ -58,7 +61,9 @@ export function BuildView({ card, onDone }: { card: Card; onDone: () => void }) 
             ▶ Montar tudo
           </button>
           {nextStep !== undefined && (
-            <button onClick={() => setTarget(nextStep)}>Próximo passo →</button>
+            <button disabled={animating} onClick={() => setTarget(nextStep)}>
+              Próximo passo →
+            </button>
           )}
         </div>
       ) : (
