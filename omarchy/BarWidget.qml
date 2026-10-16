@@ -48,7 +48,7 @@ BarWidget {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "󰗊"
+    text: "󰑴"
     slotSize: Style.bar.statusSlot
     active: root.panel ? !root.panel.doneToday && root.panel.cards.length > 0 : false
     tooltipText: root.panel ? root.panel.tooltip : "Svenska"
