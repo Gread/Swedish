@@ -160,6 +160,58 @@ import haEnBraDag from '../cards/ha-en-bra-dag'
 import sjalvklart from '../cards/sjalvklart'
 import varForsiktig from '../cards/var-forsiktig'
 
+// Lote 6 — burocracia, telefone, convites, reações, tempo, comida, casa, trabalho, ajuda e família
+import jagBehoverEttBankid from '../cards/jag-behover-ett-bankid'
+import hurLangTidTarDet from '../cards/hur-lang-tid-tar-det'
+import vilkaPapperBehoverJag from '../cards/vilka-papper-behover-jag'
+import kanJagBokaTidPaNatet from '../cards/kan-jag-boka-tid-pa-natet'
+import jagHarFattEttBrevFranSkatteverket from '../cards/jag-har-fatt-ett-brev-fran-skatteverket'
+import hallaVemPratarJagMed from '../cards/halla-vem-pratar-jag-med'
+import kanDuRingaTillbaka from '../cards/kan-du-ringa-tillbaka'
+import jagHorDigInte from '../cards/jag-hor-dig-inte'
+import kanJagLamnaEttMeddelande from '../cards/kan-jag-lamna-ett-meddelande'
+import jagRingerAngaendeMinBokning from '../cards/jag-ringer-angaende-min-bokning'
+import villDuFoljaMed from '../cards/vill-du-folja-med'
+import harDuLustAttSes from '../cards/har-du-lust-att-ses'
+import vadSkaViGora from '../cards/vad-ska-vi-gora'
+import tyvarrKanJagInte from '../cards/tyvarr-kan-jag-inte'
+import detLaterKul from '../cards/det-later-kul'
+import vadSynd from '../cards/vad-synd'
+import jasa from '../cards/jasa'
+import jagHallerMed from '../cards/jag-haller-med'
+import detGorInget from '../cards/det-gor-inget'
+import kanskeSenare from '../cards/kanske-senare'
+import detRegnarIgen from '../cards/det-regnar-igen'
+import detArSaMorktPaVintern from '../cards/det-ar-sa-morkt-pa-vintern'
+import vilkenDagArDetIdag from '../cards/vilken-dag-ar-det-idag'
+import hurDagsBorjarDet from '../cards/hur-dags-borjar-det'
+import viHarGottOmTid from '../cards/vi-har-gott-om-tid'
+import jagArMatt from '../cards/jag-ar-matt'
+import kanJagSmaka from '../cards/kan-jag-smaka'
+import harNiNagotVegetariskt from '../cards/har-ni-nagot-vegetariskt'
+import utanLokTack from '../cards/utan-lok-tack'
+import arDetStarkt from '../cards/ar-det-starkt'
+import kanDuHjalpaMigAttBara from '../cards/kan-du-hjalpa-mig-att-bara'
+import tvattmaskinenArTrasig from '../cards/tvattmaskinen-ar-trasig'
+import narKommerHantverkaren from '../cards/nar-kommer-hantverkaren'
+import jagFlyttarNastaManad from '../cards/jag-flyttar-nasta-manad'
+import detLackerVatten from '../cards/det-lacker-vatten'
+import jagHarMycketAttGora from '../cards/jag-har-mycket-att-gora'
+import jagArPaSemester from '../cards/jag-ar-pa-semester'
+import vemArAnsvarig from '../cards/vem-ar-ansvarig'
+import jagArSjukskriven from '../cards/jag-ar-sjukskriven'
+import kanViTaDetPaMotet from '../cards/kan-vi-ta-det-pa-motet'
+import jagHarGattVilse from '../cards/jag-har-gatt-vilse'
+import kanDuVisaMigPaKartan from '../cards/kan-du-visa-mig-pa-kartan'
+import farJagFragaEnSak from '../cards/far-jag-fraga-en-sak'
+import garDetBra from '../cards/gar-det-bra'
+import ringPolisen from '../cards/ring-polisen'
+import middagenArKlar from '../cards/middagen-ar-klar'
+import stadaDittRum from '../cards/stada-ditt-rum'
+import detArDinTur from '../cards/det-ar-din-tur'
+import jagArStoltOverDig from '../cards/jag-ar-stolt-over-dig'
+import hurGammalArDu from '../cards/hur-gammal-ar-du'
+
 export const cards: Card[] = [
   hejHurArLaget,
   tackSaMycket,
@@ -313,4 +365,54 @@ export const cards: Card[] = [
   haEnBraDag,
   sjalvklart,
   varForsiktig,
+  jagBehoverEttBankid,
+  hurLangTidTarDet,
+  vilkaPapperBehoverJag,
+  kanJagBokaTidPaNatet,
+  jagHarFattEttBrevFranSkatteverket,
+  hallaVemPratarJagMed,
+  kanDuRingaTillbaka,
+  jagHorDigInte,
+  kanJagLamnaEttMeddelande,
+  jagRingerAngaendeMinBokning,
+  villDuFoljaMed,
+  harDuLustAttSes,
+  vadSkaViGora,
+  tyvarrKanJagInte,
+  detLaterKul,
+  vadSynd,
+  jasa,
+  jagHallerMed,
+  detGorInget,
+  kanskeSenare,
+  detRegnarIgen,
+  detArSaMorktPaVintern,
+  vilkenDagArDetIdag,
+  hurDagsBorjarDet,
+  viHarGottOmTid,
+  jagArMatt,
+  kanJagSmaka,
+  harNiNagotVegetariskt,
+  utanLokTack,
+  arDetStarkt,
+  kanDuHjalpaMigAttBara,
+  tvattmaskinenArTrasig,
+  narKommerHantverkaren,
+  jagFlyttarNastaManad,
+  detLackerVatten,
+  jagHarMycketAttGora,
+  jagArPaSemester,
+  vemArAnsvarig,
+  jagArSjukskriven,
+  kanViTaDetPaMotet,
+  jagHarGattVilse,
+  kanDuVisaMigPaKartan,
+  farJagFragaEnSak,
+  garDetBra,
+  ringPolisen,
+  middagenArKlar,
+  stadaDittRum,
+  detArDinTur,
+  jagArStoltOverDig,
+  hurGammalArDu,
 ]
